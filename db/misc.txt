@@ -889,7 +889,7 @@ research = {
 # Tech overview panel style: 0 - use old style; 1 - Use new style (unit and brigade models moved to new panels: "Units" and "Brigades")
 	1 #0
 # Max active tech teams at a time (cannot be more then 50). Note: New Technology page layout will be auto-set for values above 5!
-	7 #5
+	20 #5
 # Min active tech teams at a time (available teams regardles of current IC)
 	2 #1
 # Required IC for each tech team above the min
