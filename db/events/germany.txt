@@ -233,6 +233,7 @@ event = {
 		command = { type = domestic which = defense_lobby value = 1 }
 		command = { trigger = { alliance = { country = FRA country = BEL } } type = trigger which = 2015008 } # Belgium leaves the Allies
 		command = { trigger = { ai = yes } type = ai which = "switch/GER_Rhine.ai" }
+		command = { type = songs which = Teutonic_Uprise.txt }
 	}
 }
 

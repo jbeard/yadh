@@ -1289,6 +1289,7 @@ event = {
 		name = "2003130a"
 		command = { type = dissent value = -10 }
 		command = { type = domestic which = political_left value = -1 }
+		command = { type = songs which = Spirit_of_33.txt }
 	}
 	action = {
 		ai_chance = 0

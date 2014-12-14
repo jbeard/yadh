@@ -3443,6 +3443,7 @@ event = {
 		name = "EVT_362_ACTC"
 		command = { type = sleepleader which = 855301 } #Ebert dies of Lung Cancer 
 		command = { type = sleepminister which = 855342 }
+		command = { type = songs which = Spirit_of_33.txt }
 	}
 }
 

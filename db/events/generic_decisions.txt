@@ -2559,7 +2559,7 @@ event = {
 	id = 9000034
 	random = no
 	persistent = yes
-	country = GER
+	TAG = { GER U08 }
 
 	decision = { 
 		money = 300
@@ -4461,12 +4461,12 @@ event = {
 	trigger = { ai = no }
 
 	name = "The Grand Campaign Mod Credits"
-	desc = "Bizon, Burning, Limith, ejwith9953, Kretoxian, delannone, eeeek, smoogy, dskod1, OneAussieMan777, Sephy, jamiroquai000 and every one else that I may have forgotten!"
+	desc = "Bizon, Burning, Limith, ejwith9953, Kretoxian, delannone, eeeek, smoogy, dskod1, OneAussieMan777, Sephy, jamiroquai000, Ironwear and every one else that I may have forgotten!"
 
 	date = { day = 27 month = june year = 1914 }
 
 	action = {
 		name = "Thank you Fans's and modders! Have fun!!!"
-		command = { type = money value = 25 }
+		command = { type = money value = 50 }
 	}
 }

@@ -46,12 +46,12 @@ SOV;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 30114;Vladimir Tributs;R23;5;1939;1961;small_taskforce_tactics;naval_training;seamanship;naval_artillery;large_taskforce_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 30115;Ivan S. Yumashev;R22;6;1939;1957;small_taskforce_tactics;naval_training;seamanship;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 30116;Shiprepair DVZ Zvezda;R20;6;1957;1980;small_taskforce_tactics;naval_training;seamanship;submarine_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-30117;R&D PE Zvezda;R21;8;1952;1980;mechanics;electronics;rocketry;aeronautics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-30118;Yuri Pobedonostsev;R38;5;1932;1973;mechanics;rocketry;aeronautics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-30119;Mikhail Tikhonravov;R39;5;1932;1974;mechanics;rocketry;aeronautics;avionics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-30120;Aksel Berg;R40;5;1922;1960;naval_training;electronics;submarine_tactics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-30121;Klimov Design Bureau;R42;6;1932;1990;mechanics;artillery;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-30122;Gosplan;T30122;5;1932;1990;technical_efficiency;industrial_engineering;management;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+30117;R&D PE Zvezda;R21;8;1952;1980;mechanics;electronics;rocketry;aeronautics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+30118;Yuri Pobedonostsev;R38;5;1932;1973;mechanics;rocketry;aeronautics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+30119;Mikhail Tikhonravov;R39;5;1932;1974;mechanics;rocketry;aeronautics;avionics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+30120;Aksel Berg;R40;5;1922;1960;naval_training;electronics;submarine_tactics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+30121;Klimov Design Bureau;R42;6;1932;1990;mechanics;artillery;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+30122;Gosplan;T30122;5;1932;1990;technical_efficiency;industrial_engineering;management;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 300123;Mil Design Bureau;T300123;9;1948;1999;rt_user_1;aircraft_testing;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 300124;Kamov Design Bureau;T300124;7;1929;1999;rt_user_1;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 300125;Cheka;T300125;5;1917;1922;rt_user_2;training;small_unit_tactics;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -59,3 +59,7 @@ SOV;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 300127;OGPU;T300126;6;1924;1934;rt_user_2;training;small_unit_tactics;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 300128;NKVD;T300128;8;1934;1954;rt_user_2;training;small_unit_tactics;individual_courage;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 300129;KGB;T300129;9;1954;2000;rt_user_2;training;small_unit_tactics;individual_courage;mathematics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+300130;Hovannes Adamian;T5150391;10;1908;1932;electronics;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+300131;Anatoly Petrovich Alexandrov;T5150392;7;1930;1994;nuclear_physics;nuclear_engineering;naval_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+300132;Genrich Altshuller;T300132;10;1926;1998;mathematics;management;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+300133;Kalinin Polytechnical Institute;T5150394;8;1899;2050;rocketry;mechanics;electronics;industrial_engineering;aeronautics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;x

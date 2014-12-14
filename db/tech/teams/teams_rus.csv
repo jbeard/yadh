@@ -40,3 +40,7 @@ RUS;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 515038;Petr Nesterov;100708;8;1909;1917;piloting;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 515039;Obukhov plant;100709;7;1863;2000;mechanics;artillery;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 5150390;Okhrana;T5150390;5;1866;2000;rt_user_2;training;individual_courage;small_unit_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+5150391;Havannes Adamian;T5150391;10;1908;1932;electronics;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+5150392;Anatoly Petrovich Alexandrov;T5150392;7;1930;1994;nuclear_physics;nuclear_engineering;naval_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+5150393;Genrich Altshuller;T300132;10;1926;1998;mathematics;management;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+5150394;Kalinin Polytechnic Institute;T5150394;9;1899;2050;aeronautics;rocketry;chemistry;electronics;industrial_engineering;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;x

@@ -36,3 +36,5 @@ CAN;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 220035;Canadair;100714;6;1944;2000;fighter_design;aeronautics;general_equipment;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 2200000;RCMP Security Service;T2200000;6;1950;1984;rt_user_2;training;individual_courage;small_unit_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 2200001;CSIS;T2200001;7;1984;2013;rt_user_2;training;individual_courage;small_unit_tactics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2200003;Tony Barringer;T2200003;10;1925;2009;industrial_engineering;mechanics;electronics;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2200004;Bombadier;T2200004;7;1942;2050;mechanics;general_equipment;electronics;artillery;vehicle_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
