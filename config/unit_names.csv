@@ -1,5 +1,5 @@
 #  STRING NAME (do not change!);English;French;Italian;Spanish;German;Polish;Portuguese;Russian;;Extra2;X
-#  ========================;==========;==========;==========;========;==========;==========;==========;==========;;==========;X
+#  ========================;;;;;;;;;;;X
 ########################################;;;;;;;;;;;X
 #  Division Description;;;;;;;;;;;X
 ########################################;;;;;;;;;;;X
@@ -992,7 +992,7 @@ BRIG_MODEL_28_4;Semi-Modern SP AA Artillery;Artillerie de missiles AM semi-moder
 BRIG_MODEL_28_5;Modern SP AA Artillery;Artillerie de missiles AM moderne;Contraerea semovente Moderna;Artillerнa LCo APr moderna;Moderner RW(Sfl);Nowoczesna s.-b. art. p-lot.;;Соврем. ЗСУ;;;X
 BRIG_MODEL_28_6;Imp. Modern SP AA Artillery;Imp. Modern SP AA Artillery;Imp. Modern SP AA Artillery;Imp. Modern SP AA Artillery;Imp. Modern SP AA Artillery;Imp. Modern SP AA Artillery;;Imp. Modern SP AA Artillery;;;X
 BRIG_MODEL_28_7;Mobile SAM System;Mobile SAM System;Mobile SAM System;Mobile SAM System;Mobile SAM System;Mobile SAM System;;Mobile SAM System;;;X
-BRIG_MODEL_29_0;Medium Armor '24;Char moyen '24;Carro medio successivo alla Grande Guerrra;Blindado medio Mk I.;M. Panzer I;Њredni czoіg I;;Базовый межвоенн. средн. танк;;;X 
+BRIG_MODEL_29_0;Medium Armor '24;Char moyen '24;Carro medio successivo alla Grande Guerrra;Blindado medio Mk I.;M. Panzer I;Њredni czoіg I;;Базовый межвоенн. средн. танк;;;X
 BRIG_MODEL_29_1;Medium Armor '28;Char moyen '28;Carro medio rudimentale del periodo interbellico;Blindado medio Mk II.;M. Panzer II;Њredni czoіg II;;Улучш. межвоенн. средн. танк;;;X
 BRIG_MODEL_29_2;Medium Armor '34;Char moyen '34;Carro medio avanzato del periodo interbellico;Blindado medio Mk III.;M. Panzer III;Њredni czoіg III;;Усов. межвоенн. средн. танк;;;X
 BRIG_MODEL_29_3;Early Armor '39;Char moyen '39;Carro medio rudimentale;Tanque medio temprano;Frьher mittlerer Panzer;Podst. czoіg њredni;;Базовый средний танк;;;X
@@ -1080,5 +1080,113 @@ BRIG_MODEL_55_0;Improved Naval ASW Helicopter CAG;Improved Naval ASW Helicopter;
 BRIG_MODEL_55_1;Advanced Naval ASW Helicopter CAG;Advanced Naval ASW Helicopter;Advanced Naval ASW Helicopter;Advanced Naval ASW Helicopter;Advanced Naval ASW Helicopter;Advanced Naval ASW Helicopter;;Advanced Naval ASW Helicopter;;;X
 BRIG_MODEL_55_2;Modern Naval ASW Helicopter CAG;Modern Naval ASW Helicopter;Modern Naval ASW Helicopter;Modern Naval ASW Helicopter;Modern Naval ASW Helicopter;Modern Naval ASW Helicopter;;Modern Naval ASW Helicopter;;;X
 BRIG_MODEL_56_0;MIRV;MIRV;MIRV;MIRV;MIRV;MIRV;;MIRV;;;X
+NAME_D_01;;;;;;;;;;;X
+SNAME_D_01;;;;;;;;;;;X
+LDESC_D_01;;;;;;;;;;;X
+SDESC_D_01;;;;;;;;;;;X
+NAME_D_02;;;;;;;;;;;X
+SNAME_D_02;;;;;;;;;;;X
+LDESC_D_02;;;;;;;;;;;X
+SDESC_D_02;;;;;;;;;;;X
+NAME_D_03;;;;;;;;;;;X
+SNAME_D_03;;;;;;;;;;;X
+LDESC_D_03;;;;;;;;;;;X
+SDESC_D_03;;;;;;;;;;;X
+NAME_D_04;;;;;;;;;;;X
+SNAME_D_04;;;;;;;;;;;X
+LDESC_D_04;;;;;;;;;;;X
+SDESC_D_04;;;;;;;;;;;X
+NAME_D_05;;;;;;;;;;;X
+SNAME_D_05;;;;;;;;;;;X
+LDESC_D_05;;;;;;;;;;;X
+SDESC_D_05;;;;;;;;;;;X
+NAME_D_06;;;;;;;;;;;X
+SNAME_D_06;;;;;;;;;;;X
+LDESC_D_06;;;;;;;;;;;X
+SDESC_D_06;;;;;;;;;;;X
+NAME_D_07;;;;;;;;;;;X
+SNAME_D_07;;;;;;;;;;;X
+LDESC_D_07;;;;;;;;;;;X
+SDESC_D_07;;;;;;;;;;;X
+NAME_D_08;;;;;;;;;;;X
+SNAME_D_08;;;;;;;;;;;X
+LDESC_D_08;;;;;;;;;;;X
+SDESC_D_08;;;;;;;;;;;X
+NAME_D_09;;;;;;;;;;;X
+SNAME_D_09;;;;;;;;;;;X
+LDESC_D_09;;;;;;;;;;;X
+SDESC_D_09;;;;;;;;;;;X
+NAME_D_10;;;;;;;;;;;X
+SNAME_D_10;;;;;;;;;;;X
+LDESC_D_10;;;;;;;;;;;X
+SDESC_D_10;;;;;;;;;;;X
+NAME_ANTITANK;;;;;;;;;;;X
+SNAME_ANTITANK;;;;;;;;;;;X
+LDESC_ANTITANK;;;;;;;;;;;X
+SDESC_ANTITANK;;;;;;;;;;;X
+NAME_B_01;;;;;;;;;;;X
+SNAME_B_01;;;;;;;;;;;X
+LDESC_B_01;;;;;;;;;;;X
+SDESC_B_01;;;;;;;;;;;X
+NAME_B_02;;;;;;;;;;;X
+SNAME_B_02;;;;;;;;;;;X
+LDESC_B_02;;;;;;;;;;;X
+SDESC_B_02;;;;;;;;;;;X
+NAME_B_03;;;;;;;;;;;X
+SNAME_B_03;;;;;;;;;;;X
+LDESC_B_03;;;;;;;;;;;X
+SDESC_B_03;;;;;;;;;;;X
+NAME_B_04;;;;;;;;;;;X
+SNAME_B_04;;;;;;;;;;;X
+LDESC_B_04;;;;;;;;;;;X
+SDESC_B_04;;;;;;;;;;;X
+NAME_B_05;;;;;;;;;;;X
+SNAME_B_05;;;;;;;;;;;X
+LDESC_B_05;;;;;;;;;;;X
+SDESC_B_05;;;;;;;;;;;X
+NAME_B_06;;;;;;;;;;;X
+SNAME_B_06;;;;;;;;;;;X
+LDESC_B_06;;;;;;;;;;;X
+SDESC_B_06;;;;;;;;;;;X
+NAME_B_07;;;;;;;;;;;X
+SNAME_B_07;;;;;;;;;;;X
+LDESC_B_07;;;;;;;;;;;X
+SDESC_B_07;;;;;;;;;;;X
+NAME_B_08;;;;;;;;;;;X
+SNAME_B_08;;;;;;;;;;;X
+LDESC_B_08;;;;;;;;;;;X
+SDESC_B_08;;;;;;;;;;;X
+NAME_B_09;;;;;;;;;;;X
+SNAME_B_09;;;;;;;;;;;X
+LDESC_B_09;;;;;;;;;;;X
+SDESC_B_09;;;;;;;;;;;X
+NAME_B_10;;;;;;;;;;;X
+SNAME_B_10;;;;;;;;;;;X
+LDESC_B_10;;;;;;;;;;;X
+SDESC_B_10;;;;;;;;;;;X
+NAME_B_11;;;;;;;;;;;X
+SNAME_B_11;;;;;;;;;;;X
+LDESC_B_11;;;;;;;;;;;X
+SDESC_B_11;;;;;;;;;;;X
+NAME_B_12;;;;;;;;;;;X
+SNAME_B_12;;;;;;;;;;;X
+LDESC_B_12;;;;;;;;;;;X
+SDESC_B_12;;;;;;;;;;;X
+NAME_B_13;;;;;;;;;;;X
+SNAME_B_13;;;;;;;;;;;X
+LDESC_B_13;;;;;;;;;;;X
+SDESC_B_13;;;;;;;;;;;X
+NAME_B_14;;;;;;;;;;;X
+SNAME_B_14;;;;;;;;;;;X
+LDESC_B_14;;;;;;;;;;;X
+SDESC_B_14;;;;;;;;;;;X
+NAME_B_15;;;;;;;;;;;X
+SNAME_B_15;;;;;;;;;;;X
+LDESC_B_15;;;;;;;;;;;X
+SDESC_B_15;;;;;;;;;;;X
+NAME_B_16;;;;;;;;;;;X
+SNAME_B_16;;;;;;;;;;;X
+LDESC_B_16;;;;;;;;;;;X
+SDESC_B_16;;;;;;;;;;;X
 #EOF;;;;;;;;;;;X
 #EOF;;;;;;;;;;;X

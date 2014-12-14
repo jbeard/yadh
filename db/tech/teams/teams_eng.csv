@@ -21,7 +21,7 @@ ENG;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 10020;Arthur Harris;T319;8;1941;2000;bomber_tactics;training;piloting;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 10021;Basil Liddell-Hart;T320;8;1937;1940;decentralized_execution;small_unit_tactics;combined_arms_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 10022;Charles Portal;T321;6;1935;2000;bomber_tactics;bomber_design;centralized_execution;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-10023;Dudley Clarke;T322;7;1940;2000;decentralized_execution;small_unit_tactics;airborne_training;Marine_Training;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+10023;Dudley Clarke;T322;7;1940;2000;decentralized_execution;small_unit_tactics;airborne_training;marine_training;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 10024;Dudley Pound;T323;6;1922;1943;large_taskforce_tactics;seamanship;naval_training;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 10025;Hugh Dowding;T324;8;1933;1942;fighter_tactics;training;piloting;decentralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 10026;Max Horton;T325;6;1937;1951;small_taskforce_tactics;naval_training;decentralized_execution;centralized_execution;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -60,3 +60,6 @@ ENG;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 100058;Westland Helicopters;T100058;8;1961;1999;rt_user_1;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 100059;Bristol Helicopter Division;T100059;7;1944;1999;rt_user_1;aeronautics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 100060;Secret Intelligence Service;T100060;8;1909;2000;rt_user_2;training;individual_courage;small_unit_tactics;mathematics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+100061;DM1 Churchill's Toy room;T100061;6;1939;1946;rt_user_2;electronics;mechanics;mathematics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+100062;Department of Miscellaneous Weapons Development;T100062;6;1939;1946;rocketry;nuclear_physics;electronics;chemistry;technical_efficiency;mathematics;management;;;;;;;;;;;;;;;;;;;;;;;;;;x
+100063;Harry Brearley;T100063;10;1908;1948;chemistry;industrial_engineering;general_equipment;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

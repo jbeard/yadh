@@ -3,6 +3,7 @@ ROM;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 110002;UDR Factories;T2902;4;1900;2000;mechanics;artillery;training;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 110003;IAR;T2903;6;1925;2000;aeronautics;fighter_design;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 110004;Malaxa Works;T2904;5;1930;2000;chemistry;industrial_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+110025;Victor Babes;T110025;9;1871;1926;medicine;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 110005;Uzinele Metalurgice CMC;T2906;4;1930;2000;artillery;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 110006;MAN;T2907;6;1930;2000;industrial_engineering;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 110007;Emanoil Ionescu;T2908;6;1944;2000;bomber_tactics;combined_arms_focus;fighter_tactics;training;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

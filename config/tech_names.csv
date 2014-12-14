@@ -1,4 +1,4 @@
-##  STRING NAME (do not change!);English;French;Italian;Spanish;German;Polish;Portugese;Russian;;Extra2;X
+##  STRING NAME (do not change!);;;;;;;;;;;X
 ## ;;;;;;;;;;;X
 ##  Technology System Techs below here..;;;;;;;;;;;X
 ##;;;;;;;;;;;X
@@ -2078,7 +2078,7 @@ TECH_CMP_ARMOR_306_5_NAME;Airborne IFV Prototype Testing;Airborne IFV Prototype 
 TECH_APP_ARMOR_307_NAME;Advanced Modern MBT;Advanced Modern MBT;Advanced Modern MBT;Advanced Modern MBT;Advanced Modern MBT;Advanced Modern MBT;;Advanced Modern MBT;;;X
 TECH_CMP_ARMOR_307_1_NAME;Rolled Homogeneous Armour;Rolled Homogeneous Armour;Rolled Homogeneous Armour;Rolled Homogeneous Armour;Rolled Homogeneous Armour;Rolled Homogeneous Armour;;Rolled Homogeneous Armour;;;X
 TECH_CMP_ARMOR_307_2_NAME;152mm Rifled Gun;152mm Gun;152mm Gun;152mm Gun;152mm Gun;152mm Gun;;152mm Gun;;;X
-TECH_CMP_ARMOR_307_3_NAME;610Kw Engine;610Kw Engine;610Kw Engine;610Kw Engine;610Kw Engine;610Kw Engine;;610Kw Engine;;;x
+TECH_CMP_ARMOR_307_3_NAME;610Kw Engine;610Kw Engine;610Kw Engine;610Kw Engine;610Kw Engine;610Kw Engine;;610Kw Engine;;;X
 TECH_CMP_ARMOR_307_4_NAME;Ruby Laser Based Rangefinder;Laser Based Rangefinder;Laser Based Rangefinder;Laser Based Rangefinder;Laser Based Rangefinder;Laser Based Rangefinder;;Laser Based Rangefinder;;;X
 TECH_CMP_ARMOR_307_5_NAME;Advanced Modern MBT Prototype Testing;Advanced Modern MBT Prototype Testing;Advanced Modern MBT Prototype Testing;Advanced Modern MBT Prototype Testing;Advanced Modern MBT Prototype Testing;Advanced Modern MBT Prototype Testing;;Advanced Modern MBT Prototype Testing;;;X
 TECH_APP_ARMOR_308_NAME;Adv. Modern SP Artillery;Adv. Modern SP Artillery;Adv. Modern SP Artillery;Adv. Modern SP Artillery;Adv. Modern SP Artillery;Adv. Modern SP Artillery;;Adv. Modern SP Artillery;;;X
@@ -3972,37 +3972,37 @@ TECH_CMP_INDUSTRY_18_2_NAME;Environmental Tests;Essais en environnement;Test amb
 TECH_CMP_INDUSTRY_18_3_NAME;Efficiency Tests;Tests d'efficacitй;Test efficacia;Pruebas de rendimiento;Effizienztests;Testy wydajnoњci;;Стрелковые испытания;;;X
 TECH_CMP_INDUSTRY_18_4_NAME;Assembly Line Process;Processus chaоne de montage;Processo catena di montaggio;Proceso de cadena de montaje;FlieЯbandprozess;Proces montaїowy;;Организация конвейера;;;X
 TECH_CMP_INDUSTRY_18_5_NAME;Production Tests;Essais de production;Test di produzione;Pruebas de producciуn;Produktionstests;Testy produkcyjne;;Испытания готовой продукции;;;X
-TECH_APP_INDUSTRY_19_NAME;Basic Oil Refining;Raffinage du pйtrole I;Raffinazione petrolio di base;Refinado bбsico del petrуleo;Einfache Цlraffinierung;Podstawowa rafinacja ropy;;Базовая нефтепереработка;;;X
+TECH_APP_INDUSTRY_19_NAME;Early Rudimentary Oil Refining;Raffinage du pйtrole I;Raffinazione petrolio di base;Refinado bбsico del petrуleo;Einfache Цlraffinierung;Podstawowa rafinacja ropy;;Базовая нефтепереработка;;;X
 TECH_CMP_INDUSTRY_19_1_NAME;Basic Distillation;Distillation I;Distillazione di base;Destilaciуn bбsica;Einfache Destillation;Podstawowa destylacja;;Базовая перегонка;;;X
 TECH_CMP_INDUSTRY_19_2_NAME;Basic Cracker;Craqueur I;Violazione codici di base;Pirolizador bбsico;Einfacher Cracker;Podstawowy rozkіad;;Базовый крекинг;;;X
 TECH_CMP_INDUSTRY_19_3_NAME;Basic Isomerism;Isomйrisation I;Conversione in isomero di base;Isomerizaciуn bбsica;Einfache Isomerisierung;Podstawowa izomeryzacja;;Базовая изомеризация;;;X
 TECH_CMP_INDUSTRY_19_4_NAME;Basic Hydrogen Treatment;Traitement а l'hydrogиne I;Trattamento idrogeno di base;Tratamiento bбsico del hidrуgeno;Einfache Wasserstoffbehandlung;Podstawowa obrуbka wodorowa;;Базовая водородная обработка;;;X
 TECH_CMP_INDUSTRY_19_5_NAME;Basic Test Facility;Installation d'essai I;Struttura di prova di base;Planta experimental bбsica;Einfache Testanlage;Podstawowe stanowisko testowe;;Базовая испытательная лаборатория;;;X
-TECH_APP_INDUSTRY_20_NAME;Improved Oil Refining;Raffinage du pйtrole II;Raffinazione petrolio migliorata;Refinado mejorado del petrуleo;Verbesserte Цlraffinierung;Ulepszona rafinacja ropy;;Улучшенная нефтепереработка;;;X
+TECH_APP_INDUSTRY_20_NAME;Rudimentary Oil Refining;Raffinage du pйtrole II;Raffinazione petrolio migliorata;Refinado mejorado del petrуleo;Verbesserte Цlraffinierung;Ulepszona rafinacja ropy;;Улучшенная нефтепереработка;;;X
 TECH_CMP_INDUSTRY_20_1_NAME;Improved Distillation;Distillation II;Distillazione migliorata;Destilaciуn mejorada;Verbesserte Destillation;Ulepszona destylacja;;Улучшенная перегонка;;;X
 TECH_CMP_INDUSTRY_20_2_NAME;Improved Cracker;Craqueur II;Violazione codici migliorata;Pirolizador mejorado;Verbesserter Cracker;Ulepszony rozkіad;;Улучшенный крекинг;;;X
 TECH_CMP_INDUSTRY_20_3_NAME;Improved Isomerism;Isomйrisation II;Conversione in isomero migliorata;Isomerizaciуn mejorada;Verbesserte Isometrisierung;Ulepszona izomeryzacja;;Улучшенная изомеризация;;;X
 TECH_CMP_INDUSTRY_20_4_NAME;Improved Hydrogen Treatment;Traitement а l'hydrogиne II;Trattamento idrogeno migliorato;Tratamiento mejorado del hidrуgeno;Verbesserte Wasserstoffbehandlung;Ulepszona obrуbka wodorowa;;Улучшенная водородная обработка;;;X
 TECH_CMP_INDUSTRY_20_5_NAME;Improved Test Facility;Installation d'essai II;Struttura di prova migliorata;Planta experimental mejorada;Verbesserte Testanlage;Ulepszone stanowisko testowe;;Улучшенная испытательная лаборатория;;;X
-TECH_APP_INDUSTRY_21_NAME;Advanced Oil Refining;Raffinage du pйtrole III;Raffinazione petrolio avanzata;Refinado avanzado del petrуleo;Fortschrittliche Цlraffinierung;Zaawansowana rafinacja ropy;;Усовершенствованная нефтепереработка;;;X
+TECH_APP_INDUSTRY_21_NAME;Basic Oil Refining;Raffinage du pйtrole III;Raffinazione petrolio avanzata;Refinado avanzado del petrуleo;Fortschrittliche Цlraffinierung;Zaawansowana rafinacja ropy;;Усовершенствованная нефтепереработка;;;X
 TECH_CMP_INDUSTRY_21_1_NAME;Advanced Distillation;Distillation III;Distillazione avanzata;Destilaciуn avanzada;Fortschrittliche Destillation;Zaawansowana destylacja;;Усовершенствованная перегонка;;;X
 TECH_CMP_INDUSTRY_21_2_NAME;Advanced Cracker;Craqueur III;Violazione codici avanzata;Pirolizador avanzado;Fortschrittlicher Cracker;Zaawansowany rozkіad;;Усовершенствованный крекинг;;;X
 TECH_CMP_INDUSTRY_21_3_NAME;Advanced Isomerism;Isomйrisation III;Conversione in isomero avanzata;Isomerizaciуn avanzada;Fortschrittliche Isomerisierung;Zaawansowana izomeryzacja;;Усовершенствованная изомеризация;;;X
 TECH_CMP_INDUSTRY_21_4_NAME;Advanced Hydrogen Treatment;Traitement а l'hydrogиne III;Trattamento idrogeno avanzato;Tratamiento avanzado del hidrуgeno;Fortschrittliche Wasserstoffbehandlung;Zaawansowana obrуbka wodorowa;;Усовершенствованная водородная обработка;;;X
 TECH_CMP_INDUSTRY_21_5_NAME;Advanced Test Facility;Installation d'essai III;Struttura di prova avanzata;Planta experimental avanzada;Fortschrittliche Testanlage;Zaawansowane stanowisko testowe;;Усовершенствованная испытательная лаборатория;;;X
-TECH_APP_INDUSTRY_22_NAME;Basic Synthetic Oil Plant;Raffinerie synthйtique I;Fabbrica petrolio sintetico di base;Planta bбsica de combustible sintйtico;Einfache Hydrierwerke;Podstawowa wytwуrnia paliwa syntetycznego;;Базовый нефтесинтез;;;X
+TECH_APP_INDUSTRY_22_NAME;Early Basic Synthetic Oil Plant;Raffinerie synthйtique I;Fabbrica petrolio sintetico di base;Planta bбsica de combustible sintйtico;Einfache Hydrierwerke;Podstawowa wytwуrnia paliwa syntetycznego;;Базовый нефтесинтез;;;X
 TECH_CMP_INDUSTRY_22_1_NAME;Basic Catalysts;Catalyseurs I;Catalizzatori di base;Catalizadores bбsicos;Einfache Beschleuniger;Podstawowe katalizatory;;Базовые катализаторы;;;X
 TECH_CMP_INDUSTRY_22_2_NAME;Basic Reactors;Rйacteurs I;Reattori di base;Reactores bбsicos;Einfache Reaktoren;Podstawowe reaktory;;Базовый реактор;;;X
 TECH_CMP_INDUSTRY_22_3_NAME;Basic Product Processing;Traitement de produit I;Lavorazione del prodotto di base;Procesamiento bбsico del producto;Einfache Produktverarbeitung;Podstawowe przetwarzanie produktu;;Базовая технология обработки;;;X
 TECH_CMP_INDUSTRY_22_4_NAME;Basic Feedstock Preparation;Prйparation matiиres premiиres d'alimentation I;Preparazione materiali di base;Disponibilidad de suministro bбsica;Einfache Rohmaterialvorbereitung;Podstawowe przygotowanie materiaіu;;Базовая подготовка сырья;;;X
 TECH_CMP_INDUSTRY_22_5_NAME;Basic Oil Plant Prototype Tests;Essais du prototype raffinerie I;Test prototipi fabbrica petrolio di base;Pruebas de prototipo de planta bбsica de combustible;Prototypentests einfacher Hydrierwerke;Podstawowe testy paliwa syntetycznego;;Внедрение технологии базового нефтесинтеза;;;X
-TECH_APP_INDUSTRY_23_NAME;Improved Synthetic Oil Plant;Raffinerie synthйtique II;Fabbrica petrolio sintetico migliorata;Planta mejorada de combustible sintйtico;Verbesserte Hydrierwerke;Ulepszona wytwуrnia paliwa syntetycznego;;Улучшенный нефтесинтез;;;X
+TECH_APP_INDUSTRY_23_NAME;Basic Synthetic Oil Plant;Raffinerie synthйtique II;Fabbrica petrolio sintetico migliorata;Planta mejorada de combustible sintйtico;Verbesserte Hydrierwerke;Ulepszona wytwуrnia paliwa syntetycznego;;Улучшенный нефтесинтез;;;X
 TECH_CMP_INDUSTRY_23_1_NAME;Improved Catalysts;Catalyseurs II;Catalizzatori migliorati;Catalizadores mejorados;Verbesserte Beschleuniger;Ulepszone katalizatory;;Улучшенные катализаторы;;;X
 TECH_CMP_INDUSTRY_23_2_NAME;Improved Reactors;Rйacteurs II;Reattori migliorati;Reactores mejorados;Verbesserte Reaktoren;Ulepszone reaktory;;Улучшенный реактор;;;X
 TECH_CMP_INDUSTRY_23_3_NAME;Improved Product Processing;Traitement de produit II;Lavorazione del prodotto migliorata;Procesamiento mejorado del producto;Verbesserte Produktverarbeitung;Ulepszone przetwarzanie produktu;;Улучшенная обработка;;;X
 TECH_CMP_INDUSTRY_23_4_NAME;Improved Feedstock Preparation;Prйparation matiиres premiиres d'alimentation II;Preparazione materiali migliorata;Disponibilidad de suministro mejorada;Verbesserte Rohmaterialvorbereitung;Ulepszone przygotowanie materiaіu;;Улучшенная подготовка сырья;;;X
 TECH_CMP_INDUSTRY_23_5_NAME;Improved Oil Plant Prototype Tests;Essais du prototype raffinerie II;Test prototipi fabbrica petrolio migliorata;Pruebas de prototipo de planta mejorada de combustible;Prototypentests verbesserter Hydrierwerke;Ulepszone testy paliwa syntetycznego;;Внедрение технологии улучш. нефтесинтеза;;;X
-TECH_APP_INDUSTRY_24_NAME;Advanced Synthetic Oil Plant;Raffinerie synthйtique III;Fabbrica petrolio sintetico avanzata;Planta avanzada de combustible sintйtico;Fortschrittliche Hydrierwerke;Zaawansowana wytwуrnia paliwa syntetycznego;;Усовершенствованный нефтесинтез;;;X
+TECH_APP_INDUSTRY_24_NAME;Early Synthetic Oil Plant;Raffinerie synthйtique III;Fabbrica petrolio sintetico avanzata;Planta avanzada de combustible sintйtico;Fortschrittliche Hydrierwerke;Zaawansowana wytwуrnia paliwa syntetycznego;;Усовершенствованный нефтесинтез;;;X
 TECH_CMP_INDUSTRY_24_1_NAME;Advanced Catalysts;Catalyseurs III;Catalizzatori avanzati;Catalizadores avanzados;Fortschrittliche Beschleuniger;Zaawansowane katalizatory;;Усовершенствованный катализаторы;;;X
 TECH_CMP_INDUSTRY_24_2_NAME;Advanced Reactors;Rйacteurs III;Reattori avanzati;Reactores avanzados;Fortschrittliche Reaktoren;Zaawansowane reaktory;;Усовершенствованный реактор;;;X
 TECH_CMP_INDUSTRY_24_3_NAME;Advanced Product Processing;Traitement de produit III;Lavorazione del prodotto avanzata;Procesamiento avanzado del producto;Fortschrittliche Produktverarbeitung;Zaawansowane przetwarzanie produktu;;Усовершенствованная обработка;;;X
@@ -4338,7 +4338,7 @@ TECH_CMP_INDUSTRY_101_2_NAME;Modern Warehousing;Principes d'entreposage modernes
 TECH_CMP_INDUSTRY_101_3_NAME;Modern Packaging;Emballage moderne;Imballaggio Moderno;Embalaje moderno;Moderne Verpackung;Nowoczesne pakowanie;;Современная упаковка;;;X
 TECH_CMP_INDUSTRY_101_4_NAME;Pollination Management;Direction de pollinisation;Gestione della Impollinazione;Gestiуn de polinizaciуn;Bestдubungsmanagement;Zarz№dzanie zapylaniem;;Управление опылением;;;X
 TECH_CMP_INDUSTRY_101_5_NAME;Modern Agricultural Production Process;Processus de production agricole moderne;Processo Produttivo Agricolo Moderno;Proceso de producciуn agraria moderna;Moderner Landwirtschaftsproduktionsprozess;Now. proces zarz№dzania agrykultur№;;Совр. процесс сельскохозяйственного производства;;;X
-TECH_APP_INDUSTRY_102_NAME;Modern Synthetic Oil Plant;Olйagineux synthйtique modernes;Impianto Moderno per Olio Sintetico;Planta moderna de combustible sintйtico;Moderne Hydrierwerke;Now. zakіad produkcji oleju syntetycznego;;Современный нефтесинтез;;;X
+TECH_APP_INDUSTRY_102_NAME;Early Modern Synthetic Oil Plant;Olйagineux synthйtique modernes;Impianto Moderno per Olio Sintetico;Planta moderna de combustible sintйtico;Moderne Hydrierwerke;Now. zakіad produkcji oleju syntetycznego;;Современный нефтесинтез;;;X
 TECH_CMP_INDUSTRY_102_1_NAME;Modern Catalysts;Catalyseurs modernes;Catalizzatori Moderni;Catalizadores modernos;Moderne Beschleuniger;Nowoczesne katalizatory;;Современный катализаторы;;;X
 TECH_CMP_INDUSTRY_102_2_NAME;Modern Reactors;Rйacteurs modernes;Reattori Moderni;Reactores modernos;Moderne Reaktoren;Nowoczesne reaktory;;Современный  реактор;;;X
 TECH_CMP_INDUSTRY_102_3_NAME;Modern Product Processing;Traitement de produit moderne;Elaborazione Moderna del Prodotto;Procesamiento moderno del producto;Moderne Produktverarbeitung;Nowoczesne przetwarzanie produktуw;;Современная обработка;;;X
@@ -5099,7 +5099,7 @@ TECH_CMP_SW_155_5_NAME;Web Browsers;Mobile SAM Prototype Tests;Mobile SAM Protot
 ##;;;;;;;;;;;X
 TECH_LD_NAME;Land Doctrines;Doctrine terrestre;Dottrine di terra;Doctrina de tierra;Landdoktrinen;Doktryny l№dowe;;Наземные доктрины;;;X
 TECH_LD_DESC;These land doctrines were introduced sometimes by directives based on theoretical knowledge and sometimes by a trial and error process. They cover the tactical, organizational and strategic aspects of land combat. There are alternatives  representing different cultural outlooks but also need. A focus on Mobility allows a choice between the blitzkrieg used by the German Wehrmacht and the mass-combat assaults used by the Red Army. A focus on Firepower allows a choice between the offensive fire and movement favored by the US Army and a more defensive doctrine based upon WWI fighting. The latter provides three different versions of firepower doctrine used by the British, the French and the Japanese.;Ces doctrines terrestres йtaient parfois introduites par des directives qui s'appuyaient sur des connaissances thйoriques, voire par des essais empiriques et des processus de recherches et d'erreurs. Elles englobent toutes les aspects tactiques, organisationnels et stratйgique du combat terrestre. Cette arborescence dispose de branches exclusives et sйparйes, qui reprйsentent les diffйrences des perspectives contextuelles et culturelles, mais aussi les besoins. L'Objectif Mobilitй part sur une trajectoire orientйe guerre-йclair adoptйe par la Wehrmacht, et sur une trajectoire de combat de masse adoptй par l'Armйe rouge. L'Objectif Puissance de feu part trиs vite sur une trajectoire orientйe puissance de feu et mouvements, souvent choisie par la US Army, et sur une branche dйfensive plus gйnйrale orientйe style de combat Grande Guerre. Cette derniиre se divise ensuite en trois versions de trajectoires diffйrentes orientйes guerre programmйe, prйfйrйes par, respectivement les Britanniques, les Franзais et les Japonais.;Queste dottrine di terra sono state introdotte in base a studi teorici e a volte in base al processo di apprendimento tramite l'errore. Coprono tutti gli aspetti del combattimento terrestre: tattici, organizzativi e strategici. Questi tre fattori sono costituiti da elementi esclusivi e separati, che rappresentano differenze dal punto di vista culturale e contestuale, come pure della necessitа. L'importanza sulla mobilitа si suddivide in un ramo orientato verso la blitzkrieg, usata dalla Wehrmacth e in uno orientato verso il combattimento di massa, esclusiva dell'Armata Rossa. L'importanza sulla potenza di fuoco, a sua volta, si suddivide in una via orientata verso la potenza di fuoco e movimento, preferita dall'esercito e una di carattere piщ difensivo, tipica della Prima Guerra Mondiale. Quest'ultima и a sua volta divisa in tre versioni della guerra pianificata, predilette rispettivamente da inglesi, francesi e giapponesi.;Estas doctrinas de tierra se debieron a veces a directivas basadas en el conocimiento teуrico y otras al proceso empнrico de prueba y error. Todas ellas cubren los aspectos tбcticos, organizativos y estratйgicos del combate terrestre. El бrbol tiene ramas exclusivas y separadas que representan puntos de vista culturales y contextuales tan diferentes como necesarios. La concentraciуn en la movilidad toma el camino de la guerra relбmpago adoptado por la Wehrmacht, y la de combate en masa el usado por el Ejйrcito Rojo.  La concentraciуn en la potencia de fuego toma el camino del movimiento y la potencia de fuego, preferido por el ejйrcito estadounidense, y hay una rama mбs defensiva al estilo de combate de la I Guerra Mundial. La ъltima se ramifica en tres versiones diferentes de caminos orientados a la guerra planificada, habituales entre los britбnicos, franceses y japoneses, respectivamente.;Diese Land-Doktrinen wurden manchmal von Richtlinien eingefьhrt, die auf theoretischem Wissen und manchmal auf Prozessen der  empirischen Versuch- und Irrtumsmethode beruhten. Sie decken alle taktischen, organisatorischen und strategischen Aspekte des Landgefechts ab. Der Baum verfьgt ьber besondere und separate Дste, die nicht nur kulturelle und kontextuale Aspekte, sondern auch die Versorgung darstellt. Der Pfad Mobilitдts-Fokus fьhrt zu einer Orientierung am Blitzkrieg, der durch die Wehrmacht genutzt wird und einem Massenkampfs-Pfad, den die Rote Armee benutzt. Der Feuerkraft-Fokus fьhrt zu einem Pfad mit frьher Feuerkraft und schneller Bewegung, der von der US-Armee bevorzugt wird und einem eher defensiven Pfad, der sich an dem Kampfstil des Ersten Weltkriegs orientiert. Dieser zuletzt genannte Pfad teilt sich in drei weitere Versionen der geplanten Kriegsfьhrung, wie sie von den Briten, Franzosen und Japanern angewendet wird.;Doktryny l№dowe byіy rozwijane raz w oparciu o dyrektywy, bazuj№ce na wiedzy teoretycznej, a raz w procesie prуb i bікdуw. Wszystkie pokrywaj№ taktyczne, organizacyjne oraz strategiczne aspekty walki na l№dzie. Drzewo rozwoju posiada gaікzie wyі№czne i niezaleїne, reprezentuj№ce nie tylko rуїnice kulturowe i њwiatopogl№dowe, ale takїe aktualne potrzeby. Przykіadowo, nacisk na mobilnoњж przechodzi w Blitzkrieg, czyli њcieїkк ktуr№ poszedі Wehrmacht, a nacisk na zmasowane ataki piechoty byі domen№ Armii Czerwonej. Nacisk na siік ognia to gaі№џ preferowana przez wojska Stanуw Zjednoczonych, a doktryny nastawione na obronк dominowaіy podczas I w. њw.. Te z kolei rozgaікziaj№ siк na trzy rуїne wersje planowanych dziaіaс wojennych, wybranych przez Angliк, Francjк i Japoniк.;;Наземные доктрины разрабатывались на основе теоретических знаний или посредством проб и ошибок, на основе опыта. Все они затрагивают стратегические аспекты ведения наземных операций. Дерево технологий имеет различные взаимоисключающие ветви, соответствующие различиям в культуре и технике, а также различиям в потребностях. В ветви Вермахта основное внимание уделяется мобильности и блицкригу, тогда как в ветви Красной Армии - массированному бою. Ветвь Сосредоточения огневой мощи рано разветвляется на ветвь огневой мощи и передвижения, которым поначалу отдавала предпочтение армия США, и на более общую ветвь обороны, ориентированной на стиль Первой мировой войны. Последняя ветвь делится на три ветви планирования боевых операций, которые предпочитали Британия, Франция и Япония.;;;X
-TECH_APP_LD_1_NAME;Firepower Focus Doctrine;Doctrine Objectif puissance de feu;Dottrina dell'importanza sulla potenza di fuoco;Doctrina concentraciуn en la potencia de fuego;Doktrin fьr Feuerkraftfokus;Doktryna nacisku na siік ognia;;Сосредоточение огневой мощи;;;X
+TECH_APP_LD_1_NAME;Firepower Focus Doctrine 6010;Doctrine Objectif puissance de feu;Dottrina dell'importanza sulla potenza di fuoco;Doctrina concentraciуn en la potencia de fuego;Doktrin fьr Feuerkraftfokus;Doktryna nacisku na siік ognia;;Сосредоточение огневой мощи;;;X
 TECH_CMP_LD_1_1_NAME;Tactical unit - Battalion;Unitй tactique - Bataillon;Unitа tattica - Battaglione;Unidad tбctica: Batallуn;Batallion als taktische Einheit;Jednostka taktyczna-batalion;;Тактическая единица - батальон;;;X
 TECH_CMP_LD_1_2_NAME;Fire discipline ;Discipline de tir;Disciplina di fuoco;Disciplina del fuego;Feuerdisziplin;Dyscyplina prowadzenia ognia;;Стрелковая дисциплина;;;X
 TECH_CMP_LD_1_3_NAME;Interlocking fields of fire;Synchronisation des champs de tir;Campi di fuoco sovrapposti;Sectores de fuego entrecruzados;Ineinandergreifende Feuerbereiche;Ogieс krzyїowy;;Перекрывающиеся сектора обстрела;;;X
@@ -5219,7 +5219,7 @@ TECH_CMP_LD_20_2_NAME;Long-Range Reconnaissance;Reconnaissance lointaine;Ricogni
 TECH_CMP_LD_20_3_NAME;Forward command posts;Postes de commandement avancйs;Posti di comando avanzati;Puestos de mando avanzados;Vorgeschobene Kommandoposten;Polowe stanowiska dowodzenia;;Передовые командные пункты;;;X
 TECH_CMP_LD_20_4_NAME;Fire direction centers;Centres de conduite de tir;Centri di direzione del tiro;Puesto de direcciуn del tiro;Feuerleitzentralen;Oњrodki kierowania ogniem;;Центры управления огнем;;;X
 TECH_CMP_LD_20_5_NAME;Tactical unit - squad;Unitй tactique - Escadron;Unitа tattica - Squadra;Unidad tбctica: Pelotуn;Trupp als taktische Einheit;Jednostka taktyczna-druїyna;;Тактическая единица - отделение;;;X
-TECH_APP_LD_21_NAME;Mobility Focus Doctrine;Doctrine Accent sur la mobilitй;Dottrina dell'importanza della mobilitа;Doctrina de concentraciуn en la movilidad;Mobilitдtsfokusdoktrin;Doktryna nacisku na mobilnoњж;;Ставка на мобильность;;;X
+TECH_APP_LD_21_NAME;Mobility Focus Doctrine 6210;Doctrine Accent sur la mobilitй;Dottrina dell'importanza della mobilitа;Doctrina de concentraciуn en la movilidad;Mobilitдtsfokusdoktrin;Doktryna nacisku na mobilnoњж;;Ставка на мобильность;;;X
 TECH_CMP_LD_21_1_NAME;Motorized Reconnaissance;Reconnaissance motorisйe;Ricognizione motorizzata;Reconocimiento motorizado;Motorisierte Aufklдrung;Zwiad zmotoryzowany;;Моторизованная разведка;;;X
 TECH_CMP_LD_21_2_NAME;Basic infiltration tactics;Tactiques d'infiltration I;Tattica di infiltrazione di base;Tбcticas bбsicas de infiltraciуn;Einfache Infiltrationstaktik;Podstawowa taktyka infiltracji;;Базовая тактика проникновения в тыл противника;;;X
 TECH_CMP_LD_21_3_NAME;Shock tactics;Tactiques de choc;Tattica di impatto;Tбcticas de choque;Schocktaktik;Taktyka szokowa;;Тактика сокрушительных ударов;;;X
@@ -5279,7 +5279,7 @@ TECH_CMP_LD_30_2_NAME;Advance under fire;Traverser feu ennemi;Avanzata sotto il 
 TECH_CMP_LD_30_3_NAME;General staff planning;Planification йtat-major;Pianificazione generale del personale;Planificaciуn general del estado mayor;Generalstabsplanung;Planowanie w sztabie generalnym;;Планирование операций на уровне Генштаба;;;X
 TECH_CMP_LD_30_4_NAME;Blocking detachments;Blocage des dйtachements;Distaccamenti di blocco;Destacamentos de contenciуn;Sperrabteilung;Pododdziaіy osіaniaj№ce;;Заградотряды;;;X
 TECH_CMP_LD_30_5_NAME;Officer training - Frunze method;Instruction officier – mйthode Frunze;Addestramento ufficiale - Metodo Frunze;Instrucciуn de oficiales: mйtodo de Frunze;Offiziersausbildung nach Frunze-Methode;Trening oficerski-metoda Frunze;;Подготовка командного состава - метод Фрунзе;;;X
-TECH_APP_LD_31_NAME;Large Front Doctrine;Doctrine du grand front;Dottrina del fronte esteso;Doctrina del gran frente;Doktrin fьr breite Front;Doktryna szerokiego frontu;;Доктрина широкого фронта;;;X
+TECH_APP_LD_31_NAME;Large Front Doctrine 9310;Doctrine du grand front;Dottrina del fronte esteso;Doctrina del gran frente;Doktrin fьr breite Front;Doktryna szerokiego frontu;;Доктрина широкого фронта;;;X
 TECH_CMP_LD_31_1_NAME;Artillery divisions;Divisions d'artillerie;Divisioni di artiglieria;Divisiones de artillerнa;Artilleriedivisionen;Dywizje artyleryjskie;;Артиллерийские дивизионы;;;X
 TECH_CMP_LD_31_2_NAME;Wide attack area;Zone d'attaque йtendue;Zona d'attacco ampia;Бrea de ataque amplia;Breiter Angriffsbereich;Atak szerokostrefowy;;Наступление широким фронтом;;;X
 TECH_CMP_LD_31_3_NAME;Tactical unit - Battalion;Unitй tactique - Bataillon;Unitа tattica - Battaglione;Unidad tбctica: Batallуn;Batallion als taktische Einheit;Jednostka taktyczna-batalion;;Тактическая единица - батальон;;;X
@@ -5321,7 +5321,7 @@ TECH_CMP_LD_37_2_NAME;Deep penetration raids;Raids de pйnйtration profonde;Incur
 TECH_CMP_LD_37_3_NAME;Multidimensional offensives;Offensives multidimensionnelles;Offensive multi-direzionali;Ofensivas multidimensionales;Mehrdimensionale Offensiven;Ofensywy wielowymiarowe;;Наступление с нескольких направлений;;;X
 TECH_CMP_LD_37_4_NAME;Specialized anti-recon detachments;Dйtachements anti-reconnaissance spйcialisйs;Distaccamenti anti-ricognizione specializzati;Destacamentos especializados en antirreconocimiento;Spezialisierte Anti-Aufklдrungs-Abteilungen;Specjalizowane oddziaіy kontrrekonesansowe;;Специальные подразделения контрразведки;;;X
 TECH_CMP_LD_37_5_NAME;Camouflaged lines of departure;Lignes de dйpart camouflйes;Linee di avvio mimetizzate;Lнneas de partida camufladas;Getarnte Ablauflinien;Zakamuflowane linie dyslokacji;;Маскировка передовой линии;;;X
-TECH_APP_LD_39_NAME;Light Infantry doctrine;Doctrine d'Infanterie Lйgиre;Dottrina Fanteria Leggera;Doctrina de Infanteria Ligera;leichte Infanterie;Lekka piechota;;Тактика действий легкой пехоты;;;X
+TECH_APP_LD_39_NAME;Light Infantry doctrine 6390;Doctrine d'Infanterie Lйgиre;Dottrina Fanteria Leggera;Doctrina de Infanteria Ligera;leichte Infanterie;Lekka piechota;;Тактика действий легкой пехоты;;;X
 TECH_APP_LD_45_NAME;Light Mobility;Mobilitй Lйgиre;Mobilitа Leggera;Movilidad Ligera;leichte Beweglichkeit;Lekka mobilnoњж;;Мобильность легкой пехоты;;;X
 TECH_APP_LD_46_NAME;Combined Arms;Armements Combinйs;Armi Combinate;Armamento combinado;Verbundene Waffen;Wojska poі№czene;;Общевойсковые соединения;;;X
 TECH_APP_LD_49_NAME;Improved light Infantry;Infanterie Lйgиre Amйliorйe;Fanteria leggera migliorata;Infanteria Ligera mejorada;Verbesserte leichte Infantrie;Ulepszona lekka piechota;;Улучшенная легкая пехота;;;X
@@ -5398,7 +5398,7 @@ TECH_CMP_LD_109_3_NAME;Expanded Draft;Extension du recrutement;Chiamata alle Arm
 TECH_CMP_LD_109_4_NAME;Home Defenders;Dйfense domestique;Difensori della Patria;Defensores de la Patria;Heimatverteidiger;Miejscowi obroсcy;;Защитники родины;;;X
 TECH_CMP_LD_109_5_NAME;On the field training;Entraоnement sur le terrain;Addestramento sul campo;Entrenamiento de campo;Ausbildung im Feld;Trening na polu walki;;Подготовка в полевых условиях;;;X
 TECH_APP_LD_110_NAME;Modern Blitzkrieg;Blitzkrieg moderne;Incursione Moderna;Blitzkrieg Moderna;Moderner Blitzkrieg;Wspуlczesny Blitzkrieg;;Современный блицкриг;;;X
-TECH_APP_LD_114_NAME;People’s War Doctrine;People’s War Doctrine;People’s War Doctrine;People’s War Doctrine;People’s War Doctrine;People’s War Doctrine;;People’s War Doctrine;;;X
+TECH_APP_LD_114_NAME;People’s War Doctrine 14140;People’s War Doctrine;People’s War Doctrine;People’s War Doctrine;People’s War Doctrine;People’s War Doctrine;;People’s War Doctrine;;;X
 TECH_CMP_LD_114_1_NAME;Protracted War Theory- infantry focus;Protracted War Theory- infantry focus;Protracted War Theory- infantry focus;Protracted War Theory- infantry focus;Protracted War Theory- infantry focus;Protracted War Theory- infantry focus;;Protracted War Theory- infantry focus;;;X
 TECH_CMP_LD_114_2_NAME;Avoiding Decisive Battles;Avoiding Decisive Battles;Avoiding Decisive Battles;Avoiding Decisive Battles;Avoiding Decisive Battles;Avoiding Decisive Battles;;Avoiding Decisive Battles;;;X
 TECH_CMP_LD_114_3_NAME;Hit & Run Tactics;Hit & Run Tactics;Hit & Run Tactics;Hit & Run Tactics;Hit & Run Tactics;Hit & Run Tactics;;Hit & Run Tactics;;;X
@@ -6360,8 +6360,8 @@ TECH_CMP_LD_121_2_NAME;Formation Training;Entraоnement а la formation;Addestrame
 TECH_CMP_LD_121_3_NAME;Open Order Formation;Formation en ordre ouvert;Formazione aperta;Formaciуn en Orden Abierto;Offene Ordnung;Formacja rozproszonych oddziaіуw;;Свободные построения;;;X
 TECH_CMP_LD_121_4_NAME;Large Formation Tactics;Tactique des grandes formations;Tattiche per formazioni ampie;Tбcticas de Formaciуn Grande;Taktiken fьr Grossverbдnde;Taktyka wielkich formacji;;Тактика крупных формирований;;;X
 TECH_CMP_LD_121_5_NAME;Formation Bayonet Charge;Formation de charge а la bayonnette;Formazione per cariche di baionetta;Carga de Bayoneta en Formaciуn;Bajonettangriff in Formation;Formacja szarїy na bagnety;;Отработка штыкового боя;;;X
-#NOTUSEDSHORT_TECH_APP_LD_122_NAME;Colonial Warfare;Guerre coloniale;Guerra coloniale;Guerra Colonial;Kolonialkrieg;Walki kolonialne;;Колониальные войны;;;X
-#NOTUSEDTECH_APP_LD_122_NAME;Colonial Warfare;Guerre coloniale;Guerra coloniale;Guerra Colonial;Kolonialkrieg;Walki kolonialne;;Колониальные войны;;;X
+#NOTUSEDSHORT_TECH_APP_LD_122_NAME;;;;;;;;;;;X
+#NOTUSEDTECH_APP_LD_122_NAME;;;;;;;;;;;X
 #NOTUSEDTECH_CMP_LD_122_1_NAME;;;;;;;;;;;X
 #NOTUSEDTECH_CMP_LD_122_2_NAME;;;;;;;;;;;X
 #NOTUSEDTECH_CMP_LD_122_3_NAME;;;;;;;;;;;X
@@ -6376,32 +6376,32 @@ TECH_CMP_LD_123_4_NAME;Improved Cartridge munition;Munitions а cartouche amйlior
 TECH_CMP_LD_123_5_NAME;Quick firing Field Artillery;Artillerie de terrain а tir rapide;Artiglieria da campo con fuoco veloce;Artillerнa de Campo de Fuego rбpido;Schnellfeuer Artillerie;Szybkostrzelna artyleria polowa;;Скорострельное полевое орудие;;;X
 SHORT_TECH_APP_LD_124_NAME;Spec.-branch tac.;Tactique de branche spйcialisйe;Esp. Tat. Spec. Branche;Rama de Esp. De Tбctica;Spezialkrдfte;Taktyki specjalistyczne;;Такт. опыт спец. подр.;;;X
 TECH_APP_LD_124_NAME;Specialized-branch tactical experience;Expйrience de branche spйcialisйe;Esperienza tattica specializzata branche;Especializaciуn en la rama de Experiencia Tбctica;Spezialkrдfte;Specjalistyczne taktyki typуw broni;;Тактический опыт специальных подразделений;;;X
-TECH_CMP_LD_124_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_124_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_124_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_124_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_124_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_124_1_NAME;New Charge Formations;;;;;;;;;;X
+TECH_CMP_LD_124_2_NAME;Familiarising Soldiers to Modern Equipment;;;;;;;;;;X
+TECH_CMP_LD_124_3_NAME;Company Sized Movement;;;;;;;;;;X
+TECH_CMP_LD_124_4_NAME;Armoured Attacking Roles;;;;;;;;;;X
+TECH_CMP_LD_124_5_NAME;Post-WW I Gunnery Tactics;;;;;;;;;;X
 SHORT_TECH_APP_LD_125_NAME;Cross-branch tac.;Tactique interbranche;Esp. Tat. Interbranca;Rama Cruzada Tac.;Generelle Taktik;Takt. rуїn. typ. broni;;Такт. опыт смеш. подр.;;;X
 TECH_APP_LD_125_NAME;Cross-branch tactical experience;Expйrience de la tactique interbranche;Esperienza tattica interbranca;Rama Cruzada de Experiencia Tбctica;Bereichsьbergreifende taktische Erfahrungen;Taktyki rуїnych typуw broni;;Тактический опыт смешанных подразделений;;;X
-TECH_CMP_LD_125_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_125_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_125_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_125_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_125_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_125_1_NAME;New Defensive Formations;;;;;;;;;;X
+TECH_CMP_LD_125_2_NAME;Defending Positions Under Post WW I Heavy Artillery Fire;;;;;;;;;;X
+TECH_CMP_LD_125_3_NAME;Counter Attacking Formations;;;;;;;;;;X
+TECH_CMP_LD_125_4_NAME;Overhead Fire Support;;;;;;;;;;X
+TECH_CMP_LD_125_5_NAME;Constant Supply Lines;;;;;;;;;;X
 SHORT_TECH_APP_LD_126_NAME;Defensive Focus;Prioritй а la dйfense;Focus difensivo;Foco Defensivo;Defensivfokus;Priorytet: Defensywa;;Приоритет - оборона;;;X
 TECH_APP_LD_126_NAME;Defensive Focus;Prioritй а la dйfense;Focus difensivo;Foco Defensivo;Defensivfokus;Priorytet: Defensywa;;Приоритет - оборона;;;X
-TECH_CMP_LD_126_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_126_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_126_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_126_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_126_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_126_1_NAME;Low Echelon Fire Support;;;;;;;;;;X
+TECH_CMP_LD_126_2_NAME;Holding Position Under Fire;;;;;;;;;;X
+TECH_CMP_LD_126_3_NAME;Fighting in the Trenches;;;;;;;;;;X
+TECH_CMP_LD_126_4_NAME;Constant Supply Lines;;;;;;;;;;X
+TECH_CMP_LD_126_5_NAME;Holding Strategic Positions;;;;;;;;;;X
 SHORT_TECH_APP_LD_127_NAME;Manpower Focus;Prioritй aux rapport de force;Focus manodopera;Foco de Recursos Humanos;Manpower Focus;Priorytet: Siіa ludzka;;Приор. - людск. рес.;;;X
-TECH_APP_LD_127_NAME;Manpower Focus;Prioritй aux rapport de force;Focus manodopera;Foco de Recursos Humanos;Manpower Focus;Priorytet: Siіa ludzka;;Приоритет - людские ресурсы;;;X
-TECH_CMP_LD_127_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_127_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_127_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_127_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_127_5_NAME;;;;;;;;;;;X
+TECH_APP_LD_127_NAME;Manpower Focus 6570;Prioritй aux rapport de force;Focus manodopera;Foco de Recursos Humanos;Manpower Focus;Priorytet: Siіa ludzka;;Приоритет - людские ресурсы;;;X
+TECH_CMP_LD_127_1_NAME;Using Large Populations to an Advantage;;;;;;;;;;X
+TECH_CMP_LD_127_2_NAME;Arming Peasants and Whole Villages;;;;;;;;;;X
+TECH_CMP_LD_127_3_NAME;Rushing Soldiers to the Frontline;;;;;;;;;;X
+TECH_CMP_LD_127_4_NAME;Mass Infantry Movements;;;;;;;;;;X
+TECH_CMP_LD_127_5_NAME;Uniforming Peasants;;;;;;;;;;X
 SHORT_TECH_APP_LD_128_NAME;Leading by Orders;Commandement par des ordres;Comandare con ordini;Liderando por Ordenes;Befehlstaktik;Dowodzenie przez rozkazy;;Команд. по приказам;;;X
 TECH_APP_LD_128_NAME;Leading by Orders;Commandement par des ordres;Comandare con ordini;Liderando por Ordenes;Befehlstaktik;Dowodzenie przez rozkazy;;Командование по приказам;;;X
 TECH_CMP_LD_128_1_NAME;Basic Infantry Tactics;Tactiques d'Infanterie de base;Tattiche di fanteria di base;Tбcticas Bбsicas de Infanterнa;Infanterie Taktiken;Podstawowa taktyka piechoty;;Базовая тактика пехоты;;;X
@@ -6502,25 +6502,25 @@ TECH_CMP_LD_134_4_NAME;Close range Combat discipline;Discipline de Combat Rappro
 TECH_CMP_LD_134_5_NAME;Trench Breakthrough and Exploitation;Percйe des Tranchйes et Exploitation;Sfondamento e sfruttamento delle trincee;Penetraciуn y Aprovechamiento de Trincheras;Durchbruch und Ausnutzung;Przeіamanie i wykorzystanie linii okopуw;;Траншейный прорыв;;;X
 SHORT_TECH_APP_LD_135_NAME;Separated Arms forces;Forces armйes sйparйes;Forze armi separate;Fuerzas de armamento dividido;Getrennte Waffen;Siіy oddz. typуw broni;;Освободит. армия;;;X
 TECH_APP_LD_135_NAME;Separated Arms forces;Forces armйes sйparйes;Forze armi separate;Fuerzas de armamento dividido;Getrennte Waffen;Siіy oddz. typуw broni;;Освободительная армия;;;X
-TECH_CMP_LD_135_1_NAME;;;;;;;;;;;X
+TECH_CMP_LD_135_1_NAME;Charging Over Trenches;;;;;;;;;;X
 TECH_CMP_LD_135_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_135_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_135_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_135_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_135_3_NAME;Flanking Enemy Field Ranks;;;;;;;;;;X
+TECH_CMP_LD_135_4_NAME;Battlefield Attrition;;;;;;;;;;X
+TECH_CMP_LD_135_5_NAME;Central Command;;;;;;;;;;X
 SHORT_TECH_APP_LD_136_NAME;Central Control;Contrфle central;Controllo centralizzato;Control Central;Zentralkontrolle;Centralna kontrola;;Центр. управление;;;X
 TECH_APP_LD_136_NAME;Centralized Control;Contrфle centralisй;Controllo centralizzato;Control Centralizado;Zentralkontrolle;Scentralizowana kontrola;;Централизованное управление;;;X
 TECH_CMP_LD_136_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_136_2_NAME;;;;;;;;;;;X
+TECH_CMP_LD_136_2_NAME;Close Proximity;;;;;;;;;;X
 TECH_CMP_LD_136_3_NAME;;;;;;;;;;;X
 TECH_CMP_LD_136_4_NAME;;;;;;;;;;;X
 TECH_CMP_LD_136_5_NAME;;;;;;;;;;;X
 SHORT_TECH_APP_LD_137_NAME;Combined Arms;Armes combinйes;Armi Combinate;Armamento Combinado;Verb. Waffen;Poі№czone wojska;;Общевойск. соедин.;;;X
 TECH_APP_LD_137_NAME;Combined Arms Force;Force des armes combinйes;Armi Combinate;Fuerzas de Armamento combinado;Verbundene Waffen;Siіa poі№czonych wojsk;;Общевойсковое соединение;;;X
-TECH_CMP_LD_137_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_137_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_137_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_137_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_137_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_137_1_NAME;Steady Supply Lines;;;;;;;;;;X
+TECH_CMP_LD_137_2_NAME;Advancing Under Artillery Fire;;;;;;;;;;X
+TECH_CMP_LD_137_3_NAME;Supporting Troop Advance With Tanks;;;;;;;;;;X
+TECH_CMP_LD_137_4_NAME;Advancement Under Heavy Artillery Fire;;;;;;;;;;X
+TECH_CMP_LD_137_5_NAME;Close Air Support;;;;;;;;;;X
 SHORT_TECH_APP_LD_138_NAME;Mass Charge;Charge massive;Carica di massa;Carga masiva;Massenangriff;Masowy szturm;;Массированн. штурм;;;X
 TECH_APP_LD_138_NAME;Mass Charge;Charge massive;Carica di massa;Carga masiva;Massenangriff;Masowy szturm;;Массированный штурм;;;X
 TECH_CMP_LD_138_1_NAME;Mass Infantry Assault Doctrine;Doctrine de l'Assaut d'Infanterie en Masse;Dottrina dell'assalto di massa della fanteria;Doctrina de Asalto Masivo de Infanterнa;Infanterie Massenangriffsdoktrin;Doktryna zmasowanego ataku piechoty;;Доктрина массовой пех. атаки;;;X
@@ -6544,39 +6544,39 @@ TECH_CMP_LD_140_4_NAME;Static Defense Tactics;Tactiques de Dйfense Statiques;Tat
 TECH_CMP_LD_140_5_NAME;Infantry Cross fire Tactics;Tactiques de Feux Croisйs pour l'Infanterie;Tattiche di fuoco incrociato di fanteria;Tбcticas de Infanterнa de Fuego Cruzado;Infanterie Kreuzfeuertaktik;Taktyka krzyїowego ognia piechoty;;Тактика перекрестного огня;;;X
 SHORT_TECH_APP_LD_141_NAME;Forward Control;Contrфle avancй;Controllo avanzato;Control Delantero;Takt. Entscheidung;Wysuniкta kontrola;;Перед. управление;;;X
 TECH_APP_LD_141_NAME;Forward Control;Contrфle avancй;Controllo avanzato;Control Delantero;Entscheidungen auf taktischer Ebene;Wysuniкta kontrola;;Передовое управление;;;X
-TECH_CMP_LD_141_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_141_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_141_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_141_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_141_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_141_1_NAME;Deep Troop Entrenchment;;;;;;;;;;X
+TECH_CMP_LD_141_2_NAME;NCO Responsibility;;;;;;;;;;X
+TECH_CMP_LD_141_3_NAME;Heavily Armored Troop Support;;;;;;;;;;X
+TECH_CMP_LD_141_4_NAME;Battalion Sized Attack Formation;;;;;;;;;;X
+TECH_CMP_LD_141_5_NAME;Battalion Sized Defence Formation;;;;;;;;;;X
 SHORT_TECH_APP_LD_142_NAME;Hunter Groups;Groupe de chasseur;Gruppi di cacciatori;Grupos de caza;Jagdgruppen;Grupy myњliwcze;;Охотничьи группы;;;X
 TECH_APP_LD_142_NAME;Hunter Groups;Groupe de chasseur;Gruppi di cacciatori;Grupos de caza;Jagdgruppen;Grupy myњliwcze;;Охотничьи группы;;;X
-TECH_CMP_LD_142_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_142_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_142_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_142_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_142_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_142_1_NAME;Tracking Down Partisans;;;;;;;;;;X
+TECH_CMP_LD_142_2_NAME;NCO Level Responsibility;;;;;;;;;;X
+TECH_CMP_LD_142_3_NAME;Modern Armoured Attack;;;;;;;;;;X
+TECH_CMP_LD_142_4_NAME;Multi-Climate Vehicle Applications;;;;;;;;;;X
+TECH_CMP_LD_142_5_NAME;Constricted Warfare Tactics;;;;;;;;;;X
 SHORT_TECH_APP_LD_143_NAME;Night Vision Tactics;Tactique de vision nocturne;Tattiche di visione notturna;Tбcticas de Visiуn Nocturna;Nachtangriff;Taktyka walki nocnej;;Ночное видение;;;X
 TECH_APP_LD_143_NAME;Night Vision Tactics;Tactique de vision nocturne;Tattiche di visione notturna;Tбcticas de Visiуn Nocturna;Taktiken fьr Nachtangriffe;Taktyka walki nocnej;;Тактика ночного видения;;;X
-TECH_CMP_LD_143_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_143_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_143_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_143_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_143_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_143_1_NAME;Vampyr Night Vision Scope;;;;;;;;;;X
+TECH_CMP_LD_143_2_NAME;Night Vision Vehicle Fitouts;;;;;;;;;;X
+TECH_CMP_LD_143_3_NAME;Night Vision Equipment Usage;;;;;;;;;;X
+TECH_CMP_LD_143_4_NAME;Nighttime Manouvre;;;;;;;;;;X
+TECH_CMP_LD_143_5_NAME;Fully Modernised Night Vision Equipment Layout;;;;;;;;;;X
 SHORT_TECH_APP_LD_144_NAME;Modern Spearhead;Fer de lance moderne;Teste di lancia moderne;Punta de lanza moderna;Angriffspitze;Wspуіczesna szpica;;Сов. передов. отряды;;;X
 TECH_APP_LD_144_NAME;Modern Spearhead;Fer de lance moderne;Teste di lancia moderne;Punta de lanza moderna;Moderne Angriffspitze;Wspуіczesna szpica;;Современные передовые отряды;;;X
-TECH_CMP_LD_144_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_144_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_144_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_144_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_144_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_144_1_NAME;Modern Attack Formations;;;;;;;;;;X
+TECH_CMP_LD_144_2_NAME;Modern Equipment Design;;;;;;;;;;X
+TECH_CMP_LD_144_3_NAME;Modern Equipment Fitouts;;;;;;;;;;X
+TECH_CMP_LD_144_4_NAME;Company Level Initiative;;;;;;;;;;X
+TECH_CMP_LD_144_5_NAME;New Equipment and Armaments Training;;;;;;;;;;X
 SHORT_TECH_APP_LD_145_NAME;Air-cavalry Doctrine;Doctrine de cavalerie aйrienne;Dottrina cavalleria dell'aria;Doctrina de la Aero caballerнa;Luftkavallerie;Doktryna kawalerii pow.;;Воздушн. кавалерия;;;X
 TECH_APP_LD_145_NAME;Air-cavalry Doctrine;Doctrine de cavalerie aйrienne;Dottrina cavalleria dell'aria;Doctrina de la Aero caballerнa;Doktrin der Luftkavallerie;Doktryna kawalerii powietrznej;;Концепция воздушной кавалерии;;;X
-TECH_CMP_LD_145_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_145_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_145_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_145_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_145_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_145_1_NAME;Airdropped Cavalry Tactics;;;;;;;;;;X
+TECH_CMP_LD_145_2_NAME;Fast Support Unit Back Up;;;;;;;;;;X
+TECH_CMP_LD_145_3_NAME;Helicopter Support Roles;;;;;;;;;;X
+TECH_CMP_LD_145_4_NAME;Helicopter Rapeling;;;;;;;;;;X
+TECH_CMP_LD_145_5_NAME;Rapeling Under Fire;;;;;;;;;;X
 SHORT_TECH_APP_LD_146_NAME;Special Forces Focus;Concentration de forces spйciales;Focus forze speciali;Foco de Fuerzas Especiales;Spezialkrдfte;Nacisk na siіy spec.;;Приор.-войска спецн.;;;X
 TECH_APP_LD_146_NAME;Special Forces Focus;Concentration de forces spйciales;Focus forze speciali;Foco de Fuerzas Especiales;Spezialkrдfte;Nacisk na siіy specjalne;;Приоритет - войска специального назначения;;;X
 TECH_CMP_LD_146_1_NAME;;;;;;;;;;;X
@@ -6586,39 +6586,39 @@ TECH_CMP_LD_146_4_NAME;;;;;;;;;;;X
 TECH_CMP_LD_146_5_NAME;;;;;;;;;;;X
 SHORT_TECH_APP_LD_147_NAME;Overwhelming Attack Doctrine;Doctrine d'attaque йcrasante;Dottrina dell'attacco travolgente;Doctrina de Ataque Abrumador;Ьbermacht Doktrin;Doktryna przytі. ataku;;Подавляющая атака;;;X
 TECH_APP_LD_147_NAME;Overwhelming Attack Doctrine;Doctrine d'attaque йcrasante;Dottrina dell'attacco travolgente;Doctrina de Ataque Abrumador;Ьbermacht Doktrin;Doktryna przytіaczaj№cego ataku;;Доктрина подавляющей атаки;;;X
-TECH_CMP_LD_147_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_147_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_147_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_147_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_147_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_147_1_NAME;Battalion Sized Attack Forces;;;;;;;;;;X
+TECH_CMP_LD_147_2_NAME;Mechanized Manouvre;;;;;;;;;;X
+TECH_CMP_LD_147_3_NAME;Overwhelming Charging Attacks;;;;;;;;;;X
+TECH_CMP_LD_147_4_NAME;Infantry and Armoured Tactics;;;;;;;;;;X
+TECH_CMP_LD_147_5_NAME;Mass Manouvres;;;;;;;;;;X
 SHORT_TECH_APP_LD_148_NAME;Flexible Reaction Doctrine;Doctrine de la rйaction suple;Dottrina della reazione flessibile;Doctrina de Reacciуn Flexible;Flex. Reaktion;Swobodna reakcja;;Гибкое реагирование;;;X
 TECH_APP_LD_148_NAME;Flexible Reaction Doctrine;Doctrine de la rйaction souple;Dottrina della reazione flessibile;Doctrina de Reacciуn Flexible;Doktrin der flexiblen Reaktion;Doktryna swobodnej reakcji;;Концепция гибкого реагирования;;;X
-TECH_CMP_LD_148_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_148_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_148_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_148_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_148_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_148_1_NAME;Frontline Enemy Delay Tactics;;;;;;;;;;X
+TECH_CMP_LD_148_2_NAME;Large Front Protection;;;;;;;;;;X
+TECH_CMP_LD_148_3_NAME;Air and Land Joint Attacks;;;;;;;;;;X
+TECH_CMP_LD_148_4_NAME;Company Level Initiative;;;;;;;;;;X
+TECH_CMP_LD_148_5_NAME;Close Air Support;;;;;;;;;;X
 SHORT_TECH_APP_LD_149_NAME;Modern Branch Interoperability;Interopйrabilitй des branches moderne;Interoperabilitа branche moderna;Poder de Interoperabilidad moderna;Bereichsьbergr.;Wspуіcz. wspуіpr. broni;;Сов. взаим. род. войск;;;X
 TECH_APP_LD_149_NAME;Modern Branch Interoperability;Interopйrabilitй des branches moderne;Interoperabilitа branche moderna;Poder de Interoperabilidad moderna;Interoperabilitдt zwischen Bereichen;Wspуіczesna wspуіpraca broni;;Современное взаимодействие родов войск;;;X
-TECH_CMP_LD_149_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_149_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_149_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_149_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_149_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_149_1_NAME;Land and Air Joint Tactical Movements;;;;;;;;;;X
+TECH_CMP_LD_149_2_NAME;Use of Armour to Puncture Enemy Frontlines;;;;;;;;;;X
+TECH_CMP_LD_149_3_NAME;Distant Naval Shore Bombardment;;;;;;;;;;X
+TECH_CMP_LD_149_4_NAME;Close Infantry Fire Support;;;;;;;;;;X
+TECH_CMP_LD_149_5_NAME;Constant Supplies and Vehicle Servicing;;;;;;;;;;X
 SHORT_TECH_APP_LD_150_NAME;Military Projection;Projection de force;Proiezione militare;Proyecciуn Militar;milit. Projektion;Przewidywanie postкpu wojny;;Военн. планирование;;;X
 TECH_APP_LD_150_NAME;Military Projection;Projection de force;Proiezione militare;Proyecciуn Militar;Darstellung militдrischer Stдrke;Przewidywanie postкpu wojny;;Военное планирование;;;X
-TECH_CMP_LD_150_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_150_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_150_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_150_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_150_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_150_1_NAME;Amphibious Assaults;;;;;;;;;;X
+TECH_CMP_LD_150_2_NAME;Airborne Assaults;;;;;;;;;;X
+TECH_CMP_LD_150_3_NAME;Naval Land Unit Support Role;;;;;;;;;;X
+TECH_CMP_LD_150_4_NAME;CAG Offshore Close Air Support Role;;;;;;;;;;X
+TECH_CMP_LD_150_5_NAME;Similtaneous Airborne and Amphibious Assaults;;;;;;;;;;X
 SHORT_TECH_APP_LD_151_NAME;Hammer of Gods;Marteau Divin;Martello degli dei;Martillo divino;Gottes Hammer;Mіot Bogуw;; 'Молот богов';;;X
 TECH_APP_LD_151_NAME;Hammer of Gods Doctrine;Marteau Divin;Dottrina martello degli dei;Doctrina de Martillo Divino;Gottes Hammer;Doktryna Mіota ogуw;;Доктрина 'Молота богов';;;X
-TECH_CMP_LD_151_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_151_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_151_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_151_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_151_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_151_1_NAME;Fast Troop Movement;;;;;;;;;;X
+TECH_CMP_LD_151_2_NAME;Overhead Fire Support;;;;;;;;;;X
+TECH_CMP_LD_151_3_NAME;Nuclear Launch Retaliation;;;;;;;;;;X
+TECH_CMP_LD_151_4_NAME;Fast Enemy Territory Invasion;;;;;;;;;;X
+TECH_CMP_LD_151_5_NAME;Decentralised Fighting Tactics;;;;;;;;;;X
 SHORT_TECH_APP_LD_152_NAME;Quick Reaction Doctrine;Force de rйaction rapide;Dottrina della reazione rapida;Doctrina de Reacciуn Rбpida;Schn. Reaktion;Szybka reakcja;;Быстрое реагирование;;;X
 TECH_APP_LD_152_NAME;Quick Reaction Doctrine;Force de rйaction rapide;Dottrina della reazione rapida;Doctrina de Reacciуn Rбpida;Doktrin der schnellen Reaktion;Doktryna szybkiej reakcji;;Доктрина быстрого реагирования;;;X
 TECH_CMP_LD_152_1_NAME;;;;;;;;;;;X
@@ -6677,14 +6677,14 @@ TECH_CMP_LD_159_4_NAME;;;;;;;;;;;X
 TECH_CMP_LD_159_5_NAME;;;;;;;;;;;X
 SHORT_TECH_APP_LD_160_NAME;Post Great War;Fin de la grande guerre;Primo dopoguerra;Post Gran Guerra;Weltkriegslehren;Po Wielkiej Wojnie;;Един. межвоен. доктр.;;;X
 TECH_APP_LD_160_NAME;Post Great War Unified  Doctrine;Doctrine unifiйe de la grande guerre;Dottrine unificate primo dopoguerra;Doctrina Unificada Post Gran Guerra;Weltkriegslehren;Jednolita doktryna po Wielkiej Wojnie;;Единая межвоенная доктрина;;;X
-TECH_CMP_LD_160_1_NAME;;;;;;;;;;;X
-TECH_CMP_LD_160_2_NAME;;;;;;;;;;;X
-TECH_CMP_LD_160_3_NAME;;;;;;;;;;;X
-TECH_CMP_LD_160_4_NAME;;;;;;;;;;;X
-TECH_CMP_LD_160_5_NAME;;;;;;;;;;;X
+TECH_CMP_LD_160_1_NAME;Overhauling the Army;;;;;;;;;;X
+TECH_CMP_LD_160_2_NAME;Constant Supply Lines;;;;;;;;;;X
+TECH_CMP_LD_160_3_NAME;Organised Mobile Army Hospitals;;;;;;;;;;X
+TECH_CMP_LD_160_4_NAME;Leaving Trench Warfare Behind;;;;;;;;;;X
+TECH_CMP_LD_160_5_NAME;New Tactics;;;;;;;;;;X
 ##;;;;;;;;;;;X
 ##;;;;;;;;;;;X
-TECH_APP_AD_50_NAME;Modern Air Combat Theory;Combat aйrien thйorie moderne;Combattimento aereo moderna teoria;Teorнa moderna de combate aйreo;Moderne Luftkampf Theorie;Nowoczesne powietrza zwalczania teorii;;Современная теория воздушного боя;;;X
+TECH_APP_AD_50_NAME;Cold War Air Combat Theory;Combat aйrien thйorie moderne;Combattimento aereo moderna teoria;Teorнa moderna de combate aйreo;Moderne Luftkampf Theorie;Nowoczesne powietrza zwalczania teorii;;Современная теория воздушного боя;;;X
 TECH_CMP_AD_50_1_NAME;Combat Ace Experience;Combat meilleur Expйrience;Esperienza di combattimento;Mejor experiencia de combate;Kampf beste Erfahrung;Doњwiadczenie asуw powietrznych;;Боевой опыт асов;;;X
 TECH_CMP_AD_50_2_NAME;Naval Aviation Theory;Aйro-naval Thйorie;Teoria aereonavale;Aero-naval de la Teorнa;Aero-Schiffswerft Theorie;Teoria awiacji morskiej;;Теория военно-морской авиации;;;X
 TECH_CMP_AD_50_3_NAME;Bombing Damage Assessment;Йvaluation des dommages de bombardement;valutazione danni bombardamenti;La evaluaciуn de los daсos bombardeo;Beurteilung von Schдden Bomberung;Ocena zniszczenia bombowego;;Оценка результатов бомбардировки;;;X
@@ -6960,7 +6960,7 @@ TECH_CMP_AD_95_2_NAME;Advanced Sonobuoys;Bouйes avancйe;Boe avanzate;Boyas avanz
 TECH_CMP_AD_95_3_NAME;Improved Instrument Flight;Amйlioration de vol aux instruments;Strumenti di volo migliorati;Mejora de vuelo por instrumentos;Verbesserung Flug Instrumente;Ulepszone instrumenty lotnicze;;Улучшенный полет по приборам;;;X
 TECH_CMP_AD_95_4_NAME;Improved Missile Tracking;Amйlioration de suivi des missiles;Tracciamento missili migliorato;Mejora el seguimiento de los misiles;Verbesserung der Ьberwachung der Raketen;Ulepszone њledzenie pociskуw;;Улучшенное отслеживание ракет;;;X
 TECH_CMP_AD_95_5_NAME;Adverse Weather Combat Trials;La lutte contre le mauvais temps des essais;Prove di combattimento in tempo avverso;La lucha contra el mal tiempo de prueba;Der Kampf gegen das schlechte Wetter der Prьfungen;Prуby w zіych warunkach pogodowych;;Боевые испытания в неблагоприятных условиях;;;X
-SHORT_TECH_APP_AD_50_NAME;Modern Air Combat;Comb aйr. thйorie moderne;Combattimento aereo moderna teoria;Teorнa mod combat aйreo;Modern. Luftkampf;Wspуіcz. walka pow.;;Сов. теория возд. боя;;;X
+SHORT_TECH_APP_AD_50_NAME;Cold War Air Combat;Comb aйr. thйorie moderne;Combattimento aereo moderna teoria;Teorнa mod combat aйreo;Modern. Luftkampf;Wspуіcz. walka pow.;;Сов. теория возд. боя;;;X
 SHORT_TECH_APP_AD_51_NAME;Def Air Superiority;Domin aйrienne dйfensif;Superioritа aerea difensiva;Defens aйrea dominio;Def Luftherrsch.;Obronna przew. pow.;;Оборон. прев. в возд.;;;X
 SHORT_TECH_APP_AD_52_NAME;Interceptor Focus;Intercepteur Objectif;Focus intercettore;Objetivo interceptor;Abfangjдger Fokus;Nast. na myњliwce;;Приоритет-перехв.;;;X
 SHORT_TECH_APP_AD_53_NAME;Anti Air Gun Support;Antiaйrien soutien canons;Sostegno cannoni AA;Caсones antiaйr apoyo;Flak Unterstьtzung;Wsparcie p-lot.;;Поддержка ПВО;;;X
@@ -7121,7 +7121,7 @@ TECH_CMP_ARMOR_89_2_NAME;;;;;;;;;;;X
 TECH_CMP_ARMOR_89_3_NAME;;;;;;;;;;;X
 TECH_CMP_ARMOR_89_4_NAME;;;;;;;;;;;X
 TECH_CMP_NAVAL_100_5_NAME;;;;;;;;;;;X
-TECH_CMP_LD_125_6_NAME;;;;;;;;;;;X
+TECH_CMP_LD_125_6_NAME;Leaving Trench Warfare Behind;;;;;;;;;;X
 SHORT_TECH_APP_INDUSTRY_92_NAME;Winter Equipment;Equipement hivernal;Equipaggiamento Invernale;Equipo de Clima Frio;Winterausrьstung;Wyposaїenie Zimowe;;Зимнее снаряжение;;;X
 TECH_APP_INDUSTRY_92_NAME;Infantry Equipment - Subzero;Equipement d'infanterie - Arctique;Equipaggiamento di Fanteria – sottozero;Equipo de Infanterнa - Clima Frio;Winterausrьstung der Infantrie;Wyposaїenie Piechoty - Mrуz;;Пехотная экипировка для низких температур;;;X
 SHORT_TECH_APP_INDUSTRY_93_NAME;Winter Vehicles;Vйhicules d'hiver;Veicoli Invernali;Vehiculos para Clima Frio;Winterfahrzeuge;Pojazdy Zimowe;;Зимние трансп. ср-ва;;;X
@@ -7506,7 +7506,7 @@ TECH_CMP_ND_75_4_NAME;Nuclear Deterrent Preservation Priority;Prioritй а la prйs
 TECH_CMP_ND_75_5_NAME;Rapid Surfacing and Firing;Emersion et tir rapide;Emersione e fuoco rapido;Rapido Posicionamiento y Lanzamiento;Hochgeschwindigkeits Auftauchen und -feuern;Szybkie wynurzenie i atak;;Быстрое всплытие и запуск ракет;;;X
 TECH_CAT_ENGAGEMENT;Engagement Tactics;Tactiques d'engagement;Tattiche d'ingaggio;Tacticas de Encuentro;Gefechtstaktiken;Taktyka ataku;;Тактика сражения;;;X
 SHORT_TECH_APP_ND_90_NAME;Fleet-in-Being;Flotte en elle-mкme;Fleet-in-Being;Flota Estacionada;Fleet-in-Being;Flota-w-porcie;;Воздействие флотом;;;X
-TECH_APP_ND_90_NAME;Fleet-in-Being;Flotte en elle-mкme;Fleet-in-Being;Flota Estacionada;Fleet-in-Being;Flota-w-porcie;;Воздействие флотом;;;X
+TECH_APP_ND_90_NAME;Fleet-in-Being 8900;Flotte en elle-mкme;Fleet-in-Being;Flota Estacionada;Fleet-in-Being;Flota-w-porcie;;Воздействие флотом;;;X
 TECH_CMP_ND_90_1_NAME;Defensive Posture;Posture dйfensive;Posizione difensiva;Postura Defensiva;Defensiv Verhalten;Postawa defensywna;;Оборонительная стратегия;;;X
 TECH_CMP_ND_90_2_NAME;Naval Base Defense;Dйfense de base navale;Difesa base navale;Defensa de Bases Navales;Verteidung der Marinebasen;Obrona baz morskich;;Оборона военно-морских баз;;;X
 TECH_CMP_ND_90_3_NAME;Risk Aversion;Aversion du risque;Avversione al rischio;Evitar Riesgos;Vermeidung von Risiken;Awersja do ryzyka;;Предотвращение риска;;;X
@@ -7625,7 +7625,7 @@ TECH_CMP_ND_112_3_NAME;Heavy Anti-ship-cruise-missile;Missile antinavires lourd;
 TECH_CMP_ND_112_4_NAME;Saturation missile firing;Tir de saturation de missiles;Lancio missili per saturazione;Saturaciуn de lanzamiento de misiles;Sдttigungsbeschuss durch Raketen;Natкїenie ostrzaіu pociskami;;Массированный ракетный огонь;;;X
 TECH_CMP_ND_112_5_NAME;Saturation ASM firing;Tir de saturation antiaйrien;Lancio ASM per saturazione;Saturaciуn de lanzamiento ASM;Sдttigungsbeschuss durch ASW Waffen;Natкїenie ostrzaіu okrкtуw podwodnych;;Массированный противолодочный огонь;;;X
 SHORT_TECH_APP_ND_130_NAME;Indirect Approach;Approche indirecte;Approccio indiretto;Acercamiento Indirecto;Ind.Annдherung;Podejњcie poњrednie;;Непрям. воздействие;;;X
-TECH_APP_ND_130_NAME;Indirect Approach;Approche indirecte;Approccio indiretto;Acercamiento Indirecto;Indirekte Annдherung;Podejњcie poњrednie;;Непрямое воздействие;;;X
+TECH_APP_ND_130_NAME;Indirect Approach 81300;Approche indirecte;Approccio indiretto;Acercamiento Indirecto;Indirekte Annдherung;Podejњcie poњrednie;;Непрямое воздействие;;;X
 TECH_CMP_ND_130_1_NAME;Flight maneuvers;Manњuvre d'йchappement;Manovre di disimpegno;Maniobras de vuelo;Flugmanцver;Manewry lotnicze;;Маневрирование авиацией;;;X
 TECH_CMP_ND_130_2_NAME;In tempest ambushes;Embuscade dans les grains;Imboscate nella tempesta;Emboscadas en temporales;Schlechtwetterkriegfьhrung;Zasadzki w gікbinach;;Морская засада в бурю;;;X
 TECH_CMP_ND_130_3_NAME;Cruiser maneuver;Manњuvre de croiseurs;Manovre degli incrociatori;Maniobras de crucero;Kreuzermanцver;Manewry kr№їownikуw;;Маневрирование крейсерами;;;X
@@ -7831,7 +7831,7 @@ TECH_CMP_ND_214_5_NAME;Simultaneous maneuver of Carrier;Manњuvre simultanйe des 
 SHORT_TECH_APP_ND_215_NAME;Modern Blue Water Tactics;Tactiques en eau bleue modernes;Tattiche Blue Water moderne;Tacticas de Aguas Azules Mod;Mod.Tiefwassertaktik;Wspуіcz. taktyka nieb. wody;;Сов. такт. 'гол. воды';;;X
 TECH_APP_ND_215_NAME;Modern Blue Water Tactics;Tactiques en eau bleue modernes;Tattiche Blue Water moderne;Tacticas de Aguas Azules Modernas;Moderne Tiefwassertaktiken;Wspуіczesna taktyka niebieskiej wody;;Современная тактика 'голубой воды';;;X
 TECH_CMP_ND_215_1_NAME;Modern doctrine for Carrier;Doctrine de groupe aйronavale moderne;Dottrina moderna portaerei;Doctrinas modernas para portaaviones;Moderne Trдgerdoktrinen;Wspуіczesna doktryna dla lotniskowcуw;;Современная авианосная доктрина;;;X
-TECH_CMP_ND_215_2_NAME;Advanced airspace mastery;Maitrise de l'espace aйrien avancйe;Controllo avanzato spazio aereo;Dominio avanzado de espacio aйreo;Fortschrittliche Luftherrschaft;Zaawansowane mistrzostwo w powietrzu;;Усовершенствованное летное мастерство;;;X
+TECH_CMP_ND_215_2_NAME;Early Jet Fighter Airspace Mastery;Maitrise de l'espace aйrien avancйe;Controllo avanzato spazio aereo;Dominio avanzado de espacio aйreo;Fortschrittliche Luftherrschaft;Zaawansowane mistrzostwo w powietrzu;;Усовершенствованное летное мастерство;;;X
 TECH_CMP_ND_215_3_NAME;Advanced Submarine threat destruction;Gestion des menaces sous-marines avancйe;Distruzione minaccia sottomarina avanzata;Destrucciуn avanzada de amenaza submarina;Fortschrittliche U-Bootabwehr;Zaawansowane ZOP;;Усовершенствованное уничтожение подводной угрозы;;;X
 TECH_CMP_ND_215_4_NAME;Anti-ship advanced saturation attack;Frappe de saturation antinavire avancйe;Attacco di saturazione anti nave avanzato;Ataque de saturaciуn avanzado anti buque;Fortschrittliche Sдttigungsangriffe auf Schiffsziele;Zaawansowane natкїenie ataku przeciw okrкtom;;Усовершенствованная насыщенная противокорабельная атака;;;X
 TECH_CMP_ND_215_5_NAME;Modern training;Entrainement moderne;Addestramento moderno;Entrenamiento moderno;Modernes Training;Wspуіczesny trening;;Современная подготовка;;;X
@@ -7870,22 +7870,22 @@ TECH_CMP_ND_250_2_NAME;Consumption estimation;Estimation grossiиres des consomma
 TECH_CMP_ND_250_3_NAME;High flow oil pumping;Pompage а grand dйbit du carburant;Pompa del carburante a flusso elevato;Alto flujo de bombeo de combustible;Цlpumpen mit hohem Durchfluss;Pompy wysokoprкїne;;Высокая пропускная способность перекачки нефти;;;X
 TECH_CMP_ND_250_4_NAME;Efficient storage of munitions;Stockage efficace des munitions;Immagazzinamento munizioni efficiente;Almacenamiento efectivo de municiones;Effiziente Lagerung von Munition;Efektywne przechowywanie amunicji;;Эффективное хранение боеприпасов;;;X
 TECH_CMP_ND_250_5_NAME;Diminution of consumption;Diminution de la consommation;Diminuzione dei consumi;Disminucion del consumo;Verbrauchsminimierung;Zmniejszanie zuїycia;;Уменьшение потребления;;;X
-SHORT_TECH_APP_ND_251_NAME;Early UNREP;Ravitaillement en mouvement de Grande Guerre;Rifornimento sottomarino rudimentale;Operaciones de Largo Alcance;Fr.Versorgung;Wczesny UNREP;;Ранн. 'снабж. на ходу';;;X
-TECH_APP_ND_251_NAME;Early Underway Replenishment;Ravitaillement en mouvement de Grande Guerre;Rifornimento sottomarino rudimentale;Operaciones de Largo Alcance;Frьhe Versorgung;Wczesny system zaopatrzenia na morzu;;Раннее 'снабжение на ходу';;;X
+SHORT_TECH_APP_ND_251_NAME;Very Early UNREP;Ravitaillement en mouvement de Grande Guerre;Rifornimento sottomarino rudimentale;Operaciones de Largo Alcance;Fr.Versorgung;Wczesny UNREP;;Ранн. 'снабж. на ходу';;;X
+TECH_APP_ND_251_NAME;Very Early Underway Replenishment;Ravitaillement en mouvement de Grande Guerre;Rifornimento sottomarino rudimentale;Operaciones de Largo Alcance;Frьhe Versorgung;Wczesny system zaopatrzenia na morzu;;Раннее 'снабжение на ходу';;;X
 TECH_CMP_ND_251_1_NAME;Advanced diminution of consumption;Diminution avancйe de la consommation;Diminuzione dei consumi avanzata;Disminucion avanzado del consumo;Fortschrittliche Verbrauchsminimierung;Zaawansowane zmniejszanie konsumpcji;;Встреча в открытых водах;;;X
 TECH_CMP_ND_251_2_NAME;Gun standardization;Standardisation des canons;Standardizzazione armi;Estandarizacion de caсones;Standardisierte Geschьtze;Standardyzacja dziaі;;Стандартизация воооружения;;;X
 TECH_CMP_ND_251_3_NAME;Gunnery precision improvement;Amйlioration de la prйcision des tirs;Miglioramento precisione armi;Precision mejorada de la artilleria;Verbesserung der Geschьtzgenauigkeit;Ulepszanie precyzji ostrzaіu;;Повышение точности артиллерийского огня;;;X
 TECH_CMP_ND_251_4_NAME;Great store conception;Conception de soutes grandes contenance;Concetto del grande magazzino;Concepto de gran almecenamiento;Globales Lagerungskonzept;Koncepcja wielkiego magazynu;;Коцепция плавучего склада;;;X
 TECH_CMP_ND_251_5_NAME;Mastery of consumption;Maоtrise de la consommation;Controllo dei consumi;Dominio de consumo;Verbrauchsoptimierung;Mistrzostwo w zarz№dzaniu zuїyciem;;Мастерство потребления;;;X
-SHORT_TECH_APP_ND_252_NAME;Basic UNREP;Ravitaillement en mouvement basique;Rifornimento sottomarino di base;Trenes de la Armada;Einf.Versorgung;Podstawowy UNREP;;Баз. 'снабж. на ходу';;;X
-TECH_APP_ND_252_NAME;Basic Underway Replenishment;Ravitaillement en mouvement basique;Rifornimento sottomarino di base;Trenes de la Armada;Einfache Versorgung;Podstawowy system zaopatrzenia na morzu;;Базовое 'снабжение на ходу';;;X
+SHORT_TECH_APP_ND_252_NAME;Early UNREP;Ravitaillement en mouvement basique;Rifornimento sottomarino di base;Trenes de la Armada;Einf.Versorgung;Podstawowy UNREP;;Баз. 'снабж. на ходу';;;X
+TECH_APP_ND_252_NAME;Early Underway Replenishment;Ravitaillement en mouvement basique;Rifornimento sottomarino di base;Trenes de la Armada;Einfache Versorgung;Podstawowy system zaopatrzenia na morzu;;Базовое 'снабжение на ходу';;;X
 TECH_CMP_ND_252_1_NAME;Early workshop ship;Essai de navire atelier;Nave da riparazione rudimentale;Talleres de buque temprano;Frьhes Versorgungsschiff;Wczesny statek naprawczy;;Ранняя плавучая мастерская;;;X
 TECH_CMP_ND_252_2_NAME;Munitions boat conception;Navire porte munitions spйcifique;Concetto nave porta munizioni;Concepto de municiones de barco;Konzept von Munitionsbooten;Koncepcja іodzi z amunicj№;;Концепция плавучего склада снаряжения;;;X
 TECH_CMP_ND_252_3_NAME;Advanced consumption estimation;Calcul prйcis des rayons d'action;Stima dei consumi avanzata;Estimacion de consumo avanzado;Verbesserte Verbrauchsabschдtzung;Zaawansowana estymacja zuїycia;;Усовершенствованная оценка потребления;;;X
 TECH_CMP_ND_252_4_NAME;Advanced workshop ship;Conception avancйe des navires ateliers;Nave da riparazione avanzata;Talleres de buque avanzado;Fortschrittliches Versorgungsschiff;Zaawansowany statek naprawczy;;Усовершенствованная плавучая мастерская;;;X
 TECH_CMP_ND_252_5_NAME;Light consumption boiler;Conception de chaudiиres basse consommation;Caldaie a basso consumo;Consumo bajo de la caldera;Heizkessel mit niedrigem Verbrauch;Grzejnik o niskim zuїyciu;;Проектирование легкого котла;;;X
-SHORT_TECH_APP_ND_253_NAME;Modern UNREP;Ravitaillement en mouvement moderne;Rifornimento sottomarino moderno;Operaciones en Profundidad;Mod.Versorgung;Wspуіczesny UNREP;;Сов. 'снабж. на ходу';;;X
-TECH_APP_ND_253_NAME;Modern Underway Replenishment;Ravitaillement en mouvement moderne;Rifornimento sottomarino moderno;Operaciones en Profundidad;Moderne Versorgung;Wspуіczesny system zaopatrzenia na morzu;;Современное 'снабжение на ходу';;;X
+SHORT_TECH_APP_ND_253_NAME;Basic UNREP;Ravitaillement en mouvement moderne;Rifornimento sottomarino moderno;Operaciones en Profundidad;Mod.Versorgung;Wspуіczesny UNREP;;Сов. 'снабж. на ходу';;;X
+TECH_APP_ND_253_NAME;Basic Underway Replenishment;Ravitaillement en mouvement moderne;Rifornimento sottomarino moderno;Operaciones en Profundidad;Moderne Versorgung;Wspуіczesny system zaopatrzenia na morzu;;Современное 'снабжение на ходу';;;X
 TECH_CMP_ND_253_1_NAME;Blue water meeting;Rendez-vous en haute mer;Incontro blue water;Encuentro bluewater;Rendevouz auf hoher See;Spotkanie na otwartych wodach;;Встреча в открытых водах;;;X
 TECH_CMP_ND_253_2_NAME;Specific protection of tanker;Protection spйcifique du pйtrolier;Protezione specifica per le petroliere;Proteccion especial del petrolero;Spezieller Schutz fьr Tanker;Miejscowa ochrona tankowca;;Специальная защита танкеров;;;X
 TECH_CMP_ND_253_3_NAME;Priority allocation;Gestion des prioritйs;Gestione delle prioritа;Prioridad de asignacion;Prioritдtszuweisung;Alokacja priorytetуw;;Приоритетное распределение;;;X
@@ -7998,5 +7998,1350 @@ TECH_CMP_SW_31_2_NAME;Semiconductor Primary Memory;Mйmoire primaire а semi-condu
 TECH_CMP_SW_31_3_NAME;High-Speed Electronic Calculator;Calculateur йlectronique а grande vitesse;Calcolatore elettronico ad alta velocitа;Calculadora electrуnica super-rбpida;Hochgeschwindigkeitsrechner;Szybki kalkulator elektroniczny;;Высокоскоростной эл. калькулятор;;;X
 TECH_CMP_SW_31_4_NAME;Type A Format;Format de Type A;Formato tipo A;Formato tipo A;Typ A Format;Format typu A;;Формат типа 'А';;;X
 TECH_CMP_SW_31_5_NAME;Type B Format;Format de Type B;Formato tipo B;Formato tipo B;Typ B Format;Format typu B;;Формат типа 'Б';;;X
+TECH_APP_LD_38_NAME;The New Modern Warfare Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_LD_38_NAME;Modern Warfare;;;;;;;;;;X
+TECH_APP_ND_9_NAME;Modern Underway Replenishment;;;;;;;;;;X
+SHORT_TECH_APP_ND_9_NAME;Modern UNREP;;;;;;;;;;X
+TECH_CMP_LD_38_1_NAME;Air-Land-Sea Combined Attack Flexibility;;;;;;;;;;X
+TECH_CMP_LD_38_2_NAME;Small Unit Elitism;;;;;;;;;;X
+TECH_CMP_LD_38_3_NAME;Specialised Amphibious Attack Training;;;;;;;;;;X
+TECH_CMP_LD_38_4_NAME;Specialised Paradrop Training;;;;;;;;;;X
+TECH_CMP_LD_38_5_NAME;Specialised Rugged Terrain Training;;;;;;;;;;X
+TECH_CMP_LD_38_6_NAME;Further Rigorous And Constant Training Regimes;;;;;;;;;;X
+TECH_CMP_LD_38_7_NAME;Strategic Rethinking And Proxy-war Deployment;;;;;;;;;;X
+TECH_APP_INDUSTRY_55_NAME;Aircraft Assembly Line;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_55_NAME;Aircraft Ass Line;;;;;;;;;;X
+TECH_APP_INDUSTRY_55_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_55_1_NAME;Aircraft Modules;;;;;;;;;;X
+TECH_CMP_INDUSTRY_55_2_NAME;Environmental Tests;;;;;;;;;;X
+TECH_CMP_INDUSTRY_55_3_NAME;Propulsion Adaptation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_55_4_NAME;Assembly Line Process;;;;;;;;;;X
+TECH_CMP_INDUSTRY_55_5_NAME;Production Tests;;;;;;;;;;X
+TECH_APP_INDUSTRY_57_NAME;Modern Aircraft Assemblyline;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_57_NAME;Mod Aircraft Ass Line;;;;;;;;;;X
+TECH_APP_INDUSTRY_57_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_57_1_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_57_2_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_57_3_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_57_4_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_57_5_NAME;;;;;;;;;;;X
+TECH_APP_INDUSTRY_58_NAME;Modern Aircraft Aessmbly Lines;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_58_NAME;Mod Air Ass Lines;;;;;;;;;;X
+TECH_APP_INDUSTRY_58_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_58_1_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_58_2_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_58_3_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_58_4_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_58_5_NAME;;;;;;;;;;;X
+TECH_APP_INDUSTRY_59_NAME;Modern Aircraft Assembly Lines;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_59_NAME;Mod Air Ass Lines;;;;;;;;;;X
+TECH_APP_INDUSTRY_59_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_59_1_NAME;Advanced Aircraft Modules;;;;;;;;;;X
+TECH_CMP_INDUSTRY_59_2_NAME;Advanced Environmental Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_59_3_NAME;Advanced Propulsion Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_59_4_NAME;Advanced Assembly Line Processing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_59_5_NAME;Advanced Production Line Organisation;;;;;;;;;;X
+TECH_APP_INDUSTRY_68_NAME;Modern Ship Assembly Lines;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_68_NAME;Mod Ship Ass Lines;;;;;;;;;;X
+TECH_APP_INDUSTRY_68_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_68_1_NAME;Advanced Ship Hulling Designs;;;;;;;;;;X
+TECH_CMP_INDUSTRY_68_2_NAME;Advanced Environmental Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_68_3_NAME;Advanced Propulsion Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_68_4_NAME;Advanced Assembly Lines Production;;;;;;;;;;X
+TECH_CMP_INDUSTRY_68_5_NAME;Advanced Production Lines Management;;;;;;;;;;X
+TECH_CAT_LD_1;Modern Warfare;;;;;;;;;;X
+TECH_APP_INDUSTRY_69_NAME;Modern Vehicle Assembly Line;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_69_NAME;Mod Vehicle A. Lines;;;;;;;;;;X
+TECH_APP_INDUSTRY_69_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_69_1_NAME;Advanced Vehicle Modules;;;;;;;;;;X
+TECH_CMP_INDUSTRY_69_2_NAME;Advanced Environmental Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_69_3_NAME;Advanced Production Methods;;;;;;;;;;X
+TECH_CMP_INDUSTRY_69_4_NAME;Advanced Assembly Lines Production;;;;;;;;;;X
+TECH_CMP_INDUSTRY_69_5_NAME;Advanced Production Lines Management;;;;;;;;;;X
+TECH_APP_INDUSTRY_74_NAME;Modern Rocket Assembly Lines;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_74_NAME;Mod Rocket A. Lines;;;;;;;;;;X
+TECH_APP_INDUSTRY_74_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_74_1_NAME;Advanced Rocket Modules;;;;;;;;;;X
+TECH_CMP_INDUSTRY_74_2_NAME;Advanced Environmental Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_74_3_NAME;Advanced Propulsion Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_74_4_NAME;Advanced Assembly Line;;;;;;;;;;X
+TECH_CMP_INDUSTRY_74_5_NAME;Advanced Production Lines Management;;;;;;;;;;X
+TECH_APP_INDUSTRY_75_NAME;Modern Small Arms Assembly Lines;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_75_NAME;M. S-arms Ass Lines;;;;;;;;;;X
+TECH_APP_INDUSTRY_75_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_75_1_NAME;Advanced Modular Production ;;;;;;;;;;X
+TECH_CMP_INDUSTRY_75_2_NAME;Advanced Environmental Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_75_3_NAME;Advanced Product Testing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_75_4_NAME;Advanced Production Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_75_5_NAME;Advanced Production Lines Management;;;;;;;;;;X
+TECH_CAT_SW_1;Psychiatry-Physiology;;;;;;;;;;X
+TECH_APP_SW_32_NAME;Rudimentary Human DNA Sequencing 1790;;;;;;;;;;X
+SHORT_TECH_APP_SW_32_NAME;R. DNA Sequencing;;;;;;;;;;X
+TECH_APP_SW_32_DESC;;;;;;;;;;;X
+TECH_CMP_SW_32_1_NAME;Watson and Crick Theorum;;;;;;;;;;X
+TECH_CMP_SW_32_2_NAME;Double Helix Pattern Modulation;;;;;;;;;;X
+TECH_CMP_SW_32_3_NAME;Deoxyribonucleic Acid Formulation and Study;;;;;;;;;;X
+TECH_CMP_SW_32_4_NAME;A-T and C-G Pattern Study;;;;;;;;;;X
+TECH_CMP_SW_32_5_NAME;DNA Fingerprinting;;;;;;;;;;X
+TECH_APP_SW_33_NAME;Barbaric Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_33_NAME;Barbaric Psych Care;;;;;;;;;;X
+TECH_APP_SW_33_DESC;;;;;;;;;;;X
+TECH_CMP_SW_33_1_NAME;Frontal Lobe Labotomy;;;;;;;;;;X
+TECH_CMP_SW_33_2_NAME;Dedicated Sanitariums and Lunatic Asylums;;;;;;;;;;X
+TECH_CMP_SW_33_3_NAME;Sensory Deprivation, Shock Aversion Therapy;;;;;;;;;;X
+TECH_CMP_SW_33_4_NAME;Aversion Therapy;;;;;;;;;;X
+TECH_CMP_SW_33_5_NAME;Study of the Physical Brain, Size, Indentations etc.;;;;;;;;;;X
+TECH_APP_SW_34_NAME;Early Rudimentary Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_34_NAME;E. Rud. Psych Care;;;;;;;;;;X
+TECH_APP_SW_34_DESC;;;;;;;;;;;X
+TECH_CMP_SW_34_1_NAME;Mental Illness Recognition;;;;;;;;;;X
+TECH_CMP_SW_34_2_NAME;Tranquilisers;;;;;;;;;;X
+TECH_CMP_SW_34_3_NAME;Dedicated and Segregated Wards;;;;;;;;;;X
+TECH_CMP_SW_34_4_NAME;24 Hour Nursing and Supervision;;;;;;;;;;X
+TECH_CMP_SW_34_5_NAME;Positive Brain Stimulation Activities;;;;;;;;;;X
+TECH_CAT_SW_2;Psychiatry;;;;;;;;;;X
+TECH_APP_SW_35_NAME;Plastic Surgery and Artificial Limb Construction;;;;;;;;;;X
+SHORT_TECH_APP_SW_35_NAME;Surgery & Art. Limbs;;;;;;;;;;X
+TECH_APP_SW_35_DESC;;;;;;;;;;;X
+TECH_CMP_SW_35_1_NAME;Rudimentary Plastic Surgery, Facial Reconstruction;;;;;;;;;;X
+TECH_CMP_SW_35_2_NAME;Useful Artificial Limb Design;;;;;;;;;;X
+TECH_CMP_SW_35_3_NAME;Useful Artificial Limb Construction;;;;;;;;;;X
+TECH_CMP_SW_35_4_NAME;Physically and Mentally Enabling Victims;;;;;;;;;;X
+TECH_CMP_SW_35_5_NAME;Societal Rehabilitation;;;;;;;;;;X
+TECH_CAT_SW_3;;;;;;;;;;;X
+TECH_APP_SW_36_NAME;Rudimentary Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_36_NAME;Rud. Psych Care;;;;;;;;;;X
+TECH_APP_SW_36_DESC;;;;;;;;;;;X
+TECH_CMP_SW_36_1_NAME;Rudimentary Mental Disease and Mental Illness Differentiation;;;;;;;;;;X
+TECH_CMP_SW_36_2_NAME;Rudimentary PTSD Recognition;;;;;;;;;;X
+TECH_CMP_SW_36_3_NAME;Rudimentary Shell-Shock Recognition;;;;;;;;;;X
+TECH_CMP_SW_36_4_NAME;Early Attempts At Correctly Medicating Disorders;;;;;;;;;;X
+TECH_CMP_SW_36_5_NAME;Humanising Patients;;;;;;;;;;X
+TECH_CMP_SW_33_6_NAME;Use of Human Guinea Pigs;;;;;;;;;;X
+TECH_APP_SW_37_NAME;Early Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_37_NAME;Early Psych Care;;;;;;;;;;X
+TECH_APP_SW_37_DESC;;;;;;;;;;;X
+TECH_CMP_SW_37_1_NAME;Early Mental Disease and Mental Illness Differentiation;;;;;;;;;;X
+TECH_CMP_SW_37_2_NAME;Rudimentary Recognition of Hidden PTSD Symptoms;;;;;;;;;;X
+TECH_CMP_SW_37_3_NAME;Rudimentary Recognition of Hidden Shell-Shock Symptoms;;;;;;;;;;X
+TECH_CMP_SW_37_4_NAME;Early Attempts at Re-enabling Victims;;;;;;;;;;X
+TECH_CMP_SW_37_5_NAME;Encouraging Written Contact With Loved Ones;;;;;;;;;;X
+TECH_APP_SW_38_NAME;Pre-Early Modern Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_38_NAME;Pre-mod. Psych Care;;;;;;;;;;X
+TECH_APP_SW_38_DESC;;;;;;;;;;;X
+TECH_CMP_SW_38_1_NAME;Furthered Mental Disease and Mental Illness Differentiation;;;;;;;;;;X
+TECH_CMP_SW_38_2_NAME;Rudimentary PTSD Treatment;;;;;;;;;;X
+TECH_CMP_SW_38_3_NAME;Rudimentary Treatment of Shell-Shock;;;;;;;;;;X
+TECH_CMP_SW_38_4_NAME;Re-enabling Victims, Re-teaching Every-day Tasks;;;;;;;;;;X
+TECH_CMP_SW_38_5_NAME;Rudimentary Correlation of Brain Chemical and State of Mind;;;;;;;;;;X
+TECH_APP_SW_39_NAME;Early Modern Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_39_NAME;E. Mod. Psych Care;;;;;;;;;;X
+TECH_APP_SW_39_DESC;;;;;;;;;;;X
+TECH_CMP_SW_39_1_NAME;Applied Mental Disease and Mental Illness Differentiation;;;;;;;;;;X
+TECH_CMP_SW_39_2_NAME;Early PTSD Treatment;;;;;;;;;;X
+TECH_CMP_SW_39_3_NAME;Early Treatment of Shell-Shock;;;;;;;;;;X
+TECH_CMP_SW_39_4_NAME;Re-enabling Victims, Re-teaching Semi-complex Tasks;;;;;;;;;;X
+TECH_CMP_SW_39_5_NAME;Early Correlation of Brain Chemical and State of Mind;;;;;;;;;;X
+TECH_APP_SW_42_NAME;Early Applied Modern Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_42_NAME;E-A. Mod. Psych Care;;;;;;;;;;X
+TECH_APP_SW_42_DESC;;;;;;;;;;;X
+TECH_CMP_SW_42_1_NAME;Correct Mental Disease and Mental Illness Diagnosis;;;;;;;;;;X
+TECH_CMP_SW_42_2_NAME;Furthered PTSD Treatment;;;;;;;;;;X
+TECH_CMP_SW_42_3_NAME;Total Treatment of Shell-Shock;;;;;;;;;;X
+TECH_CMP_SW_42_4_NAME;Re-enabling Victims, Re-teaching Complex Tasks;;;;;;;;;;X
+TECH_CMP_SW_42_5_NAME;Early Applied Correlation of Brain Chemicals and State of Mind;;;;;;;;;;X
+TECH_APP_SW_43_NAME;Applied Modern Psychiatry;;;;;;;;;;X
+SHORT_TECH_APP_SW_43_NAME;A. Mod Psych Care;;;;;;;;;;X
+TECH_APP_SW_43_DESC;;;;;;;;;;;X
+TECH_CMP_SW_43_1_NAME;Applied Treatments for Mental Illness;;;;;;;;;;X
+TECH_CMP_SW_43_2_NAME;Patient Recovery for PTSD Programs;;;;;;;;;;X
+TECH_CMP_SW_43_3_NAME;Discovery of Combat Fatigue Syndrome;;;;;;;;;;X
+TECH_CMP_SW_43_4_NAME;Unlocking Blocked Memories;;;;;;;;;;X
+TECH_CMP_SW_43_5_NAME;Furthered Studies of Brain Chemistry;;;;;;;;;;X
+TECH_APP_SW_44_NAME;Further Applied Modern Psychiatry;;;;;;;;;;X
+SHORT_TECH_APP_SW_44_NAME;F. A. Mod. Psychiatry;;;;;;;;;;X
+TECH_APP_SW_44_DESC;;;;;;;;;;;X
+TECH_CMP_SW_44_1_NAME;Early Interventions for Mental Illness;;;;;;;;;;X
+TECH_CMP_SW_44_2_NAME;Returning PTSD Victims to Non-Combat Roles;;;;;;;;;;X
+TECH_CMP_SW_44_3_NAME;Rudimentary Treatment of Combat Fatigue Syndrome;;;;;;;;;;X
+TECH_CMP_SW_44_4_NAME;Coming to Terms With Actions in Combat;;;;;;;;;;X
+TECH_CMP_SW_44_5_NAME;Rudimentary Manual Body Chemistry Alterations;;;;;;;;;;X
+TECH_APP_SW_45_NAME;Early Advanced Psychiatry;;;;;;;;;;X
+SHORT_TECH_APP_SW_45_NAME;E-A. Psych Care;;;;;;;;;;X
+TECH_APP_SW_45_DESC;;;;;;;;;;;X
+TECH_CMP_SW_45_1_NAME;Rudimentary Cures for Mild Illnesses;;;;;;;;;;X
+TECH_CMP_SW_45_2_NAME;Re-adjusting to Life After Combat Fatigue Syndrome;;;;;;;;;;X
+TECH_CMP_SW_45_3_NAME;Returning PTSD Victims to Light, Active Roles;;;;;;;;;;X
+TECH_CMP_SW_45_4_NAME;Openly Talking About Feelings ;;;;;;;;;;X
+TECH_CMP_SW_45_5_NAME;Early Brain-Body Chemical Alterations;;;;;;;;;;X
+TECH_APP_SW_46_NAME;Advanced Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_46_NAME;Adv Psych Care;;;;;;;;;;X
+TECH_APP_SW_46_DESC;;;;;;;;;;;X
+TECH_CMP_SW_46_1_NAME;Early Cures for Mental Illnesses;;;;;;;;;;X
+TECH_CMP_SW_46_2_NAME;Returning PTSD Victims to the Frontlines;;;;;;;;;;X
+TECH_CMP_SW_46_3_NAME;Intensive Care for CombatFatigue Victims;;;;;;;;;;X
+TECH_CMP_SW_46_4_NAME;Small Group Therapy Experimentation;;;;;;;;;;X
+TECH_CMP_SW_46_5_NAME;Shell-shock Prevention;;;;;;;;;;X
+TECH_APP_SW_47_NAME;Applied Advanced Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_47_NAME;A. Adv. Psych Care;;;;;;;;;;X
+TECH_APP_SW_47_DESC;;;;;;;;;;;X
+TECH_CMP_SW_47_1_NAME;Rudimentary Mental Illness Early Prevention;;;;;;;;;;X
+TECH_CMP_SW_47_2_NAME;PTSD Prevention;;;;;;;;;;X
+TECH_CMP_SW_47_3_NAME;Rudimentary Recognition of Combat Fatigue Symptoms;;;;;;;;;;X
+TECH_CMP_SW_47_4_NAME;Dedicated Combat Fatigue Treatment Specialists;;;;;;;;;;X
+TECH_CMP_SW_47_5_NAME;Furthered Manual Brain-Body Chemistry Manipulation;;;;;;;;;;X
+TECH_APP_SW_48_NAME;Furthered Advanced Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_48_NAME;F. Adv. Psych Care;;;;;;;;;;X
+TECH_APP_SW_48_DESC;;;;;;;;;;;X
+TECH_CMP_SW_48_1_NAME;Furthered Prevention of Mental Illness;;;;;;;;;;X
+TECH_CMP_SW_48_2_NAME;Recognising Symptoms of Combat Fatigue;;;;;;;;;;X
+TECH_CMP_SW_48_3_NAME;Early Treatment for Combat Fatigue Syndrome;;;;;;;;;;X
+TECH_CMP_SW_48_4_NAME;Using Humour to Overcome Trauma;;;;;;;;;;X
+TECH_CMP_SW_48_5_NAME;Pre-modern Manual Changes of Brain-Body Chemicals;;;;;;;;;;X
+TECH_APP_SW_49_NAME;Further Applied Advanced Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_49_NAME;F. A. Adv Psych Care;;;;;;;;;;X
+TECH_APP_SW_49_DESC;;;;;;;;;;;X
+TECH_CMP_SW_49_1_NAME;'Prevention is better than cure' Approach;;;;;;;;;;X
+TECH_CMP_SW_49_2_NAME;Overcoming Combat-Related Night Terrors;;;;;;;;;;X
+TECH_CMP_SW_49_3_NAME;Re-abilitating Combat Fatigue Victims;;;;;;;;;;X
+TECH_CMP_SW_49_4_NAME;Returning Combat Fatigue Victims to Non-combat Roles;;;;;;;;;;X
+TECH_CMP_SW_49_5_NAME;Permanently Altering the Brain Chemistry of Patients;;;;;;;;;;X
+TECH_APP_SW_50_NAME;Early Post Modern Psychiatric Care;;;;;;;;;;X
+SHORT_TECH_APP_SW_50_NAME;E-P. Mod Psych Care;;;;;;;;;;X
+TECH_APP_SW_50_DESC;;;;;;;;;;;X
+TECH_CMP_SW_50_1_NAME;Combat Psychiatry Teams;;;;;;;;;;X
+TECH_CMP_SW_50_2_NAME;Returning Combat Fatigue Victims to Frontlines;;;;;;;;;;X
+TECH_CMP_SW_50_3_NAME;Use of Subliminal Messaging;;;;;;;;;;X
+TECH_CMP_SW_50_4_NAME;'Mind Over Matter' Mentality;;;;;;;;;;X
+TECH_CMP_SW_50_5_NAME;Anti-Psychotic Medications;;;;;;;;;;X
+TECH_APP_SW_51_NAME;Post-modern Psychiatry, Recruiting;;;;;;;;;;X
+SHORT_TECH_APP_SW_51_NAME;P. Mod Psychiatry;;;;;;;;;;X
+TECH_APP_SW_51_DESC;;;;;;;;;;;X
+TECH_CMP_SW_51_1_NAME;Sending Recruiters to Schools;;;;;;;;;;X
+TECH_CMP_SW_51_2_NAME;Changing Recruitment Tactics;;;;;;;;;;X
+TECH_CMP_SW_51_3_NAME;Recruitment Videos;;;;;;;;;;X
+TECH_CMP_SW_51_4_NAME;Romanticising WW I and WW II;;;;;;;;;;X
+TECH_CMP_SW_51_5_NAME;Modernised Military Songs to Enchant the Youth;;;;;;;;;;X
+TECH_APP_SW_52_NAME;The Future of Modern Psychiatry;;;;;;;;;;X
+SHORT_TECH_APP_SW_52_NAME;F. Mod Psychiatry;;;;;;;;;;X
+TECH_APP_SW_52_DESC;;;;;;;;;;;X
+TECH_CMP_SW_52_1_NAME;First-Person Shooter Games;;;;;;;;;;X
+TECH_CMP_SW_52_2_NAME;Online Military Games, 'World of Tanks';;;;;;;;;;X
+TECH_CMP_SW_52_3_NAME;Invoking Nationalism Amongst Society;;;;;;;;;;X
+TECH_CMP_SW_52_4_NAME;Third-Person Shooter Games;;;;;;;;;;X
+TECH_CMP_SW_52_5_NAME;www.beyondblue.com.au;;;;;;;;;;X
+TECH_APP_SW_53_NAME;Early Rudimentary Physical Examinations;;;;;;;;;;X
+SHORT_TECH_APP_SW_53_NAME;E. Rud, Phys Exams;;;;;;;;;;X
+TECH_APP_SW_53_DESC;;;;;;;;;;;X
+TECH_CMP_SW_53_1_NAME;Early Rudimentary Physical Examinations;;;;;;;;;;X
+TECH_CMP_SW_53_2_NAME;Early Rudimentary Body Type Categorisation;;;;;;;;;;X
+TECH_CMP_SW_53_3_NAME;Early Rudimentary Female Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_53_4_NAME;Early Rudimentary Male Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_53_5_NAME;Early Rudimentary Body Stress Testing;;;;;;;;;;X
+TECH_APP_SW_54_NAME;Rudimentary Physical Examinations;;;;;;;;;;X
+SHORT_TECH_APP_SW_54_NAME;Rud. Phys Exams;;;;;;;;;;X
+TECH_APP_SW_54_DESC;;;;;;;;;;;X
+TECH_CMP_SW_54_1_NAME;Rudimentary Physical Examination;;;;;;;;;;X
+TECH_CMP_SW_54_2_NAME;Rudimentary Body Type Characterisation;;;;;;;;;;X
+TECH_CMP_SW_54_3_NAME;Rudimentary Female Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_54_4_NAME;Rudimentary Male Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_54_5_NAME;Early Rudimentary STD Prevention;;;;;;;;;;X
+TECH_APP_SW_64_NAME;Early Physical Exams;;;;;;;;;;X
+SHORT_TECH_APP_SW_64_NAME;E. Phys Exams;;;;;;;;;;X
+TECH_APP_SW_64_DESC;;;;;;;;;;;X
+TECH_CMP_SW_64_1_NAME;Early Physical Examination;;;;;;;;;;X
+TECH_CMP_SW_64_2_NAME;Early Studies of Body Type Characteristics;;;;;;;;;;X
+TECH_CMP_SW_64_3_NAME;Early Female Anatomy Studies;;;;;;;;;;X
+TECH_CMP_SW_64_4_NAME;Early Male Anatomy Studies;;;;;;;;;;X
+TECH_CMP_SW_64_5_NAME;Experimental Surgery Techniques;;;;;;;;;;X
+TECH_APP_SW_65_NAME;Early Rudimentary Modern Human Body Study;;;;;;;;;;X
+SHORT_TECH_APP_SW_65_NAME;E-Rud-Mod Bod Study;;;;;;;;;;X
+TECH_APP_SW_65_DESC;;;;;;;;;;;X
+TECH_CMP_SW_65_1_NAME;Early Rudimentary Physio Therapy;;;;;;;;;;X
+TECH_CMP_SW_65_2_NAME;Early Rudimentary Scientific Stress Tests;;;;;;;;;;X
+TECH_CMP_SW_65_3_NAME;Pre-Modern Male Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_65_4_NAME;Pre-Modern Female Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_65_5_NAME;Teaching the General Public Basic First Aid;;;;;;;;;;X
+TECH_APP_SW_66_NAME;Rudimentary Modern Human Body Study;;;;;;;;;;X
+SHORT_TECH_APP_SW_66_NAME;Rud-Mod Bod Study;;;;;;;;;;X
+TECH_APP_SW_66_DESC;;;;;;;;;;;X
+TECH_CMP_SW_66_1_NAME;Rudimentary Physio Therapy;;;;;;;;;;X
+TECH_CMP_SW_66_2_NAME;Rudimentary Scientific Stress Tests;;;;;;;;;;X
+TECH_CMP_SW_66_3_NAME;Modern Male Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_66_4_NAME;Modern Female Anatomy Study;;;;;;;;;;X
+TECH_CMP_SW_66_5_NAME;Teaching Safer Workplace Practices O,H & S;;;;;;;;;;X
+TECH_APP_SW_67_NAME;Organ and Limb Transplanting;;;;;;;;;;X
+SHORT_TECH_APP_SW_67_NAME;Org-Limb Transplant;;;;;;;;;;X
+TECH_APP_SW_67_DESC;;;;;;;;;;;X
+TECH_CMP_SW_67_1_NAME;Early Rehabilitation of the Physically Handicapped;;;;;;;;;;X
+TECH_CMP_SW_67_2_NAME;Upper-Limit Body Stress Testing;;;;;;;;;;X
+TECH_CMP_SW_67_3_NAME;Rudimentary Limb Transplant;;;;;;;;;;X
+TECH_CMP_SW_67_4_NAME;Rudimentary Organ Transplant;;;;;;;;;;X
+TECH_CMP_SW_67_5_NAME;Specialised Doctor and Nurse Training;;;;;;;;;;X
+TECH_APP_SW_68_NAME;Early Pre-Modern Anatomy ;;;;;;;;;;X
+SHORT_TECH_APP_SW_68_NAME;E. Pre-Mod Anatomy;;;;;;;;;;X
+TECH_APP_SW_68_DESC;;;;;;;;;;;X
+TECH_CMP_SW_68_1_NAME;Rehabilitation of the Physically Handicapped;;;;;;;;;;X
+TECH_CMP_SW_68_2_NAME;Extreme Limit Body Stress Testing;;;;;;;;;;X
+TECH_CMP_SW_68_3_NAME;Early Limb Transplant;;;;;;;;;;X
+TECH_CMP_SW_68_4_NAME;Early Organ Transplant;;;;;;;;;;X
+TECH_CMP_SW_68_5_NAME;In-Vitro Fertilisation;;;;;;;;;;X
+TECH_APP_SW_69_NAME;Pre-Early Modern Human Anatomical Studies;;;;;;;;;;X
+SHORT_TECH_APP_SW_69_NAME;Pre-E. Mod Anatomy;;;;;;;;;;X
+TECH_APP_SW_69_DESC;;;;;;;;;;;X
+TECH_CMP_SW_69_1_NAME;Comprehensive Physio Therapy;;;;;;;;;;X
+TECH_CMP_SW_69_2_NAME;Edge-of-Death Body Stress Testing;;;;;;;;;;X
+TECH_CMP_SW_69_3_NAME;Use of Captured Medical Experimentation Documents;;;;;;;;;;X
+TECH_CMP_SW_69_4_NAME;Pre-Modern Limb Transplant;;;;;;;;;;X
+TECH_CMP_SW_69_5_NAME;Pre-Modern Organ Transplant;;;;;;;;;;X
+TECH_APP_SW_70_NAME;Pre-Modern Anatomical Studies;;;;;;;;;;X
+SHORT_TECH_APP_SW_70_NAME;Pre-Mod Anatomy;;;;;;;;;;X
+TECH_APP_SW_70_DESC;;;;;;;;;;;X
+TECH_CMP_SW_70_1_NAME;Sleep Deprivation Experiments;;;;;;;;;;X
+TECH_CMP_SW_70_2_NAME;Bypassing Auto-Immune Limb Transplant Rejection;;;;;;;;;;X
+TECH_CMP_SW_70_3_NAME;Bypassing Auto-Immune Organ Transplant Rejection;;;;;;;;;;X
+TECH_CMP_SW_70_4_NAME;New and Experimental Surgery Techniques;;;;;;;;;;X
+TECH_CMP_SW_70_5_NAME;Dedicated ICU's for Pre-mature Babies;;;;;;;;;;X
+TECH_APP_SW_71_NAME;Modern Anatomical Studies;;;;;;;;;;X
+SHORT_TECH_APP_SW_71_NAME;Modern Anatomy;;;;;;;;;;X
+TECH_APP_SW_71_DESC;;;;;;;;;;;X
+TECH_CMP_SW_71_1_NAME;Experimentation Knowledge Applied in Practice;;;;;;;;;;X
+TECH_CMP_SW_71_2_NAME;Modernised Surgical Equipment;;;;;;;;;;X
+TECH_CMP_SW_71_3_NAME;Perfecting Modern Surgical Techniques;;;;;;;;;;X
+TECH_CMP_SW_71_4_NAME;Re-Training Doctors and Nurses;;;;;;;;;;X
+TECH_CMP_SW_71_5_NAME;Modernised Intensive Care Units;;;;;;;;;;X
+TECH_APP_SW_72_NAME;Post-Modern Anatomical Studies;;;;;;;;;;X
+SHORT_TECH_APP_SW_72_NAME;Post Mod Anatomy;;;;;;;;;;X
+TECH_APP_SW_72_DESC;;;;;;;;;;;X
+TECH_CMP_SW_72_1_NAME;Specialised and Rapid Response MASH Units;;;;;;;;;;X
+TECH_CMP_SW_72_2_NAME;Artificial Limb Growth and Farming;;;;;;;;;;X
+TECH_CMP_SW_72_3_NAME;Flying Hospitals;;;;;;;;;;X
+TECH_CMP_SW_72_4_NAME;Artificial Organ Growth and Farming;;;;;;;;;;X
+TECH_CMP_SW_72_5_NAME;Plant DNA Splicing Experimentation;;;;;;;;;;X
+TECH_APP_SW_73_NAME;Early DNA Sequencing;;;;;;;;;;X
+SHORT_TECH_APP_SW_73_NAME;E. DNA Sequencing;;;;;;;;;;X
+TECH_APP_SW_73_DESC;;;;;;;;;;;X
+TECH_CMP_SW_73_1_NAME;Animal DNA Splicing Experimentation;;;;;;;;;;X
+TECH_CMP_SW_73_2_NAME;Modernised A-T and G-C Patern Study;;;;;;;;;;X
+TECH_CMP_SW_73_3_NAME;Studying Parental Traits in Children;;;;;;;;;;X
+TECH_CMP_SW_73_4_NAME;'Ghost in Our Genes' Theory;;;;;;;;;;X
+TECH_CMP_SW_73_5_NAME;Modernised DNA Sequencing;;;;;;;;;;X
+TECH_APP_SW_74_NAME;Early Pre-Modern DNA Sequencing;;;;;;;;;;X
+SHORT_TECH_APP_SW_74_NAME;E-P. Mod DNA Study;;;;;;;;;;X
+TECH_APP_SW_74_DESC;;;;;;;;;;;X
+TECH_CMP_SW_74_1_NAME;Perfected Animal DNA Splicing;;;;;;;;;;X
+TECH_CMP_SW_74_2_NAME;Experimental Gene Therapy;;;;;;;;;;X
+TECH_CMP_SW_74_3_NAME;Isolating Parent-Child Genetic Traits;;;;;;;;;;X
+TECH_CMP_SW_74_4_NAME;Environmental Upbringing vs Genetic Information Studies;;;;;;;;;;X
+TECH_CMP_SW_74_5_NAME;Preventing Genetic Defects;;;;;;;;;;X
+TECH_APP_SW_75_NAME;Pre-Modern DNA Sequencing;;;;;;;;;;X
+SHORT_TECH_APP_SW_75_NAME;Pre-Mod DNA Study;;;;;;;;;;X
+TECH_APP_SW_75_DESC;;;;;;;;;;;X
+TECH_CMP_SW_75_1_NAME;Experimental Human DNA Splicing;;;;;;;;;;X
+TECH_CMP_SW_75_2_NAME;Furthered Gene Therapy Experimentation;;;;;;;;;;X
+TECH_CMP_SW_75_3_NAME;Environmental Upbringing vs DNA Info Study in Practice;;;;;;;;;;X
+TECH_CMP_SW_75_4_NAME;Removing DNA Facts From DNA Fallacy;;;;;;;;;;X
+TECH_CMP_SW_75_5_NAME;DNA Inclusion and DNA Exclusion;;;;;;;;;;X
+TECH_APP_SW_76_NAME;Early Modern DNA Sequencing;;;;;;;;;;X
+SHORT_TECH_APP_SW_76_NAME;E. Mod DNA Study;;;;;;;;;;X
+TECH_APP_SW_76_DESC;;;;;;;;;;;X
+TECH_CMP_SW_76_1_NAME;Applied Human DNA Splicing;;;;;;;;;;X
+TECH_CMP_SW_76_2_NAME;The Bionic Woman Theorum;;;;;;;;;;X
+TECH_CMP_SW_76_3_NAME;Six Million Dollar Man Theorum;;;;;;;;;;X
+TECH_CMP_SW_76_4_NAME;Artificial Limb Implantation;;;;;;;;;;X
+TECH_CMP_SW_76_5_NAME;Artificial Organ Implantation;;;;;;;;;;X
+TECH_APP_SW_77_NAME;Modern DNA Sequencing;;;;;;;;;;X
+SHORT_TECH_APP_SW_77_NAME;Mod. DNA Study;;;;;;;;;;X
+TECH_APP_SW_77_DESC;;;;;;;;;;;X
+TECH_CMP_SW_77_1_NAME;'Les Enfant Terribles' Project. Solid, Liquid, Solidus.;;;;;;;;;;X
+TECH_CMP_SW_77_2_NAME;Overcoming Artificial Limb Implant Rejection;;;;;;;;;;X
+TECH_CMP_SW_77_3_NAME;Overcoming Artificial Organ Implant Rejection;;;;;;;;;;X
+TECH_CMP_SW_77_4_NAME;Animal Bionic Limb Implant Experimentation;;;;;;;;;;X
+TECH_CMP_SW_77_5_NAME;Human Bionic Limb Implantation Theories;;;;;;;;;;X
+TECH_APP_SW_78_NAME;Cloning Experimentation;;;;;;;;;;X
+SHORT_TECH_APP_SW_78_NAME;Cloning Experiments;;;;;;;;;;X
+TECH_APP_SW_78_DESC;;;;;;;;;;;X
+TECH_CMP_SW_78_1_NAME;Human Bionic Limb Implantation;;;;;;;;;;X
+TECH_CMP_SW_78_2_NAME;Nano Machine Injection Therapy;;;;;;;;;;X
+TECH_CMP_SW_78_3_NAME;Human Bionic Organ Implantation;;;;;;;;;;X
+TECH_CMP_SW_78_4_NAME;Applied DNA Splicing and Implantation;;;;;;;;;;X
+TECH_CMP_SW_78_5_NAME;Dolly the Sheep;;;;;;;;;;X
+TECH_APP_SW_79_NAME;Human Cloning Experimentation;;;;;;;;;;X
+SHORT_TECH_APP_SW_79_NAME;H Cloning Study;;;;;;;;;;X
+TECH_APP_SW_79_DESC;;;;;;;;;;;X
+TECH_CMP_SW_79_1_NAME;Shortening Human Incubation Periods;;;;;;;;;;X
+TECH_CMP_SW_79_2_NAME;Total Human DNA Mapping;;;;;;;;;;X
+TECH_CMP_SW_79_3_NAME;Furthered DNA Inclusion and Exclusion;;;;;;;;;;X
+TECH_CMP_SW_79_4_NAME;Applied 6 Million Dollar Man Theorum;;;;;;;;;;X
+TECH_CMP_SW_79_5_NAME;DNA Infused Nano Machine and Bionic Limb Implantation;;;;;;;;;;X
+TECH_APP_SW_80_NAME;Applied Human Cloning;;;;;;;;;;X
+SHORT_TECH_APP_SW_80_NAME;Human Cloning;;;;;;;;;;X
+TECH_APP_SW_80_DESC;;;;;;;;;;;X
+TECH_CMP_SW_80_1_NAME;DNA Cloning Equipment;;;;;;;;;;X
+TECH_CMP_SW_80_2_NAME;DNA Cloning Specialists;;;;;;;;;;X
+TECH_CMP_SW_80_3_NAME;Cloned Bionic Limb Implants;;;;;;;;;;X
+TECH_CMP_SW_80_4_NAME;Cloned Bionic Organ Implants;;;;;;;;;;X
+TECH_CMP_SW_80_5_NAME;Inter-Unit Linked Nano Machine Implants;;;;;;;;;;X
+TECH_APP_AD_47_NAME;Mid-Cold War Era Air Combat;;;;;;;;;;X
+SHORT_TECH_APP_AD_47_NAME;Mid CW Air Combat;;;;;;;;;;X
+TECH_APP_AD_47_DESC;;;;;;;;;;;X
+TECH_CMP_AD_47_1_NAME;Combat Ace Jet Fighter Experience ;;;;;;;;;;X
+TECH_CMP_AD_47_2_NAME;Applied Naval Aviation Theory;;;;;;;;;;X
+TECH_CMP_AD_47_3_NAME;Modern Bombing Damage Assessment;;;;;;;;;;X
+TECH_CMP_AD_47_4_NAME;Atomic Bomber Suppression;;;;;;;;;;X
+TECH_CMP_AD_47_5_NAME;Multi-Theatre Flexible Command Centres;;;;;;;;;;X
+TECH_APP_AD_48_NAME;Mid-Cold War Era Offensive Air Superiority;;;;;;;;;;X
+SHORT_TECH_APP_AD_48_NAME;Jet Off Air Superior;;;;;;;;;;X
+TECH_APP_AD_48_DESC;;;;;;;;;;;X
+TECH_CMP_AD_48_1_NAME;Mid Cold War Tactical Unit - Air Wing;;;;;;;;;;X
+TECH_CMP_AD_48_2_NAME;Mid Cold War Fighter Tactics;;;;;;;;;;X
+TECH_CMP_AD_48_3_NAME;Jet Fighter Specialization;;;;;;;;;;X
+TECH_CMP_AD_48_4_NAME;Mid Cold War Offensive Mission Training;;;;;;;;;;X
+TECH_CMP_AD_48_5_NAME;Mid Cold War Air Superiority Spirit;;;;;;;;;;X
+TECH_APP_AD_49_NAME;Mid-Cold War Era Defensive Air Superiority;;;;;;;;;;X
+SHORT_TECH_APP_AD_49_NAME;Jet Def Air Superior;;;;;;;;;;X
+TECH_APP_AD_49_DESC;;;;;;;;;;;X
+TECH_CMP_AD_49_1_NAME;Mid Cold War Homeland Defense Motivation;;;;;;;;;;X
+TECH_CMP_AD_49_2_NAME;Mid Cold War Interception Tactics;;;;;;;;;;X
+TECH_CMP_AD_49_3_NAME;Jet Interceptor Optimization;;;;;;;;;;X
+TECH_CMP_AD_49_4_NAME;Mid Cold War Small Unit Training;;;;;;;;;;X
+TECH_CMP_AD_49_5_NAME;Mid Cold War Air Superiority Spirit;;;;;;;;;;X
+TECH_APP_AD_96_NAME;Jet Multi-Role Fighter Focus;;;;;;;;;;X
+SHORT_TECH_APP_AD_96_NAME;Jet Fighter Focus;;;;;;;;;;X
+TECH_APP_AD_96_DESC;;;;;;;;;;;X
+TECH_CMP_AD_96_1_NAME;Jet Multi-role Fighter Tactics;;;;;;;;;;X
+TECH_CMP_AD_96_2_NAME;Mid-Cold War Air Combat Training;;;;;;;;;;X
+TECH_CMP_AD_96_3_NAME;Jet Fighter Specialization;;;;;;;;;;X
+TECH_CMP_AD_96_4_NAME;Cold War Era Long Range Aircraft;;;;;;;;;;X
+TECH_CMP_AD_96_5_NAME;Jet Anti Interceptor Tactics;;;;;;;;;;X
+TECH_APP_AD_97_NAME;Mid-Cold War Era Interceptor Focus;;;;;;;;;;X
+SHORT_TECH_APP_AD_97_NAME;Jet Interceptor Focus;;;;;;;;;;X
+TECH_APP_AD_97_DESC;;;;;;;;;;;X
+TECH_CMP_AD_97_1_NAME;Mid-Cold War Interceptor Tactics;;;;;;;;;;X
+TECH_CMP_AD_97_2_NAME;Mid-Cold War Air Combat Training;;;;;;;;;;X
+TECH_CMP_AD_97_3_NAME;Mid Cold War Optimized Interceptor Systems;;;;;;;;;;X
+TECH_CMP_AD_97_4_NAME;Mid Cold War Air Squadron Cooperation;;;;;;;;;;X
+TECH_CMP_AD_97_5_NAME;Mid Cold War Bomber Interception Tactics;;;;;;;;;;X
+TECH_APP_AD_98_NAME;Mid-Cold War Era Preplanned Air Operations;;;;;;;;;;X
+SHORT_TECH_APP_AD_98_NAME;Mid CW Air Ops;;;;;;;;;;X
+TECH_APP_AD_98_DESC;;;;;;;;;;;X
+TECH_CMP_AD_98_1_NAME;Mid-Cold War Central Fighter Command;;;;;;;;;;X
+TECH_CMP_AD_98_2_NAME;Mid-Cold War Espionage Aircraft;;;;;;;;;;X
+TECH_CMP_AD_98_3_NAME;Mid-Cold War Target Selection;;;;;;;;;;X
+TECH_CMP_AD_98_4_NAME;Mid-Cold War Mission Briefings;;;;;;;;;;X
+TECH_CMP_AD_98_5_NAME;Mid-Cold War Mission Preparation;;;;;;;;;;X
+TECH_APP_AD_99_NAME;Mid-Cold War Era Anti Air Gun Support;;;;;;;;;;X
+SHORT_TECH_APP_AD_99_NAME;Mid CW AA Support;;;;;;;;;;X
+TECH_APP_AD_99_DESC;;;;;;;;;;;X
+TECH_CMP_AD_99_1_NAME;Mid-Cold War Improved Anti-Air Turrets;;;;;;;;;;X
+TECH_CMP_AD_99_2_NAME;Mid-Cold War AA/Interceptor Communication;;;;;;;;;;X
+TECH_CMP_AD_99_3_NAME;Mid-Cold War AA/Interceptor Coordination;;;;;;;;;;X
+TECH_CMP_AD_99_4_NAME;Mid-Cold War Improved Target Tracking;;;;;;;;;;X
+TECH_CMP_AD_99_5_NAME;Mid-Cold War Friendly Fire Prevention;;;;;;;;;;X
+TECH_APP_AD_117_NAME;Mid Cold War Era Rapid Air Superiority;;;;;;;;;;X
+SHORT_TECH_APP_AD_117_NAME;Mid CW Air Superior;;;;;;;;;;X
+TECH_APP_AD_117_DESC;;;;;;;;;;;X
+TECH_CMP_AD_117_1_NAME;Mid Cold War Improved Onboard-Radar Devices;;;;;;;;;;X
+TECH_CMP_AD_117_2_NAME;Mid Cold War Individual Target Tracking;;;;;;;;;;X
+TECH_CMP_AD_117_3_NAME;Mid Cold War Fighter Deception Tactics;;;;;;;;;;X
+TECH_CMP_AD_117_4_NAME;Mid Cold War Intensive Air Combat Training;;;;;;;;;;X
+TECH_CMP_AD_117_5_NAME;Mid Cold War Interceptor Destruction;;;;;;;;;;X
+TECH_APP_AD_118_NAME;Mid-Cold War Era Readiness Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_AD_118_NAME;Mid CW Readiness;;;;;;;;;;X
+TECH_APP_AD_118_DESC;;;;;;;;;;;X
+TECH_CMP_AD_118_1_NAME;Mid Cold War Air-Land Coordination;;;;;;;;;;X
+TECH_CMP_AD_118_2_NAME;Mid Cold War Air-Land Cooperation;;;;;;;;;;X
+TECH_CMP_AD_118_3_NAME;Mid Cold War Preplanned Targets;;;;;;;;;;X
+TECH_CMP_AD_118_4_NAME;Mid Cold War Briefing Methods;;;;;;;;;;X
+TECH_CMP_AD_118_5_NAME;Mid Cold War Mission Preparation;;;;;;;;;;X
+TECH_APP_AD_119_NAME;Mid Cold War Era Bad Weather Combat;;;;;;;;;;X
+SHORT_TECH_APP_AD_119_NAME;CW Bad Weather C.;;;;;;;;;;X
+TECH_APP_AD_119_DESC;;;;;;;;;;;X
+TECH_CMP_AD_119_1_NAME;Mid Cold War Era On-Board Instruments;;;;;;;;;;X
+TECH_CMP_AD_119_2_NAME;Mid Cold War Bad Weather Flight Equipment Testing;;;;;;;;;;X
+TECH_CMP_AD_119_3_NAME;Mid Cold War Intensive Training;;;;;;;;;;X
+TECH_CMP_AD_119_4_NAME;Mid Cold War ra Weatherproof Aircraft Design;;;;;;;;;;X
+TECH_CMP_AD_119_5_NAME;Mid Cold War Era Communications;;;;;;;;;;X
+TECH_APP_AD_120_NAME;Mid Cold War Era Intensive Airspace Surveillance;;;;;;;;;;X
+SHORT_TECH_APP_AD_120_NAME;CW Air Surveillance;;;;;;;;;;X
+TECH_APP_AD_120_DESC;;;;;;;;;;;X
+TECH_CMP_AD_120_1_NAME;Mid Cold War Improved Radar and Communications;;;;;;;;;;X
+TECH_CMP_AD_120_2_NAME;Mid Cold War Defensive Patrol Sectors;;;;;;;;;;X
+TECH_CMP_AD_120_3_NAME;Mid Cold War Nighttime Surveillance;;;;;;;;;;X
+TECH_CMP_AD_120_4_NAME;Mid Cold War All Weather Training;;;;;;;;;;X
+TECH_CMP_AD_120_5_NAME;Mid Cold War Rapid Response Training;;;;;;;;;;X
+TECH_APP_AD_121_NAME;Mid Cold War Era Pre-emptive Strike;;;;;;;;;;X
+SHORT_TECH_APP_AD_121_NAME;CW Pre-Strike;;;;;;;;;;X
+TECH_APP_AD_121_DESC;;;;;;;;;;;X
+TECH_CMP_AD_121_1_NAME;Advanced Espionage;;;;;;;;;;X
+TECH_CMP_AD_121_2_NAME;Anti-Radar Aircraft Design;;;;;;;;;;X
+TECH_CMP_AD_121_3_NAME;Enemy Runway Cratering;;;;;;;;;;X
+TECH_CMP_AD_121_4_NAME;Enemy Air Defense Suppression;;;;;;;;;;X
+TECH_CMP_AD_121_5_NAME;Low-Altitude Approach Training;;;;;;;;;;X
+TECH_APP_AD_122_NAME;Mid Cold War Era Enemy Air Attrition;;;;;;;;;;X
+SHORT_TECH_APP_AD_122_NAME;CW Enemy Attrition;;;;;;;;;;X
+TECH_APP_AD_122_DESC;;;;;;;;;;;X
+TECH_CMP_AD_122_1_NAME;Mid Cold War Multiple Wing Coordination;;;;;;;;;;X
+TECH_CMP_AD_122_2_NAME;Mid Cold War Fast Bomber Neutralization;;;;;;;;;;X
+TECH_CMP_AD_122_3_NAME;Mid Cold War Rigid Accountability;;;;;;;;;;X
+TECH_CMP_AD_122_4_NAME;Mid Cold War Advanced Interception Training;;;;;;;;;;X
+TECH_CMP_AD_122_5_NAME;Mid Cold War Aircraft Destruction Focus;;;;;;;;;;X
+TECH_APP_AD_123_NAME;Cold War Flexible Response Air Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_AD_123_NAME;CW Flexi-Respsonse;;;;;;;;;;X
+TECH_APP_AD_123_DESC;;;;;;;;;;;X
+TECH_CMP_AD_123_1_NAME;Mid Cold War Era Air Force Recruiting;;;;;;;;;;X
+TECH_CMP_AD_123_2_NAME;Mid Cold War Era Air Defence In Depth;;;;;;;;;;X
+TECH_CMP_AD_123_3_NAME;Mid Cold War Era Retaliatory Strike Planning;;;;;;;;;;X
+TECH_CMP_AD_123_4_NAME;Mid Cold War Era Missile Response;;;;;;;;;;X
+TECH_CMP_AD_123_5_NAME;Mid Cold War Era Interservice Cooperation;;;;;;;;;;X
+TECH_APP_AD_124_NAME;Mid Cold War Era Airborne Assault;;;;;;;;;;X
+SHORT_TECH_APP_AD_124_NAME;Mid CW Airb Assault;;;;;;;;;;X
+TECH_APP_AD_124_DESC;;;;;;;;;;;X
+TECH_CMP_AD_124_1_NAME;Electric Glider Design;;;;;;;;;;X
+TECH_CMP_AD_124_2_NAME;Electric Glider Testing;;;;;;;;;;X
+TECH_CMP_AD_124_3_NAME;Noiseless Aircraft Propulsion Systems;;;;;;;;;;X
+TECH_CMP_AD_124_4_NAME;Needle Point Accuracy Drop Zone Injection Training;;;;;;;;;;X
+TECH_CMP_AD_124_5_NAME;Elite Paratrooper Training;;;;;;;;;;X
+TECH_APP_AD_125_NAME;Cold War Heavy Aircraft Doctrines;;;;;;;;;;X
+SHORT_TECH_APP_AD_125_NAME;CW Hvy Air Doctrine;;;;;;;;;;X
+TECH_APP_AD_125_DESC;;;;;;;;;;;X
+TECH_CMP_AD_125_1_NAME;Cold War Era Bomber Crew Training;;;;;;;;;;X
+TECH_CMP_AD_125_2_NAME;Cold War Era Heavy Air Supremacy Doctrine;;;;;;;;;;X
+TECH_CMP_AD_125_3_NAME;Cold War Era Stealth Bomber Design;;;;;;;;;;X
+TECH_CMP_AD_125_4_NAME;Cold War Era Upper Atmosphere Bomb Drop Tactics;;;;;;;;;;X
+TECH_CMP_AD_125_5_NAME;Cold War Era Combined Air Tactics;;;;;;;;;;X
+TECH_APP_AD_126_NAME;Strategic Supremacy Through Aerial Manouvre;;;;;;;;;;X
+SHORT_TECH_APP_AD_126_NAME;Strat Air Manouvres;;;;;;;;;;X
+TECH_APP_AD_126_DESC;;;;;;;;;;;X
+TECH_CMP_AD_126_1_NAME;Strategic Ground Supremacy Through Air Power;;;;;;;;;;X
+TECH_CMP_AD_126_2_NAME;Heavy Aerial Stealth Bombardment Tactics;;;;;;;;;;X
+TECH_CMP_AD_126_3_NAME;Stratospheric Flight Ceiling Levels;;;;;;;;;;X
+TECH_CMP_AD_126_4_NAME;Super Long-Range Aircraft Tactics;;;;;;;;;;X
+TECH_CMP_AD_126_5_NAME;Individual Air Crew Outfit and Equipment Design;;;;;;;;;;X
+TECH_APP_AD_127_NAME;Intense Cold War Era Strike Fighter Ground Support;;;;;;;;;;X
+SHORT_TECH_APP_AD_127_NAME;Intense Gd Support;;;;;;;;;;X
+TECH_APP_AD_127_DESC;;;;;;;;;;;X
+TECH_CMP_AD_127_1_NAME;Intense CAS Usage;;;;;;;;;;X
+TECH_CMP_AD_127_2_NAME;Enemy Soft Unit Destruction;;;;;;;;;;X
+TECH_CMP_AD_127_3_NAME;Enemy Armoured Unit Destruction;;;;;;;;;;X
+TECH_CMP_AD_127_4_NAME;Cold War Era Aerial Night Vision Tactics;;;;;;;;;;X
+TECH_CMP_AD_127_5_NAME;Cold War Era Aerial Night Vision Equipment Fitouts;;;;;;;;;;X
+TECH_APP_AD_128_NAME;Cold War Era Enemy Airspace Silent Infiltration;;;;;;;;;;X
+SHORT_TECH_APP_AD_128_NAME;Airspace Infiltration;;;;;;;;;;X
+TECH_APP_AD_128_DESC;;;;;;;;;;;X
+TECH_CMP_AD_128_1_NAME;Super High-Speed Unarmed Recon;;;;;;;;;;X
+TECH_CMP_AD_128_2_NAME;Treetop Height Flight Patterns;;;;;;;;;;X
+TECH_CMP_AD_128_3_NAME;'Plausible Denial' If Shot Down;;;;;;;;;;X
+TECH_CMP_AD_128_4_NAME;Enemy Runway Locating Techniques;;;;;;;;;;X
+TECH_CMP_AD_128_5_NAME;Enemy Ground Force Detection Techniques;;;;;;;;;;X
+TECH_APP_AD_129_NAME;Early Cold War Era Naval Bomber Role;;;;;;;;;;X
+SHORT_TECH_APP_AD_129_NAME;Early CW NB Role;;;;;;;;;;X
+TECH_APP_AD_129_DESC;;;;;;;;;;;X
+TECH_CMP_AD_129_1_NAME;Nuclear Submarine Detection Techniques;;;;;;;;;;X
+TECH_CMP_AD_129_2_NAME;Cold War Era CarrierTargeting Techniques;;;;;;;;;;X
+TECH_CMP_AD_129_3_NAME;Cold War Era Carrier-Battle Survival Techniques;;;;;;;;;;X
+TECH_CMP_AD_129_4_NAME;Cold War Era Escort RADAR Jam Techniques;;;;;;;;;;X
+TECH_CMP_AD_129_5_NAME;Cold War Era Counter RADAR Jam Equipment;;;;;;;;;;X
+TECH_APP_AD_130_NAME;Mid-Cold War Era Naval Bomber Role;;;;;;;;;;X
+SHORT_TECH_APP_AD_130_NAME;Mid CW NB Role;;;;;;;;;;X
+TECH_APP_AD_130_DESC;;;;;;;;;;;X
+TECH_CMP_AD_130_1_NAME;Nuclear Submarine Eradication Techniques;;;;;;;;;;X
+TECH_CMP_AD_130_2_NAME;Cold War Era CAG Dogfight Techniques;;;;;;;;;;X
+TECH_CMP_AD_130_3_NAME;Cold War Era Carrier Sinking Techniques;;;;;;;;;;X
+TECH_CMP_AD_130_4_NAME;Cold War Era Naval Capital RADAR Jam Techniques;;;;;;;;;;X
+TECH_CMP_AD_130_5_NAME;Cold War Era AA Counter Measures and Avoidance Systems;;;;;;;;;;X
+TECH_APP_AD_131_NAME;Late Cold War Era Naval Bomber Role;;;;;;;;;;X
+SHORT_TECH_APP_AD_131_NAME;L. Cold War NB Role;;;;;;;;;;X
+TECH_APP_AD_131_DESC;;;;;;;;;;;X
+TECH_CMP_AD_131_1_NAME;Nuclear Submarine Deep-Sea Detection Equipment;;;;;;;;;;X
+TECH_CMP_AD_131_2_NAME;Late Cold War Era CAG Dogfight Techniques;;;;;;;;;;X
+TECH_CMP_AD_131_3_NAME;Late Cold War Era Target Priority Selection;;;;;;;;;;X
+TECH_CMP_AD_131_4_NAME;Late Cold War Era Mass Naval RADAR Jam Techniques;;;;;;;;;;X
+TECH_CMP_AD_131_5_NAME;Late Cold War Era AA Counter Measures and Avoidance Systems;;;;;;;;;;X
+TECH_APP_AD_132_NAME;Modern Naval Fighter-Bomber Role;;;;;;;;;;X
+SHORT_TECH_APP_AD_132_NAME;Modern NFB Role;;;;;;;;;;X
+TECH_APP_AD_132_DESC;;;;;;;;;;;X
+TECH_CMP_AD_132_1_NAME;Seafloor Mapping and Sub Detection Equipment;;;;;;;;;;X
+TECH_CMP_AD_132_2_NAME;Long-Range Anti-Ship Missiles Use. LASM Use;;;;;;;;;;X
+TECH_CMP_AD_132_3_NAME;Pin-Point Accuracy, Target Priority Selection;;;;;;;;;;X
+TECH_CMP_AD_132_4_NAME;False IFF Signaling;;;;;;;;;;X
+TECH_CMP_AD_132_5_NAME;Laser Guided Munitions and Ordnance Targeting;;;;;;;;;;X
+TECH_APP_AD_133_NAME;Late Cold War Era Airborne Assault;;;;;;;;;;X
+SHORT_TECH_APP_AD_133_NAME;LCW Airb. Assault;;;;;;;;;;X
+TECH_APP_AD_133_DESC;;;;;;;;;;;X
+TECH_CMP_AD_133_1_NAME;High Altitude Infantry Breathing Equipment;;;;;;;;;;X
+TECH_CMP_AD_133_2_NAME;Single-Use Self Destructing and Stealth Transport Craft;;;;;;;;;;X
+TECH_CMP_AD_133_3_NAME;Slow Speed High-AltitudeLow Opening Jump;;;;;;;;;;X
+TECH_CMP_AD_133_4_NAME;Use of Satellite Imagery for Drop Intel;;;;;;;;;;X
+TECH_CMP_AD_133_5_NAME;Elite Paratrooper HALO Jump Training;;;;;;;;;;X
+TECH_APP_AD_134_NAME;Neutron Bomb Development and Proliferation;;;;;;;;;;X
+SHORT_TECH_APP_AD_134_NAME;N. Bomb Proliferation;;;;;;;;;;X
+TECH_APP_AD_134_DESC;;;;;;;;;;;X
+TECH_CMP_AD_134_1_NAME;RDS 6 'Joe 4';;;;;;;;;;X
+TECH_CMP_AD_134_2_NAME;R36 ICBM;;;;;;;;;;X
+TECH_CMP_AD_134_3_NAME;Multi-Warhead Trident II Nuclear SLBM;;;;;;;;;;X
+TECH_CMP_AD_134_4_NAME;B53;;;;;;;;;;X
+TECH_CMP_AD_134_5_NAME;MOAB. FOAB. Mother of All Bombs. Father of All Bombs;;;;;;;;;;X
+TECH_CMP_AD_132_6_NAME;Stealth Boat Detection Equipment;;;;;;;;;;X
+TECH_APP_AD_135_NAME;Modern Airborne Assault Tactics;;;;;;;;;;X
+SHORT_TECH_APP_AD_135_NAME;Mod Airb. Assault;;;;;;;;;;X
+TECH_APP_AD_135_DESC;;;;;;;;;;;X
+TECH_CMP_AD_135_1_NAME;Zero Failure High Altitude Breathing Equipment;;;;;;;;;;X
+TECH_CMP_AD_135_2_NAME;'Blackbag Operations' Using Civil Aircraft;;;;;;;;;;X
+TECH_CMP_AD_135_3_NAME;High Speed HALO Jumps From 747 Passenger Craft;;;;;;;;;;X
+TECH_CMP_AD_135_4_NAME;Rapid, Small Area Tactical Assault Training;;;;;;;;;;X
+TECH_CMP_AD_135_5_NAME;Assymetrical Airborne Warfare;;;;;;;;;;X
+TECH_APP_AD_136_NAME;Cold War Era Enemy Heavy Airspace Domination;;;;;;;;;;X
+SHORT_TECH_APP_AD_136_NAME;Heavy Air Dominate;;;;;;;;;;X
+TECH_APP_AD_136_DESC;;;;;;;;;;;X
+TECH_CMP_AD_136_1_NAME;Super High-Speed Armed Recon Follow-Up;;;;;;;;;;X
+TECH_CMP_AD_136_2_NAME;Treetop Height Surprise Aerial Attack;;;;;;;;;;X
+TECH_CMP_AD_136_3_NAME;Deep Enemy Territorial Penetration Attacks;;;;;;;;;;X
+TECH_CMP_AD_136_4_NAME;Deep Interior Enemy Runway Destruction;;;;;;;;;;X
+TECH_CMP_AD_136_5_NAME;Enemy Ground Force Decimation;;;;;;;;;;X
+TECH_APP_AD_137_NAME;IFF Identification Friend or Foe Applications;;;;;;;;;;X
+SHORT_TECH_APP_AD_137_NAME;IFF Application;;;;;;;;;;X
+TECH_APP_AD_137_DESC;;;;;;;;;;;X
+TECH_CMP_AD_137_1_NAME;Super High-Speed IFF Recognition;;;;;;;;;;X
+TECH_CMP_AD_137_2_NAME;Flying HQ AWACS Co-ordination;;;;;;;;;;X
+TECH_CMP_AD_137_3_NAME;Fighter-Interceptor Heavy Air Escort Co-ordination;;;;;;;;;;X
+TECH_CMP_AD_137_4_NAME;IFF Blue-On-Blue Contact Avoidance;;;;;;;;;;X
+TECH_CMP_AD_137_5_NAME;Ground Based AA IFF Recognition Systems;;;;;;;;;;X
+TECH_APP_AD_138_NAME;Modernised Night Bombing;;;;;;;;;;X
+SHORT_TECH_APP_AD_138_NAME;I.S.T.A.R;;;;;;;;;;X
+TECH_APP_AD_138_DESC;;;;;;;;;;;X
+TECH_CMP_AD_138_1_NAME;Limited Theatre Bombing Campaigns;;;;;;;;;;X
+TECH_CMP_AD_138_2_NAME;Intel, Surveilance, Target Acquisition, Reconaissance;;;;;;;;;;X
+TECH_CMP_AD_138_3_NAME;Applied Air Power In Steady State Conditions;;;;;;;;;;X
+TECH_CMP_AD_138_4_NAME;Modernised WW II Luftwaffe Tactics Emulation;;;;;;;;;;X
+TECH_CMP_AD_138_5_NAME;Constant And Instant Satellite Surveilance;;;;;;;;;;X
+TECH_APP_AD_139_NAME;Joint-Service Branch Operating Theatre Objectives;;;;;;;;;;X
+SHORT_TECH_APP_AD_139_NAME;S.I.O.P;;;;;;;;;;X
+TECH_APP_AD_139_DESC;;;;;;;;;;;X
+TECH_CMP_AD_139_1_NAME;Strafing And Bombing Runs In Close Proximity of Friendly Forces;;;;;;;;;;X
+TECH_CMP_AD_139_2_NAME;The 31 Keypoint Needs Theorum 1984;;;;;;;;;;X
+TECH_CMP_AD_139_3_NAME;Battlefield Smothering;;;;;;;;;;X
+TECH_CMP_AD_139_4_NAME;Air-Land-Sea Doctrinal Flexibility And Inter-branch Co-operation;;;;;;;;;;X
+TECH_CMP_AD_139_5_NAME;SIOP Single Integrated Operational Plan;;;;;;;;;;X
+TECH_APP_AD_140_NAME;Air Land Forces Application Agency Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_AD_140_NAME;A.L.F.A Doctrine;;;;;;;;;;X
+TECH_APP_AD_140_DESC;;;;;;;;;;;X
+TECH_CMP_AD_140_1_NAME;Air Land Forces Application Agency Theorum;;;;;;;;;;X
+TECH_CMP_AD_140_2_NAME;TRADOC Training And Doctrine Command Theorum;;;;;;;;;;X
+TECH_CMP_AD_140_3_NAME;Tactical Airpower Dependency;;;;;;;;;;X
+TECH_CMP_AD_140_4_NAME;Joint Air Power Competence Centre;;;;;;;;;;X
+TECH_CMP_AD_140_5_NAME;Applying The 31 Identified Keypoint Needs ;;;;;;;;;;X
+TECH_APP_AD_141_NAME;TRADOC Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_AD_141_NAME;TRADOC Doctrine;;;;;;;;;;X
+TECH_APP_AD_141_DESC;;;;;;;;;;;X
+TECH_CMP_AD_141_1_NAME;Air-Land Forces Application Agency Theorum;;;;;;;;;;X
+TECH_CMP_AD_141_2_NAME;TRADOC Training And Doctrine Command Theorum;;;;;;;;;;X
+TECH_CMP_AD_141_3_NAME;Tactical Airpower Dependency;;;;;;;;;;X
+TECH_CMP_AD_141_4_NAME;Joint Airpower Competence Centre;;;;;;;;;;X
+TECH_CMP_AD_141_5_NAME;Applying The 31 Identified Keypoint Needs ;;;;;;;;;;X
+TECH_APP_AD_142_NAME;Overwhelming Heavy Air Power;;;;;;;;;;X
+SHORT_TECH_APP_AD_142_NAME;Mod Heavy Air Pwer;;;;;;;;;;X
+TECH_APP_AD_142_DESC;;;;;;;;;;;X
+TECH_CMP_AD_142_1_NAME;Enemy Land Forces Attrition Via Heavy Air Power;;;;;;;;;;X
+TECH_CMP_AD_142_2_NAME;JFACC Doctrine Joint Force Air Component Command;;;;;;;;;;X
+TECH_CMP_AD_142_3_NAME;Lessons Learned From Operarion EAGLE CLAW 1983 Failures;;;;;;;;;;X
+TECH_CMP_AD_142_4_NAME;Lessons Learned From Operarion ELDORADO CANYON 1986 Failures;;;;;;;;;;X
+TECH_CMP_AD_142_5_NAME;Lessons Learned From Operarion DESERT SHIELD 1993 Failures;;;;;;;;;;X
+TECH_APP_AD_143_NAME;Modern Fighter Role Designation;;;;;;;;;;X
+SHORT_TECH_APP_AD_143_NAME;Modern Fighter Role;;;;;;;;;;X
+TECH_APP_AD_143_DESC;;;;;;;;;;;X
+TECH_CMP_AD_143_1_NAME;All Weather Flight Equipment;;;;;;;;;;X
+TECH_CMP_AD_143_2_NAME;Heavy Air Escort Role;;;;;;;;;;X
+TECH_CMP_AD_143_3_NAME;Fighter-Bomber Roles;;;;;;;;;;X
+TECH_CMP_AD_143_4_NAME;Laser Tracking Air Ordnance Usage;;;;;;;;;;X
+TECH_CMP_AD_143_5_NAME;International Air Training Exercises;;;;;;;;;;X
+TECH_APP_AD_144_NAME;Hydrogen Bomb Proliferation;;;;;;;;;;X
+SHORT_TECH_APP_AD_144_NAME;H. Bomb Proliferation;;;;;;;;;;X
+TECH_APP_AD_144_DESC;;;;;;;;;;;X
+TECH_CMP_AD_144_1_NAME;Mike;;;;;;;;;;X
+TECH_CMP_AD_144_2_NAME;The Edward Teller Theory;;;;;;;;;;X
+TECH_CMP_AD_144_3_NAME;Tsar Bomba 'Ivan';;;;;;;;;;X
+TECH_CMP_AD_144_4_NAME;Bravo;;;;;;;;;;X
+TECH_CMP_AD_144_5_NAME;Operation SAILOR HAT;;;;;;;;;;X
+TECH_APP_AD_145_NAME;Fast Air Knockouts;;;;;;;;;;X
+SHORT_TECH_APP_AD_145_NAME;Fast Air Knockouts;;;;;;;;;;X
+TECH_APP_AD_145_DESC;;;;;;;;;;;X
+TECH_CMP_AD_145_1_NAME;Modern Rapid Response;;;;;;;;;;X
+TECH_CMP_AD_145_2_NAME;24 Hour Random Drill Training;;;;;;;;;;X
+TECH_CMP_AD_145_3_NAME;Modern Early Warning Systems;;;;;;;;;;X
+TECH_CMP_AD_145_4_NAME;Downed Pilot Retrieval Systems;;;;;;;;;;X
+TECH_CMP_AD_145_5_NAME;Air-Air Enemy Suppression;;;;;;;;;;X
+TECH_APP_AD_146_NAME;Fighter Airspace Domination;;;;;;;;;;X
+SHORT_TECH_APP_AD_146_NAME;Light Air Dominate;;;;;;;;;;X
+TECH_APP_AD_146_DESC;;;;;;;;;;;X
+TECH_CMP_AD_146_1_NAME;Super High-Speed Armed Recon Follow-Up;;;;;;;;;;X
+TECH_CMP_AD_146_2_NAME;Treetop Height Surprise Aerial Attack;;;;;;;;;;X
+TECH_CMP_AD_146_3_NAME;Grounded Fighter Plane Destruction;;;;;;;;;;X
+TECH_CMP_AD_146_4_NAME;CAG Fighter Decimation;;;;;;;;;;X
+TECH_CMP_AD_146_5_NAME;SAM Avoidance Techniques;;;;;;;;;;X
+TECH_APP_AD_147_NAME;Modern Fighter Ace Making;;;;;;;;;;X
+SHORT_TECH_APP_AD_147_NAME;Fighter Ace Making;;;;;;;;;;X
+TECH_APP_AD_147_DESC;;;;;;;;;;;X
+TECH_CMP_AD_147_1_NAME;TOP GUN Training Exercises;;;;;;;;;;X
+TECH_CMP_AD_147_2_NAME;AVIADARTS Training Exercises;;;;;;;;;;X
+TECH_CMP_AD_147_3_NAME;RED FLAG Training Exercises;;;;;;;;;;X
+TECH_CMP_AD_147_4_NAME;PITCH BLACK Training Exercises;;;;;;;;;;X
+TECH_CMP_AD_147_5_NAME;COPE NORTH Training Exercises;;;;;;;;;;X
+TECH_APP_AD_148_NAME;Elite Dog Fighter Unit Creation;;;;;;;;;;X
+SHORT_TECH_APP_AD_148_NAME;Elite Dog Fighters;;;;;;;;;;X
+TECH_APP_AD_148_DESC;;;;;;;;;;;X
+TECH_CMP_AD_148_1_NAME;RAAF Flying Roulettes;;;;;;;;;;X
+TECH_CMP_AD_148_2_NAME;Italian Frecce Tri Colori;;;;;;;;;;X
+TECH_CMP_AD_148_3_NAME;Russian Knights;;;;;;;;;;X
+TECH_CMP_AD_148_4_NAME;RCAF Snowbirds;;;;;;;;;;X
+TECH_CMP_AD_148_5_NAME;JASDF Blue Impulse;;;;;;;;;;X
+TECH_APP_AD_149_NAME;Modernised Light Air Force;;;;;;;;;;X
+SHORT_TECH_APP_AD_149_NAME;Modern Light Force;;;;;;;;;;X
+TECH_APP_AD_149_DESC;;;;;;;;;;;X
+TECH_CMP_AD_149_1_NAME;Doctrine Flexibility;;;;;;;;;;X
+TECH_CMP_AD_149_2_NAME;Modern G Suits;;;;;;;;;;X
+TECH_CMP_AD_149_3_NAME;Head-Up-Display HUD Usage;;;;;;;;;;X
+TECH_CMP_AD_149_4_NAME;Piloting Extreme Limits Survivability Testing;;;;;;;;;;X
+TECH_CMP_AD_149_5_NAME;Extreme Limits Fighter Survivability Testing;;;;;;;;;;X
+TECH_APP_AD_150_NAME;Modern FIghter IFF Identification Friend or Foe;;;;;;;;;;X
+SHORT_TECH_APP_AD_150_NAME;Modernised IFF;;;;;;;;;;X
+TECH_APP_AD_150_DESC;;;;;;;;;;;X
+TECH_CMP_AD_150_1_NAME;Super High-Speed IFF Recognition;;;;;;;;;;X
+TECH_CMP_AD_150_2_NAME;Flying HQ AWACS Co-ordination;;;;;;;;;;X
+TECH_CMP_AD_150_3_NAME;Fighter-Interceptor Army-Air Escort Co-ordination;;;;;;;;;;X
+TECH_CMP_AD_150_4_NAME;IFF Blue-On-Blue Land Forces Contact Avoidance;;;;;;;;;;X
+TECH_CMP_AD_150_5_NAME;Air-To-Ground Based AA IFF Recognition Systems;;;;;;;;;;X
+TECH_APP_AD_151_NAME;Lessons Learned From Past Operations;;;;;;;;;;X
+SHORT_TECH_APP_AD_151_NAME;Doctrinal Fault Find;;;;;;;;;;X
+TECH_APP_AD_151_DESC;;;;;;;;;;;X
+TECH_CMP_AD_151_1_NAME;Lessons Learned From DESERT SHIELD;;;;;;;;;;X
+TECH_CMP_AD_151_2_NAME;Lessons Learned From DESERT STORM;;;;;;;;;;X
+TECH_CMP_AD_151_3_NAME;Lessons Learned From SKY MONITOR;;;;;;;;;;X
+TECH_CMP_AD_151_4_NAME;Lessons Learned From DENY FLIGHT;;;;;;;;;;X
+TECH_CMP_AD_151_5_NAME;Lessons Learned From UPHOLD DEMOCRACY;;;;;;;;;;X
+TECH_APP_AD_152_NAME;GPS/GLONASS Systems Usage;;;;;;;;;;X
+SHORT_TECH_APP_AD_152_NAME;GPS/GLONASS Use;;;;;;;;;;X
+TECH_APP_AD_152_DESC;;;;;;;;;;;X
+TECH_CMP_AD_152_1_NAME;Neutral Country Border Violation Prevention;;;;;;;;;;X
+TECH_CMP_AD_152_2_NAME;Civilian Village Avoidance;;;;;;;;;;X
+TECH_CMP_AD_152_3_NAME;Difinitive Fields Of Battle And Interdiction;;;;;;;;;;X
+TECH_CMP_AD_152_4_NAME;Anti-Neutrality Air Space Violation Treaty Responsibility;;;;;;;;;;X
+TECH_CMP_AD_152_5_NAME;Proportionate Force Threat Responses;;;;;;;;;;X
+TECH_APP_AD_153_NAME;Modern Light Air Power;;;;;;;;;;X
+SHORT_TECH_APP_AD_153_NAME;Mod Light Air Power;;;;;;;;;;X
+TECH_APP_AD_153_DESC;;;;;;;;;;;X
+TECH_CMP_AD_153_1_NAME;Enemy Heavy Air Forces Attrition Via Light Air Power;;;;;;;;;;X
+TECH_CMP_AD_153_2_NAME;JFACC Doctrine Joint Force Air Component Command;;;;;;;;;;X
+TECH_CMP_AD_153_3_NAME;Evasive Flight Manouvres;;;;;;;;;;X
+TECH_CMP_AD_153_4_NAME;Overcoming Heavy Air Ordnance Countermeasures;;;;;;;;;;X
+TECH_CMP_AD_153_5_NAME;Stealth Fighter Tactics;;;;;;;;;;X
+TECH_APP_INDUSTRY_76_NAME;Beyond 20th Century Construction;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_76_NAME;Construction 2000;;;;;;;;;;X
+TECH_APP_INDUSTRY_76_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_76_1_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_76_2_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_76_3_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_76_4_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_76_5_NAME;;;;;;;;;;;X
+TECH_APP_LD_40_NAME;;;;;;;;;;;X
+SHORT_TECH_APP_LD_40_NAME;;;;;;;;;;;X
+TECH_APP_LD_40_DESC;;;;;;;;;;;X
+TECH_CMP_LD_40_1_NAME;;;;;;;;;;;X
+TECH_CMP_LD_40_2_NAME;;;;;;;;;;;X
+TECH_CMP_LD_40_3_NAME;;;;;;;;;;;X
+TECH_CMP_LD_40_4_NAME;;;;;;;;;;;X
+TECH_CMP_LD_40_5_NAME;;;;;;;;;;;X
+TECH_APP_LD_41_NAME;;;;;;;;;;;X
+SHORT_TECH_APP_LD_41_NAME;;;;;;;;;;;X
+TECH_APP_LD_41_DESC;;;;;;;;;;;X
+TECH_CMP_LD_41_1_NAME;;;;;;;;;;;X
+TECH_CMP_LD_41_2_NAME;;;;;;;;;;;X
+TECH_CMP_LD_41_3_NAME;;;;;;;;;;;X
+TECH_CMP_LD_41_4_NAME;;;;;;;;;;;X
+TECH_CMP_LD_41_5_NAME;;;;;;;;;;;X
+TECH_APP_LD_42_NAME;;;;;;;;;;;X
+SHORT_TECH_APP_LD_42_NAME;;;;;;;;;;;X
+TECH_APP_LD_42_DESC;;;;;;;;;;;X
+TECH_CMP_LD_42_1_NAME;;;;;;;;;;;X
+TECH_CMP_LD_42_2_NAME;;;;;;;;;;;X
+TECH_CMP_LD_42_3_NAME;;;;;;;;;;;X
+TECH_CMP_LD_42_4_NAME;;;;;;;;;;;X
+TECH_CMP_LD_42_5_NAME;;;;;;;;;;;X
+TECH_APP_LD_43_NAME;;;;;;;;;;;X
+SHORT_TECH_APP_LD_43_NAME;;;;;;;;;;;X
+TECH_APP_LD_43_DESC;;;;;;;;;;;X
+TECH_CMP_LD_43_1_NAME;;;;;;;;;;;X
+TECH_CMP_LD_43_2_NAME;;;;;;;;;;;X
+TECH_CMP_LD_43_3_NAME;;;;;;;;;;;X
+TECH_CMP_LD_43_4_NAME;;;;;;;;;;;X
+TECH_CMP_LD_43_5_NAME;;;;;;;;;;;X
+TECH_APP_INDUSTRY_77_NAME;Mid Cold War Era Radar Systems;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_77_NAME;MCW Radar Systems;;;;;;;;;;X
+TECH_APP_INDUSTRY_77_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_77_1_NAME;Early Warning IFF Systems Reader;;;;;;;;;;X
+TECH_CMP_INDUSTRY_77_2_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_77_3_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_77_4_NAME;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_77_5_NAME;;;;;;;;;;;X
+TECH_APP_ND_13_NAME;Late Modern Underway Replenishment;;;;;;;;;;X
+SHORT_TECH_APP_ND_13_NAME;Late Modern UNREP;;;;;;;;;;X
+TECH_APP_ND_13_DESC;;;;;;;;;;;X
+TECH_CMP_ND_13_1_NAME;Modern Deep Blue Water Meeting;;;;;;;;;;X
+TECH_CMP_ND_13_2_NAME;Modern Long-Range Logistics Systems;;;;;;;;;;X
+TECH_CMP_ND_13_3_NAME;Modern Quick Onload and Offload;;;;;;;;;;X
+TECH_CMP_ND_13_4_NAME;Modern Resupply On High Seas;;;;;;;;;;X
+TECH_CMP_ND_13_5_NAME;Modern Efficient Pallette Stacking and Shelf Stocking;;;;;;;;;;X
+TECH_APP_ND_14_NAME;Ultra Modern Underway Replenishment;;;;;;;;;;X
+SHORT_TECH_APP_ND_14_NAME;Ultra Mod. UNREP;;;;;;;;;;X
+TECH_APP_ND_14_DESC;;;;;;;;;;;X
+TECH_CMP_ND_14_1_NAME;Further Modernised Deep Blue Water Meeting;;;;;;;;;;X
+TECH_CMP_ND_14_2_NAME;Further Modernised Long-Range Logistics Systems;;;;;;;;;;X
+TECH_CMP_ND_14_3_NAME;Further Modernised Quick Onload and Offload;;;;;;;;;;X
+TECH_CMP_ND_14_4_NAME;Resupply on Stormy High Seas;;;;;;;;;;X
+TECH_CMP_ND_14_5_NAME;Further Modernised Efficient Pallette Stacking and Shelf Stocking;;;;;;;;;;X
+TECH_CMP_ND_9_1_NAME;Deep Blue Water Meeting;;;;;;;;;;X
+TECH_CMP_ND_9_2_NAME;Long-Range Logistics Systems;;;;;;;;;;X
+TECH_CMP_ND_9_3_NAME;Quick Onload and Offload;;;;;;;;;;X
+TECH_APP_ND_18_NAME;D-Day Landings Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_18_NAME;D-Day Tactics;;;;;;;;;;X
+TECH_APP_ND_18_DESC;;;;;;;;;;;X
+TECH_CMP_ND_18_1_NAME;Precise Heavy Bombing;;;;;;;;;;X
+TECH_CMP_ND_18_2_NAME;Heavy, Durable Landing Craft;;;;;;;;;;X
+TECH_CMP_ND_18_3_NAME;Naval and Air Supported Army Shore Assault;;;;;;;;;;X
+TECH_CMP_ND_18_4_NAME;Improved Minesweeping;;;;;;;;;;X
+TECH_CMP_ND_18_5_NAME;Very Close Support From CAS and Destroyers;;;;;;;;;;X
+TECH_CMP_ND_9_4_NAME;Resupply On High Seas;;;;;;;;;;X
+TECH_CMP_ND_9_5_NAME;Efficient Pallette Stacking and Shelf Stocking;;;;;;;;;;X
+TECH_APP_ND_19_NAME;Sea Floor Sitting and Raiding Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_19_NAME;Sea Floor Raiding;;;;;;;;;;X
+TECH_APP_ND_19_DESC;;;;;;;;;;;X
+TECH_CMP_ND_19_1_NAME;Parking on Sea Floor Stealth Tactics;;;;;;;;;;X
+TECH_CMP_ND_19_2_NAME;Faith in 0 per cent Hull Breach;;;;;;;;;;X
+TECH_CMP_ND_19_3_NAME;Three Month Long Underwater Operations;;;;;;;;;;X
+TECH_CMP_ND_19_4_NAME;Stealth Nuke Capability Experimentation;;;;;;;;;;X
+TECH_CMP_ND_19_5_NAME;Under Water Firing;;;;;;;;;;X
+TECH_APP_ND_27_NAME;Sea Floor Sit and Shutdown Capability;;;;;;;;;;X
+SHORT_TECH_APP_ND_27_NAME;Seafloor Shutdown;;;;;;;;;;X
+TECH_APP_ND_27_DESC;;;;;;;;;;;X
+TECH_CMP_ND_27_1_NAME;Sea Floor Park and Shutdown Tactics;;;;;;;;;;X
+TECH_CMP_ND_27_2_NAME;Faith in 0 per cent Hull Breach;;;;;;;;;;X
+TECH_CMP_ND_27_3_NAME;Three Month Long Underwater Operations;;;;;;;;;;X
+TECH_CMP_ND_27_4_NAME;Stealth Nuke Capability Experimentation;;;;;;;;;;X
+TECH_CMP_ND_27_5_NAME;Under Water Firing;;;;;;;;;;X
+TECH_APP_ND_28_NAME;Sea Floor Sitting and Shutdown Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_28_NAME;Sea Floor Shutdowns;;;;;;;;;;X
+TECH_APP_ND_28_DESC;;;;;;;;;;;X
+TECH_CMP_ND_28_1_NAME;Sea Floor System Shutdown Stealth Tactics;;;;;;;;;;X
+TECH_CMP_ND_28_2_NAME;Sitting In Pitch Black;;;;;;;;;;X
+TECH_CMP_ND_28_3_NAME;Sitting In Dead Silence Waiting for Attackers to Pass;;;;;;;;;;X
+TECH_CMP_ND_28_4_NAME;Perfected Stealth Nuke Launch Capability;;;;;;;;;;X
+TECH_CMP_ND_28_5_NAME;Deep Sea Attacking Tactics;;;;;;;;;;X
+TECH_APP_ND_29_NAME;Enemy Territorial Waters Penetration;;;;;;;;;;X
+SHORT_TECH_APP_ND_29_NAME;Territorial Penetrate;;;;;;;;;;X
+TECH_APP_ND_29_DESC;;;;;;;;;;;X
+TECH_CMP_ND_29_1_NAME;High Powered Low Frequency Air Detection Equipment;;;;;;;;;;X
+TECH_CMP_ND_29_2_NAME;Stealth Sub Training Tactics;;;;;;;;;;X
+TECH_CMP_ND_29_3_NAME;Enemy Harbour Surveilance;;;;;;;;;;X
+TECH_CMP_ND_29_4_NAME;Perfected Stealth Nuke Launch Capability Upkeep;;;;;;;;;;X
+TECH_CMP_ND_29_5_NAME;Deep Sea to Surface Surveilance;;;;;;;;;;X
+TECH_APP_ND_36_NAME;Sub Versus Sub Training;;;;;;;;;;X
+SHORT_TECH_APP_ND_36_NAME;Sub        VS        Sub;;;;;;;;;;X
+TECH_APP_ND_36_DESC;;;;;;;;;;;X
+TECH_CMP_ND_36_1_NAME;Submarine Detection and Eradication;;;;;;;;;;X
+TECH_CMP_ND_36_2_NAME;Stealth Sub Detection Tactics;;;;;;;;;;X
+TECH_CMP_ND_36_3_NAME;Covert Friendly Harbour Surveilance;;;;;;;;;;X
+TECH_CMP_ND_36_4_NAME;Stealth Nuclear Launch Realisation Scenario;;;;;;;;;;X
+TECH_CMP_ND_36_5_NAME;Protecting Friendly Harbours From Sub Attack;;;;;;;;;;X
+TECH_APP_ND_37_NAME;Early Capital Fleet Eradication;;;;;;;;;;X
+SHORT_TECH_APP_ND_37_NAME;Early Fleet Wipeouts;;;;;;;;;;X
+TECH_APP_ND_37_DESC;;;;;;;;;;;X
+TECH_CMP_ND_37_1_NAME;Low Profile Capital Fleet Attacks;;;;;;;;;;X
+TECH_CMP_ND_37_2_NAME;Submarine Versus Capital Ships Tactics;;;;;;;;;;X
+TECH_CMP_ND_37_3_NAME;DD, CL Destruction;;;;;;;;;;X
+TECH_CMP_ND_37_4_NAME;High Powered Explosives For Capital Attack;;;;;;;;;;X
+TECH_CMP_ND_37_5_NAME;High Speed Hit and Run Tactics;;;;;;;;;;X
+TECH_APP_ND_38_NAME;Early Capital Fleet Eradication;;;;;;;;;;X
+SHORT_TECH_APP_ND_38_NAME;Early Fleet Wipeouts;;;;;;;;;;X
+TECH_APP_ND_38_DESC;;;;;;;;;;;X
+TECH_CMP_ND_38_1_NAME;Low Profile Capital Fleet Attacks;;;;;;;;;;X
+TECH_CMP_ND_38_2_NAME;Submarine Versus Capital Ships Tactics;;;;;;;;;;X
+TECH_CMP_ND_38_3_NAME;Battleship Destruction;;;;;;;;;;X
+TECH_CMP_ND_38_4_NAME;High Powered Explosives For Capital Attack;;;;;;;;;;X
+TECH_CMP_ND_38_5_NAME;High Speed Hit and Run Tactics;;;;;;;;;;X
+TECH_APP_ND_39_NAME;Basic Capital Fleet Eradication;;;;;;;;;;X
+SHORT_TECH_APP_ND_39_NAME;Basic Fleet Wipeouts;;;;;;;;;;X
+TECH_APP_ND_39_DESC;;;;;;;;;;;X
+TECH_CMP_ND_39_1_NAME;Low Profile Capital Fleet Attacks;;;;;;;;;;X
+TECH_CMP_ND_39_2_NAME;Submarine Versus Multiple Capital Ships Tactics;;;;;;;;;;X
+TECH_CMP_ND_39_3_NAME;BB, CL, CA, DD, Destruction;;;;;;;;;;X
+TECH_CMP_ND_39_4_NAME;High Powered, High Speed Repeat Torpedo Fire;;;;;;;;;;X
+TECH_CMP_ND_39_5_NAME;Carrier and Carrier Air Group Evasion;;;;;;;;;;X
+TECH_APP_ND_40_NAME;Modern Capital Fleet Eradication;;;;;;;;;;X
+SHORT_TECH_APP_ND_40_NAME;Modern Fleet Wipeouts;;;;;;;;;;X
+TECH_APP_ND_40_DESC;;;;;;;;;;;X
+TECH_CMP_ND_40_1_NAME;Low Profile Capital Fleet Attacks;;;;;;;;;;X
+TECH_CMP_ND_40_2_NAME;Submarine Versus Multiple Capital Ships Tactics;;;;;;;;;;X
+TECH_CMP_ND_40_3_NAME;BB, CL, CA, DD, Destruction;;;;;;;;;;X
+TECH_CMP_ND_40_4_NAME;High Powered, High Speed Repeat Torpedo Fire;;;;;;;;;;X
+TECH_CMP_ND_40_5_NAME;Carrier and Carrier Air Group Evasion;;;;;;;;;;X
+TECH_APP_ND_41_NAME;Modern Capital Fleet Eradication;;;;;;;;;;X
+SHORT_TECH_APP_ND_41_NAME;Mod Fleet Wipeouts;;;;;;;;;;X
+TECH_APP_ND_41_DESC;;;;;;;;;;;X
+TECH_CMP_ND_41_1_NAME;Low Profile Capital Fleet Attacks;;;;;;;;;;X
+TECH_CMP_ND_41_2_NAME;Submarine Versus Multiple Capital Ships Tactics;;;;;;;;;;X
+TECH_CMP_ND_41_3_NAME;BB, CL, CA, DD, CVE, CVL Destruction;;;;;;;;;;X
+TECH_CMP_ND_41_4_NAME;High Powered, High Speed Repeat Torpedo Fire;;;;;;;;;;X
+TECH_CMP_ND_41_5_NAME;Carrier and Carrier Air Group Evasion;;;;;;;;;;X
+TECH_APP_ND_43_NAME;Early Nuclear Carrier Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_43_NAME;E. Nuke CV Tactics;;;;;;;;;;X
+TECH_APP_ND_43_DESC;;;;;;;;;;;X
+TECH_CMP_ND_43_1_NAME;Doctrine for Nuclear Carrier;;;;;;;;;;X
+TECH_CMP_ND_43_2_NAME;Early Jet Fighter Airspace Mastery;;;;;;;;;;X
+TECH_CMP_ND_43_3_NAME;Early Nuclear Submarine Threat Destruction;;;;;;;;;;X
+TECH_CMP_ND_43_4_NAME;Anti-ship advanced saturation attack;;;;;;;;;;X
+TECH_CMP_ND_43_5_NAME;Early Nuclear Carrier Training;;;;;;;;;;X
+TECH_APP_ND_44_NAME;Basic Nuclear Carrier Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_44_NAME;Bas. Nuke CV Tactic;;;;;;;;;;X
+TECH_APP_ND_44_DESC;;;;;;;;;;;X
+TECH_CMP_ND_44_1_NAME;Revised Doctrine for Nuclear Carrier;;;;;;;;;;X
+TECH_CMP_ND_44_2_NAME;Basic Jet Fighter Airspace Mastery;;;;;;;;;;X
+TECH_CMP_ND_44_3_NAME;Basic Nuclear Sub Threat Destruction;;;;;;;;;;X
+TECH_CMP_ND_44_4_NAME;Anti-ship advanced saturation attack;;;;;;;;;;X
+TECH_CMP_ND_44_5_NAME;Basic Nuclear CV Training;;;;;;;;;;X
+TECH_APP_ND_45_NAME;Late Modern Capital Fleet Eradication;;;;;;;;;;X
+SHORT_TECH_APP_ND_45_NAME;L. Mod Fleet Wipeouts;;;;;;;;;;X
+TECH_APP_ND_45_DESC;;;;;;;;;;;X
+TECH_CMP_ND_45_1_NAME;Low Profile Capital Fleet Attacks;;;;;;;;;;X
+TECH_CMP_ND_45_2_NAME;Submarine Versus Multiple Capital Ships Tactics;;;;;;;;;;X
+TECH_CMP_ND_45_3_NAME;BB, CL, CA, DD, CVE, CVL Destruction;;;;;;;;;;X
+TECH_CMP_ND_45_4_NAME;High Powered, High Speed, Auto-Loading Repeat Torpedo Fire;;;;;;;;;;X
+TECH_CMP_ND_45_5_NAME;Carrier and Carrier Air Group Evasion;;;;;;;;;;X
+TECH_APP_ND_46_NAME;Ultra Modern Capital Fleet Eradication;;;;;;;;;;X
+SHORT_TECH_APP_ND_46_NAME;U-Mod Fleet Wipeouts;;;;;;;;;;X
+TECH_APP_ND_46_DESC;;;;;;;;;;;X
+TECH_CMP_ND_46_1_NAME;Low Profile Capital Fleet Eradication Attacks;;;;;;;;;;X
+TECH_CMP_ND_46_2_NAME;Submarine Against Multiple Capital Targets Tactics;;;;;;;;;;X
+TECH_CMP_ND_46_3_NAME;Total Fleet Eradication;;;;;;;;;;X
+TECH_CMP_ND_46_4_NAME;High Powered, High Speed, Rapid Repeat Torpedo Fire;;;;;;;;;;X
+TECH_CMP_ND_46_5_NAME;CV Targetting and CAG Launch Prevention;;;;;;;;;;X
+TECH_APP_ND_47_NAME;Early Modern Nuclear Carrier Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_47_NAME;E-Mod Nuke CV Tac;;;;;;;;;;X
+TECH_APP_ND_47_DESC;;;;;;;;;;;X
+TECH_CMP_ND_47_1_NAME;Early Modern Doctrine for Nuclear Carrier;;;;;;;;;;X
+TECH_CMP_ND_47_2_NAME;Early Modern Jet Fighter Airspace Mastery;;;;;;;;;;X
+TECH_CMP_ND_47_3_NAME;Early Modern Nuclear Sub Threat Destruction;;;;;;;;;;X
+TECH_CMP_ND_47_4_NAME;Anti-ship advanced saturation attack;;;;;;;;;;X
+TECH_CMP_ND_47_5_NAME;Early Modern Nuclear CV Training;;;;;;;;;;X
+TECH_APP_ND_48_NAME;Basic Modern Nuclear Carrier Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_48_NAME;B-Mod Nuke CV Tac;;;;;;;;;;X
+TECH_APP_ND_48_DESC;;;;;;;;;;;X
+TECH_CMP_ND_48_1_NAME;Modern doctrine for Nuclear Carrier;;;;;;;;;;X
+TECH_CMP_ND_48_2_NAME;Modern Super Sonic Fighter Airspace Mastery;;;;;;;;;;X
+TECH_CMP_ND_48_3_NAME;Modern Nuclear Sub Threat Destruction;;;;;;;;;;X
+TECH_CMP_ND_48_4_NAME;Anti-ship advanced saturation attack;;;;;;;;;;X
+TECH_CMP_ND_48_5_NAME;Modern Nuclear CV Training;;;;;;;;;;X
+TECH_APP_ND_49_NAME;Modern Nuclear Carrier Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_49_NAME;Mod Nuke CV Tac;;;;;;;;;;X
+TECH_APP_ND_49_DESC;;;;;;;;;;;X
+TECH_CMP_ND_49_1_NAME;Revised Modern doctrine for Nuclear Carrier;;;;;;;;;;X
+TECH_CMP_ND_49_2_NAME;Modernised Super Sonic Fighter Airspace Mastery;;;;;;;;;;X
+TECH_CMP_ND_49_3_NAME;Further Modernised Nuclear Sub Threat Destruction;;;;;;;;;;X
+TECH_CMP_ND_49_4_NAME;Anti-ship One-Hit-One-Kill Attack;;;;;;;;;;X
+TECH_CMP_ND_49_5_NAME;Revised Modern Nuclear CV Training;;;;;;;;;;X
+TECH_APP_ND_53_NAME;Late Modern Nuclear Carrier Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_53_NAME;L-Mod Nuke CV Tac;;;;;;;;;;X
+TECH_APP_ND_53_DESC;;;;;;;;;;;X
+TECH_CMP_ND_53_1_NAME;Furthered Revised Doctrine for Nuclear Carrier;;;;;;;;;;X
+TECH_CMP_ND_53_2_NAME;Further Modernised Super Sonic Fighter Airspace Mastery;;;;;;;;;;X
+TECH_CMP_ND_53_3_NAME;Further Modernised Nuclear Sub Threat Destruction;;;;;;;;;;X
+TECH_CMP_ND_53_4_NAME;Anti-ship One-Hit-One-Kill Attack;;;;;;;;;;X
+TECH_CMP_ND_53_5_NAME;Later Revised Modern Nuclear CV Training;;;;;;;;;;X
+TECH_APP_ND_54_NAME;Ultra Modern Nuclear Carrier Tactics;;;;;;;;;;X
+SHORT_TECH_APP_ND_54_NAME;U-Mod Nuke CV Tac;;;;;;;;;;X
+TECH_APP_ND_54_DESC;;;;;;;;;;;X
+TECH_CMP_ND_54_1_NAME;Total Nuclear Carrier Reliance;;;;;;;;;;X
+TECH_CMP_ND_54_2_NAME;Rapid Deploy Super Sonic Fighter Airspace Mastery;;;;;;;;;;X
+TECH_CMP_ND_54_3_NAME;Totally Revised Nuclear Sub Threat Eradication;;;;;;;;;;X
+TECH_CMP_ND_54_4_NAME;Anti-ship One-Hit-One-Kill Attack;;;;;;;;;;X
+TECH_CMP_ND_54_5_NAME;CV Queen Of The Seas Mentality;;;;;;;;;;X
+TECH_APP_INDUSTRY_78_NAME;Improved Air Radar;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_78_NAME;Imp. Air RADAR;;;;;;;;;;X
+TECH_APP_INDUSTRY_78_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_78_1_NAME;Semi-Mobile Towable Antennas;;;;;;;;;;X
+TECH_CMP_INDUSTRY_78_2_NAME;Advanced Transmitter Frequency 18cm/6GHz;;;;;;;;;;X
+TECH_CMP_INDUSTRY_78_3_NAME;High Efficiency Electrical Structure;;;;;;;;;;X
+TECH_CMP_INDUSTRY_78_4_NAME;High-Speed Electronic computing Plotting Device;;;;;;;;;;X
+TECH_CMP_INDUSTRY_78_5_NAME;Integrated Electronic Air Defence Network;;;;;;;;;;X
+TECH_APP_INDUSTRY_79_NAME;3 Dimensional Radar Arrays System;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_79_NAME;3D RADAR Systems;;;;;;;;;;X
+TECH_APP_INDUSTRY_79_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_79_1_NAME;Advanced Mobile Antennas;;;;;;;;;;X
+TECH_CMP_INDUSTRY_79_2_NAME;Extreme Weather Operable RADAR;;;;;;;;;;X
+TECH_CMP_INDUSTRY_79_3_NAME;Collapsable Electrical Circuit Structure;;;;;;;;;;X
+TECH_CMP_INDUSTRY_79_4_NAME;Electronic computing Plotting Device;;;;;;;;;;X
+TECH_CMP_INDUSTRY_79_5_NAME;Super Effecient Integrated Electronic Air Defense Network;;;;;;;;;;X
+TECH_APP_INDUSTRY_87_NAME;Passive RADAR;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_87_NAME;Passive RADAR;;;;;;;;;;X
+TECH_APP_INDUSTRY_87_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_87_1_NAME;Stealth Plane Detection;;;;;;;;;;X
+TECH_CMP_INDUSTRY_87_2_NAME;High-End Extreme Weather Operable RADAR;;;;;;;;;;X
+TECH_CMP_INDUSTRY_87_3_NAME;RADAR Jam Alert Systems;;;;;;;;;;X
+TECH_CMP_INDUSTRY_87_4_NAME;Electronic Backup Devices;;;;;;;;;;X
+TECH_CMP_INDUSTRY_87_5_NAME;UHF and VHF Frequency Scanner;;;;;;;;;;X
+TECH_APP_INDUSTRY_88_NAME;Multi-Range RADAR Systems;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_88_NAME;Multi-Range RADAR;;;;;;;;;;X
+TECH_APP_INDUSTRY_88_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_88_1_NAME;10-1100km Range Finder;;;;;;;;;;X
+TECH_CMP_INDUSTRY_88_2_NAME;Up to 100km Altitude Detection System;;;;;;;;;;X
+TECH_CMP_INDUSTRY_88_3_NAME;360 Degree RADAR Detector Range;;;;;;;;;;X
+TECH_CMP_INDUSTRY_88_4_NAME;1-1.5 Second Tracking Update Speed;;;;;;;;;;X
+TECH_CMP_INDUSTRY_88_5_NAME;Software Capable of Tracking up to 500 Targets;;;;;;;;;;X
+TECH_APP_INDUSTRY_89_NAME;Turn of the Decade Medical Studies;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_89_NAME;1960s Medicine;;;;;;;;;;X
+TECH_APP_INDUSTRY_89_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_89_1_NAME;Turn of the Decade Medical Journal;;;;;;;;;;X
+TECH_CMP_INDUSTRY_89_2_NAME;Artificial Chemical Reproduction;;;;;;;;;;X
+TECH_CMP_INDUSTRY_89_3_NAME;Skin Grafts;;;;;;;;;;X
+TECH_CMP_INDUSTRY_89_4_NAME;Procaine Penicillin;;;;;;;;;;X
+TECH_CMP_INDUSTRY_89_5_NAME;One-Use Syringe;;;;;;;;;;X
+TECH_APP_INDUSTRY_109_NAME;Modern Diet and Medicine Balancing;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_109_NAME;1970s Medicine;;;;;;;;;;X
+TECH_APP_INDUSTRY_109_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_109_1_NAME;Food and Drug Authority Creation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_109_2_NAME;Australian Medical Association Creation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_109_3_NAME;Diet and Long-Term Health Correlation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_109_4_NAME;Banning Long-Presribed Drugs From The Market;;;;;;;;;;X
+TECH_CMP_INDUSTRY_109_5_NAME;Replacing Dangerous Drugs With Safer Prescriptions;;;;;;;;;;X
+TECH_APP_INDUSTRY_110_NAME;Modern Diet and Medicine Balancing;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_110_NAME;1980s Medicine;;;;;;;;;;X
+TECH_APP_INDUSTRY_110_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_110_1_NAME;Categorising Food Allergies;;;;;;;;;;X
+TECH_CMP_INDUSTRY_110_2_NAME;Replacing Harmful Chemicals With Safer Alternatives;;;;;;;;;;X
+TECH_CMP_INDUSTRY_110_3_NAME;'2 Fruit and 5 Veg' Diet Recommendations;;;;;;;;;;X
+TECH_CMP_INDUSTRY_110_4_NAME;'Super Foods' Discoveries and Properties Isolation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_110_5_NAME;Poisonous Animal Anti-Venenes;;;;;;;;;;X
+TECH_APP_INDUSTRY_114_NAME;New Age Medicine;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_114_NAME;New Age Medicine;;;;;;;;;;X
+TECH_APP_INDUSTRY_114_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_114_1_NAME;Meditation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_114_2_NAME;Yoga;;;;;;;;;;X
+TECH_CMP_INDUSTRY_114_3_NAME;Life Force and Chi;;;;;;;;;;X
+TECH_CMP_INDUSTRY_114_4_NAME;Naturopathy;;;;;;;;;;X
+TECH_CMP_INDUSTRY_114_5_NAME;Full-Time Midwives;;;;;;;;;;X
+TECH_APP_INDUSTRY_115_NAME;Advanced Modern Agricultural Production;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_115_NAME;Agriculture 1965;;;;;;;;;;X
+TECH_APP_INDUSTRY_115_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_115_1_NAME;From the Soil to the Shelf Mentality;;;;;;;;;;X
+TECH_CMP_INDUSTRY_115_2_NAME;Early Efficient Warehousing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_115_3_NAME;Air Tight Packaging;;;;;;;;;;X
+TECH_CMP_INDUSTRY_115_4_NAME;Cross Pollination Hybrid Experimentation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_115_5_NAME;Mechanised Agricultural Production Process;;;;;;;;;;X
+TECH_APP_INDUSTRY_130_NAME;Mechanised Modern Agricultural Production;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_130_NAME;Agriculture 1970;;;;;;;;;;X
+TECH_APP_INDUSTRY_130_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_130_1_NAME;Vegetable Cleaning and Sterilisation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_130_2_NAME;Early Modern Efficient Warehousing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_130_3_NAME;Air Tight Resealable Packaging;;;;;;;;;;X
+TECH_CMP_INDUSTRY_130_4_NAME;Hybrid Plant Management;;;;;;;;;;X
+TECH_CMP_INDUSTRY_130_5_NAME;Sealing in Flavour and Freshness;;;;;;;;;;X
+TECH_APP_INDUSTRY_131_NAME;Advanced Mechanised Modern Agricultural Production;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_131_NAME;Agriculture 1975;;;;;;;;;;X
+TECH_APP_INDUSTRY_131_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_131_1_NAME;Vegetable Cleaning and Sterilisation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_131_2_NAME;Basic Modern Efficient Warehousing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_131_3_NAME;Petro Chemical Usage;;;;;;;;;;X
+TECH_CMP_INDUSTRY_131_4_NAME;Creation of Drought Resistant Crops;;;;;;;;;;X
+TECH_CMP_INDUSTRY_131_5_NAME;Diversifying Crops to Protect Against Pests;;;;;;;;;;X
+TECH_APP_INDUSTRY_132_NAME;Diversified Agricultural Production;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_132_NAME;Agriculture 1980;;;;;;;;;;X
+TECH_APP_INDUSTRY_132_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_132_1_NAME;Organically Based Pesticide Usage;;;;;;;;;;X
+TECH_CMP_INDUSTRY_132_2_NAME;Advanced Modern Efficient Warehousing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_132_3_NAME;Petro Chemical Replacements;;;;;;;;;;X
+TECH_CMP_INDUSTRY_132_4_NAME;Efficient Crop Irrigation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_132_5_NAME;Protecting Livestock From Diseases;;;;;;;;;;X
+TECH_APP_INDUSTRY_133_NAME;Advanced Diversified Agricultural Production;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_133_NAME;Agriculture 1985;;;;;;;;;;X
+TECH_APP_INDUSTRY_133_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_133_1_NAME;Strictly Controlled Pesticide Usage;;;;;;;;;;X
+TECH_CMP_INDUSTRY_133_2_NAME;Future Advanced Modern Efficient Warehousing;;;;;;;;;;X
+TECH_CMP_INDUSTRY_133_3_NAME;Petro Chemical Replacements;;;;;;;;;;X
+TECH_CMP_INDUSTRY_133_4_NAME;Efficient Crop Irrigation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_133_5_NAME;Protecting Livestock From Diseases;;;;;;;;;;X
+TECH_APP_INDUSTRY_134_NAME;The New Standards of Farming;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_134_NAME;Agriculture 1990;;;;;;;;;;X
+TECH_APP_INDUSTRY_134_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_134_1_NAME;Paddock and Field Seasonal Rotation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_134_2_NAME;Humane and Painless Beast Slaughter;;;;;;;;;;X
+TECH_CMP_INDUSTRY_134_3_NAME;Efficient Water Usage;;;;;;;;;;X
+TECH_CMP_INDUSTRY_134_4_NAME;Reducing Sediment Washoff;;;;;;;;;;X
+TECH_CMP_INDUSTRY_134_5_NAME;Protecting Crops From Diseases;;;;;;;;;;X
+TECH_APP_INDUSTRY_135_NAME;New Age Farming;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_135_NAME;Agriculture 1995;;;;;;;;;;X
+TECH_APP_INDUSTRY_135_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_135_1_NAME;Organic Farming;;;;;;;;;;X
+TECH_CMP_INDUSTRY_135_2_NAME;Ethical Farming;;;;;;;;;;X
+TECH_CMP_INDUSTRY_135_3_NAME;Sourcing Locally Grown Produce;;;;;;;;;;X
+TECH_CMP_INDUSTRY_135_4_NAME;Growing Sow Stall Free Pork;;;;;;;;;;X
+TECH_CMP_INDUSTRY_135_5_NAME;Free Range Farming;;;;;;;;;;X
+TECH_APP_INDUSTRY_136_NAME;Basic Modern Synthetic Oil Plant;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_136_NAME;Plant 1948;;;;;;;;;;X
+TECH_APP_INDUSTRY_136_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_136_1_NAME;Synthetic Chemical Engineering;;;;;;;;;;X
+TECH_CMP_INDUSTRY_136_2_NAME;Modern Reactors;;;;;;;;;;X
+TECH_CMP_INDUSTRY_136_3_NAME;High Octane Clean Burning Fuel Creation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_136_4_NAME;Synthetic Oil Refining;;;;;;;;;;X
+TECH_CMP_INDUSTRY_136_5_NAME;Emphasis on Self Reliance;;;;;;;;;;X
+TECH_APP_INDUSTRY_137_NAME;Early Modern Synthetic Oil Plant;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_137_NAME;Plant 1952;;;;;;;;;;X
+TECH_APP_INDUSTRY_137_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_137_1_NAME;Furthered Synthetic Chemical Engineering;;;;;;;;;;X
+TECH_CMP_INDUSTRY_137_2_NAME;Modern Reactors;;;;;;;;;;X
+TECH_CMP_INDUSTRY_137_3_NAME;High Octane Clean Burning Fuel Creation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_137_4_NAME;Less Wasteful Oil Drilling Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_137_5_NAME;Emphasis on Self Reliance;;;;;;;;;;X
+TECH_APP_INDUSTRY_138_NAME;Basic Advanced Modern Synthetic Oil Plant;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_138_NAME;Plant 1960;;;;;;;;;;X
+TECH_APP_INDUSTRY_138_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_138_1_NAME;Limitless Oil Supply Fallacy Realisation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_138_2_NAME;Refinery Fire Extinguishment Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_138_3_NAME;Early Biofuel Experimentation;;;;;;;;;;X
+TECH_CMP_INDUSTRY_138_4_NAME;Less Wasteful Oil Drilling Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_138_5_NAME;Emphasis on Self Reliance;;;;;;;;;;X
+TECH_APP_INDUSTRY_139_NAME;Advanced Modern Synthetic Oil Plant;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_139_NAME;Plant 1968;;;;;;;;;;X
+TECH_APP_INDUSTRY_139_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_139_1_NAME;Asbestos Removal in Refinery Construction;;;;;;;;;;X
+TECH_CMP_INDUSTRY_139_2_NAME;Safer Refinery Fire Extinguishment Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_139_3_NAME;Biofuel Refining Perfection;;;;;;;;;;X
+TECH_CMP_INDUSTRY_139_4_NAME;Efficientl Oil Drilling Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_139_5_NAME;The Self Reliance Imperative;;;;;;;;;;X
+TECH_APP_INDUSTRY_140_NAME;Very Advanced Modern Synthetic Oil Plant;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_140_NAME;Plant 1980;;;;;;;;;;X
+TECH_APP_INDUSTRY_140_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_140_1_NAME;New Refinery Designs With Safety in Mind;;;;;;;;;;X
+TECH_CMP_INDUSTRY_140_2_NAME;Safer Refinery Fire Extinguishment Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_140_3_NAME;Bio Diesel Refining Perfection;;;;;;;;;;X
+TECH_CMP_INDUSTRY_140_4_NAME;Efficientl Oil Drilling Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_140_5_NAME;The Self Reliance Imperative;;;;;;;;;;X
+TECH_APP_INDUSTRY_141_NAME;Future Advanced Modern Synthetic Oil Plant;;;;;;;;;;X
+SHORT_TECH_APP_INDUSTRY_141_NAME;Plant 1990;;;;;;;;;;X
+TECH_APP_INDUSTRY_141_DESC;;;;;;;;;;;X
+TECH_CMP_INDUSTRY_141_1_NAME;New Refinery Designs With Safety in Mind;;;;;;;;;;X
+TECH_CMP_INDUSTRY_141_2_NAME;Safer Refinery Fire Extinguishment Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_141_3_NAME;Bio Diesel Refining Perfection;;;;;;;;;;X
+TECH_CMP_INDUSTRY_141_4_NAME;Efficientl Oil Drilling Techniques;;;;;;;;;;X
+TECH_CMP_INDUSTRY_141_5_NAME;The Self Reliance Imperative;;;;;;;;;;X
+TECH_APP_ND_58_NAME;Sea Floor Sub Detection;;;;;;;;;;X
+SHORT_TECH_APP_ND_58_NAME;Sea Floor Scanning;;;;;;;;;;X
+TECH_APP_ND_58_DESC;;;;;;;;;;;X
+TECH_CMP_ND_58_1_NAME;Passive Sonar;;;;;;;;;;X
+TECH_CMP_ND_58_2_NAME;Hydrophones;;;;;;;;;;X
+TECH_CMP_ND_58_3_NAME;Modern ASW Suites;;;;;;;;;;X
+TECH_CMP_ND_58_4_NAME;Smart Homing Torpedoes;;;;;;;;;;X
+TECH_CMP_ND_58_5_NAME;Modernised Crew Training;;;;;;;;;;X
+TECH_APP_ND_59_NAME;Active Sea Floor Scanning;;;;;;;;;;X
+SHORT_TECH_APP_ND_59_NAME;Mod. Sea Floor Scan;;;;;;;;;;X
+TECH_APP_ND_59_DESC;;;;;;;;;;;X
+TECH_CMP_ND_59_1_NAME;Sea Floor Mapping;;;;;;;;;;X
+TECH_CMP_ND_59_2_NAME;Passive Sonar Echo Detection Techniques;;;;;;;;;;X
+TECH_CMP_ND_59_3_NAME;Furthered Modern ASW Suites;;;;;;;;;;X
+TECH_CMP_ND_59_4_NAME;Dead Silent Sub Detection;;;;;;;;;;X
+TECH_CMP_ND_59_5_NAME;Six Months at Sea Operations Realisation;;;;;;;;;;X
+TECH_APP_ND_67_NAME;Aggressive Territorial Water Protection;;;;;;;;;;X
+SHORT_TECH_APP_ND_67_NAME;Territorial Protection;;;;;;;;;;X
+TECH_APP_ND_67_DESC;;;;;;;;;;;X
+TECH_CMP_ND_67_1_NAME;Enemy Nuclear Platform Destruction;;;;;;;;;;X
+TECH_CMP_ND_67_2_NAME;Passive Sonar Echo Detection Techniques;;;;;;;;;;X
+TECH_CMP_ND_67_3_NAME;Surface to Seafloor Surveilance;;;;;;;;;;X
+TECH_CMP_ND_67_4_NAME;Dead Silent Sub Detection;;;;;;;;;;X
+TECH_CMP_ND_67_5_NAME;Homeland Protection Doctrine;;;;;;;;;;X
+TECH_APP_ND_68_NAME;Assistance Role in Sub Versus Sub Incursion;;;;;;;;;;X
+SHORT_TECH_APP_ND_68_NAME;Sub VS Sub Assist;;;;;;;;;;X
+TECH_APP_ND_68_DESC;;;;;;;;;;;X
+TECH_CMP_ND_68_1_NAME;Quick Submarine Eradication Tactics;;;;;;;;;;X
+TECH_CMP_ND_68_2_NAME;Stealth Sub Detection Tactics;;;;;;;;;;X
+TECH_CMP_ND_68_3_NAME;Surface to Seafloor & Seafloor to Surface ASW;;;;;;;;;;X
+TECH_CMP_ND_68_4_NAME;Stealth Nuclear Launch Prevention;;;;;;;;;;X
+TECH_CMP_ND_68_5_NAME;Friendly Harbour Patrol;;;;;;;;;;X
+TECH_APP_ND_69_NAME;Early Sub Fleet Wipeouts;;;;;;;;;;X
+SHORT_TECH_APP_ND_69_NAME;Early Total Sub Kill;;;;;;;;;;X
+TECH_APP_ND_69_DESC;;;;;;;;;;;X
+TECH_CMP_ND_69_1_NAME;Low Profile ASW ;;;;;;;;;;X
+TECH_CMP_ND_69_2_NAME;Capitals Versus SS;;;;;;;;;;X
+TECH_CMP_ND_69_3_NAME;DD, CL Asset Protection;;;;;;;;;;X
+TECH_CMP_ND_69_4_NAME;High Velocity Torpedoes and 'Smart' Depth Charges;;;;;;;;;;X
+TECH_CMP_ND_69_5_NAME;Enemy Movement Prediction and Entrapment;;;;;;;;;;X
+TECH_APP_ND_76_NAME;Basic Sub Fleet Wipeouts;;;;;;;;;;X
+SHORT_TECH_APP_ND_76_NAME;Basic Total Sub Kill;;;;;;;;;;X
+TECH_APP_ND_76_DESC;;;;;;;;;;;X
+TECH_CMP_ND_76_1_NAME;Low Profile ASW ;;;;;;;;;;X
+TECH_CMP_ND_76_2_NAME;Capitals Versus Multiple SS;;;;;;;;;;X
+TECH_CMP_ND_76_3_NAME;BB, CA, DD, CL Asset Protection;;;;;;;;;;X
+TECH_CMP_ND_76_4_NAME;High Powered Early Detection ASW;;;;;;;;;;X
+TECH_CMP_ND_76_5_NAME;Enemy Submarine Doctrine Study;;;;;;;;;;X
+TECH_APP_ND_77_NAME;Modern Sub Fleet Wipeouts;;;;;;;;;;X
+SHORT_TECH_APP_ND_77_NAME;Modern Total SS Kill;;;;;;;;;;X
+TECH_APP_ND_77_DESC;;;;;;;;;;;X
+TECH_CMP_ND_77_1_NAME;Low Profile ASW ;;;;;;;;;;X
+TECH_CMP_ND_77_2_NAME;Capitals Versus Multiple SS;;;;;;;;;;X
+TECH_CMP_ND_77_3_NAME;BB, CA, DD, CL, CVE, CVL Asset Protection;;;;;;;;;;X
+TECH_CMP_ND_77_4_NAME;Enemy Torpedo Defence Systems;;;;;;;;;;X
+TECH_CMP_ND_77_5_NAME;Enemy Submarine Doctrine Study and SS Entrapment;;;;;;;;;;X
+TECH_APP_ND_78_NAME;Late Modern Sub Fleet Wipeouts;;;;;;;;;;X
+SHORT_TECH_APP_ND_78_NAME;L. Mod Total SS Kill;;;;;;;;;;X
+TECH_APP_ND_78_DESC;;;;;;;;;;;X
+TECH_CMP_ND_78_1_NAME;Low Profile ASW ;;;;;;;;;;X
+TECH_CMP_ND_78_2_NAME;Capitals Versus Multiple SS;;;;;;;;;;X
+TECH_CMP_ND_78_3_NAME;BB, CA, DD, CL, CVE, CVL Asset Protection;;;;;;;;;;X
+TECH_CMP_ND_78_4_NAME;Multiple Enemy Torpedo Defence Systems;;;;;;;;;;X
+TECH_CMP_ND_78_5_NAME;Fast CAG Launch on Sub Detection;;;;;;;;;;X
+TECH_APP_ND_79_NAME;Ultra Modern Sub Fleet Wipeouts;;;;;;;;;;X
+SHORT_TECH_APP_ND_79_NAME;U. Mod Total SS Kill;;;;;;;;;;X
+TECH_APP_ND_79_DESC;;;;;;;;;;;X
+TECH_CMP_ND_79_1_NAME;Low Profile ASW SS and Total Eradication;;;;;;;;;;X
+TECH_CMP_ND_79_2_NAME;Capital Versus Multiple SS Training Tactics;;;;;;;;;;X
+TECH_CMP_ND_79_3_NAME;Full Fleet Asset Protection;;;;;;;;;;X
+TECH_CMP_ND_79_4_NAME;High Powered, Multiple Launch SS Desctruction Ordnance;;;;;;;;;;X
+TECH_CMP_ND_79_5_NAME;Pre-Emptive CAG Launch and CV Protection;;;;;;;;;;X
+TECH_APP_LD_44_NAME;Air-Land Battle 1985;;;;;;;;;;X
+SHORT_TECH_APP_LD_44_NAME;Air-Land Battle 85;;;;;;;;;;X
+TECH_APP_LD_44_DESC;TECH_APP_LD_38_DESC;;;;;;;;;;X
+TECH_CMP_LD_44_1_NAME;Air-Land-Sea Combined Attack Flexibility;;;;;;;;;;X
+TECH_CMP_LD_44_2_NAME;Small Unit Elitism;;;;;;;;;;X
+TECH_CMP_LD_44_3_NAME;Specialised Amphibious Attack Training;;;;;;;;;;X
+TECH_CMP_LD_44_4_NAME;Specialised Paradrop Training;;;;;;;;;;X
+TECH_CMP_LD_44_5_NAME;Specialised Rugged Terrain Training;;;;;;;;;;X
+TECH_CMP_LD_44_6_NAME;Further Rigorous And Constant Training Regimes;;;;;;;;;;X
+TECH_CMP_LD_44_7_NAME;Strategic Rethinking And Proxy-war Deployment;;;;;;;;;;X
+TECH_APP_LD_47_NAME;Jihadism;;;;;;;;;;X
+SHORT_TECH_APP_LD_47_NAME;Jihadi Warfare;;;;;;;;;;X
+TECH_APP_LD_47_DESC;TECH_APP_LD_38_DESC;;;;;;;;;;X
+TECH_CMP_LD_47_1_NAME;Air-Land-Sea Combined Attack Flexibility;;;;;;;;;;X
+TECH_CMP_LD_47_2_NAME;Small Unit Elitism;;;;;;;;;;X
+TECH_CMP_LD_47_3_NAME;Fighting Against Western Imperialism;;;;;;;;;;X
+TECH_CMP_LD_47_4_NAME;Fighting Against Eastern Imperialism;;;;;;;;;;X
+TECH_CMP_LD_47_5_NAME;Recruiting Multi-Nationals;;;;;;;;;;X
+TECH_CMP_LD_47_6_NAME;Deep Seated Religious Ideology;;;;;;;;;;X
+TECH_CMP_LD_47_7_NAME;Holy War for the Prophet;;;;;;;;;;X
+TECH_APP_LD_48_NAME;The Democratic Idealism;;;;;;;;;;X
+SHORT_TECH_APP_LD_48_NAME;Democratic Idealism;;;;;;;;;;X
+TECH_APP_LD_48_DESC;TECH_APP_LD_38_DESC;;;;;;;;;;X
+TECH_CMP_LD_48_1_NAME;Suppression of Extremism From the Left and Right;;;;;;;;;;X
+TECH_CMP_LD_48_2_NAME;Bringing Democracy to Unstable Regions;;;;;;;;;;X
+TECH_CMP_LD_48_3_NAME;Indoctrinating Hatred for Communism and Fascism;;;;;;;;;;X
+TECH_CMP_LD_48_4_NAME;Lateral International Co-Operation;;;;;;;;;;X
+TECH_CMP_LD_48_5_NAME;Terror Attack Prevention;;;;;;;;;;X
+TECH_APP_LD_50_NAME;The Socialist Republic Idealism;;;;;;;;;;X
+SHORT_TECH_APP_LD_50_NAME;Motherland Idealism;;;;;;;;;;X
+TECH_APP_LD_50_DESC;TECH_APP_LD_38_DESC;;;;;;;;;;X
+TECH_CMP_LD_50_1_NAME;Spreading an Internationalist Ideal;;;;;;;;;;X
+TECH_CMP_LD_50_2_NAME;Control of Population Dissent;;;;;;;;;;X
+TECH_CMP_LD_50_3_NAME;Fomenting Uprises in Foreign Countries;;;;;;;;;;X
+TECH_CMP_LD_50_4_NAME;Indoctrinating Hatred for Capitalism and Fascism;;;;;;;;;;X
+TECH_CMP_LD_50_5_NAME;All for the Motherland Mentality;;;;;;;;;;X
+TECH_CMP_LD_50_6_NAME;Further Rigorous And Constant Training Regimes;;;;;;;;;;X
+TECH_CMP_LD_50_7_NAME;Strategic Rethinking And Proxy-war Deployment;;;;;;;;;;X
+TECH_APP_LD_51_NAME;Ethnic Nationalism;;;;;;;;;;X
+SHORT_TECH_APP_LD_51_NAME;Fatherland Idealism;;;;;;;;;;X
+TECH_APP_LD_51_DESC;TECH_APP_LD_38_DESC;;;;;;;;;;X
+TECH_CMP_LD_51_1_NAME;Indoctrinating Hatred Against Commies and Democrats;;;;;;;;;;X
+TECH_CMP_LD_51_2_NAME;Blut und Ehre, Blood and Honour Mentality;;;;;;;;;;X
+TECH_CMP_LD_51_3_NAME;Piercing Fortified Frontlines Using Modern Armour;;;;;;;;;;X
+TECH_CMP_LD_51_4_NAME;Fomenting Uprises in Foreign Countries;;;;;;;;;;X
+TECH_CMP_LD_51_5_NAME;All for the Fatherland Mentality;;;;;;;;;;X
+TECH_CMP_LD_51_6_NAME;Further Rigorous And Constant Training Regimes;;;;;;;;;;X
+TECH_CMP_LD_51_7_NAME;Strategic Rethinking And Proxy-war Deployment;;;;;;;;;;X
+TECH_APP_LD_52_NAME;Air-Land Battle 1985;;;;;;;;;;X
+SHORT_TECH_APP_LD_52_NAME;Air-Land Battle 1985;;;;;;;;;;X
+TECH_APP_LD_52_DESC;TECH_APP_LD_38_DESC;;;;;;;;;;X
+TECH_CMP_LD_52_1_NAME;Air-Land-Sea Combined Attack Flexibility;;;;;;;;;;X
+TECH_CMP_LD_52_2_NAME;Small Unit Elitism;;;;;;;;;;X
+TECH_CMP_LD_52_3_NAME;Specialised Amphibious Attack Training;;;;;;;;;;X
+TECH_CMP_LD_52_4_NAME;Specialised Paradrop Training;;;;;;;;;;X
+TECH_CMP_LD_52_5_NAME;Specialised Rugged Terrain Training;;;;;;;;;;X
+TECH_CMP_LD_52_6_NAME;Further Rigorous And Constant Training Regimes;;;;;;;;;;X
+TECH_CMP_LD_52_7_NAME;Strategic Rethinking And Proxy-war Deployment;;;;;;;;;;X
+TECH_APP_LD_53_NAME;Jihad - Holy War Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_LD_53_NAME;Jihad Warfare;;;;;;;;;;X
+TECH_APP_LD_53_DESC;;;;;;;;;;;X
+TECH_CMP_LD_53_1_NAME;Degrading Western Fighting Capabilities and Morale;;;;;;;;;;X
+TECH_CMP_LD_53_2_NAME;Low Intensity Dispersed Guerilla Warfare;;;;;;;;;;X
+TECH_CMP_LD_53_3_NAME;Recruiting Foreign Nationals for War;;;;;;;;;;X
+TECH_CMP_LD_53_4_NAME;Funneling Money and Supplies to our Cause Internationally;;;;;;;;;;X
+TECH_CMP_LD_53_5_NAME;Spiritual and Physical Devotion to the Prophet and Martyrdom;;;;;;;;;;X
+TECH_APP_LD_54_NAME;Democratic Idealist Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_LD_54_NAME;Democratic Ideals;;;;;;;;;;X
+TECH_APP_LD_54_DESC;;;;;;;;;;;X
+TECH_CMP_LD_54_1_NAME;Instilling Rejection of Communist and Fascist Ideology;;;;;;;;;;X
+TECH_CMP_LD_54_2_NAME;Stabilising and Democratising Volatile Regions Across the Globe;;;;;;;;;;X
+TECH_CMP_LD_54_3_NAME;Democratising the World Through International Partnership;;;;;;;;;;X
+TECH_CMP_LD_54_4_NAME;Keeping Commies and Fascists 'In Check';;;;;;;;;;X
+TECH_CMP_LD_54_5_NAME;Terrorism Suppression and Prevention;;;;;;;;;;X
+TECH_APP_LD_55_NAME;Global Communist Movement Agenda;;;;;;;;;;X
+SHORT_TECH_APP_LD_55_NAME;Motherland Ideals;;;;;;;;;;X
+TECH_APP_LD_55_DESC;;;;;;;;;;;X
+TECH_CMP_LD_55_1_NAME;Instilling Hatred Towards Capitalism and Fascism;;;;;;;;;;X
+TECH_CMP_LD_55_2_NAME;Fomenting Uprises in Foreign Countries to Install 'Friendly Regimes';;;;;;;;;;X
+TECH_CMP_LD_55_3_NAME;Spreading Socialism Globally Through Armed Insurgents;;;;;;;;;;X
+TECH_CMP_LD_55_4_NAME;Keeping Capitalists and Fascists 'In Check';;;;;;;;;;X
+TECH_CMP_LD_55_5_NAME;All For The Motherland Mentality;;;;;;;;;;X
+TECH_APP_LD_56_NAME;Ethnic Pan-Nationalism;;;;;;;;;;X
+SHORT_TECH_APP_LD_56_NAME;Fatherland Ideals;;;;;;;;;;X
+TECH_APP_LD_56_DESC;;;;;;;;;;;X
+TECH_CMP_LD_56_1_NAME;Instilling Hatred for Commies and Capitalists;;;;;;;;;;X
+TECH_CMP_LD_56_2_NAME;Fomenting Uprises in Foriegn Countries to Install 'Friendly Regimes';;;;;;;;;;X
+TECH_CMP_LD_56_3_NAME;Spreading Fascism by Gunfire and Boots Over the Border;;;;;;;;;;X
+TECH_CMP_LD_56_4_NAME;Keeping Commies and Capitalists 'In Check';;;;;;;;;;X
+TECH_CMP_LD_56_5_NAME;All For The Fatherland Mentality;;;;;;;;;;X
+TECH_CMP_LD_124_6_NAME;Familiarising Soliders With New Tactics;;;;;;;;;;X
+TECH_APP_LD_57_NAME;Re-Purposed Civil Vehicles;;;;;;;;;;X
+SHORT_TECH_APP_LD_57_NAME;Gun Mounted Utes;;;;;;;;;;X
+TECH_APP_LD_57_DESC;;;;;;;;;;;X
+TECH_CMP_LD_57_1_NAME;Melding Back Into Local Communities;;;;;;;;;;X
+TECH_CMP_LD_57_2_NAME;Mounting Weapons on Civilian Vehicles;;;;;;;;;;X
+TECH_CMP_LD_57_3_NAME;Modifying Vehicle Suspension;;;;;;;;;;X
+TECH_CMP_LD_57_4_NAME;High-Speed Evasion Manouvres;;;;;;;;;;X
+TECH_CMP_LD_57_5_NAME;High Speed Strike and Conquer Tactics;;;;;;;;;;X
+TECH_APP_LD_58_NAME;Army of Liberty Mentality;;;;;;;;;;X
+SHORT_TECH_APP_LD_58_NAME;Liberation Mentality;;;;;;;;;;X
+TECH_APP_LD_58_DESC;;;;;;;;;;;X
+TECH_CMP_LD_58_1_NAME;'Fight For Peace' Doctrine;;;;;;;;;;X
+TECH_CMP_LD_58_2_NAME;Maintaining a Propaganda War Against Commies and Fascists;;;;;;;;;;X
+TECH_CMP_LD_58_3_NAME;Constant Global Military Readiness Defence Plan;;;;;;;;;;X
+TECH_CMP_LD_58_4_NAME;World's Liberator Mentality;;;;;;;;;;X
+TECH_CMP_LD_58_5_NAME;Rapid Global Deployment Strategy;;;;;;;;;;X
+TECH_APP_LD_59_NAME;Socialist Spread Doctrine;;;;;;;;;;X
+SHORT_TECH_APP_LD_59_NAME;Socialist Spread;;;;;;;;;;X
+TECH_APP_LD_59_DESC;;;;;;;;;;;X
+TECH_CMP_LD_59_1_NAME;The Brezhnev Doctrine;;;;;;;;;;X
+TECH_CMP_LD_59_2_NAME;Arming Foreign Dissidents and Insurrectionists;;;;;;;;;;X
+TECH_CMP_LD_59_3_NAME;Shallow Echelonment;;;;;;;;;;X
+TECH_CMP_LD_59_4_NAME;Rapid Invasion and Assault on Neighbouring Enemies;;;;;;;;;;X
+TECH_CMP_LD_59_5_NAME;Hardened 'Defenseable' Rear;;;;;;;;;;X
+TECH_APP_LD_60_NAME;Modern Total War;;;;;;;;;;X
+SHORT_TECH_APP_LD_60_NAME;Modern Total War;;;;;;;;;;X
+TECH_APP_LD_60_DESC;;;;;;;;;;;X
+TECH_CMP_LD_60_1_NAME;Mobilisation of Every Town, Every Man, Woman and Child;;;;;;;;;;X
+TECH_CMP_LD_60_2_NAME;National Rationing Program;;;;;;;;;;X
+TECH_CMP_LD_60_3_NAME;Fully Geared Military Industrial Complex Economy;;;;;;;;;;X
+TECH_CMP_LD_60_4_NAME;Constant War Preparedness Defence and Strike Doctrine;;;;;;;;;;X
+TECH_CMP_LD_60_5_NAME;Modernised Hitler Jugend and Bund Deutscher Mдdel (League of German Girls);;;;;;;;;;X
+TECH_APP_LD_61_NAME;Separated Arms Forces;;;;;;;;;;X
+SHORT_TECH_APP_LD_61_NAME;Separate Arms Force;;;;;;;;;;X
+TECH_APP_LD_61_DESC;;;;;;;;;;;X
+TECH_CMP_LD_61_1_NAME;;;;;;;;;;;X
+TECH_CMP_LD_61_2_NAME;;;;;;;;;;;X
+TECH_CMP_LD_61_3_NAME;;;;;;;;;;;X
+TECH_CMP_LD_61_4_NAME;;;;;;;;;;;X
+TECH_CMP_LD_61_5_NAME;;;;;;;;;;;X
+TECH_APP_LD_62_NAME;Centralised Control;;;;;;;;;;X
+SHORT_TECH_APP_LD_62_NAME;Central Control;;;;;;;;;;X
+TECH_APP_LD_62_DESC;;;;;;;;;;;X
+TECH_CMP_LD_62_1_NAME;;;;;;;;;;;X
+TECH_CMP_LD_62_2_NAME;;;;;;;;;;;X
+TECH_CMP_LD_62_3_NAME;;;;;;;;;;;X
+TECH_CMP_LD_62_4_NAME;;;;;;;;;;;X
+TECH_CMP_LD_62_5_NAME;;;;;;;;;;;X
 #EOF;;;;;;;;;;;X
 #EOF;;;;;;;;;;;X

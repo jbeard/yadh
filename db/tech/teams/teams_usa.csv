@@ -45,13 +45,17 @@ USA;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 240028;Omar Bradley;T127;8;1938;1954;small_unit_tactics;decentralized_execution;training;combined_arms_focus;maneuver_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240024;Dwight Eisenhower;T123;8;1939;1952;small_unit_tactics;decentralized_execution;combined_arms_focus;training;technical_efficiency;management;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240031;Maxwell Taylor;T130;6;1953;1965;small_unit_tactics;centralized_execution;combined_arms_focus;training;airborne_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-240034;US Marine Corps;100367;7;1800;2000;small_unit_tactics;munitions;vehicle_engineering;Marine_Training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240034;US Marine Corps;100367;7;1800;2000;small_unit_tactics;munitions;vehicle_engineering;marine_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240035;Ranger School;100368;7;1950;2000;small_unit_tactics;centralized_execution;vehicle_engineering;airborne_training;mountain_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240048;American Medical Assn;100686;7;1847;2000;chemistry;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240100;US Army;T240100;7;1775;2000;small_unit_tactics;decentralized_execution;training;combined_arms_focus;maneuver_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240101;US Navy;T240101;7;1797;2000;large_taskforce_tactics;carrier_tactics;naval_training;submarine_tactics;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240102;US Air Force;T240102;7;1947;2000;centralized_execution;training;bomber_tactics;piloting;fighter_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2400103;Bell Helicopters;T2400103;9;1935;1999;rt_user_1;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2400104;Sikorsky Helicopters;T2400104;8;1924;1999;rt_user_1;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2400105;Office of Strategic Services;T2400105;8;1942;1946;rt_user_2;training;small_unit_tactics;individual_courage;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2400106;Central Intelligence Agency;T2400106;9;1946;2000;rt_user_2;training;small_unit_tactics;individual_courage;mathematics;electronics;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400103;Bell Helicopters;T2400103;9;1935;1999;rt_user_1;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400104;Sikorsky Helicopters;T2400104;8;1924;1999;rt_user_1;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400105;Office of Strategic Services;T2400105;8;1942;1946;rt_user_2;training;small_unit_tactics;individual_courage;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400106;Central Intelligence Agency;T2400106;9;1946;2000;rt_user_2;training;small_unit_tactics;individual_courage;mathematics;electronics;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400107;Robert Adler;T2400107;10;1938;2007;technical_efficiency;electronics;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400108;Hal Anger;T2400108;10;1952;2005;electronics;nuclear_physics;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400109;Edwin Howard-Armstrong;T2400109;8;1914;1954;electronics;mechanics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2400110;John Bardeen;T2400110;9;1932;1991;mathematics;mechanics;nuclear_physics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

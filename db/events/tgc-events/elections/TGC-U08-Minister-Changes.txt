@@ -712,6 +712,7 @@ event = {
 		command = { type = domestic which = political_left value = -1 }
 		command = { type = domestic which = democratic value = -1 }
 		command = { type = domestic which = freedom value = -1 }
+		command = { type = songs which = Spirit_of_33.txt }
 	}
 }
 
@@ -757,6 +758,7 @@ event = {
 		command = { trigger = { not = { dissent = 30 } } type = dissent value = 10 }
 		command = { trigger = { not = { dissent = 35 } } type = dissent value = 5 }
 		command = { trigger = { not = { dissent = 40 } } type = dissent value = 5 }
+		command = { type = songs which = Spirit_of_33.txt }
 	}
 	action = {
 		ai_chance = 0
