@@ -1,0 +1,311 @@
+event = {
+id = 999108
+random = no
+persistent = yes
+tag = { SLO }
+
+decision = { 
+    OR = {
+
+    AND = {
+        NOT = { local_flag = SLO_NAZ }
+        OR = { ideology = nazi }
+    }
+    AND = {
+        NOT = { local_flag = SLO_FAS }
+        OR = { ideology = fascist }
+    }
+    AND = {
+        NOT = { local_flag = SLO_AUT }
+        OR = { ideology = paternal_autocrat }
+    }
+    AND = {
+        NOT = { local_flag = SLO_SCO }
+        OR = { ideology = social_conservative }
+    }
+    AND = {
+        NOT = { local_flag = SLO_MLI }
+        OR = { ideology = market_liberal }
+    }
+    AND = {
+        NOT = { local_flag = SLO_SLI }
+        OR = { ideology = social_liberal }
+    }
+    AND = {
+        NOT = { local_flag = SLO_SDM }
+        OR = { ideology = social_democrat }
+    }
+    AND = {
+        NOT = { local_flag = SLO_LWR }
+        OR = { ideology = left_wing_radical }
+    }
+    AND = {
+        NOT = { local_flag = SLO_LEN }
+        OR = { ideology = leninist }
+    }
+    AND = {
+        NOT = { local_flag = SLO_STA }
+        OR = { ideology = stalinist }
+    }
+    }
+    }
+
+    decision_trigger = {
+        ai = no
+    }
+
+trigger = {
+ai = yes
+OR = {
+
+    AND = {
+        NOT = { local_flag = SLO_NAZ }
+        OR = { ideology = nazi }
+    }
+    AND = {
+        NOT = { local_flag = SLO_FAS }
+        OR = { ideology = fascist }
+    }
+    AND = {
+        NOT = { local_flag = SLO_AUT }
+        OR = { ideology = paternal_autocrat }
+    }
+    AND = {
+        NOT = { local_flag = SLO_SCO }
+        OR = { ideology = social_conservative }
+    }
+    AND = {
+        NOT = { local_flag = SLO_MLI }
+        OR = { ideology = market_liberal }
+    }
+    AND = {
+        NOT = { local_flag = SLO_SLI }
+        OR = { ideology = social_liberal }
+    }
+    AND = {
+        NOT = { local_flag = SLO_SDM }
+        OR = { ideology = social_democrat }
+    }
+    AND = {
+        NOT = { local_flag = SLO_LWR }
+        OR = { ideology = left_wing_radical }
+    }
+    AND = {
+        NOT = { local_flag = SLO_LEN }
+        OR = { ideology = leninist }
+    }
+    AND = {
+        NOT = { local_flag = SLO_STA }
+        OR = { ideology = stalinist }
+    }
+    }
+}
+
+name = "999000name"
+desc = "999000desc"
+style = 2
+
+date = { day = 26 month = june year = 1914 }
+offset = 1
+deathdate = { day = 30 month = december year = 1963 }
+
+action = {
+    trigger = { ideology = nazi }
+
+    name = "999000a"
+
+    command = { type = flag_ext where = SLO which = "_naz" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_NAZ }
+
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SCO }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = fascist }
+
+    name = "999000b"
+
+    command = { type = flag_ext where = SLO which = "_fas" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_FAS }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SCO }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = paternal_autocrat }
+
+    name = "999000c"
+
+    command = { type = flag_ext where = SLO which = "_aut" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_AUT }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_SCO }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = social_conservative }
+
+    name = "999000d"
+
+    command = { type = flag_ext where = SLO which = "_sco" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_SCO }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = market_liberal }
+
+    name = "999000e"
+
+    command = { type = flag_ext where = SLO which = "_mli" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_MLI }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SOC }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = social_liberal }
+
+    name = "999000f"
+
+    command = { type = flag_ext where = SLO which = "_sli" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_SLI }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SOC }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = social_democrat }
+
+    name = "999000g"
+
+    command = { type = flag_ext where = SLO which = "_sdm" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_SDM }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SOC }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = left_wing_radical }
+
+    name = "999000h"
+
+    command = { type = flag_ext where = SLO which = "_lwr" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_LWR }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SOC }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LEN }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = leninist }
+
+    name = "999000i"
+
+    command = { type = flag_ext where = SLO which = "_len" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_LEN }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SOC }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_STA }
+    }
+
+action = {
+    trigger = { ideology = stalinist }
+
+    name = "999000j"
+
+    command = { type = flag_ext where = SLO which = "_sta" }
+    command = { type = name where = SLO which = ""}
+    command = { type = local_setflag which = SLO_STA }
+
+    command = { type = local_clrflag which = SLO_NAZ }
+    command = { type = local_clrflag which = SLO_FAS }
+    command = { type = local_clrflag which = SLO_AUT }
+    command = { type = local_clrflag which = SLO_SOC }
+    command = { type = local_clrflag which = SLO_MLI }
+    command = { type = local_clrflag which = SLO_SLI }
+    command = { type = local_clrflag which = SLO_SDM }
+    command = { type = local_clrflag which = SLO_LWR }
+    command = { type = local_clrflag which = SLO_LEN }
+    }
+}

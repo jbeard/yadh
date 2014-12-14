@@ -51,6 +51,9 @@ event = "db\events\secret_weapon_events.txt"
 event = "db\events\Mobilization.txt"
 event = "db\events\Mobilization_events.txt"
 
+#Custom events
+event = "db\events\flagchange.txt"
+
 # AI Events
 event = "db\events\1914_AI\AI_U08_1914.txt"
 event = "db\events\1914_AI\AI_U09_1914.txt"
