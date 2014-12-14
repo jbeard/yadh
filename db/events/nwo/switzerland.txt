@@ -1,0 +1,742 @@
+event = {
+	id = 8013101
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80018 } # Eduard von Steiger
+	}
+}
+
+event = {
+	id = 8013102
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80019 } # Karl Kobelt
+	}
+}
+
+event = {
+	id = 8013103
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80013 } # Philipp Etter
+	}
+}
+
+event = {
+	id = 8013104
+	country = SCH
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -9 }
+		command = { type = headofgovernment which = 80108 } # Oskar Leimgruber
+		command = { type = foreignminister which = 80030 } # Max Petitpierre
+		command = { type = ministerofsecurity which = 80057 } # Ernst Lolliger
+		command = { type = ministerofintelligence which = 80075 } # Max Waibel
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = dissent value = -3 }
+		command = { type = headofgovernment which = 80200 } # Hans Oprecht
+		command = { type = foreignminister which = 80030 } # Max Petitpierre
+		command = { type = ministerofsecurity which = 80111 } # Philipp Etter
+		command = { type = ministerofintelligence which = 80075 } # Max Waibel
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8013105
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80016 } # Enrico Celio
+	}
+}
+
+event = {
+	id = 8013106
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80106 } # Ernst Nobs
+	}
+}
+
+event = {
+	id = 8013107
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80107 } # Max Petitpierre
+	}
+}
+
+event = {
+	id = 8013108
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80018 } # Eduard von Steiger
+	}
+}
+
+event = {
+	id = 8013109
+	country = SCH
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -9 }
+		command = { type = headofgovernment which = 80109 } # Charles Oser
+		command = { type = foreignminister which = 80039 } # Walter Stampfli
+		command = { type = armamentminister which = 80055 } # Rudolf Minger
+		command = { type = ministerofsecurity which = 80070 } # Traugott Meyer
+		command = { type = ministerofintelligence which = 80075 } # Max Waibel
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = dissent value = -3 }
+		command = { type = headofgovernment which = 80200 } # Hans Oprecht
+		command = { type = foreignminister which = 80039 } # Walter Stampfli
+		command = { type = armamentminister which = 80055 } # Rudolf Minger
+		command = { type = ministerofsecurity which = 80070 } # Traugott Meyer
+		command = { type = ministerofintelligence which = 80075 } # Max Waibel
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8013110
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80019 } # Karl Kobelt
+	}
+}
+
+event = {
+	id = 8013111
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80013 } # Philipp Etter
+	}
+}
+
+event = {
+	id = 8013112
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80201 } # Rodolphe Rubattel
+	}
+}
+
+event = {
+	id = 8013113
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80107 } # Max Petitpierre
+	}
+}
+
+event = {
+	id = 8013114
+	country = SCH
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -9 }
+		command = { type = headofgovernment which = 80109 } # Charles Oser
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = dissent value = -3 }
+		command = { type = headofgovernment which = 80202 } # Walther Bringolf
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8013115
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80203 } # Markus Feldmann
+	}
+}
+
+event = {
+	id = 8013116
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80204 } # Hans Streuli
+	}
+}
+
+event = {
+	id = 8013117
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80205 } # Thomas Holenstein
+	}
+}
+
+event = {
+	id = 8013118
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80206 } # Paul Chaudet
+	}
+}
+
+event = {
+	id = 8013119
+	country = SCH
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -9 }
+		command = { type = headofgovernment which = 80109 } # Charles Oser
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = dissent value = -3 }
+		command = { type = headofgovernment which = 80207 } # Walther Bringolf
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8013120
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80107 } # Max Petitpierre
+	}
+}
+
+event = {
+	id = 8013121
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80208 } # Friedrich Traugott Wahlen
+	}
+}
+
+event = {
+	id = 8013122
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80206 } # Paul Chaudet
+	}
+}
+
+event = {
+	id = 8013123
+	country = SCH
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 80209 } # Willy Sp?hler
+	}
+}
+
+event = {
+	id = 8013124
+	country = SCH
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -9 }
+		command = { type = headofgovernment which = 80109 } # Charles Oser
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = dissent value = -3 }
+		command = { type = headofgovernment which = 80210 } # Fritz Gr?ter
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+

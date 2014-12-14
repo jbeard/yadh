@@ -1,0 +1,217 @@
+########################################
+#### BALKAN MOD EVENTS
+########################################
+# This file contains events for Bulgaria
+# Event List:
+#BUL	14300000	The 19 May coup d'etat
+#BUL	14300001	The Government of Georgi Kyoseivanov
+#BUL	14300002	The Government of Bogdan Filov
+#BUL	14300003	The Government of Dobri Bozhilov
+#BUL	14300004	The 9 September coup d'etat
+#BUL	14300005	The six year plan
+#BUL	14300006	Bulgarian Workers Union
+
+
+event = {
+	id = 14300000	# 19 May coup d'etat
+	random = no
+	country = BUL
+
+	trigger = {
+		exists = BUL
+		}
+
+	date = { day = 19 month = May year = 1934 }
+
+	name = "The 19 May coup d'etat." # needs text
+	desc = "Was a coup d'etat in the Kingdom of Bulgaria carried out by the Zveno military organization and the Military Union with the aid of the Bulgarian Army. It overthrew the government of the wide Popular Bloc coalition and replaced it with one under Kimon Georgiev. The coup supporters declared their intention to immediately form an alliance with France and to seek the unification of Bulgaria into an Integral Yugoslavia." 
+	style = 2
+	Picture = "BUL01"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = headofstate which = 95001 }
+		command = { type = headofgovernment which = 95028 }
+		}
+	}
+
+
+event = {
+	id = 14300001	# The Government of Georgi Kyoseivanov
+	random = no
+	country = BUL
+
+	trigger = {
+		exists = BUL
+		}
+
+	date = { day = 23 month = November year = 1935 }
+
+	name = "The Government of Georgi Kyoseivanov." # needs text
+	desc = "Kyoseivanov came to power on 23 November 1935 after a period in which the country had had three Prime Ministers in quick succession.The government oversaw the trials of the instigators of the 1934 military coup and also concluded pacts with Yugoslavia and Greece." 
+	style = 2
+	Picture = "BUL02"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 95001 }
+		command = { type = headofgovernment which = 95002 }
+		}
+	}
+
+
+event = {
+	id = 14300002	# The Government of Bogdan Filov
+	random = no
+	country = BUL
+
+	trigger = {
+		exists = BUL
+		}
+
+	date = { day = 16 month = February year = 1940 }
+
+	name = "The Government of Bogdan Filov." # needs text
+	desc = "On 15 February 1940, following the resignation of Georgi Kyoseivanov, Filov was appointed Prime Minister of the Kingdom of Bulgaria. During his service, Bulgaria became the seventh nation to join the Axis Powers." 
+	style = 2
+	Picture = "BUL03"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 95001 }
+		command = { type = headofgovernment which = 95021 }
+		}
+	}
+
+
+event = {
+	id = 14300003	# The Government of Dobri Bozhilov
+	random = no
+	country = BUL
+
+	trigger = {
+		exists = BUL
+		}
+
+	date = { day = 14 month = September year = 1943 }
+
+	name = "The Government of Dobri Bozhilov." # needs text
+	desc = " In 1943, after Tsar Boris III died, Filov became one of Bulgaria’s three regents. Filov, a fervent ally of Nazi Germany and the most powerful of the regents, used his power to appoint Bozhilov prime minister." 
+	style = 2
+	Picture = "BUL04"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 95022 }
+		}
+	}
+
+
+event = {
+	id = 14300004	# The 9 September coup d'etat
+	random = no
+	country = BUL
+
+	trigger = {
+		exists = BUL
+		}
+
+	date = { day = 14 month = September year = 1943 }
+
+	name = "The 9 September coup d'etat." # needs text
+	desc = "And called in pre-1989 Bulgaria the National Uprising of 9 September or the Socialist Revolution of 9 September was a change in the Kingdom of Bulgaria's administration and government carried out on the eve of 9 September 1944. The government of Prime Minister Konstantin Muraviev was overthrown and replaced with a government of the Fatherland Front led by Kimon Georgiev." 
+	style = 2
+	Picture = "BUL05"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 95028 }
+		}
+	}
+
+
+event = {
+	id = 14300005
+	random = no
+	country = BUL
+
+	decision = { money = 100 
+                     metal = 100
+                   
+} 
+
+	decision_trigger = {
+		money = 1500
+                metal = 500
+                supplies = 500
+	}
+
+	trigger = { exists = BUL 
+                    metal = 500
+                    supplies = 500
+                    money = 1500
+    }
+   
+	name = "The six year plan."
+	desc = "The government proposes to King Boris III the construction of new factories to improve the production. This program, even if expensive, would result not only in reducing the unemployment and therefore pleasing the population, but creating new companies under the control of the government." 
+	style = 2
+	picture = "6yearplan"
+        decision_picture =  "decision_6yearplan"
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = building_prod_mod which = ic value = 5 }
+                command = { type = construct which = ic where = 321 value = 1 }
+		command = { type = construct which = ic where = 325 value = 1 }
+                command = { type = construct which = ic where = 326 value = 1 }
+		command = { type = construct which = ic where = 317 value = 1 }
+                command = { type = dissent value = -3 }
+                command = { type = money value = -1500 }
+                command = { type = metalpool value = -500 }
+                command = { type = supplies value = -500 }
+	}
+}
+
+
+event = {
+	id = 14300006	# Bulgarian Workers Union
+	random = no
+	country = BUL
+	style = 2
+
+	trigger = {
+		exists = BUL
+		}
+
+	date = { day = 11 month = September year = 1935 }
+
+	name = "Bulgarian Workers Union." # needs text
+	desc = "The Bulgarian Workers Union was a trade union-structure in Bulgaria, founded in 1935 by the royal regime. Membership in BRS was compulsory for workers at the time. Albeit being a state-controlled entity, BRS was however able to articulate some workers demands in dialogues with the government and state enterprises. At liberation in 1944, BRS had been disbanded."
+	Picture = "strikesruspetro1"
+
+	action_a = {
+		name = "We need to do this."
+		ai_chance = 100
+		command = { type = manpowerpool value = 20 }
+		command = { type = supplies value = -100 }
+		command = { type = money value = -50 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = manpowerpool value = -20 }
+		}
+	}

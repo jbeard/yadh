@@ -1,0 +1,1811 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Italy
+# Event List:
+#ITA	13300600 The Outcome of the Great War (historical)
+#ITA	13300610	Assassination of Giordana
+#ITA	13300611	The March on Rome
+#ITA	13300612	The Aventine Secession
+#ITA	13300613	Second Italo-Abyssinian War
+#ITA	13300614	Salandra resigns
+#ITA	13300615	Boselli resigns
+#ITA	13300616	Francesco Nitti is our new Head of Government
+#ITA	13300617	Giolitti returns in the government
+#ITA	13300618	Giolitti resigns
+#ITA	13300621	Nitti leaves the Foreign Ministry
+#ITA	13300622	"I Fasci di Combattimento"
+#ITA	13300623	The assault on the headquarters of L'Avanti
+#ITA	13300624	The Two Red Years
+#ITA	13300625	Turin on strike!
+#ITA	13300626	General Strike!
+#ITA	13300627	Occupation of factories!
+#ITA	13300628	Giolitti proposes an agreement
+#ITA	13300629	Revolution!
+#ITA	13300630	Bonomi government falls
+#ITA	13300631	Partito Comunista d'Italia
+#ITA	13300632	Palazzo D'Accursio's events 
+#ITA	13300633	CGL agreed to Giolitti's proposal
+#ITA	13300634	The Fascist Squads
+#ITA	13300635	A socialist administration was forced to resign
+#ITA	13300637	The Legal Strike
+#ITA	13300639	Mussolini is arrested
+#ITA	13300640	Mussolini is the new HoG
+#ITA	13300641	The Grand Council of Fascism
+#ITA	13300642	MVSN
+#ITA	13300643	The liberal economic policy
+#ITA	13300644	School's Reform
+#ITA	13300646	The assassination of Matteotti
+#ITA	13300648	The agony of the liberal state is over
+#ITA	13300649	1923 General Elections
+#ITA	13300653	Fascist organizations
+#ITA	13300654	Demographic Growth 
+#ITA	13300655	The Women's Organizations
+#ITA	13300658	School's reform (1930) 
+#ITA	13300659	"The teachers who said NO to the Duce"
+#ITA	13300660	Corporatism
+#ITA	13300661	"The Battle for Grain"
+#ITA	13300662	Quota 90
+#ITA	13300663	Public Works
+#ITA	13300664	IMI&IRI
+#ITA	13300665 	Stresa Conference
+#ITA	13300666	Lateran Treaty
+#FRA	13300667	Stresa Conference
+#ENG	13300668	Stresa Conference
+#ITA	13300669	Treaty of friendship with Hungary
+#ITA	13300670	United front with Austrofascism
+
+event = { 
+	id = 13300600					
+	country = ITA							 
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 30									 
+	
+	trigger = {
+		atwar = no
+		owned = { province = 394 data = -1 } #Belluno
+		owned = { province = 401 data = -1 } #Trento
+		owned = { province = 402 data = -1 } #Bolzano
+		owned = { province = 403 data = -1 } #Capodistria
+		owned = { province = 404 data = -1 } #Trieste
+		or = {
+			event = 2191512 # Reverse Versailes
+			event = 2002534 # Versailes
+		}
+		or = {
+			event = 2024501 # Saint Germain en Laye
+			event = 2192507 # The Imperial Manifesto
+		}
+	}
+	name = "EVT_13300600_NAME"							
+	Desc = "EVT_13300600_DESC"
+	Picture = "allied_offencive_stopped" 
+	
+	action = { 	
+		name = "Damn our allies! They have betrayed us about our (so well earned) spoils of war!"		
+		command = { type = leave_alliance }
+		command = { type = dissent value = -10 }
+		command = { type = local_setflag which = winner }
+		command = { type =	inherit which = LBY }
+		#army
+		command = { type = demobilize which = land when = 0 where = 0 value = 50 }
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_75 }
+		command = { type = local_setflag which = disarm_army_50 }
+		#navy
+		command = { type = demobilize which = naval when = 0 where = 0 value = 70 }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_setflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+		#airforce
+		command = { type = demobilize which = air when = 0 where = 0 value = 5 }
+		command = { type = local_clrflag which = disarm_air_0 }
+		command = { type = local_setflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+		command = { type = ai which = "aar/national_behavior/ita_bahavior.ai" }
+		# additional AI switch - attempt by Smoggy
+		command = { type = ai which = "aar/unit-construction/aar-buildqueue-ITA-interwar.ai" }
+	} 	
+}
+
+event = { 
+	id = 13300610					
+	country = ITA							 
+	
+	date = { day = 0 month = 10 year = 1920 }						
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 30									 
+	
+	trigger = {					
+		atwar = no
+		event = 13300600
+		or = {
+			event = 13300637
+			ideology = fascist
+			ideology = nazi
+		}
+	}
+	name = "EVT_13300610_NAME"							
+	Desc = "EVT_13300610_DESC"
+	Picture = "private_initiative2" 
+	
+	action = { 	
+		name = "Italy will not stand for this!"		
+		ai_chance = 100	
+		command = { type = domestic which = political_left value = -3 }
+		command = { type = event which = 13300611 where = ITA when = 365 }
+		command = { type = dissent value = 1 }
+	} 
+	action = { 	
+		name = "Let's not overreact."		
+		ai_chance = 0	
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = event which = 13300611 where = ITA when = 365 }
+	} 				
+}	
+
+event = { 
+	id = 13300611					
+	country = ITA											 
+	
+	#triggered by ITA 13300610
+	
+	name = "EVT_13300611_NAME"							
+	Desc = "EVT_13300611_DESC"
+	Picture = "german_reinforcment_6" 
+	
+	action = { 	
+		name = "O Roma o morte!"		
+		ai_chance = 100	
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = dissent value = -1 }
+		command = { type = setflag which = march_on_rome }
+	}
+	action = { 	
+		name = "Uhu... Some maniacs did some hiking? Who cares?!"		
+		ai_chance = 0	
+		command = { type =	domestic which = political_left value = 2 }
+		command = { type =	dissent value = 2 }
+		command = { type = trigger which = 13300639 }
+	} 			
+}	
+
+event = { 
+	id = 13300612					
+	country = ITA							 
+	
+	date = { day = 0 month = 0 year = 1924 }						
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 730										 
+	
+	trigger = {
+		flag = march_on_rome					
+	}
+	name = "EVT_13300612_NAME"							
+	Desc = "EVT_13300612_DESC"
+	Picture = "military_parade" 
+	
+	action = { 	
+		name = "Embrace our new ideology! Communists be gone!"		
+		ai_chance = 100
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = domestic which = interventionism value = 6 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = trigger which = 13300640 }
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_50 }
+		command = { type = local_setflag which = disarm_army_75 }
+		command = { type = local_clrflag which = disarm_air_0 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_2 }
+		command = { type = local_setflag which = disarm_air_5 }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_setflag which = disarm_naval_200 }
+		command = { type = sleepevent which = 1330008010 }
+		command = { type = sleepevent which = 1330008009 }
+		command = { type = ai_prepare_war	which = ETH }
+	}
+	action = { 	
+		name = "This means war! Civil War!"		 
+		ai_chance = 0	
+		command = { type = civil_war which = U14 }
+		command = { type = civil_war which = RSI }
+	} 			
+}	
+
+event = { 
+	id = 13300613					
+	country = ITA							 
+	
+	date = { day = 0 month = 0 year = 1935 }						
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 365										 
+	
+	trigger = {
+		event = 13300600 # Roma victor!				 
+	}
+	name = "EVT_13300613_NAME"							
+	Desc = "EVT_13300613_DESC"
+	Picture = "military_parade" 
+	
+	action = { 	
+		name = "The Duce will have Ethiopia... with or without Ethiopians."		
+		ai_chance = 99
+		command = { type = dissent value = -10 }
+		command = { type = ai_prepare_war	which = ETH }
+		command = { type = leave_alliance }
+		command = { type = war which = ETH }
+		command = { type = belligerence value = 20 }
+	}
+	action = { 	
+		name = "Maybe we should try a more indirect approach."		 
+		ai_chance = 1	
+		command = { type = dissent value = 10 }
+		command = { type = make_puppet which = ETH }
+		command = { type = belligerence value = 15 }
+	} 			
+}
+
+
+#############################################
+###### Salandra resigns 
+#############################################
+event = {
+	id = 13300614
+	country = ITA
+	
+	name = "EVT_13300614_NAME"
+	desc = "EVT_13300614_DESC"
+	
+	date = { day = 18 month = june year = 1916 }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 25226 }
+		command = { type = dissent value = -3 }
+	}
+	
+}
+
+#############################################
+###### Boselli resigns 
+#############################################
+event = {
+	id = 13300615
+	country = ITA
+	
+	trigger = {
+		NOT = {	AND = {
+			control = { province = 401 data = -1 }
+			control = { province = 402 data = -1 }
+			control = { province = 404 data = -1 }
+		} }
+		war = { country = ITA	country = U09 }
+	}
+	
+	name = "EVT_13300615_NAME"
+	desc = "EVT_13300615_DESC"
+	
+	date = { day = 30 month = october year = 1917 }
+	offset = 7
+	deathdate = { day = 30 month = october year = 1930 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 25190 }
+		command = { type = dissent value = -3 }
+	}
+	
+}
+
+#############################################
+###### Francesco Nitti is our new Head of Government 
+#############################################
+event = {
+	id = 13300616
+	country = ITA
+	
+	name = "EVT_13300616_NAME"
+	desc = "EVT_13300616_DESC"
+	trigger = {
+		event = 13300600
+	}
+	
+	date = { day = 23 month = june year = 1919 }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 25189 }
+		command = { type = foreignminister which = 25245 }
+		command = { type = ministerofsecurity which = 25231 }
+		command = { type = foreignminister which = 25178 }
+	}
+	
+}
+
+#############################################
+###### Giolitti returns in the government 
+#############################################
+event = {
+	id = 13300617
+	country = ITA
+	trigger = {
+		dissent = 10
+	}
+	
+	name = "EVT_13300617_NAME"
+	desc = "EVT_13300617_DESC"
+	
+	date = { day = 15 month = june year = 1920 }
+	offset = 365				
+	deathdate = { day = 15 month = june year = 1921 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 25185 }
+		command = { type = foreignminister which = 25176 }
+		command = { type = ministerofsecurity which = 25228 }
+		command = { type = dissent value = -5 }
+	}
+	
+}
+
+#############################################
+###### Giolitti resigns 
+#############################################
+event = {
+	id = 13300618
+	country = ITA
+	
+	name = "EVT_13300618_NAME"
+	desc = "EVT_13300618_DESC"
+	
+	date = { day = 4 month = july year = 1921 }
+	offset = 1
+	deathdate = { day = 6 month = july year = 1921 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 25181 }
+		command = { type = foreignminister which = 25179 }
+		command = { type = ministerofsecurity which = 25225 }
+	}
+	
+}
+
+#############################################
+###### Bonomi government falls 
+#############################################
+event = {
+	id = 13300630
+	random = no
+	country = ITA
+	
+	name = "EVT_13300630_NAME"
+	desc = "EVT_13300630_DESC"
+	
+	trigger = {
+		event = 13300611
+	}
+	
+	date = { day = 1 month = jannuary year = 1922 }
+	offset = 60
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 25184 }
+		command = { type = foreignminister which = 25180 }
+		command = { type = ministerofsecurity which = 25227 }
+		command = { type = dissent value = 5 }
+	}
+	
+}
+
+#############################################
+###### Nitti leaves the Foreign Minister 
+#############################################
+event = {
+	id = 13300621
+	random = no
+	country = ITA
+	
+	name = "EVT_13300621_NAME"
+	desc = "EVT_13300621_DESC"
+	
+	date = { day = 1 month = september year = 1919 }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = foreignminister which = 25175 }
+	}
+	
+}
+
+
+#############################################
+###### "I Fasci di Combattimento" 
+#############################################
+event = {
+	id = 13300622
+	
+	country = ITA
+	trigger = {
+		event = 13300600			 
+	}
+	
+	name = "EVT_13300622_NAME"
+	desc = "EVT_13300622_DESC"
+	
+	date = { day = 23 month = march year = 1919 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "Maybe we have to watch them closely...."
+		command = { type = dissent value = 5 }
+	}
+	
+}
+
+#############################################
+###### The assault on the headquarters of L'Avanti 
+#############################################
+event = {
+	id = 13300623
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300622
+		government = democratic
+	}
+	
+	name = "EVT_13300623_NAME"
+	desc = "EVT_13300623_DESC"
+	
+	
+	date = { day = 15 month = april year = 1919 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "Damn!"
+		command = { type = province_revoltrisk which = 407 value = 20 }
+		command = { type = dissent value = 5 }
+	}
+	
+}
+
+#############################################
+###### The Two Red Years 
+#############################################
+event = {
+	id = 13300624
+	country = ITA
+	trigger = {
+		event = 13300622
+	}
+	
+	name = "EVT_13300624_NAME"
+	desc = "EVT_13300624_DESC"
+	
+	
+	date = { day = 1 month = may year = 1919 }
+	offset = 120
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "We must avoid a red revolution!"
+		command = { type = dissent value = 25 }
+		command = { type = province_revoltrisk which = 398 value = 25 }
+		command = { type = province_revoltrisk which = 399 value = 25 }
+		command = { type = province_revoltrisk which = 396 value = 25 }
+		command = { type = province_revoltrisk which = 407 value = 25 }
+		command = { type = province_revoltrisk which = 395 value = 25 }
+		command = { type = province_revoltrisk which = 393 value = 25 }
+		command = { type = province_revoltrisk which = 402 value = 25 }
+		command = { type = province_revoltrisk which = 401 value = 25 }
+		command = { type = province_revoltrisk which = 394 value = 25 }
+		command = { type = province_revoltrisk which = 400 value = 25 }
+		command = { type = province_revoltrisk which = 405 value = 25 }
+		command = { type = province_revoltrisk which = 404 value = 25 }
+		command = { type = province_revoltrisk which = 403 value = 25 }
+		command = { type = province_revoltrisk which = 406 value = 25 }
+		command = { type = province_revoltrisk which = 408 value = 25 }
+		command = { type = province_revoltrisk which = 411 value = 25 }
+		command = { type = province_revoltrisk which = 410 value = 25 }
+		command = { type = province_revoltrisk which = 413 value = 25 }
+		command = { type = province_revoltrisk which = 412 value = 25 }
+		command = { type = province_revoltrisk which = 414 value = 25 }
+		command = { type = province_revoltrisk which = 419 value = 25 }
+		command = { type = province_revoltrisk which = 416 value = 21 }
+		command = { type = province_revoltrisk which = 417 value = 21 }
+		command = { type = province_revoltrisk which = 415 value = 21 }
+		command = { type = province_revoltrisk which = 418 value = 21 }
+		command = { type = province_revoltrisk which = 421 value = 21 }
+		command = { type = province_revoltrisk which = 423 value = 21 }
+		command = { type = province_revoltrisk which = 420 value = 21 }
+		command = { type = province_revoltrisk which = 427 value = 21 }
+		command = { type = province_revoltrisk which = 424 value = 21 }
+		command = { type = province_revoltrisk which = 426 value = 21 }
+		command = { type = province_revoltrisk which = 422 value = 21 }
+		command = { type = province_revoltrisk which = 428 value = 21 }
+		command = { type = province_revoltrisk which = 425 value = 21 }
+		command = { type = province_revoltrisk which = 430 value = 21 }
+		command = { type = province_revoltrisk which = 431 value = 21 }
+		command = { type = province_revoltrisk which = 432 value = 21 }
+		command = { type = province_revoltrisk which = 433 value = 21 }
+		command = { type = province_revoltrisk which = 435 value = 21 }
+		command = { type = province_revoltrisk which = 434 value = 21 }
+	}
+	
+}
+
+#############################################
+###### Turin on strike! 
+#############################################
+event = {
+	id = 13300625
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300624
+	}
+	
+	name = "EVT_13300625_NAME"
+	desc = "EVT_13300625_DESC"
+	offset = 30
+	
+	date = { day = 13 month = april year = 1920 }
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "Damn socialists!"
+		command = { type = dissent value = 10 }
+		command = { type = revolt which = 398 }
+		command = { type = revolt which = 398 }
+	}
+	
+}
+
+#############################################
+###### General Strike! 
+#############################################
+event = {
+	id = 13300626
+	country = ITA
+	trigger = {
+		event = 13300624
+		not = { or = { event = 13300627 event = 13300640 } }
+		not = { ideology = fascist }
+		not = { ideology = nazi }
+	}
+	
+	name = "EVT_13300626_NAME"
+	desc = "EVT_13300626_DESC"
+	persistent = yes
+	
+	date = { day = 1 month = 5 year = 1920 }
+	offset = 90
+	deathdate = { day = 29 month = 8 year = 1920 }
+	
+	action = {
+		name = "It seems that we cannot defeat them...."
+		command = { type = dissent value = 5 }
+		command = { type = money value = -300 }
+		command = { type = province_revoltrisk which = 407 value = 50 }
+		command = { type = province_revoltrisk which = 419 value = 55 }
+		command = { type = province_revoltrisk which = 430 value = 50 }
+	}
+}
+
+#############################################
+###### Occupation of factories! 
+#############################################
+event = {
+	id = 13300627
+	country = ITA
+	
+	trigger = {							 
+		dissent = 10
+	}
+	
+	name = "EVT_13300627_NAME"
+	desc = "EVT_13300627_DESC"
+	
+	date = { day = 1 month = 9 year = 1920 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "We still can't change anything ..."
+		command = { type = trigger which = 13300628 }
+		command = { type = province_revoltrisk which = 398 value = 50 }
+		command = { type = province_revoltrisk which = 407 value = 55 }
+		command = { type = province_revoltrisk which = 396 value = 50 }
+		command = { type = province_revoltrisk which = 408 value = 50 }
+		command = { type = province_revoltrisk which = 411 value = 55 }
+		command = { type = province_revoltrisk which = 410 value = 50 }
+		command = { type = province_revoltrisk which = 419 value = 55 }
+		command = { type = province_revoltrisk which = 421 value = 50 }
+	}
+}
+
+
+#############################################
+###### Giolitti proposes an agreement 
+#############################################
+event = {
+	id = 13300628
+	random = no
+	country = ITA
+	
+	name = "EVT_13300628_NAME"
+	desc = "EVT_13300628_DESC"
+	
+	action = {
+		name = "We accept his proposal."
+		ai_chance = 99
+		command = { type = trigger which = 13300633 }
+		command = { type = sleepevent which = 13300629 }
+		command = { type = dissent value = -50 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = freedom value = 2 }			 
+		command = { type = province_revoltrisk which = 398 value = -50 }
+		command = { type = province_revoltrisk which = 399 value = -50 }
+		command = { type = province_revoltrisk which = 396 value = -50 }
+		command = { type = province_revoltrisk which = 407 value = -50 }
+		command = { type = province_revoltrisk which = 395 value = -50 }
+		command = { type = province_revoltrisk which = 393 value = -50 }
+		command = { type = province_revoltrisk which = 402 value = -50 }
+		command = { type = province_revoltrisk which = 401 value = -50 }
+		command = { type = province_revoltrisk which = 394 value = -50 }
+		command = { type = province_revoltrisk which = 400 value = -50 }
+		command = { type = province_revoltrisk which = 405 value = -50 }
+		command = { type = province_revoltrisk which = 404 value = -50 }
+		command = { type = province_revoltrisk which = 403 value = -50 }
+		command = { type = province_revoltrisk which = 406 value = -50 }
+		command = { type = province_revoltrisk which = 408 value = -50 }
+		command = { type = province_revoltrisk which = 411 value = -50 }
+		command = { type = province_revoltrisk which = 410 value = -50 }
+		command = { type = province_revoltrisk which = 413 value = -50 }
+		command = { type = province_revoltrisk which = 412 value = -50 }
+		command = { type = province_revoltrisk which = 414 value = -50 }
+		command = { type = province_revoltrisk which = 419 value = -50 }
+		command = { type = province_revoltrisk which = 416 value = -50 }
+		command = { type = province_revoltrisk which = 417 value = -50 }
+		command = { type = province_revoltrisk which = 415 value = -50 }
+		command = { type = province_revoltrisk which = 418 value = -50 }
+		command = { type = province_revoltrisk which = 421 value = -50 }
+		command = { type = province_revoltrisk which = 423 value = -50 }
+		command = { type = province_revoltrisk which = 420 value = -50 }
+		command = { type = province_revoltrisk which = 427 value = -50 }
+		command = { type = province_revoltrisk which = 424 value = -50 }
+		command = { type = province_revoltrisk which = 426 value = -50 }
+		command = { type = province_revoltrisk which = 422 value = -50 }
+		command = { type = province_revoltrisk which = 428 value = -50 }
+		command = { type = province_revoltrisk which = 425 value = -50 }
+		command = { type = province_revoltrisk which = 430 value = -50 }
+		command = { type = province_revoltrisk which = 431 value = -50 }
+		command = { type = province_revoltrisk which = 432 value = -50 }
+		command = { type = province_revoltrisk which = 433 value = -50 }
+		command = { type = province_revoltrisk which = 435 value = -50 }
+	command = { type = province_revoltrisk which = 434 value = -50 }					 }
+	action = {
+		name = "No deals with the enemies of the workers!"
+		ai_chance = 1
+		command = { type = trigger which = 13300629 }
+		command = { type = dissent value = 30 }
+		command = { type = sleepevent which = 13300633 }
+		command = { type = sleepevent which = 13300631 }
+		command = { type = sleepevent which = 13300632 }
+		command = { type = sleepevent which = 13300634 }
+		command = { type = sleepevent which = 13300635 }
+		command = { type = sleepevent which = 13300636 }
+		command = { type = sleepevent which = 13300637 }
+		command = { type = province_revoltrisk which = 398 value = 15 }
+		command = { type = province_revoltrisk which = 399 value = 15 }
+		command = { type = province_revoltrisk which = 396 value = 15 }
+		command = { type = province_revoltrisk which = 407 value = 15 }
+		command = { type = province_revoltrisk which = 395 value = 15 }
+		command = { type = province_revoltrisk which = 393 value = 15 }
+		command = { type = province_revoltrisk which = 402 value = 15 }
+		command = { type = province_revoltrisk which = 401 value = 15 }
+		command = { type = province_revoltrisk which = 394 value = 15 }
+		command = { type = province_revoltrisk which = 400 value = 15 }
+		command = { type = province_revoltrisk which = 405 value = 15 }
+		command = { type = province_revoltrisk which = 404 value = 15 }
+		command = { type = province_revoltrisk which = 403 value = 15 }
+		command = { type = province_revoltrisk which = 406 value = 15 }
+		command = { type = province_revoltrisk which = 408 value = 15 }
+		command = { type = province_revoltrisk which = 411 value = 15 }
+		command = { type = province_revoltrisk which = 410 value = 15 }
+		command = { type = province_revoltrisk which = 413 value = 15 }
+		command = { type = province_revoltrisk which = 412 value = 15 }
+		command = { type = province_revoltrisk which = 414 value = 15 }
+		command = { type = province_revoltrisk which = 419 value = 15 }
+		command = { type = province_revoltrisk which = 416 value = 11 }
+		command = { type = province_revoltrisk which = 417 value = 11 }
+		command = { type = province_revoltrisk which = 415 value = 11 }
+		command = { type = province_revoltrisk which = 418 value = 11 }
+		command = { type = province_revoltrisk which = 421 value = 11 }
+		command = { type = province_revoltrisk which = 423 value = 11 }
+		command = { type = province_revoltrisk which = 420 value = 11 }
+		command = { type = province_revoltrisk which = 427 value = 11 }
+		command = { type = province_revoltrisk which = 424 value = 11 }
+		command = { type = province_revoltrisk which = 426 value = 11 }
+		command = { type = province_revoltrisk which = 422 value = 11 }
+		command = { type = province_revoltrisk which = 428 value = 11 }
+		command = { type = province_revoltrisk which = 425 value = 11 }
+		command = { type = province_revoltrisk which = 430 value = 11 }
+		command = { type = province_revoltrisk which = 431 value = 11 }
+		command = { type = province_revoltrisk which = 432 value = 11 }
+		command = { type = province_revoltrisk which = 433 value = 11 }
+		command = { type = province_revoltrisk which = 435 value = 11 }
+		command = { type = province_revoltrisk which = 434 value = 11 }
+	}
+	
+}
+
+
+#############################################
+###### Revolution! 
+#############################################
+event = {
+	id = 13300629
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300628
+		dissent = 30
+	}
+	
+	name = "EVT_13300629_NAME"
+	desc = "EVT_13300629_DESC"
+	
+	date = { day = 1 month = 10 year = 1920 }
+	offset = 30
+	deathdate = { day = 1 month = 6 year = 1925 }
+	
+	action = {
+		name = "The civil war has began!"
+		command = { type = civil_war which = U14 }
+	}
+	
+}
+
+#############################################
+###### CGL agreed to Giolitti's proposal 
+#############################################
+event = {
+	id = 13300633
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300628
+	}
+	
+	name = "EVT_13300633_NAME"
+	desc = "EVT_13300633_DESC"
+	offset = 30
+	
+	
+	action = {
+		name = "There will be dark times for Italy..."
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 13300629 }
+		command = { type = sleepevent which = 13300627 }
+		command = { type = belligerence value = -2 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 25185 }
+		command = { type = foreignminister which = 25176 }
+		command = { type = ministerofsecurity which = 25228 }
+	}
+}
+
+#############################################
+###### Partito Comunista d'Italia 
+#############################################
+event = {
+	id = 13300631
+	random = no
+	country = ITA
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+	
+	name = "EVT_13300631_NAME"
+	desc = "EVT_13300631_DESC"
+	
+	offset = 30
+	date = { day = 21 month = january year = 1921 }
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "They are to few to worry about."
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = political_left value = 1 }
+		
+	}
+}
+
+
+#############################################
+###### Palazzo D'Accursio's events 
+#############################################
+event = {
+	id = 13300632
+	random = no
+	country = ITA
+	trigger = {
+		atwar = no
+	}
+	
+	name = "EVT_13300632_NAME"
+	desc = "EVT_13300632_DESC"
+	
+	date = { day = 21 month = 11 year = 1920 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "They might be useful against the Red Menace!"
+		command = { type = revolt which = 411 }
+		command = { type = dissent value = 3 }
+	}
+	
+}
+#############################################
+###### The Fascist Squads 
+#############################################
+event = {
+	id = 13300634
+	random = no
+	country = ITA
+	
+	trigger = {
+		event = 13300624
+		event = 13300632
+	}
+	
+	name = "EVT_13300634_NAME"
+	desc = "EVT_13300634_DESC"
+	
+	date = { day = 21 month = 11 year = 1920 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "With them, our political system may be a bit safer."
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -2 }
+	}
+}
+
+#############################################
+###### A socialist administration was forced to resign 
+#############################################
+event = {
+	id = 13300635
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300634
+	}
+	
+	name = "EVT_13300635_NAME"
+	desc = "EVT_13300635_DESC"
+	
+	date = { day = 21 month = 11 year = 1920 }
+	offset = 50
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "We should give them more immunity!"
+		command = { type = province_revoltrisk which = 408 value = -15 }
+		command = { type = province_revoltrisk which = 411 value = -15 }
+		command = { type = province_revoltrisk which = 410 value = -15 }
+		command = { type = province_revoltrisk which = 413 value = -15 }
+		command = { type = province_revoltrisk which = 412 value = -15 }
+		command = { type = province_revoltrisk which = 414 value = -15 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -1 }
+	}
+}
+
+#############################################
+###### The Legal Strike 
+#############################################
+event = {
+	id = 13300637
+	random = no
+	country = ITA
+	
+	trigger = {
+		event = 13300635
+	}
+	
+	name = "EVT_13300637_NAME"
+	desc = "EVT_13300637_DESC"
+	
+	date = { day = 1 month = 8 year = 1920 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "We should dissolve the workers movement."
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = revolt which = 407 }
+		command = { type = revolt which = 396 }
+		command = { type = revolt which = 412 }
+		command = { type = revolt which = 413 }
+		command = { type = revolt which = 408 }
+	}
+	
+}
+
+#############################################
+###### Mussolini is arrested 
+#############################################
+event = {
+	id = 13300639
+	random = no 
+	country = ITA 
+	
+	name = "EVT_13300639_NAME"
+	desc = "EVT_13300639_DESC"
+	
+	
+	action = {
+		name = "At last, democracy is save!"
+		command = { type = sleepminister which = 25188 }
+		command = { type = sleepminister which = 25173 }
+		command = { type = sleepminister which = 25230 }
+		command = { type = domestic which = democratic value = 5 }
+		command = { type = sleepevent which = 13300641 }
+		command = { type = sleepevent which = 13300642 }
+		command = { type = sleepevent which = 13300643 }
+		command = { type = sleepevent which = 13300644 }
+		command = { type = sleepevent which = 13300645 }
+		command = { type = sleepevent which = 13300646 }
+		command = { type = sleepevent which = 13300647 }
+		command = { type = sleepevent which = 13300648 }
+	}
+	
+}
+
+#############################################
+###### Mussolini is the new HoG 
+#############################################
+event = {
+	id = 13300640
+	random = no
+	country = ITA
+	
+	name = "EVT_13300640_NAME"
+	desc = "EVT_13300640_DESC"
+	
+	action = {
+		name = "Boia chi molla!"
+		command = { type = wakeminister which = 25002 } 
+		command = { type = wakeminister which = 25188 } 
+		command = { type = wakeminister which = 25173 }
+		command = { type = wakeminister which = 25230 }
+		command = { type = headofgovernment which = 25188 }
+		command = { type = foreignminister which = 25173 }
+		command = { type = armamentminister which = 25230 }
+		command = { type = domestic which = political_left value = -2 }
+	}
+	
+}
+event = {
+	id = 133006400
+	random = no
+	country = ITA
+	
+	date = { day = 1 month = 1 year = 1933 }
+	offset = 30
+	deathdate = { day = 1 month = 8 year = 1933 }
+	
+	trigger = { event = 13300640 }
+	
+	name = "EVT_13300640_NAME"
+	desc = "EVT_13300640_DESC"
+	
+	action = {
+		name = "Boia chi molla!"
+		command = { type = wakeminister which = 25002 } 
+		command = { type = headofgovernment which = 25002 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 1 }
+	}
+	
+}
+
+#############################################
+###### The Grand Council of Fascism 
+#############################################
+event = {
+	id = 13300641
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300640
+	}
+	
+	name = "EVT_13300641_NAME"
+	desc = "EVT_13300641_DESC"
+	
+	
+	date = { day = 28 month = october year = 1922 }
+	offset = 50
+	deathdate = { day = 29 month = december year = 1924 } 
+	
+	action = {
+		name = "Onwards, for our Duce!"
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+	
+}
+
+#############################################
+###### MVSN 
+#############################################
+event = {
+	id = 13300642
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300640
+	}
+	
+	name = "EVT_13300642_NAME"
+	desc = "EVT_13300642_DESC"
+	
+	date = { day = 28 month = october year = 1922 }
+	offset = 50
+	deathdate = { day = 29 month = december year = 1924 }	
+	
+	action = {
+		name = "Boia chi molla!"
+		command = { type = domestic which = freedom value = -2 }
+	}
+	
+}
+
+#############################################
+###### The liberal economic policy 
+#############################################
+event = {
+	id = 13300643
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300640
+	}
+	
+	name = "EVT_13300643_NAME"
+	desc = "EVT_13300643_DESC"
+	
+	date = { day = 28 month = october year = 1922 }
+	offset = 50
+	deathdate = { day = 29 month = december year = 1924 }	
+	
+	action = {
+		name = "The Duce is always right!"
+		command = { type = armamentminister which = 25215 }
+		command = { type = domestic which = free_market value = 2 }
+	}
+	
+}
+
+#############################################
+###### School's Reform 
+#############################################
+event = {
+	id = 13300644
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300640
+	}
+	
+	name = "EVT_13300644_NAME"
+	desc = "EVT_13300644_DESC"
+	
+	date = { day = 28 month = october year = 1922 }
+	offset = 50
+	deathdate = { day = 29 month = december year = 1924 }	
+	
+	action = {
+		name = "We must shape a new generation of citizens."
+		command = { type = domestic which = freedom value = -1 }
+	}
+	
+}
+
+#############################################
+###### The assassination of Matteotti 
+#############################################
+event = {
+	id = 13300646
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300640
+	}
+	
+	name = "EVT_13300646_NAME"
+	desc = "EVT_13300646_DESC"
+	
+	
+	date = { day = 10 month = june year = 1924 }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "Wait until everything calms down."
+		ai_chance = 99
+		command = { type = dissent value = 30 }
+		command = { type = trigger which = 13300647 }
+		
+	}
+	action = {
+		name = "We must put an end to this!"
+		ai_chance = 1
+		command = { type = regime_falls }
+		command = { type = civil_war which = RSI }
+		command = { type = headofgovernment which = 25189 }
+		command = { type = foreignminister which = 25175 }
+		command = { type = armamentminister which = 25223 }
+		command = { type = ministerofsecurity which = 25225 }
+		command = { type = ministerofintelligence which = 25197 }
+		command = { type = chiefofstaff which = 25161 }
+		command = { type = chiefofarmy which = 25147 }
+		command = { type = chiefofnavy which = 25149 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = set_domestic which = interventionism value = 2 }
+		command = { type = set_domestic which = free_market value = 6 }
+	}
+}
+
+#############################################
+###### The agony of the liberal state is over 
+#############################################
+event = {
+	id = 13300648
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300612
+	}
+	
+	name = "EVT_13300648_NAME"
+	desc = "EVT_13300648_DESC"
+	
+	date = { day = 3 month = january year = 1925 }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "Vittoria o Morte!"
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = dissent value = -20 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+	
+}
+
+#############################################
+###### 1923 General Elections 
+#############################################
+event = {
+	id = 13300649
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300639
+	}
+	
+	name = "EVT_13300649_NAME"
+	desc = "EVT_13300649_DESC"
+	
+	
+	date = { day = 1 month = january year = 1923 }
+	offset = 20
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = {
+		name = "The National-Imperialists win"
+		ai_chance = 99
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = interventionism value = 8 }
+		command = { type = set_domestic which = free_market value = 4 }
+		command = { type = headofgovernment which = 25025 }
+		command = { type = foreignminister which = 25033 }
+		command = { type = armamentminister which = 25049 }
+		command = { type = ministerofsecurity which = 25069 }
+		command = { type = ministerofintelligence which = 25088 }
+		command = { type = chiefofstaff which = 25099 }
+		command = { type = chiefofarmy which = 25111 }
+		command = { type = chiefofair which = 25126 }
+		command = { type = chiefofnavy which = 25119 }
+		command = { type = trigger which = 13300649 }
+	}
+	action = {
+		name = "The Partito Popolare Italiano wins"
+		ai_chance = 1
+		command = { type = headofgovernment which = 25189 }
+		command = { type = foreignminister which = 25175 }
+		command = { type = armamentminister which = 25223 }
+		command = { type = ministerofsecurity which = 25225 }
+		command = { type = ministerofintelligence which = 25197 }
+		command = { type = chiefofstaff which = 25161 }
+		command = { type = chiefofarmy which = 25147 }
+		command = { type = chiefofnavy which = 25149 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = set_domestic which = interventionism value = 2 }
+		command = { type = set_domestic which = free_market value = 6 }
+	}
+	action = {
+		name = "The Partito Comunista Italiano wins"
+		command = { type = country which = U14 }
+		ai_chance = 0
+	}
+	
+}
+
+
+#############################################
+###### Fascist organizations 
+#############################################
+event = {
+	id = 13300653
+	random = no
+	country = ITA
+	trigger = {
+		or = { ideology = fascist ideology = nazi }
+	}
+	
+	name = "EVT_13300653_NAME"
+	desc = "EVT_13300653_DESC"
+	
+	
+	date = { day = 1 month = june year = 1925 }
+	offset = 30
+	deathdate = { day = 1 month = june year = 1927 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = dissent value = -1 }
+	}
+	
+}
+
+#############################################
+###### Demographic Growth 
+#############################################
+event = {
+	id = 13300654
+	random = no
+	country = ITA
+	trigger = {
+		or = { ideology = fascist ideology = nazi }
+	}
+	
+	name = "EVT_13300654_NAME"
+	desc = "EVT_13300654_DESC"
+	
+	
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 1 month = june year = 1927 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = relative_manpower value = 100 }
+	}
+	
+}
+
+#############################################
+###### The Women's Organizations 
+#############################################
+event = {
+	id = 13300655
+	random = no
+	country = ITA
+	trigger = {
+		or = { ideology = fascist ideology = nazi }
+	}
+	
+	name = "EVT_13300655_NAME"
+	desc = "EVT_13300655_DESC"
+	
+	
+	date = { day = 1 month = june year = 1925 }
+	offset = 30
+	deathdate = { day = 1 month = june year = 1927 }
+	
+	action = {
+		name = "Some women might be workforce too..."
+		ai_chance = 55
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		ai_chance = 45
+		name = "A womans place is at the side of her husband."
+		command = { type = dissent value = 1 }
+	}
+}
+
+#############################################
+###### School's reform (1930) 
+#############################################
+event = {
+	id = 13300658
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300644
+		or = { ideology = fascist ideology = nazi }
+	}
+	
+	name = "EVT_13300658_NAME"
+	desc = "EVT_13300658_DESC"
+	date = { day = 1 month = june year = 1930 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1931 }
+	
+	action = {
+		name = "O con noi, o contro di noi!"
+		command = { type = dissent value = -1 }
+	}
+	
+}
+
+#############################################
+###### "The teachers who said NO to the Duce" 
+#############################################
+event = {
+	id = 13300659
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300658
+	}
+	
+	name = "EVT_13300659_NAME"
+	desc = "EVT_13300659_DESC"
+	date = { day = 1 month = june year = 1931 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1932 }
+	
+	
+	action = {
+		name = "We must make these heads cease thinking."
+		command = { type = dissent value = -1 }
+	}
+	
+}
+
+#############################################
+###### Corporatism 
+#############################################
+event = {
+	id = 13300660
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300643
+		or = { ideology = fascist ideology = nazi }
+	}
+	
+	name = "EVT_13300660_NAME"
+	desc = "EVT_13300660_DESC"
+	date = { day = 1 month = june year = 1925 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1926 }
+	
+	
+	action = {
+		name = "We hope that our Duce is right this time..."
+		command = { type = armamentminister which = 25046 }
+		command = { type = domestic which = free_market value = -1 }
+		ai_chance = 99
+	}
+	action = {
+		name = "Our free market policy is working well enough."
+		ai_chance = 1
+		command = { type = domestic which = free_market value = 1 }
+	}
+	
+}
+
+
+#############################################
+###### "The Battle for Grain" 
+#############################################
+event = {
+	id = 13300661
+	random = no
+	country = ITA
+	trigger = {
+		or = { ideology = fascist ideology = nazi }
+		event = 13300643
+	}
+	
+	name = "EVT_13300661_NAME"
+	desc = "EVT_13300661_DESC"
+	date = { day = 1 month = june year = 1925 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1926 }
+	
+	
+	action = {
+		name = "Fight this Battle!"
+		ai_chance = 99
+		command = { type = supplies value = 3000 }
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		name = "We don't need it."
+		ai_chance = 1
+		command = { type = money value = 600 }
+		command = { type = dissent value = 1 }
+	}
+	
+}
+
+#############################################
+###### Quota 90 
+#############################################
+event = {
+	id = 13300662
+	random = no
+	country = ITA
+	trigger = {
+		event = 13300661
+		or = {
+			ideology = fascist
+			ideology = nazi
+		}
+	}
+	
+	name = "EVT_13300662_NAME"
+	desc = "EVT_13300662_DESC"
+	date = { day = 1 month = june year = 1926 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1927 }
+	
+	
+	action = {
+		name = "Onwards!"
+		ai_chance = 99
+		command = { type = dissent value = 3 }
+		command = { trigger = { IC = 80 } type = money value = -3000 }
+		command = { trigger = { IC = 50 NOT = { IC = 80 } } type = money value = -2000 }
+		command = { trigger = { NOT = { IC = 50 } } type = money value = -1500 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = event where = ITA which = 133099241 when = 1 } # reset IC sanitizer
+		command = { type = manpowerpool value = 300 }
+	}
+	action = {
+		name = "We are content as we are."
+		ai_chance = 1
+		command = { type = relation which = USA value = -10 }
+		command = { type = dissent value = -3 }
+		command = { trigger = { IC = 80 } type = money value = 3000 }
+		command = { trigger = { IC = 50 NOT = { IC = 80 } } type = money value = 2000 }
+		command = { trigger = { NOT = { IC = 50 } } type = money value = 1500 }
+	}
+	
+}
+
+
+#############################################
+###### Public Works 
+#############################################
+event = {
+	id = 13300663
+	random = no
+	country = ITA
+	trigger = {
+		or = {
+			ideology = fascist
+			ideology = nazi
+		}
+		event = 13300660
+	}
+	
+	name = "EVT_13300663_NAME"
+	desc = "EVT_13300663_DESC"
+	date = { day = 1 month = june year = 1930 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1931 }
+	
+	
+	action = {
+		name = "We will make Italy a better place."
+		command = { type = construct which = infrastructure where = -1 value = 20 }
+		command = { type = construct which = infrastructure where = -1 value = 20 }
+		command = { type = construct which = infrastructure where = -1 value = 20 }
+		command = { type = construct which = infrastructure where = -1 value = 20 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { trigger = { IC = 80 } type = money value = -500 }
+		command = { trigger = { IC = 50 NOT = { IC = 80 } } type = money value = -300 }
+		command = { trigger = { NOT = { IC = 50 } } type = money value = -100 }
+		ai_chance = 99
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		name = "Italy is perfect as it is..."
+		command = { type = dissent value = 3 }
+		ai_chance = 2
+	}
+	
+}
+
+#############################################
+###### IMI&IRI 
+#############################################
+event = {
+	id = 13300664
+	random = no
+	country = ITA
+	trigger = {
+		or = {
+			ideology = fascist
+			ideology = nazi
+		}
+	}
+	
+	name = "EVT_13300664_NAME"
+	desc = "EVT_13300664_DESC"
+	
+	date = { day = 1 month = june year = 1931 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1932 }
+	
+	
+	action = {
+		name = "Guarantee the funding!"
+		ai_chance = 99
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = money value = -400 }		 
+	}
+	action = {
+		name = "Italy is perfect as it is..."
+		ai_chance = 1
+	}
+	
+}
+
+#############################################
+###### Stresa Conference 
+#############################################
+event = {
+	id = 13300665
+	random = no
+	country = ITA
+	trigger = {
+		exists = GER
+	}
+	
+	name = "EVT_13300665_NAME"
+	desc = "EVT_13300665_DESC"
+	date = { day = 1 month = june year = 1934 }
+	offset = 365
+	deathdate = { day = 1 month = june year = 1935 }
+	
+	
+	action = {
+		name = "We must forge a unified Front!"
+		ai_chance = 99
+		command = { type = guarantee which = ITA where = AUS }
+		command = { type = event which = 13300667 where = FRA when = 7 }
+		command = { type = event which = 13300668 where = ENG when = 7 }
+		
+	}
+	action = {
+		name = "The Germans are brothers in spirit!"
+		ai_chance = 1
+		command = { type = relation which = GER value = 100 }
+	}
+	
+}
+
+
+#############################################
+###### Stresa Conference 
+#############################################
+event = {
+	id = 13300667
+	random = no
+	country = FRA
+	
+	name = "EVT_13300665_NAME"
+	desc = "EVT_13300665_DESC"
+	
+	action = {
+		name = "We must forge a unified Front!"
+		ai_chance = 99
+		command = { type = guarantee which = FRA where = ITA }
+		command = { type = guarantee which = FRA where = ENG }
+		command = { type = guarantee which = FRA where = AUS }
+		
+	}
+	action = {
+		name = "Hitler can have them."
+		ai_chance = 1
+	}
+	
+}
+
+#############################################
+###### Stresa Conference 
+#############################################
+event = {
+	id = 13300668
+	random = no
+	country = ENG
+	
+	name = "EVT_13300665_NAME"
+	desc = "EVT_13300665_DESC"
+	
+	action = {
+		name = "We must forge a unified Front!"
+		ai_chance = 99
+		command = { type = guarantee which = ENG where = AUS }
+		command = { type = guarantee which = ENG where = ITA }
+		command = { type = guarantee which = ENG where = FRA }
+	}
+	action = {
+		name = "Why should we care?"
+		ai_chance = 1
+	}
+}
+
+
+#############################################
+###### Lateran Treaty 
+#############################################
+event = {
+	id = 13300666
+	random = no
+	country = ITA
+	trigger = {
+		or = { ideology = fascist ideology = nazi }
+	}
+	
+	name = "EVT_13300666_NAME"
+	desc = "EVT_13300666_DESC"
+	
+	date = { day = 1 month = june year = 1929 }
+	offset = 359
+	deathdate = { day = 1 month = june year = 1930 }
+	
+	
+	action = {
+		name = "Sign it."
+		ai_chance = 99
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = money value = -500 }
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		name = "We are secularized!"
+		ai_chance = 1
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+	
+}
+
+#############################################
+###### Treaty of friendship with Hungary
+#############################################
+event = {
+	id = 13300669
+	random = no
+	country = ITA
+	
+	# Triggered by HUN 13301733
+	
+	name = "EVT_13300669_NAME"
+	desc = "EVT_13300669_DESC"
+	
+	action = {
+		name = "Sign it"
+		ai_chance = 100
+		command = { type = guarantee which = HUN }
+		command = { type = relation which = HUN value = 15 }
+	}
+	
+	action = {
+		name = "Don't sign"
+		ai_chance = 0
+		command = { type = relation which = HUN value = -15 }
+	}
+}
+
+#############################################
+###### United front with Austrofascism
+#############################################
+event = {
+	id = 13300670
+	country = ITA
+	
+	# triggered by AUS 13300133
+	
+	name = "EVT_13300670_NAME"
+	desc = "EVT_13300670_DESC"
+	
+	action = {
+		name = "United against Nazi and Communists"
+		ai_chance = 100
+		command = { type = guarantee which = AUS }
+		command = { type = relation which = AUS value = 150 }
+	}
+	
+	action = {
+		name = "It's better to be friends with Germany rather than Austria"
+		ai_chance = 0
+		command = { type = relation which = AUS value = -150 }
+	}
+}

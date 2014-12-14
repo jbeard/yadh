@@ -1,0 +1,430 @@
+### Albania
+
+event = {
+	id = 8216010
+	country = U27
+
+	name = EVT_8216010_NAME #"Yugoslav-Albanian Treaty of Friendship"
+	desc = EVT_8216010_DESC #"Soon after the war Yugoslavia wielded big influence over Albania and for some time even talks of confederation were in place. Yugoslavia supported Albania strongly with investments and favourable terms of trade."
+	picture = nwo\united_balkans
+	style = 1
+	
+	trigger = {
+		exists = U28
+		NOT = { flag = tito_stalin_split }
+	}
+
+	date = { day = 1 month = july year = 1946 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = EVT_8216010_A #"It will be beneficial"
+		ai_chance = 80
+		command = { type = relation which = U28 value = 100 }
+		command = { type = money value = -1000 }
+		command = { type = make_puppet which = U28 }
+	}	
+	
+	action = {
+		name = EVT_8216010_B #"No thanks"
+		ai_chance = 20
+		command = { type = relation which = U28 value = -100 }
+		command = { type = sleepevent which = 8216011 }
+	}
+}
+
+event = {
+	id = 8216011
+	country = U28
+
+	name = EVT_8216011_NAME #"Yugoslav-Albanian Treaty of Friendship"
+	desc = EVT_8216011_DESC #"Soon after the war Yugoslavia wielded big influence over Albania and for some time even talks of confederation were in place. Yugoslavia supported Albania strongly with investments and favourable terms of trade."
+	picture = nwo\united_balkans
+	style = 1
+	
+	trigger = {
+		event = 8216010
+		exists = U27
+		NOT = { flag = tito_stalin_split }
+	}
+
+	date = { day = 1 month = july year = 1946 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = EVT_8216011_A
+		command = { type = relation which = U27 value = 100 }
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = dissent value = -2 }
+	}	
+
+}
+
+event = {
+	id = 8216012
+	country = U28
+
+	name = EVT_8216012_NAME #"Anti-Yugoslav tensions"
+	desc = EVT_8216012_DESC #"In 1947 relations between Yugoslavia and Albania began to deteriorate. Albanians reluctantly complied with Yugoslav-backed plans of promoting agriculture and raw minerals extraction and aimed at development of light industry. Also the political situation was very complicated and after Soviet-Yugoslav split Albania chose to make a complete switch in its policy."
+	picture = nwo\united_balkans
+	style = 1
+	
+	trigger = {
+		flag = tito_stalin_split
+		exists = U27
+		puppet = { country = U28 country = U27 }
+	}
+
+	date = { day = 1 month = july year = 1948 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8216012_A #"We stand by USSR"
+		ai_chance = 95
+		command = { type = relation which = SOV value = 100 }
+		command = { type = relation which = U27 value = -200 }
+		command = { type = end_puppet }
+		command = { type = sleepevent which = 8216013 }
+		# End of Yugoslav help
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = dissent value = -2 }
+	}	
+	
+	action = {
+		name = EVT_8216012_B #"We will back Tito"
+		ai_chance = 5
+		command = { type = leave_alliance }
+		command = { type = alliance which = U27 }
+		
+		command = { type = relation which = U27 value = 100 }
+		command = { type = relation which = SOV value = -200 }
+		# Hoxha is responsible for pro-Yugoslav policy
+		command = { type = sleepminister which = 955003 }
+		command = { type = sleepminister which = 955011 }
+		command = { type = sleepminister which = 955032 }
+		command = { type = sleepminister which = 955035 }
+		command = { type = sleepleader which = 955007 }
+		command = { type = headofstate which = 955001 } # Omer Nishani
+		command = { type = headofgovernment which = 955100 } # Mehmet Shehu
+	}
+}
+
+### Albania joins Yugoslavia
+
+event = {
+	id = 8216013
+	country = U27
+
+	name = EVT_8216013_NAME #"Yugoslav Socialist Republic of Albania"
+	desc = EVT_8216013_DESC #"Cooperation between Yugoslavia and USSR is flawless and Soviet leadership may see it beneficial that Albania, in spite of cultural and linguistic difference joins Yugoslavia to become a part of even stronger state of Southern Slavs. Will we put forward such a motion?"
+	picture = nwo\albania_in_yugoslavia
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8216013_A #"We invite people of Albania"
+		ai_chance = 80
+		command = { type = relation which = U28 value = 50 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = belligerence value = 10 }
+	}	
+	
+	action = {
+		name = EVT_8216013_B #"Not really"
+		ai_chance = 20
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = U28 value = -50 }
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8216014 }
+	}
+}
+
+event = {
+	id = 8216014
+	country = SOV
+
+	name = EVT_8216014_NAME #"Yugoslav Socialist Republic of Albania"
+	desc = EVT_8216014_DESC #"Albania, in spite of cultural and linguistic difference, may join Yugoslavia to become a part of even stronger state of Southern Slavs. Will we allow such a move in our sphere of influence?"
+	picture = nwo\albania_in_yugoslavia
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+		event = 8216013
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8216014_A #"Let them"
+		ai_chance = 80
+		command = { type = relation which = U28 value = 50 }
+		command = { type = relation which = U27 value = 50 }
+	}	
+	
+	action = {
+		name = EVT_8216014_B #"Not really"
+		ai_chance = 20
+		command = { type = relation which = U27 value = -50 }
+		command = { type = relation which = U28 value = -50 }
+		command = { type = sleepevent which = 8216015 }
+	}
+}
+
+event = {
+	id = 8216015
+	country = U28
+
+	name = EVT_8216015_NAME #"Yugoslav Socialist Republic of Albania"
+	desc = EVT_8216015_DESC #"Cooperation between Yugoslavia and USSR is flawless and Soviet leadership sees it beneficial that Albania, in spite of cultural and linguistic difference joins Yugoslavia to become a part of even stronger state of Southern Slavs."
+	picture = nwo\albania_in_yugoslavia
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+		event = 8216014
+	}
+	
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8216015_A #"We will welcome this proposal (Game Over)"
+		ai_chance = 95
+		command = { type = trigger which = 8216016 }
+	}	
+	
+	action = {
+		name = EVT_8216015_B #"Not really"
+		ai_chance = 5
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = U27 value = -200 }
+		command = { type = dissent value = 20 }
+	}
+}
+
+event = {
+	id = 8216016
+	country = U27
+	
+	name = EVT_8216016_NAME #"Yugoslav Socialist Republic of Albania"
+	desc = EVT_8216016_DESC #"As directed by common decision of Yugoslavia and Albania, under Soviet acceptance, Albania becomes a part of Yugoslav federation."
+	picture = nwo\albania_in_yugoslavia
+	style = 1
+	
+	action = {
+		name = EVT_8216016_A
+		command = { type = inherit which = U28 }
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}	
+
+}
+
+### Bulgaria
+
+### Bled Agreement
+
+event = {
+	id = 8216020
+	country = U27
+
+	name = EVT_8216020_NAME #"Bled Agreement"
+	desc = EVT_8216020_DESC #"Bled agreements (Tito-Dimitrov Treaty) is the name of the bilateral agreements between FPRY and NR Bulgaria accepted in Bled in 1947. These agreements mark the mutual aspirations and efforts to develop new relations between the two countries, Josip Broz Tito and Georgi Dimitrov after talks in Bled from 30 July to 1 August 1947."
+	picture = nwo\united_balkans
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+		exists = U29
+	}
+
+	date = { day = 30 month = july year = 1947 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = EVT_8216020_A #"Let's cement our friendship"
+		ai_chance = 95
+		command = { type = relation which = U29 value = 100 }
+		command = { type = relation which = SOV value = 50 }
+		command = { type = dissent value = -1 }
+	}	
+	
+	action = {
+		name = EVT_8216020_B #"We do not trust each other"
+		ai_chance = 5
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = U29 value = -50 }
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 8216021 }
+	}
+}
+
+event = {
+	id = 8216021
+	country = U29
+
+	name = EVT_8216021_NAME #"Bled Agreement"
+	desc = EVT_8216021_DESC #"Bled agreements (Tito-Dimitrov Treaty) is the name of the bilateral agreements between FPRY and NR Bulgaria accepted in Bled in 1947. These agreements mark the mutual aspirations and efforts to develop new relations between the two countries, Josip Broz Tito and Georgi Dimitrov after talks in Bled from 30 July to 1 August 1947."
+	picture = nwo\united_balkans
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+		event = 8216020
+	}
+
+	date = { day = 30 month = july year = 1947 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = EVT_8216021_A #"Let's cement our friendship"
+		ai_chance = 95
+		command = { type = relation which = U27 value = 100 }
+		command = { type = relation which = SOV value = 50 }
+		command = { type = dissent value = -1 }
+	}	
+	
+	action = {
+		name = EVT_8216021_B #"We do not trust each other"
+		ai_chance = 5
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = U27 value = -50 }
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 8216022 }
+	}
+}
+
+event = {
+	id = 8216022
+	country = U27
+
+	name = EVT_8216022_NAME #"Yugoslav Socialist Republic of Bulgaria"
+	desc = EVT_8216022_DESC #"Bled Agreement that we signed paved the way for further unification of our countries and possibly the creation of Balkan Federative Republic."
+	picture = nwo\bulgaria_in_yugoslavia
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+		event = 8216021
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8216022_A #"We invite people of Bulgaria"
+		ai_chance = 75
+		command = { type = relation which = U29 value = 50 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = belligerence value = 10 }
+	}	
+	
+	action = {
+		name = EVT_8216022_B #"Not really"
+		ai_chance = 25
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = U29 value = -50 }
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8216023 }
+	}
+}
+
+event = {
+	id = 8216023
+	country = SOV
+
+	name = EVT_8216023_NAME #"Yugoslav Socialist Republic of Bulgaria"
+	desc = EVT_8216023_DESC #"Bulgaria, in the light of recent actions  may join Yugoslavia to become a part of even stronger state of Southern Slavs. Will we allow such a move in our sphere of influence?"
+	picture = nwo\bulgaria_in_yugoslavia
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+		event = 8216022
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8216023_A #"Let them"
+		ai_chance = 50
+		command = { type = relation which = U29 value = -50 }
+		command = { type = relation which = U27 value = -50 }
+	}	
+	
+	action = {
+		name = EVT_8216023_B #"Not really"
+		ai_chance = 50
+		command = { type = relation which = U29 value = 50 }
+		command = { type = relation which = U27 value = 50 }
+		command = { type = sleepevent which = 8216024 }
+	}
+}
+
+event = {
+	id = 8216024
+	country = U29
+
+	name = EVT_8216024_NAME #"Yugoslav Socialist Republic of Bulgaria"
+	desc = EVT_8216024_DESC #"Bulgaria, in the light of recent actions  may join Yugoslavia to become a part of even stronger state of Southern Slavs. Will we forfeit our independence in favor of inclusion in the federation?"
+	picture = nwo\bulgaria_in_yugoslavia
+	style = 1
+	
+	trigger = {
+		NOT = { flag = tito_stalin_split }
+		event = 8216023
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8216024_A #"We will welcome this proposal (Game Over)"
+		ai_chance = 70
+		command = { type = trigger which = 8216025 }
+	}	
+	
+	action = {
+		name = EVT_8216024_B #"Not really"
+		ai_chance = 30
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = U27 value = -200 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8216025
+	country = U27
+
+	name = EVT_8216025_NAME #"Yugoslav Socialist Republic of Bulgaria"
+	desc = EVT_8216025_DESC #"As directed by common decision of Yugoslavia and Bulgaria, under Soviet acceptance, Bulgaria becomes a part of Yugoslav federation."
+	picture = nwo\bulgaria_in_yugoslavia
+	style = 1
+
+	action = {
+		name = EVT_8216025_A
+		command = { type = inherit which = U29 }
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}	
+
+}

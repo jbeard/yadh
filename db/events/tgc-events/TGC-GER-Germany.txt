@@ -1,0 +1,119 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the German Reich
+# Event List:
+# GER	13300217	The Third Reich
+# GER	13300220	The Third Reich (fix for Anschluss)
+
+
+event = { 
+	id = 13300217									 
+	country = GER										 
+	
+	date = { day = 0 month = 0 year = 1932 }						
+	deathdate = { day = 1 month = january year = 1937 }
+	offset = 30					
+	
+	trigger = {					
+		or	= { 
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	name = "EVT_13300217_NAME"							
+	Desc = "EVT_13300217_DESC"
+	Picture = "Sudetenland" 
+	
+	action = { 	
+		name = "Heim ins Reich!"		
+		command = { type = addcore which = 216 } #Danish border
+		command = { type = addcore which = 261 } #The East
+		command = { type = addcore which = 181 }
+		command = { type = addcore which = 225 }
+		command = { type = addcore which = 224 }
+		command = { type = addcore which = 221 }
+		command = { type = addcore which = 197 } #Austria and a bit more
+		command = { type = addcore which = 204 }
+		command = { type = addcore which = 194 }
+		command = { type = addcore which = 186 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 188 }
+		command = { type = addcore which = 190 }
+		command = { type = addcore which = 193 }
+		command = { type = addcore which = 187 }
+		command = { type = addcore which = 192 }
+		command = { type = addcore which = 191 }
+		command = { type = addcore which = 346 } #slovenia
+		command = { type = addcore which = 349 }
+		command = { type = addcore which = 189 }
+		command = { type = addcore which = 402 } #southern tyrol
+		command = { type = addcore which = 401 }
+		command = { type = addcore which = 389 } #switzerland
+		command = { type = addcore which = 392 }
+		command = { type = addcore which = 104 } #elsass-lothringen
+		command = { type = addcore which = 105 }
+		command = { type = addcore which = 107 }
+		command = { type = addcore which = 109 } #belgian border & luxemburg
+		command = { type = addcore which = 110 }
+		command = { type = addcore which = 121 }
+		command = { type = dissent value = -50 }
+		command = { type = ai which = "ger_1933.ai" }	
+		command = { trigger = { exists = U23 } type = inherit which = U23 value = 1 }
+		command = { type = set_domestic which = democratic value = 2 }	# nazi
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = domestic which = interventionism value = 4 }
+		command = { type = domestic which = defense_lobby value = 6 }
+		command = { type = alliance where = 1}
+		command = { type = alliance_leader which = GER	where = 1 }
+		command = { type = alliance_name which = "axis" where = 1 }
+		command = { type = end_access which = FRA }
+		command = { type = end_access which = ENG }
+		command = { type = end_access which = ITA }
+		command = { type = manpowerpool value = 300 }
+		#Hitler																 
+		command = { trigger = { not = { event = 13300239 } not = { flag = hitler_arrested } } type = wakeminister which = 22 } 
+		command = { trigger = { not = { event = 13300239 } flag = hitler_free } type = headofgovernment which = 22 }
+		#Hindenburg
+		command = { trigger = { not = { event = 13300239 } } type = wakeminister which = 268 } 
+		command = { trigger = { not = { event = 13300239 } } type = headofstate which = 268 }
+	}
+}
+
+event = { 
+	id = 13300220									 
+	country = GER										 
+	
+	date = { day = 0 month = 0 year = 1933 }						
+	deathdate = { day = 1 month = january year = 1940 }
+	offset = 30					
+	
+	trigger = {					
+		event = 2006001 
+		or = {
+			not = { non_aggression = { country = AUS country = GER } }
+			not = { minister = 1 }
+			not = { relation = { which = AUS value = 200 } }
+		}
+		not = { atwar = AUS }
+	}
+	name = "EVT_13300217_NAME"							
+	Desc = "EVT_13300217_DESC"
+	Picture = "Sudetenland" 
+	
+	action = { 	
+		name = "Placeholder and Quickfix: to allow the Anschluss to happen in 1936"		
+		command = { type = non_aggression which = AUS where = GER }
+		command = { type = non_aggression which = AUS where = GER }
+		command = { trigger = { or = { flag = hitler_free not = { flag = hitler_arrested } } } type = wakeminister which = 1 }
+		command = { trigger = { or = { flag = hitler_free not = { flag = hitler_arrested } } } type = headofstate which = 1 }
+		command = { type = relation which = AUS value = 200 }
+	} 			
+}
+

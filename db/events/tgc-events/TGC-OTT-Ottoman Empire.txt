@@ -1,0 +1,193 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the Ottoman Empire 
+# Event List:
+#OTT	13300400	The Outcome of the Great War (historical)
+#OTT	13300410	Treaty of Lausanne
+#OTT	13300421	Grand National Assemly 
+#OTT	13300422	Said Halim Pasha resigns
+
+
+# Outcome of Great War
+event = { 
+	id = 13300400						 
+	country = OTT										 
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 30									 
+	
+	trigger = {					
+		event = 2145513 # The Treaty of Sèvres
+		event = 2002534 # versailes
+		atwar = no
+		or = {
+			event = 2145501
+			event = 2145511
+		}
+	}
+	name = "EVT_13300400_NAME"							
+	Desc = "EVT_13300400_DESC"
+	Picture = "surrender" 
+	
+	action = { 	
+		name = "Damn!"			
+		command = { type = local_setflag which = loser }
+		command = { type = headofstate which = 720090 }			# Mehmet VI
+		command = { type = headofgovernment which = 720078 } # damat ferit paþa
+		command = { type = foreignminister which = 720068 }	# mehmed nabi bey
+		command = { type = ministerofsecurity which = 720102 }	# ali fethi okyar
+		command = { type = chiefofstaff which = 720059 }	 # ahmet izzet
+		command = { type = chiefofarmy which = 720051 }	# ahmet izzet
+		command = { type = sleepminister which = 720057 } # enver	
+		command = { type = sleepminister which = 720069 } # ahmet tevfik
+		command = { type = sleepminister which = 720098 } # talat
+		command = { type = sleepminister which = 720074 } # talat as HoG
+		#army
+		command = { type = demobilize which = land when = 0 where = 0 value = 10 }
+		command = { type = local_setflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_75 }
+		command = { type = local_clrflag which = disarm_army_50 }
+		#navy
+		command = { type = demobilize which = naval when = 0 where = 0 value = 10 }
+		command = { type = local_setflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+		#airforce - none allowed
+		command = { type = demobilize which = air when = 0 where = 0 value = 1 }
+		command = { type = local_setflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+		command = { type =	dissent value = 20 }
+		command = {
+			trigger = {
+				not = { exists = U50 } 
+				and = {
+					control = { province = 1048 data = SAU }
+					control = { province = 1049 data = SAU }
+				}
+			}
+			type = independence which = U50 value = 1 when = 0
+		}
+		command = {
+			trigger = {
+				puppet = { country = U50 country = OTT }
+			}
+			type = end_mastery which = U50
+		}
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	}
+}
+
+# Treaty of Lausanne
+event = { 
+	id = 13300410						 
+	country = OTT										 
+	
+	# triggered by Greek defeat in Turkish Independence War
+	
+	name = "Treaty of Lausanne"							
+	Desc = "The Treaty of Lausanne was a peace treaty signed in Lausanne, Switzerland on 24 July 1923, that ended the state of war that had existed since 1914 between Turkey on the one hand, and the British Empire, France, Italy, Japan, Greece, Romania and the Serb-Croatian-Slovene State on the other."
+	Picture = "news_paper" 
+	
+	action = { 	
+		name = "Turkey is recognized"			
+		command = { type = leave_alliance }
+		## add ideology description there 
+		command = { type = country which = TUR }
+		command = { type = dissent value = -10 }
+		command = { type = set_domestic which = democratic value = 4 }			# social conservative
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 45001 }			# Atatürk
+		command = { type = headofgovernment which = 45002 } # ismet inönü
+		command = { type = foreignminister which = 45003 }	# tevfik rüstü aras
+		command = { type = armamentminister which = 45027 } # kazým özalp
+		command = { type = ministerofsecurity which = 45088 }	# mehmet cemil uybadýn
+		command = { type = ministerofintelligence which = 45006 } # sükrü ali ogel 
+		command = { type = chiefofstaff which = 45007 } # fevzi cakmak
+		command = { type = chiefofarmy which = 45089 } # atatürk
+		command = { type = chiefofnavy which = 45009 }
+		command = { type = chiefofair which = 45010 }
+	} 			
+}	
+
+# Grand National Assembly
+event = { 
+	id = 13300421						 
+	country = OTT										 
+	
+	# triggered by Greek invasion of Anatolia
+	
+	name = "Grand National Assembly"							
+	Desc = "EVT_13300421_DESC"
+	Picture = "news_paper" 
+	
+	action = { 	
+		name = "We must resist the Greek invasion!"		 
+		command = { type = headofgovernment which = 720103 } # Mustafa Kemal as HoG
+		command = { type = chiefofstaff which = 720058 }	 # fevzi cakmak
+		command = { type = chiefofarmy which = 720053 }	# Mustafa Kemal 
+		command = { type = foreignminister which = 720104 } # ismet inönü
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = cavalry when = 1 }
+		command = { type = add_division value = cavalry when = 1 }
+		command = { type = add_division value = cavalry when = 1 }
+	} 			
+}
+
+# Said Halim Pasha resigns
+event = { 
+	id = 13300422						 
+	country = OTT	 
+	random = no									
+	
+	trigger = {					
+		random = 25
+		headofgovernment = 720070	# Said Halim Pasha
+		atwar = yes
+	}
+	
+	name = "Said Halim Pasha Resigns"							
+	Desc = "In 1917, Talat Pasha, one of three leaders of CUP, replaced Said Halim Pasha as new Sadrazam."
+	Picture = "news_paper" 
+	
+	date = { day = 1 month = january year = 1917 }
+	offset = 30									 
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = { 	
+		name = "Ok"		 
+		command = { type = headofgovernment which = 720074 } # Talat Pasha
+		command = { type = sleepminister which = 720070 } # said halim pasha
+	} 	
+}
+

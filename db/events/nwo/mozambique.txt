@@ -1,0 +1,419 @@
+event = {
+	id = 8010001
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705001 } # Jos? Pereira Cabral
+		command = { type = headofgovernment which = 705100 } # Jos? Pereira Cabral
+	}
+}
+
+event = {
+	id = 8010002
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705101 } # Jos? Nunes de Oliveira
+		command = { type = headofgovernment which = 705002 } # Jos? Nunes de Oliveira
+	}
+}
+
+event = {
+	id = 8010003
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705102 } # Joao Tristao de Bettencourt
+		command = { type = headofgovernment which = 705103 } # Joao Tristao de Bettencourt
+	}
+}
+
+event = {
+	id = 8010004
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705104 } # Luis de Sousa
+		command = { type = headofgovernment which = 705105 } # Luis de Sousa
+	}
+}
+
+event = {
+	id = 8010005
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705106 } # Gabriel Mauricio Teixeira
+		command = { type = headofgovernment which = 705107 } # Gabriel Mauricio Teixeira
+	}
+}
+
+event = {
+	id = 8010006
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705108 } # Pedro Correia de Barros
+		command = { type = headofgovernment which = 705109 } # Pedro Correia de Barros
+	}
+}
+
+event = {
+	id = 8010007
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705110 } # Manuel Maria Rodrigues
+		command = { type = headofgovernment which = 705111 } # Manuel Maria Rodrigues
+	}
+}
+
+
+event = {
+	id = 8010008
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705112 } # José Augusto Almeida
+		command = { type = headofgovernment which = 705113 } # José Augusto Almeida
+	}
+}
+
+event = {
+	id = 8010009
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705114 } # Baltazar Rebelo de Sousa
+		command = { type = headofgovernment which = 705115 } # Baltazar Rebelo de Sousa
+	}
+}
+
+event = {
+	id = 8010010
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705116 } # Eduardo Arantes e Oliveira
+		command = { type = headofgovernment which = 705117 } # Eduardo Arantes e Oliveira
+	}
+}
+
+event = {
+	id = 8010011
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 705118 } # Vítor Crespo
+		command = { type = headofgovernment which = 705119 } # Vítor Crespo
+	}
+}
+
+event = {
+	id = 8010012
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 705123 } # Samora Moisés Machel
+		command = { type = headofgovernment which = 705120 } # Joaquim Chissano
+	}
+}
+
+event = {
+	id = 8010013
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 705124 } # Samora Moisés Machel
+	}
+}
+
+event = {
+	id = 8010014
+	country = MOZ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 705121 } # Joaquim Chissano
+		command = { type = headofgovernment which = 705122 } # Mario da Graca Machungo
+	}
+}
+
+event = {
+	id = 8010015
+	country = MOZ
+
+	name = EVT_8010015_NAME
+	desc = EVT_8010015_DESC
+	picture = nwo\mozambican_civil_war
+	style = 1
+
+	trigger = {
+		atwar = no
+		random = 75
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8010015_A
+		command = { type = dissent value = 25 }
+	}
+}

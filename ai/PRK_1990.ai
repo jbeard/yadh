@@ -1,0 +1,272 @@
+switch = no
+max_front_ratio = 1.2 
+max_garrison_prop = 0.30
+min_garrison_prop = 0.20
+neutrality = 110 
+war = 0
+ferocity = yes
+upgrading = 0.35
+reinforcement = 0.2
+strat_redeploy_threshold = 25
+exp_force_ratio = 0.40
+exp_force_ratios = { } 
+no_exp_forces_to = { }
+use_offensive_supply = yes
+
+###################################
+# Diplomacy
+###################################
+combat = { KOR = 10 }
+
+claim_acceptance = -59
+
+demand_claims = { KOR }
+
+# Special resistance against "influence" by the listed nations. Value range = [0 - 10]  
+resistance = {  
+	CHI = 6
+	JAP = 6
+	ENG = 6
+	FRA = 6
+	USA = 6
+}
+befriend = {
+	CHC = 100
+	SOV = 100
+	VIE = 100
+}
+protect = {
+}
+target = {
+}
+###################################
+# Construction and Tech Research
+###################################
+#Default values
+construction = { 
+	max_factor = 0.050 
+
+	AA_batteries = yes
+	max_AA_level = 9
+	AA_provs = { 
+		1228 1233 1232 1230
+		1225 1224 1221
+	}
+
+	coastal_fort = atwar
+	max_coastal_level = 7
+	coastal_fort_provs = { 1221 1228 } 
+
+	radar_station = not_atwar 
+	max_radar = 7
+	radar_provs = { 1221 1228 1232 } 
+
+	air_base = yes
+	max_air_base = 10
+	air_base_provs = { 1228 1221 1227 1232 1230 } 
+
+	naval_base = yes
+	max_naval_base = 9
+	naval_base_provs = { 1221 1228 1232
+	} 
+
+	land_fort = yes
+	max_land_level = 10
+	fort_borders = { PRK } 
+
+	ic_at_war = yes 
+	force_ic_until = 1937
+	ic_end_year = 2000
+	IC_provs = {
+		1228 1221 1232 1231 1229 1227
+	} 
+	
+	nuclear_reactor = yes
+	nuclear_reactor_prov = 1227 #1231
+	max_nuclear = 5
+	
+	rocket_test = yes	
+	rocket_test_prov = 1227 #1231
+	max_rocket = 3
+}
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 		= 680 
+	max_batch_war 			= 320 
+	max_batch_home_front = 180
+        extra_convoys_war = 0.0500 
+        extra_convoys_peace = 0.0500 
+
+
+	#### Divisions etc...
+	infantry 		= 8
+	cavalry 		= 0
+	motorized 		= 35
+	mechanized 		= 14
+	light_armor 	= 0
+	armor 			= 10
+	paratrooper 	= 0
+	marine 			= 0
+	bergsjaeger 	= 5
+	garrison		= 0
+    hq 				= 2
+	militia 		= 0
+#				90 %
+	interceptor 	= 6
+	multi_role 		= 2
+	cas 			= 2
+	strategic_bomber = 4
+	tactical_bomber = 0
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				0 %
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier	= 0
+	destroyer 		= 2
+	light_cruiser 	= 2
+	heavy_cruiser 	= 2
+	battlecruiser 	= 0
+	submarine 		= 3
+	nuclear_submarine = 0
+	transports 		= 3
+#				0 %
+
+	#### Brigades
+	artillery 			= 0
+	sp_artillery 		= 45
+	rocket_artillery	= 0
+	sp_rct_artillery 	= 0
+	medium_armor 		= 15
+	anti_tank 			= 0
+	tank_destroyer 		= 5
+	light_armor_brigade = 0
+	heavy_armor 		= 0
+	super_heavy_armor 	= 0
+	armored_car 		= 5
+	anti_air 			= 0
+	police 				= 0
+	engineer 			= 0
+}
+
+technology = { 
+	endgoal 	= { } 
+	preference 	= { } 
+	ignore 		= { }
+ 
+	armor 			= 1
+	infantry 		= 6
+	industry 		= 3
+	aircraft 		= 0
+	naval 			= 0
+	land_doctrines 	= 8
+	secret_weapons 	= 0
+	air_doctrines 	= 0
+	naval_doctrines = 0
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 0.5
+	home_peace_cap 		= 20
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 20	# Beach level 2
+	capital			= 20	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 0	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 0	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		CHC = -1
+		SOV = -1
+		CHI = 150
+		KOR = 250
+	}
+	province_priorities = {
+	}
+	area_multiplier = { }
+}
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.0
+	panic_ratio_vs_human	= 2.0
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+	
+	occupied 	= 0.7
+	owned 		= 0.7
+
+} 
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 20.0	#higher = avoid long distance.
+	pocket		= 5.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+      	naval_base 	= 0.1 
+      	air_support 	= 3.0 
+      	redirect 	= priority
+	ignore		= no
+      
+	target = { 
+		# Targets for east-aligned countries
+		53 = 100 49 = 100 114 = 100 68 = 100 82 = 100 # France
+		422 = 100 # Italy
+		377 = 100 # Greece
+		789 = 100 # Egypt
+		12 = 100 26 = 100 36 = 100 # United Kingdom
+		1090 = 100 # Iran
+		1886 = 250 1889 = 250 1878 = 250 2089 = 250 2142 = 250 1812 = 250 # USA
+		1228 = 300 1221 = 300 # Korea
+		1338 = 100 1334 = 100 1241 = 300 1371 = 100 1362 = 300 # China
+		1552 = 200 1554 = 300 # Japan
+		1447 = 100 1518 = 100 1494 = 100 1532 = 100 # India
+		1697 = 100 1694 = 100 # Australia
+		1647 = 100 # Indonesia
+		1399 = 150 # Vietnam
+		2022 = 100 2040 = 100 1980 = 100 # South America
+		
+		# Specific targets
+		1561 = 300
+		1328 = 300
+		1191 = 300
+	} 
+	
+	staging_province = {
+		# Staging provinces for east-aligned countries
+		270 264 1191 # USSR
+		49 # France
+	}
+}

@@ -1,0 +1,332 @@
+event = {
+	id = 8000601
+	country = ANG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555001 } # Antonio Lopes Mateus
+		command = { type = headofgovernment which = 555100 } # Antonio Lopes Mateus
+	}
+}
+
+event = {
+	id = 8000602
+	country = ANG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555002 } # Manoel Costa Marques Mano
+	}
+}
+
+event = {
+	id = 8000603
+	country = ANG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555101 } # Alvaro de Freitas Morna
+		command = { type = headofgovernment which = 555102 } # Alvaro de Freitas Morna
+	}
+}
+
+event = {
+	id = 8000604
+	country = ANG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555103 } # Vasco Lopes Alves
+		command = { type = headofgovernment which = 555104 } # Vasco Lopes Alves
+	}
+}
+
+event = {
+	id = 8000605
+	country = ANG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555105 } # Joao Lu?s Carvalho
+		command = { type = headofgovernment which = 555106 } # Joao Lu?s Carvalho
+	}
+}
+
+event = {
+	id = 8000606
+	country = ANG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555107 } # Manoel Gaivao
+		command = { type = headofgovernment which = 555108 } # Manoel Gaivao
+	}
+}
+
+event = {
+	id = 8000607
+	country = ANG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555109 } # Horacio Rebelo
+		command = { type = headofgovernment which = 555110 } # Horacio Rebelo
+	}
+}
+
+event = {
+	id = 8000608
+	country = ANG
+
+	name = "EVT_8000608_NAME"
+	desc = "EVT_8000608_DESC"
+	picture = "nwo\angolan_independence"
+	style = 1
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = "EVT_8000608_A"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 555111 } # Holden Alvaro Roberto
+		command = { type = headofgovernment which = 555112 } # Jonas Savimbi
+		command = { type = foreignminister which = 555016 } # Manuel Gracioa Tuluma
+		command = { type = armamentminister which = 555018 } # Joaquim Duarte David Costa
+		command = { type = ministerofsecurity which = 555021 } # Euclides da Costa Bravo
+		command = { type = ministerofintelligence which = 555023 } # Pedro de Paula Pinheido
+		command = { type = chiefofstaff which = 555026 } # Julio Goncalves de Campos
+		command = { type = chiefofarmy which = 555029 } # Alvaro de Freitas Morna
+		command = { type = chiefofnavy which = 555031 } # Paulo Tjipilica
+		command = { type = chiefofair which = 555033 } # Manuel Gracioa Tuluma
+	}
+}
+
+event = {
+	id = 8000611
+	country = ANG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		puppet = { country = ANG country = POR }
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555117 } # Camilo Rebocho Vaz
+		command = { type = headofgovernment which = 555118 } # Camilo Rebocho Vaz
+	}
+}
+
+event = {
+	id = 8000612
+	country = ANG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		puppet = { country = ANG country = POR }
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555119 } # Fernando Augusto Santos
+		command = { type = headofgovernment which = 555120 } # Fernando Augusto Santos
+	}
+}
+
+event = {
+	id = 8000613
+	country = ANG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		puppet = { country = ANG country = POR }		
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 555121 } # António Alva Rosa Coutinho
+		command = { type = headofgovernment which = 555122 } # António Alva Rosa Coutinho
+	}
+}
+
+event = {
+	id = 8000614
+	country = ANG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 555123 } # António Agostinho Neto
+		command = { type = headofgovernment which = 555124 } # Lopo do Nascimento
+	}
+}
+
+event = {
+	id = 8000615
+	country = ANG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 555125 } # José Eduardo dos Santos
+		command = { type = headofgovernment which = 555126 } # José Eduardo dos Santos
+	}
+}
+

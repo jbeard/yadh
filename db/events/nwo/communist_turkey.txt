@@ -1,0 +1,33 @@
+event = {
+	id = 8023401
+	country = U34
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 985001 } # Sefik Huesnue
+		command = { type = headofgovernment which = 985002 } # Pertev Naili Boratav
+		command = { type = foreignminister which = 985003 } # Nazim Hikmet Ran
+		command = { type = armamentminister which = 985004 } # Refik Saydam
+		command = { type = ministerofsecurity which = 985009 } # Abbas Cevat
+		command = { type = ministerofintelligence which = 985011 } # Mumtaz ?kmen
+		command = { type = chiefofstaff which = 985005 } # Abbas Cevat
+		command = { type = chiefofarmy which = 985006 } # Pertev Naili Boratav
+		command = { type = chiefofnavy which = 985007 } # Ismael Erim
+		command = { type = chiefofair which = 985008 } # Refik Saydam
+	}
+}
+

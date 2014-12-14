@@ -1,0 +1,997 @@
+#############################################################################################
+#
+#	New World Order 2 by Bizon
+#	The Crumbling Empire
+#	IDs: 834****
+#	
+#############################################################################################
+
+### PHASE ONE: UNITED KINGDOM SURRENDERS
+
+# The UK is alone at war and the war seems to be lost
+event = {
+	id = 8340000
+	country = ENG
+	persistent = yes
+
+	name = EVT_8340000_NAME
+	desc = EVT_8340000_DESC
+	picture = nwo\coventry_cathedral
+	style = 1
+
+	trigger = {
+		OR = {
+			control = { province = 56 data = GER } # Paris
+			AND = {
+				alliance = { country = GER country = FRA }
+				control = { province = 56 data = FRA } # Paris
+			}
+		}
+		control = { province = 19 data = GER } #London
+		OR = {
+			AND = {
+				lost_VP = { country = ENG value = 60 }
+				lost_IC = { country = ENG value = 60 }
+				NOT = {
+					war = { country = USA country = GER }
+					war = { country = SOV country = GER }
+				}
+			}
+			AND = {
+				lost_VP = { country = ENG value = 70 }
+				lost_IC = { country = ENG value = 70 }
+				NOT = {	war = { country = USA country = GER } }
+				war = { country = SOV country = GER }
+			}
+			AND = {
+				lost_VP = { country = ENG value = 75 }
+				lost_IC = { country = ENG value = 75 }
+				war = { country = USA country = GER }
+				NOT = { war = { country = SOV country = GER } }
+			}
+			AND = {
+				lost_VP = { country = ENG value = 85 }
+				lost_IC = { country = ENG value = 85 }
+				war = { country = USA country = GER }
+				war = { country = SOV country = GER }
+			}
+		}
+		NOT = { flag = the_crumbling_empire }
+		NOT = { event = 8340001 }
+	}
+
+    date = { day = 0 month = january year = 1936 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		ai_chance = 50
+		name = EVT_8340000_A
+		command = { type = dissent value = -5 }
+		command = { type = setflag which = the_crumbling_empire }
+		command = { type = trigger which = 8340001 }
+	}
+	action = {
+		ai_chance = 50
+		trigger = { NOT = { dissent = 30 } }
+		name = EVT_8340000_B
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = { # Germany answers the British call to surrender
+	id = 8340001
+	country = GER
+
+	name = EVT_8340001_NAME
+	desc = EVT_8340001_DESC
+	picture = nwo\aircrafts_over_westminster
+	style = 1
+
+	# Dismantle the Empire but leave British Isles
+	action = {
+		ai_chance = 60
+		name = EVT_8340001_A
+		command = { type = dissent value = -3 }
+		command = { type = belligerence value = 15 }
+		command = { type = setflag which = isolation_of_uk }
+		command = { type = trigger which = 8341000 }
+	}
+	# Take some lands and leave British Isles
+	action = {
+		ai_chance = 25
+		name = EVT_8340001_B
+		command = { type = dissent value = 3 }
+		command = { type = setflag which = dissolution_of_uk }
+		command = { type = trigger which = 8341000 }
+	}	
+	# Dismantle the United Kingdom completely!
+	action = {
+		ai_chance = 15
+		name = EVT_8340001_C
+		command = { type = belligerence value = 50 }
+		command = { type = dissent value = 15 }
+		command = { type = setflag which = annexation_of_uk }
+		command = { type = trigger which = 8341000 }
+	}
+	# Continue the war
+	action = {
+		ai_chance = 0
+		name = EVT_8340001_D
+		command = { type = dissent value = 10 }
+		command = { type = clrflag which = the_crumbling_empire }
+	}
+}
+
+### PHASE TWO: UNITED KINGDOM DISMANTLES ITS SPHERE OF INFLUENCE
+
+event = {
+	id = 8341000
+	country = ENG
+	save_date = yes
+
+	name = EVT_8341000_NAME
+	desc = EVT_8341000_DESC
+	picture = nwo\fall_of_united_kingdom
+	style = 1
+	
+	action = {
+		name = EVT_8341000_A
+		
+		# Churchill steps down
+		command = { type = headofgovernment which = 10125 } # Lord Halifax
+		# Vassalizations end
+		command = { type = end_mastery which = NZL }
+		command = { type = end_mastery which = AUS }
+		command = { type = end_mastery which = CAN }
+		command = { type = end_mastery which = SAF }
+		command = { type = end_mastery which = IRQ }
+		command = { type = end_mastery which = NEP }
+		command = { type = end_mastery which = BHU }
+		command = { type = end_mastery which = YEM }
+		command = { type = end_mastery which = OMN }
+		command = { type = end_mastery which = ETH }
+		command = { type = end_mastery which = U02 }
+		command = { type = end_mastery which = EGY }
+		
+	}	
+}
+
+# Minor British Allies sign peace
+
+event = {
+	id = 8341001
+	tag = { IRQ NEP BHU YEM OMN ETH EGY }
+	persistent = yes
+
+	name = EVT_8341001_NAME
+	desc = EVT_8341001_DESC
+	picture = nwo\british_dominions
+	style = 1
+
+	trigger = {
+		flag = the_crumbling_empire
+		event = { id = 8341000 days = 3 }
+		war = { country = GER }
+		NOT = { local_flag = event_8341001 }
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8341001_A
+		ai_chance = 100
+		
+		command = { type = peace which = GER value = 1 }		
+		command = { type = peace which = ITA value = 1 }	
+		command = { type = peace which = JAP value = 1 }
+		command = { type = local_setflag which = event_8341001 }
+		command = { type = leave_alliance }	
+	}	
+	
+	action = {
+		name = EVT_8341001_B
+		ai_chance = 0
+		
+		command = { type = local_setflag which = event_8341001 }
+		command = { type = leave_alliance }	
+	}	
+}
+
+### PHASE THREE: INSTRUMENT OF SURRENDER IS SIGNED
+
+event = { # The surrender instrument is signed
+	id = 8342000
+	country = ENG
+	save_date = yes
+
+	name = EVT_8342000_NAME
+	desc = EVT_8342000_DESC
+	picture = nwo\nazi_in_london
+	style = 1
+	
+	trigger = {
+		flag = the_crumbling_empire
+		event = { id = 8341000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8342000_A
+		
+		# UK leaves the Allies and makes peace	
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = leave_alliance }	
+		
+		# Italy inherits Egypt
+		command = { trigger = { alliance = { country = GER country = ITA } exists = EGY } type = trigger which = 8342004 }
+		
+		# Territorial cessions
+		command = { type = trigger which = 8342007 }
+			
+		# Disarm UK
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+		
+		# Give a couple of divisions	
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+	}
+
+}
+
+event = {
+	id = 8342007
+	country = ENG
+
+	name = EVT_8342007_NAME
+	desc = EVT_8342007_DESC
+	picture = nwo\nazi_in_london
+	style = 1
+	
+	## Germany is in alliance with Italy
+	action = {
+		name = EVT_8342007_A
+		trigger = { alliance = { country = GER country = ITA } }
+		
+		# Events for independence or secession
+		command = { type = independence which = JOR value = 1 }
+		command = { type = independence which = IRQ value = 1 }
+		command = { type = independence which = PAL value = 1 }
+		command = { type = independence which = PER value = 1 }
+		command = { type = independence which = GUY value = 1 } # Guyana
+		command = { type = independence which = U98 value = 1 } # Trinidad and Tobago
+		command = { type = independence which = U89 value = 1 } # Jamaica
+        
+		# Cede Egypt, Sudan, Somalia, Libya, Ethiopia to Italy (or Germany)
+		command = { type = secederegion which = ITA value = "Egypt" when = 1 }
+		command = { type = secederegion which = ITA value = "Sudan" when = 1 }
+		command = { type = secederegion which = ITA value = "Horn of Africa" when = 1 }
+		command = { type = secederegion which = ITA value = "Libya" when = 1 }
+		command = { type = secederegion which = ITA value = "Ethiopia" when = 1 }
+		
+		# Cede Sinai to Palestine (or Germany)
+		command = { type = secedearea which = PAL value = "Palestine" when = 1 }
+		command = { type = secedearea which = ITA value = "Palestine" when = 1 }
+		command = { type = secedearea which = PAL value = "Suez Channel Area" when = 1 }
+		command = { type = secedearea which = ITA value = "Suez Channel Area" when = 1 }
+
+		# Cede Kuwait to Iraq (or Germany)
+		command = { type = secedeprovince which = IRQ value = 1041 when = 1 }
+		command = { type = secedeprovince which = GER value = 1041 when = 1 }
+		
+		# Cede Trucial States to Oman (or Germany)
+		command = { type = secedearea which = OMN value = "Persian Gulf Coast" when = 1 }
+		command = { type = secedearea which = GER value = "Persian Gulf Coast" when = 1 }
+		
+		# Cede British Asia to Japan (or Germany/USA)
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "Indonesia" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "Indochine" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "India" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "China" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "Philippines" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "New Guinea" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "South Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "North Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "American Pacific" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Indonesia" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Indochine" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "India" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "China" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Philippines" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "New Guinea" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "South Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "North Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "American Pacific" when = 1 }
+		
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Indochine" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Siam" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "North Burma" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Burma" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Kra Peninsula" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Sumatra" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "South Borneo" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "West Java" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "East Java" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Celebes" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Flores_Timor" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Sunda Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Molucks" when = 1 }
+		command = { type = secedearea which = GER value = "Indochine" when = 1 }
+		command = { type = secedearea which = GER value = "Siam" when = 1 }
+		command = { type = secedearea which = GER value = "North Burma" when = 1 }
+		command = { type = secedearea which = GER value = "Burma" when = 1 }
+		command = { type = secedearea which = GER value = "Kra Peninsula" when = 1 }
+		command = { type = secedearea which = GER value = "Sumatra" when = 1 }
+		command = { type = secedearea which = GER value = "South Borneo" when = 1 }
+		command = { type = secedearea which = GER value = "West Java" when = 1 }
+		command = { type = secedearea which = GER value = "East Java" when = 1 }
+		command = { type = secedearea which = GER value = "Celebes" when = 1 }
+		command = { type = secedearea which = GER value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = GER value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = GER value = "Molucks" when = 1 }
+		
+		command = { type = secederegion which = GER value = "India" when = 1 }
+		command = { type = secederegion which = GER value = "China" when = 1 }
+		command = { type = secederegion which = GER value = "Philippines" when = 1 }
+		command = { type = secederegion which = GER value = "New Guinea" when = 1 }
+		command = { type = secederegion which = GER value = "South Solomon Islands" when = 1 }
+		command = { type = secederegion which = GER value = "North Solomon Islands" when = 1 }
+		command = { type = secederegion which = GER value = "American Pacific" when = 1 }
+		
+		# Cede British America to USA (or Germany)
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Grand Colombia" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Caribbean" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Central America" when = 1 }
+		command = { type = secederegion which = GER value = "Grand Colombia" when = 1 }
+		command = { type = secederegion which = GER value = "Caribbean" when = 1 }
+		command = { type = secederegion which = GER value = "Central America" when = 1 }
+		
+		# Cede Gibraltar to Spain (or Germany)
+		command = { type = secedeprovince which = SPA value = 348 when = 1 }
+		command = { type = secedeprovince which = SPR value = 348 when = 1 }
+		command = { type = secedeprovince which = GER value = 348 when = 1 }
+		
+		# Cede Northern Ireland to Ireland (or Germany)
+		command = { type = secederegion which = IRE value = "Ireland" when = 1 }
+		command = { type = secederegion which = GER value = "Ireland" when = 1 }
+		
+		# Cede Mediterranean to Italy (or Germany)
+		command = { type = secederegion which = ITA value = "Italy" when = 1 }
+		command = { type = secederegion which = ITA value = "Balkan" when = 1 }
+		command = { type = secederegion which = ITA value = "Anatolia" when = 1 }
+		
+		# Cede Newfoundland to Canada (or Germany)
+		command = { type = secedearea which = CAN value = "New Foundland" when = 1 }
+		command = { type = secedearea which = GER value = "New Foundland" when = 1 }
+	}
+	
+	## Germany is not in alliance with Italy
+	action = {
+		name = EVT_8342007_A
+		trigger = { NOT = { alliance = { country = GER country = ITA } } }
+		
+		# Events for independence or secession
+		command = { type = independence which = JOR value = 1 }
+		command = { type = independence which = IRQ value = 1 }
+		command = { type = independence which = PAL value = 1 }
+		command = { type = independence which = PER value = 1 }
+		command = { type = independence which = GUY value = 1 } # Guyana
+		command = { type = independence which = U98 value = 1 } # Trinidad and Tobago
+		command = { type = independence which = U89 value = 1 } # Jamaica
+        
+		# Cede Egypt, Sudan, Somalia, Libya, Ethiopia to Italy (or Germany)
+		command = { type = secederegion which = GER value = "Egypt" when = 1 }
+		command = { type = secederegion which = GER value = "Sudan" when = 1 }
+		command = { type = secederegion which = GER value = "Horn of Africa" when = 1 }
+		command = { type = secederegion which = GER value = "Libya" when = 1 }
+		command = { type = secederegion which = GER value = "Ethiopia" when = 1 }
+		
+		# Cede Sinai to Palestine (or Germany)
+		command = { type = secedearea which = PAL value = "Palestine" when = 1 }
+		command = { type = secedearea which = GER value = "Palestine" when = 1 }
+		command = { type = secedearea which = PAL value = "Suez Channel Area" when = 1 }
+		command = { type = secedearea which = GER value = "Suez Channel Area" when = 1 }
+		
+		# Cede Kuwait to Iraq (or Germany)
+		command = { type = secedeprovince which = IRQ value = 1041 when = 1 }
+		command = { type = secedeprovince which = GER value = 1041 when = 1 }
+		
+		# Cede Trucial States to Oman (or Germany)
+		command = { type = secedearea which = OMN value = "Persian Gulf Coast" when = 1 }
+		command = { type = secedearea which = GER value = "Persian Gulf Coast" when = 1 }
+		
+		# Cede British Asia to Japan (or Germany/USA)
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "Indonesia" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "Indochine" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "India" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "China" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "Philippines" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "New Guinea" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "South Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "North Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secederegion which = JAP value = "American Pacific" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Indonesia" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Indochine" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "India" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "China" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Philippines" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "New Guinea" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "South Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "North Solomon Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "American Pacific" when = 1 }
+		
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Indochine" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Siam" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "North Burma" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Burma" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Kra Peninsula" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Sumatra" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "South Borneo" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "West Java" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "East Java" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Celebes" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Flores_Timor" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Sunda Islands" when = 1 }
+		command = { trigger = { NOT = { event = 8325000 } } type = secedearea which = JAP value = "Molucks" when = 1 }
+		command = { type = secedearea which = GER value = "Indochine" when = 1 }
+		command = { type = secedearea which = GER value = "Siam" when = 1 }
+		command = { type = secedearea which = GER value = "North Burma" when = 1 }
+		command = { type = secedearea which = GER value = "Burma" when = 1 }
+		command = { type = secedearea which = GER value = "Kra Peninsula" when = 1 }
+		command = { type = secedearea which = GER value = "Sumatra" when = 1 }
+		command = { type = secedearea which = GER value = "South Borneo" when = 1 }
+		command = { type = secedearea which = GER value = "West Java" when = 1 }
+		command = { type = secedearea which = GER value = "East Java" when = 1 }
+		command = { type = secedearea which = GER value = "Celebes" when = 1 }
+		command = { type = secedearea which = GER value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = GER value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = GER value = "Molucks" when = 1 }
+		
+		command = { type = secedearea which = GER value = "Diego Garcia Island" when = 1 }
+		command = { type = secederegion which = GER value = "India" when = 1 }
+		command = { type = secederegion which = GER value = "China" when = 1 }
+		command = { type = secederegion which = GER value = "Philippines" when = 1 }
+		command = { type = secederegion which = GER value = "New Guinea" when = 1 }
+		command = { type = secederegion which = GER value = "South Solomon Islands" when = 1 }
+		command = { type = secederegion which = GER value = "North Solomon Islands" when = 1 }
+		command = { type = secederegion which = GER value = "American Pacific" when = 1 }
+		
+		# Cede British America to USA (or Germany)
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Grand Colombia" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Caribbean" when = 1 }
+		command = { trigger = { NOT = { event = 8355000 } } type = secederegion which = USA value = "Central America" when = 1 }
+		command = { type = secederegion which = GER value = "Grand Colombia" when = 1 }
+		command = { type = secederegion which = GER value = "Caribbean" when = 1 }
+		command = { type = secederegion which = GER value = "Central America" when = 1 }
+		
+		# Cede Gibraltar to Spain (or Germany)
+		command = { type = secedeprovince which = SPA value = 348 when = 1 }
+		command = { type = secedeprovince which = SPR value = 348 when = 1 }
+		command = { type = secedeprovince which = GER value = 348 when = 1 }
+		
+		# Cede Northern Ireland to Ireland (or Germany)
+		command = { type = secederegion which = IRE value = "Ireland" when = 1 }
+		command = { type = secederegion which = GER value = "Ireland" when = 1 }
+		
+		# Cede Mediterranean to Italy (or Germany)
+		command = { type = secederegion which = GER value = "Italy" when = 1 }
+		command = { type = secederegion which = GER value = "Balkan" when = 1 }
+		command = { type = secederegion which = GER value = "Anatolia" when = 1 }
+		
+		# Cede Newfoundland to Canada (or Germany)
+		command = { type = secedearea which = CAN value = "New Foundland" when = 1 }
+		command = { type = secedearea which = GER value = "New Foundland" when = 1 }
+	}
+
+}
+
+event = {
+	id = 8342004
+	country = ITA
+
+	name = EVT_8342004_NAME
+	desc = EVT_8342004_DESC
+	picture = nwo\nazi_in_london
+	style = 1
+
+	action = {
+		name = EVT_8342004_A
+		ai_chance = 95
+		command = { type = inherit which = EGY }	
+	}
+	
+	action = {
+		name = EVT_8342004_B
+		ai_chance = 5
+		command = { type = make_puppet which = EGY }	
+	}
+}
+
+### Dismantling Empire in Africa
+
+event = {
+	id = 8342005
+	country = ENG
+
+	name = EVT_8342005_NAME
+	desc = EVT_8342005_DESC
+	picture = nwo\british_dominions
+	style = 1
+	
+	trigger = {
+		flag = the_crumbling_empire
+		OR = {
+			flag = dissolution_of_uk
+			flag = annexation_of_uk
+		}
+		event = { id = 8342000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8342005_A
+
+		command = { type = independence which = GLD value = 1 } # Ghana
+		command = { type = independence which = SIE value = 1 } # Sierra Leone
+		command = { type = independence which = U86 value = 1 } # Gambia
+		command = { type = independence which = NIG value = 1 } # Nigeria
+		command = { type = independence which = U70 value = 1 } # Uganda
+		command = { type = independence which = U90 value = 1 } # Kenya
+		command = { type = independence which = U97 value = 1 } # Tanganyika
+		command = { type = independence which = RHO value = 1 } # Rhodesia
+		
+		# Cede rest of British Africa to Germany
+		command = { type = secederegion which = GER value = "East Africa" when = 1 }
+		command = { type = secederegion which = GER value = "South Africa" when = 1 }
+	}
+}
+
+### Dismantling Empire in Asia
+
+event = {
+	id = 8342006
+	country = ENG
+	picture = nwo\british_dominions
+	style = 1
+
+	name = EVT_8342006_NAME
+	desc = EVT_8342006_DESC
+	
+	trigger = {
+		flag = the_crumbling_empire
+		OR = {
+			flag = dissolution_of_uk
+			flag = annexation_of_uk
+		}
+		event = { id = 8342000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8342006_A
+
+		command = { type = independence which = U75 value = 1 } # Singapore
+		command = { type = independence which = BRU value = 1 } # Brunei
+		command = { type = independence which = SAR value = 1 } # Sarawak
+		command = { type = independence which = MLY value = 1 } # Malaysia
+		command = { type = independence which = U83 value = 1 } # Ceylon
+
+	}
+}
+
+### PHASE FOUR: FATE OF BRITISH ISLES IS DECIDED
+
+# Taking care of British Isles - lenient peace terms
+
+event = { 
+	id = 8343000
+	country = GER
+	save_date = yes
+
+	name = EVT_8343000_NAME
+	desc = EVT_8343000_DESC
+	picture = nwo\foggy_london
+	style = 1
+	
+	trigger = {
+		flag = the_crumbling_empire
+		OR = {
+			flag = isolation_of_uk
+			flag = dissolution_of_uk
+		}
+		event = { id = 8342000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8343000_A #"Install isolationist government and invite HRH Edward VIII"
+		ai_chance = 55
+		command = { type = set_relation which = ENG value = -50 }
+		command = { type = trigger which = 8343001 }
+	}
+	
+	action = {
+		name = EVT_8343000_B #"Install isolationist government"
+		ai_chance = 35
+		command = { type = set_relation which = ENG value = 100 }
+		command = { type = trigger which = 8343002 }
+	}
+	
+	action = {
+		name = EVT_8343000_C #"Install Fascist dictatorship"
+		ai_chance = 10
+		command = { type = belligerence value = 25 }
+		command = { type = set_relation which = ENG value = 100 }
+		command = { type = make_puppet which = ENG }
+		command = { type = trigger which = 8343003 }
+	}	
+}
+
+event = { 
+	id = 8343001
+	country = ENG
+
+	name = EVT_8343001_NAME
+	desc = EVT_8343001_DESC
+	picture = nwo\edward_viii_hitler
+	style = 1
+	
+	action = {
+		name = EVT_8343001_A
+		
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = professional_army value = 0 }
+		command = { type = set_domestic which = defense_lobby value = 8 }
+		command = { type = set_domestic which = interventionism value = 0 }
+
+		command = { type = headofstate which = 10013 } # Edward VIII
+		command = { type = headofgovernment which = 10125 } # Lord Halifax
+		command = { type = foreignminister which = 10126 } # Viscount Templewood
+		command = { type = armamentminister which = 10329 } # Montagu Collet Norman
+		command = { type = ministerofsecurity which = 10127 } # Sir John Anderson
+		command = { type = chiefofstaff which = 10091 } # Lord John Gort
+		command = { type = chiefofarmy which = 10101 } # Sir Cyril Deverell
+		command = { type = chiefofnavy which = 10110 } # Sir Andrew Cunningham
+		command = { type = chiefofair which = 10119 } # Sir Cyril Newall
+		
+		
+	}
+}
+
+event = { 
+	id = 8343002
+	country = ENG
+
+	name = EVT_8343002_NAME
+	desc = EVT_8343002_DESC
+	picture = nwo\lord_halifax
+	style = 1
+	
+	action = {
+		name = EVT_8343002_A
+		
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 4 }
+		command = { type = set_domestic which = professional_army value = 0 }
+		command = { type = set_domestic which = defense_lobby value = 8 }
+		command = { type = set_domestic which = interventionism value = 0 }
+
+		command = { type = headofstate which = 10014 } # George VI
+		command = { type = headofgovernment which = 10125 } # Lord Halifax
+		command = { type = foreignminister which = 10126 } # Viscount Templewood
+		command = { type = armamentminister which = 10037 } # John Simon
+		command = { type = ministerofsecurity which = 10127 } # Sir John Anderson
+		command = { type = chiefofstaff which = 10091 } # Lord John Gort
+		command = { type = chiefofarmy which = 10101 } # Sir Cyril Deverell
+		command = { type = chiefofnavy which = 10110 } # Sir Andrew Cunningham
+		command = { type = chiefofair which = 10119 } # Sir Cyril Newall
+	}
+}
+
+event = { 
+	id = 8343003
+	country = ENG
+
+	name = EVT_8343003_NAME
+	desc = EVT_8343003_DESC
+	picture = nwo\oswald_mosley
+	style = 1
+
+	action = {
+		name = "OK"
+		
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = free_market value = 3 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = set_domestic which = professional_army value = 0 }
+		command = { type = set_domestic which = defense_lobby value = 8 }
+		command = { type = set_domestic which = interventionism value = 0 }
+
+		command = { type = headofstate which = 10013 } # Edward VIII
+		command = { type = headofgovernment which = 10020 } # Oswald Mosley
+		command = { type = foreignminister which = 10026 } # William Joyce
+		command = { type = armamentminister which = 10047 } # Neil Francis-Hawkins
+		command = { type = ministerofsecurity which = 10066 } # Arnold Spencer-Leese
+		command = { type = chiefofstaff which = 10098 } # J.F.C. Fuller
+		command = { type = chiefofarmy which = 10107 } # J.F.C. Fuller
+		command = { type = chiefofnavy which = 10113 } # Sir Barry E. Domvile
+		command = { type = chiefofair which = 10120 } # Sir John Chamier
+	}
+	
+}
+
+event = { 
+	id = 8343010
+	country = GER
+
+	name = EVT_8343010_NAME
+	desc = EVT_8343010_DESC
+	picture = nwo\dark_westminster
+	style = 1
+	
+	trigger = {
+		flag = the_crumbling_empire
+		flag = annexation_of_uk
+		event = { id = 8342000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8343010_A
+		
+		command = { type = inherit which = ENG }
+		command = { type = trigger which = 8343011 }
+	}
+}
+
+event = { 
+	id = 8343011
+	country = GER
+
+	name = EVT_8343011_NAME
+	desc = EVT_8343011_DESC
+	picture = nwo\independence_of_scotland
+	style = 1
+	
+	action = {
+		name = EVT_8343011_A
+		
+		# Grant independence to Scotland and Nazi England
+		command = { type = independence which = SCO value = 0 }
+		command = { type = independence which = U73 value = 0 }
+	}
+}
+
+### PHASE FIVE: GERMAN SPHERE OF INFLUENCE IS SET UP
+
+event = { 
+	id = 8344000
+	country = GER
+	save_date = yes
+
+	name = EVT_8344000_NAME
+	desc = EVT_8344000_DESC
+	picture = nwo\hitler_final_victory
+	style = 1
+	
+	trigger = {
+		flag = the_crumbling_empire
+		OR  = {
+			event = { id = 8343000 days = 30 }
+			NOT = { exists = ENG }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8344000_A
+
+		command = { type = make_puppet which = U73 }
+		command = { type = alliance which = U73 }
+		command = { type = make_puppet which = SCO }
+		command = { type = alliance which = SCO }
+		command = { type = make_puppet which = JOR }
+		command = { type = alliance which = JOR }
+		command = { type = make_puppet which = PAL }
+		command = { type = alliance which = PAL }
+		command = { type = make_puppet which = IRQ }
+		command = { type = alliance which = IRQ }
+		command = { type = make_puppet which = OMN }
+		command = { type = alliance which = OMN }
+		command = { type = make_puppet which = YEM }
+		command = { type = alliance which = YEM }
+		
+		# Sphere of Influence
+		command = { type = trigger which = 8344001 } # Japan
+		command = { type = trigger which = 8344002 } # Ireland
+		command = { type = trigger which = 8344003 } # Italy
+		command = { type = trigger which = 8344004 } # Spain
+	}
+	
+}
+
+event = { 
+	id = 8344001
+	country = JAP
+
+	name = EVT_8344001_NAME
+	desc = EVT_8344001_DESC
+	picture = nwo\japanese_military_victory
+	style = 1
+
+	action = {
+		name = EVT_8344001_A
+		ai_chance = 80
+		trigger = { NOT = { alliance = { country = GER country = JAP } } }
+		command = { type = alliance which = GER }
+		command = { type = relation which = GER value = 200 }
+		command = { type = make_puppet which = U75 }
+		command = { type = alliance which = U75 }
+		command = { type = make_puppet which = BRU }
+		command = { type = alliance which = BRU }
+		command = { type = make_puppet which = SAR }
+		command = { type = alliance which = SAR }
+		command = { type = make_puppet which = MLY }
+		command = { type = alliance which = MLY }
+		command = { type = make_puppet which = BUR }
+		command = { type = alliance which = BUR }
+		command = { type = make_puppet which = PHI }
+		command = { type = alliance which = PHI }
+		command = { type = make_puppet which = INO }
+		command = { type = alliance which = INO }
+	}
+	
+	action = {
+		name = EVT_8344001_B
+		ai_chance = 20
+		command = { type = make_puppet which = U75 }
+		command = { type = alliance which = U75 }
+		command = { type = make_puppet which = BRU }
+		command = { type = alliance which = BRU }
+		command = { type = make_puppet which = SAR }
+		command = { type = alliance which = SAR }
+		command = { type = make_puppet which = MLY }
+		command = { type = alliance which = MLY }
+		command = { type = make_puppet which = BUR }
+		command = { type = alliance which = BUR }
+		command = { type = make_puppet which = PHI }
+		command = { type = alliance which = PHI }
+		command = { type = make_puppet which = INO }
+		command = { type = alliance which = INO }
+	}
+}
+
+event = { 
+	id = 8344002
+	country = IRE
+
+	name = EVT_8344002_NAME
+	desc = EVT_8344002_DESC
+	picture = nwo\hitler_final_victory
+	style = 1
+
+	action = {
+		name = EVT_8344002_A
+		ai_chance = 80
+		trigger = { NOT = { alliance = { country = GER } } }
+		command = { type = alliance which = GER }
+		command = { type = relation which = GER value = 200 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = political_left value = -2 }
+	}
+	
+	action = {
+		name = EVT_8344002_B
+		ai_chance = 20
+		command = { trigger = { alliance = { country = GER } } type = relation which = GER value = 100 }
+		command = { trigger = { NOT = { alliance = { country = GER } } } type = relation which = GER value = -100 }
+	}
+	
+}
+
+event = { 
+	id = 8344003
+	country = ITA
+
+	name = EVT_8344003_NAME
+	desc = EVT_8344003_DESC
+	picture = nwo\hitler_final_victory
+	style = 1
+
+	action = {
+		name = EVT_8344003_A
+		ai_chance = 80
+		trigger = { NOT = { alliance = { country = GER } } }
+		command = { type = alliance which = GER }
+		command = { type = relation which = GER value = 200 }
+	}
+	
+	action = {
+		name = EVT_8344003_B
+		ai_chance = 20
+		command = { trigger = { alliance = { country = GER } } type = relation which = GER value = 100 }
+		command = { trigger = { NOT = { alliance = { country = GER } } } type = relation which = GER value = -100 }
+	}
+	
+}
+
+event = { 
+	id = 8344004
+	country = SPA
+
+	name = EVT_8344004_NAME
+	desc = EVT_8344004_DESC
+	picture = nwo\hitler_final_victory
+	style = 1
+
+	action = {
+		name = EVT_8344004_A
+		ai_chance = 80
+		trigger = { NOT = { alliance = { country = GER } } }
+		command = { type = alliance which = GER }
+		command = { type = relation which = GER value = 200 }
+	}
+	
+	action = {
+		name = EVT_8344004_B
+		ai_chance = 20
+		command = { trigger = { alliance = { country = GER } } type = relation which = GER value = 100 }
+		command = { trigger = { NOT = { alliance = { country = GER } } } type = relation which = GER value = -100 }
+	}
+	
+}
+
+### THE END
+
+event = { 
+	id = 8345000
+	country = REB
+
+	name = AI_EVENT
+	
+	trigger = {
+		flag = the_crumbling_empire
+		event = { id = 8344000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = OK
+
+		command = { type = clrflag which = the_crumbling_empire }
+	}
+	
+}

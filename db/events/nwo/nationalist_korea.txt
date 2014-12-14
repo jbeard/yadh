@@ -1,0 +1,693 @@
+event = {
+	id = 8008101
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 265001 } # Syngman Rhee
+		command = { type = headofgovernment which = 265024 } # Lee Bom Suk
+		command = { type = foreignminister which = 265003 } # Kim Gyu Sik
+		command = { type = armamentminister which = 265004 } # Kim Chang Sook
+		command = { type = ministerofsecurity which = 265005 } # Cho Man Sik
+		command = { type = ministerofintelligence which = 265006 } # Cho So Ang
+	}
+}
+
+event = {
+	id = 8008102
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 265001 } # Syngman Rhee
+		command = { type = headofgovernment which = 265026 } # Chang Myon
+	}
+}
+
+event = {
+	id = 8008103
+	country = KOR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 265001 } # Syngman Rhee
+		command = { type = headofgovernment which = 265101 } # Baek Du-jin
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 265100 } # Cho Bong-am
+		command = { type = headofgovernment which = 265102 } # Lee Si-yeong
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8008104
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		headofstate = 265001
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265103 } # Syngman Rhee
+	}
+}
+
+event = {
+	id = 8008105
+	country = KOR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 265001 } # Syngman Rhee
+		command = { type = headofgovernment which = 265103 } # Syngman Rhee
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 265100 } # Cho Bong-am
+		command = { type = headofgovernment which = 265102 } # Lee Si-yeong
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+# April Revolution
+event = {
+	id = 8008106
+	country = KOR
+
+	name = EVT_8008106_NAME
+	desc = EVT_8008106_DESC
+	picture = "nwo\korean_april_revolution"
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = EVT_8008106_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 265104 } # Yun Bo-seon
+		command = { type = headofgovernment which = 265026 } # Chang Myon
+	}
+}
+
+# 5.16 coup d'etat
+event = {
+	id = 8008107
+	country = KOR
+
+	name = EVT_8008107_NAME
+	desc = EVT_8008107_DESC
+	picture = "nwo\korean_5_16_coup"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = EVT_8008107_A
+		ai_chance = 100
+		command = { type = dissent value = 15 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 265104 } # Yun Bo-seon
+		command = { type = headofgovernment which = 265105 } # Song Yo-chan
+	}
+}
+
+event = {
+	id = 8008108
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 265106 } # Park Chung Hee
+		command = { type = headofgovernment which = 265107 } # Kim Hyun-chul
+	}
+}
+
+event = {
+	id = 8008109
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265108 } # Chung Il-kwon
+	}
+}
+
+event = {
+	id = 8008110
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265109 } # Kim Jong-pil
+	}
+}
+
+event = {
+	id = 8008111
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = november year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265110 } # Choi Kyu-hah
+	}
+}
+
+event = {
+	id = 8008112
+	country = KOR
+
+	name = EVT_8008112_NAME
+	desc = EVT_8008112_DESC
+	picture = nwo\republic_of_korea_authoritarianism
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = december year = 1979 }
+	offset = 30
+	deathdate = { day = 30 month = may year = 1980 }
+
+	action = {
+		name = EVT_8008112_A
+		ai_chance = 100
+		command = { type = dissent value = 7 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 265111 } # Choi Kyu-hah
+		command = { type = headofgovernment which = 265112 } # Shin Hyun-hwak
+		command = { type = sleepminister which = 265106 } # Park Chung Hee
+	}
+}
+
+event = {
+	id = 8008113
+	country = KOR
+
+	name = EVT_8008113_NAME
+	desc = EVT_8008113_DESC
+	picture = nwo\republic_of_korea_authoritarianism
+	decision_picture = nwo\d_republic_of_korea_authoritarianism
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+	
+	decision = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = june year = 1980 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = EVT_8008113_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 265125 } # Chun Doo-hwan
+		command = { type = headofgovernment which = 265113 } # Nam Duck-woo
+	}
+}
+
+event = {
+	id = 8008114
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265114 } # Yoo Chang-soon
+	}
+}
+
+event = {
+	id = 8008115
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265115 } # Kim Sang-hyup
+	}
+}
+
+event = {
+	id = 8008116
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265116 } # Chin Lee-chong
+	}
+}
+
+event = {
+	id = 8008117
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265117 } # Lho Shin-yong
+	}
+}
+
+event = {
+	id = 8008118
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265118 } # Kim Chung-yul
+	}
+}
+
+event = {
+	id = 8008119
+	country = KOR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 265121 } # Roh Tae-woo
+		command = { type = headofgovernment which = 265122 } # Lee Hyun-jae
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 265119 } # Kim Young-sam
+		command = { type = headofgovernment which = 265120 } # Kim Dae-jung
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8008120
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265123 } # Kang Young-hoon
+	}
+}
+
+event = {
+	id = 8008121
+	country = KOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 265124 } # Chung Won-shik
+	}
+}
+
+### Fourth Republic
+
+event = {
+	id = 8008122
+	country = KOR
+
+	name = EVT_8008122_NAME
+	desc = EVT_8008122_DESC
+	picture = nwo\republic_of_korea_authoritarianism
+	decision_picture = nwo\d_republic_of_korea_authoritarianism
+	style = 1
+	
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = EVT_8008122_A
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -2 }
+	}
+}
+
+### Sixth Republic
+
+event = {
+	id = 8008123
+	country = KOR
+
+	name = EVT_8008123_NAME
+	desc = EVT_8008123_DESC
+	picture = nwo\republic_of_korea_democracy
+	decision_picture = nwo\d_republic_of_korea_democracy
+	style = 1
+	
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = EVT_8008123_A
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = freedom value = 3 }
+	}
+}

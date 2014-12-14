@@ -1,0 +1,296 @@
+event = {
+	id = 8028401
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800430 } # Pierre Bonnefont
+		command = { type = headofgovernment which = 800431 } # Pierre Bonnefont
+	}
+}
+
+event = {
+	id = 8028402
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800432 } # Max de Saint-F?lix
+		command = { type = headofgovernment which = 800433 } # Max de Saint-F?lix
+	}
+}
+
+event = {
+	id = 8028403
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1938 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800434 } # ?mile Buhot-Launay
+		command = { type = headofgovernment which = 800435 } # ?mile Buhot-Launay
+	}
+}
+
+event = {
+	id = 8028404
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800400 } # F?lix ?bou?
+		command = { type = headofgovernment which = 800404 } # F?lix ?bou?
+	}
+}
+
+event = {
+	id = 8028405
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800436 } # Pierre-Olivier Lapie
+		command = { type = headofgovernment which = 800437 } # Pierre-Olivier Lapie
+	}
+}
+
+event = {
+	id = 8028406
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800438 } # Andr? Latrille
+		command = { type = headofgovernment which = 800439 } # Andr? Latrille
+	}
+}
+
+event = {
+	id = 8028407
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800440 } # Jacques Rogu?
+		command = { type = headofgovernment which = 800441 } # Jacques Rogu?
+	}
+}
+
+event = {
+	id = 8028408
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800442 } # Paul Le Layec
+		command = { type = headofgovernment which = 800443 } # Paul Le Layec
+	}
+}
+
+event = {
+	id = 8028409
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800444 } # Henry de Mauduit
+		command = { type = headofgovernment which = 800445 } # Henry de Mauduit
+	}
+}
+
+event = {
+	id = 8028410
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800446 } # Charles Hanin
+		command = { type = headofgovernment which = 800447 } # Charles Hanin
+	}
+}
+
+event = {
+	id = 8028411
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800448 } # Ignace Colombani
+		command = { type = headofgovernment which = 800449 } # Ignace Colombani
+	}
+}
+
+event = {
+	id = 8028412
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800450 } # Ren? Troadec
+		command = { type = headofgovernment which = 800451 } # Gabriel Lisette
+	}
+}
+
+event = {
+	id = 8028413
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800452 } # Daniel Doustin
+		command = { type = headofgovernment which = 800406 } # Gontchom? Sahoulba
+	}
+}
+
+event = {
+	id = 8028414
+	country = U84
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 800453 } # Francois Tombalbaye
+		command = { type = headofgovernment which = 800405 } # Francois Tombalbaye
+	}
+}
+

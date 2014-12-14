@@ -1,0 +1,110 @@
+event = {
+	id = 8023301
+	country = U33
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 980001 } # Giorgis Siantos
+		command = { type = headofgovernment which = 980005 } # Evripidis Bakirtris
+		command = { type = foreignminister which = 980008 } # Militiades Porphyrogins
+		command = { type = armamentminister which = 980010 } # Giorgis Siantos
+		command = { type = ministerofsecurity which = 980013 } # Stratos Payioumtzis
+		command = { type = ministerofintelligence which = 980015 } # Evripidis Bakirtris
+		command = { type = chiefofstaff which = 980016 } # Stephanos Sarafis
+		command = { type = chiefofarmy which = 980017 } # Aris Velouchiotis
+		command = { type = chiefofnavy which = 980018 } # Militiades Porphyrogins
+		command = { type = chiefofair which = 980019 } # Nikos Beloyannis
+	}
+}
+
+event = {
+	id = 8023302
+	country = U33
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 980002 } # Nikos Zahariadis
+		command = { type = headofgovernment which = 980006 } # Markos Vaphiadis
+		command = { type = ministerofsecurity which = 980013 } # Stratos Payioumtzis
+	}
+}
+
+event = {
+	id = 8023303
+	country = U33
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 980100 } # Dimitrios Partsalidis
+	}
+}
+
+event = {
+	id = 8023304
+	country = U33
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 980101 } # Konstantinos Koligiannis
+		command = { type = headofgovernment which = 980102 } # Konstantinos Koligiannis
+	}
+}
+

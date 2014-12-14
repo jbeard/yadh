@@ -1,0 +1,635 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# Soviet Russia contains this events file. ;-) 
+# Event List:
+#SOV	13300310	The Treaty of Rapallo
+#SOV	13300311	Treaty of Kars
+#SOV	13300312	Hungary proposes an alliance
+#SOV	13300313	The Peace of Riga
+#SOV	13300314	Workers: Unite in the League of Nations!
+#SOV	13300316	Assassination attempt!
+#SOV	13300317	Death of Vladimir Lenin
+#SOV	13300318	Stalin consolidates power
+#SOV	13300319	First political purges
+#SOV	13300320	Tukhachevsky promoted to the Rank of Marshal
+#SOV	13300321	End of Russian Civil War	
+#SOV	13300322	End of Russian Civil War - Assured
+#SOV	14405000	Creation of the Cheka	
+#SOV	14405001	Return of Latvia's lands
+
+# Treaty of Rapallo
+event = { 
+	id = 13300310					
+ 	country = SOV											
+	
+	#triggered by U08/GER event 13300218
+	
+	name = "EVT_13300310_NAME"							
+	Desc = "EVT_13300310_DESC"
+	Picture = "Mol_Rib" 
+	
+	action = { 	
+		name = "Da!"		
+		ai_chance = 99	
+		command = { type = removecore which = 530 }
+		command = { type = removecore which = 531 }
+		command = { type = removecore which = 532 }
+		command = { type = secedearea which = FIN value = "Karelia" when = 1 }
+		command = { type = war which = GEO }
+		command = { type = war which = AZB }
+		command = { trigger = { not = { exists = TAN } } type = independence which = TAN value = 1 when = 0 }
+		command = { type = make_puppet which = TAN }
+		command = { type = make_puppet which = MON }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 120 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 120 }
+		command = { trigger = { not = { relation = { which = FIN value = 100 }} } type = set_relation which = FIN value = 100 }
+		command = { trigger = { not = { relation = { which = POL value = 100 }} } type = set_relation which = POL value = 100 }
+	}
+	action = { 	
+		name = "Net!"		
+		ai_chance = 1	
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = -125 }
+		command = { trigger = { exists = GER } type =	relation which =	GER value = -125 }
+		command = { type =	relation which = ENG value = -75 }
+		command = { type =	relation which = FRA value = -75 }
+		command = { type =	relation which = ITA value = -75 }
+		command = { type =	relation which = USA value = -75 }
+	} 			
+}	
+
+# Treaty of KArs
+event = { 
+	id = 13300311					
+ 	country = SOV																 
+	
+	#triggered by TUR event 13300411
+	
+	name = "EVT_13300311_NAME"							
+	Desc = "EVT_13300311_DESC"
+	Picture = "soviet_law" 
+	
+	action = { 	
+		name = "Nice, now about those rogue republics in the Kaukasus mountains."		
+		ai_chance = 99	
+		command = { type = relation which = TUR value = 25 }
+		command = { type = secedearea which = TUR value = "Anatolian North Coast" when = 1 }
+		command = { type = secedearea which = TUR value = "Eastern Anatolia" when = 1 }
+		command = { type = relation which =	PER value = 100 }
+		command = { type = relation which =	IRQ value = 100 }
+		command = { type = secedeprovince which = AZB value = 711 when = 2 }
+		command = { type = secedeprovince which = AZB value = 714 when = 2 }
+		command = { type = war which = GEO }
+		command = { type = war which = AZB }
+		command = { trigger = { not = { exists = TAN } } type = independence which = TAN value = 1 when = 0 }
+		command = { type = make_puppet which = TAN }
+		command = { type = make_puppet which = MON }
+		command = { type = belligerence value = -10 }
+		command = { type = relation which =	TUR value = 100 }
+		command = { type = relation which =	PER value = 100 }
+		command = { type = relation which =	IRQ value = 100 }
+		# Bugfix to prevent the soviets from demanding the cores from FIN
+		command = { type = removecore which = 530 } # Karelia 
+		command = { type = removecore which = 531 }
+		command = { type = removecore which = 532 }
+		command = { type = removecore which = 519 } # Salla/Lapland
+	}
+	action = { 	
+		name = "No deals with Capitalists!"		
+		ai_chance = 1	
+		command = { type =	relation which =	TUR value = -125 }
+		command = { type =	relation which =	PER value = -125 }
+		command = { type =	relation which =	IRQ value = -125 }
+		command = { type =	relation which =	ENG value = -75 }
+		command = { type =	relation which =	FRA value = -75 }
+		command = { type =	relation which =	ITA value = -75 }
+		command = { type =	relation which =	USA value = -75 }
+	} 			
+}
+
+# Hungary proposes an alliance
+event = {
+	id = 13300312
+	country = SOV	
+
+	# triggered by HUN 13301713
+
+	name = "Hungary proposes an alliance"
+	desc = "The recently established communist government of Hungary is asking for an alliance. What should we do?"
+	picture = "spread_revolution"
+	style = 2
+
+	action = {
+		name = "We are too busy with our own problems"
+		ai_chance = 100
+		command = { type = domestic which = interventionism value = -2 }
+	}
+
+	action = {
+		name = "We will fight together for bolshevism!"
+		ai_chance = 0
+		command = { type = alliance which = HUN }
+		command = { type = set_relation which = HUN value = 200 }
+	}
+}
+# Peace of Riga
+event = {
+	id = 13300313
+	country = SOV
+
+	#triggered by POL event 13300511
+
+	name = "EVT_13300313_NAME"
+	Desc = "EVT_13300313_DESC"
+	Picture = "soviet_strategic_defeat"
+
+	action = {
+		name = "Might be a good idea..."
+		ai_chance = 99
+		command = { type = peace which = POL value = 0 }
+		command = { type = trigger which = 13300512 }
+	}
+	action = {
+		name = "We can do this, even if it means further revolts."
+		ai_chance = 1
+		command = { type =  dissent value = 20 }
+		command = { type =  civil_war which = UKR }
+	}
+}
+
+# Workers: Unite in the League of Nations!
+event = { 
+	id = 13300314					
+ 	country = SOV											
+	
+	date = { day = 31 month = 11 year = 1933 }
+	offset = 180				 
+	deathdate = { day = 1 month = january year = 1935 }
+	
+	trigger = {
+		atwar = no
+		exists = GER
+		event = 2193501
+		or = {
+			event = 13300211
+			event = 13301411
+			event = 13300311
+		}
+	}
+	name = "EVT_13300314_NAME"							
+	Desc = "EVT_13300314_DESC"
+	Picture = "tannu_tuva" 
+	
+	action = { 	
+		name = "See what we can do!"		
+		ai_chance = 90	
+		command = { type = alliance where = 3 }
+		command = { type = alliance_leader which = SOV	where = 3 }
+		command = { type = alliance_name which = "commies" where = 3 }
+		command = { type = local_setflag which = lon_member }
+		command = { type = relation which =	GER value = -10 }
+		#army
+		command = { type = demobilize which = land when = 0 where = 0 value = 75 }
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_50 }
+		command = { type = local_setflag which = disarm_army_75 }
+		#navy
+		command = { type = demobilize which = naval when = 0 where = 0 value =	25 }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_setflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+		#airforce
+		command = { type = demobilize which = air when = 0 where = 0 value = 10 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_setflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+		command = { trigger = { not = { relation = { which = POL value = 100 }} } type = set_relation which = JAP value = 100 }
+		command = { trigger = { exists = CHI not = { relation = { which = POL value = 50 }} } type = set_relation which = CHI value = 50 }
+		command = { trigger = { exists = UCH not = { relation = { which = POL value = 50 }} } type = set_relation which = UCH value = 50 }
+		command = { trigger = { not = { relation = { which = ROM value = 50 }} } type = set_relation which = ROM value = 50 }
+		command = { trigger = { not = { relation = { which = LAT value = 50 }} } type = set_relation which = LAT value = 50 }
+		command = { trigger = { not = { relation = { which = EST value = 50 }} } type = set_relation which = EST value = 50 }
+		command = { trigger = { not = { relation = { which = LIT value = 50 }} } type = set_relation which = LIT value = 50 }
+	}
+	action = { 	
+		name = "This is not going to work anyway..."		
+		ai_chance = 10	
+		command = { type = alliance where = 3 }
+		command = { type = alliance_leader which = SOV	where = 3 }
+		command = { type = alliance_name which = "commies" where = 3 }
+		command = { type = relation which = ENG value = -25 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = relation which = FRA value = -25 }
+		command = { type = relation which = JAP value = -25 }
+	} 			
+}
+
+#############################################
+###### Death of Vladimir Lenin 
+#############################################
+
+# Assassination attempt
+event = {
+	id = 13300316
+	random = no
+	country = SOV
+	
+	trigger = { 
+		OR = { 
+			exists = UER # The Ufa Directory
+			exists = UTC # Volunteers' Army
+			exists = TRA # The Samara Government
+			exists = SIB # The Siberian Government
+			exists = PRI # The Arkhangelsk Government
+		}
+		atwar = yes 
+	}
+	
+	date = { day = 30	month = august year = 1918 }
+	offset = 1
+	deathdate = { day = 30	month = august year = 1930 }
+	
+	name = "EVT_13300316_NAME"
+	desc = "EVT_13300316_DESC"
+	
+	action = {
+		name = "He's badly injured!"
+		ai_chance = 85
+		#historical
+		command = { type = setflag which = lenin_wounded }
+	}
+	action = {
+		name = "He's dead, Iakov."
+		ai_chance = 5
+		command = { type = civil_war which = RUS }
+		command = { type = setflag which = lenin_murdered }
+		#TODO: extend this to a war between trotsky and stalin
+		command = { type = sleepminister which = 30107 } #lenin
+		command = { type = sleepminister which = 30111 } #lenin
+	}
+	action = {
+		name = "I'm a doctor, not a psychotherapist!"
+		ai_chance = 10
+		#nothing happens, the party suppress rumors about the assault.
+	}
+}
+
+# Death of Vladimir Lenin 
+event = {
+	id = 13300317
+	random = no
+	country = SOV
+	
+	trigger = {
+		OR = {
+			flag = lenin_wounded
+			year = 1930
+		}
+	} 
+	
+	name = "EVT_13300317_NAME"
+	desc = "EVT_13300317_DESC"
+	style = 2
+	picture = news_paper
+	
+	date = { day = 1	month = august year = 1924 }
+	offset = 60
+	deathdate = { day = 30	month = august year = 1931 }
+	
+	
+	
+	action = {
+		name = "I see Socialism in one State."
+		ai_chance = 100 
+		command = { type = headofstate which = 30001 }	 # Kalinin
+		command = { type = headofgovernment which = 30305 } # Stalin
+		command = { type = foreignminister which = 30301 } # Kamenev
+		command = { type = armamentminister which = 30313 } # Bukharin
+		command = { type = ministerofsecurity which = 30110 } # Petrovsky
+		command = { type = chiefofnavy which = 30128 } # Dybenko
+		command = { type = chiefofair which = 30010 } # Alksnis
+		command = { type = chiefofarmy which = 30125 } # Krylenko
+		command = { type = chiefofstaff which = 30300 } # Podvoisky
+		command = { type = sleepminister which = 30097 } #lenin
+		command = { type = sleepminister which = 30311 } #lenin
+		command = { type = sleepminister which = 30099 } #Trotsky
+		command = { type = sleepminister which = 30108 } #Trotsky
+		command = { type = sleepminister which = 30145 } #Trotsky
+		command = { type = sleepminister which = 30146 } #Trotsky
+	}
+	action = {
+		name = "We see permanent revolution!"
+		ai_chance = 0
+		command = { type = headofstate which = 30145 }	#Trotsky 
+		command = { type = headofgovernment which = 30146 } # Trotsky
+		command = { type = sleepminister which = 30097 } #lenin
+		command = { type = sleepminister which = 30311 } #lenin
+		command = { type = sleepminister which = 30304 } #stalin
+		command = { type = sleepminister which = 30305 } #stalin
+		command = { type = sleepminister which = 30309 } #stalin
+		command = { type = sleepminister which = 30011 } #stalin
+		command = { type = sleepminister which = 30046 } #stalin
+		command = { type = war which = POL }
+		command = { type = war which = HUN }
+		command = { type = war which = BUL }
+		command = { type = war which = ROM }
+		command = { type = war which = CZE }
+		command = { type = war which = YUG }
+		command = { type = war which = U08 }
+		command = { type = war which = JAP }
+		command = { type = belligerence value = 100 } 
+		command = { type = domestic which = interventionism value = 5 }
+		command = { type = domestic which = defense_lobby value = 5 }
+	}
+}	
+
+
+# Stalin consolidates power
+
+event = {
+	
+	id = 13300318
+	country = SOV
+	
+	
+	trigger = {
+		
+		random = 85
+		headofgovernment = 30305 # Stalin is HoG
+		
+	} 
+	
+	
+	date = { day = 1	month = january year = 1928 }
+	offset = 60
+	deathdate = { day = 30	month = august year = 1932 }
+	
+	name = "Stalin consolidates power"
+	desc = "By 1930, Stalin eliminated all the opposition within Communist Party and dominated the Politburo."
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "Comrade Stalin is right!"
+		ai_chance = 100
+		command = { type =	domestic which = democratic value = -1 }	# leninist to stalinist
+		command = { type =	domestic which = political_left value = 1 }
+		command = { type = headofstate which = 30309 }	# Stalin
+		command = { type = headofgovernment which = 30016 } # Molotov
+		command = { type = foreignminister which = 30003 } # Litvinov
+		command = { type = armamentminister which = 30004 } # Kaganovich
+		command = { type = ministerofsecurity which = 30006 } # Yan Berzin
+		command = { type = chiefofnavy which = 30009 } # Orlov
+		command = { type = chiefofair which = 30010 } # Alksnis
+		command = { type = chiefofarmy which = 30294 }	# voroshilov
+		command = { type = chiefofstaff which = 30298 } # Voroshilov
+	}
+	
+}	
+
+
+
+# First Political Purges
+event = {
+	
+	id = 13300319
+	country = SOV
+	persistent = no
+	
+	trigger = {
+		OR = { 
+			AND = { year = 1933 random = 1 } 
+			AND = { year = 1934 random = 5 } 
+			AND = { year = 1935 random = 10 } 
+			year = 1936 
+		}
+		OR= { 
+			headofstate = 30309 # Iosif in charge
+			headofstate = 30011 # Iosif in charge
+		}
+	}
+	
+	name = "First Political Purges"
+	desc = "EVT_13300319_DESC"
+	style = 2
+	picture = "purge_army"
+	
+	date = { day = 1 month = january year = 1933 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1963 }
+	
+	action = {
+		name = "Purge the traitors!"
+		#command = { type = sleepminister which = 30095 } # Trostky
+		#command = { type = sleepminister which = 30099 } # Trostky
+		#command = { type = sleepminister which = 30103 } # Trostky
+		command = { type = sleepminister which = 30313 } # Bukharin
+		command = { type = sleepminister which = 30301 } # Kamenev
+		command = { type = sleepminister which = 30114 } # Rykov
+		command = { type = sleepminister which = 30116 } # Rykov
+		command = { type = sleepminister which = 30115 } # Obolensky
+		command = { type = sleepminister which = 30110 } # Petrovsky
+		command = { type = sleepminister which = 30102 } # Chicherin
+		command = { type = sleepminister which = 30128 } # Dybenko
+		command = { type = sleepminister which = 30125 } # Krylenko
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		command = { trigger = { ai = yes ai = GER } type = dissent value = 10 }
+	}
+}
+# Promote Tukhachevsky
+event = {
+	
+	id = 13300320
+	country = SOV
+	
+	decision = { NOT = { event = 2007025 } } # Great Officer Purge
+	decision_trigger = { NOT = { event = 2007025 } } # Great Officer Purge
+	
+	trigger = {
+		
+		NOT = { event = 2007025 } # Great Officer Purge
+		OR = { 
+			AND = { year = 1933 random = 1 } 
+			AND = { year = 1934 random = 5 } 
+			AND = { year = 1935 random = 10 } 
+			year = 1936 
+		}
+	}
+	
+	name = "Tukhachevsky promoted to the Rank of Marshal"
+	desc = "EVT_13300320_DESC"
+	style = 2
+	picture = "Tukhachevsky"
+	decision_picture = "decision_tukhachevsky"
+	
+	date = { day = 1 month = april year = 1933 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1963 }
+	
+	action = {
+		name = "Great!"
+		ai_chance = 100
+		command = { type = chiefofstaff which = 30007 } # Tukhachevsky
+		command = { type = chiefofarmy which = 30008 } #	new Voroshilov
+		command = { type = sleepminister which = 30094 } # old voroshilov
+		command = { type = sleepminister which = 30098 } # old voroshilov
+		command = { type = add_leader_skill which = 30543 value = 1 } # Tukhachevsky
+		command = { type = gain_tech which = 2650 } # Post ww1 Tank IV 1934
+		command = { type = gain_tech which = 2030 } # Early Tank A9-A10, Pnz II, Hotchkiss H35, BT-5 1936
+		command = { type = gain_tech which = 1670 } # 1938 AIRBORNE INFANTRY
+		command = { type = dissent value = 2 } # Cavalry officers are opposed
+	}
+	action = {
+		ai_chance = 0
+		name = "No"
+		command = { type = dissent value = -5 } # Cavalry officers like this
+	}
+}
+
+
+# Victory in Civil War
+event = {
+	id = 13300321
+	country = SOV
+	
+	trigger = {
+		event = 2007520 # RCW happened
+		atwar = no	 
+		NOT = {	exists = UER }	# The Ufa Directory
+		NOT = {	exists = UTC }	# Volunteers' Army
+		NOT = {	exists = TRA }	# The Samara Government
+		NOT = {	exists = SIB }	# The Siberian Government
+		NOT = {	exists = PRI }	# The Arkhangelsk Government								
+	}
+	
+	name = "End of Russian Civil War"
+	desc = "EVT_13300321_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	
+	date = { day = 1 month = january year = 1917 }
+	offset = 30
+	deathdate = { day = 1 month = december year = 1963 }
+	
+	action = {
+		name = "Moskva shall be the peoples capital!"
+		command = { type = dissent value = -5 } 
+		command = { type = capital which = 572 } 
+		#balancing:
+		command = { type = industrial_modifier which = total value = -20 } #the USSR starts picking up pieces of the former empire...
+		command = { type = setflag which = RCW_Finished }
+	}
+}
+
+# Victory in Civil War - Assured
+event = {
+	id = 13300322
+	country = SOV
+	
+	trigger = {
+		ai = yes
+		event = 2007520 # RCW happened
+		atwar = yes	 
+		OR = {
+			exists = UER 	# The Ufa Directory
+			exists = UTC 	# Volunteers' Army
+			exists = TRA 	# The Samara Government
+			exists = SIB 	# The Siberian Government
+			exists = PRI	# The Arkhangelsk Government		
+		}
+	}
+	
+	name = "End of Russian Civil War"
+	desc = "EVT_13300321_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	
+	date = { day = 1 month = june year = 1925 }
+	offset = 30
+	deathdate = { day = 1 month = august year = 1930 }
+	
+	action = {
+		name = "Bolsheviki to power!"
+		command = { type = dissent value = -5 } 
+		command = { type = inherit which = UER }
+		command = { type = inherit which = UTC } 
+		command = { type = inherit which = TRA } 
+		command = { type = inherit which = SIB } 
+		command = { type = inherit which = PRI } 
+		command = { type = inherit which = UGS } # Northern Army
+		command = { type = dissent value = -5 } 
+		command = { type = capital which = 572 } 
+		#balancing:
+		command = { type = industrial_modifier which = total value = -20 } #the USSR starts picking up pieces of the former empire...
+		command = { type = setflag which = RCW_Finished }
+	}
+}
+
+# Creation of the Cheka
+event = {
+	id = 14405000
+	country = SOV
+	persistent = no
+
+	trigger = { 
+			AND = { dissent = 20 }
+			AND = { NOT = { event = 14405000 }
+			}
+		}	
+
+	date = { day = 25 month = october year = 1917 }
+	offset = 5
+	deathdate = { day = 25 month = october year = 1921 }
+
+	name = "Creation of the Cheka"
+	desc = "EVT_14405000_DESC"
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "For the motherland!"
+		command = { type = dissent value = -20 }
+	}
+}
+
+#	Return of Latvia's lands
+event = {
+	id = 14405001
+	country = SOV
+	
+	trigger = {
+		AND = { exists = LAT }
+		AND = { OR = { owned = { province = 267 data = SOV }
+						owned = { province = 268 data = SOV }
+						owned = { province = 269 data = SOV }
+						}
+					}
+				}	
+	
+	name = "Return of Latvia's lands"
+	desc = "It appears we have some of Latvia's land and so must return them"
+	
+	date = { day = 0 month = january year = 1918 }
+	offset = 10
+	deathdate = { day = 0 month = january year = 1921 }
+	
+	action = {
+		name = "Okay"
+		command = { type =	secedeprovince which = LAT value = 267 when = 2 }
+		command = { type =	secedeprovince which = LAT value = 268 when = 2 }
+		command = { type =	secedeprovince which = LAT value = 269 when = 2 }
+		}
+	}	

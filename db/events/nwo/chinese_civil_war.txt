@@ -1,0 +1,4013 @@
+#############################################################################################
+#	Chinese Civil War
+#############################################################################################
+
+### PRELUDE TO CCW
+######################################
+
+### Ceding Manchuria (and possibly other parts of China)
+
+event = { # Soviet Union cedes Manchuria (SOV)
+	id = 8200000
+	country = SOV
+
+	name = "EVT_8200000_NAME"
+	desc = "EVT_8200000_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+	
+	trigger = {
+		exists = CHC
+		flag = cold_war_pacific
+		NOT = { war = { country = SOV country = CHC } }
+		
+		OR = {
+			area = { area = "Anhui" country = -1 data = 1 value = 0 }
+			area = { area = "Chahar" country = -1 data = 1 value = 0 }
+			area = { area = "Gansu" country = -1 data = 1 value = 0 }
+			area = { area = "Guangdong" country = -1 data = 1 value = 0 }
+			area = { area = "Guangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Guizhou" country = -1 data = 1 value = 0 }
+			area = { area = "Heilongjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Hebei" country = -1 data = 1 value = 0 }
+			area = { area = "Henan" country = -1 data = 1 value = 0 }
+			area = { area = "Hubei" country = -1 data = 1 value = 0 }
+			area = { area = "Hunan" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangsu" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Jilin" country = -1 data = 1 value = 0 }
+			area = { area = "Liaoning" country = -1 data = 1 value = 0 }
+			area = { area = "Qinghai" country = -1 data = 1 value = 0 }
+			area = { area = "Rehe" country = -1 data = 1 value = 0 }
+			area = { area = "Shaanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Shandong" country = -1 data = 1 value = 0 }
+			area = { area = "Shanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Suiyuan_Ningxia" country = -1 data = 1 value = 0 }
+			area = { area = "Xinjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Xikang" country = -1 data = 1 value = 0 }
+			area = { area = "Zhejiang" country = -1 data = 1 value = 0 }
+			area = { area = "Fujian" country = -1 data = 1 value = 0 }
+			area = { area = "Sichuan" country = -1 data = 1 value = 0 }
+			area = { area = "Yunnan" country = -1 data = 1 value = 0 }
+		}
+		
+		NOT = { exists = MAN } # If it exists, the war is still ongoing
+		NOT = { exists = MEN } # If it exists, the war is still ongoing
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200000_A" #"OK"
+		ai_chance = 99
+		command = { type = relation which = CHC value = 150 }
+	
+		command = { type = secedearea which = CHC value = "Anhui" when = 1 }
+		command = { type = secedearea which = CHC value = "Chahar" when = 1 }
+		command = { type = secedearea which = CHC value = "Gansu" when = 1 }
+		command = { type = secedearea which = CHC value = "Guangdong" when = 1 }
+		command = { type = secedearea which = CHC value = "Guangxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Guizhou" when = 1 }
+		command = { type = secedearea which = CHC value = "Heilongjiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Hebei" when = 1 }
+		command = { type = secedearea which = CHC value = "Henan" when = 1 }
+		command = { type = secedearea which = CHC value = "Hubei" when = 1 }
+		command = { type = secedearea which = CHC value = "Hunan" when = 1 }
+		command = { type = secedearea which = CHC value = "Jiangsu" when = 1 }
+		command = { type = secedearea which = CHC value = "Jiangxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Jilin" when = 1 }
+		command = { type = secedearea which = CHC value = "Liaoning" when = 1 }
+		command = { type = secedearea which = CHC value = "Qinghai" when = 1 }
+		command = { type = secedearea which = CHC value = "Rehe" when = 1 }
+		command = { type = secedearea which = CHC value = "Shaanxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Shandong" when = 1 }
+		command = { type = secedearea which = CHC value = "Shanxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Suiyuan_Ningxia" when = 1 }
+		command = { type = secedearea which = CHC value = "Xinjiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Xikang" when = 1 }
+		command = { type = secedearea which = CHC value = "Zhejiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Fujian" when = 1 }
+		command = { type = secedearea which = CHC value = "Sichuan" when = 1 }
+		command = { type = secedearea which = CHC value = "Yunnan" when = 1 }
+
+		# Communists get military units
+		command = { type = trigger which = 8200005 }
+	}	
+	
+	action = {
+		name = "EVT_8200000_B" #"It is in our interest not to give it up"
+		ai_chance = 1
+		command = { type = relation which = CHC value = -100 }
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = 5 }
+	}	
+}
+
+### Ceding Manchuria (and possibly other parts of China), only CHI exists
+
+event = { # Soviet Union cedes Manchuria (SOV)
+	id = 8200001
+	country = SOV
+
+	name = "EVT_8200001_NAME"
+	desc = "EVT_8200001_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+
+	trigger = {
+		NOT = { exists = CHC }
+		exists = CHI
+		flag = cold_war_pacific
+		NOT = { war = { country = SOV country = CHI } }
+		
+		OR = {
+			area = { area = "Anhui" country = -1 data = 1 value = 0 }
+			area = { area = "Chahar" country = -1 data = 1 value = 0 }
+			area = { area = "Gansu" country = -1 data = 1 value = 0 }
+			area = { area = "Guangdong" country = -1 data = 1 value = 0 }
+			area = { area = "Guangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Guizhou" country = -1 data = 1 value = 0 }
+			area = { area = "Heilongjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Hebei" country = -1 data = 1 value = 0 }
+			area = { area = "Henan" country = -1 data = 1 value = 0 }
+			area = { area = "Hubei" country = -1 data = 1 value = 0 }
+			area = { area = "Hunan" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangsu" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Jilin" country = -1 data = 1 value = 0 }
+			area = { area = "Liaoning" country = -1 data = 1 value = 0 }
+			area = { area = "Qinghai" country = -1 data = 1 value = 0 }
+			area = { area = "Rehe" country = -1 data = 1 value = 0 }
+			area = { area = "Shaanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Shandong" country = -1 data = 1 value = 0 }
+			area = { area = "Shanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Suiyuan_Ningxia" country = -1 data = 1 value = 0 }
+			area = { area = "Xinjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Xikang" country = -1 data = 1 value = 0 }
+			area = { area = "Zhejiang" country = -1 data = 1 value = 0 }
+			area = { area = "Fujian" country = -1 data = 1 value = 0 }
+			area = { area = "Sichuan" country = -1 data = 1 value = 0 }
+			area = { area = "Yunnan" country = -1 data = 1 value = 0 }
+		}
+		
+		NOT = { exists = MAN } # If it exists, the war is still ongoing
+		NOT = { exists = MEN } # If it exists, the war is still ongoing
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200001_A" #"OK"
+		ai_chance = 90
+		command = { type = relation which = CHI value = 150 }
+		command = { type = secedearea which = CHI value = "Anhui" when = 1 }
+		command = { type = secedearea which = CHI value = "Chahar" when = 1 }
+		command = { type = secedearea which = CHI value = "Gansu" when = 1 }
+		command = { type = secedearea which = CHI value = "Guangdong" when = 1 }
+		command = { type = secedearea which = CHI value = "Guangxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Guizhou" when = 1 }
+		command = { type = secedearea which = CHI value = "Heilongjiang" when = 1 }
+		command = { type = secedearea which = CHI value = "Hebei" when = 1 }
+		command = { type = secedearea which = CHI value = "Henan" when = 1 }
+		command = { type = secedearea which = CHI value = "Hubei" when = 1 }
+		command = { type = secedearea which = CHI value = "Hunan" when = 1 }
+		command = { type = secedearea which = CHI value = "Jiangsu" when = 1 }
+		command = { type = secedearea which = CHI value = "Jiangxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Jilin" when = 1 }
+		command = { type = secedearea which = CHI value = "Liaoning" when = 1 }
+		command = { type = secedearea which = CHI value = "Qinghai" when = 1 }
+		command = { type = secedearea which = CHI value = "Rehe" when = 1 }
+		command = { type = secedearea which = CHI value = "Shaanxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Shandong" when = 1 }
+		command = { type = secedearea which = CHI value = "Shanxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Suiyuan_Ningxia" when = 1 }
+		command = { type = secedearea which = CHI value = "Xinjiang" when = 1 }
+		command = { type = secedearea which = CHI value = "Xikang" when = 1 }
+		command = { type = secedearea which = CHI value = "Zhejiang" when = 1 }
+		command = { type = secedearea which = CHI value = "Fujian" when = 1 }
+		command = { type = secedearea which = CHI value = "Sichuan" when = 1 }
+		command = { type = secedearea which = CHC value = "Yunnan" when = 1 }
+	}	
+	
+	action = {
+		name = "EVT_8200001_B" #"It is in our interest not to give it up"
+		ai_chance = 10
+		command = { type = relation which = CHI value = -100 }
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = 5 }
+	}	
+}
+
+event = { # Mongolia cedes Manchuria (SOV)
+	id = 8200002
+	country = MON
+
+	name = "EVT_8200002_NAME"
+	desc = "EVT_8200002_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+	
+	trigger = {
+		NOT = { exists = CHC }
+		flag = cold_war_pacific
+		NOT = { war = { country = MON country = CHC } }
+		
+		OR = {
+			area = { area = "Anhui" country = -1 data = 1 value = 0 }
+			area = { area = "Chahar" country = -1 data = 1 value = 0 }
+			area = { area = "Gansu" country = -1 data = 1 value = 0 }
+			area = { area = "Guangdong" country = -1 data = 1 value = 0 }
+			area = { area = "Guangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Guizhou" country = -1 data = 1 value = 0 }
+			area = { area = "Heilongjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Hebei" country = -1 data = 1 value = 0 }
+			area = { area = "Henan" country = -1 data = 1 value = 0 }
+			area = { area = "Hubei" country = -1 data = 1 value = 0 }
+			area = { area = "Hunan" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangsu" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Jilin" country = -1 data = 1 value = 0 }
+			area = { area = "Liaoning" country = -1 data = 1 value = 0 }
+			area = { area = "Qinghai" country = -1 data = 1 value = 0 }
+			area = { area = "Rehe" country = -1 data = 1 value = 0 }
+			area = { area = "Shaanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Shandong" country = -1 data = 1 value = 0 }
+			area = { area = "Shanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Suiyuan_Ningxia" country = -1 data = 1 value = 0 }
+			area = { area = "Xinjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Xikang" country = -1 data = 1 value = 0 }
+			area = { area = "Zhejiang" country = -1 data = 1 value = 0 }
+			area = { area = "Fujian" country = -1 data = 1 value = 0 }
+			area = { area = "Sichuan" country = -1 data = 1 value = 0 }
+			area = { area = "Yunnan" country = -1 data = 1 value = 0 }
+		}
+		
+		NOT = { exists = MAN } # If it exists, the war is still ongoing
+		NOT = { exists = MEN } # If it exists, the war is still ongoing
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200002_A" #"OK"
+		ai_chance = 100
+		command = { type = relation which = CHC value = 150 }
+
+		command = { type = secedearea which = CHC value = "Anhui" when = 1 }
+		command = { type = secedearea which = CHC value = "Chahar" when = 1 }
+		command = { type = secedearea which = CHC value = "Gansu" when = 1 }
+		command = { type = secedearea which = CHC value = "Guangdong" when = 1 }
+		command = { type = secedearea which = CHC value = "Guangxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Guizhou" when = 1 }
+		command = { type = secedearea which = CHC value = "Heilongjiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Hebei" when = 1 }
+		command = { type = secedearea which = CHC value = "Henan" when = 1 }
+		command = { type = secedearea which = CHC value = "Hubei" when = 1 }
+		command = { type = secedearea which = CHC value = "Hunan" when = 1 }
+		command = { type = secedearea which = CHC value = "Jiangsu" when = 1 }
+		command = { type = secedearea which = CHC value = "Jiangxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Jilin" when = 1 }
+		command = { type = secedearea which = CHC value = "Liaoning" when = 1 }
+		command = { type = secedearea which = CHC value = "Qinghai" when = 1 }
+		command = { type = secedearea which = CHC value = "Rehe" when = 1 }
+		command = { type = secedearea which = CHC value = "Shaanxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Shandong" when = 1 }
+		command = { type = secedearea which = CHC value = "Shanxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Suiyuan_Ningxia" when = 1 }
+		command = { type = secedearea which = CHC value = "Xinjiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Xikang" when = 1 }
+		command = { type = secedearea which = CHC value = "Zhejiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Fujian" when = 1 }
+		command = { type = secedearea which = CHC value = "Sichuan" when = 1 }
+		command = { type = secedearea which = CHC value = "Yunnan" when = 1 }
+	}	
+	
+	action = {
+		name = "EVT_8200002_B" #"It is in our interest not to give it up"
+		ai_chance = 0
+		command = { type = relation which = CHC value = -100 }
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = 5 }
+	}	
+}
+
+### Ceding Manchuria (and possibly other parts of China), only CHI exists
+
+event = { # Mongolia cedes Manchuria
+	id = 8200003
+	country = MON
+
+	name = "EVT_8200003_NAME"
+	desc = "EVT_8200003_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+
+	trigger = {
+		NOT = { exists = CHC }
+		exists = CHI
+		flag = cold_war_pacific
+		NOT = { war = { country = MON country = CHI } }
+		
+		OR = {
+			area = { area = "Anhui" country = -1 data = 1 value = 0 }
+			area = { area = "Chahar" country = -1 data = 1 value = 0 }
+			area = { area = "Gansu" country = -1 data = 1 value = 0 }
+			area = { area = "Guangdong" country = -1 data = 1 value = 0 }
+			area = { area = "Guangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Guizhou" country = -1 data = 1 value = 0 }
+			area = { area = "Heilongjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Hebei" country = -1 data = 1 value = 0 }
+			area = { area = "Henan" country = -1 data = 1 value = 0 }
+			area = { area = "Hubei" country = -1 data = 1 value = 0 }
+			area = { area = "Hunan" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangsu" country = -1 data = 1 value = 0 }
+			area = { area = "Jiangxi" country = -1 data = 1 value = 0 }
+			area = { area = "Jilin" country = -1 data = 1 value = 0 }
+			area = { area = "Liaoning" country = -1 data = 1 value = 0 }
+			area = { area = "Qinghai" country = -1 data = 1 value = 0 }
+			area = { area = "Rehe" country = -1 data = 1 value = 0 }
+			area = { area = "Shaanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Shandong" country = -1 data = 1 value = 0 }
+			area = { area = "Shanxi" country = -1 data = 1 value = 0 }
+			area = { area = "Suiyuan_Ningxia" country = -1 data = 1 value = 0 }
+			area = { area = "Xinjiang" country = -1 data = 1 value = 0 }
+			area = { area = "Xikang" country = -1 data = 1 value = 0 }
+			area = { area = "Zhejiang" country = -1 data = 1 value = 0 }
+			area = { area = "Fujian" country = -1 data = 1 value = 0 }
+			area = { area = "Sichuan" country = -1 data = 1 value = 0 }
+			area = { area = "Yunnan" country = -1 data = 1 value = 0 }
+		}
+		
+		NOT = { exists = MAN } # If it exists, the war is still ongoing
+		NOT = { exists = MEN } # If it exists, the war is still ongoing
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200003_A" #"OK"
+		ai_chance = 98
+		command = { type = relation which = CHI value = 150 }
+		command = { type = secedearea which = CHI value = "Anhui" when = 1 }
+		command = { type = secedearea which = CHI value = "Chahar" when = 1 }
+		command = { type = secedearea which = CHI value = "Gansu" when = 1 }
+		command = { type = secedearea which = CHI value = "Guangdong" when = 1 }
+		command = { type = secedearea which = CHI value = "Guangxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Guizhou" when = 1 }
+		command = { type = secedearea which = CHI value = "Heilongjiang" when = 1 }
+		command = { type = secedearea which = CHI value = "Hebei" when = 1 }
+		command = { type = secedearea which = CHI value = "Henan" when = 1 }
+		command = { type = secedearea which = CHI value = "Hubei" when = 1 }
+		command = { type = secedearea which = CHI value = "Hunan" when = 1 }
+		command = { type = secedearea which = CHI value = "Jiangsu" when = 1 }
+		command = { type = secedearea which = CHI value = "Jiangxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Jilin" when = 1 }
+		command = { type = secedearea which = CHI value = "Liaoning" when = 1 }
+		command = { type = secedearea which = CHI value = "Qinghai" when = 1 }
+		command = { type = secedearea which = CHI value = "Rehe" when = 1 }
+		command = { type = secedearea which = CHI value = "Shaanxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Shandong" when = 1 }
+		command = { type = secedearea which = CHI value = "Shanxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Suiyuan_Ningxia" when = 1 }
+		command = { type = secedearea which = CHI value = "Xinjiang" when = 1 }
+		command = { type = secedearea which = CHI value = "Xikang" when = 1 }
+		command = { type = secedearea which = CHI value = "Zhejiang" when = 1 }
+		command = { type = secedearea which = CHI value = "Fujian" when = 1 }
+		command = { type = secedearea which = CHI value = "Sichuan" when = 1 }
+		command = { type = secedearea which = CHC value = "Yunnan" when = 1 }
+	}	
+	
+	action = {
+		name = "EVT_8200003_B" #"It is in our interest not to give it up"
+		ai_chance = 2
+		command = { type = relation which = CHI value = -100 }
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = 5 }
+	}	
+}
+
+event = { # Communist China receives Manchuria (CHC)
+	id = 8200004
+	random = no
+	country = CHC
+
+	name = "EVT_8200004_NAME"
+	desc = "EVT_8200004_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+
+	# Triggered by: 8200000, 8200002
+
+	action = {
+		name = "OK"
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = MON value = 25 }
+		command = { type = add_corps which = "1. Manchurian Corps" value = land where = 1199 } # Harbin
+		command = { type = add_division which = "1. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_division which = "2. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_corps which = "2. Manchurian Corps" value = land where = 1199 }
+		command = { type = add_division which = "3. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_division which = "4. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_corps which = "3. Manchurian Corps" value = land where = 1199 }
+		command = { type = add_division which = "5. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_division which = "6. Manchurian Division" value = infantry when = 13 }
+		# We receive supplies
+		command = { type = supplies value = 10000 where = 1199 } # Harbin
+		command = { type = oilpool value = 1000 where = 1199 }
+	}		
+}
+
+event = { # Nationalist China receives Manchuria (CHI)
+	id = 8200005
+	random = no
+	country = CHI
+
+	name = "EVT_8200005_NAME"
+	desc = "EVT_8200005_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+
+	# Triggered by: 8200001, 8200003
+
+	action = {
+		name = "OK"
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = MON value = 25 }
+		command = { type = add_corps which = "1. Manchurian Corps" value = land where = 1199 } # Harbin
+		command = { type = add_division which = "1. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_division which = "2. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_corps which = "2. Manchurian Corps" value = land where = 1199 }
+		command = { type = add_division which = "3. Manchurian Division" value = infantry when = 13 }
+		command = { type = add_division which = "4. Manchurian Division" value = infantry when = 13 }
+	}		
+}
+
+### Soviet support in Chinese Civil War (SOV)
+event = { 
+	id = 8200006
+	random = no
+	country = SOV
+
+	name = "EVT_8200006_NAME"
+	desc = "EVT_8200006_DESC"
+	picture = "nwo\mao_with_stalin"
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		domestic = { type = interventionism value = 5 }
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200006_A" #"Limited support"
+		ai_chance = 55
+		command = { type = relation which = CHC value = 50 }
+		command = { type = supplies value = -5000 }
+		command = { type = oilpool value = -2000 }
+		command = { type = money value = -200 }
+		command = { type = trigger which = 8200007 }
+	}	
+	
+	action = {
+		name = "EVT_8200006_B" #"No support"
+		ai_chance = 10
+		command = { type = relation which = CHC value = -100 }
+	}	
+	
+	action = {
+		name = "EVT_8200006_C" #"Considerable support"
+		ai_chance = 15
+		command = { type = relation which = CHC value = 100 }
+		command = { type = supplies value = -15000 }
+		command = { type = oilpool value = -10000 }
+		command = { type = money value = -1000 }
+		command = { type = belligerence value = 10 }
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 8200008 }
+	}	
+	
+	action = {
+		name = "EVT_8200006_D" #"Propose alliance"
+		trigger = { NOT = { flag = ccw_soviet_nonintervention } }
+		ai_chance = 20
+		command = { type = relation which = CHC value = 150 }
+		command = { type = supplies value = -15000 }
+		command = { type = oilpool value = -10000 }
+		command = { type = money value = -1000 }
+		command = { type = belligerence value = 40 }
+		command = { type = dissent value = 15 }
+		command = { type = trigger which = 8200009 }
+	}	
+}
+
+event = { # Limited support (CHC)
+	id = 8200007
+	random = no
+	country = CHC
+
+	name = "EVT_8200007_NAME"
+	desc = "EVT_8200007_DESC"
+	picture = "nwo\soviets_in_ccw"	
+	style = 1
+
+	# Triggered by: 8200006
+
+	action = {
+		name = "EVT_8200007_A" #"We will put it to good use"
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = money value = 100 }
+	}		
+}
+
+event = { # Considerable support (CHC)
+	id = 8200008
+	random = no
+	country = CHC
+
+	name = "EVT_8200008_NAME"
+	desc = "EVT_8200008_DESC"
+	picture = "nwo\soviets_in_ccw"
+	style = 1
+
+	# Triggered by: 8200006
+
+	action = {
+		name = "EVT_8200008_A" #"We will put it to good use"
+		command = { type = supplies value = 12000 }
+		command = { type = oilpool value = 8000 }
+		command = { type = money value = 500 }
+		command = { type = add_division which = "1. Div Siberian Volunteers" value = armor when = 1 }
+		command = { type = add_division which = "2. Div Siberian Volunteers" value = motorized when = 5 }
+		command = { type = add_division which = "3. Div Siberian Volunteers" value = motorized when = 5 }
+		command = { type = add_division which = "4. Div Siberian Volunteers" value = motorized when = 5 }
+		command = { type = add_division which = "5. Div Siberian Volunteers" value = mechanized when = 2 }
+		command = { type = add_division which = "6. Div Siberian Volunteers" value = mechanized when = 2 }
+	}		
+}
+
+event = { # Total support (CHC)
+	id = 8200009
+	random = no
+	country = CHC
+
+	name = "EVT_8200009_NAME"
+	desc = "EVT_8200009_DESC"
+	picture = "nwo\mao_with_stalin_poster"	
+	style = 1
+
+	# Triggered by: 8200006
+
+	action = {
+		name = "EVT_8200009_A" #"Alliance of the working class!"
+		ai_chance = 60
+		command = { type = trigger which = 8500101 } # Soviet intervention: WW3 flashpoint
+		command = { type = supplies value = 12000 }
+		command = { type = oilpool value = 8000 }
+		command = { type = money value = 500 }
+		command = { type = add_division which = "1. Div Siberian Volunteers" value = armor when = 3 }
+		command = { type = add_division which = "2. Div Siberian Volunteers" value = motorized when = 4 }
+		command = { type = add_division which = "3. Div Siberian Volunteers" value = motorized when = 4 }
+		command = { type = add_division which = "4. Div Siberian Volunteers" value = motorized when = 4 }
+		command = { type = add_division which = "5. Div Siberian Volunteers" value = mechanized when = 4 }
+		command = { type = add_division which = "6. Div Siberian Volunteers" value = mechanized when = 4 }
+	}	
+
+	action = {
+		name = "EVT_8200009_B" #"We have a different vision of Communism"
+		ai_chance = 40
+		command = { type = supplies value = 12000 }
+		command = { type = oilpool value = 8000 }
+		command = { type = money value = 500 }
+		command = { type = add_division which = "1. Div Siberian Volunteers" value = armor when = 3 }
+		command = { type = add_division which = "2. Div Siberian Volunteers" value = motorized when = 4 }
+		command = { type = add_division which = "3. Div Siberian Volunteers" value = motorized when = 4 }
+		command = { type = add_division which = "4. Div Siberian Volunteers" value = motorized when = 4 }
+		command = { type = add_division which = "5. Div Siberian Volunteers" value = mechanized when = 4 }
+		command = { type = add_division which = "6. Div Siberian Volunteers" value = mechanized when = 4 }
+		command = { type = sleepevent which = 8200121 } # End of intervention
+	}		
+}
+
+### MARSHALL MISSION: CEASEFIRE
+######################################
+
+### Chinese cease fire (brought by American decision)
+
+event = { # contrib. by nomonhan
+	id = 8200010
+	random = no
+	country = USA
+
+	name = "EVT_8200010_NAME"
+	desc = "EVT_8200010_DESC"
+	picture = "nwo\marshall_mission"
+	style = 1
+	
+	trigger = {
+		exists = CHC
+		exists = CHI
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		OR = {
+		
+			# Either there is no war...
+			NOT = { war = { country = CHI country = CHC } }
+			
+			# Or the war is in stalemate
+			AND = {
+				war = { country = CHI country = CHC }
+				flag = cold_war_pacific
+				NOT = { 
+					flag = CHC_won_civil_war
+					flag = CHI_won_civil_war
+				}
+				
+				# Communist's mountain retreat - Communists hold at least 30%
+				NOT = { area = { area = "Shaanxi" country = CHI value = 70 } } 
+				
+				# Manchuria - Communists hold at least 50%
+				NOT = { area = { area = "Heilongjiang" country = CHI value = 50 } }
+				NOT = { area = { area = "Jilin" country = CHI value = 50 } }
+				
+				# Shanghai - Nationalists hold at least 50%
+				NOT = { area = { area = "Jiangsu" country = CHC value = 50 } }
+				
+				# Chengdu, Chongqing - Nationalists hold at least 80%
+				NOT = { area = { area = "Sichuan" country = CHC value = 80 } }
+				
+				# Guangzhou - Nationalists hold at least 80%
+				NOT = { area = { area = "Guangdong" country = CHC value = 80 } }				
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1946 }
+
+	action = {
+		name = "EVT_8200010_A" # Propose cease-fire
+		ai_chance = 90
+		command = { type = relation which = CHI value = 50 }
+		command = { type = relation which = CHC value = 150 }
+	}
+	
+	action = {
+		name = "EVT_8200010_B" # Don't do that
+		ai_chance = 10
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8200011 }
+		command = { type = sleepevent which = 8200012 }
+	}
+
+}
+
+event = { # Temp. ceasefire - contrib. by nomonhan
+	id = 8200011
+	country = CHC
+
+	name = "EVT_8200011_NAME"
+	desc = "EVT_8200011_DESC" 
+	picture = "nwo\marshall_mission"	
+	style = 1
+
+	trigger = {
+		event = 8200010
+		exists = CHI
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1946 }
+
+	action = {
+		name = "EVT_8200011_A" # Agree
+		ai_chance = 99
+		command = { type = dissent value = -10 }
+	}	
+	
+	action = {
+		name = "EVT_8200011_B" # Disagree
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8200012 }
+		command = { type = sleepevent which = 8200013 }
+	}	
+
+}
+
+event = { # contrib. by nomonhan
+	id = 8200012
+	country = CHI
+
+	name = "EVT_8200012_NAME"
+	desc = "EVT_8200012_DESC"
+	picture = "nwo\marshall_mission"
+	style = 1
+
+	trigger = {
+		event = 8200010
+		exists = CHC
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1946 }
+
+	action = {
+		name = "EVT_8200011_A" # Agree
+		command = { type = dissent value = -1 }
+	}	
+	
+	action = {
+		name = "EVT_8200011_B" # Disagree
+		command = { type = dissent value = 20 }
+		command = { type = belligerence value = 20 }
+		command = { type = sleepevent which = 8200011 }
+		command = { type = sleepevent which = 8200013 }
+		command = { type = sleepevent which = 8200044 } # We won't receive American help anymore
+	}	
+
+}
+
+event = { # contrib. by nomonhan
+	id = 8200013
+	country = CHI
+	save_date = yes # The NAP lasts for a year
+
+	name = "EVT_8200013_NAME"
+	desc = "EVT_8200013_DESC"
+	picture = "nwo\marshall_mission"
+	style = 1
+
+	trigger = {
+		event = 8200011
+		event = 8200012
+		exists = CHC
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1946 }
+
+	action = {
+		name = "EVT_8200013_A"
+		command = { trigger = { war = { country = CHC } } type = peace which = CHC value = 0 }
+		command = { type = non_aggression which = CHC where = CHI }
+		
+		command = { type = secedearea which = -1 value = "Anhui" when = 2 }
+		command = { type = secedearea which = -1 value = "Chahar" when = 2 }
+		command = { type = secedearea which = -1 value = "Gansu" when = 2 }
+		command = { type = secedearea which = -1 value = "Guangdong" when = 2 }
+		command = { type = secedearea which = -1 value = "Guangxi" when = 2 }
+		command = { type = secedearea which = -1 value = "Guizhou" when = 2 }
+		command = { type = secedearea which = -1 value = "Heilongjiang" when = 2 }
+		command = { type = secedearea which = -1 value = "Hebei" when = 2 }
+		command = { type = secedearea which = -1 value = "Henan" when = 2 }
+		command = { type = secedearea which = -1 value = "Hubei" when = 2 }
+		command = { type = secedearea which = -1 value = "Hunan" when = 2 }
+		command = { type = secedearea which = -1 value = "Jiangsu" when = 2 }
+		command = { type = secedearea which = -1 value = "Jiangxi" when = 2 }
+		command = { type = secedearea which = -1 value = "Jilin" when = 2 }
+		command = { type = secedearea which = -1 value = "Liaoning" when = 2 }
+		command = { type = secedearea which = -1 value = "Qinghai" when = 2 }
+		command = { type = secedearea which = -1 value = "Rehe" when = 2 }
+		command = { type = secedearea which = -1 value = "Shaanxi" when = 2 }
+		command = { type = secedearea which = -1 value = "Shandong" when = 2 }
+		command = { type = secedearea which = -1 value = "Shanxi" when = 2 }
+		command = { type = secedearea which = -1 value = "Suiyuan_Ningxia" when = 2 }
+		command = { type = secedearea which = -1 value = "Xinjiang" when = 2 }
+		command = { type = secedearea which = -1 value = "Xikang" when = 2 }
+		command = { type = secedearea which = -1 value = "Zhejiang" when = 2 }
+		command = { type = secedearea which = -1 value = "Fujian" when = 2 }
+		command = { type = secedearea which = -1 value = "Sichuan" when = 2 }
+		command = { type = secedearea which = -1 value = "Yunnan" when = 2 }
+		
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		
+		command = { type = money value = -1000 }
+		
+		command = { type = industrial_modifier which = total value = -10 }
+	}	
+
+}
+
+event = { # NAP ends - contrib. by nomonhan
+	id = 8200014
+	random = no
+	country = CHI
+
+	name = "EVT_8200014_NAME"
+	desc = "EVT_8200014_DESC"
+	picture = "nwo\marshall_mission_ends"
+	style = 1
+
+	trigger = {
+		event = { id = 8200013 days = 360 }
+		non_aggression = { country = CHC country = CHI }
+		NOT = { flag = chinese_unity_govt }
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200014_A"
+		command = { type = end_non_aggression which = CHC where = CHI }
+		command = { type = industrial_modifier which = total value = 10 }
+	}	
+
+}
+
+### MARSHALL MISSION: LAST CHANCE FOR PEACE
+######################################
+
+event = { # Marshall Mission
+	id = 8200020
+	random = no
+	country = USA
+
+	name = "EVT_8200020_NAME"
+	desc = "EVT_8200020_DESC"
+	picture = "nwo\marshall_mission"	
+	style = 1
+
+	trigger = {
+		non_aggression = { country = CHI country = CHC }
+		NOT = { 
+			war = { country = CHI country = CHC }
+			war = { country = CHI }
+			war = { country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		domestic = { type = interventionism value = 5 } 
+	}
+
+	date = { day = 1 month = july year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = "EVT_8200020_A" # Engage in peace talks
+		ai_chance = 90
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = CHC value = 20 }
+		command = { type = money value = -1500 }
+	}	
+	
+	action = {
+		name = "EVT_8200020_B" # Don't bother
+		ai_chance = 10
+		command = { type = relation which = CHI value = -20 }
+		command = { type = relation which = CHC value = -20 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8200021 }
+		command = { type = sleepevent which = 8200022 }
+	}	
+
+}
+
+event = { # Unity government talks - CHI reaction
+	id = 8200021
+	random = no
+	country = CHI
+
+	name = "EVT_8200021_NAME"
+	desc = "EVT_8200021_DESC"
+	picture = "nwo\mao_with_chiang"	
+	style = 1
+
+	trigger = {
+		event = 8200020
+		NOT = { 
+			war = { country = CHI country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = july year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = "EVT_8200021_A" # No way
+		ai_chance = 60
+		command = { type = relation which = CHC value = -50 }
+		command = { type = sleepevent which = 8200022 }
+		command = { type = sleepevent which = 8200023 }
+		command = { type = sleepevent which = 8200024 }
+	}	
+	
+	action = {
+		name = "EVT_8200021_B" # Accept unity government
+		ai_chance = 40
+		command = { type = relation which = CHC value = 20 }
+		command = { type = dissent which = 3 }
+	}
+
+}
+
+event = { # Unity government talks - CHC reaction
+	id = 8200022
+	random = no
+	country = CHC
+
+	name = "EVT_8200022_NAME"
+	desc = "EVT_8200022_DESC"
+	picture = "nwo\mao_with_chiang"	
+	style = 1
+
+	trigger = {
+		event = 8200020
+		NOT = { 
+			war = { country = CHI country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = july year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = "EVT_8200022_A" # No way
+		ai_chance = 90
+		trigger = {
+			area = { area = "Heilongjiang" country = CHC value = 50 }
+			area = { area = "Jilin" country = CHC value = 50 }
+			NOT = {
+				event = 8230011
+				event = 8230012
+				event = 8230013
+				event = 8230014
+				event = 8230021
+				event = 8230022
+				event = 8230023
+				event = 8230024
+			}
+		}
+		command = { type = relation which = CHI value = -50 }
+		command = { type = sleepevent which = 8200021 }
+		command = { type = sleepevent which = 8200023 }
+		command = { type = sleepevent which = 8200024 }
+	}	
+	
+	action = {
+		name = "EVT_8200022_A" # No way
+		ai_chance = 85
+		trigger = {
+			area = { area = "Heilongjiang" country = CHC value = 50 }
+			area = { area = "Jilin" country = CHC value = 50 }
+			OR = {
+				event = 8230011
+				event = 8230012
+				event = 8230013
+				event = 8230014
+				event = 8230021
+				event = 8230022
+				event = 8230023
+				event = 8230024
+			}
+		}
+		command = { type = relation which = CHI value = -50 }
+		command = { type = sleepevent which = 8200021 }
+		command = { type = sleepevent which = 8200023 }
+		command = { type = sleepevent which = 8200024 }
+	}	
+	
+	action = {
+		name = "EVT_8200022_A" # No way
+		ai_chance = 70
+		trigger = {
+			NOT = {
+				area = { area = "Heilongjiang" country = CHC value = 50 }
+				area = { area = "Jilin" country = CHC value = 50 }
+			}
+			OR = {
+				event = 8230011
+				event = 8230012
+				event = 8230013
+				event = 8230014
+				event = 8230021
+				event = 8230022
+				event = 8230023
+				event = 8230024
+			}
+		}
+		command = { type = relation which = CHI value = -50 }
+		command = { type = sleepevent which = 8200021 }
+		command = { type = sleepevent which = 8200023 }
+		command = { type = sleepevent which = 8200024 }
+	}	
+	
+	action = {
+		name = "EVT_8200022_A" # No way
+		ai_chance = 65
+		trigger = {
+			NOT = {
+				area = { area = "Heilongjiang" country = CHC value = 50 }
+				area = { area = "Jilin" country = CHC value = 50 }
+			}
+			NOT = {
+				event = 8230011
+				event = 8230012
+				event = 8230013
+				event = 8230014
+				event = 8230021
+				event = 8230022
+				event = 8230023
+				event = 8230024
+			}
+		}
+		command = { type = relation which = CHI value = -50 }
+		command = { type = sleepevent which = 8200021 }
+		command = { type = sleepevent which = 8200023 }
+		command = { type = sleepevent which = 8200024 }
+	}	
+	
+	
+	action = {
+		name = "EVT_8200022_B" # Accept unity government
+		ai_chance = 10
+		command = { type = relation which = CHI value = 20 }
+		command = { type = dissent which = 20 }
+	}	
+
+}
+
+event = { # Unity government talks succeed
+	id = 8200023
+	random = no
+	country = CHI
+
+	name = "EVT_8200023_NAME"
+	desc = "EVT_8200023_DESC"
+	picture = "nwo\mao_with_chiang_toast"	
+	style = 1
+
+	trigger = {
+		event = 8200021
+		event = 8200022
+		NOT = { 
+			war = { country = CHI country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = september year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = "EVT_8200023_A" # Welcome our brothers
+		command = { type = setflag which = chinese_unity_govt }
+		command = { type = guarantee which = CHI where = CHC }
+		command = { type = relation which = CHC value = 100 }
+		command = { type = dissent value = 10 } # Internal turmoil after semi-absorption of CHC
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = political_left value = 3 }
+		# Set up unity government
+		command = { type = headofstate which = 55011 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 55301 } # Mao Zedong
+		command = { type = foreignminister which = 55312 } # Huang Hua
+		command = { type = armamentminister which = 55041 } # Jiang Jingguo
+		command = { type = ministerofsecurity which = 55058 } # Cai Yuanpei
+		command = { type = ministerofintelligence which = 55068 } # Zheng Jiemin
+		command = { type = chiefofstaff which = 55076 } # Xiao Yishu
+		command = { type = chiefofarmy which = 55082 } # Xu Tingyao
+		command = { type = chiefofnavy which = 55089 } # Chen Cheng
+		command = { type = chiefofair which = 55094 } # Wang Shuming
+	}	
+}
+
+event = { # Nationalists try to absorb CHC
+	id = 8200024
+	random = no
+	country = CHI
+
+	name = "EVT_8200024_NAME"
+	desc = "EVT_8200024_DESC"
+	picture = "nwo\chiang_address"	
+	style = 1
+
+	trigger = {
+		flag = chinese_unity_govt
+		NOT = { 
+			war = { country = CHI country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = september year = 1946 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = "EVT_8200024_A" # Press them to disband militias
+		ai_chance = 70
+		command = { type = relation which = CHC value = -100 }
+	}	
+	
+	action = {
+		name = "EVT_8200024_B" # Hope for the best
+		ai_chance = 30
+		command = { type = relation which = CHC value = 20 }
+		command = { type = dissent value = 10 }
+	}	
+
+}
+
+event = { # CHC decides whether to cave in, under pressure to disband militias
+	id = 8200025
+	random = no
+	country = CHC
+
+	name = "EVT_8200025_NAME"
+	desc = "EVT_8200025_DESC"
+	picture = "nwo\chiang_address"	
+	style = 1
+
+	trigger = {
+		flag = chinese_unity_govt
+		event = 8200024
+		NOT = { 
+			war = { country = CHI country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = september year = 1946 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1948 }
+
+	action = {
+		# Under pressure to disband militias
+		name = "EVT_8200025_A" # No way, it means war!!
+		ai_chance = 50
+		command = { type = clrflag which = chinese_unity_govt }
+		command = { type = relation which = CHI value = -150 }
+		command = { type = end_non_aggression which = CHI where = CHC }
+		command = { type = end_guarantee which = CHI where = CHC }
+		command = { type = war which = CHI  }
+		command = { type = sleepevent which = 8200027 }
+		command = { type = trigger which = 8200028 }
+	}	
+	
+	action = {
+		# Under pressure to disband militias
+		name = "EVT_8200025_B" # No way
+		ai_chance = 20
+		command = { type = clrflag which = chinese_unity_govt }
+		command = { type = relation which = CHI value = -150 }
+		command = { type = end_non_aggression which = CHI where = CHC }
+		command = { type = end_guarantee which = CHI where = CHC }
+		command = { type = sleepevent which = 8200027 }
+		command = { type = trigger which = 8200028 }
+	}	
+	
+	action = {
+		# Under pressure to disband militias
+		name = "EVT_8200025_C" # Accept unity government (Game Over)
+		ai_chance = 30
+		command = { type = strength which = all when = 0 where = 1 value = 0 } 
+	}	
+}
+
+event = { # CHC decides whether to cave in, under no pressure to disband militias
+	id = 8200026
+	random = no
+	country = CHC
+
+	name = "EVT_8200026_NAME"
+	desc = "EVT_8200026_DESC"
+	picture = "nwo\chiang_address"	
+	style = 1
+
+	trigger = {
+		flag = chinese_unity_govt
+		event = 8200024
+		NOT = { 
+			war = { country = CHI country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = september year = 1946 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1948 }
+
+	action = {
+		# Under NO pressure to disband militias
+		name = "EVT_8200026_A" # No way
+		ai_chance = 80
+		command = { type = clrflag which = chinese_unity_govt }
+		command = { type = relation which = CHI value = -150 }
+		command = { type = end_non_aggression which = CHI where = CHC }
+		command = { type = end_guarantee which = CHI where = CHC }
+		command = { type = sleepevent which = 8200027 }
+		command = { type = trigger which = 8200028 }
+	}	
+	action = {
+		# Under NO pressure to disband militias
+		name = "EVT_8200026_B" # Accept unity government (Game Over)
+		ai_chance = 20
+		command = { type = strength which = all when = 0 where = 1 value = 0 } 
+	}	
+
+}
+
+event = { # Unified China!!
+	id = 8200027
+	country = CHI
+
+	name = "EVT_8200027_NAME"
+	desc = "EVT_8200027_DESC"
+	picture = "nwo\chiang_smiling"	
+	style = 1
+
+	trigger = {
+		flag = chinese_unity_govt
+		OR = {
+			event = 8200025
+			event = 8200026
+		}
+		NOT = { 
+			war = { country = CHI country = CHC }
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = september year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200026_A" # Rejoice
+		command = { type = inherit which = CHC value = 0 }
+		command = { type = capital which = 1247 } # Beijing
+		command = { type = dissent value = 30 } # Massive internal turmoil
+		command = { type = country which = UCH }
+	}	
+
+}
+
+# CHC leaves unity government
+event = {
+	id = 8200028
+	country = CHI
+
+	name = "EVT_8200028_NAME"
+	desc = "EVT_8200028_DESC"
+	picture = "nwo\chiang_thinking"	
+	style = 1
+
+	# Triggered by 8200025, 8200026
+
+	action = {
+		name = "OK"
+		command = { type = dissent value = 5 }
+		# CHI comes back to its right-wing govt
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = political_left value = -3 }
+		command = { type = headofstate which = 55011 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 55002 } # Chiang Kai-shek
+		command = { type = foreignminister which = 55030 } # Yang Luchang
+		command = { type = armamentminister which = 55041 } # Jiang Jingguo
+		command = { type = ministerofsecurity which = 55058 } # Cai Yuanpei
+		command = { type = ministerofintelligence which = 55068 } # Zheng Jiemin
+		command = { type = chiefofstaff which = 55076 } # Xiao Yishu
+		command = { type = chiefofarmy which = 55082 } # Xu Tingyao
+		command = { type = chiefofnavy which = 55089 } # Chen Cheng
+		command = { type = chiefofair which = 55094 } # Wang Shuming
+	}	
+}
+
+# Setting up Republican China
+event = {
+	id = 8200029
+	country = UCH
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = headofstate which = 1325210 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 1325325 } # Zhou Enlai
+		command = { type = foreignminister which = 1325326 } # Huang Hua
+		command = { type = armamentminister which = 1325240 } # Jiang Jingguo
+		command = { type = ministerofsecurity which = 1325257 } # Cai Yuanpei
+		command = { type = ministerofintelligence which = 1325329 } # Deng Xiaoping
+		command = { type = chiefofstaff which = 1325331 } # Li Jishen
+		command = { type = chiefofarmy which = 1325344 } # Cheng Qian
+		command = { type = chiefofnavy which = 1325288 } # Chen Cheng
+		command = { type = chiefofair which = 1325293 } # Wang Shuming
+	}	
+}
+
+### OUTBREAK OF CHINESE CIVIL WAR
+##########################################
+
+# Nationalist China initiates the civil war
+event = { 
+	id = 8200030
+	random = no
+	country = CHI
+	persistent = yes
+
+	name = "EVT_8200030_NAME"
+	desc = "EVT_8200030_DESC"
+	picture = "nwo\chinese_civil_war"
+	decision_picture = "nwo\d_chinese_civil_war"	
+	style = 1
+
+	decision = {
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHC
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	trigger = {
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHC
+		NOT = { non_aggression = { country = CHI country = CHC } }
+		NOT = { flag = chinese_unity_govt }
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = april year = 1946 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200030_A" #"It is time for war!"
+		ai_chance = 50
+		command = { type = war which = CHC }
+	}	
+
+	action = {
+		name = "EVT_8200030_B" #"The time is not ripe"
+		ai_chance = 50
+		trigger = { ai = yes }
+		command = { type = relation which = CHC value = 1 }
+		command = { type = end_access which = CHC }
+	}
+}
+
+event = { # Communist China initiates the civil war, they do not have Manchuria
+	id = 8200031
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200031_NAME"
+	desc = "EVT_8200031_DESC"
+	picture = "nwo\chinese_civil_war"
+	decision_picture = "nwo\d_chinese_civil_war"
+	style = 1	
+
+	decision = {
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHC
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		# Communists do not have Manchuria
+		NOT = { area = { area = "Heilongjiang" country = CHC value = 75 } }
+		NOT = { area = { area = "Jilin" country = CHC value = 75 } }
+	}
+
+	trigger = {
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHI
+		NOT = { non_aggression = { country = CHI country = CHC } }
+		NOT = { flag = chinese_unity_govt }
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		# Communists do not have Manchuria
+		NOT = { area = { area = "Heilongjiang" country = CHC value = 75 } }
+		NOT = { area = { area = "Jilin" country = CHC value = 75 } }
+	}
+
+	date = { day = 1 month = april year = 1946 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200030_A" #"It is time for war!"
+		ai_chance = 25
+		command = { type = war which = CHI }
+	}	
+
+	action = {
+		name = "EVT_8200030_B" #"The time is not ripe"
+		ai_chance = 75
+		trigger = { ai = yes }
+		command = { type = relation which = CHI value = 1 }
+		command = { type = end_access which = CHI }
+	}	
+}
+
+event = { # Communist China initiates the civil war, they have Manchuria
+	id = 8200032
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200032_NAME"
+	desc = "EVT_8200032_DESC"
+	picture = "nwo\chinese_civil_war"
+	decision_picture = "nwo\d_chinese_civil_war"
+	style = 1	
+
+	decision = {
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHC
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		# Communists have Manchuria
+		area = { area = "Heilongjiang" country = CHC value = 75 }
+		area = { area = "Jilin" country = CHC value = 75 }
+	}
+
+	trigger = {
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHI
+		NOT = { non_aggression = { country = CHI country = CHC } }
+		NOT = { flag = chinese_unity_govt }
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		# Communists have Manchuria
+		area = { area = "Heilongjiang" country = CHC value = 75 }
+		area = { area = "Jilin" country = CHC value = 75 }
+	}
+
+	date = { day = 1 month = april year = 1946 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200030_A" #"It is time for war!"
+		ai_chance = 75
+		command = { type = war which = CHI } 
+	}	
+
+	action = {
+		name = "EVT_8200030_B" #"The time is not ripe"
+		ai_chance = 25
+		trigger = { ai = yes }
+		command = { type = relation which = CHI value = 1 }
+		command = { type = end_access which = CHI }
+	}	
+}
+
+### Manuchrian arsenal at our disposal
+
+event = {
+	id = 8200033
+	country = CHC
+
+	name = "EVT_8200033_NAME" # The Northeastern China IJA Arsenal
+	desc = "EVT_8200033_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { war = { country = CHC country = CHI } }
+		area = { area = "Heilongjiang" country = CHC value = 25 }
+		area = { area = "Liaoning" country = CHC value = 25 }
+		area = { area = "Jilin" country = CHC value = 25 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200033_A" # We get a big share
+		trigger = {
+			area = { area = "Heilongjiang" country = CHC value = 100 }
+			area = { area = "Liaoning" country = CHC value = 100 }
+			area = { area = "Jilin" country = CHC value = 100 }
+		}
+		command = { type = supplies value = 1000 }
+		command = { type = demobilize which = land when = 0 where = 0 value = -5 } 
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+	
+	action = {
+		name = "EVT_8200033_B" # We get a smaller share
+		trigger = {
+			area = { area = "Heilongjiang" country = CHC value = 50 }
+			area = { area = "Liaoning" country = CHC value = 50 }
+			area = { area = "Jilin" country = CHC value = 50 }
+			NOT = {
+				area = { area = "Heilongjiang" country = CHC value = 100 }
+				area = { area = "Liaoning" country = CHC value = 100 }
+				area = { area = "Jilin" country = CHC value = 100 }
+			}
+		}
+		command = { type = supplies value = 1000 }
+		command = { type = demobilize which = land when = 0 where = 0 value = -3 } 
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+	
+	action = {
+		name = "EVT_8200033_C" # We get a small share
+		trigger = {
+			area = { area = "Heilongjiang" country = CHC value = 25 }
+			area = { area = "Liaoning" country = CHC value = 25 }
+			area = { area = "Jilin" country = CHC value = 25 }
+			NOT = {
+				area = { area = "Heilongjiang" country = CHC value = 50 }
+				area = { area = "Liaoning" country = CHC value = 50 }
+				area = { area = "Jilin" country = CHC value = 50 }
+			}
+		}
+		command = { type = supplies value = 250 }
+		command = { type = demobilize which = land when = 0 where = 0 value = -2 } 
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8200034
+	country = CHI
+
+	name = "EVT_8200034_NAME"
+	desc = "EVT_8200034_DESC"
+	picture = "nwo\manchurian_offensive"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200034_A" # We get a big share
+		trigger = {
+			area = { area = "Heilongjiang" country = CHI value = 100 }
+			area = { area = "Liaoning" country = CHI value = 100 }
+			area = { area = "Jilin" country = CHI value = 100 }
+		}
+		command = { type = supplies value = 1000 }
+		command = { type = demobilize which = land when = 0 where = 0 value = -5 } 
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+	
+	action = {
+		name = "EVT_8200034_B" # We get a smaller share
+		trigger = {
+			area = { area = "Heilongjiang" country = CHI value = 50 }
+			area = { area = "Liaoning" country = CHI value = 50 }
+			area = { area = "Jilin" country = CHI value = 50 }
+			NOT = {
+				area = { area = "Heilongjiang" country = CHI value = 100 }
+				area = { area = "Liaoning" country = CHI value = 100 }
+				area = { area = "Jilin" country = CHI value = 100 }
+			}
+		}
+		command = { type = supplies value = 1000 }
+		command = { type = demobilize which = land when = 0 where = 0 value = -3 } 
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+	
+	action = {
+		name = "EVT_8200034_C" # We get a small share
+		trigger = {
+			area = { area = "Heilongjiang" country = CHI value = 25 }
+			area = { area = "Liaoning" country = CHI value = 25 }
+			area = { area = "Jilin" country = CHI value = 25 }
+			NOT = {
+				area = { area = "Heilongjiang" country = CHI value = 50 }
+				area = { area = "Liaoning" country = CHI value = 50 }
+				area = { area = "Jilin" country = CHI value = 50 }
+			}
+		}
+		command = { type = supplies value = 250 }
+		command = { type = demobilize which = land when = 0 where = 0 value = -2 } 
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+### China tries to postpone IJA withdrawal
+
+event = {
+	id = 8200035
+	country = CHI
+
+	name = EVT_8200035_NAME
+	desc = EVT_8200035_DESC
+	picture = "nwo\ija_withdrawal"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHC
+		area = { area = "Heilongjiang" country = CHI value = 25 }
+		area = { area = "Jilin" country = CHI value = 25 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200035_A" # Try to delay it
+		ai_chance = 90
+		command = { type = dissent value = 7 }
+	}
+	
+	action = {
+		name = "EVT_8200035_B" # It's a lost cause anyway
+		ai_chance = 10
+		command = { type = dissent value = -7 }
+		command = { type = secedearea which = CHC value = "Jilin" when = 1 }
+		command = { type = secedearea which = CHC value = "Heilongjiang" when = 1 }
+	}
+
+}
+
+event = {
+	id = 8200036
+	country = USA
+
+	name = EVT_8200036_NAME
+	desc = EVT_8200036_DESC
+	picture = "nwo\ija_withdrawal"
+	style = 1
+
+	trigger = {
+		event = 8200035
+		NOT = { event = 8200039 }
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHI
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200036_A" # OK, agree
+		ai_chance = 95
+		command = { type = dissent value = 3 }
+	}
+	
+	action = {
+		name = "EVT_8200036_B" # Japan should be out of China at once!
+		ai_chance = 5
+		command = { type = trigger which = 8200039 }
+	}
+
+}
+
+event = {
+	id = 8200037
+	country = ENG
+
+	name = EVT_8200037_NAME
+	desc = EVT_8200037_DESC
+	picture = "nwo\ija_withdrawal"
+	style = 1
+
+	trigger = {
+		event = 8200035
+		NOT = { event = 8200039 }
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHI
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200037_A" # OK, agree
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+	}
+	
+	action = {
+		name = "EVT_8200037_B" # Japan should be out of China at once!
+		ai_chance = 10
+		command = { type = trigger which = 8200039 }
+	}
+
+}
+
+event = {
+	id = 8200038
+	country = SOV
+
+	name = EVT_8200038_NAME
+	desc = EVT_8200038_DESC
+	picture = "nwo\ija_withdrawal"
+	style = 1
+
+	trigger = {
+		event = 8200035
+		NOT = { event = 8200039 }
+		NOT = { war = { country = CHI country = CHC } }
+		exists = CHI
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200038_B" # Japan should be out of China at once!
+		ai_chance = 80
+		command = { type = trigger which = 8200039 }
+	}
+	
+	action = {
+		name = "EVT_8200038_A" # OK, agree
+		ai_chance = 20
+		command = { type = dissent value = 3 }
+	}
+	
+}
+
+event = {
+	id = 8200039
+	country = CHI
+
+	name = EVT_8200039_NAME # Power Vacuum
+	desc = EVT_8200039_DESC
+	picture = "nwo\ija_withdrawal"
+	style = 1
+
+	action = {
+		name = "EVT_8200039_A"
+		command = { type = dissent value = 3 }
+		command = { type = secedearea which = CHC value = "Jilin" when = 1 }
+		command = { type = secedearea which = CHC value = "Heilongjiang" when = 1 }
+	}
+
+	
+}
+
+### DISSENT MANAGEMENT
+########################################
+
+event = {
+	id = 8200040
+	random = no
+	country = CHC
+
+	name = "EVT_8200040_NAME"
+	desc = "EVT_8200040_DESC"
+	picture = "nwo\mao_leads"
+	style = 1
+
+	trigger = {
+		OR = {
+			event = 8200030
+			event = 8200031
+			event = 8200032
+		} # Civil war initiated by decision
+		war = { country = CHI country = CHC }
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1947 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200040_A" #"To arms, comrades!"
+		command = { type = dissent value = -3 }
+		command = { type = max_organization which = infantry value = 10 }
+		command = { type = max_organization which = militia value = 10 }
+		command = { type = max_organization which = bergsjaeger value = 10 }
+		command = { type = morale which = infantry value = 10 }
+		command = { type = morale which = militia value = 10 }
+		command = { type = morale which = bergsjaeger value = 10 }
+	}	
+}
+
+### SPECIAL CHC BONUSES
+########################################
+
+#End of war, the special bonuses for CHC get annulled.
+event = {
+	id = 8200041
+	random = no
+	country = CHC
+
+	name = "EVT_8200041_NAME"
+	desc = "EVT_8200041_DESC"
+	picture = "nwo\mao_leads"
+	style = 1	
+
+	trigger = {
+		atwar = no
+		event = 8200040
+	}
+
+	date = { day = 1 month = january year = 1947 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200040_A" #"Victory at last!"
+		#command = { type = max_organization which = infantry value = -10 }
+		#command = { type = max_organization which = militia value = -10 }
+		#command = { type = max_organization which = bergsjaeger value = -10 }
+		#command = { type = morale which = infantry value = -10 }
+		#command = { type = morale which = militia value = -10 }
+		#command = { type = morale which = bergsjaeger value = -10 }
+	}	
+}
+
+event = {
+	id = 8200042
+	country = CHI
+
+	name = "EVT_8200042_NAME" #"Chinese Civil War erupts"
+	desc = "EVT_8200042_DESC" #"It is our only chance to realize our vision of China."
+	picture = "nwo\chiang_radio"
+	style = 1
+
+	trigger = {
+		OR = {
+			event = 8200030
+			event = 8200031
+			event = 8200032
+		} # Civil war initiated by decision
+		war = { country = CHI country = CHC }
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200042_A" #"To arms!"
+		command = { type = supplies value = 10000 where = 1247 } # Beijing
+		command = { type = oilpool value = 500 where = 1247 } # Beijing
+	}	
+}
+
+### DISSENT MANAGEMENT
+########################################
+
+event = {
+	id = 8200043
+	random = no
+	country = CHI
+	persistent = yes
+
+	name = "EVT_8200043_NAME" #"Civil war weaknesses"
+	desc = "EVT_8200043_DESC" #"In spite of victory over Japan, our government became lax and cannot really fight corruption within our ranks. Also, we seem to be unable to win support of the masses as well as long-lasting support of numerous warlords still present in various provinces."
+	picture = "nwo\kmt_white_terror"
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 180
+	deathdate = { day = 29 month = june year = 1963 }
+
+	action = {
+		name = "EVT_8200043_A" # Corruption runs rampant
+		command = { trigger = { year = 1947 NOT = { year = 1948 } } type = dissent value = 4 }
+		command = { trigger = { year = 1947 NOT = { year = 1948 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1947 NOT = { year = 1948 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1948 NOT = { year = 1949 } } type = dissent value = 8 }
+		command = { trigger = { year = 1948 NOT = { year = 1949 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1948 NOT = { year = 1949 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1949 NOT = { year = 1950 } } type = dissent value = 12 }
+		command = { trigger = { year = 1949 NOT = { year = 1950 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1949 NOT = { year = 1950 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1949 NOT = { year = 1950 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1950 NOT = { year = 1951 } } type = dissent value = 16 }
+		command = { trigger = { year = 1950 NOT = { year = 1951 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1950 NOT = { year = 1951 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1950 NOT = { year = 1951 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1950 NOT = { year = 1951 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1951 NOT = { year = 1952 } } type = dissent value = 20 }
+		command = { trigger = { year = 1951 NOT = { year = 1952 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1951 NOT = { year = 1952 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1951 NOT = { year = 1952 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1951 NOT = { year = 1952 } } type = remove_division which = -1 }
+		command = { trigger = { year = 1951 NOT = { year = 1952 } } type = remove_division which = -1 }
+	}	
+}
+
+### AMERICAN SUPPORT FOR CHI
+########################################
+
+# American support for CHI
+
+event = {
+	id = 8200044
+	random = no
+	country = USA
+
+	name = "EVT_8200044_NAME"
+	desc = "EVT_8200044_DESC"
+	picture = "nwo\kmt_troops_in_shermans"	
+	style = 1
+
+	trigger = {
+		NOT = { war = { country = CHI } }
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		domestic = { type = interventionism value = 5 } 
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action = {
+		name = "EVT_8200044_A" # Provide considerable support
+		ai_chance = 70
+		command = { type = relation which = CHI value = 100 }
+		command = { type = relation which = CHC value = -150 }
+		command = { type = supplies value = -5000 }
+		command = { type = oilpool value = -2000 }
+		command = { type = money value = -1500 }
+		command = { type = trigger which = 8200046 }
+	}	
+	
+	action = {
+		name = "EVT_8200044_B" # No support
+		ai_chance = 5
+		command = { type = relation which = CHI value = -20 }
+		command = { type = relation which = CHC value = 20 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 2 }
+	}	
+	
+	action = {
+		name = "EVT_8200044_C" # Little support
+		ai_chance = 10
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = CHC value = -50 }
+		command = { type = supplies value = -2000 }
+		command = { type = oilpool value = -500 }
+		command = { type = money value = -300 }
+		command = { type = trigger which = 8200045 }
+	}	
+	
+	action = {
+		name = "EVT_8200044_D" # Propose full alliance
+		trigger = { NOT = { flag = ccw_american_nonintervention } }
+		ai_chance = 15
+		command = { type = relation which = CHI value = 150 }
+		command = { type = relation which = CHC value = -200 }
+		command = { type = supplies value = -5000 }
+		command = { type = oilpool value = -2000 }
+		command = { type = money value = -1500 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 15 }
+		command = { type = trigger which = 8200047 }
+	}	
+
+}
+
+event = { # Limited support (CHI)
+	id = 8200045
+	random = no
+	country = CHI
+
+	name = "EVT_8200045_NAME"
+	desc = "EVT_8200045_DESC"
+	picture = "nwo\kmt_troops_in_shermans"	
+	style = 1
+
+	# Triggered by: 8200044
+
+	action = {
+		name = "EVT_8200045_A" #"We will put it to good use"
+		command = { type = supplies value = 1500 }
+		command = { type = oilpool value = 300 }
+		command = { type = money value = 100 }
+		command = { type = dissent value = -6 }
+	}		
+}
+
+event = { # Considerable support (CHI)
+	id = 8200046
+	random = no
+	country = CHI
+
+	name = "EVT_8200046_NAME"
+	desc = "EVT_8200046_DESC"
+	picture = "nwo\kmt_troops_in_shermans"
+	style = 1
+
+	# Triggered by: 8200044
+
+	action = {
+		name = "EVT_8200046_A" #"We will put it to good use"
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = money value = 1000 }
+		command = { type = add_division which = "1. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "2. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "3. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "4. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "5. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "6. Div American Marines" value = marine when = 7 }
+		command = { type = dissent value = -12 }
+	}		
+}
+
+event = { # Total support (CHI)
+	id = 8200047
+	random = no
+	country = CHI
+
+	name = "EVT_8200047_NAME"
+	desc = "EVT_8200047_DESC"
+	picture = "nwo\chiang_with_stilwell"	
+	style = 1
+
+	# Triggered by: 8200044
+
+	action = {
+		name = "EVT_8200047_A" #"Forge anticommunist alliance!"
+		ai_chance = 60
+		command = { type = trigger which = 8500111 }
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = money value = 1000 }
+		command = { type = add_division which = "1. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "2. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "3. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "4. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "5. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "6. Div American Marines" value = marine when = 7 }
+		command = { type = dissent value = -12 }
+	}	
+
+	action = {
+		name = "EVT_8200047_B" #"We'll do it ourselves"
+		ai_chance = 40
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = money value = 1000 }
+		command = { type = add_division which = "1. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "2. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "3. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "4. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "5. Div American Marines" value = marine when = 7 }
+		command = { type = add_division which = "6. Div American Marines" value = marine when = 7 }
+		command = { type = sleepevent which = 8200120 }
+		command = { type = dissent value = -12 }
+	}		
+}
+
+### PARTISANS
+##############################
+
+event = {
+	id = 8200050
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200050_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1344 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1344 } # Anqing
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1344 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+event = {
+	id = 8200051
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200051_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1301 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1301 } # Fuling
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1301 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+event = {
+	id = 8200052
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200052_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1354 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1354 } # Ganzhou
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1354 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+event = {
+	id = 8200053
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200053_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1300 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1300 } # Yibin
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1300 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+event = {
+	id = 8200054
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200054_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1382 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1382 } # Hechi
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1382 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+event = {
+	id = 8200055
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200055_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1315 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1315 } # Yichang
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1315 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+event = {
+	id = 8200056
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200056_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1378 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1378 } # Guilin
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1378 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+event = {
+	id = 8200057
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200057_NAME" #Partisans
+	desc = "EVT_8200050_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\maoist_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1946
+				NOT = { year = 1947 }
+				random = 2
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 18
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1949 }
+				random = 25
+			}
+			AND = {
+				year = 1949
+				random = 15
+			}
+		}
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { control = { province = 1351 data = -1 } }
+		NOT = { vp = 30 }
+		vp = 5
+		NOT = { event = 8200151 event = 8200152 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8200050_A" #"Join the fight"
+		ai_chance = 100
+		command = { type = add_corps which = "Communist partisans" value = land where = 1351 } # Shangrao
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+		command = { type = supplies value = 10 where = 1351 }
+	}	
+	
+	action = {
+		name = "EVT_8200050_B" #"Save manpower"
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+### OUTCOME OF CHINESE CIVIL WAR
+##############################################
+
+event = { # Nationalist China has won
+	id = 8200100
+	random = no
+	country = CHI
+
+	name = "EVT_8200100_NAME"
+	desc = "EVT_8200100_DESC"
+	picture = "nwo\chiang_smiling"
+	style = 1	
+
+	trigger = {
+		NOT = { exists = CHC }
+		flag = cold_war_pacific
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200100_A" #"Rejoice"
+		command = { type = dissent value = -5 }
+		# Move capital to Beijing
+		command = { type = capital which = 1247 } # Beijing
+		command = { type = setflag which = CHI_won_civil_war }
+		command = { type = name where = CHI which = "CHI49" }
+	}	
+}
+
+event = { # Nationalist China accepts defeat, escapes to Taiwan
+	id = 8200101
+	random = no
+	country = CHI
+	persistent = yes
+
+	name = "EVT_8200101_NAME"
+	desc = "EVT_8200101_DESC"
+	picture = "nwo\kmt_flees_to_taiwan"
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		lost_VP = { country = CHI value = 70 }
+		NOT = { 
+			control = { province = 1247 data = -1 } # Beiing
+			control = { province = 1337 data = -1 } # Nanjing
+			control = { province = 1297 data = -1 } # Chengdu
+			control = { province = 1299 data = -1 } # Chongqing
+			control = { province = 1369 data = -1 } # Guangzhou
+			control = { province = 1338 data = -1 } # Shanghai
+		}
+		# Controls Taiwan
+		control = { province = 1362 data = -1 }
+		area = { area = "Taiwan" country = -1 data = 1 value = 70 }
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200101_A" #"Fall back to Taiwan"
+		ai_chance = 95
+		command = { type = dissent value = -50 }
+		# Move capital to Taipei
+		command = { type = capital which = 1362 } # Taipei
+		# Remove troops
+		command = { type = strength which = all when = 0 where = 0 value = 0 }
+		# Give new division on the island
+		command = { type = add_division value = interceptor when = 11 }
+		command = { type = add_corps which = "Taiwan Defense Force" value = land where = 1362 }
+		command = { type = add_division which = "1st ROC Div" value = infantry when = 14 }
+		command = { type = supplies value = 100 where = 1362 }
+		# Rebels secede their provinces
+		#command = { type = trigger which = 8200106 }
+		# Secede provinces
+		command = { type = secedearea which = CHC value = "Anhui" when = 1 }
+		command = { type = secedearea which = CHC value = "Chahar" when = 1 }
+		command = { type = secedearea which = CHC value = "Gansu" when = 1 }
+		command = { type = secedearea which = CHC value = "Guangdong" when = 1 }
+		command = { type = secedearea which = CHC value = "Guangxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Guizhou" when = 1 }
+		command = { type = secedearea which = CHC value = "Heilongjiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Hebei" when = 1 }
+		command = { type = secedearea which = CHC value = "Henan" when = 1 }
+		command = { type = secedearea which = CHC value = "Hubei" when = 1 }
+		command = { type = secedearea which = CHC value = "Hunan" when = 1 }
+		command = { type = secedearea which = CHC value = "Jiangsu" when = 1 }
+		command = { type = secedearea which = CHC value = "Jiangxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Jilin" when = 1 }
+		command = { type = secedearea which = CHC value = "Liaoning" when = 1 }
+		command = { type = secedearea which = CHC value = "Qinghai" when = 1 }
+		command = { type = secedearea which = CHC value = "Rehe" when = 1 }
+		command = { type = secedearea which = CHC value = "Shaanxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Shandong" when = 1 }
+		command = { type = secedearea which = CHC value = "Shanxi" when = 1 }
+		command = { type = secedearea which = CHC value = "Suiyuan_Ningxia" when = 1 }
+		command = { type = secedearea which = CHC value = "Xinjiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Xikang" when = 1 }
+		command = { type = secedearea which = CHC value = "Zhejiang" when = 1 }
+		command = { type = secedearea which = CHC value = "Fujian" when = 1 }
+		command = { type = secedearea which = CHC value = "Sichuan" when = 1 }
+		command = { type = secedearea which = CHC value = "Yunnan" when = 1 }
+		# Trigger peace acceptance among Communists
+		command = { type = trigger which = 8200105 }
+		
+		### Set up tech teams anew
+		command = { type = waketeam which = 55224 }
+		command = { type = waketeam which = 55225 }
+		
+		command = { type = sleepteam which = 55002 }
+		command = { type = sleepteam which = 55003 }
+		command = { type = sleepteam which = 55010 }
+		command = { type = sleepteam which = 55015 }
+		command = { type = sleepteam which = 55016 }
+		command = { type = sleepteam which = 55017 }
+		command = { type = sleepteam which = 55100 }
+		command = { type = sleepteam which = 55101 }
+		command = { type = sleepteam which = 55102 }
+		command = { type = sleepteam which = 55103 }
+		command = { type = sleepteam which = 55104 }
+		command = { type = sleepteam which = 55105 }
+		command = { type = sleepteam which = 55106 }
+		command = { type = sleepteam which = 55107 }
+		command = { type = sleepteam which = 55108 }
+		command = { type = sleepteam which = 55109 }
+		command = { type = sleepteam which = 55110 }
+		command = { type = sleepteam which = 55111 }
+		command = { type = sleepteam which = 55112 }
+		command = { type = sleepteam which = 55113 }
+		command = { type = sleepteam which = 55114 }
+		command = { type = sleepteam which = 55115 }
+		command = { type = sleepteam which = 55116 }
+		command = { type = sleepteam which = 55117 }
+		command = { type = sleepteam which = 55118 }
+		command = { type = sleepteam which = 55119 }
+		command = { type = sleepteam which = 55120 }
+		command = { type = sleepteam which = 55121 }
+		command = { type = sleepteam which = 55122 }
+		command = { type = sleepteam which = 55123 }
+		command = { type = sleepteam which = 55125 }
+		command = { type = sleepteam which = 55126 }
+		command = { type = sleepteam which = 55127 }
+		command = { type = sleepteam which = 55128 }
+		command = { type = sleepteam which = 55200 }
+		command = { type = sleepteam which = 55201 }
+		command = { type = sleepteam which = 55202 }
+		command = { type = sleepteam which = 55203 }
+		command = { type = sleepteam which = 55204 }
+		command = { type = sleepteam which = 55205 }
+		command = { type = sleepteam which = 55206 }
+		command = { type = sleepteam which = 55207 }
+		command = { type = sleepteam which = 55208 }
+		command = { type = sleepteam which = 55212 }
+		command = { type = sleepteam which = 55213 }
+		command = { type = sleepteam which = 55214 }
+		command = { type = sleepteam which = 55215 }
+		command = { type = sleepteam which = 55216 }
+		command = { type = sleepteam which = 55217 }
+		command = { type = sleepteam which = 55218 }
+		command = { type = sleepteam which = 55219 }
+		command = { type = sleepteam which = 55220 }
+		command = { type = sleepteam which = 55221 }
+		command = { type = sleepteam which = 55222 }
+		command = { type = sleepteam which = 55223 }
+	}	
+	
+	action = {
+		name = "EVT_8200101_B" #"Hope for tides of war to turn"
+		ai_chance = 5
+		command = { type = dissent value = 4 }
+	}	
+}
+
+event = { # Nationalist China accepts defeat, has nowhere to escape
+	id = 8200102
+	random = no
+	country = CHI
+	persistent = yes
+
+	name = "EVT_8200102_NAME"
+	desc = "EVT_8200102_DESC"
+	picture = "nwo\chiang_crying"
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		lost_VP = { country = CHI value = 70 }
+		NOT = { 
+			control = { province = 1205 data = -1 } # Beiping
+			control = { province = 1235 data = -1 } # Nanjing
+			control = { province = 1360 data = -1 } # Chengdu
+			control = { province = 1280 data = -1 } # Chongqing
+			control = { province = 1313 data = -1 } # Guangzhou
+			control = { province = 1237 data = -1 } # Shanghai
+		}
+		NOT = { # Doesn't control Taiwan
+			control = { province = 1362 data = -1 }
+			area = { area = "Taiwan" country = -1 data = 1 value = 70 }
+		}
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200102_A" #"Surrender (Game Over)"
+		ai_chance = 80
+		# Rebels secede their provinces
+		command = { type = trigger which = 8200106 }
+		# Trigger peace acceptance among Communists
+		command = { type = trigger which = 8200104 }
+	}	
+	
+	action = {
+		name = EVT_8200102_B #"Hope for tides of war to turn"
+		ai_chance = 20
+		command = { type = dissent value = 20 }
+	}	
+}
+
+### Communist victory: Nationalists are already annexed
+event = {
+	id = 8200103
+	random = no
+	country = CHC
+
+	name = "EVT_8200103_NAME"
+	desc = "EVT_8200103_DESC"
+	picture = "nwo\mao_announces_prc"
+	style = 1
+
+	trigger = {
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { exists = CHI }
+	}
+
+	action = {
+		name = "EVT_8200103_A" #"Announce the victory!"
+		command = { type = setflag which = CHC_won_civil_war }
+		command = { type = capital which = 1247 } # Beijing
+		command = { type = dissent value = -10 }
+		command = { type = flag_ext where = CHC which = _PRC }
+		command = { type = name where = CHC which = "CHC49" }
+		command = { type = name where = CHI which = "CHI49" }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+		
+		### Setting up tech teams
+		command = { type = waketeam which = 260126 }
+		command = { type = waketeam which = 260127 }
+		command = { type = waketeam which = 260128 }
+		command = { type = waketeam which = 260129 }
+		
+		command = { type = sleepteam which = 260125 }
+		
+		command = { type = waketeam which = 260131 }
+		command = { type = waketeam which = 260132 }
+		command = { type = waketeam which = 260023 }
+		command = { type = waketeam which = 260024 }
+		command = { type = waketeam which = 260025 }
+		command = { type = waketeam which = 260018 }
+		command = { type = waketeam which = 260014 }
+		command = { type = waketeam which = 260026 }
+		command = { type = waketeam which = 260120 }
+		command = { type = waketeam which = 260121 }
+		command = { type = waketeam which = 260122 }
+		command = { type = waketeam which = 260123 }
+	}
+}
+
+### Communist victory: Nationalists don't possess Taiwan and beg for peace
+event = {
+	id = 8200104
+	random = no
+	country = CHC
+
+	name = "EVT_8200104_NAME"
+	desc = "EVT_8200104_DESC"
+	picture = "nwo\mao_announces_prc"
+	style = 1
+
+	# Triggered by: 8200102
+
+	action = {
+		name = "EVT_8200104_A" #"Announce the victory!"
+		ai_chance = 100
+		command = { type = setflag which = CHC_won_civil_war }
+		command = { type = inherit which = CHI }
+		command = { type = capital which = 1247 } # Beijing
+		command = { type = dissent value = -10 }		
+		command = { type = flag_ext where = CHC which = _PRC }
+		command = { type = name where = CHC which = "CHC49" }
+		command = { type = name where = CHI which = "CHI49" }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+		
+		### Setting up tech teams
+		command = { type = waketeam which = 260126 }
+		command = { type = waketeam which = 260127 }
+		command = { type = waketeam which = 260128 }
+		command = { type = waketeam which = 260129 }
+		
+		command = { type = sleepteam which = 260125 }
+		
+		command = { type = waketeam which = 260131 }
+		command = { type = waketeam which = 260132 }
+		command = { type = waketeam which = 260023 }
+		command = { type = waketeam which = 260024 }
+		command = { type = waketeam which = 260025 }
+		command = { type = waketeam which = 260018 }
+		command = { type = waketeam which = 260014 }
+		command = { type = waketeam which = 260026 }
+		command = { type = waketeam which = 260120 }
+		command = { type = waketeam which = 260121 }
+		command = { type = waketeam which = 260122 }
+		command = { type = waketeam which = 260123 }
+	}
+	
+	action = {
+		name = "EVT_8200104_B" #"Finish off marauders"
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+### Communist victory: Nationalists are willing to entrench on Taiwan (historical)
+event = { # Communist China is victorious
+	id = 8200105
+	random = no
+	country = CHC
+
+	name = "EVT_8200105_NAME"
+	desc = "EVT_8200105_DESC"
+	picture = "nwo\mao_announces_prc"
+	style = 1
+
+	# Triggered by: 8200103
+
+	action = {
+		name = "EVT_8200105_A" #"Announce the victory!"
+		ai_chance = 99
+		command = { type = setflag which = CHC_won_civil_war }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = non_aggression which = CHC where = CHI }
+		command = { type = capital which = 1247 } # Beijing
+		command = { type = dissent value = -5 }		
+		command = { type = flag_ext where = CHC which = _PRC }
+		command = { type = name where = CHC which = "CHC49" }
+		command = { type = name where = CHI which = "CHI49" }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+		
+		### Setting up tech teams
+		command = { type = waketeam which = 260126 }
+		command = { type = waketeam which = 260127 }
+		command = { type = waketeam which = 260128 }
+		command = { type = waketeam which = 260129 }
+		
+		command = { type = sleepteam which = 260125 }
+		
+		command = { type = waketeam which = 260131 }
+		command = { type = waketeam which = 260132 }
+		command = { type = waketeam which = 260023 }
+		command = { type = waketeam which = 260024 }
+		command = { type = waketeam which = 260025 }
+		command = { type = waketeam which = 260018 }
+		command = { type = waketeam which = 260014 }
+		command = { type = waketeam which = 260026 }
+		command = { type = waketeam which = 260120 }
+		command = { type = waketeam which = 260121 }
+		command = { type = waketeam which = 260122 }
+		command = { type = waketeam which = 260123 }
+	}
+	
+	action = {
+		name = "EVT_8200105_B" #"Push for Taiwan"
+		ai_chance = 1
+		command = { type = capital which = 1247 } # Beijing
+		command = { type = dissent value = 30 } # We are very tired
+	}
+}
+
+### ANNEXATION OF WARLORDS
+#######################################
+
+event = { 
+	id = 8200110
+	random = no
+	country = CHI
+	persistent = yes
+
+	name = "EVT_8200110_NAME" 
+	desc = "EVT_8200110_DESC"
+	picture = "nwo\united_china"
+	style = 1
+
+	decision = {
+		flag = CHI_won_civil_war
+		OR = {
+			exists = CSX
+			exists = CXB
+			exists = CGX
+			exists = CYN
+		}
+	}
+
+	trigger = {
+		flag = CHI_won_civil_war
+		OR = {
+			AND = {
+				exists = CSX
+				NOT = { war = { country = CSX } }
+				ai = CSX
+			}
+			AND = {
+				exists = CXB
+				NOT = { war = { country = CXB} }
+				ai = CXB
+			}
+			AND = {
+				exists = CGX
+				NOT = { war = { country = CGX} }
+				ai = CGX
+			}
+			AND = {
+				exists = CYN
+				NOT = { war = { country = CYN} }
+				ai = CYN
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200110_A" #"Rejoice"
+		command = { trigger = { exists = CSX NOT = { war = { country = CSX } } ai = CSX } type = inherit which = CSX }
+		command = { trigger = { exists = CXB NOT = { war = { country = CXB } } ai = CXB } type = inherit which = CXB }
+		command = { trigger = { exists = CGX NOT = { war = { country = CGX } } ai = CSX } type = inherit which = CGX }
+		command = { trigger = { exists = CYN NOT = { war = { country = CYN } } ai = CSX } type = inherit which = CYN }
+	}	
+}
+
+event = { 
+	id = 8200111
+	random = no
+	country = CHC
+	persistent = yes
+
+	name = "EVT_8200111_NAME"
+	desc = "EVT_8200111_DESC"
+	picture = "nwo\united_china"
+	style = 1
+
+	decision = {
+		flag = CHC_won_civil_war
+		OR = {
+			exists = CSX
+			exists = CXB
+			exists = CGX
+			exists = CYN
+		}
+	}
+
+	trigger = {
+		flag = CHC_won_civil_war
+		OR = {
+			AND = {
+				exists = CSX
+				NOT = { war = { country = CSX } }
+				ai = CSX
+			}
+			AND = {
+				exists = CXB
+				NOT = { war = { country = CXB} }
+				ai = CXB
+			}
+			AND = {
+				exists = CGX
+				NOT = { war = { country = CGX} }
+				ai = CGX
+			}
+			AND = {
+				exists = CYN
+				NOT = { war = { country = CYN} }
+				ai = CYN
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200111_A" #"Rejoice"
+		command = { trigger = { exists = CSX NOT = { war = { country = CSX } } ai = CSX } type = inherit which = CSX }
+		command = { trigger = { exists = CXB NOT = { war = { country = CXB } } ai = CXB } type = inherit which = CXB }
+		command = { trigger = { exists = CGX NOT = { war = { country = CGX } } ai = CSX } type = inherit which = CGX }
+		command = { trigger = { exists = CYN NOT = { war = { country = CYN } } ai = CSX } type = inherit which = CYN }
+	}	
+}
+
+### DISBANDING MILITIAS
+############################################
+
+# China disbands militia hordes
+event = { 
+	id = 8200130
+	random = no
+	country = CHI
+
+	name = "EVT_8200130_NAME"
+	desc = "EVT_8200130_DESC"
+	picture = "nwo\soldiers_return_home"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = CHI_won_civil_war
+			flag = CHC_won_civil_war
+		}
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200130_A" #Let them return to homes
+		ai_chance = 100
+		command = { type = strength which = militia when = 0 where = 0 value = 0 }
+	}	
+	
+	action = {
+		name = "EVT_8200130_B" #Keep the national guard!
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+# China disbands militia hordes
+event = { 
+	id = 8200131
+	random = no
+	country = CHC
+
+	name = "EVT_8200131_NAME"
+	desc = "EVT_8200131_DESC"
+	picture = "nwo\soldiers_return_home"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = CHI_won_civil_war
+			flag = CHC_won_civil_war
+		}
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200131_A" #Let them return to homes
+		ai_chance = 100
+		command = { type = strength which = militia when = 0 where = 0 value = 0 }
+	}	
+	
+	action = {
+		name = "EVT_8200131_B" #Keep the revolutionary guard!
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+### USSR RELEASES CHINA
+############################################
+
+event = { 
+	id = 8200140
+	country = SOV
+
+	name = "EVT_8200140_NAME"
+	desc = "EVT_8200140_DESC"
+	picture = "nwo\mao_with_stalin"
+	decision_picture = "nwo\d_mao_with_stalin"
+	style = 1
+
+	decision = {
+		flag = cold_war_pacific
+		puppet = { country = CHC country = SOV }		
+	}
+
+	trigger = {
+		flag = cold_war_pacific
+		puppet = { country = CHC country = SOV }	
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8200140_A
+		ai_chance = 98
+		command = { type = trigger which = 8200141 }
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = -15 }
+		command = { type = relation which = CHC value = 150 }
+	}	
+	
+	action = {
+		name = EVT_8200140_B
+		ai_chance = 2
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 15 }
+		command = { type = relation which = CHC value = -100 }
+	}	
+}
+
+event = { 
+	id = 8200141
+	country = CHC
+
+	name = "EVT_8200141_NAME"
+	desc = "EVT_8200141_DESC"
+	picture = "nwo\mao_with_stalin"
+	decision_picture = "nwo\d_mao_with_stalin"
+	style = 1
+
+	action = {
+		name = EVT_8200141_A
+		command = { type = end_puppet }
+	}	
+}
+
+###
+# After full 2 years of war between two Chinas, the war is meant to come to conclusion for one of the sides. Usually CHC will be helped to make victorious thrust unless it fares badly.
+###
+
+event = { 
+	id = 8200150
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = AI_EVENT
+		command = { type = event which = 8200151 where = CHI when = 900 }
+		command = { type = event which = 8200161 where = CHC when = 900 }
+		command = { type = event which = 8200152 where = CHI when = 1080 }
+		command = { type = event which = 8200162 where = CHC when = 1080 }
+		command = { type = event which = 8200153 where = CHI when = 1440 }
+		command = { type = event which = 8200163 where = CHC when = 1440 }
+		command = { type = event which = 8200154 where = CHI when = 900 }
+		command = { type = event which = 8200164 where = CHC when = 900 }
+		command = { type = event which = 8200155 where = CHI when = 1080 }
+		command = { type = event which = 8200165 where = CHC when = 1080 }
+		command = { type = event which = 8200156 where = CHI when = 1440 }
+		command = { type = event which = 8200166 where = CHC when = 1440 }
+	}	
+}
+
+event = { 
+	id = 8200151
+	country = CHI
+
+	name = EVT_8200151_NAME
+	desc = EVT_8200151_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting victorious
+		OR = {
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 30 }
+				country = CHC
+			}
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 70 }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200151_A
+		command = { type = max_organization which = infantry value = 20 }
+		command = { type = max_organization which = militia value = 20 }
+		command = { type = max_organization which = bergsjaeger value = 20 }
+		command = { type = morale which = infantry value = 20 }
+		command = { type = morale which = militia value = 20 }
+		command = { type = morale which = bergsjaeger value = 20 }
+	}
+}
+
+event = { 
+	id = 8200161
+	country = CHC
+
+	name = EVT_8200151_NAME
+	desc = EVT_8200151_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting victorious
+		OR = {
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 30 }
+				country = CHC
+			}
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 70 }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200151_A
+		command = { type = max_organization which = infantry value = 20 }
+		command = { type = max_organization which = militia value = 20 }
+		command = { type = max_organization which = bergsjaeger value = 20 }
+		command = { type = morale which = infantry value = 20 }
+		command = { type = morale which = militia value = 20 }
+		command = { type = morale which = bergsjaeger value = 20 }
+	}
+}
+
+event = { 
+	id = 8200152
+	country = CHI
+
+	name = EVT_8200152_NAME
+	desc = EVT_8200152_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting defeated
+		OR = {
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 30 } }
+				country = CHC
+			}
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 70 } }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200152_A
+		command = { type = max_organization which = infantry value = -20 }
+		command = { type = max_organization which = militia value = -20 }
+		command = { type = max_organization which = bergsjaeger value = -20 }
+		command = { type = morale which = infantry value = -20 }
+		command = { type = morale which = militia value = -20 }
+		command = { type = morale which = bergsjaeger value = -20 }
+	}
+}
+
+event = { 
+	id = 8200162
+	country = CHC
+
+	name = EVT_8200152_NAME
+	desc = EVT_8200152_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting defeated
+		OR = {
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 30 } }
+				country = CHC
+			}
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 70 } }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200152_A
+		command = { type = max_organization which = infantry value = -20 }
+		command = { type = max_organization which = militia value = -20 }
+		command = { type = max_organization which = bergsjaeger value = -20 }
+		command = { type = morale which = infantry value = -20 }
+		command = { type = morale which = militia value = -20 }
+		command = { type = morale which = bergsjaeger value = -20 }
+	}
+}
+
+event = { 
+	id = 8200153
+	country = CHI
+
+	name = EVT_8200153_NAME
+	desc = EVT_8200153_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting victorious
+		OR = {
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 30 }
+				country = CHC
+			}
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 70 }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200153_A
+		command = { type = max_organization which = infantry value = 20 }
+		command = { type = max_organization which = militia value = 20 }
+		command = { type = max_organization which = bergsjaeger value = 20 }
+		command = { type = morale which = infantry value = 20 }
+		command = { type = morale which = militia value = 20 }
+		command = { type = morale which = bergsjaeger value = 20 }
+	}
+}
+
+event = { 
+	id = 8200163
+	country = CHC
+
+	name = EVT_8200153_NAME
+	desc = EVT_8200153_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting victorious
+		OR = {
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 30 }
+				country = CHC
+			}
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 70 }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200153_A
+		command = { type = max_organization which = infantry value = 20 }
+		command = { type = max_organization which = militia value = 20 }
+		command = { type = max_organization which = bergsjaeger value = 20 }
+		command = { type = morale which = infantry value = 20 }
+		command = { type = morale which = militia value = 20 }
+		command = { type = morale which = bergsjaeger value = 20 }
+	}
+}
+
+
+event = { 
+	id = 8200154
+	country = CHI
+
+	name = EVT_8200154_NAME
+	desc = EVT_8200154_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting defeated
+		OR = {
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 30 } }
+				country = CHC
+			}
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 70 } }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200154_A
+		command = { type = max_organization which = infantry value = -20 }
+		command = { type = max_organization which = militia value = -20 }
+		command = { type = max_organization which = bergsjaeger value = -20 }
+		command = { type = morale which = infantry value = -20 }
+		command = { type = morale which = militia value = -20 }
+		command = { type = morale which = bergsjaeger value = -20 }
+	}
+}
+
+event = { 
+	id = 8200164
+	country = CHC
+
+	name = EVT_8200154_NAME
+	desc = EVT_8200154_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting defeated
+		OR = {
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 30 } }
+				country = CHC
+			}
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 70 } }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200154_A
+		command = { type = max_organization which = infantry value = -20 }
+		command = { type = max_organization which = militia value = -20 }
+		command = { type = max_organization which = bergsjaeger value = -20 }
+		command = { type = morale which = infantry value = -20 }
+		command = { type = morale which = militia value = -20 }
+		command = { type = morale which = bergsjaeger value = -20 }
+	}
+}
+
+event = { 
+	id = 8200155
+	country = CHI
+
+	name = EVT_8200155_NAME
+	desc = EVT_8200155_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting victorious
+		OR = {
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 30 }
+				country = CHC
+			}
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 70 }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200155_A
+		command = { type = max_organization which = infantry value = 20 }
+		command = { type = max_organization which = militia value = 20 }
+		command = { type = max_organization which = bergsjaeger value = 20 }
+		command = { type = morale which = infantry value = 20 }
+		command = { type = morale which = militia value = 20 }
+		command = { type = morale which = bergsjaeger value = 20 }
+	}
+}
+
+event = { 
+	id = 8200165
+	country = CHC
+
+	name = EVT_8200155_NAME
+	desc = EVT_8200155_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting victorious
+		OR = {
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 30 }
+				country = CHC
+			}
+			AND = {
+				region = { region = "China" country = -1 data = 1 value = 70 }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200155_A
+		command = { type = max_organization which = infantry value = 20 }
+		command = { type = max_organization which = militia value = 20 }
+		command = { type = max_organization which = bergsjaeger value = 20 }
+		command = { type = morale which = infantry value = 20 }
+		command = { type = morale which = militia value = 20 }
+		command = { type = morale which = bergsjaeger value = 20 }
+	}
+}
+
+event = { 
+	id = 8200156
+	country = CHI
+
+	name = EVT_8200156_NAME
+	desc = EVT_8200156_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting defeated
+		OR = {
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 30 } }
+				country = CHC
+			}
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 70 } }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200156_A
+		command = { type = max_organization which = infantry value = -20 }
+		command = { type = max_organization which = militia value = -20 }
+		command = { type = max_organization which = bergsjaeger value = -20 }
+		command = { type = morale which = infantry value = -20 }
+		command = { type = morale which = militia value = -20 }
+		command = { type = morale which = bergsjaeger value = -20 }
+	}
+}
+
+event = { 
+	id = 8200166
+	country = CHC
+
+	name = EVT_8200156_NAME
+	desc = EVT_8200156_DESC
+	style = 1
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		### We are getting defeated
+		OR = {
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 30 } }
+				country = CHC
+			}
+			AND = {
+				NOT = { region = { region = "China" country = -1 data = 1 value = 70 } }
+				country = CHI
+			}
+		}
+	}
+
+	action = {
+		name = EVT_8200156_A
+		command = { type = max_organization which = infantry value = -20 }
+		command = { type = max_organization which = militia value = -20 }
+		command = { type = max_organization which = bergsjaeger value = -20 }
+		command = { type = morale which = infantry value = -20 }
+		command = { type = morale which = militia value = -20 }
+		command = { type = morale which = bergsjaeger value = -20 }
+	}
+}
+
+### Everything goes back to normal after the war ends
+
+event = { 
+	id = 8200170
+	country = CHI
+
+	name = EVT_8200160_NAME
+	desc = EVT_8200160_DESC
+	style = 1
+
+	trigger = {
+		OR = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		OR = {
+			event = 8200151
+			event = 8200152
+			event = 8200153
+			event = 8200154
+			event = 8200155
+			event = 8200156
+		}
+	}
+	
+	date = { day = 1 month = january year = 1945 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8200160_A
+		command = { trigger = { event = 8200151 } type = max_organization which = infantry value = 20 }
+		command = { trigger = { event = 8200151 } type = max_organization which = militia value = 20 }
+		command = { trigger = { event = 8200151 } type = max_organization which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200151 } type = morale which = infantry value = 20 }
+		command = { trigger = { event = 8200151 } type = morale which = militia value = 20 }
+		command = { trigger = { event = 8200151 } type = morale which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200152 } type = max_organization which = infantry value = -20 }
+		command = { trigger = { event = 8200152 } type = max_organization which = militia value = -20 }
+		command = { trigger = { event = 8200152 } type = max_organization which = bergsjaeger value = -20 }
+		command = { trigger = { event = 8200152 } type = morale which = infantry value = -20 }
+		command = { trigger = { event = 8200152 } type = morale which = militia value = -20 }
+		command = { trigger = { event = 8200152 } type = morale which = bergsjaeger value = -20 }
+		
+		command = { trigger = { event = 8200153 } type = max_organization which = infantry value = 20 }
+		command = { trigger = { event = 8200153 } type = max_organization which = militia value = 20 }
+		command = { trigger = { event = 8200153 } type = max_organization which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200153 } type = morale which = infantry value = 20 }
+		command = { trigger = { event = 8200153 } type = morale which = militia value = 20 }
+		command = { trigger = { event = 8200153 } type = morale which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200154 } type = max_organization which = infantry value = -20 }
+		command = { trigger = { event = 8200154 } type = max_organization which = militia value = -20 }
+		command = { trigger = { event = 8200154 } type = max_organization which = bergsjaeger value = -20 }
+		command = { trigger = { event = 8200154 } type = morale which = infantry value = -20 }
+		command = { trigger = { event = 8200154 } type = morale which = militia value = -20 }
+		command = { trigger = { event = 8200154 } type = morale which = bergsjaeger value = -20 }
+		
+		command = { trigger = { event = 8200155 } type = max_organization which = infantry value = 20 }
+		command = { trigger = { event = 8200155 } type = max_organization which = militia value = 20 }
+		command = { trigger = { event = 8200155 } type = max_organization which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200155 } type = morale which = infantry value = 20 }
+		command = { trigger = { event = 8200155 } type = morale which = militia value = 20 }
+		command = { trigger = { event = 8200155 } type = morale which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200156 } type = max_organization which = infantry value = -20 }
+		command = { trigger = { event = 8200156 } type = max_organization which = militia value = -20 }
+		command = { trigger = { event = 8200156 } type = max_organization which = bergsjaeger value = -20 }
+		command = { trigger = { event = 8200156 } type = morale which = infantry value = -20 }
+		command = { trigger = { event = 8200156 } type = morale which = militia value = -20 }
+		command = { trigger = { event = 8200156 } type = morale which = bergsjaeger value = -20 }
+	}
+}
+
+event = { 
+	id = 8200171
+	country = CHC
+
+	name = EVT_8200161_NAME
+	desc = EVT_8200161_DESC
+	style = 1
+
+	trigger = {
+		OR = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		OR = {
+			event = 8200161
+			event = 8200162
+			event = 8200163
+			event = 8200164
+			event = 8200165
+			event = 8200166
+		}
+	}
+	
+	date = { day = 1 month = january year = 1945 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8200161_A
+		command = { trigger = { event = 8200161 } type = max_organization which = infantry value = 20 }
+		command = { trigger = { event = 8200161 } type = max_organization which = militia value = 20 }
+		command = { trigger = { event = 8200161 } type = max_organization which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200161 } type = morale which = infantry value = 20 }
+		command = { trigger = { event = 8200161 } type = morale which = militia value = 20 }
+		command = { trigger = { event = 8200161 } type = morale which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200162 } type = max_organization which = infantry value = -20 }
+		command = { trigger = { event = 8200162 } type = max_organization which = militia value = -20 }
+		command = { trigger = { event = 8200162 } type = max_organization which = bergsjaeger value = -20 }
+		command = { trigger = { event = 8200162 } type = morale which = infantry value = -20 }
+		command = { trigger = { event = 8200162 } type = morale which = militia value = -20 }
+		command = { trigger = { event = 8200162 } type = morale which = bergsjaeger value = -20 }
+		                                     
+		command = { trigger = { event = 8200163 } type = max_organization which = infantry value = 20 }
+		command = { trigger = { event = 8200163 } type = max_organization which = militia value = 20 }
+		command = { trigger = { event = 8200163 } type = max_organization which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200163 } type = morale which = infantry value = 20 }
+		command = { trigger = { event = 8200163 } type = morale which = militia value = 20 }
+		command = { trigger = { event = 8200163 } type = morale which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200164 } type = max_organization which = infantry value = -20 }
+		command = { trigger = { event = 8200164 } type = max_organization which = militia value = -20 }
+		command = { trigger = { event = 8200164 } type = max_organization which = bergsjaeger value = -20 }
+		command = { trigger = { event = 8200164 } type = morale which = infantry value = -20 }
+		command = { trigger = { event = 8200164 } type = morale which = militia value = -20 }
+		command = { trigger = { event = 8200164 } type = morale which = bergsjaeger value = -20 }
+		                                     
+		command = { trigger = { event = 8200165 } type = max_organization which = infantry value = 20 }
+		command = { trigger = { event = 8200165 } type = max_organization which = militia value = 20 }
+		command = { trigger = { event = 8200165 } type = max_organization which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200165 } type = morale which = infantry value = 20 }
+		command = { trigger = { event = 8200165 } type = morale which = militia value = 20 }
+		command = { trigger = { event = 8200165 } type = morale which = bergsjaeger value = 20 }
+		command = { trigger = { event = 8200166 } type = max_organization which = infantry value = -20 }
+		command = { trigger = { event = 8200166 } type = max_organization which = militia value = -20 }
+		command = { trigger = { event = 8200166 } type = max_organization which = bergsjaeger value = -20 }
+		command = { trigger = { event = 8200166 } type = morale which = infantry value = -20 }
+		command = { trigger = { event = 8200166 } type = morale which = militia value = -20 }
+		command = { trigger = { event = 8200166 } type = morale which = bergsjaeger value = -20 }
+	}
+}

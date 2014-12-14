@@ -1,0 +1,463 @@
+#############################################################################################
+#	New World Order 2
+#	by Bizon
+#
+#	Buildup of Communist China
+#
+#	These events are meant to give a boost to Communist China during her difficult years 
+#	in the mountains so that Mao can be a match for Kuomintang's troops when the civil war
+#	resumes even without posessing a large industrial base.
+#
+#############################################################################################
+
+event = { # 1938
+	id = 8201001
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME" # Red China
+	desc = "EVT_8201XXX_DESC" # Hardened by fight in the mountains, first with Kai-Shek's forces, now with Japanese invasion we slowly build up our military machine. Fueled by sacrifice of human lives we amass support that one day may let us topple corrupt regimes.
+	picture = "NWO\communist_china_buildup"
+	style = 1
+	
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+	}
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "10. Lujun" value = infantry when = 7 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "11. Lujun" value = infantry when = 7 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+        command = { type = sleepevent which = 8201002 }
+		command = { type = sleepevent which = 8201003 }
+		command = { type = sleepevent which = 8201004 }
+		command = { type = sleepevent which = 8201005 }
+		command = { type = sleepevent which = 8201006 }
+		command = { type = sleepevent which = 8201007 }
+		command = { type = sleepevent which = 8201008 }
+		}
+	
+}
+
+event = { # 1939
+	id = 8201002
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME"
+	desc = "EVT_8201XXX_DESC"
+	picture = "NWO\communist_china_buildup"
+	style = 1
+
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		event = 8201001
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "12. Lujun" value = infantry when = 8 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "13. Lujun" value = infantry when = 8 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+		command = { type = free_ic value = -4 }
+        command = { type = free_energy value = -8 }
+        command = { type = free_metal value = -4 }
+        command = { type = free_rare_materials value = -2 }
+        command = { type = free_manpower value = -0.05 }
+
+        command = { type = sleepevent which = 8201003 }
+		command = { type = sleepevent which = 8201004 }
+		command = { type = sleepevent which = 8201005 }
+		command = { type = sleepevent which = 8201006 }
+		command = { type = sleepevent which = 8201007 }
+		command = { type = sleepevent which = 8201008 }
+		}
+	
+}
+
+event = { # 1940
+	id = 8201003
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME"
+	desc = "EVT_8201XXX_DESC"
+	picture = "NWO\communist_china_buildup"
+	style = 1
+
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		event = 8201002
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "14. Lujun" value = infantry when = 8 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "15. Lujun" value = infantry when = 8 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+		command = { type = free_ic value = -8 }
+        command = { type = free_energy value = -16 }
+        command = { type = free_metal value = -8 }
+        command = { type = free_rare_materials value = -4 }
+        command = { type = free_manpower value = -0.10 }
+
+		command = { type = sleepevent which = 8201004 }
+		command = { type = sleepevent which = 8201005 }
+		command = { type = sleepevent which = 8201006 }
+		command = { type = sleepevent which = 8201007 }
+		command = { type = sleepevent which = 8201008 }
+		}
+	
+}
+
+event = { # 1941
+	id = 8201004
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME"
+	desc = "EVT_8201XXX_DESC"
+	picture = "NWO\communist_china_buildup"
+	style = 1
+
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		event = 8201003
+	}
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "16. Lujun" value = infantry when = 9 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "17. Lujun" value = infantry when = 9 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+		command = { type = free_ic value = -12 }
+        command = { type = free_energy value = -24 }
+        command = { type = free_metal value = -12 }
+        command = { type = free_rare_materials value = -6 }
+        command = { type = free_manpower value = -0.15 }
+
+ 		command = { type = sleepevent which = 8201005 }
+		command = { type = sleepevent which = 8201006 }
+		command = { type = sleepevent which = 8201007 }
+		command = { type = sleepevent which = 8201008 }
+		}
+	
+}
+
+event = { # 1942
+	id = 8201005
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME"
+	desc = "EVT_8201XXX_DESC"
+	picture = "NWO\communist_china_buildup"
+	style = 1
+
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		event = 8201004
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "18. Lujun" value = infantry when = 9 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "19. Lujun" value = infantry when = 9 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+		command = { type = free_ic value = -16 }
+        command = { type = free_energy value = -32 }
+        command = { type = free_metal value = -16 }
+        command = { type = free_rare_materials value = -8 }
+        command = { type = free_manpower value = -0.20 }
+
+		command = { type = sleepevent which = 8201006 }
+		command = { type = sleepevent which = 8201007 }
+		command = { type = sleepevent which = 8201008 }
+		}
+	
+}
+
+event = { # 1943
+	id = 8201006
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME"
+	desc = "EVT_8201XXX_DESC"
+	picture = "NWO\communist_china_buildup"
+	style = 1
+
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		event = 8201005
+	}
+
+	date = { day = 1 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "20. Lujun" value = infantry when = 10 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "21. Lujun" value = infantry when = 10 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+		command = { type = free_ic value = -20 }
+        command = { type = free_energy value = -40 }
+        command = { type = free_metal value = -20 }
+        command = { type = free_rare_materials value = -10 }
+        command = { type = free_manpower value = -0.25 }
+
+		command = { type = sleepevent which = 8201007 }
+		command = { type = sleepevent which = 8201008 }
+		}
+	
+}
+
+event = { # 1944
+	id = 8201007
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME"
+	desc = "EVT_8201XXX_DESC"
+	picture = "NWO\communist_china_buildup"
+	style = 1
+	
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		event = 8201006
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "22. Lujun" value = infantry when = 10 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "23. Lujun" value = infantry when = 10 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+		command = { type = free_ic value = -24 }
+        command = { type = free_energy value = -48 }
+        command = { type = free_metal value = -24 }
+        command = { type = free_rare_materials value = -12 }
+        command = { type = free_manpower value = -0.30 }
+
+		command = { type = sleepevent which = 8201008 }
+		}
+	
+}
+
+event = { # 1945
+	id = 8201008
+	country = CHC
+	
+	name = "EVT_8201XXX_NAME"
+	desc = "EVT_8201XXX_DESC"
+	picture = "NWO\communist_china_buildup"
+	style = 1
+
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		event = 8201007
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT_8201XXX_A" # Fight for one China
+        command = { type = free_ic value = 4 }
+        command = { type = free_energy value = 8 }
+        command = { type = free_metal value = 4 }
+        command = { type = free_rare_materials value = 2 }
+        command = { type = free_manpower value = 0.05 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "24. Lujun" value = infantry when = 11 }
+		command = { trigger = { war = { country = CHI country = JAP } } type = add_division which = "25. Lujun" value = infantry when = 11 }
+		command = { type = leave_alliance }
+		}
+		
+	action = {
+		ai_chance = 0
+		name = "EVT_8201XXX_B" # Retreat to the mountains
+		command = { type = free_ic value = -28 }
+        command = { type = free_energy value = -56 }
+        command = { type = free_metal value = -28 }
+        command = { type = free_rare_materials value = -14 }
+        command = { type = free_manpower value = -0.35 }
+		}
+	
+}
+
+### China loses offmap ICs after total victory
+
+event = {
+	id = 8201010
+	country = CHC
+		
+	name = "EVT_8201010_NAME" #"No longer partisans"
+	desc = "EVT_8201010_DESC" #"With our fighting model changed we can no longer base our operations and production on support of the masses."
+	picture = "NWO\communist_china_buildup"
+	style = 1
+	
+	trigger = {
+		OR = {
+			AND = {
+				flag = cold_war_pacific
+				not = { exists = CHI }
+			}
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+			year = 1955 
+		}
+	}
+
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+        command = { trigger = { event = 8201001 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201001 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201001 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201001 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201001 } type = free_manpower value = -0.05 }
+		
+		command = { trigger = { event = 8201002 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201002 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201002 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201002 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201002 } type = free_manpower value = -0.05 }
+		
+		command = { trigger = { event = 8201003 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201003 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201003 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201003 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201003 } type = free_manpower value = -0.05 }
+		
+		command = { trigger = { event = 8201004 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201004 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201004 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201004 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201004 } type = free_manpower value = -0.05 }
+		
+		command = { trigger = { event = 8201005 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201005 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201005 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201005 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201005 } type = free_manpower value = -0.05 }
+		
+		command = { trigger = { event = 8201006 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201006 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201006 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201006 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201006 } type = free_manpower value = -0.05 }
+		
+		command = { trigger = { event = 8201007 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201007 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201007 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201007 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201007 } type = free_manpower value = -0.05 }
+		
+		command = { trigger = { event = 8201008 } type = free_ic value = -4 }
+        command = { trigger = { event = 8201008 } type = free_energy value = -8 }
+        command = { trigger = { event = 8201008 } type = free_metal value = -4 }
+        command = { trigger = { event = 8201008 } type = free_rare_materials value = -2 }
+        command = { trigger = { event = 8201008 } type = free_manpower value = -0.05 }
+		}	
+}

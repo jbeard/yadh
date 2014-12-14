@@ -1,0 +1,140 @@
+# Poland gets its cores
+
+event = {
+	id = 8224000
+	country = POL
+	persistent = yes
+
+	name = EVT_8224000_NAME #"Poland is free"
+	desc = EVT_8224000_DESC #"The war is over and we wait for our lands to return to us."
+	picture = nwo\polish_lands
+	style = 1
+
+	trigger = {
+		NOT = { local_flag = cores_returned }
+	}
+	
+    date = { day = 0 month = january year = 1943 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8224000_A
+		command = { type = local_setflag which = cores_returned }
+		command = { type = addcore which = 223 }                    
+		command = { type = addcore which = 231 }       
+		command = { type = addcore which = 232 }       
+		command = { type = addcore which = 233 }       
+		command = { type = addcore which = 234 }       
+		command = { type = addcore which = 181 }     #
+		command = { type = addcore which = 158 }     #
+		command = { type = addcore which = 159 }     #
+		command = { type = addcore which = 167 }     #
+		command = { type = addcore which = 164 }     #
+		command = { type = addcore which = 226 }       
+		command = { type = addcore which = 222 }       
+		command = { type = addcore which = 224 }       
+		command = { type = addcore which = 235 }       
+		command = { type = addcore which = 230 }       
+		command = { type = addcore which = 183 }     #
+		command = { type = addcore which = 221 }       
+		command = { type = addcore which = 236 }       
+		command = { type = addcore which = 237 }       
+		command = { type = addcore which = 243 }       
+		command = { type = addcore which = 252 }       
+		command = { type = addcore which = 254 }       
+		command = { type = addcore which = 250 }                    
+		command = { type = addcore which = 228 }       
+		command = { type = addcore which = 246 }       
+		command = { type = addcore which = 229 }       
+		command = { type = addcore which = 227 }       
+		command = { type = addcore which = 155 }     #
+		command = { type = addcore which = 185 }       
+		command = { type = addcore which = 161 }     #
+		command = { type = addcore which = 225 }       
+		command = { type = addcore which = 203 }       
+		command = { type = addcore which = 168 }       
+		command = { type = addcore which = 166 }     #
+		command = { type = addcore which = 165 }     #
+		command = { type = addcore which = 239 }       
+		
+		command = { type = addcore which = 249 }
+		command = { type = addcore which = 238 }
+		command = { type = addcore which = 240 }
+		command = { type = addcore which = 241 }
+		command = { type = addcore which = 242 }
+		command = { type = addcore which = 244 }
+		command = { type = addcore which = 245 }
+		command = { type = addcore which = 247 }
+		command = { type = addcore which = 248 }
+		command = { type = addcore which = 250 }
+		command = { type = addcore which = 251 }
+		command = { type = addcore which = 253 }
+		command = { type = addcore which = 255 }
+		command = { type = addcore which = 256 }
+		command = { type = addcore which = 257 }
+		command = { type = addcore which = 258 }
+		command = { type = addcore which = 614 }
+		command = { type = addcore which = 618 }
+	}
+}
+
+# Yugoslavia gets its cores
+
+event = {
+	id = 8224001
+	country = U27
+	persistent = yes
+
+	name = EVT_8224001_NAME #"Yugoslavia is free"
+	desc = EVT_8224001_DESC #"The war is over and we wait for our lands to return to us."
+	picture = nwo\yugoslav_lands
+	style = 1
+
+	trigger = {
+		NOT = { local_flag = cores_returned }
+	}
+	
+    date = { day = 0 month = january year = 1943 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+                     			 
+	action = {
+		name = EVT_8224001_A
+		command = { type = local_setflag which = cores_returned }
+		command = { type = addcore which = 338 }                      
+		command = { type = addcore which = 344 }
+		command = { type = addcore which = 355 }
+		command = { type = addcore which = 352 }
+		command = { type = addcore which = 349 }
+		command = { type = addcore which = 346 }
+		command = { type = addcore which = 345 }
+		command = { type = addcore which = 353 }
+		command = { type = addcore which = 350 }
+		command = { type = addcore which = 354 }
+		command = { type = addcore which = 356 }
+		command = { type = addcore which = 343 }
+		command = { type = addcore which = 332 }
+		command = { type = addcore which = 330 }
+		command = { type = addcore which = 342 }
+		command = { type = addcore which = 329 }
+		command = { type = addcore which = 341 }
+		command = { type = addcore which = 336 }
+		command = { type = addcore which = 333 }
+		command = { type = addcore which = 328 }
+		command = { type = addcore which = 331 }
+		command = { type = addcore which = 334 }
+		command = { type = addcore which = 347 }                      
+		command = { type = addcore which = 357 }
+		command = { type = addcore which = 358 }
+		command = { type = addcore which = 351 }
+		command = { type = addcore which = 335 }
+		command = { type = addcore which = 340 }
+		command = { type = addcore which = 327 }
+		command = { type = addcore which = 337 }
+		command = { type = addcore which = 339 }
+		command = { type = addcore which = 403 }
+		command = { type = addcore which = 404 }
+		command = { type = addcore which = 406 }
+	}
+}

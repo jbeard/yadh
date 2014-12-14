@@ -1,0 +1,677 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Disarming of Nations
+# Event List:
+#ALL	13390000	Generic Interwar AI reset MODIFIES default behavior, does not load a completely new AI-script! For each country
+#ALL	13390001	1936-default AI loader for each country
+#ALL	13390002	1936-country specific AI loader (executes after 13390001 for each country)
+#ALL	13390003	Espionage	for each country, recurring upon fraction\government change
+#ALL	13390004	Going to war & construction-value switching
+#ALL	13390005	Going to peace & construction-value switching
+#ENG    13390006    Commonwealth AI Switching.
+#ALL    13390007    Yugo-Rom-Cze-Aus area peace.
+
+event = { # Generic Interwar AI reset MODIFIES default behavior, does not load a completely new AI-script! For each country
+	id = 13390000																			 
+	persistent = no
+	
+	trigger = {
+		year = 1935 }
+	
+	date = { day = 1 month = 1 year = 1914 }
+	offset = 30						
+	deathdate = { day = 29 month = 10 year = 1935 }
+	
+	name = "EVT_13390000_NAME"							
+	Desc = "EVT_13390000_DESC"
+	Picture = "economic" 
+	
+	action = { #generic setup	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			NOT = { OR = { 
+				country = GER
+				country = ENG
+				country = FRA
+				country = USA
+				country = JAP
+				country = ITA
+				country = CZE
+				country = SOV
+			} }
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "AAR\economic\aar-province-construction-regular.ai" }
+		command = { type = local_setflag which = AAR_behavior_regular }
+		command = { type = ai which = "AAR\economic\aar-build_industry-disable.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_navalbase-small.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-small.ai" }
+		
+	}
+	action = { 	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			OR = {
+				country = GER
+				country = U08
+			}
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "AAR\economic\aar-province-construction-pacifist.ai" }
+		command = { type = local_setflag which = AAR_behavior_pacifist }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-GER.ai" }
+		command = { type = ai which = "AAR\unit-construction\aar-buildqueue-GER-interwar.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_navalbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-big.ai" }
+	}
+	action = { 	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			country = ENG
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "AAR\economic\aar-province-construction-pacifist.ai" }
+		command = { type = local_setflag which = AAR_behavior_pacifist }
+		command = { type = ai which = "AAR\unit-construction\aar-buildqueue-ENG-interwar.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry-disable.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_navalbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-big.ai" }
+	}
+	action = { 	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			country = FRA
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_navalbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-big.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry-disable.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-toGER.ai" } #borders
+		command = { type = ai which = "AAR\economic\aar-province-construction-pacifist.ai" }
+		command = { type = local_setflag which = AAR_behavior_pacifist }
+	}
+	action = { 	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			country = USA
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-big.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_navalbase-big.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry-disable.ai" }
+		command = { type = ai which = "AAR\unit-construction\aar-buildqueue-USA-interwar.ai" }
+		command = { type = ai which = "AAR\economic\aar-province-construction-pacifist.ai" }
+		command = { type = local_setflag which = AAR_behavior_pacifist }
+	}
+	action = { 	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			country = JAP
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		#command = { type = ai which = "jap_1936.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-big.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_navalbase-big.ai" }
+		command = { type = ai which = "AAR\unit-construction\aar-buildqueue-JAP-interwar-early.ai" }
+		command = { type = ai which = "AAR\economic\aar-province-construction-regular.ai" }
+		command = { type = local_setflag which = AAR_behavior_regular }
+	}
+	action = { 	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			country = ITA
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "ita_1936.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_navalbase-big.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-ITA.ai" } #borders
+		command = { type = ai which = "AAR\economic\aar-province-construction-regular.ai" }
+		command = { type = local_setflag which = AAR_behavior_regular }
+		command = { type = ai which = "AAR\unit-construction\aar-buildqueue-ITA-interwar.ai" }
+	}
+	action = { 	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			country = CZE
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-toGER.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry-disable.ai" }
+		command = { type = ai which = "AAR\economic\aar-province-construction-pacifist.ai" }
+		command = { type = local_setflag which = AAR_behavior_pacifist }
+	}	
+	action = { #assuming we are at peace, that is... maybe RUS survived, or SOV has never had a civil war??	
+		name = "It's peace again."
+		ai_chance = 100		
+		trigger = {
+			OR = {
+				country = SOV
+				country = RUS
+			}
+		}
+		command = { type = local_setflag which = AAR_Interwar_AI_init }
+		command = { type = ai which = "AAR\economic\aar-build_airbase-medium.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_industry.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-small.ai" }
+		command = { type = ai which = "AAR\economic\aar-build_landfort-SOV.ai" }
+		command = { type = ai which = "AAR\economic\aar-province-construction-pacifist.ai" }
+		command = { type = local_setflag which = AAR_behavior_pacifist }
+	}
+	#add additional country-specific AI-choices here.					
+}
+
+event = { # 1936-default AI loader for each country
+	id = 13390001														 
+	random = no						
+	persistent = yes
+	
+	#stage 1
+	trigger = {
+		or = { # WWI Over.
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+		}
+		local_flag = AAR_Interwar_AI_init
+		NOT = { local_flag = AAR_Interwar_AI_1936 }
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		ai = yes 
+	}
+	
+	#workarround here:
+	# * first, load the default AI file for minors or non-minors.
+	# * next: select the best ai-script for 1936... unfortunately the engine won't 
+	#		 auto-switch to the 1936 scripts, as they all come with switch = no set. 
+	#		 Alternatively to this, we might also replace ALL the scripts and 
+	#		 set switch = yes. 
+	
+	date = { day = 1 month = 10 year = 1935 }
+	offset = 30						
+	deathdate = { day = 15 month = 11 year = 1935 }
+	
+	name = "EVT_13390001_NAME"							
+	Desc = "EVT_13390001_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "Time to turn swords into ploughshares."		
+		command = { type = local_setflag which = AAR_Interwar_AI_1936 }
+		#dirty: reload everything with the default AI-file
+		#command = { trigger = { not = { IC = 10 } } type = ai which = "minor_default.ai" }
+		#command = { trigger = { IC = 10 } type = ai which = "default.ai" }
+	}
+}
+
+event = { # 1936-country specific AI loader (executes after 13390001 for each country)
+	id = 13390002														 
+	random = no						
+	persistent = yes
+	
+	#stage 2
+	trigger = {
+		local_flag = AAR_Interwar_AI_1936
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		ai = yes 
+	}
+	
+	# * now, select the best ai-script for 1936... unfortunately the engine won't 
+	#		 auto-switch to the 1936 scripts, as they all come with switch = no set. 
+	#		 Alternatively to this, we might also replace ALL the scripts and 
+	#		 set switch = yes. 
+	
+	date = { day = 1 month = 10 year = 1935 }
+	offset = 1						
+	deathdate = { day = 30 month = 11 year = 1935 } # a bit longer than the other
+	
+	name = "EVT_13390002_NAME"							
+	Desc = "EVT_13390002_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "Time to turn swords into ploughshares."		
+		command = { type = local_clrflag which = AAR_Interwar_AI_1936 }
+		command = { type = local_setflag which = AAR_Interwar_AI_1936_done }
+		#oh, this is SOOOOOO terribly dirty...
+		#not select the propper ai for the right country...
+		command = { trigger = { country = afg	} type = ai which = "afg_1936.ai" }
+		command = { trigger = { country = alb	} type = ai which = "alb_1936.ai" }
+		command = { trigger = { country = arg	} type = ai which = "arg_1936.ai" }
+		command = { trigger = { country = ast	} type = ai which = "ast_1936.ai" }
+		command = { trigger = { country = aus	} type = ai which = "aus_1936.ai" }
+		command = { trigger = { country = bel	} type = ai which = "bel_1936.ai" }
+		command = { trigger = { country = bhu	} type = ai which = "bhu_1936.ai" }
+		command = { trigger = { country = bol	} type = ai which = "bol_1936.ai" }
+		command = { trigger = { country = bra	} type = ai which = "bra_1936.ai" }
+		command = { trigger = { country = bul	} type = ai which = "bul_1936.ai" }
+		command = { trigger = { country = can	} type = ai which = "can_1936.ai" }
+		command = { trigger = { country = cgx	} type = ai which = "cgx_1936.ai" }
+		command = { trigger = { country = chc	} type = ai which = "chc_1936.ai" }
+		command = { trigger = { country = chi	} type = ai which = "chi_1936.ai" }
+		command = { trigger = { country = chl	} type = ai which = "chl_1936.ai" }
+		command = { trigger = { country = col	} type = ai which = "col_1936.ai" }
+		command = { trigger = { country = cos	} type = ai which = "cos_1936.ai" }
+		command = { trigger = { country = cro	} type = ai which = "cro_1936.ai" }
+		command = { trigger = { country = csx	} type = ai which = "csx_1936.ai" }
+		command = { trigger = { country = cub	} type = ai which = "cub_1936.ai" }
+		command = { trigger = { country = cxb	} type = ai which = "cxb_1936.ai" }
+		command = { trigger = { country = cyn	} type = ai which = "cyn_1936.ai" }
+		command = { trigger = { country = cze	} type = ai which = "cze_1936.ai" }
+		command = { trigger = { country = den	} type = ai which = "den_1936.ai" }
+		command = { trigger = { country = dom	} type = ai which = "dom_1936.ai" }
+		command = { trigger = { country = ecu	} type = ai which = "ecu_1936.ai" }
+		command = { trigger = { country = egy	} type = ai which = "egy_1936.ai" }
+		command = { trigger = { country = eng	} type = ai which = "eng_1936.ai" }
+		command = { trigger = { country = est	} type = ai which = "est_1936.ai" }
+		command = { trigger = { country = eth	} type = ai which = "eth_1936.ai" }
+		command = { trigger = { country = fin	} type = ai which = "fin_1936.ai" }
+		command = { trigger = { country = fra	} type = ai which = "fra_1936.ai" }
+		command = { trigger = { country = ger	} type = ai which = "ger_1936.ai" }
+		command = { trigger = { country = gre	} type = ai which = "gre_1936.ai" }
+		command = { trigger = { country = gua	} type = ai which = "gua_1936.ai" }
+		command = { trigger = { country = hai	} type = ai which = "hai_1936.ai" }
+		command = { trigger = { country = hol	} type = ai which = "hol_1936.ai" }
+		command = { trigger = { country = hon	} type = ai which = "hon_1936.ai" }
+		command = { trigger = { country = hun	} type = ai which = "hun_1936.ai" }
+		command = { trigger = { country = ire	} type = ai which = "ire_1936.ai" }
+		command = { trigger = { country = irq	} type = ai which = "irq_1936.ai" }
+		command = { trigger = { country = ita	} type = ai which = "ita_1936.ai" }
+		command = { trigger = { country = jap	} type = ai which = "jap_1936.ai" }
+		command = { trigger = { country = lat	} type = ai which = "lat_1936.ai" }
+		command = { trigger = { country = lib	} type = ai which = "lib_1936.ai" }
+		command = { trigger = { country = lit	} type = ai which = "lit_1936.ai" }
+		command = { trigger = { country = lux	} type = ai which = "lux_1936.ai" }
+		command = { trigger = { country = man	} type = ai which = "man_1936.ai" }
+		command = { trigger = { country = men	} type = ai which = "men_1936.ai" }
+		command = { trigger = { country = mex	} type = ai which = "mex_1936.ai" }
+		command = { trigger = { country = mon	} type = ai which = "mon_1936.ai" }
+		command = { trigger = { country = nep	} type = ai which = "nep_1936.ai" }
+		command = { trigger = { country = nic	} type = ai which = "nic_1936.ai" }
+		command = { trigger = { country = nor	} type = ai which = "nor_1936.ai" }
+		command = { trigger = { country = nzl	} type = ai which = "nzl_1936.ai" }
+		command = { trigger = { country = omn	} type = ai which = "omn_1936.ai" }
+		command = { trigger = { country = pan	} type = ai which = "pan_1936.ai" }
+		command = { trigger = { country = par	} type = ai which = "par_1936.ai" }
+		command = { trigger = { country = per	} type = ai which = "per_1936.ai" }
+		command = { trigger = { country = phi	} type = ai which = "phi_1936.ai" }
+		command = { trigger = { country = pol	} type = ai which = "pol_1936.ai" }
+		command = { trigger = { country = por	} type = ai which = "por_1936.ai" }
+		command = { trigger = { country = pru	} type = ai which = "pru_1936.ai" }
+		command = { trigger = { country = rom	} type = ai which = "rom_1936.ai" }
+		command = { trigger = { country = saf	} type = ai which = "saf_1936.ai" }
+		command = { trigger = { country = sal	} type = ai which = "sal_1936.ai" }
+		command = { trigger = { country = sau	} type = ai which = "sau_1936.ai" }
+		command = { trigger = { country = sch	} type = ai which = "sch_1936.ai" }
+		command = { trigger = { country = sia	} type = ai which = "sia_1936.ai" }
+		command = { trigger = { country = sik	} type = ai which = "sik_1936.ai" }
+		command = { trigger = { country = slo	} type = ai which = "slo_1936.ai" }
+		command = { trigger = { country = sov	} type = ai which = "sov_1936.ai" }
+		command = { trigger = { country = spa	} type = ai which = "spa_1936.ai" }
+		command = { trigger = { country = spr	} type = ai which = "spr_1936.ai" }
+		command = { trigger = { country = swe	} type = ai which = "swe_1936.ai" }
+		command = { trigger = { country = tan	} type = ai which = "tan_1936.ai" }
+		command = { trigger = { country = tib	} type = ai which = "tib_1936.ai" }
+		command = { trigger = { country = tur	} type = ai which = "tur_1936.ai" }
+		command = { trigger = { country = U02	} type = ai which = "U02_1936.ai" }
+		command = { trigger = { country = U03	} type = ai which = "U03_1936.ai" }
+		command = { trigger = { country = U04	} type = ai which = "U04_1936.ai" }
+		command = { trigger = { country = U05	} type = ai which = "U05_1936.ai" }
+		command = { trigger = { country = U06	} type = ai which = "U06_1936.ai" }
+		command = { trigger = { country = U67	} type = ai which = "U67_1936.ai" }
+		command = { trigger = { country = U87	} type = ai which = "U87_1936.ai" }
+		command = { trigger = { country = uru	} type = ai which = "uru_1936.ai" }
+		command = { trigger = { country = usa	} type = ai which = "usa_1936.ai" }
+		command = { trigger = { country = ven	} type = ai which = "ven_1936.ai" }
+		command = { trigger = { country = vic	} type = ai which = "vic_1936.ai" }
+		command = { trigger = { country = yem	} type = ai which = "yem_1936.ai" }
+		command = { trigger = { country = yug	} type = ai which = "yug_1936.ai" } 
+	}
+}
+
+event = { # Espionage	for each country, recurring upon fraction\government change
+	id = 13390003														 
+	random = no						
+	persistent = yes
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 30						
+	deathdate = { day = 30 month = 11 year = 1935 } # a bit longer than the other
+	
+	name = "EVT_13390003_NAME"							
+	Desc = "EVT_13390003_DESC"
+	Picture = "economic"
+	
+	trigger = {
+		local_flag = AAR_Interwar_AI_init
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		NOT = { local_flag = AAR_Interwar_AI_1936 }
+		ai = yes
+		OR = { 
+			AND = { #we should now use comintern spying 
+				NOT = { local_flag = AAR_Interwar_AI_espionage_communist }
+				OR = {
+					participant = { value = 3 }
+					government = communist
+				}
+				NOT = { participant = { value = 1 } }
+				NOT = { participant = { value = 2 } }
+			}
+			AND = { #we should now use democratic spying 
+				NOT = { local_flag = AAR_Interwar_AI_espionage_democratic }
+				OR = {
+					participant = { value = 1 }
+					government = democratic
+				}
+				NOT = { participant = { value = 2 } }
+				NOT = { participant = { value = 3 } }
+			}
+			AND = { #we should now use fascist spying 
+				NOT = { local_flag = AAR_Interwar_AI_espionage_fascist }
+				OR = {
+					participant = { value = 2 }
+					government = fascist
+				}
+				NOT = { participant = { value = 1 } }
+				NOT = { participant = { value = 3 } }
+			} 
+		}	
+	}
+	
+	action = { #switch to democratic espionage	
+		name = "Time to turn swords into ploughshares."
+		trigger = {
+			NOT = { local_flag = AAR_Interwar_AI_espionage_democratic }
+			OR = {
+				participant = { value = 1 }
+				government = democratic
+			}
+			NOT = { participant = { value = 2 } }
+			NOT = { participant = { value = 3 } }
+		}
+		command = { type = ai which = "AAR\espionage\aar-espionage-interwar-democratic.ai" }
+		command = { type = local_clrflag which = AAR_Interwar_AI_espionage_communist }
+		command = { type = local_clrflag which = AAR_Interwar_AI_espionage_fascist }
+		command = { type = local_setflag which = AAR_Interwar_AI_espionage_democratic }
+	}
+	action = { #switch to fascist espionage	
+		name = "Time to turn swords into ploughshares."
+		trigger = {
+			NOT = { local_flag = AAR_Interwar_AI_espionage_fascist }
+			OR = {
+				participant = { value = 2 }
+				government = fascist
+			}
+			NOT = { participant = { value = 1 } }
+			NOT = { participant = { value = 3 } }
+		}
+		command = { type = ai which = "AAR\espionage\aar-espionage-interwar-fascist.ai" }
+		command = { type = local_clrflag which = AAR_Interwar_AI_espionage_democratic }
+		command = { type = local_clrflag which = AAR_Interwar_AI_espionage_communist }
+		command = { type = local_setflag which = AAR_Interwar_AI_espionage_fascist }
+	}
+	action = { #switch to comintern espionage	
+		name = "Time to turn swords into ploughshares."
+		trigger = {
+			NOT = { local_flag = AAR_Interwar_AI_espionage_communist }
+			OR = {
+				participant = { value = 3 }
+				government = communist
+			}
+			NOT = { participant = { value = 1 } }
+			NOT = { participant = { value = 2 } }
+		}
+		command = { type = ai which = "AAR\espionage\aar-espionage-interwar-comintern.ai" }
+		command = { type = local_clrflag which = AAR_Interwar_AI_espionage_democratic }
+		command = { type = local_clrflag which = AAR_Interwar_AI_espionage_fascist }
+		command = { type = local_setflag which = AAR_Interwar_AI_espionage_communist }
+	}
+}
+
+event = { # Going to war & construction-value switching
+	id = 13390004														 
+	random = no						
+	persistent = yes
+	
+	# go to war
+	trigger = {
+		atwar = yes
+		local_flag = AAR_Interwar_AI_init
+		not = { local_flag = AAR_behavior_atwar }
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		NOT = { local_flag = AAR_Interwar_AI_1936 }
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 1						
+	deathdate = { day = 30 month = 09 year = 1935 }
+	
+	name = "EVT_13390004_NAME"							
+	Desc = "EVT_13390004_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "Time to turn ploughshares into swords."		
+		command = { type = ai which = "AAR\economic\aar-province-construction-atwar.ai" }
+		command = { type = local_setflag which = AAR_behavior_atwar } 
+	}
+}
+
+event = { # Going to peace & construction-value switching
+	id = 13390005														 
+	random = no						
+	persistent = yes
+	
+	# go to war
+	trigger = {
+		atwar = no
+		local_flag = AAR_behavior_atwar
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		NOT = { local_flag = AAR_Interwar_AI_1936 }
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 7						
+	deathdate = { day = 30 month = 09 year = 1935 }
+	
+	name = "EVT_13390005_NAME"							
+	Desc = "EVT_13390005_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "Time to turn swords into ploughshares."		
+		command = { trigger = { local_flag = AAR_behavior_pacifist } type = ai which = "AAR\economic\aar-province-construction-pacifist.ai" }
+		command = { trigger = { local_flag = AAR_behavior_regular } type = ai which = "AAR\economic\aar-province-construction-regular.ai" }
+		command = { trigger = { local_flag = AAR_behavior_gearing } type = ai which = "AAR\economic\aar-province-construction-gearing.ai" }
+		command = { type = local_clrflag which = AAR_behavior_atwar } 
+	}
+}
+
+event = { 
+	id = 133900006														 
+	random = no						
+	persistent = yes
+	
+	#stage 1
+	trigger = {
+		or = { 
+			country = AST
+			country = BEL
+			country = CZE
+			country = GER
+ 			country = HOL
+			country = ITA
+			country = NOR
+			country = NZL
+			country = SWE
+		}
+		NOT = { local_flag = AAR_Interwar_AI_1933 }
+		NOT = { local_flag = AAR_Interwar_AI_1933_done }
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1932 }
+	offset = 30						
+	deathdate = { day = 15 month = 11 year = 1932 }
+	
+	name = "EVT_13390006_NAME"							
+	Desc = "EVT_13390006_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "Time to turn swords into ploughshares."		
+		command = { type = local_setflag which = AAR_Interwar_AI_1933 }
+		command = { trigger = { not = { IC = 10 } } type = ai which = "minor_default.ai" }
+		command = { trigger = { IC = 10 } type = ai which = "default.ai" }
+	}
+}
+
+
+event = { 
+	id = 133900007														 
+	random = no						
+	persistent = yes
+	
+	#stage 2
+	trigger = {
+		local_flag = AAR_Interwar_AI_1933
+		NOT = { local_flag = AAR_Interwar_AI_1933_done }
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1932 }
+	offset = 1						
+	deathdate = { day = 30 month = 11 year = 1932 } # a bit longer than the other
+	
+	name = "EVT_13390007_NAME"							
+	Desc = "EVT_13390007_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "AAR_Interwar_AI_1933."		
+		command = { type = local_clrflag which = AAR_Interwar_AI_1933 }
+		command = { type = local_setflag which = AAR_Interwar_AI_1933_done }
+		command = { trigger = { country = AST	} type = ai which = "AST_1933.ai" }
+		command = { trigger = { country = BEL	} type = ai which = "BEL_1933.ai" }
+		command = { trigger = { country = CZE	} type = ai which = "CZE_1933.ai" }
+		command = { trigger = { country = GER	} type = ai which = "GER_1933.ai" }
+		command = { trigger = { country = HOL	} type = ai which = "HOL_1933.ai" }
+		command = { trigger = { country = ITA	} type = ai which = "ITA_1933.ai" }
+		command = { trigger = { country = NOR	} type = ai which = "NOR_1933.ai" }
+		command = { trigger = { country = NZL	} type = ai which = "NZL_1933.ai" }
+		command = { trigger = { country = SWE	} type = ai which = "SWE_1933.ai" }
+	}
+}
+# Commonwealth AI Switching.
+event = {
+	id = 13390006
+	random = no	
+	persistent = yes
+
+	# Triggered
+	
+	name = "AI_EVENT"
+
+	action = {
+		name = "AI_EVENT"	
+		command = { type = ai which = "AAR\national_behavior\commonwealth.ai" }
+	}
+}
+
+# Yugo-Rom-Cze-Aus area peace.
+event = {
+	id = 13390007
+
+	persistent = yes
+	date = { day = 1 month = 1 year = 1920 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1933 }
+
+	trigger = {
+		atwar = yes
+		not = { atwar = U08 } #no big war going on
+		not = { atwar = GER } 
+		not = { atwar = ENG }
+		not = { atwar = FRA }
+		not = { atwar = JAP }
+		not = { atwar = ITA }
+		or = {
+			war = { country = AUS }
+			war = { country = CZE }
+			war = { country = HUN }
+			war = { country = YUG }
+			war = { country = ROM }
+			war = { country = SER }
+		}
+		or = {
+			country = AUS
+			country = CZE
+			country = HUN
+			country = YUG
+			country = ROM
+			country = SER
+		}
+		or = { # WWI Over.
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+			and = {
+				event = 2191512 #Reverse Versailes
+				or = {
+					event = 2191555 #Russia defeated
+					event = 2007529 #SOV defeated
+					event = 2007530 #SOV defeated
+				}
+			}
+		}
+		local_flag = lon_member
+		random = 50
+	}
+	name = "AI_EVENT"
+
+	action = {
+		name = "AI_EVENT"
+		command = { trigger = { war = { country = AUS } } type = peace which = AUS value = 0 }
+		command = { trigger = { war = { country = CZE } } type = peace which = CZE value = 0 }
+		command = { trigger = { war = { country = HUN } } type = peace which = HUN value = 0 }
+		command = { trigger = { war = { country = YUG } } type = peace which = YUG value = 0 }
+		command = { trigger = { war = { country = ROM } } type = peace which = ROM value = 0 }
+		command = { trigger = { war = { country = SER } } type = peace which = SER value = 0 }
+	}
+}	

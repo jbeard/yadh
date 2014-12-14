@@ -1,0 +1,128 @@
+event = {
+	id = 8028101
+	country = U81
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800123 } # Gaston Mourgues
+		command = { type = headofgovernment which = 800124 } # Gaston Mourgues
+	}
+}
+
+event = {
+	id = 8028102
+	country = U81
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800125 } # Albert Mouragues
+		command = { type = headofgovernment which = 800126 } # Albert Mouragues
+	}
+}
+
+event = {
+	id = 8028103
+	country = U81
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800127 } # Salvador Jean ?tcheber
+		command = { type = headofgovernment which = 800128 } # Salvador Jean ?tcheber
+	}
+}
+
+event = {
+	id = 8028104
+	country = U81
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800129 } # Yvon Bourges
+		command = { type = headofgovernment which = 800104 } # Daniel Ouezzin Coulibaly
+	}
+}
+
+event = {
+	id = 8028105
+	country = U81
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800130 } # Max Berthet
+		command = { type = headofstate which = 800131 } # Paul Masson
+	}
+}
+
+event = {
+	id = 8028106
+	country = U81
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 800100 } # Maurice Yam?ogo
+		command = { type = headofgovernment which = 800103 } # Maurice Yam?ogo
+	}
+}
+

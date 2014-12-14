@@ -1,0 +1,714 @@
+event = {
+	id = 8009901
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505002 } # Marcel Peyrouton
+	}
+}
+
+event = {
+	id = 8009902
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505100 } # Charles Hippolyte Nogues
+	}
+}
+
+event = {
+	id = 8009903
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505101 } # Gabriel Puaux
+	}
+}
+
+event = {
+	id = 8009904
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505102 } # Eirik Labonne
+	}
+}
+
+event = {
+	id = 8009905
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505044 } # Alphonse Pierre Juin
+	}
+}
+
+event = {
+	id = 8009906
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505045 } # Augustin L?on Guillaume
+	}
+}
+
+event = {
+	id = 8009907
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505103 } # Mohammed Ben Aarafa
+		command = { type = headofgovernment which = 505045 } # Augustin L?on Guillaume
+	}
+}
+
+event = {
+	id = 8009908
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505103 } # Mohammed Ben Aarafa
+		command = { type = headofgovernment which = 505104 } # Francis Lacoste
+	}
+}
+
+event = {
+	id = 8009909
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505103 } # Mohammed Ben Aarafa
+		command = { type = headofgovernment which = 505105 } # Andr? Louis Dubois
+	}
+}
+
+event = {
+	id = 8009910
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505106 } # Mbarek Bekkai
+		command = { type = foreignminister which = 505019 } # Mehdi ben-Barka
+		command = { type = armamentminister which = 505021 } # Mehdi ben-Barka
+		command = { type = ministerofsecurity which = 505024 } # Mohammed Oufkir
+		command = { type = ministerofintelligence which = 505027 } # M'Barak Bekkar
+		command = { type = chiefofstaff which = 505032 } # Mahfoud Gharbaoui
+		command = { type = chiefofarmy which = 505034 } # Abdallah Nmichi
+		command = { type = chiefofnavy which = 505037 } # Djamel Abdelmounem
+		command = { type = chiefofair which = 505041 } # Fawzi Joumana
+	}
+}
+
+event = {
+	id = 8009911
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505107 } # Ahmed Balafrej
+	}
+}
+
+event = {
+	id = 8009912
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505108 } # Abdallah Ibrahim
+	}
+}
+
+event = {
+	id = 8009913
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505001 } # Muhammed V
+		command = { type = headofgovernment which = 505109 } # Muhammed V
+	}
+}
+
+event = {
+	id = 8009914
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 505110 } # Hassan II
+		command = { type = headofgovernment which = 505111 } # Hassan II
+	}
+}
+
+event = {
+	id = 8009915
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 505114 } # Mohamed Benhima
+	}
+}
+
+event = {
+	id = 8009916
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 505115 } # Ahmed Laraki
+	}
+}
+
+event = {
+	id = 8009917
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 505119 } # Mohammed Karim Lamrani
+	}
+}
+
+event = {
+	id = 8009918
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 505116 } # Ahmed Osman
+	}
+}
+
+event = {
+	id = 8009919
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 505117 } # Maati Bouabid
+	}
+}
+
+event = {
+	id = 8009920
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 505119 } # Mohammed Karim Lamrani
+	}
+}
+
+event = {
+	id = 8009921
+	country = MOR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 505118 } # Azzeddine Laraki
+	}
+}
+
+# Tanger Protocol
+event = {
+	id = 8009922
+	tag = { SPA SPR U35 }
+
+	name = EVT_8009922_NAME
+	desc = EVT_8009922_DESC
+	picture = "nwo\tanger_protocol"
+	style = 1
+
+	trigger = {
+		exists = MOR
+	}
+
+	date = { day = 1 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8009922_A
+		ai_chance = 95
+		command = { type = secedeprovince which = MOR value = 715 }
+		command = { type = secedeprovince which = MOR value = 716 }
+	}
+	
+	action = {
+		name = EVT_8009922_B
+		ai_chance = 5
+		command = { type = dissent value = 8 }
+		command = { type = belligerence value = 20 }
+		command = { type = sleepevent which = 8009916 }
+	}
+
+}
+
+event = {
+	id = 8009923
+	country = MOR
+
+	name = EVT_8009923_NAME
+	desc = EVT_8009923_DESC
+	picture = "nwo\tanger_protocol"
+	style = 1
+
+	trigger = {
+		event = 8009915
+	}
+
+	date = { day = 1 month = january year = 1956 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8009923_A
+		command = { type = addcore which = 715 }
+		command = { type = addcore which = 716 }
+		command = { type = dissent value = -5 }
+	}
+	
+}
+
+### Acquisition of Western Sahara
+
+event = {
+	id = 8009924
+	tag = { SPA SPR U35 }
+
+	name = EVT_8009924_NAME
+	desc = EVT_8009924_DESC
+	picture = nwo\western_sahara
+	style = 1
+
+	trigger = {
+		exists = MOR
+		control = { province = 989 data = -1 }
+		control = { province = 988 data = -1 }
+		control = { province = 987 data = -1 }
+	}
+
+	date = { day = 1 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1991 }
+
+	action = {
+		name = EVT_8009924_A
+		ai_chance = 99
+		command = { type = secedeprovince which = MOR value = 987 when = 1 }
+		command = { type = secedeprovince which = MOR value = 988 when = 1 }
+		command = { type = secedeprovince which = MOR value = 989 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = -10 }
+		command = { type = relation which = MOR value = 100 }
+		command = { type = trigger which = 8009925 }
+	}
+	
+	action = {
+		name = EVT_8009924_B
+		ai_chance = 1
+		command = { type = dissent value = 8 }
+		command = { type = belligerence value = 20 }
+		command = { type = relation which = MOR value = -200 }
+	}
+
+}
+
+event = {
+	id = 8009925
+	country = MOR
+
+	name = EVT_8009925_NAME
+	desc = EVT_8009925_DESC
+	picture = nwo\western_sahara
+	style = 1
+
+	action = {
+		name = EVT_8009925_A
+		command = { type = dissent value = 25 }
+		command = { type = addcore which = 987 }
+		command = { type = addcore which = 988 }
+		command = { type = addcore which = 989 }
+	}
+
+}

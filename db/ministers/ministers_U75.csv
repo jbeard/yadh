@@ -1,0 +1,37 @@
+U75;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+700500;Head of State;Sir Shenton Thomas;1936;1964;1964;ML;Autocratic Charmer;Very High;singapore1;x
+700501;Head of State;Tan Kah Kee;1936;1964;1964;ST;Pig-headed Isolationist;Very High;singapore10;x
+700502;Head of State;Lim Boon Keng;1936;1964;1964;PA;Popular Figurehead;Very High;singapore7;x
+700503;Head of Government;Sir Shenton Thomas;1936;1964;1964;ML;Silent Workhorse;Very High;singapore1;x
+700504;Head of Government;Lim Boon Keng;1936;1964;1964;PA;Happy Amateur;Very High;singapore7;x
+700505;Head of Government;David Saul Marshall;1936;1964;1964;LWR;Ambitious Union Boss;Very High;singapore11;x
+700506;Foreign Minister;Sir Shenton Thomas;1936;1964;1964;ML;Biased Intellectual;Very High;singapore1;x
+700507;Foreign Minister;Lim Yew Hock;1936;1964;1964;LE;Great Compromiser;Very High;singapore12;x
+700508;Foreign Minister;Lim Bo Seng;1936;1964;1964;SC;General Staffer;Very High;singapore9;x
+700509;Minister of Armament;Lee Kong Chian;1936;1964;1964;SL;Resource Industrialist;Very High;singapore2;x
+700510;Minister of Armament;Tan Lark Sye;1936;1964;1964;SC;Laissez-faire Capitalist;Very High;singapore8;x
+700511;Minister of Armament;Tan Kah Kee;1936;1964;1964;ST;Resource Industrialist;Very High;singapore10;x
+700512;Minister of Security;Franklin Charles Gimson;1936;1964;1964;ML;Prince of Terror;Very High;singapore3;x
+700513;Minister of Security;Lim Boon Keng;1936;1964;1964;PA;Man of the People;Very High;singapore7;x
+700514;Minister of Security;Lim Yew Hock;1936;1964;1964;LE;Efficient Sociopath;Very High;singapore12;x
+700515;Head of Military Intelligence;Franklin Charles Gimson;1936;1964;1964;ML;Political Specialist;Very High;singapore3;x
+700516;Head of Military Intelligence;Lim Yew Hock;1936;1964;1964;LE;Political Specialist;Very High;singapore12;x
+700517;Chief of Staff;Lim Bo Seng;1936;1964;1964;SC;School of Mass Combat;Very High;singapore9;x
+700518;Chief of Staff;David S. Marshall;1936;1964;1964;LWR;School of Defence;Very High;singapore11;x
+700519;Chief of Staff;Robert Brooke-Popham;1936;1964;1964;ML;School of Psychology;Very High;singapore4;x
+700520;Chief of Army;Lim Bo Seng;1936;1964;1964;SC;Decisive Battle Doctrine;Very High;singapore9;x
+700521;Chief of Army;David S. Marshall;1936;1964;1964;LWR;Guns and Butter Doctrine;Very High;singapore11;x
+700522;Chief of Army;Arthur Ernest Percival;1936;1964;1964;ML;Static Defence Doctrine;Very High;singapore5;x
+700523;Chief of Navy;Tom Phillips;1936;1964;1964;SL;Power Projection Doctrine;Very High;singapore6;x
+700524;Chief of Air Force;Patrick Heenan;1936;1964;1964;PA;Army Aviation Doctrine;Very High;unknown;x
+700525;Chief of Air Force;Robert Brooke-Popham;1936;1964;1964;ML;Army Aviation Doctrine;Very High;singapore4;x
+700526;Head of State;Franklin Charles Gimson;1946;1964;1964;ML;Resigned Generalissimo;Very High;singapore3;x
+700527;Head of Government;Franklin Charles Gimson;1946;1964;1964;ML;Silent Workhorse;Very High;singapore3;x
+700528;Head of State;John Fearns Nicoll;1952;1964;1964;ML;Autocratic Charmer;Very High;M700528;x
+700529;Head of Government;John Fearns Nicoll;1952;1964;1964;ML;Ambitious Union Boss;Very High;M700528;x
+700530;Head of State;Robert Brown Black;1955;1964;1964;ML;Barking Buffoon;Very High;M700530;x
+700531;Head of Government;Robert Brown Black;1955;1964;1964;ML;Old Admiral;Very High;M700530;x
+700532;Head of State;William Goode;1958;1964;1964;ML;Stern Imperialist;Very High;M700532;x
+700533;Head of Government;William Goode;1958;1964;1964;ML;Old General;Very High;M700532;x
+700534;Head of Government;Lee Kuan Yew;1959;2020;2020;SD;Political Protege;Very High;M700534;x
+700535;Head of State;Yusof bin Ishak;1960;1971;1971;SD;Powerhungry Demagogue;Very High;M700535;x

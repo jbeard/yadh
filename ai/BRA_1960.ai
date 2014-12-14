@@ -1,0 +1,270 @@
+switch = no
+max_front_ratio = 1.2
+max_garrison_prop = 0.3
+min_garrison_prop = 0.2
+neutrality = 70 
+war = 25
+reinforcement = 0.3
+upgrading = 0.2
+exp_force_ratio = 0.5
+exp_force_ratios = { } 
+no_exp_forces_to = { }
+
+###################################
+# Diplomacy
+###################################
+combat = { 
+
+}
+
+claim_acceptance = -59
+
+befriend = { 
+	USA = 100
+}
+protect = { 
+	USA = 100
+}
+target = { }
+
+###################################
+# Construction and Tech Research
+###################################
+#Default values
+construction = { 
+	max_factor = 0.300 
+
+	AA_batteries = yes
+	max_AA_level = 7
+	AA_provs = { 
+		2070 # Natal
+		2074 # Vitoria
+		2075 # Rio de Janeiro
+		2059 # Sao Paulo
+	}
+
+	coastal_fort = atwar
+	max_coastal_level = 6
+	coastal_fort_provs = { 2075 } 
+
+	radar_station = not_atwar
+	max_radar = 6
+	radar_provs = { 2071 2070 2058 } 
+
+	air_base = yes
+	max_air_base = 8
+	air_base_provs = {
+     	1968 # Puebla 
+		2058
+		2067
+		2073
+		2068
+	} 
+
+	naval_base = yes 
+	max_naval_base = 6
+	naval_base_provs = { 2068 2075 } 
+
+	land_fort = yes
+	max_land_level = 6
+	fort_borders = { 
+		ARG
+	} 
+
+	ic_at_war = yes 
+	force_ic_until = 1937
+	ic_end_year = 1970
+	IC_provs = {
+		2070 # Natal
+		2074 # Vitoria
+		2075 # Rio de Janeiro
+		2059 # Sao Paulo
+		2058 # Porto Alegre
+		2057 # Curitiba
+		2067
+		2068
+	} 
+
+	nuclear_reactor = atwar	
+	nuclear_reactor_prov = 2067
+	max_nuclear = 4
+	
+	rocket_test = no	
+	rocket_test_prov = 2076
+	max_rocket = 3
+}
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 		= 720 
+	max_batch_war 			= 360 
+	max_batch_home_front = 270
+	extra_convoys_war = 0.0500 
+	extra_convoys_peace = 0.0500
+
+
+	#### Divisions etc...
+	infantry 		= 0
+	cavalry 		= 0
+	motorized 		= 23
+	mechanized 		= 9
+	light_armor 	= 0
+	armor 			= 5
+	paratrooper 	= 0
+	marine 			= 1
+	bergsjaeger 	= 1
+	garrison		= 0
+    hq 				= 1
+	militia 		= 0
+#				40 %
+	interceptor 	= 7
+	multi_role 		= 8
+	cas 			= 2
+	strategic_bomber = 5
+	tactical_bomber = 8
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				30 %
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier	= 2
+	destroyer 		= 10
+	light_cruiser 	= 4
+	heavy_cruiser 	= 2
+	battlecruiser 	= 1
+	submarine 		= 3
+	nuclear_submarine = 0
+	transports 		= 8
+#				30 %
+
+	#### Brigades
+	artillery 			= 0
+	sp_artillery 		= 25
+	cavalry_brigade	= 0
+	sp_anti_air 	= 10
+	medium_armor 			= 15
+	tank_destroyer 		= 10
+	light_armor_brigade 	= 0
+	heavy_armor 		= 0
+	super_heavy_armor 	= 0
+	armored_car 		= 2
+	anti_air 		= 0
+	police 			= 0
+	engineer 		= 2
+	
+}
+
+technology = {  
+	armor 		= 3
+	infantry 	= 5
+	industry 	= 4
+	aircraft 	= 2
+	naval 		= 2
+	land_doctrines 	= 2
+	secret_weapons 	= 0
+	air_doctrines 	= 1
+	naval_doctrines = 1
+}  
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier = 0.5
+	home_peace_cap 		= 50
+	war_zone_odds 		= 2.5
+	key_point_prio_mult	= 1
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 20	# Beach level 2
+	capital			= 20	# Our capital
+	human_border	= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	reserves = 30
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = { }
+	ignore = { }
+	province_priorities = { }
+	area_multiplier = { }
+}
+front = { 
+	recklessness 		= 1 # 0-3
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= even
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.3
+	withdraw_odds		= 0.6
+	
+} 
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 0.1	#higher = avoid long distance.
+	pocket		= 5.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+	naval_base 	= 0.1 
+	air_support 	= 3.0 
+	redirect 	= priority
+	ignore		= yes
+      
+	target = { 
+		# Targets for west-aligned countries
+		53 = 100 49 = 100 114 = 100 68 = 100 82 = 100 # France
+		472 = 100 464 = 100 # Spain
+		416 = 100 430 = 100 433 = 100 # Italy
+		343 = 100 # Yugoslavia
+		372 = 100 # Greece
+		789 = 100 # Egypt
+		17 = 100 32 = 100 11 = 100 27 = 100 # United Kingdom
+		181 = 100 # Poland
+		718 = 100 # Morocco
+		1090 = 100 # Iran
+		624 = 250 637 = 250 641 = 250 270 = 250 269 = 250 542 = 250 535 = 250 1191 = 250 # USSR
+		524 = 100 # Finland
+		483 = 100 # Norway
+		217 = 100 # Denmark
+		1228 = 250 1221 = 250 # Korea
+		1338 = 100 1334 = 100 1241 = 100 1371 = 100 1362 = 100 # China
+		1552 = 200 1554 = 200 # Japan
+		1447 = 100 1518 = 100 1494 = 100 1532 = 100 # India
+		1647 = 100 # Indonesia
+		1395 = 250 # Vietnam
+		
+		# Specific targets
+		2048 = 300
+	} 
+	
+	staging_province = {
+		# Staging provinces for west-aligned countries
+		25 26 # United Kingdom
+		49 # France
+		422 # Italy
+		1552 1554 # Japan
+		1362 # Taiwan
+	}
+} 

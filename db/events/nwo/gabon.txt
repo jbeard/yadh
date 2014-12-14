@@ -1,0 +1,583 @@
+event = {
+	id = 8005801
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655001 } # Louis Bonvin
+		command = { type = headofgovernment which = 655100 } # Louis Bonvin
+	}
+}
+
+event = {
+	id = 8005802
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655011 } # Georges Parisot
+		command = { type = headofgovernment which = 655101 } # Georges Parisot
+	}
+}
+
+event = {
+	id = 8005803
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655012 } # Georges Pierre Masson
+		command = { type = headofgovernment which = 655102 } # Georges Pierre Masson
+	}
+}
+
+event = {
+	id = 8005804
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655013 } # Andr? Parant
+		command = { type = headofgovernment which = 655103 } # Andr? Parant
+	}
+}
+
+event = {
+	id = 8005805
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655014 } # Victor Valentin Smith
+		command = { type = headofgovernment which = 655104 } # Victor Valentin Smith
+	}
+}
+
+event = {
+	id = 8005806
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655015 } # Charles A.M. Assier de Perpigan
+		command = { type = headofgovernment which = 655105 } # Charles A.M. Assier de Perpigan
+	}
+}
+
+event = {
+	id = 8005807
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655016 } # Paul Vuillaume
+		command = { type = headofgovernment which = 655106 } # Paul Vuillaume
+	}
+}
+
+event = {
+	id = 8005808
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655018 } # Numa Sadoul
+		command = { type = headofgovernment which = 655107 } # Numa Sadoul
+	}
+}
+
+event = {
+	id = 8005809
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655017 } # Roland Pr?
+		command = { type = headofgovernment which = 655108 } # Roland Pr?
+	}
+}
+
+event = {
+	id = 8005810
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655018 } # Numa Sadoul
+		command = { type = headofgovernment which = 655107 } # Numa Sadoul
+	}
+}
+
+event = {
+	id = 8005811
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655109 } # Pierre Fran?ois Pelieu
+		command = { type = headofgovernment which = 655110 } # Pierre Fran?ois Pelieu
+	}
+}
+
+event = {
+	id = 8005812
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655111 } # Charles Hanin
+		command = { type = headofgovernment which = 655112 } # Charles Hanin
+	}
+}
+
+event = {
+	id = 8005813
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655113 } # Yves Digo
+		command = { type = headofgovernment which = 655114 } # Yves Digo
+	}
+}
+
+event = {
+	id = 8005814
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 655115 } # Louis Sanmarco
+		command = { type = headofgovernment which = 655116 } # Leon Gabriel M'ba
+		command = { type = foreignminister which = 655027 } # Maurice Perriot
+		command = { type = armamentminister which = 655031 } # Gaston Flaubert
+		command = { type = ministerofsecurity which = 655035 } # Numa Sadoul
+		command = { type = ministerofintelligence which = 655039 } # Maurice Kaouza
+		command = { type = chiefofstaff which = 655042 } # Raymond Delange
+		command = { type = chiefofarmy which = 655045 } # Rapha?l Folliot
+		command = { type = chiefofnavy which = 655048 } # Charles A.M. Assier de Perpigan
+		command = { type = chiefofair which = 655051 } # Roland Pr?
+	}
+}
+
+event = {
+	id = 8005815
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 655117 } # Jean Risterucci
+		command = { type = headofgovernment which = 655116 } # Leon Gabriel M'ba
+	}
+}
+
+event = {
+	id = 8005816
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 655019 } # Leon Gabriel M'ba
+		command = { type = headofgovernment which = 655116 } # Leon Gabriel M'ba
+		command = { type = foreignminister which = 655028 } # Pascal Lissouba
+		command = { type = armamentminister which = 655032 } # Alphonse Massemba-Debat
+		command = { type = ministerofsecurity which = 655036 } # Nkola Mbomo
+		command = { type = ministerofintelligence which = 655040 } # David Mousseda
+		command = { type = chiefofstaff which = 655043 } # Charles Mahango
+		command = { type = chiefofarmy which = 655046 } # Fulbert Youlou
+		command = { type = chiefofnavy which = 655049 } # Felix Eboue
+		command = { type = chiefofair which = 655052 } # Felix Eboue
+	}
+}
+
+event = {
+	id = 8005817
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 655118 } # Albert-Bernard Bongo
+		command = { type = headofgovernment which = 655119 } # Albert-Bernard Bongo
+	}
+}
+
+event = {
+	id = 8005818
+	country = GAB
+
+	name = EVT_8005818_NAME
+	desc = EVT_8005818_DESC
+	picture = nwo\omar_bongo
+	decision_picture = nwo\d_omar_bongo
+	style = 1
+
+	decision = {
+		headofstate = 655118
+		headofgovernment = 655119
+	}
+	
+	trigger = {
+		headofstate = 655118
+		headofgovernment = 655119
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = EVT_8005818_A
+		ai_chance = 100
+		command = { type = headofstate which = 655120 } # Omar Bongo
+		command = { type = headofgovernment which = 655130 } # Omar Bongo
+	}
+}
+
+event = {
+	id = 8005819
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 655121 } # Léon Mébiame
+	}
+}
+
+event = {
+	id = 8005820
+	country = GAB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 655131 } # Casimir Oyé-Mba
+	}
+}

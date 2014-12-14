@@ -1,0 +1,1154 @@
+event = {
+	id = 8007501
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365028 } # Salih Jabr
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365102 } # Nuri as Said
+		command = { type = chiefofstaff which = 365113 } # Nuri as-Said
+		command = { type = chiefofarmy which = 365121 } # Faysal II ibn Ghazi
+		command = { type = chiefofnavy which = 365126 } # Jamil al Midfai
+		command = { type = chiefofair which = 365133 } # Faysal II ibn Ghazi
+	}
+}
+
+event = {
+	id = 8007502
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365147 } # Muhammad as Sadr
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365102 } # Nuri as Said
+	}
+}
+
+event = {
+	id = 8007503
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365148 } # Muzahim al Bayyaji
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365102 } # Nuri as Said
+	}
+}
+
+event = {
+	id = 8007504
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365141 } # Nuri as Said
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007505
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = july year = 1949 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365149 } # Ali Jawdat
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007506
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365150 } # Tawfiq al Suweidi
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007507
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = july year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365142 } # Nuri as Said
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007508
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365155 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365152 } # Mustafa al Umari
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007509
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = july year = 1952 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365151 } # Nurreddin Mahmud
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007510
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365025 } # Jamil al Midfai
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007511
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = july year = 1953 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365153 } # Muhamed Fadhel al-Jamali
+		command = { type = foreignminister which = 365051 } # Muhammed Fadelfomali
+		command = { type = armamentminister which = 365072 } # Abdullah
+		command = { type = ministerofsecurity which = 365086 } # Nuri as Said
+		command = { type = ministerofintelligence which = 365154 } # Nurreddin Mahmud
+	}
+}
+
+event = {
+	id = 8007512
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365142 } # Nuri as Said
+	}
+}
+
+event = {
+	id = 8007513
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365019 } # Faysal II ibn Ghazi
+		command = { type = headofgovernment which = 365149 } # Ali Jawdat
+	}
+}
+
+# 14 July Revolution
+event = {
+	id = 8007514
+	country = IRQ
+
+	name = EVT_8007514_NAME
+	desc = EVT_8007514_DESC
+	picture = "nwo\14_july_revolution"
+	style = 1
+
+	date = { day = 14 month = july year = 1958 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1962 }
+
+	action = {
+		name = EVT_8007514_A
+		ai_chance = 100
+		command = { type = end_puppet }
+		command = { type = flag_ext which = _1958 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 365200 } # Muhammad Najib ar-Ruba'i
+		command = { type = headofgovernment which = 365201 } # Abdul Karim Qassim
+		command = { type = dissent value = 10 }
+		command = { type = independence which = JOR } # Arab Federation breaks up
+	}
+}
+
+event = {
+	id = 8007515
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1963 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365202 } # Abdul Salam Arif
+		command = { type = headofgovernment which = 365203 } # Ahmed Hassan al-Bakr
+	}
+}
+
+event = {
+	id = 8007516
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = july year = 1963 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = flag_ext where = IRQ which = _1963 }
+		command = { type = headofstate which = 365202 } # Abdul Salam Arif
+		command = { type = headofgovernment which = 365204 } # Tahir Yahya
+	}
+}
+
+event = {
+	id = 8007517
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 365202 } # Abdul Rahman Arif
+		command = { type = headofgovernment which = 365206 } # Abd ar-Rahman al-Bazzaz
+	}
+}
+
+event = {
+	id = 8007518
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 365204 } # Tahir Yahya
+	}
+}
+
+event = {
+	id = 8007519
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 365207 } # Ahmed Hassan al-Bakr
+		command = { type = headofgovernment which = 365203 } # Ahmed Hassan al-Bakr
+	}
+}
+
+event = {
+	id = 8007520
+	country = IRQ
+
+	name = EVT_8007520_NAME
+	desc = EVT_8007520_DESC
+	picture = nwo\saddam_hussein
+	style = 1
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = EVT_8007520_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 365209 } # Saddam Hussein
+		command = { type = headofgovernment which = 365210 } # Saddam Hussein
+	}
+}
+
+event = {
+	id = 8007521
+	country = IRQ
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 365208 } # Sa'dun Hammadi
+	}
+}
+
+### Arab Federation of Iraq and Jordan
+
+event = {
+	id = 8007522
+	country = IRQ
+
+	name = EVT_8007522_NAME
+	desc = EVT_8007522_DESC
+	picture = "nwo\iraqi_arab_federation"
+	decision_picture = "nwo\d_iraqi_arab_federation"
+	style = 1
+	
+	decision = {
+		event = 8004922 # Formation of United Arab Republic
+		exists = JOR
+		government = fascist
+	}
+	
+	trigger = {
+		event = 8004922 # Formation of United Arab Republic
+		exists = JOR
+		government = fascist
+	}
+
+	date = { day = 14 month = february year = 1958 }
+	offset = 1
+	deathdate = { day = 29 month = february year = 1958 }
+
+	# Propose it
+	action = {
+		name = EVT_8007522_A
+		ai_chance = 80
+		command = { type = trigger which = 8007518 }
+	}
+	
+	# This serves no purpose
+	action_b = {
+		name = EVT_8007522_B
+		trigger = { ai = yes }
+		ai_chance = 20
+		command = { type = dissent value = 1 }
+	}
+
+}
+
+event = {
+	id = 8007523
+	country = JOR
+
+	name = EVT_8007523_NAME
+	desc = EVT_8007523_DESC
+	picture = "nwo\iraqi_arab_federation"
+	style = 1
+	
+	# Agree
+	action = {
+		name = EVT_8007523_A
+		ai_chance = 80
+		command = { type = trigger which = 8007519 }
+	}
+
+	# We shall remain independent
+	action_b = {
+		name = EVT_8007523_B
+		ai_chance = 20
+		command = { type = dissent value = 5 }
+	}
+	
+}
+
+event = {
+	id = 8007524
+	country = IRQ
+
+	name = EVT_8007524_NAME
+	desc = EVT_8007524_DESC
+	picture = "nwo\iraqi_arab_federation"
+	style = 1
+	
+	action = {
+		name = EVT_8007524_A
+		command = { type = inherit which = JOR }
+		command = { type = add_corps when = 1022 } # Amman
+		command = { type = add_division value = infantry when = 14 }
+		command = { type = add_division value = infantry when = 14 }
+	}
+}
+
+event = {
+	id = 8007525
+	country = IRQ
+
+	name = EVT_8007525_NAME
+	desc = EVT_8007525_DESC
+	picture = "nwo\iraq"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		ispuppet = yes
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8007525_A
+		command = { type = end_puppet }
+	}
+}
+
+### Iraq-Kurdish wars
+
+event = {
+	id = 8007530
+	country = IRQ
+
+	name = EVT_8007530_NAME
+	desc = EVT_8007530_DESC
+	picture = nwo\iraqi_kurds
+	style = 1
+	
+	trigger = {
+		NOT = { exists = KUR }
+	}
+
+	date = { day = 0 month = september year = 1961 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1970 }
+	
+	action = {
+		name = EVT_8007530_A
+		ai_chance = 98
+		command = { type = dissent value = 25 }
+	}
+	
+	action = {
+		name = EVT_8007530_B
+		ai_chance = 2
+		command = { type = independence which = KUR value = 1 }
+		command = { type = non_aggression which = KUR where = IRQ }
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 8007531
+	country = IRQ
+
+	name = EVT_8007531_NAME
+	desc = EVT_8007531_DESC
+	picture = nwo\iraqi_kurds
+	style = 1
+	
+	trigger = {
+		NOT = { exists = KUR }
+	}
+
+	date = { day = 0 month = april year = 1974 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1975 }
+	
+	action = {
+		name = EVT_8007531_A
+		ai_chance = 99
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = EVT_8007531_B
+		ai_chance = 1
+		command = { type = independence which = KUR value = 1 }
+		command = { type = non_aggression which = KUR where = IRQ }
+		command = { type = dissent value = 15 }
+	}
+}
+
+### Iran-Iraq War
+
+event = {
+	id = 8007540
+	country = IRQ
+
+	name = EVT_8007540_NAME
+	desc = EVT_8007540_DESC
+	picture = nwo\qadisiyyah
+	decision_picture = nwo\d_qadisiyyah
+	style = 1
+	
+	trigger = {
+		exists = PER
+		control = { province = 1089 data = PER }
+		atwar = no
+		# TODO: Revolution in Iran
+	}
+	
+	decision = {
+		exists = PER
+		control = { province = 1089 data = PER }
+		atwar = no
+		# TODO: Revolution in Iran
+	}
+
+	date = { day = 0 month = september year = 1980 }
+	offset = 30
+	deathdate = { day = 29 month = august year = 1988 }
+	
+	action = {
+		name = EVT_8007540_A
+		ai_chance = 99
+		command = { type = leave_alliance }
+		command = { type = trigger which = 8007541 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = 10 }
+		command = { type = addcore which = 1089 }
+		
+		command = { type = construct which = land_fort where = 1027 value = 5 }
+		command = { type = construct which = land_fort where = 1036 value = 5 }
+		command = { type = construct which = land_fort where = 1034 value = 5 }
+		command = { type = construct which = land_fort where = 1035 value = 5 }
+		command = { type = construct which = land_fort where = 1028 value = 5 }
+		command = { type = construct which = land_fort where = 1037 value = 5 }
+		
+		# Balancing
+		command = { type = add_corps where = 1027 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1036 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1035 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1028 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+	}
+	
+	action = {
+		name = EVT_8007540_B
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8007541
+	country = PER
+
+	name = EVT_8007541_NAME
+	desc = EVT_8007541_DESC
+	picture = nwo\qadisiyyah
+	decision_picture = nwo\d_qadisiyyah
+	style = 1
+	
+	action = {
+		name = EVT_8007541_A
+		ai_chance = 98
+		command = { type = leave_alliance }
+		command = { type = war which = IRQ }
+		command = { type = dissent value = 30 }
+		
+		command = { type = construct which = land_fort where = 1082 value = 5 }
+		command = { type = construct which = land_fort where = 1083 value = 5 }
+		command = { type = construct which = land_fort where = 1084 value = 5 }
+		command = { type = construct which = land_fort where = 1087 value = 5 }
+		command = { type = construct which = land_fort where = 1089 value = 5 }
+		command = { type = construct which = land_fort where = 1086 value = 5 }
+		
+		# Balancing
+		command = { type = add_corps where = 1082 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1084 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1087 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1089 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+	}
+	
+	action = {
+		name = EVT_8007541_B
+		ai_chance = 1
+		command = { type = secedeprovince which = IRQ value = 1089 when = 1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+### Resolution of the war
+
+event = {
+	id = 8007542
+	country = IRQ
+
+	name = EVT_8007542_NAME
+	desc = EVT_8007542_DESC
+	picture = nwo\qadisiyyah_iraqi_victory
+	style = 1
+	
+	trigger = {
+		event = 8007541
+		OR = {
+			war = { country = IRQ country = PER }
+			NOT = { exists = PER }
+		}
+		region = { region = "Persia" country = IRQ data = 1 value = 50 }		
+	}
+	date = { day = 0 month = january year = 1981 }
+	offset = 3
+	deathdate = { day = 29 month = august year = 1988 }
+	
+	action = {
+		name = EVT_8007542_A
+		command = { type = peace which = PER }
+		command = { trigger = { NOT = { exists = PER } } type = independence which = PER }
+		command = { type = dissent value = -30 }
+		command = { type = trigger which = 8007543 }
+		command = { type = addclaim which = 1087 }
+		command = { type = addclaim which = 1084 }
+		command = { type = addclaim which = 1082 }
+	}
+}
+
+event = {
+	id = 8007543
+	country = PER
+
+	name = EVT_8007543_NAME
+	desc = EVT_8007543_DESC
+	picture = nwo\qadisiyyah_iraqi_victory
+	style = 1
+	
+	action = {
+		name = EVT_8007543_A
+		command = { type = dissent value = 25 }
+		command = { type = secedeprovince which = IRQ value = 1089 }
+		command = { type = secedeprovince which = IRQ value = 1087 }
+		command = { type = secedeprovince which = IRQ value = 1084 }
+		command = { type = secedeprovince which = IRQ value = 1082 }
+	}
+}
+
+event = {
+	id = 8007544
+	country = IRQ
+
+	name = EVT_8007544_NAME
+	desc = EVT_8007544_DESC
+	picture = nwo\qadisiyyah_stalemate
+	style = 1
+	
+	action = {
+		name = EVT_8007544_A
+		command = { type = peace which = PER }
+		command = { type = removecore which = 1089 }
+	}
+}
+
+event = {
+	id = 8007545
+	country = PER
+
+	name = EVT_8007545_NAME
+	desc = EVT_8007545_DESC
+	picture = nwo\qadisiyyah_iranian_victory
+	style = 1
+	
+	trigger = {
+		event = 8007541
+		OR = {
+			war = { country = IRQ country = PER }
+			NOT = { exists = IRQ }
+		}
+		area = { area = "Iraq" country = PER data = 1 value = 60 }		
+	}
+	date = { day = 0 month = january year = 1981 }
+	offset = 3
+	deathdate = { day = 29 month = august year = 1988 }
+	
+	action = {
+		name = EVT_8007545_A
+		command = { type = peace which = IRQ }
+		command = { trigger = { NOT = { exists = IRQ } } type = independence which = IRQ }
+		command = { type = dissent value = -30 }
+		command = { type = trigger which = 8007546 }
+		command = { type = addclaim which = 1028 }
+		command = { type = addclaim which = 1035 }
+		command = { type = addclaim which = 1027 }
+		command = { type = addclaim which = 1036 }
+	}
+}
+
+event = {
+	id = 8007546
+	country = IRQ
+
+	name = EVT_8007546_NAME
+	desc = EVT_8007546_DESC
+	picture = nwo\qadisiyyah_iranian_victory
+	style = 1
+	
+	action = {
+		name = EVT_8007546_A
+		command = { type = removecore which = 1089 }
+		command = { type = dissent value = 25 }
+		command = { type = secedeprovince which = PER value = 1028 }
+		command = { type = secedeprovince which = PER value = 1035 }
+		command = { type = secedeprovince which = PER value = 1027 }
+		command = { type = secedeprovince which = PER value = 1036 }
+	}
+}
+
+### Invasion of Kuwait
+
+event = {
+	id = 8007550
+	country = IRQ
+
+	name = EVT_8007550_NAME
+	desc = EVT_8007550_DESC
+	picture = nwo\invasion_of_kuwait
+	decision_picture = nwo\d_invasion_of_kuwait
+	style = 1
+	
+	decision = {
+		NOT = { event = 8007545 }
+		exists = U91
+		NOT = { alliance = { country = U91 country = USA } }
+		NOT = { alliance = { country = U91 country = ENG } }
+		NOT = { alliance = { country = U91 country = SOV } }
+		control = { province = 1041 data = U91 }
+	}
+	
+	trigger = {
+		NOT = { event = 8007545 }
+		exists = U91
+		NOT = { alliance = { country = U91 country = USA } }
+		NOT = { alliance = { country = U91 country = ENG } }
+		NOT = { alliance = { country = U91 country = SOV } }
+		control = { province = 1041 data = U91 }
+	}
+	
+	date = { day = 0 month = august year = 1990 }
+	offset = 3
+	deathdate = { day = 29 month = august year = 1990 }
+	
+	action = {
+		name = EVT_8007550_A
+		ai_chance = 95
+		command = { type = leave_alliance }
+		command = { type = belligerence value = 30 }
+		command = { type = war which = U91 }
+		command = { type = dissent value = -5 }
+		command = { type = addcore which = 1041 }
+		command = { type = money value = 10000 }
+	}
+	
+	action = {
+		name = EVT_8007550_B
+		trigger = { ai = yes }
+		ai_chance = 5
+		command = { type = relation which = U91 value = 10 }
+	}
+}
+
+event = {
+	id = 8007551
+	country = IRQ
+
+	name = EVT_8007551_NAME
+	desc = EVT_8007551_DESC
+	picture = nwo\invasion_of_kuwait_victory
+	style = 1
+	
+	trigger = {
+		event = 8007550
+		control = { province = 1041 data = IRQ }
+	}
+	
+	date = { day = 0 month = august year = 1990 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1991 }
+	
+	action = {
+		name = EVT_8007551_A
+		command = { type = inherit which = U91 }
+		command = { type = dissent value = -15 }
+		command = { type = relation which = USA value = -150 }
+		command = { type = relation which = ENG value = -100 }
+		command = { type = relation which = FRA value = -100 }
+		command = { type = relation which = ISR value = -100 }
+		
+		command = { type = relation which = SAU value = -50 }
+		command = { type = relation which = EGY value = -50 }
+	}
+}
+
+### Desert Storm
+
+event = {
+	id = 8007560
+	country = USA
+
+	name = EVT_8007560_NAME
+	desc = EVT_8007560_DESC
+	picture = nwo\desert_storm
+	style = 1
+	
+	action = {
+		name = EVT_8007560_A
+		ai_chance = 100
+		command = { type = war which = IRQ }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007561 }
+	}
+	
+	action = {
+		name = EVT_8007560_B
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 8007561
+	country = SAU
+
+	name = EVT_8007561_NAME
+	desc = EVT_8007561_DESC
+	picture = nwo\desert_storm
+	style = 1
+	
+	action = {
+		name = EVT_8007561_A
+		ai_chance = 95
+		command = { type = war which = IRQ }
+		command = { type = alliance which = USA }
+		command = { type = relation which = USA value = 150 }
+		command = { type = money value = -15000 }
+		
+		command = { type = construct which = land_fort where = 1046 value = 3 }
+		command = { type = construct which = land_fort where = 1040 value = 3 }
+		
+		# Mobilize!
+		command = { type = add_corps where = 1046 }
+		command = { type = add_division value = motorized when = 12 }
+		command = { type = add_division value = motorized when = 12 }
+		command = { type = add_division value = motorized when = 12 }
+		command = { type = add_division value = mechanized when = 9 }
+		command = { type = add_division value = mechanized when = 9 }
+		command = { type = add_division value = armor when = 11 }
+		
+		command = { type = add_corps where = 1040 }
+		command = { type = add_division value = motorized when = 12 }
+		command = { type = add_division value = motorized when = 12 }
+		command = { type = add_division value = motorized when = 12 }
+		command = { type = add_division value = mechanized when = 9 }
+		command = { type = add_division value = mechanized when = 9 }
+		command = { type = add_division value = armor when = 11 }
+	}
+	
+	action = {
+		name = EVT_8007561_B
+		ai_chance = 5
+		command = { type = relation which = USA value = -100 }
+	}
+}
+
+event = {
+	id = 8007562
+	country = USA
+
+	name = EVT_8007562_NAME
+	desc = EVT_8007562_DESC
+	picture = nwo\desert_storm
+	style = 1
+	
+	trigger = {
+		event = 8007560
+		OR = {
+			control = { province = 1033 data = USA }
+			control = { province = 1035 data = USA }
+			control = { province = 1037 data = USA }
+			control = { province = 1033 data = SAU }
+			control = { province = 1035 data = SAU }
+			control = { province = 1037 data = SAU }
+		}
+	}
+	
+	date = { day = 0 month = september year = 1990 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1991 }
+	
+	action = {
+		name = EVT_8007562_A
+		ai_chance = 100
+		command = { type = peace which = IRQ value = 0 }
+		command = { type = dissent value = -15 }
+		command = { type = trigger which = 8007563 }
+		command = { type = trigger which = 8007564 }
+	}
+}
+
+event = {
+	id = 8007563
+	country = IRQ
+
+	name = EVT_8007563_NAME
+	desc = EVT_8007563_DESC
+	picture = nwo\desert_storm
+	style = 1
+	
+	action = {
+		name = EVT_8007563_A
+		ai_chance = 100
+		command = { type = removecore which = 1041 }
+		command = { type = dissent value = 25 }
+		command = { type = independence which = U91 value = 0 }
+		command = { type = independence which = SAU value = 0 } # Just in case
+	}
+}
+
+event = {
+	id = 8007564
+	country = SAU
+
+	name = EVT_8007564_NAME
+	desc = EVT_8007564_DESC
+	picture = nwo\desert_storm
+	style = 1
+	
+	action = {
+		name = EVT_8007564_A
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = dissent value = -10 }
+	}
+}

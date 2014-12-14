@@ -1,0 +1,325 @@
+### Berlin Airlift
+###
+### Soviet aim: Reunification of West Berlin with East Germany
+### American aim: Preservation of West Berlin as a Western-Allied zone
+### Soviet withdrawal: Status quo is retained
+### American withdrawal: East Germany annexes West Berlin
+### Chance of WW3: 6%
+###
+
+event = {
+	id = 8500601
+	country = USA
+
+	name = EVT_8500601_NAME
+	desc = EVT_8500601_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = U24
+		exists = U25
+		event = 8204044 # Berlin Blockade
+	}
+
+	date = { day = 1 month = july year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# Organize airlift
+	action = {
+		name = EVT_8500601_A
+		ai_chance = 85
+		command = { type = relation which = SOV value = -50 }
+		command = { type = money value = -5000 }
+		command = { type = dissent value = 6 }
+	}
+	
+	# Relinquish control over Berlin
+	action = {
+		name = EVT_8500601_B
+		ai_chance = 15
+		command = { type = money value = -2000 }
+		command = { type = clrflag which = divided_berlin }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+}
+
+event = {
+	id = 8500602
+	country = USA
+	one_action = yes
+
+	name = EVT_8500602_NAME
+	desc = EVT_8500602_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = U24
+		exists = U25
+		event = 8500601
+	}
+	
+	date = { day = 1 month = october year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# We succeed
+	action = {
+		name = EVT_8500602_A
+		ai_chance = 98
+		command = { type = relation which = U24 value = 50 }
+	}
+	
+	# We fail
+	action = {
+		name = EVT_8500602_B
+		ai_chance = 2
+		command = { type = sleepevent which = 8500603 }
+		command = { type = clrflag which = divided_berlin }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+}
+
+event = {
+	id = 8500603
+	country = SOV
+
+	name = EVT_8500603_NAME
+	desc = EVT_8500603_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8500602
+	}
+
+	date = { day = 1 month = october year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# "Hamper airlifts further and organize a putsch"
+	action = {
+		name = EVT_8500603_A
+		ai_chance = 65
+		command = { type = belligerence value = 20 }
+		command = { type = relation which = USA value = -50 }
+		command = { type = money value = -1000 }
+	}
+	
+	# "Hamper airlifts"
+	action = {
+		name = EVT_8500603_B
+		ai_chance = 10
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = sleepevent which = 8500605 } # Communist putsch
+	}
+	
+	# "Let them free"
+	action = {
+		name = EVT_8500603_C
+		ai_chance = 6
+		command = { type = relation which = USA value = 100 }
+		command = { type = trigger which = 8500608 } # End of Berlin Blockade
+		command = { type = sleepevent which = 8500604 }
+		command = { type = sleepevent which = 8500605 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+	
+	# "Fire at transport planes (Possible WW3)"
+	action = {
+		name = EVT_8500603_D
+		ai_chance = 19
+		command = { type = money value = -2000 }
+		command = { type = trigger which = 8500606 } # Airlift gets hot
+		command = { type = sleepevent which = 8500604 }
+		command = { type = sleepevent which = 8500605 }
+	}
+
+}
+
+# Airlifts are hampered further
+event = {
+	id = 8500604
+	country = USA
+	one_action = yes
+
+	name = EVT_8500604_NAME
+	desc = EVT_8500604_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = U24
+		exists = U25
+		event = 8500603
+	}
+	
+	date = { day = 1 month = october year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# We succeed
+	action = {
+		name = EVT_8500604_A
+		ai_chance = 96
+		command = { type = relation which = U24 value = 50 }
+	}
+	
+	# We fail
+	action = {
+		name = EVT_8500604_B
+		ai_chance = 4
+		command = { type = sleepevent which = 8500607 }
+		command = { type = clrflag which = divided_berlin }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+}
+
+# Putsch is organized
+event = {
+	id = 8500605
+	country = USA
+
+	name = EVT_8500605_NAME
+	desc = EVT_8500605_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8500603
+	}
+	
+	date = { day = 1 month = september year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# Putsch fails miserably
+	action = {
+		name = EVT_8500605_A
+		ai_chance = 98
+		command = { type = dissent value = -2 }
+	}
+	
+	# The masses turn to Soviets
+	action = {
+		name = EVT_8500605_B
+		ai_chance = 2
+		command = { type = sleepevent which = 8500607 }
+		command = { type = clrflag which = divided_berlin }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+}
+
+# Airlift gets hot
+event = {
+	id = 8500606
+	country = USA
+
+	name = EVT_8500606_NAME
+	desc = EVT_8500606_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	# "Send interceptors this time (WW3)"
+	action = {
+		name = EVT_8500606_A
+		ai_chance = 50
+		command = { type = war which = SOV }
+	}
+	
+	# "Stop the Airlift"
+	action = {
+		name = EVT_8500606_B
+		ai_chance = 50
+		command = { type = dissent value = 6 }
+		command = { type = clrflag which = divided_berlin }
+		command = { type = sleepevent which = 8500607 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+}
+
+# End of Berlin Airlift
+event = {
+	id = 8500607
+	country = SOV
+
+	name = EVT_8500607_NAME
+	desc = EVT_8500607_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8500605
+		event = 8500606
+		flag = divided_berlin
+	}
+	
+	date = { day = 1 month = april year = 1949 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = EVT_8500607_A
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 8500608 }
+		command = { type = trigger which = 8500609 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+
+}
+
+event = {
+	id = 8500608
+	country = USA
+
+	name = EVT_8500608_NAME
+	desc = EVT_8500608_DESC
+	picture = "nwo\berlin_airlift"
+	style = 1
+
+	action = {
+		name = EVT_8500608_A
+		command = { type = dissent value = -10 }
+	}
+
+}
+
+event = {
+	id = 8500609
+	tag = { DFR U24 }
+
+	name = EVT_8500608_NAME
+	desc = EVT_8500609_DESC
+	picture = "nwo\end_of_berlin_airlift"
+	style = 1
+
+	action = {
+		name = EVT_8500609_A
+		command = { type = dissent value = -30 }
+	}
+
+}

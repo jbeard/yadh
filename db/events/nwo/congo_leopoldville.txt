@@ -1,0 +1,878 @@
+event = {
+	id = 8003301
+	country = CON
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofgovernment which = 595100 } # Pierre Ryckmans
+		command = { type = headofgovernment which = 595002 } # Pierre Ryckmans
+	}
+}
+
+event = {
+	id = 8003302
+	country = CON
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 595101 } # Eugene Jungers
+		command = { type = headofgovernment which = 595102 } # Eugene Jungers
+	}
+}
+
+event = {
+	id = 8003303
+	country = CON
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 595103 } # L?on P?tillon
+		command = { type = headofgovernment which = 595104 } # L?on P?tillon
+	}
+}
+
+event = {
+	id = 8003304
+	country = CON
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 595105 } # Henri Cornelis
+		command = { type = headofgovernment which = 595106 } # Henri Cornelis
+	}
+}
+
+event = {
+	id = 8003305
+	country = CON
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 595012 } # Josephe Kasavubu
+		command = { type = headofgovernment which = 595014 } # Patrice Lumumba
+		command = { type = foreignminister which = 595017 } # Antoine Gizenga
+		command = { type = armamentminister which = 595020 } # Josephe Bamina
+		command = { type = ministerofsecurity which = 595023 } # Charles Ndizeye
+		command = { type = ministerofintelligence which = 595025 } # Andre Muhirwa
+	}
+}
+
+event = {
+	id = 8003307
+	country = CON
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 595012 } # Josephe Kasavubu
+		command = { type = headofgovernment which = 595108 } # Cyrille Adoula
+	}
+}
+
+### Post-Crisis Congo
+
+event = {
+	id = 8003308
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 595109 } # Moise Tshombe
+	}
+}
+
+event = {
+	id = 8003309
+	country = CON
+
+	name = EVT_8003309_NAME
+	desc = EVT_8003309_DESC
+	picture = nwo\mobutu_sese_seko
+	style = 1
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = EVT_8003309_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 595110 } # Joseph-Désiré Mobutu
+		command = { type = headofgovernment which = 595111 } # Léonard Mulamba
+		command = { type = name where = CON which = "CON64" }
+		command = { type = flag_ext where = CON which = _1964 }
+	}
+}
+
+event = {
+	id = 8003310
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 595112 } # Joseph-Désiré Mobutu
+		command = { type = name where = CON which = "CON64" }
+		command = { type = flag_ext where = CON which = _1964 }
+	}
+}
+
+event = {
+	id = 8003311
+	country = CON
+
+	name = EVT_8003311_NAME
+	desc = EVT_8003311_DESC
+	picture = nwo\mobutu_sese_seko
+	style = 1
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = EVT_8003311_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 595113 } # Mobutu Sese Seko
+		command = { type = headofgovernment which = 595114 } # Mobutu Sese Seko
+		command = { type = name where = CON which = "CON71" }
+		command = { type = flag_ext where = CON which = _1971 }
+		
+	}
+}
+
+event = {
+	id = 8003312
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595115 } # Mpinga Kasenda
+	}
+}
+
+event = {
+	id = 8003313
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595116 } # Bo-Boliko Lokonga
+	}
+}
+
+event = {
+	id = 8003314
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595117 } # Jean Nguza Karl-i-Bond
+	}
+}
+
+event = {
+	id = 8003315
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1981 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595118 } # N'singa Udjuu
+	}
+}
+
+event = {
+	id = 8003316
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595119 } # Kengo Wa Dondo
+	}
+}
+
+event = {
+	id = 8003317
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595120 } # Mabi Mulumba
+	}
+}
+
+event = {
+	id = 8003318
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595121 } # Sambwa Pida Nbagui
+	}
+}
+
+event = {
+	id = 8003319
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595119 } # Kengo Wa Dondo
+	}
+}
+
+event = {
+	id = 8003320
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595122 } # Lunda Bululu
+	}
+}
+
+event = {
+	id = 8003321
+	country = CON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 595123 } # Mulumba Lukoji
+	}
+}
+
+
+event = {
+	id = 8003329
+	country = CON
+
+	name = EVT_8003329_NAME
+	desc = EVT_8003329_DESC
+	picture = "nwo\patrice_lumumba"
+	style = 1
+	
+	date = { day = 30 month = july year = 1960 }
+	offset = 30
+	deathdate = { day = 29 month = july year = 1960 }
+
+	action = {
+		name = EVT_8003329_A
+		command = { type = relation which = BEL value = -100 }
+		command = { type = dissent value = 5 }
+	}
+
+}
+
+event = {
+	id = 8003330
+	country = CON
+	
+	name = EVT_8003330_NAME
+	desc = EVT_8003330_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+	
+	date = { day = 1 month = august year = 1960 }
+	offset = 30
+	deathdate = { day = 29 month = august year = 1960 }
+
+	action = {
+		name = EVT_8003330_A
+		command = { type = province_revoltrisk which = 904 value = 50 } # Stanleyville
+		command = { type = province_revoltrisk which = 905 value = 50 } # Costermansville
+		command = { type = province_revoltrisk which = 902 value = 50 } # Luluabourg
+		command = { type = province_revoltrisk which = 897 value = 50 } # Kolwezi
+		command = { type = province_revoltrisk which = 898 value = 50 } # Elisabethville
+		command = { type = province_revoltrisk which = 861 value = 50 } # Kasama	
+	}
+}
+
+# Soviets are fueling Congo Crisis
+event = {
+	id = 8003331
+	country = SOV
+
+	name = EVT_8003331_NAME
+	desc = EVT_8003331_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		exists = CON
+	}
+
+	date = { day = 1 month = september year = 1960 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8003331_A
+		ai_chance = 90
+		command = { type = money which = -200 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = EVT_8003331_B
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8003311 }
+	}
+
+}
+
+event = {
+	id = 8003332
+	random = no
+	country = CON
+
+	name = EVT_8003332_NAME
+	desc = EVT_8003332_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+	
+	trigger = {
+		event = 8003331
+	}
+
+	action = {
+		name = EVT_8003332_A
+		command = { type = province_revoltrisk which = 904 value = 20 } # Stanleyville
+		command = { type = province_revoltrisk which = 905 value = 20 } # Costermansville
+		command = { type = province_revoltrisk which = 902 value = 20 } # Luluabourg
+		command = { type = province_revoltrisk which = 897 value = 20 } # Kolwezi
+		command = { type = province_revoltrisk which = 898 value = 20 } # Elisabethville
+		command = { type = province_revoltrisk which = 861 value = 20 } # Kasama	
+	}
+
+}
+
+### Belgians are fueling Congo Crisis
+event = {
+	id = 8003333
+	random = no
+	country = BEL
+
+	name = EVT_8003333_NAME
+	desc = EVT_8003333_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = CON
+	}
+	
+	date = { day = 1 month = september year = 1960 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8003333_A
+		ai_chance = 90
+		command = { type = money which = -200 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = EVT_8003333_B
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8003334 }
+	}
+
+}
+
+event = {
+	id = 8003334
+	random = no
+	country = CON
+
+	name = EVT_8003334_NAME
+	desc = EVT_8003334_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+
+	trigger = {
+		event = 8003333
+	}
+
+	action = {
+		name = EVT_8003334_A
+		command = { type = province_revoltrisk which = 904 value = 20 } # Stanleyville
+		command = { type = province_revoltrisk which = 905 value = 20 } # Costermansville
+		command = { type = province_revoltrisk which = 902 value = 20 } # Luluabourg
+		command = { type = province_revoltrisk which = 897 value = 20 } # Kolwezi
+		command = { type = province_revoltrisk which = 898 value = 20 } # Elisabethville
+		command = { type = province_revoltrisk which = 861 value = 20 } # Kasama	
+	}
+
+}
+
+# Resolving Congo Crisis
+event = {
+	id = 8003335
+	country = CON
+
+	name = EVT_8003335_NAME
+	desc = EVT_8003335_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+
+	date = { day = 5 month = september year = 1960 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8003335_A # Lumumba is removed and soon will be killed
+		ai_chance = 90
+		command = { type = relation which = USA value = 200 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 595012 } # Josephe Kasavubu
+		command = { type = headofgovernment which = 574043 } # Joseph Iléo
+		command = { type = add_division which = "Congolese Forces" value = infantry when = 12 }
+	}
+	
+	action = {
+		name = EVT_8003335_B # Lumumba stays
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = relation which = USA value = -200 }
+		command = { type = relation which = SOV value = 200 }
+		command = { type = dissent value = 20 }
+		command = { type = add_division which = "Soviet Reinforements" value = infantry when = 12 }
+		command = { type = add_division which = "Soviet Reinforements" value = infantry when = 12 }
+		command = { type = province_revoltrisk which = 904 value = -90 } # Stanleyville
+		command = { type = province_revoltrisk which = 905 value = -90 } # Costermansville
+		command = { type = province_revoltrisk which = 902 value = -90 } # Luluabourg
+		command = { type = province_revoltrisk which = 897 value = -90 } # Kolwezi
+		command = { type = province_revoltrisk which = 898 value = -90 } # Elisabethville
+		command = { type = province_revoltrisk which = 861 value = -90 } # Kasama	
+	}
+
+}
+
+# Death of Lumumba
+event = {
+	id = 8003336
+	country = CON
+
+	name = EVT_8003336_NAME
+	desc = EVT_8003336_DESC
+	picture = "nwo\patrice_lumumba"
+	style = 1
+
+	date = { day = 1 month = january year = 1961 }
+	offset = 30
+	deathdate = { day = 29 month = january year = 1961 }
+
+	action = {
+		name = EVT_8003336_A
+		command = { type = sleepminister which = 595014 }
+		command = { type = dissent value = 3 }
+	}
+
+}
+
+event = {
+	id = 8003337
+	country = CON
+
+	name = EVT_8003337_NAME
+	desc = EVT_8003337_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+
+	date = { day = 2 month = august year = 1961 }
+	offset = 30
+	deathdate = { day = 29 month = september year = 1961 }
+
+	action = {
+		name = EVT_8003337_A
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 595012 } # Josephe Kasavubu
+		command = { type = headofgovernment which = 574044 } # Cyrille Adoula
+		command = { type = dissent value = -2 }
+	}
+
+}
+
+event = {
+	id = 8003338
+	country = CON
+
+	name = EVT_8003338_NAME
+	desc = EVT_8003338_DESC
+	picture = "nwo\dag_hammarskjoeld"
+	style = 1
+
+	date = { day = 17 month = september year = 1961 }
+	offset = 1
+	deathdate = { day = 29 month = september year = 1961 }
+
+	action = {
+		name = EVT_8003338_A
+		command = { type = dissent value = 2 }
+	}
+
+}
+
+event = {
+	id = 8003339          
+	country = CON
+
+	name = EVT_8003339_NAME
+	desc = EVT_8003339_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+
+	date = { day = 1 month = january year = 1962 }
+	offset = 30
+	deathdate = { day = 29 month = january year = 1962 }
+
+	action = {
+		name = EVT_8003339_A
+		command = { type = dissent value = -2 }
+		# South Kasai
+		# Pro-Lumumba East
+		command = { type = province_revoltrisk which = 904 value = -90 } # Stanleyville
+		command = { type = province_revoltrisk which = 905 value = -90 } # Costermansville
+		command = { type = province_revoltrisk which = 902 value = -90 } # Luluabourg
+		command = { type = province_revoltrisk which = 897 value = -90 } # Kolwezi
+		command = { type = province_revoltrisk which = 898 value = -90 } # Elisabethville
+		command = { type = province_revoltrisk which = 861 value = -90 } # Kasama	
+	}
+
+}
+
+# Operation Grand Slam
+event = {
+	id = 8003340
+	country = CON
+
+	name = EVT_8003340_NAME
+	desc = EVT_8003340_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+
+	date = { day = 1 month = january year = 1963 }
+	offset = 30
+	deathdate = { day = 29 month = january year = 1963 }
+
+	action = {
+		name = EVT_8003340_A
+		command = { type = dissent value = -5 }
+		# Katanga
+		command = { type = province_revoltrisk which = 904 value = -90 } # Stanleyville
+		command = { type = province_revoltrisk which = 905 value = -90 } # Costermansville
+		command = { type = province_revoltrisk which = 902 value = -90 } # Luluabourg
+		command = { type = province_revoltrisk which = 897 value = -90 } # Kolwezi
+		command = { type = province_revoltrisk which = 898 value = -90 } # Elisabethville
+		command = { type = province_revoltrisk which = 861 value = -90 } # Kasama	
+	}
+
+}
+
+event = {
+	id = 8003341
+	random = no
+	country = CON
+
+	name = EVT_8003341_NAME
+	desc = EVT_8003341_DESC
+	picture = "nwo\congo_crisis"
+	style = 1
+	
+	trigger = {
+		OR = {
+			dissent = 30
+			control = { province = 899 data = REB }
+		}
+	}
+
+	date = { day = 1 month = january year = 1961 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8003341_A
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 595012 } # Josephe Kasavubu
+		command = { type = headofgovernment which = 574045 } # Antoine Gizenga
+		command = { type = relation which = USA value = -200 }
+		command = { type = relation which = SOV value = 200 }
+		command = { type = dissent value = 30 }
+		command = { type = add_division which = "Soviet Reinforements" value = infantry when = 12 }
+		command = { type = add_division which = "Soviet Reinforements" value = infantry when = 12 }
+		command = { type = province_revoltrisk which = 904 value = -90 } # Stanleyville
+		command = { type = province_revoltrisk which = 905 value = -90 } # Costermansville
+		command = { type = province_revoltrisk which = 902 value = -90 } # Luluabourg
+		command = { type = province_revoltrisk which = 897 value = -90 } # Kolwezi
+		command = { type = province_revoltrisk which = 898 value = -90 } # Elisabethville
+		command = { type = province_revoltrisk which = 861 value = -90 } # Kasama	
+	}
+
+}

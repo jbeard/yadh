@@ -1,0 +1,3146 @@
+### Limiting events for AI countries
+
+event = {
+	id = 8227000
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227000_NAME
+	desc = EVT_8227000_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 25 type = 0 when = 0 where = 0 which = 0 }
+		
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227000_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 25 }
+		command = { type = belligerence value = -5 }
+		command = { type = dissent value = -3 }
+		command = { type = money value = 200 }
+	}
+
+	action = {
+		name = EVT_8227000_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 22 }
+		command = { type = belligerence value = -5 }
+		command = { type = dissent value = -3 }
+		command = { type = money value = 200 }
+	}
+
+	action = {
+		name = EVT_8227000_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 20 }
+		command = { type = belligerence value = -5 }
+		command = { type = dissent value = -3 }
+		command = { type = money value = 200 }
+	}
+}
+
+event = {
+	id = 8227001
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227001_NAME
+	desc = EVT_8227001_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 40 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 20
+				NOT = { ic = 40 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227001_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 45 }
+		command = { type = belligerence value = -7 }
+		command = { type = dissent value = -4 }
+		command = { type = money value = 300 }
+	}
+
+	action = {
+		name = EVT_8227001_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 42 }
+		command = { type = belligerence value = -7 }
+		command = { type = dissent value = -4 }
+		command = { type = money value = 300 }
+	}
+
+	action = {
+		name = EVT_8227001_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 40 }
+		command = { type = belligerence value = -7 }
+		command = { type = dissent value = -4 }
+		command = { type = money value = 300 }
+	}
+}
+
+event = {
+	id = 8227002
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227002_NAME
+	desc = EVT_8227002_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 60 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 40
+				NOT = { ic = 60 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 20
+				NOT = { ic = 40 }
+			}
+			AND = {
+				atwar = yes
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227002_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 60 }
+		command = { type = belligerence value = -10 }
+		command = { type = dissent value = -5 }
+		command = { type = money value = 450 }
+	}
+
+	action = {
+		name = EVT_8227002_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 55 }
+		command = { type = belligerence value = -10 }
+		command = { type = dissent value = -5 }
+		command = { type = money value = 450 }
+	}
+
+	action = {
+		name = EVT_8227002_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 50 }
+		command = { type = belligerence value = -10 }
+		command = { type = dissent value = -5 }
+		command = { type = money value = 450 }
+	}
+}
+
+event = {
+	id = 8227003
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227003_NAME
+	desc = EVT_8227003_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 80 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 60
+				NOT = { ic = 80 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 40
+				NOT = { ic = 60 }
+			}
+			AND = {
+				atwar = yes
+				ic = 20
+				NOT = { ic = 40 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227003_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 80 }
+		command = { type = belligerence value = -15 }
+		command = { type = dissent value = -6 }
+		command = { type = money value = 450 }
+	}
+
+	action = {
+		name = EVT_8227003_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 75 }
+		command = { type = belligerence value = -15 }
+		command = { type = dissent value = -6 }
+		command = { type = money value = 450 }
+	}
+
+	action = {
+		name = EVT_8227003_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 70 }
+		command = { type = belligerence value = -15 }
+		command = { type = dissent value = -6 }
+		command = { type = money value = 450 }
+	}
+}
+
+event = {
+	id = 8227004
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227004_NAME
+	desc = EVT_8227004_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 90 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 80
+				NOT = { ic = 100 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 60
+				NOT = { ic = 80 }
+			}
+			AND = {
+				atwar = yes
+				ic = 40
+				NOT = { ic = 60 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227004_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 90 }
+		command = { type = belligerence value = -20 }
+		command = { type = dissent value = -7 }
+		command = { type = money value = 1200 }
+	}
+
+	action = {
+		name = EVT_8227004_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 85 }
+		command = { type = belligerence value = -20 }
+		command = { type = dissent value = -7 }
+		command = { type = money value = 1200 }
+	}
+
+	action = {
+		name = EVT_8227004_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 80 }
+		command = { type = belligerence value = -20 }
+		command = { type = dissent value = -7 }
+		command = { type = money value = 1200 }
+	}
+}
+
+event = {
+	id = 8227005
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227005_NAME
+	desc = EVT_8227005_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 115 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 100
+				NOT = { ic = 125 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 80
+				NOT = { ic = 100 }
+			}
+			AND = {
+				atwar = yes
+				ic = 60
+				NOT = { ic = 80 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227005_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 115 }
+		command = { type = belligerence value = -25 }
+		command = { type = dissent value = -8 }
+		command = { type = money value = 1440 }
+	}
+
+	action = {
+		name = EVT_8227005_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 110 }
+		command = { type = belligerence value = -25 }
+		command = { type = dissent value = -8 }
+		command = { type = money value = 1440 }
+	}
+
+	action = {
+		name = EVT_8227005_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 100 }
+		command = { type = belligerence value = -25 }
+		command = { type = dissent value = -8 }
+		command = { type = money value = 1440 }
+	}
+}
+
+event = {
+	id = 8227006
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227006_NAME
+	desc = EVT_8227006_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 135 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 125
+				NOT = { ic = 150 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 100
+				NOT = { ic = 125 }
+			}
+			AND = {
+				atwar = yes
+				ic = 80
+				NOT = { ic = 100 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227006_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 135 }
+		command = { type = belligerence value = -30 }
+		command = { type = dissent value = -9 }
+		command = { type = money value = 1700 }
+	}
+
+	action = {
+		name = EVT_8227006_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 125 }
+		command = { type = belligerence value = -30 }
+		command = { type = dissent value = -9 }
+		command = { type = money value = 1700 }
+	}
+
+	action = {
+		name = EVT_8227006_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 115 }
+		command = { type = belligerence value = -30 }
+		command = { type = dissent value = -9 }
+		command = { type = money value = 1700 }
+	}
+}
+
+event = {
+	id = 8227007
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227007_NAME
+	desc = EVT_8227007_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 155 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 150
+				NOT = { ic = 175 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 125
+				NOT = { ic = 150 }
+			}
+			AND = {
+				atwar = yes
+				ic = 100
+				NOT = { ic = 125 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227007_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 155 }
+		command = { type = belligerence value = -35 }
+		command = { type = dissent value = -10 }
+		command = { type = money value = 2000 }
+	}
+
+	action = {
+		name = EVT_8227007_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 145 }
+		command = { type = belligerence value = -35 }
+		command = { type = dissent value = -10 }
+		command = { type = money value = 2000 }
+	}
+
+	action = {
+		name = EVT_8227007_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 135 }
+		command = { type = belligerence value = -35 }
+		command = { type = dissent value = -10 }
+		command = { type = money value = 2000 }
+	}
+}
+
+event = {
+	id = 8227008
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227008_NAME
+	desc = EVT_8227008_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 170 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 175
+				NOT = { ic = 200 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 150
+				NOT = { ic = 175 }
+			}
+			AND = {
+				atwar = yes
+				ic = 125
+				NOT = { ic = 150 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227008_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 170 }
+		command = { type = belligerence value = -40 }
+		command = { type = dissent value = -12 }
+		command = { type = money value = 2400 }
+	}
+
+	action = {
+		name = EVT_8227008_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 160 }
+		command = { type = belligerence value = -40 }
+		command = { type = dissent value = -12 }
+		command = { type = money value = 2400 }
+	}
+
+	action = {
+		name = EVT_8227008_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 150 }
+		command = { type = belligerence value = -40 }
+		command = { type = dissent value = -12 }
+		command = { type = money value = 2400 }
+	}
+}
+
+event = {
+	id = 8227009
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227009_NAME
+	desc = EVT_8227009_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 220 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 200
+				NOT = { ic = 250 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 175
+				NOT = { ic = 200 }
+			}
+			AND = {
+				atwar = yes
+				ic = 150
+				NOT = { ic = 175 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227009_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 220 }
+		command = { type = belligerence value = -45 }
+		command = { type = dissent value = -14 }
+		command = { type = money value = 2800 }
+	}
+
+	action = {
+		name = EVT_8227009_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 220 }
+		command = { type = belligerence value = -45 }
+		command = { type = dissent value = -14 }
+		command = { type = money value = 2800 }
+	}
+
+	action = {
+		name = EVT_8227009_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 220 }
+		command = { type = belligerence value = -45 }
+		command = { type = dissent value = -14 }
+		command = { type = money value = 2800 }
+	}
+}
+
+event = {
+	id = 8227010
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227010_NAME
+	desc = EVT_8227010_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 245 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 250
+				NOT = { ic = 300 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 200
+				NOT = { ic = 250 }
+			}
+			AND = {
+				atwar = yes
+				ic = 175
+				NOT = { ic = 200 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227010_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 245 }
+		command = { type = belligerence value = -50 }
+		command = { type = dissent value = -16 }
+		command = { type = money value = 3360 }
+	}
+
+	action = {
+		name = EVT_8227010_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 245 }
+		command = { type = belligerence value = -50 }
+		command = { type = dissent value = -16 }
+		command = { type = money value = 3360 }
+	}
+
+	action = {
+		name = EVT_8227010_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 245 }
+		command = { type = belligerence value = -50 }
+		command = { type = dissent value = -16 }
+		command = { type = money value = 3360 }
+	}
+}
+
+event = {
+	id = 8227011
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227011_NAME
+	desc = EVT_8227011_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 320 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 300
+				NOT = { ic = 400 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 250
+				NOT = { ic = 300 }
+			}
+			AND = {
+				atwar = yes
+				ic = 200
+				NOT = { ic = 250 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227011_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 320 }
+		command = { type = belligerence value = -55 }
+		command = { type = dissent value = -18 }
+		command = { type = money value = 4100 }
+	}
+
+	action = {
+		name = EVT_8227011_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 305 }
+		command = { type = belligerence value = -55 }
+		command = { type = dissent value = -18 }
+		command = { type = money value = 4100 }
+	}
+
+	action = {
+		name = EVT_8227011_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 290 }
+		command = { type = belligerence value = -55 }
+		command = { type = dissent value = -18 }
+		command = { type = money value = 4100 }
+	}
+}
+
+event = {
+	id = 8227012
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227012_NAME
+	desc = EVT_8227012_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 420 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 400
+				NOT = { ic = 500 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 300
+				NOT = { ic = 400 }
+			}
+			AND = {
+				atwar = yes
+				ic = 250
+				NOT = { ic = 300 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227012_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 420 }
+		command = { type = belligerence value = -60 }
+		command = { type = dissent value = -20 }
+		command = { type = money value = 5000 }
+	}
+
+	action = {
+		name = EVT_8227012_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 405 }
+		command = { type = belligerence value = -60 }
+		command = { type = dissent value = -20 }
+		command = { type = money value = 5000 }
+	}
+
+	action = {
+		name = EVT_8227012_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 390 }
+		command = { type = belligerence value = -60 }
+		command = { type = dissent value = -20 }
+		command = { type = money value = 5000 }
+	}
+}
+
+event = {
+	id = 8227013
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227013_NAME
+	desc = EVT_8227013_DESC
+	persistent = yes
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 600 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 500
+				NOT = { ic = 750 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 400
+				NOT = { ic = 500 }
+			}
+			AND = {
+				atwar = yes
+				ic = 300
+				NOT = { ic = 400 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227013_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 600 }
+		command = { type = belligerence value = -65 }
+		command = { type = dissent value = -22 }
+		command = { type = money value = 6000 }
+	}
+
+	action = {
+		name = EVT_8227013_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 580 }
+		command = { type = belligerence value = -65 }
+		command = { type = dissent value = -22 }
+		command = { type = money value = 6000 }
+	}
+
+	action = {
+		name = EVT_8227013_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 560 }
+		command = { type = belligerence value = -65 }
+		command = { type = dissent value = -22 }
+		command = { type = money value = 6000 }
+	}
+}
+
+event = {
+	id = 8227014
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227014_NAME
+	desc = EVT_8227014_DESC
+	persistent = yes
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 820 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 500
+				NOT = { ic = 750 }
+			}
+			AND = {
+				atwar = yes
+				ic = 400
+				NOT = { ic = 500 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227014_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 820 }
+		command = { type = belligerence value = -70 }
+		command = { type = dissent value = -24 }
+		command = { type = money value = 7200 }
+	}
+
+	action = {
+		name = EVT_8227014_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 800 }
+		command = { type = belligerence value = -70 }
+		command = { type = dissent value = -24 }
+		command = { type = money value = 7200 }
+	}
+
+	action = {
+		name = EVT_8227014_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 780 }
+		command = { type = belligerence value = -70 }
+		command = { type = dissent value = -24 }
+		command = { type = money value = 7200 }
+	}
+}
+
+event = {
+	id = 8227015
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227015_NAME
+	desc = EVT_8227015_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 1000 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+			AND = {
+				atwar = yes
+				ic = 500
+				NOT = { ic = 750 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227015_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 1000 }
+		command = { type = belligerence value = -75 }
+		command = { type = dissent value = -26 }
+		command = { type = money value = 9000 }
+	}
+
+	action = {
+		name = EVT_8227015_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 975 }
+		command = { type = belligerence value = -75 }
+		command = { type = dissent value = -26 }
+		command = { type = money value = 9000 }
+	}
+
+	action = {
+		name = EVT_8227015_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 950 }
+		command = { type = belligerence value = -75 }
+		command = { type = dissent value = -26 }
+		command = { type = money value = 9000 }
+	}
+}
+
+event = {
+	id = 8227016
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227016_NAME
+	desc = EVT_8227016_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 1240 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+			AND = {
+				atwar = yes
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227016_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 1250 }
+		command = { type = belligerence value = -80 }
+		command = { type = dissent value = -28 }
+		command = { type = money value = 11000 }
+	}
+
+	action = {
+		name = EVT_8227016_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1225 }
+		command = { type = belligerence value = -80 }
+		command = { type = dissent value = -28 }
+		command = { type = money value = 11000 }
+	}
+
+	action = {
+		name = EVT_8227016_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1200 }
+		command = { type = belligerence value = -80 }
+		command = { type = dissent value = -28 }
+		command = { type = money value = 11000 }
+	}
+}
+
+event = {
+	id = 8227017
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227017_NAME
+	desc = EVT_8227017_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 1400 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1500
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+			AND = {
+				atwar = yes
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227017_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 1400 }
+		command = { type = belligerence value = -85 }
+		command = { type = dissent value = -30 }
+		command = { type = money value = 15000 }
+	}
+
+	action = {
+		name = EVT_8227017_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1375 }
+		command = { type = belligerence value = -85 }
+		command = { type = dissent value = -30 }
+		command = { type = money value = 15000 }
+	}
+
+	action = {
+		name = EVT_8227017_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1350 }
+		command = { type = belligerence value = -85 }
+		command = { type = dissent value = -30 }
+		command = { type = money value = 15000 }
+	}
+}
+
+event = {
+	id = 8227018
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227018_NAME
+	desc = EVT_8227018_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 1600 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1500
+			}
+			AND = {
+				atwar = yes
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227018_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 1600 }
+		command = { type = belligerence value = -90 }
+		command = { type = dissent value = -32 }
+		command = { type = money value = 18000 }
+	}
+
+	action = {
+		name = EVT_8227018_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1570 }
+		command = { type = belligerence value = -90 }
+		command = { type = dissent value = -32 }
+		command = { type = money value = 18000 }
+	}
+
+	action = {
+		name = EVT_8227018_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1540 }
+		command = { type = belligerence value = -90 }
+		command = { type = dissent value = -32 }
+		command = { type = money value = 18000 }
+	}
+}
+
+event = {
+	id = 8227019
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227019_NAME
+	desc = EVT_8227019_DESC
+	picture = "nwo\army_limits"
+	style = 1
+	
+	trigger = {
+		ai = yes
+		army = { size = 2000 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = yes
+				ic = 1500
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227019_A
+		ai_chance = 40
+		command = { type = demobilize which = land when = 0 where = 0 value = 2000 }
+		command = { type = belligerence value = -100 }
+		command = { type = dissent value = -35 }
+		command = { type = money value = 24000 }
+	}
+
+	action = {
+		name = EVT_8227019_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1900 }
+		command = { type = belligerence value = -100 }
+		command = { type = dissent value = -35 }
+		command = { type = money value = 24000 }
+	}
+
+	action = {
+		name = EVT_8227019_A
+		ai_chance = 30
+		command = { type = demobilize which = land when = 0 where = 0 value = 1800 }
+		command = { type = belligerence value = -100 }
+		command = { type = dissent value = -35 }
+		command = { type = money value = 24000 }
+	}
+}
+
+### Limiting events for player (+ warnings)
+
+event = {
+	id = 8227100
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227100_NAME
+	desc = EVT_8227100_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 25 type = 0 when = 0 where = 0 which = 0 }
+		
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227100_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 25 }
+	}
+
+	action = {
+		name = EVT_8227100_B
+		command = { type = belligerence value = 10 }
+		command = { type = dissent value = 6 }
+		command = { type = money value = -400 }
+	}
+}
+
+event = {
+	id = 8227101
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227101_NAME
+	desc = EVT_8227101_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 40 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 20
+				NOT = { ic = 40 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227101_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 45 }
+	}
+
+	action = {
+		name = EVT_8227101_B
+		command = { type = belligerence value = 14 }
+		command = { type = dissent value = 8 }
+		command = { type = money value = -600 }
+	}
+}
+
+event = {
+	id = 8227102
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227102_NAME
+	desc = EVT_8227102_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 60 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 40
+				NOT = { ic = 60 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 20
+				NOT = { ic = 40 }
+			}
+			AND = {
+				atwar = yes
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227102_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 60 }
+	}
+
+	action = {
+		name = EVT_8227102_B
+		command = { type = belligerence value = 20 }
+		command = { type = dissent value = 10 }
+		command = { type = money value = -900 }
+	}
+}
+
+event = {
+	id = 8227103
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227103_NAME
+	desc = EVT_8227103_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 80 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 60
+				NOT = { ic = 80 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 40
+				NOT = { ic = 60 }
+			}
+			AND = {
+				atwar = yes
+				ic = 20
+				NOT = { ic = 40 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227103_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 80 }
+	}
+
+	action = {
+		name = EVT_8227103_B
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = 12 }
+		command = { type = money value = -1800 }
+	}
+}
+
+event = {
+	id = 8227104
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227104_NAME
+	desc = EVT_8227104_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 90 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 80
+				NOT = { ic = 100 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 60
+				NOT = { ic = 80 }
+			}
+			AND = {
+				atwar = yes
+				ic = 40
+				NOT = { ic = 60 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227104_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 90 }
+	}
+
+	action = {
+		name = EVT_8227104_B
+		command = { type = belligerence value = 40 }
+		command = { type = dissent value = 14 }
+		command = { type = money value = -2400 }
+	}
+}
+
+event = {
+	id = 8227105
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227105_NAME
+	desc = EVT_8227105_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 115 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 100
+				NOT = { ic = 125 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 80
+				NOT = { ic = 100 }
+			}
+			AND = {
+				atwar = yes
+				ic = 60
+				NOT = { ic = 80 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227105_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 115 }
+	}
+
+	action = {
+		name = EVT_8227105_B
+		command = { type = belligerence value = 50 }
+		command = { type = dissent value = 16 }
+		command = { type = money value = -2880 }
+	}
+}
+
+event = {
+	id = 8227106
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227106_NAME
+	desc = EVT_8227106_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 135 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 125
+				NOT = { ic = 150 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 100
+				NOT = { ic = 125 }
+			}
+			AND = {
+				atwar = yes
+				ic = 80
+				NOT = { ic = 100 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227106_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 135 }
+	}
+
+	action = {
+		name = EVT_8227106_B
+		command = { type = belligerence value = 60 }
+		command = { type = dissent value = 18 }
+		command = { type = money value = -3400 }
+	}
+}
+
+event = {
+	id = 8227107
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227107_NAME
+	desc = EVT_8227107_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 155 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 150
+				NOT = { ic = 175 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 125
+				NOT = { ic = 150 }
+			}
+			AND = {
+				atwar = yes
+				ic = 100
+				NOT = { ic = 125 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227107_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 155 }
+	}
+
+	action = {
+		name = EVT_8227107_B
+		command = { type = belligerence value = 70 }
+		command = { type = dissent value = 20 }
+		command = { type = money value = -4000 }
+	}
+}
+
+event = {
+	id = 8227108
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227108_NAME
+	desc = EVT_8227108_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 170 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 175
+				NOT = { ic = 200 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 150
+				NOT = { ic = 175 }
+			}
+			AND = {
+				atwar = yes
+				ic = 125
+				NOT = { ic = 150 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227108_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 170 }
+	}
+
+	action = {
+		name = EVT_8227108_B
+		command = { type = belligerence value = 80 }
+		command = { type = dissent value = 24 }
+		command = { type = money value = -4800 }
+	}
+}
+
+event = {
+	id = 8227109
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227109_NAME
+	desc = EVT_8227109_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 220 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 200
+				NOT = { ic = 250 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 175
+				NOT = { ic = 200 }
+			}
+			AND = {
+				atwar = yes
+				ic = 150
+				NOT = { ic = 175 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227109_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 220 }
+	}
+
+	action = {
+		name = EVT_8227109_B
+		command = { type = demobilize which = land when = 0 where = 0 value = 220 }
+		command = { type = belligerence value = 90 }
+		command = { type = dissent value = 28 }
+		command = { type = money value = -5600 }
+	}
+}
+
+event = {
+	id = 8227110
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227110_NAME
+	desc = EVT_8227110_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 245 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 250
+				NOT = { ic = 300 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 200
+				NOT = { ic = 250 }
+			}
+			AND = {
+				atwar = yes
+				ic = 175
+				NOT = { ic = 200 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227110_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 245 }
+	}
+
+	action = {
+		name = EVT_8227110_B
+		command = { type = belligerence value = 100 }
+		command = { type = dissent value = 32 }
+		command = { type = money value = -6720 }
+	}
+}
+
+event = {
+	id = 8227111
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227111_NAME
+	desc = EVT_8227111_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 320 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 300
+				NOT = { ic = 400 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 250
+				NOT = { ic = 300 }
+			}
+			AND = {
+				atwar = yes
+				ic = 200
+				NOT = { ic = 250 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227111_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 320 }
+	}
+
+	action = {
+		name = EVT_8227111_B
+		command = { type = belligerence value = 110 }
+		command = { type = dissent value = 36 }
+		command = { type = money value = -8200 }
+	}
+}
+
+event = {
+	id = 8227112
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227112_NAME
+	desc = EVT_8227112_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 420 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 400
+				NOT = { ic = 500 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 300
+				NOT = { ic = 400 }
+			}
+			AND = {
+				atwar = yes
+				ic = 250
+				NOT = { ic = 300 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227112_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 420 }
+	}
+
+	action = {
+		name = EVT_8227112_B
+		command = { type = belligerence value = 120 }
+		command = { type = dissent value = 40 }
+		command = { type = money value = -10000 }
+	}
+}
+
+event = {
+	id = 8227113
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227113_NAME
+	desc = EVT_8227113_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 600 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 500
+				NOT = { ic = 750 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 400
+				NOT = { ic = 500 }
+			}
+			AND = {
+				atwar = yes
+				ic = 300
+				NOT = { ic = 400 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227113_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 600 }
+	}
+
+	action = {
+		name = EVT_8227113_B
+		command = { type = belligerence value = 130 }
+		command = { type = dissent value = 44 }
+		command = { type = money value = -12000 }
+	}
+}
+
+event = {
+	id = 8227114
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227114_NAME
+	desc = EVT_8227114_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 820 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 500
+				NOT = { ic = 750 }
+			}
+			AND = {
+				atwar = yes
+				ic = 400
+				NOT = { ic = 500 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227114_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 820 }
+	}
+
+	action = {
+		name = EVT_8227114_B
+		command = { type = belligerence value = 140 }
+		command = { type = dissent value = 48 }
+		command = { type = money value = -14400 }
+	}
+}
+
+event = {
+	id = 8227115
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227115_NAME
+	desc = EVT_8227115_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 1000 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+			AND = {
+				atwar = yes
+				ic = 500
+				NOT = { ic = 750 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227115_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 1000 }
+	}
+
+	action = {
+		name = EVT_8227115_B
+		command = { type = belligerence value = 150 }
+		command = { type = dissent value = 52 }
+		command = { type = money value = -18000 }
+	}
+}
+
+event = {
+	id = 8227116
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227116_NAME
+	desc = EVT_8227116_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 1240 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+			AND = {
+				atwar = yes
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227116_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 1250 }
+	}
+
+	action = {
+		name = EVT_8227116_B
+		command = { type = belligerence value = 160 }
+		command = { type = dissent value = 56 }
+		command = { type = money value = -22000 }
+	}
+}
+
+event = {
+	id = 8227117
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227117_NAME
+	desc = EVT_8227117_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 1400 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1500
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+			AND = {
+				atwar = yes
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227117_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 1400 }
+	}
+
+	action = {
+		name = EVT_8227117_B
+		command = { type = belligerence value = 170 }
+		command = { type = dissent value = 60 }
+		command = { type = money value = -30000 }
+	}
+}
+
+event = {
+	id = 8227118
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227118_NAME
+	desc = EVT_8227118_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 1600 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1500
+			}
+			AND = {
+				atwar = yes
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227118_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 1600 }
+	}
+
+	action = {
+		name = EVT_8227118_B
+		command = { type = belligerence value = 180 }
+		command = { type = dissent value = 64 }
+		command = { type = money value = -36000 }
+	}
+}
+
+event = {
+	id = 8227119
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227119_NAME
+	desc = EVT_8227119_DESC
+	picture = "nwo\army_limits"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 2000 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = yes
+				ic = 1500
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227119_A
+		command = { type = demobilize which = land when = 0 where = 0 value = 2000 }
+	}
+
+	action = {
+		name = EVT_8227119_B
+		command = { type = belligerence value = 200 }
+		command = { type = dissent value = 70 }
+		command = { type = money value = -48000 }
+	}
+}
+
+### Warnings for the player
+
+event = {
+	id = 8227200
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227200_NAME
+	desc = EVT_8227200_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = no
+		army = { size = 22 type = 0 when = 0 where = 0 which = 0 }
+		
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227200_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227201
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227201_NAME
+	desc = EVT_8227201_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 35 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 20
+				NOT = { ic = 40 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227201_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227202
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227202_NAME
+	desc = EVT_8227202_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 55 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 40
+				NOT = { ic = 60 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 20
+				NOT = { ic = 40 }
+			}
+			AND = {
+				atwar = yes
+				NOT = { ic = 20 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227202_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227203
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227203_NAME
+	desc = EVT_8227203_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 75 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 60
+				NOT = { ic = 80 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 40
+				NOT = { ic = 60 }
+			}
+			AND = {
+				atwar = yes
+				ic = 20
+				NOT = { ic = 40 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227203_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227204
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227204_NAME
+	desc = EVT_8227204_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 85 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 80
+				NOT = { ic = 100 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 60
+				NOT = { ic = 80 }
+			}
+			AND = {
+				atwar = yes
+				ic = 40
+				NOT = { ic = 60 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227204_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227205
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227205_NAME
+	desc = EVT_8227205_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 110 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 100
+				NOT = { ic = 125 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 80
+				NOT = { ic = 100 }
+			}
+			AND = {
+				atwar = yes
+				ic = 60
+				NOT = { ic = 80 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227205_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227206
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227206_NAME
+	desc = EVT_8227206_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 130 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 125
+				NOT = { ic = 150 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 100
+				NOT = { ic = 125 }
+			}
+			AND = {
+				atwar = yes
+				ic = 80
+				NOT = { ic = 100 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227206_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227207
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227207_NAME
+	desc = EVT_8227207_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 150 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 150
+				NOT = { ic = 175 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 125
+				NOT = { ic = 150 }
+			}
+			AND = {
+				atwar = yes
+				ic = 100
+				NOT = { ic = 125 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227207_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227208
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227208_NAME
+	desc = EVT_8227208_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 160 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 175
+				NOT = { ic = 200 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 150
+				NOT = { ic = 175 }
+			}
+			AND = {
+				atwar = yes
+				ic = 125
+				NOT = { ic = 150 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227208_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227209
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227209_NAME
+	desc = EVT_8227209_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 210 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 200
+				NOT = { ic = 250 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 175
+				NOT = { ic = 200 }
+			}
+			AND = {
+				atwar = yes
+				ic = 150
+				NOT = { ic = 175 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227209_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227210
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227210_NAME
+	desc = EVT_8227210_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 235 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 250
+				NOT = { ic = 300 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 200
+				NOT = { ic = 250 }
+			}
+			AND = {
+				atwar = yes
+				ic = 175
+				NOT = { ic = 200 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227210_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227211
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227211_NAME
+	desc = EVT_8227211_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 310 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 300
+				NOT = { ic = 400 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 250
+				NOT = { ic = 300 }
+			}
+			AND = {
+				atwar = yes
+				ic = 200
+				NOT = { ic = 250 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227211_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227212
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227212_NAME
+	desc = EVT_8227212_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 410 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 400
+				NOT = { ic = 500 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 300
+				NOT = { ic = 400 }
+			}
+			AND = {
+				atwar = yes
+				ic = 250
+				NOT = { ic = 300 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227212_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227213
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227213_NAME
+	desc = EVT_8227213_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 580 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 500
+				NOT = { ic = 750 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 400
+				NOT = { ic = 500 }
+			}
+			AND = {
+				atwar = yes
+				ic = 300
+				NOT = { ic = 400 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227213_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227214
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227214_NAME
+	desc = EVT_8227214_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 800 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 500
+				NOT = { ic = 750 }
+			}
+			AND = {
+				atwar = yes
+				ic = 400
+				NOT = { ic = 500 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227214_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227215
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227215_NAME
+	desc = EVT_8227215_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 975 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+			AND = {
+				atwar = yes
+				ic = 500
+				NOT = { ic = 750 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227215_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227216
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227216_NAME
+	desc = EVT_8227216_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 1200 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+			AND = {
+				atwar = yes
+				ic = 750
+				NOT = { ic = 1000 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227216_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227217
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227217_NAME
+	desc = EVT_8227217_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 1350 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				government = democratic
+				ic = 1500
+			}
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+			AND = {
+				atwar = yes
+				ic = 1000
+				NOT = { ic = 1250 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227217_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227218
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227218_NAME
+	desc = EVT_8227218_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 1550 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = no
+				not = { government = democratic }
+				ic = 1500
+			}
+			AND = {
+				atwar = yes
+				ic = 1250
+				NOT = { ic = 1500 }
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227218_A
+		command = { type = money value = -10 }
+	}
+}
+
+event = {
+	id = 8227219
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE U70 U71 U72 U73 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = EVT_8227219_NAME
+	desc = EVT_8227219_DESC
+	picture = "nwo\army_limits_warning"
+	style = 1
+
+	trigger = {
+		ai = yes
+		army = { size = 1900 type = 0 when = 0 where = 0 which = 0 }
+
+		OR = {
+			AND = {
+				atwar = yes
+				ic = 1500
+			}
+		} NOT = { flag = block_army_limiting }
+	}
+		
+	date = { day = 1 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = EVT_8227219_A
+		command = { type = money value = -10 }
+	}
+}

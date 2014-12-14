@@ -1,0 +1,1515 @@
+event = {
+	id = 8002901
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55011 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 55017 } # T. V. Soong
+		command = { type = foreignminister which = 55025 } # Wang Shijie
+		command = { type = armamentminister which = 55041 } # Jiang Jingguo
+		command = { type = ministerofsecurity which = 55058 } # Cai Yuanpei
+		command = { type = ministerofintelligence which = 55066 } # Jiang Yiying
+		command = { type = chiefofstaff which = 55076 } # Xiao Yishu
+		command = { type = chiefofarmy which = 55082 } # Xu Tingyao
+		command = { type = chiefofnavy which = 55089 } # Chen Cheng
+		command = { type = chiefofair which = 55094 } # Wang Shuming
+	}
+}
+
+event = {
+	id = 8002902
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55204 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 55205 } # Chiang Kai-shek
+	}
+}
+
+event = {
+	id = 8002903
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55200 } # Li Zongren
+		command = { type = headofgovernment which = 55201 } # Wong Wenhao
+	}
+}
+
+event = {
+	id = 8002904
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55200 } # Li Zongren
+		command = { type = headofgovernment which = 55097 } # Yen Hsi-shan
+	}
+}
+
+event = {
+	id = 8002905
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55204 } # Chiang Kai-shek
+		# Younger versions of Chiang
+		command = { type = sleepminister which = 55202 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55211 } # Chiang Kai-shek
+		# New prime minister
+		command = { type = headofgovernment which = 55098 } # Ch'en Ch'eng
+	}
+}
+
+event = {
+	id = 8002906
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55204 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 55202 } # Yu Hung-Chun
+	}
+}
+
+event = {
+	id = 8002907
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55206 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 55098 } # Ch'en Ch'eng
+	}
+}
+
+event = {
+	id = 8002908
+	country = CHI
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 55206 } # Chiang Kai-shek
+		command = { type = headofgovernment which = 55203 } # Yen Chia-kan
+	}
+}
+
+event = {
+	id = 8002909
+	country = CHI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 55507 } # Chiang Ching-kuo
+	}
+}
+
+event = {
+	id = 8002910
+	country = CHI
+
+	name = EVT_8002910_NAME
+	desc = EVT_8002910_DESC
+	picture = nwo\death_chiang_kai_shek
+	style = 1
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = EVT_8002910_A
+		ai_chance = 100
+		command = { type = sleepminister which = 55002 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55007 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55011 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55204 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55205 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55206 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55207 } # Chiang Kai-shek
+		command = { trigger = {	OR = { government = democratic government = fascist	} } type = headofstate which = 55500 } # Yen Chia-kan
+	}
+}
+
+event = {
+	id = 8002911
+	country = CHI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 55506 } # Chiang Ching-kuo
+		command = { type = headofgovernment which = 55501 } # Sun Yun-suan
+	}
+}
+
+event = {
+	id = 8002912
+	country = CHI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 55502 } # Yu Kuo-hwa
+	}
+}
+
+event = {
+	id = 8002913
+	country = CHI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 55503 } # Lee Teng-hui
+	}
+}
+
+event = {
+	id = 8002914
+	country = CHI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 55504 } # Lee Huan
+	}
+}
+
+event = {
+	id = 8002915
+	country = CHI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 55505 } # Hau Pei-tsun
+	}
+}
+
+event = {
+	id = 8002916
+	country = CHI
+	
+	name = EVT_8002916_NAME
+	desc = EVT_8002916_DESC
+	picture = "nwo\taiwan_land_reform"
+	decision_picture = "nwo\d_taiwan_land_reform"
+	style = 1
+
+	decision = {
+		flag = CHC_won_civil_war
+	}
+	
+	trigger = {
+		flag = CHC_won_civil_war
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8002916_A"
+		ai_chance = 98
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = industrial_modifier which = total value = 6 }
+	}
+	
+	action = {
+		name = "EVT_8002916_B"
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+### Alternative events in case of Nationalist victory in the CCW (ideas by Limith)
+
+################################################
+
+event = {
+	id = 8002920
+	country = CHI
+
+	name = EVT_8002920_NAME
+	desc = EVT_8002920_DESC
+	picture = nwo\chiang_smiling
+	style = 1
+	
+	trigger = {
+		flag = CHI_won_civil_war
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8002920_A # Ally with USA
+		ai_chance = 60
+		trigger = {
+			exists = USA
+			NOT = { war = { country = USA } }
+		}
+		command = { type = trigger which = 8002921 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+	
+	action = {
+		name = EVT_8002920_B # Stay neutral
+		ai_chance = 30
+		command = { type = domestic which = interventionism value = -2 }
+	}
+	
+	action = {
+		name = EVT_8002920_C # Ally with Comintern
+		ai_chance = 10
+		trigger = {
+			exists = SOV
+			NOT = { war = { country = SOV } }
+			ai = MON
+			ai = SIK
+		}
+		command = { type = trigger which = 8002922 }
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = political_left value = 2 }
+		
+	}
+}
+
+event = {
+	id = 8002921
+	country = USA
+
+	name = EVT_8002921_NAME
+	desc = EVT_8002921_DESC
+	picture = nwo\chiang_smiling
+	style = 1
+	
+	action = {
+		name = EVT_8002921_A # Yes
+		ai_chance = 90
+		command = { type = alliance which = CHI }
+		command = { type = relation which = CHI value = 250 }
+	}
+	
+	action = {
+		name = EVT_8002921_B # No
+		ai_chance = 10
+		command = { type = relation which = CHI value = -150 }
+		
+	}
+}
+
+event = {
+	id = 8002922
+	country = SOV
+
+	name = EVT_8002922_NAME
+	desc = EVT_8002922_DESC
+	picture = nwo\chiang_smiling
+	style = 1
+	
+	action = {
+		name = EVT_8002922_A # Yes
+		ai_chance = 75
+		command = { type = dissent value = 10 }
+		command = { type = alliance which = CHI }
+		command = { type = relation which = CHI value = 250 }
+		command = { type = trigger which = 8002923 }
+	}
+	
+	action = {
+		name = EVT_8002922_B # No
+		ai_chance = 25
+		command = { type = relation which = CHI value = -150 }
+		
+	}
+}
+
+event = {
+	id = 8002923
+	country = CHI
+
+	name = EVT_8002923_NAME
+	desc = EVT_8002923_DESC
+	picture = nwo\mongolia
+	style = 1
+	
+	action = {
+		name = EVT_8002923_A # Yes
+		ai_chance = 100
+		command = { trigger = { ai = MON } type = inherit which = MON }
+		command = { trigger = { ai = SIK } type = inherit which = SIK }
+		command = { }
+	}
+	
+	action = {
+		name = EVT_8002923_B # No
+		ai_chance = 0
+		command = { trigger = { ai = MON } type = inherit which = MON }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+	
+	action = {
+		name = EVT_8002923_C # No
+		ai_chance = 0
+		command = { trigger = { ai = SIK } type = inherit which = SIK }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+	
+	action = {
+		name = EVT_8002923_D # No
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 8002932
+	country = CHI
+
+	name = EVT_8002932_NAME
+	desc = EVT_8002932_DESC
+	picture = nwo\sino_russian_unequal_treaties
+	style = 1
+	
+	action = {
+		name = EVT_8002932_A
+		ai_chance = 100
+		command = { type = addcore which = 1119 } # Kyzyl
+		command = { type = addcore which = 1541 } # Northern Sakhalin
+		command = { type = addcore which = 1542 } # Southern Sakhalin
+		# Russian Far East
+		command = { type = addcore which = 1171 }
+		command = { type = addcore which = 1174 }
+		command = { type = addcore which = 1175 }
+		command = { type = addcore which = 1176 }
+		command = { type = addcore which = 1185 }
+		command = { type = addcore which = 1187 }
+		command = { type = addcore which = 1188 }
+		command = { type = addcore which = 1189 }
+		command = { type = addcore which = 1190 }
+		command = { type = addcore which = 1191 }
+		command = { type = addcore which = 1192 }
+		command = { type = addcore which = 1193 }
+		command = { type = addcore which = 1194 }
+		command = { type = addcore which = 1195 }
+		command = { type = addcore which = 1196 }
+	}
+
+}
+
+
+### Reactions to postwar alliances
+
+# Chinese are allied with USSR
+event = {
+	id = 8002924
+	country = USA
+
+	name = EVT_8002924_NAME
+	desc = EVT_8002924_DESC
+	picture = nwo\kmt_sovietunion
+	decision_picture = nwo\d_kmt_sovietunion
+	style = 1
+	
+	decision = {
+		event = 8002920
+		alliance = { country = CHI country = SOV }
+		flag = CHI_won_civil_war
+	}
+	
+	trigger = {
+		event = 8002920
+		alliance = { country = CHI country = SOV }
+		flag = CHI_won_civil_war
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8002924_A # Assassinate Kai-shek
+		ai_chance = 70
+		command = { type = trigger which = 8002925 }
+		command = { type = belligerence value = 20 }
+	}
+	
+	action = {
+		name = EVT_8002924_B # Let things be
+		ai_chance = 30
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 8002925
+	country = CHI
+	one_action = yes
+
+	name = EVT_8002925_NAME
+	desc = EVT_8002925_DESC
+	picture = nwo\chiang_thinking
+	style = 1
+	
+	action = {
+		name = EVT_8002925_A # Kai-shek lives!
+		ai_chance = 80
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = dissent value = -5 }
+		command = { type = headofstate which = 55204 } # Chiang Kai-shek
+	}
+	
+	action = {
+		name = EVT_8002925_B # Kai-shek is dead but China upholds its alliance with USSR
+		ai_chance = 10
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = sleepminister which = 55002 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55007 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55011 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55204 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55205 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55206 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55207 } # Chiang Kai-shek
+	}
+	
+	action = {
+		name = EVT_8002925_C # Kai-shek is dead and China turns back on USSR!
+		ai_chance = 10
+		command = { type = trigger which = 8002926 }
+		command = { type = leave_alliance }
+		command = { type = alliance which = USA }
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = political_left value = -3 }
+		command = { type = sleepminister which = 55002 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55007 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55011 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55204 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55205 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55206 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55207 } # Chiang Kai-shek
+	}
+}
+
+event = {
+	id = 8002926
+	country = SOV
+
+	name = EVT_8002926_NAME
+	desc = EVT_8002926_DESC
+	picture = nwo\kmt_unitedstates
+	style = 1
+
+	action = {
+		name = EVT_8002926_A # Tough luck
+		ai_chance = 80
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 15 }
+		command = { type = relation which = CHI value = -200 }
+	}
+	
+	action = {
+		name = EVT_8002926_B # That is war!!
+		ai_chance = 20
+		command = { type = dissent value = 20 }
+		command = { type = war which = CHI }
+		command = { type = relation which = CHI value = -200 }
+	}
+}
+
+# Chinese are allied with USA
+event = {
+	id = 8002927
+	country = SOV
+
+	name = EVT_8002927_NAME
+	desc = EVT_8002927_DESC
+	picture = nwo\kmt_unitedstates
+	decision_picture = nwo\d_kmt_unitedstates
+	style = 1
+	
+	decision = {
+		event = 8002920
+		alliance = { country = CHI country = USA }
+		flag = CHI_won_civil_war
+	}
+	
+	trigger = {
+		event = 8002920
+		alliance = { country = CHI country = USA }
+		exists = MON
+		puppet = { country = MON country = SOV }
+		ai = MON
+		flag = CHI_won_civil_war
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8002927_A # Assassinate Kai-shek
+		ai_chance = 70
+		command = { type = trigger which = 8002928 }
+		command = { type = belligerence value = 20 }
+	}
+	
+	action = {
+		name = EVT_8002927_B # Let things be
+		ai_chance = 30
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 8002928
+	country = CHI
+	one_action = yes
+
+	name = EVT_8002928_NAME
+	desc = EVT_8002928_DESC
+	picture = nwo\chiang_thinking
+	style = 1
+	
+	action = {
+		name = EVT_8002928_A # Kai-shek lives!
+		ai_chance = 70
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = dissent value = -5 }
+		command = { type = headofstate which = 55204 } # Chiang Kai-shek
+	}
+	
+	action = {
+		name = EVT_8002928_B # Kai-shek is dead but China upholds its alliance with USA
+		ai_chance = 20
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = sleepminister which = 55002 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55007 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55011 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55204 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55205 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55206 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55207 } # Chiang Kai-shek
+	}
+	
+	action = {
+		name = EVT_8002928_C # Kai-shek is dead and China turns back on USA!
+		ai_chance = 10
+		command = { type = trigger which = 8002929 }
+		command = { type = leave_alliance }
+		command = { type = alliance which = SOV }
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = political_left value = 3 }
+		command = { type = sleepminister which = 55002 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55007 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55011 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55204 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55205 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55206 } # Chiang Kai-shek
+		command = { type = sleepminister which = 55207 } # Chiang Kai-shek
+		command = { type = sleepevent which = 8002930 }
+	}
+}
+
+event = {
+	id = 8002929
+	country = USA
+
+	name = EVT_8002929_NAME
+	desc = EVT_8002929_DESC
+	picture = nwo\kmt_sovietunion
+	style = 1
+
+	action = {
+		name = EVT_8002929_A # Tough luck
+		ai_chance = 95
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 15 }
+		command = { type = relation which = CHI value = -200 }
+	}
+	
+	action = {
+		name = EVT_8002929_B # That is war!!
+		ai_chance = 5
+		command = { type = dissent value = 20 }
+		command = { type = war which = CHI }
+		command = { type = relation which = CHI value = -200 }
+	}
+}
+
+# Assassination route failed
+event = {
+	id = 8002930
+	country = SOV
+
+	name = EVT_8002930_NAME
+	desc = EVT_8002930_DESC
+	picture = nwo\new_chinese_soviet
+	decision_picture = nwo\d_new_chinese_soviet
+	style = 1
+	
+	decision = {
+		event = 8002928
+		alliance = { country = CHI country = USA }
+		exists = MON
+		puppet = { country = MON country = SOV }
+		alliance = { country = MON country = SOV }
+		ai = MON
+	}
+	
+	trigger = {
+		event = 8002928
+		alliance = { country = CHI country = USA }
+		exists = MON
+		puppet = { country = MON country = SOV }
+		alliance = { country = MON country = SOV }
+		ai = MON
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8002930_A # Let things be
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+	
+	action = {
+		name = EVT_8002930_B # Create new CHC in Mongolia (WW3)
+		ai_chance = 5
+		command = { type = trigger which = 8002931 }
+		command = { type = dissent value = 15 }
+		command = { type = belligerence value = 20 }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -2000 }
+		command = { type = demobilize which = land when = 0 where = 0 value = -30 } 
+	}
+}
+
+event = {
+	id = 8002931
+	country = MON
+
+	name = EVT_8002931_NAME
+	desc = EVT_8002931_DESC
+	picture = nwo\new_chinese_soviet
+	style = 1
+
+	action = {
+		name = EVT_8002931_A
+		command = { type = country which = CHC }
+		command = { trigger = { ai = SIK } type = inherit which = SIK }
+		command = { type = dissent value = -10 }
+		command = { type = supplies value = 10000 }
+		command = { type = money value = 1000 }
+		
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		command = { type = add_division which = infantry when = 13 }
+		
+		command = { type = add_division which = cavalry when = 13 }
+		command = { type = add_division which = cavalry when = 13 }
+		command = { type = add_division which = cavalry when = 13 }
+		command = { type = add_division which = cavalry when = 13 }
+		command = { type = add_division which = cavalry when = 13 }
+		
+		command = { type = add_division which = bergsjaeger when = 13 }
+		command = { type = add_division which = bergsjaeger when = 13 }
+		command = { type = add_division which = bergsjaeger when = 13 }
+		command = { type = add_division which = bergsjaeger when = 13 }
+		command = { type = add_division which = bergsjaeger when = 13 }
+		
+		command = { type = war which = CHI }
+	}
+}
+
+### Peaceful post-CCW Nationalist China
+
+event = { # New communist cells
+	id = 8002940
+	country = CHI
+
+	name = EVT_8002940_NAME
+	desc = EVT_8002940_DESC
+	picture = nwo\chinese_communist_partisans
+	style = 1
+
+	trigger = {
+		exists = SOV
+		domestic = { type = freedom value = 3 }
+		domestic = { type = political_right value = 6 }
+		OR = {
+			flag = CHI_won_civil_war
+			flag = CHC_won_civil_war
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002940_A # Suppress
+		ai_chance = 80
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 10 }
+	}
+	
+	action = {
+		name = EVT_8002940_B # Contain
+		ai_chance = 20
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = { # Inherent instability of CHI
+	id = 8002941
+	country = CHI
+
+	name = EVT_8002941_NAME
+	desc = EVT_8002941_DESC
+	picture = nwo\old_chinese_dollar
+	style = 1
+
+	trigger = {
+		flag = CHI_won_civil_war
+		NOT = { event = 8002948 }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002941_A
+		command = { type = dissent value = 12 }
+	}
+}
+
+### Events to battle instability
+
+event = { # Administrative reform
+	id = 8002942
+	country = CHI
+	persistent = yes
+
+	name = EVT_8002942_NAME
+	desc = EVT_8002942_DESC
+	picture = nwo\new_chinese_dollar
+	decision_picture = nwo\d_new_chinese_dollar
+	style = 1
+
+	trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_adm_reform }
+		NOT = { event = 8002948 }
+	}
+	
+	decision = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_adm_reform }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+	}
+	
+	decision_trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_adm_reform }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002942_A
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = 2 }
+		command = { type = local_setflag which = CHI_adm_reform }
+	}
+	
+	action = {
+		name = EVT_8002942_B
+		ai_chance = 20
+		trigger = { ai = yes }
+		command = { type = money value = 10 }
+	}
+}
+
+event = { # Political reform
+	id = 8002943
+	country = CHI
+	persistent = yes
+
+	name = EVT_8002943_NAME
+	desc = EVT_8002943_DESC
+	picture = nwo\kmt_political_reform
+	decision_picture = nwo\d_kmt_political_reform
+	style = 1
+
+	trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_pol_reform }
+		NOT = { event = 8002948 }
+	}
+	
+	decision = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_pol_reform }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+	}
+	
+	decision_trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_pol_reform }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002943_A
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = local_setflag which = CHI_pol_reform }
+	}
+	
+	action = {
+		name = EVT_8002943_B
+		ai_chance = 20
+		trigger = { ai = yes }
+		command = { type = money value = 10 }
+	}
+}
+
+event = { # End of the martial law
+	id = 8002944
+	country = CHI
+	persistent = yes
+
+	name = EVT_8002944_NAME
+	desc = EVT_8002944_DESC
+	picture = nwo\kmt_end_of_martial_law
+	decision_picture = nwo\d_kmt_end_of_martial_law
+	style = 1
+
+	trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_martial_law_repealed }
+		NOT = { event = 8002948 }
+	}
+	
+	decision = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_martial_law_repealed }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+	}
+	
+	decision_trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_martial_law_repealed }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002944_A
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = local_setflag which = CHI_martial_law_repealed }
+	}
+	
+	action = {
+		name = EVT_8002944_B
+		ai_chance = 20
+		trigger = { ai = yes }
+		command = { type = money value = 10 }
+	}
+}
+
+event = { # Reforming the Petitioning Law
+	id = 8002945
+	country = CHI
+	persistent = yes
+
+	name = EVT_8002945_NAME
+	desc = EVT_8002945_DESC
+	picture = nwo\petitioning_law
+	decision_picture = nwo\d_petitioning_law
+	style = 1
+
+	trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_petitioning_law_reformed }
+		NOT = { event = 8002948 }
+	}
+	
+	decision = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_petitioning_law_reformed }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+		money = 1000
+	}
+	
+	decision_trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_petitioning_law_reformed }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 5 }
+		money = 1000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002945_A
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = money value = -1000 }
+		command = { type = local_setflag which = CHI_petitioning_law_reformed }
+	}
+	
+	action = {
+		name = EVT_8002945_B
+		ai_chance = 20
+		trigger = { ai = yes }
+		command = { type = money value = 10 }
+	}
+}
+
+event = { # Land reform
+	id = 8002946
+	country = CHI
+	persistent = yes
+
+	name = EVT_8002946_NAME
+	desc = EVT_8002946_DESC
+	picture = nwo\taiwan_land_reform
+	decision_picture = nwo\d_taiwan_land_reform
+	style = 1
+
+	trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_land_reform }
+		NOT = { event = 8002948 }
+	}
+	
+	decision = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_land_reform }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 3 }
+	}
+	
+	decision_trigger = {
+		flag = CHI_won_civil_war
+		NOT = { local_flag = CHI_land_reform }
+		NOT = { event = 8002948 }
+		NOT = { dissent = 3 }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002946_A
+		ai_chance = 80
+		command = { type = dissent value = 15 }
+		command = { type = industrial_modifier which = total value = 4 }
+		command = { type = local_setflag which = CHI_land_reform }
+	}
+	
+	action = {
+		name = EVT_8002946_B
+		ai_chance = 20
+		trigger = { ai = yes }
+		command = { type = money value = 10 }
+	}
+}
+
+event = { # End of instabilities
+	id = 8002947
+	country = REB
+	persistent = yes
+
+	name = EVT_8002947_NAME
+	desc = EVT_8002947_DESC
+	picture = nwo\kmt_end_of_instability
+	style = 1
+
+	trigger = {
+		exists = CHI
+		flag = CHI_won_civil_war
+		NOT = { event = 8002948 }
+		OR = {
+			AND = { event = 8002942 random = 1 }
+			AND = { event = 8002943 random = 1 }
+			AND = { event = 8002944 random = 1 }
+			AND = { event = 8002945 random = 1 }
+			AND = { event = 8002946 random = 3 }
+			random = 1
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002947_A
+		command = { type = trigger which = 8002948 }
+	}
+
+}
+
+event = { # End of instabilities
+	id = 8002948
+	country = CHI
+	persistent = yes
+
+	name = EVT_8002948_NAME
+	desc = EVT_8002948_DESC
+	picture = nwo\kmt_end_of_instability
+	style = 1
+	
+	action = {
+		name = EVT_8002948_A
+		command = { type = dissent value = -5 }
+		command = { trigger = { NOT = { flag = CHI_adm_reform } } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { NOT = { flag = CHI_pol_reform } } type = domestic which = democratic value = 2 }
+		command = { trigger = { NOT = { flag = CHI_pol_reform } } type = domestic which = freedom value = 2 }
+		command = { trigger = { NOT = { flag = CHI_martial_law_repealed } } type = domestic which = freedom value = 1 }
+		command = { trigger = { NOT = { flag = CHI_petitioning_law_reformed } } type = domestic which = freedom value = 1 }
+		command = { trigger = { NOT = { flag = CHI_land_reform } } type = industrial_modifier which = total value = 2 }
+	}
+
+}
+
+### Liberation of Vietnam
+
+event = {
+	id = 8002950
+	country = CHI
+
+	name = EVT_8002950_NAME
+	desc = EVT_8002950_DESC
+	picture = nwo\chinese_vietnam
+	style = 1
+	
+	trigger = {
+		OR = {
+			owned = { province = 1395 data = CHI }
+			owned = { province = 1399 data = CHI }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8002950_A
+		ai_chance = 99
+		command = { type = independence which = VIE value = 1 }
+	}
+	
+	action = {
+		name = EVT_8002950_B
+		ai_chance = 1
+		command = { type = belligerence value = 25 }
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = { # Repayment of loans
+	id = 8002951
+	country = CHI
+
+	name = EVT_8002951_NAME
+	desc = EVT_8002951_DESC
+	picture = nwo\new_chinese_dollar
+	style = 1
+	
+	trigger = {
+		NOT = { alliance = { country = CHI country = SOV } }
+		flag = CHI_won_civil_war
+		NOT = { local_flag = loans_repaid }
+		exists = USA
+	}
+	
+	date = { day = 0 month = january year = 1945 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	
+	action = {
+		name = EVT_8002951_A
+		ai_chance = 50
+		command = { type = money value = -25000 }
+		command = { type = dissent value = 5 }
+		command = { type = local_setflag which = loans_repaid }
+		command = { type = trigger which = 8002952 }
+	}
+	
+	action = {
+		name = EVT_8002951_B
+		ai_chance = 50
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = { # Repayment of loans
+	id = 8002952
+	country = USA
+
+	name = EVT_8002952_NAME
+	desc = EVT_8002952_DESC
+	picture = nwo\new_chinese_dollar
+	style = 1
+	
+	action = {
+		name = EVT_8002952_A
+		command = { type = money value = 25000 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = CHI value = 150 }
+	}
+}
+
+### Development decisions
+
+event = { # Economic development
+	id = 8002953
+	country = CHI
+
+	name = EVT_8002953_NAME
+	desc = EVT_8002953_DESC
+	picture = nwo\new_chinese_dollar
+	decision_picture = nwo\d_new_chinese_dollar
+	style = 1
+	
+	trigger = {
+		flag = CHI_won_civil_war
+		event = 8002948
+	}
+	
+	decision_trigger = {
+		flag = CHI_won_civil_war
+		money = 5000
+		NOT = { dissent = 5 }
+		event = 8002948
+	}
+	
+	decision = {
+		flag = CHI_won_civil_war
+		money = 5000
+		NOT = { dissent = 5 }
+		event = 8002948
+	}
+	
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	
+	action = {
+		name = EVT_8002953_A
+		ai_chance = 90
+		command = { type = dissent value = 10 }
+		command = { type = money value = -5000 }
+		command = { type = industrial_modifier which = total value = 5 }
+	}
+	
+	action = {
+		name = EVT_8002953_B
+		trigger = { ai = yes }
+		ai_chance = 10
+		command = { type = money value = 1 }
+	}
+}
+
+event = { # Promotion of literacy
+	id = 8002954
+	country = CHI
+
+	name = EVT_8002954_NAME
+	desc = EVT_8002954_DESC
+	picture = nwo\kmt_end_of_instability
+	decision_picture = nwo\d_kmt_end_of_instability
+	style = 1
+	
+	trigger = {
+		flag = CHI_won_civil_war
+		event = 8002948
+	}
+	
+	decision_trigger = {
+		flag = CHI_won_civil_war
+		money = 5000
+		NOT = { dissent = 5 }
+		event = 8002948
+	}
+	
+	decision = {
+		flag = CHI_won_civil_war
+		money = 5000
+		NOT = { dissent = 5 }
+		event = 8002948
+	}
+	
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	
+	action = {
+		name = EVT_8002954_A
+		ai_chance = 90
+		command = { type = money value = -5000 }
+		command = { type = research_mod value = 8 }
+	}
+	
+	action = {
+		name = EVT_8002954_B
+		trigger = { ai = yes }
+		ai_chance = 10
+		command = { type = money value = 1 }
+	}
+}

@@ -1,0 +1,893 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Sargeras >.<
+# by korodikrisz
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+########################################
+#Event list for Hungary
+#HUN	13301700	The Outcome of the Great War (historical)
+#HUN	13301710	Our neighbors are attacking
+#HUN	13301711	The Vix's Note
+#HUN	13301712	Hungarian Soviet Republic
+#HUN	13301713	Alliance with USSR
+#HUN	13301714	Romania declared war
+#HUN	13301715	The Hungarian Soviet Republic has fallen
+#HUN	13301716	Formation of the Slovak Soviet Republic
+#HUN	13301717	Forming of the Friedrich Government by Romania
+#HUN	13301718	Archduke Joseph forced to resign
+#HUN	13301719	István Friedrich resigns
+#HUN	13301720	Admiral Miklós Horthy de Nagybánya marches on Budapest
+#HUN	13301721	Admiral Horthy nominated Regent of Hungary
+#HUN	13301722	Sándor Simonyi resigns
+#HUN	13301723	The Easter Crisis
+#HUN	13301724	Pál Teleki resigns
+#HUN	13301725	The March on Budapest
+#HUN	13301726	The Little Entente sends ultimatum
+#HUN	13301727	Karl IV flees from Hungary
+#HUN	13301728	Protocol for the reconstruction of Hungary
+#HUN	13301729	Treaty of Trianon revision
+#HUN	13301730	Bethlen resigns
+#HUN	13301731	Biatorbágy bridge blow up
+#HUN	13301732	Gyula Károlyi resigns
+#HUN	13301733	Fascist friendship
+#HUN	13301734	Reforming the Military
+#HUN	13301735	War against Czechoslovakia
+#***	133017991	 Hungarian Soviet Republic fix.
+
+# Outcome of Great War
+event = {
+	id = 13301700
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		atwar = no
+		event = 2192507 # end of kuk
+		event = 2192511 # Hungary ends union
+	}
+	
+	name = "EVT_13301700_NAME"
+	desc = "EVT_13301700_DESC"
+	picture = "surrender"
+	
+	action = {
+		name = "Now we're on our own and it's time we face consequences"
+		command = { type = local_setflag which = loser }
+ 		command = { type = dissent value = 10 }
+		command = { type = local_clrflag which = disarm_25 }
+		command = { type = local_clrflag which = disarm_50 }
+		command = { type = local_clrflag which = disarm_75 }
+		command = { type = local_setflag which = disarm_10 }
+		command = { type = secedearea which = ROM value = "Bessarabia" when = 1 }
+		command = { type = secedeprovince which = ROM value = 301 when = 1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 } # social-liberal
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		command = { type = headofstate which = 105155 } # Mihály Károlyi
+		command = { type = headofgovernment which = 105151 } # Mihály Károlyi
+		command = { type = foreignminister which = 105149 } # Mihály Károlyi 
+		command = { type = strength which = land when = 0 where = 0 org = 0 value = 0 } #remove all land units
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	}
+}
+
+# Neighbors attacking
+event = {
+	id = 13301710
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		atwar = no
+		event = 13301700
+		event = 2192533 # CZE	Provisional government of Czechoslovakia
+		event = 2084508 # SER	The Kingdom of Serbs, Croats and Slovenes
+	}
+	
+	name = "EVT_13301710_NAME"
+	desc = "EVT_13301710_DESC"
+	picture = "finnish_reinforcements"
+	style = 2
+	
+	action = {
+		name = "Outlaw all armed groups"
+		ai_chance = 100
+		command = { type = dissent value = 30 }
+	}
+	
+	action = {
+		name = "Defend the country!"
+		ai_chance = 0
+		command = { type = sleepevent which = 13301711 } # The Vix's Note
+		command = { type = war which = CZE }
+		command = { type = war which = ROM }
+		command = { type = war which = SER }
+		command = { type = war which = FRA }
+		#command = { #TODO: militias as volunteer defenders? }
+	}
+}
+# Vix's note
+event = {
+	id = 13301711
+	country = HUN
+	
+	date = { day = 1 month = january year = 1919 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 90
+	
+	trigger = {
+		event = 13301710 
+		exists = ROM
+	}	
+	
+	name = "EVT_13301711_NAME"
+	desc = "EVT_13301711_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	action = {
+		name = "Don't sign"
+		ai_chance = 100
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = SER value = -100 }
+		command = { type = relation which = ROM value = -100 }
+		command = { type = relation which = CZE value = -100 }
+		command = { type = trigger which = 13301712 } # Hungarian Soviet Republic
+	}
+	action = {
+		name = "Offer concessions"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = secedeprovince which = ROM value = 281 }
+		command = { type = secedeprovince which = ROM value = 283 }
+		command = { type = secederegion which = ROM value = "Romania" }
+		command = { type = secedearea which = ROM value = "Transylvania" }
+		command = { type = sleepevent which = 2022501 } # Trianon treaty no longer necessary
+	}
+	
+	
+}
+
+# Hungarian Soviet Republic
+event = {
+	id = 13301712
+	country = HUN
+	
+	# Triggered
+	
+	name = "EVT_13301712_NAME"
+	desc = "EVT_13301712_DESC"
+	picture = "spread_revolution"
+	style = 2
+	
+	action = {
+		name = "Workers of Hungary unite!"
+		command = { type = name where = HUN which = "Hungarian Soviet Republic" }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = free_market value = 4 }
+		command = { type = set_domestic which = defense_lobby value = 8 }
+		command = { type = set_domestic which = interventionism value = 8 }
+		command = { type = dissent value = -5 }
+		command = { type = event which = 13301810 where = ROM when = 30 }
+	}
+}
+
+# Alliance with USSR
+event = {
+	id = 13301713
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 7
+	
+	trigger = {
+		government = communist
+		exists = SOV
+		NOT = {
+			alliance = { country = SOV country = HUN }
+			war = { country = SOV country = HUN }
+		}
+	}
+	
+	name = "EVT_13301713_NAME"
+	desc = "EVT_13301713_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "Propose alliance"
+		ai_chance = 100
+		command = { type = trigger which = 13300312 } # SOV Hungary proposes an alliance
+	}
+	
+	action = {
+		name = "We don't need it"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Romania declared war
+event = {
+	id = 13301714
+	country = HUN
+	save_date = yes
+	
+	# Triggered by ROM 13301810
+	
+	name = "Romania declared war"
+	desc = "EVT_13301714_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Counterattack"
+		command = { type = max_organization which = land value = 10 }
+		command = { type = morale which = land value = 10 }
+		command = { type = morale which = naval value = 10 }
+		command = { type = morale which = air value = 10 }
+		command = { type = counterattack value = 2 }
+		command = { type = assault value = 2 }
+		command = { type = ambush value = 2 }
+		command = { type = breakthrough value = 2 }
+		command = { type = encirclement value = 2 }
+		command = { type = hq_supply_eff value = 2 }
+		command = { type = sce_frequency value = 0.3 }
+		command = { type = attrition_mod value = 2 }
+		command = { type = trickleback_mod value = 5 }
+	}
+}
+
+# The Hungarian Soviet Republic has fallen.
+event = {
+	id = 13301715
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 7
+	
+	trigger = {
+		OR = { 
+			war = { country = CZE }
+			war = { country = ROM }
+		}
+		OR = {
+			not = { control = { province = 284 data = HUN } } # Budapest
+			lost_national = { country = HUN value = 75 }
+		}
+	}
+	
+	name = "EVT_13301715_NAME"
+	desc = "EVT_13301715_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "We surrender"
+		command = { type = dissent value = 5 }
+		command = { type = name where = HUN which = "" }	
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = headofstate which = 105160 } # Gyula Peidl	
+		command = { type = headofgovernment which = 105165 } # Gyula Peidl
+		command = { type = foreignminister which = 105173 } # Péter Ágoston
+		command = { type = armamentminister which = 105195 } # Peidl
+		command = { type = leave_alliance }
+		command = { type = peace which = ROM }
+		command = { type = peace which = CZE }
+		command = { type = access which = ROM }
+		command = { type = strength which = land when = 0 where = 0 org = 0 value = 0 } # Disband communist corps
+		#restore default army stats
+		command = { type = max_organization which = land value = 10 }
+		command = { type = morale which = land value = 10 }
+		command = { type = morale which = naval value = -10 }
+		command = { type = morale which = air value = -10 }
+		command = { type = counterattack value = -2 }
+		command = { type = assault value = -2 }
+		command = { type = ambush value = -2 }
+		command = { type = breakthrough value = -2 }
+		command = { type = encirclement value = -2 }
+		command = { type = hq_supply_eff value = -2 }
+		command = { type = sce_frequency value = -0.3 }
+		command = { type = attrition_mod value = -2 }
+		command = { type = trickleback_mod value = -5 }
+		command = { type = secedearea which = CZE value = "Slovakia" when = 2 }
+	}
+}
+
+# Formation of the Slovak Soviet Republic
+event = {
+	id = 13301716
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 14
+	
+	trigger = {
+		government = communist
+		war = { country = HUN country = CZE }
+		control = { province = 208 data = HUN }
+		control = { province = 211 data = HUN }
+		control = { province = 212 data = HUN }
+		control = { province = 214 data = HUN }
+	}
+	
+	name = "EVT_13301716_NAME"
+	desc = "EVT_13301716_DESC"
+	picture = "spread_revolution"
+	style = 2
+	
+	action = {
+		name = "Great!"
+		command = { type = dissent value = -3 }
+		command = { type = independence which = U31 value = 1 when = 0 }
+		command = { type = name where = U31 which = "Slovak Soviet Republic" }
+		command = { type = alliance which = U31 }
+	}
+}
+
+# Forming of the Friedrich government by Romania
+event = {
+	id = 13301717
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 7
+	
+	trigger = {
+		atwar = no
+		government = democratic
+		access = { country = HUN country = ROM }
+	}
+	
+	name = "EVT_13301717_NAME"
+	desc = "EVT_13301717_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Simply humiliating"
+		command = { type = event which = 13301718 when = 4 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = headofstate which = 105158 } # Archduke Joseph
+		command = { type = headofgovernment which = 105153 } # Istvan Friedrich
+		command = { type = foreignminister which = 105174 } # Gábor Tánczos
+		command = { type = armamentminister which = 105196 } # János Grünn
+	}
+}
+
+# Archduke Joseph forced to resign
+event = {
+	id = 13301718
+	country = HUN
+	
+	# triggered by 13301717
+	
+	name = "EVT_13301718_NAME"
+	desc = "EVT_13301718_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "A real injustice"
+		command = { type = relation which = FRA value = -30 }
+		command = { type = headofstate which = 105161 } # Friedrich
+	}
+}
+
+# István Friedrich resigns
+event = {
+	id = 13301719
+	country = HUN
+	
+	date = { day = 24 month = november year = 1919 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		incabinet = 105153
+	}
+	
+	name = "EVT_13301719_NAME"
+	desc = "EVT_13301719_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = event which = 13301720 when = 2 }
+		command = { type = headofstate which = 105162 } # Károly Huszár
+		command = { type = headofgovernment which = 105164 } # Károly Huszár
+		command = { trigger = { ai = yes } type = foreignminister which = 105176 } # Jószef Somssich
+		command = { trigger = { ai = yes } type = armamentminister which = 105197 } # Frigyes Korányi
+	}
+}
+
+# Admiral Miklós Horthy de Nagybánya marches on Budapest
+event = {
+	id = 13301720
+	country = HUN
+	
+	# triggered by 13301719
+	
+	name = "EVT_13301720_NAME"
+	desc = "EVT_13301720_DESC"
+	#picture = "T1613"
+	style = 2
+	
+	action = {
+		name = "The Kingdom of Hungary is reborn"
+		command = { type = set_domestic	which = democratic value = 3 }
+		command = { type = set_domestic	which = political_left value = 2 }
+		command = { type = set_domestic	which = freedom value = 4 }
+		command = { type = headofstate which = 105156 } 
+		command = { type = headofgovernment which = 105154 } # Sándor Simonyi-Semadam
+		command = { type = dissent value = -3 }
+	}
+}
+
+# Admiral Horthy nominated Regent of Hungary
+event = {
+	id = 13301721
+	country = HUN
+	
+	date = { day = 1 month = march year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		event = 13301720
+		incabinet = 105156
+	}
+	
+	name = "EVT_13301721_NAME"
+	desc = "EVT_13301721_DESC"
+	#picture = "T1613"
+	style = 2
+	
+	action = {
+		name = "Long live the Kingdom of Hungary!"
+		command = { type = dissent value = -2 }
+	}
+}
+
+# Sándor Simonyi resigns
+event = {
+	id = 13301722
+	country = HUN
+	
+	date = { day = 19 month = july year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 7
+	
+	trigger = {
+		NOT = { incabinet = 105024 }
+		minister = 105024
+		headofstate = 105156
+	}
+	
+	name = "EVT_13301722_NAME"
+	desc = "EVT_13301722_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 105024 }
+	}
+}
+
+# The Easter Crisis
+event = {
+	id = 13301723
+	country = HUN
+	
+	date = { day = 0 month = march year = 1921 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 10
+	
+	trigger = {
+		incabinet = 105156
+		minister = 105159
+		local_flag = loser
+		NOT = { exists = U09 }
+	}
+	
+	name = "EVT_13301723_NAME"
+	desc = "EVT_13301723_DESC"
+	picture = "medal1"
+	
+	action = {
+		name = "Your Majesty! You shouldn't be here!"
+		ai_chance = 100
+		command = { type = trigger which = 13301724 } # Teleki resigns
+	}
+	
+	action = { 
+		name = "The King is back on his throne"
+		ai_chance = 0
+		command = { type = headofstate which = 105159 }
+		command = { type = sleepevent which = 13301724 }
+		command = { type = trigger which = 13301616 } # CZE Habsburg monarchy restored
+		command = { type = dissent value = 5 }
+	}
+}
+
+# Pál Teleki resigns
+event = {
+	id = 13301724
+	country = HUN
+	
+	# Triggered by 13301723
+	
+	name = "EVT_13301724_NAME"
+	desc = "EVT_13301724_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 105166 } # István Bethlen
+	}
+}
+
+# The March on Budapest
+event = {
+	id = 13301725
+	country = HUN
+	
+	date = { day = 0 month = october year = 1921 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 10
+	
+	name = "EVT_13301725_NAME"
+	desc = "EVT_13301725_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	trigger = {
+		NOT = { 
+			exists = U09 
+			headofstate = 105159
+		}
+	}
+	
+	action = {
+		name = "The King is going to march on the capital!"
+		command = { type = trigger which = 13301610 } # CZE Karl IV back
+		command = { type = dissent value = 2 }
+	}
+}
+
+# The Little Entente sends ultimatum
+event = {
+	id = 13301726
+	country = HUN
+	save_date = yes
+	
+	# Triggered by CZE 
+	
+	name = "EVT_13301726_NAME"
+	desc = "EVT_13301726_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Stop the march"
+		ai_chance = 100
+		command = { type = event which = 13301727 where = HUN when = 3 } # Karl flees
+	}
+	
+	action = {
+		name = "Hungary's throne belongs to him"
+		ai_chance = 0
+		command = { type = headofstate which = 105159 }
+		command = { type = war which = CZE }
+		command = { type = sleepevent which = 13301727 }
+	}
+}
+
+# Karl IV flees from Hungary
+event = {
+	id = 13301727
+	country = HUN
+	
+	# Triggered by 13301726	
+	
+	name = "EVT_13301727_NAME"
+	desc = "EVT_13301727_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "It was necessary"
+		command = { type = sleepminister which = 105159 }
+		command = { type = dissent value = -2 }
+	}
+}
+
+# Protocol for the reconstruction of Hungary
+event = {
+	id = 13301728
+	country = HUN
+	
+	# Triggered
+	
+	name = "EVT_13301728_NAME"
+	desc = "EVT_13301728_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "The League of Nations is with us"
+		command = { trigger = { guarantee = { country = ENG country = HUN } } type = relation which = ENG value = 70 }
+		command = { trigger = { guarantee = { country = FRA country = HUN } } type = relation which = FRA value = 70 }
+	}
+}
+
+# Treaty of Trianon revision
+event = {
+	id = 13301729
+	country = HUN
+	
+	date = { day = 1 month = january year = 1925 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 365
+	
+	trigger = {
+		event = 2022501 #Trianon treaty
+	}
+	
+	name = "EVT_13301729_NAME"
+	desc = "EVT_13301729_DESC"
+	picture = "congress"
+	style = 2
+	
+	action = {
+		name = "Propose revision"
+		ai_chance = 90
+		command = { type = trigger which = 13301013 }
+		command = { type = trigger which = 13300916 }
+		command = { type = trigger which = 13300667 }
+		command = { type = addcore which = 209 }
+		command = { type = addcore which = 210 }
+		command = { type = addcore which = 215 }
+		command = { type = addcore which = 293 }
+		command = { type = addcore which = 341 }
+		command = { type = addcore which = 296 }
+		command = { type = addclaim which = 188 }
+		command = { type = addclaim which = 208 }
+		command = { type = addclaim which = 211 }
+		command = { type = addclaim which = 212 }
+		command = { type = addclaim which = 213 }
+		command = { type = addclaim which = 214 }
+		command = { type = addclaim which = 285 }
+		command = { type = addclaim which = 286 }
+		command = { type = addclaim which = 287 }
+		command = { type = addclaim which = 288 }
+		command = { type = addclaim which = 289 }
+		command = { type = addclaim which = 291 }
+		command = { type = addclaim which = 292 }
+		command = { type = addclaim which = 295 }
+	}	
+	
+	action = {
+		name = "They will never accept"
+		ai_chance = 10
+		command = { type = dissent value = 4 }
+	}
+}
+
+# Bethlen resigns
+event = {
+	id = 13301730
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		local_flag = depression
+		incabinet = 105166
+	}
+	
+	name = "EVT_13301730_NAME"
+	desc = "EVT_13301730_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 105167 } # Gyula Károlyi
+	}
+}
+
+# Biatorbágy bridge blow up
+event = {
+	id = 13301731
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 60
+	
+	trigger = {
+		year = 1931
+		exists = HUN
+	}
+	
+	name = "EVT_13301731_NAME"
+	desc = "EVT_13301731_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Imprison communists"
+		ai_chance = 99
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = dissent value = -1 }
+	}
+	
+	action = {
+		name = "Justice is more important than politics"
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+	}
+}
+
+# Gyula Károlyi resigns
+event = {
+	id = 13301732
+	country = HUN
+	
+	date = { day = 1 month = january year = 1932 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		incabinet = 105167
+	}
+	
+	name = "EVT_13301732_NAME"
+	desc = "EVT_13301732_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 105002 }
+	}
+}
+
+# Fascist friendship
+event = {
+	id = 13301733
+	country = HUN
+	
+	date = { day = 1 month = january year = 1927 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 90
+	
+	trigger = {
+		not = { government = communist }
+		NOT = {
+			guarantee = { country = ITA country = HUN }
+		}
+	}
+	
+	name = "Fascist friendship"
+	desc = "István Bethlen was able to improve Hungary's relationship with Italy, entering a treaty of friendship in 1927. Shall we proceed?"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "Why not?"
+		ai_chance = 100
+		#command = { type = trigger which = } # ITA Friendship proposal
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = political_left value = -3 }
+		command = { type = 	end_access which = FRA }
+		command = { type = 	end_access which = ENG }
+		command = { type = 	end_access which = ITA }
+		command = { type = relation which =	ITA value = 150 }
+		command = { type = relation which =	AUS value = 75 }
+		command = { trigger = { exists = U08 } type = relation which =	U08 value = 50 }
+		command = { trigger = { exists = GER } type = relation which =	GER value = 50 }
+		command = { type = domestic which = interventionism value = 3 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+	}
+	action = {
+		name = "I think it'd be a dangerous move"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Reforming the Military
+event = {
+	id = 13301734
+	country = HUN
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 7
+	
+	trigger = {
+		event = 13301712
+	}
+	
+	name = "EVT_13301734_NAME"
+	desc = "EVT_13301734_DESC"
+	
+	action = {
+		name = "The Hungarian People's army"
+		command = { type = add_division which = "I Vörös Orség" value = infantry when = 5 }
+		command = { type = add_division which = "II Vörös Orség" value = infantry when = 5 }
+		command = { type = add_division which = "III Vörös Orség" value = infantry when = 5 }
+		command = { type = add_division which = "IV Vörös Orség" value = infantry when = 5 }
+		command = { type = add_division which = "V Vörös Orség" value = infantry when = 5 }
+		command = { type = add_division which = "Lenin fiúk" value = militia when = 3 }
+		command = { type = max_organization which = land value = -10 }
+		command = { type = morale which = land value = -10 }
+	}
+}
+
+# War against Czechoslovakia
+event = {
+	id = 13301735
+	country = HUN
+	save_date = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 3
+	
+	trigger = {
+		war = { country = HUN country = ROM }
+		NOT = { war = { country = HUN country = CZE } }
+		ai = no
+	}
+	
+	name = "EVT_13301735_NAME"
+	desc = "EVT_13301735_DESC"
+	
+	action = {
+		name = "Declare war"
+		ai_chance = 100	
+		command = { type = war which = CZE }
+	}
+	
+	action = {
+		name = "Not necessary"
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+	}
+}

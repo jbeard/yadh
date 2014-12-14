@@ -1,0 +1,553 @@
+event = {
+	id = 8009001
+	country = LUX
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385015 } # Pierre Dupong
+		command = { type = foreignminister which = 385026 } # Francois Schammel
+		command = { type = armamentminister which = 385027 } # Jules Keiffer
+		command = { type = ministerofsecurity which = 385038 } # Robert Als
+		command = { type = ministerofintelligence which = 385047 } # Francois Schammel
+		command = { type = chiefofstaff which = 385056 } # Francois Schammel
+		command = { type = chiefofarmy which = 385059 } # Felix Bourbon-Parma
+		command = { type = chiefofnavy which = 385068 } # Pierre Fischbach
+		command = { type = chiefofair which = 385066 } # Jean Marc Steffen
+	}
+}
+
+event = {
+	id = 8009002
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385015 } # Pierre Dupong
+		command = { type = foreignminister which = 385003 } # Joseph Bech
+		command = { type = armamentminister which = 385028 } # Auguste Oster
+		command = { type = ministerofsecurity which = 385038 } # Robert Als
+		command = { type = ministerofintelligence which = 385045 } # Edmond Klein
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385204 } # Michel Rasquin
+		command = { type = foreignminister which = 385003 } # Joseph Bech
+		command = { type = armamentminister which = 385028 } # Auguste Oster
+		command = { type = ministerofsecurity which = 385038 } # Robert Als
+		command = { type = ministerofintelligence which = 385045 } # Edmond Klein
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8009003
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385015 } # Pierre Dupong
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385200 } # Michel Rasquin
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8009004
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385015 } # Pierre Dupong
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385201 } # Paul Wilwertz
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8009005
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385002 } # Joseph Bech
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385202 } # Albert Bousser
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8009006
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385203 } # Henry Cravatte
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385205 } # Pierre Frieden
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8009007
+	country = LUX
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		headofgovernment = 385205
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 385206 } # Pierre Werner
+	}
+}
+
+event = {
+	id = 8009008
+	country = LUX
+
+	name = EVT_8009008_NAME
+	desc = EVT_8009008_DESC
+	picture = nwo\grand_duke_jean
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1991 }
+
+	action = {
+		name = EVT_8009008_A
+		ai_chance = 100
+		command = { type = sleepminister which = 385001 }
+		command = { type = sleepminister which = 385067 }
+		command = { type = sleepminister which = 385086 }
+		command = { type = sleepminister which = 385087 }
+		command = { type = headofstate which = 385207 } # Jean
+	}
+}
+
+event = {
+	id = 8009009
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385206 } # Pierre Werner
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385208 } # Gaston Thorn
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8009010
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385206 } # Pierre Werner
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385208 } # Gaston Thorn
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8009011
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385208 } # Gaston Thorn
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385209 } # Jacques Santer
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 18 }
+	}
+}
+
+event = {
+	id = 8009012
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385206 } # Pierre Werner
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385208 } # Gaston Thorn
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 8009013
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385209 } # Jacques Santer
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385210 } # Colette Flesch
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 8009014
+	country = LUX
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = nwo\death
+	style = 1
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = sleepminister which = 385001 } # Charlotte
+		command = { type = sleepminister which = 385067 } # Charlotte
+		command = { type = sleepminister which = 385086 } # Charlotte
+		command = { type = sleepminister which = 385087 } # Charlotte
+	}
+}
+
+event = {
+	id = 8009015
+	country = LUX
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 385209 } # Jacques Santer
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 385211 } # Charles Goerens
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}

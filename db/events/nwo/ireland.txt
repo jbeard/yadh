@@ -1,0 +1,1709 @@
+event = {
+	id = 8007401
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 125133 } # Se?n T. O'Ceallaigh
+		command = { type = headofgovernment which = 125026 } # John A. Costello
+		command = { type = foreignminister which = 125038 } # Sean MacBride
+		command = { type = armamentminister which = 125058 } # Patrick McGilligan
+		command = { type = ministerofsecurity which = 125076 } # Sean MacEoin
+		command = { type = ministerofintelligence which = 125091 } # Sean MacEoin
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 125133 } # Se?n T. O'Ceallaigh
+		command = { type = headofgovernment which = 125002 } # Eamon de Valera
+		command = { type = foreignminister which = 125033 } # P.A. Mulcahy
+		command = { type = armamentminister which = 125051 } # Edmund Noel Mulcahy
+		command = { type = ministerofsecurity which = 125070 } # Gerald Boland
+		command = { type = ministerofintelligence which = 125087 } # Jack Lynch
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007402
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 125133 } # Se?n T. O'Ceallaigh
+		command = { type = headofgovernment which = 125026 } # John A. Costello
+		command = { type = foreignminister which = 125038 } # Sean MacBride
+		command = { type = armamentminister which = 125136 } # Kevin O'Higgins
+		command = { type = ministerofsecurity which = 125076 } # Sean MacEoin
+		command = { type = ministerofintelligence which = 125091 } # Sean MacEoin
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 125133 } # Se?n T. O'Ceallaigh
+		command = { type = headofgovernment which = 125002 } # Eamon de Valera
+		command = { type = foreignminister which = 125033 } # P.A. Mulcahy
+		command = { type = armamentminister which = 125051 } # Edmund Noel Mulcahy
+		command = { type = ministerofsecurity which = 125070 } # Gerald Boland
+		command = { type = ministerofintelligence which = 125087 } # Jack Lynch
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007403
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 125133 } # Se?n T. O'Ceallaigh
+		command = { type = headofgovernment which = 125026 } # John A. Costello
+		command = { type = foreignminister which = 125038 } # Sean MacBride
+		command = { type = armamentminister which = 125136 } # Kevin O'Higgins
+		command = { type = ministerofsecurity which = 125076 } # Sean MacEoin
+		command = { type = ministerofintelligence which = 125091 } # Sean MacEoin
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 125133 } # Se?n T. O'Ceallaigh
+		command = { type = headofgovernment which = 125002 } # Eamon de Valera
+		command = { type = foreignminister which = 125134 } # Frank Aiken
+		command = { type = armamentminister which = 125135 } # Oscar Traynor
+		command = { type = ministerofsecurity which = 125070 } # Gerald Boland
+		command = { type = ministerofintelligence which = 125087 } # Jack Lynch
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007404
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125026 } # John A. Costello
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125002 } # Eamon de Valera
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007405
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125002 } # Eamon de Valera
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125026 } # John A. Costello
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007406
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 125200 } # Eamon de Valera
+		command = { type = headofgovernment which = 125201 } # Se?n Lemass
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 125202 } # Se?n MacEoin
+		command = { type = headofgovernment which = 125203 } # James Dillon
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007407
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125201 } # Seán Lemass
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125203 } # James Dillon
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 18 }
+	}
+}
+
+event = {
+	id = 8007408
+	country = IRE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 125204 } # Jack Lynch
+	}
+}
+
+event = {
+	id = 8007409
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125204 } # Jack Lynch
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125205 } # Liam Cosgrave
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007410
+	country = IRE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 125206 } # Erskine H. Childers
+	}
+}
+
+event = {
+	id = 8007411
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125205 } # Liam Cosgrave
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125204 } # Jack Lynch
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8007412
+	country = IRE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 125207 } # Cearbhall Ó Dálaigh
+	}
+}
+
+event = {
+	id = 8007413
+	country = IRE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 125208 } # Patrick Hillery
+	}
+}
+
+event = {
+	id = 8007414
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125204 } # Jack Lynch
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125205 } # Liam Cosgrave
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8007415
+	country = IRE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 125209 } # Charles Haughey
+	}
+}
+
+event = {
+	id = 8007416
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125209 } # Charles Haughey
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125210 } # Garret FitzGerald
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007417
+	country = IRE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125210 } # Garret FitzGerald
+	}
+}
+
+event = {
+	id = 8007418
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125209 } # Charles Haughey
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125210 } # Garret FitzGerald
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8007419
+	country = IRE
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 125209 } # Charles Haughey
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 125211 } # Alan Dukes
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8007420
+	country = IRE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 125212 } # Mary Robinson
+	}
+}
+
+###
+
+# Border Campaign
+
+###
+
+event = {
+	id = 8007430
+	country = IRE
+
+	name = EVT_8007430_NAME
+	desc = EVT_8007430_DESC
+	picture = nwo\irish_republican_army
+	decision_picture = nwo\d_irish_republican_army
+	style = 1
+
+	decision = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+	}
+	
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = EVT_8007430_A # Be lenient
+		trigger = { ai = yes }
+		ai_chance = 95
+		command = { type = money value = 10 }
+	}
+	
+	action = {
+		name = EVT_8007430_B # Impose most stringent measures
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+		command = { type = set_domestic which = freedom value = -2 }
+		command = { type = sleepevent which = 8007431 }
+		command = { type = sleepevent which = 8007432 }
+		command = { type = sleepevent which = 8007433 }
+		command = { type = sleepevent which = 8007434 }
+		command = { type = sleepevent which = 8007436 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = sleepevent which = 8007440 }	
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+
+}
+
+# First IRA bombings (1957)
+event = {
+	id = 8007431
+	country = ENG
+	one_action = yes
+
+	name = EVT_8007431_NAME
+	desc = EVT_8007431_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = EVT_8007431_A # Bombings are successful
+		ai_chance = 90
+		command = { type = dissent value = 7 }
+	}
+	
+	action = {
+		name = EVT_8007431_B # IRA is dispersed
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8007432 }
+		command = { type = sleepevent which = 8007433 }
+		command = { type = sleepevent which = 8007434 }
+		command = { type = sleepevent which = 8007436 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }		
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }	
+	}
+
+}
+
+# IRA bombings (1958)
+event = {
+	id = 8007432
+	country = ENG
+	one_action = yes
+
+	name = EVT_8007432_NAME
+	desc = EVT_8007432_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 320
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_8007432_A # Bombings are successful
+		ai_chance = 85
+		command = { type = dissent value = 7 }
+	}
+	
+	action = {
+		name = EVT_8007432_B # IRA is dispersed
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8007433 }
+		command = { type = sleepevent which = 8007434 }
+		command = { type = sleepevent which = 8007436 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }	
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+
+}
+
+# Irish internment policy
+event = {
+	id = 8007433
+	country = IRE
+
+	name = EVT_8007433_NAME
+	desc = EVT_8007433_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+		event = 8007432
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = EVT_8007433_A # Crack on IRA
+		ai_chance = 75
+		command = { type = dissent value = 15 }
+		command = { type = setflag which = ira_is_interned }
+	}
+	
+	action = {
+		name = EVT_8007433_B # Ignore IRA
+		ai_chance = 20
+		command = { type = dissent value = 5 }
+		command = { type = setflag which = ira_is_ignored }
+	}
+	
+	action = {
+		name = EVT_8007433_C # Secretly support IRA
+		ai_chance = 5
+		command = { type = dissent value = 25 }
+		command = { type = belligerence value = 25 }
+		command = { type = setflag which = ira_is_supported }
+	}
+
+}
+
+# Further IRA bombings (1959)
+event = {
+	id = 8007434
+	country = ENG
+
+	name = EVT_8007434_NAME
+	desc = EVT_8007434_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+		event = 8007433
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = EVT_8007434_A # Bombings are successful
+		trigger = { flag = ira_is_interned }
+		ai_chance = 40
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007435 }
+	}
+	
+	action = {
+		name = EVT_8007434_B # IRA is dispersed
+		trigger = { flag = ira_is_interned }
+		ai_chance = 60
+		command = { type = dissent value = -5 }	
+		command = { type = sleepevent which = 8007436 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+
+	action = {
+		name = EVT_8007434_A # Bombings are successful
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 70
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007435 }
+	}
+	
+	action = {
+		name = EVT_8007434_B # IRA is dispersed
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 30
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007436 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+	
+	action = {
+		name = EVT_8007434_A # Bombings are successful
+		trigger = { flag = ira_is_supported }
+		ai_chance = 90
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007435 }
+	}
+	
+	action = {
+		name = EVT_8007434_B # IRA is dispersed
+		trigger = { flag = ira_is_supported }
+		ai_chance = 10
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007436 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+}
+
+### Bombings are successful (1959)
+
+event = {
+	id = 8007435
+	country = ENG
+
+	name = EVT_8007435_NAME
+	desc = EVT_8007435_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	action = {
+		name = EVT_8007435_A # Let's hang on Ireland
+		ai_chance = 60
+		command = { type = dissent value = 15 }
+		command = { type = relation which = IRE value = -50 }
+	}
+	
+	action = {
+		name = EVT_8007435_B # Devolve North Irish government
+		ai_chance = 35
+		command = { type = dissent value = -5 }
+		command = { type = relation which = IRE value = 150 }
+		command = { type = removecore which = 35 }
+		command = { type = removecore which = 36 }
+		command = { type = independence which = U71 value = 1 }
+		command = { type = make_puppet which = U71 }
+		command = { type = alliance which = U71 }
+	}
+
+	action = {
+		name = EVT_8007435_C # Let the Irish have it
+		ai_chance = 5
+		command = { type = dissent value = 25 }
+		command = { type = relation which = IRE value = 200 }
+		command = { type = secedeprovince which = IRE value = 35 when = 1 }
+		command = { type = secedeprovince which = IRE value = 36 when = 1 }
+		command = { type = removecore which = 35 }
+		command = { type = removecore which = 36 }
+	}
+	
+}
+
+# Further IRA bombings (1960) - North Ireland doesn't exist
+event = {
+	id = 8007436
+	country = ENG
+
+	name = EVT_8007436_NAME
+	desc = EVT_8007436_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+		NOT = { exists = U71 }
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = EVT_8007436_A # Bombings are successful
+		trigger = { flag = ira_is_interned }
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007437 }
+	}
+	
+	action = {
+		name = EVT_8007436_B # IRA is dispersed
+		trigger = { flag = ira_is_interned }
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+
+	action = {
+		name = EVT_8007436_A # Bombings are successful
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 50
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007437 }
+	}
+	
+	action = {
+		name = EVT_8007436_B # IRA is dispersed
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 50
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+	
+	action = {
+		name = EVT_8007436_A # Bombings are successful
+		trigger = { flag = ira_is_supported }
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007437 }
+	}
+	
+	action = {
+		name = EVT_8007436_B # IRA is dispersed
+		trigger = { flag = ira_is_supported }
+		ai_chance = 20
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007438 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+}
+
+### Bombings are successful (1960) - North Ireland doesn't exist
+
+event = {
+	id = 8007437
+	country = ENG
+
+	name = EVT_8007437_NAME
+	desc = EVT_8007437_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	action = {
+		name = EVT_8007437_A # Let's hang on Ireland
+		ai_chance = 55
+		command = { type = dissent value = 15 }
+		command = { type = relation which = IRE value = -150 }
+	}
+	
+	action = {
+		name = EVT_8007437_B # Devolve North Irish government
+		ai_chance = 40
+		command = { type = dissent value = -5 }
+		command = { type = relation which = IRE value = 150 }
+		command = { type = removecore which = 35 }
+		command = { type = removecore which = 36 }
+		command = { type = independence which = U71 value = 1 }
+		command = { type = make_puppet which = U71 }
+		command = { type = alliance which = U71 }
+	}
+
+	action = {
+		name = EVT_8007437_C # Let the Irish have it
+		ai_chance = 5
+		command = { type = dissent value = 25 }
+		command = { type = relation which = IRE value = 200 }
+		command = { type = secedeprovince which = IRE value = 35 when = 1 }
+		command = { type = secedeprovince which = IRE value = 36 when = 1 }
+		command = { type = removecore which = 35 }
+		command = { type = removecore which = 36 }
+	}
+	
+}
+
+# Last wave of IRA bombings (1961) - North Ireland doesn't exist
+event = {
+	id = 8007438
+	country = ENG
+
+	name = EVT_8007438_NAME
+	desc = EVT_8007438_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+		NOT = { exists = U71 }
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = EVT_8007438_A # Bombings are successful
+		trigger = { flag = ira_is_interned }
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007439 }
+	}
+	
+	action = {
+		name = EVT_8007438_B # IRA is dispersed
+		trigger = { flag = ira_is_interned }
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+
+	action = {
+		name = EVT_8007438_A # Bombings are successful
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 50
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007439 }
+	}
+	
+	action = {
+		name = EVT_8007438_B # IRA is dispersed
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 50
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+	
+	action = {
+		name = EVT_8007438_A # Bombings are successful
+		trigger = { flag = ira_is_supported }
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007439 }
+	}
+	
+	action = {
+		name = EVT_8007438_B # IRA is dispersed
+		trigger = { flag = ira_is_supported }
+		ai_chance = 20
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007440 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+}
+
+### Bombings are successful (1961) - North Ireland doesn't exist
+
+event = {
+	id = 8007439
+	country = ENG
+
+	name = EVT_8007439_NAME
+	desc = EVT_8007439_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	action = {
+		name = EVT_8007439_A # Let's hang on Ireland
+		ai_chance = 65
+		command = { type = dissent value = 15 }
+	}
+	
+	action = {
+		name = EVT_8007439_B # Devolve North Irish government
+		ai_chance = 30
+		command = { type = dissent value = -5 }
+		command = { type = removecore which = 35 }
+		command = { type = removecore which = 36 }
+		command = { type = independence which = U71 value = 1 }
+		command = { type = make_puppet which = U71 }
+		command = { type = alliance which = U71 }
+	}
+
+	action = {
+		name = EVT_8007439_C # Let the Irish have it
+		ai_chance = 5
+		command = { type = dissent value = 25 }
+		command = { type = secedeprovince which = IRE value = 35 when = 1 }
+		command = { type = secedeprovince which = IRE value = 36 when = 1 }
+		command = { type = removecore which = 35 }
+		command = { type = removecore which = 36 }
+	}
+}
+
+### End of bombings (1962)
+
+event = {
+	id = 8007440
+	country = ENG
+
+	name = EVT_8007440_NAME
+	desc = EVT_8007440_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG }
+		}
+		NOT = { exists = U71 }
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+	
+	action = {
+		name = EVT_8007440_A # IRA is dispersed
+		command = { type = dissent value = -25 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+}
+
+# Further IRA bombings (1960) - North Ireland exists
+event = {
+	id = 8007441
+	country = U71
+
+	name = EVT_8007441_NAME
+	desc = EVT_8007441_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = EVT_8007441_A # Bombings are successful
+		trigger = { flag = ira_is_interned }
+		ai_chance = 75
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007442 }
+	}
+	
+	action = {
+		name = EVT_8007441_B # IRA is dispersed
+		trigger = { flag = ira_is_interned }
+		ai_chance = 25
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = trigger which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+
+	action = {
+		name = EVT_8007441_A # Bombings are successful
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 90
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007442 }
+	}
+	
+	action = {
+		name = EVT_8007441_B # IRA is dispersed
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 10
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = trigger which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+	
+	action = {
+		name = EVT_8007441_A # Bombings are successful
+		trigger = { flag = ira_is_supported }
+		ai_chance = 98
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007442 }
+	}
+	
+	action = {
+		name = EVT_8007441_B # IRA is dispersed
+		trigger = { flag = ira_is_supported }
+		ai_chance = 2
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8007441 }	
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = trigger which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+}
+
+### Bombings are successful (1960) - North Ireland existS
+
+event = {
+	id = 8007442
+	country = U71
+
+	name = EVT_8007442_NAME
+	desc = EVT_8007442_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	action = {
+		name = EVT_8007442_A # Let's organize the referendum (possible Game Over)
+		ai_chance = 75
+		command = { type = dissent value = 5 }
+		
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = trigger which = 8007445 }
+		command = { type = trigger which = 8007450 }
+	}
+	
+	action = {
+		name = EVT_8007442_B # Keep status quo
+		ai_chance = 20
+		command = { type = dissent value = 25 }
+	}
+
+	action = {
+		name = EVT_8007442_C # Join Ireland (Game Over)
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+		
+		command = { type = sleepevent which = 8007443 }	
+		command = { type = sleepevent which = 8007445 }
+		command = { type = sleepevent which = 8007450 }
+		command = { type = trigger which = 8007451 }
+	}
+	
+}
+
+# Last wave of IRA bombings (1961) - North Ireland exists
+event = {
+	id = 8007443
+	country = ENG
+
+	name = EVT_8007443_NAME
+	desc = EVT_8007443_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = EVT_8007443_A # Bombings are successful
+		trigger = { flag = ira_is_interned }
+		ai_chance = 60
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007444 }
+	}
+	
+	action = {
+		name = EVT_8007443_B # IRA is dispersed
+		trigger = { flag = ira_is_interned }
+		ai_chance = 40
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+
+	action = {
+		name = EVT_8007443_A # Bombings are successful
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007444 }
+	}
+	
+	action = {
+		name = EVT_8007443_B # IRA is dispersed
+		trigger = { flag = ira_is_ignored }
+		ai_chance = 20
+		command = { type = dissent value = -5 }	
+		command = { type = trigger which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+	
+	action = {
+		name = EVT_8007443_A # Bombings are successful
+		trigger = { flag = ira_is_supported }
+		ai_chance = 90
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007444 }
+	}
+	
+	action = {
+		name = EVT_8007443_B # IRA is dispersed
+		trigger = { flag = ira_is_supported }
+		ai_chance = 10
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007445 }	
+		command = { type = sleepevent which = 8007450 }
+	}
+}
+
+### Bombings are successful (1961) - North Ireland exists
+
+event = {
+	id = 8007444
+	country = U71
+
+	name = EVT_8007444_NAME
+	desc = EVT_8007444_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	action = {
+		name = EVT_8007444_A # Let's organize the referendum
+		ai_chance = 75
+		command = { type = trigger which = 8007445 }
+		command = { type = trigger which = 8007450 }
+	}
+	
+	action = {
+		name = EVT_8007444_B # Keep status quo
+		ai_chance = 20
+		command = { type = dissent value = 25 }
+	}
+
+	action = {
+		name = EVT_8007444_C # Join Ireland (Game Over)
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8007445 }
+		command = { type = sleepevent which = 8007450 }
+		command = { type = trigger which = 8007451 }
+	}
+}
+
+### End of bombings (1961)
+
+event = {
+	id = 8007445
+	country = U71
+
+	name = EVT_8007445_NAME
+	desc = EVT_8007445_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+	
+	action = {
+		name = EVT_8007445_A # IRA is dispersed
+		command = { type = dissent value = -5 }
+	}
+}
+
+### Referendum for the future of North Ireland
+
+# The Referendum
+event = {
+	id = 8007450
+	country = U71
+	one_action = yes
+
+	name = EVT_8007450_NAME
+	desc = EVT_8007450_DESC
+	picture = nwo\irish_republican_army
+	style = 1
+
+	trigger = {
+		NOT = {
+			owned = { province = 35 data = IRE }
+			owned = { province = 36 data = IRE }
+			war = { country = IRE country = ENG } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8007450_A # Let us be united
+		trigger = { 
+			flag = ira_is_interned 
+			NOT = { dissent = 20 }
+		}
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007439 }
+	}
+	
+	action = {
+		name = EVT_8007450_B # Let us be divided
+		trigger = { 
+			flag = ira_is_interned 
+			NOT = { dissent = 20 }
+		}
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+
+	action = {
+		name = EVT_8007450_A # Let us be united
+		trigger = { 
+			OR = {
+				flag = ira_is_ignored 
+				dissent = 20
+			}
+			NOT = { dissent = 40 }
+		}
+		ai_chance = 40
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007439 }
+	}
+	
+	action = {
+		name = EVT_8007450_B # Let us be divided
+		trigger = { 
+			OR = {
+				flag = ira_is_ignored 
+				dissent = 20
+			}
+			NOT = { dissent = 40 }
+		}
+		ai_chance = 60
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8007450_A # Bombings are successful
+		trigger = { 
+			OR = {
+				flag = ira_is_supported 
+				dissent = 40
+			}
+		}
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007439 }
+	}
+	
+	action = {
+		name = EVT_8007450_B # IRA is dispersed
+		trigger = { 
+			OR = {
+				flag = ira_is_supported 
+				dissent = 40
+			}
+		}
+		ai_chance = 20
+		command = { type = dissent value = -5 }
+	}
+}
+
+# Eire is one again!!!
+event = {
+	id = 8007451
+	country = IRE
+
+	name = EVT_8007451_NAME
+	desc = EVT_8007451_DESC
+	picture = nwo\united_ireland
+	style = 1
+
+	action = {
+		name = EVT_8007451_A
+		command = { type = dissent value = -25 }
+		command = { type = inherit which = U71 }
+	}
+
+}

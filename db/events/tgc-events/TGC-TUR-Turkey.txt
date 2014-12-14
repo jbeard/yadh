@@ -1,0 +1,374 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Turkey
+# Event List:
+# TUR	13300411	Treaty of Kars
+# TUR	13300412	Sheikh Said Rebellion
+# TUR	13300413	Mosul Problem
+# KUR	13300414	Kurdistan Revolts 
+# ENG	13300415	British help to Sheikh Said
+# TUR	13300416	Rebellion Suppressed
+# TUR 	13300417	Kurdistan holds out
+# KUR 	13300418	Kurdistan Declared
+# TUR 	13300419	Abolition of Caliphate
+# KUR	13300420	British material 
+
+
+# Treaty of Kars
+event = { 
+	id = 13300411									
+	country = TUR									 
+	
+	date = { day = 1 month = 1 year = 1922 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 30
+	
+	trigger = {					
+		exists = SOV
+		not = { event = 13301411 }
+		OR = { 
+			event = 2007529 #Brest Litovsk soft or harsh
+			event = 2007530
+		} 
+		not = { participant = { country = GEO value = 4 } }
+		not = { participant = { country = AZB value = 4 } }
+	}
+	
+	name = "EVT_13300411_NAME"							
+	Desc = "EVT_13300411_DESC"
+	Picture = "soviet_law" 
+	
+	action = { 	
+		name = "Offer them!"		
+		ai_chance = 99	
+		command = { type = trigger which = 13300311 }
+	}
+		
+	action = { 	
+		name = "The Russians are still our ancient enemy!"		
+		ai_chance = 1	
+		command = { type =	relation which =	SOV value = -125 }
+		command = { type =	relation which =	PER value = -125 }
+		command = { type =	relation which =	IRQ value = -125 }
+		command = { type =	relation which =	ENG value = -75 }
+		command = { type =	relation which =	FRA value = -75 }
+		command = { type =	relation which =	ITA value = -75 }
+		command = { type =	relation which =	USA value = -75 }
+		command = { trigger = { control = { province = 711 data = TUR } } type = secedeprovince which = SOV value = 711 }
+		command = { trigger = { control = { province = 714 data = TUR } } type = secedeprovince which = SOV value = 714 }
+	} 			
+}	
+
+
+# Sheik Said rebellion
+event = { 
+	
+	id = 13300412	 
+	random = no							 
+	country = TUR									 
+	
+	trigger = {	
+		event = { id = 13300419 days = 360 } # abolition of caliphate will trigger the rebellion
+	}
+	name = "Sheikh Said Rebellion"
+	desc = "EVT_13300412_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1923 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1963 }
+	
+	action = {
+		name = "Eradicate Feudalism!"
+		command = { type = province_keypoints which = 1062 value = 1 } # Hakkari
+		command = { type = province_keypoints which = 1060 value = 1 } # Diyarbakir
+		command = { type = independence which = KUR value = 1 when = 1 }
+		command = { type = war which = KUR }
+		command = { type = dissent value = 5 }
+	}
+}
+
+# Mosul Problem
+event = { 
+	
+	id = 13300413	 
+	random = no							 
+	country = TUR
+	
+	trigger = {	
+		atwar = no				 
+	}
+	
+	name = "Mosul Problem"
+	desc = "EVT_13300413_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1922 }
+	offset = 10
+	deathdate = { day = 30 month = december year = 1930 }
+	
+	action = {
+		ai_chance = 100
+		name = "Mosul belongs to Turkey"
+		command = { type = addcore	which = 1027	} # Arbil
+		command = { type = addcore	which = 1029	} # Mosul
+	}
+	action = {
+		ai_chance = 0
+		name = "Do not antogonize the British"
+		command = { type = dissent value = 3 }
+	}
+}
+
+# Kurdistan revolts
+event = {
+	id = 13300414				#	Kurdistan Setup
+	random = no
+	country = KUR
+	save_date = yes
+	
+	trigger = {
+		event = 13300412
+	}
+	
+	name = "Declaration of Kurdistan"
+	desc = "EVT_13300414_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1924 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1925 }
+	
+	action = {
+		name = "Kurdistan is free!"
+		command = { type = set_domestic which = democratic value = 4 }	# Paternal autocrat
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 680036 }			#Sheikh Said
+		command = { type = headofgovernment which = 680037 } #Sheik Said
+		command = { type = manpowerpool value = 60 } 
+		command = { type = add_corps which = "1st Kurdish Army" value = land where = 1060 }
+		command = { type = add_division which = "1st Kurdish Rebels" value = infantry when = 6 }
+		command = { type = add_division which = "2nd Kurdish Rebels" value = militia when = 4 }
+		command = { type = add_division which = "5th Kurdish Rebels" value = militia when = 4 }
+		command = { type = add_corps which = "2nd Kurdish Army" value = land where = 1062 }
+		command = { type = add_division which = "3rd Kurdish Rebels" value = infantry when = 6 }
+		command = { type = add_division which = "4th Kurdish Rebels" value = militia when = 4 }
+		command = { type = war which = TUR }
+		command = { type = war which = OTT }
+		command = { type = dissent value = -15 }
+		command = { type = supplies value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = metalpool value = 200 }
+		command = { type = energypool value = 200 }
+		command = { type = rarematerialspool value = 100 }
+	}
+}
+
+
+# British help to Sheik Said
+event = {
+	id = 13300415		# British support for Sheikh Said
+	random = no
+	country = ENG
+	
+	decision = {
+		event = 13300413	# Turkey pressed for claims on Mosul
+		event = 13300414	# Declaration of Kurdistan
+		exists = KUR 
+	}
+	
+	decision_trigger = { 
+		event = 13300413	# Turkey pressed for claims on Mosul
+		event = 13300414	# Declaration of Kurdistan
+		exists = KUR 
+	}
+	
+	trigger = {
+		event = 13300413	# Turkey pressed for claims on Mosul
+		event = 13300414	# Declaration of Kurdistan
+		exists = KUR 
+	}
+	
+	name = "British help to Kurdish Rebels"
+	desc = "EVT_13300415_DESC"
+	style = 2
+	picture = "news_paper"
+	decision_picture = "decision_said"
+	
+	date = { day = 0 month = january year = 1923 }
+	offset = 50
+	deathdate = { day = 30 month = december year = 1963 }
+	
+	action = {
+		name = "Send weapons to Kurdish rebels"
+		command = { type = relation which = TUR value = -50 }
+		command = { type = relation which = KUR value = 100 }
+		command = { trigger = { ai = no } type = supplies value = -2000 }
+		command = { trigger = { ai = no } type = metalpool	value = -1000 }
+		command = { trigger = { ai = no } type = energypool value = -1000 }
+		command = { trigger = { ai = no } type = rarematerialspool value = -500 }
+		command = { trigger = { ai = no } type = oilpool value = -500 }
+		command = { type = trigger which = 13300420 } 
+	}
+}
+
+
+
+# British material
+event = {
+	id = 13300420				#	British material
+	random = no
+	country = KUR
+	
+	
+	name = "British Material Support"
+	desc = "EVT_13300420_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	
+	action = {
+		name = "Great!"				
+		command = { type = free_ic value = 2 }	
+		command = { type = supplies value = 2000 }
+		command = { type = oilpool value = 500 }
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 1000 }
+		command = { type = rarematerialspool value = 500 }
+	}
+}
+
+
+
+# Abolition of Caliphate
+
+event = {
+	
+	id = 13300419		# Abolition of Caliphate
+	random = no
+	country = TUR
+	save_date = yes
+	
+	trigger = {
+		atwar = no
+		headofstate = 45001 # Ataturk as HoS
+	}
+	
+	name = "Abolition of Caliphate"
+	desc = "EVT_13300419_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = march year = 1924 }
+	offset = 5
+	deathdate = { day = 30 month = january year = 1925 }
+	
+	action = {
+		name = "Abolish it!"
+		command = { type = dissent value = 1 }
+	}
+}
+
+# Rebellion Suppressed
+event = {
+	
+	id = 13300416		# Revolt suppressed
+	random = no
+	country = TUR
+	
+	trigger = {
+		NOT = { exists = KUR }
+		event = 13300414	# Kurdistan existed
+	}
+	
+	name = "Revolt Suppressed"
+	desc = "EVT_13300416_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = march year = 1924 }
+	offset = 5
+	deathdate = { day = 30 month = january year = 1938 }
+	
+	action = {
+		name = "Great!"
+		command = { type = dissent value = -5 }
+		command = { type = removecore	which = 1027	} # Arbil
+		command = { type = removecore	which = 1029	} # Mosul
+		command = { type = province_keypoints which = 1062 value = -1 } # Hakkari
+		command = { type = province_keypoints which = 1060 value = -1 } # Diyarbakir
+	}
+}
+
+
+# Kurdistan holds out
+event = {
+	
+	id = 13300417		# Kurds hold Kurdistan
+	random = no
+	country = TUR
+	
+	trigger = {
+		event = 13300414	# Kurdistan existed	
+		exists = KUR
+	}
+	
+	name = "Kurdistani Independence"
+	desc = "EVT_13300417_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = march year = 1930 }
+	offset = 5
+	deathdate = { day = 30 month = january year = 1938 }
+	
+	action = {
+		name = "Give them independence"
+		command = { type = dissent value = 5 }
+		command = { type = removecore which = 1027 } # Arbil
+		command = { type = removecore which = 1029 } # Mosul	
+		command = { type = removecore which = 1060 } # Diyarbakir
+		command = { type = removecore which = 1062 } # Hakkari	
+		command = { type = peace which = KUR value = 0 }
+		command = { type = trigger which = 13300418 }		 
+	}
+}
+
+# Kurdistan Declared
+event = {
+	
+	id = 13300418		# Kurdistani Independence
+	random = no
+	country = KUR
+	
+	# triggered by 13300417
+	
+	name = "Kurdistan Declared"
+	desc = "EVT_13300418_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		
+		name = "We are free!"
+		command = { trigger = { event = 13300420 } type = free_ic value = -2 } # Bonus is gone
+		command = { type = construct which = ic where = 1060 value = 1 } # Diyarbakir and Hakkari
+		command = { type = construct which = ic where = 1062 value = 1 }
+		command = { type = province_keypoints which = 1062 value = -1 } # Hakkari
+		command = { type = province_keypoints which = 1060 value = -1 } # Diyarbakir
+		## may be remove some cores on iraq for alliance with UK
+		
+	}
+	
+}
+

@@ -1,0 +1,662 @@
+#############################################################################################
+#
+#	New World Order 2 by Bizon
+#	The Red Dusk
+#	
+#############################################################################################
+
+### PHASE ONE: SURRENDER OF UNITED STATES
+
+event = {
+	id = 8390000
+	country = USA
+	persistent = yes
+
+	name = EVT_8390000_NAME
+	desc = EVT_8390000_DESC
+	picture = nwo\soviet_troops_mcdonalds
+	style = 1
+	
+	trigger = {
+		NOT = {
+			control = { province = 1809 data = -1 } # Washington DC
+			control = { province = 1795 data = -1 } # New York
+			control = { province = 1832 data = -1 } # Chicago
+			control = { province = 1887 data = -1 } # Los Angeles
+		}
+		war = { country = USA country = SOV }
+		NOT = { atwar = GER }
+		lost_national = { country = USA value = 45 }
+		lost_IC = { country = USA value = 50 }
+		NOT = { flag = the_red_dusk }
+		NOT = {	event = 8391000	}
+	}
+
+    date = { day = 0 month = january year = 1936 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 80
+		name = EVT_8390000_A 
+		command = { type = dissent value = -5 }
+		command = { type = setflag which = the_red_dusk }
+	}
+	
+	action = {
+		ai_chance = 20
+		trigger = { NOT = { dissent = 30 } }
+		name = EVT_8390000_B
+		command = { type = dissent value = 3 }
+	}
+}
+
+### PHASE TWO: OCCUPATIONAL POLICY IS DECIDED
+
+event = {
+	id = 8391000
+	country = SOV
+	save_date = yes
+
+	name = EVT_8391000_NAME
+	desc = EVT_8391000_DESC
+	picture = nwo\fate_of_soviet_usa
+	style = 1
+	
+	trigger = {
+		flag = the_red_dusk
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	# Create Union of Soviet Socialist States of America!! (USSSA)
+	action = {
+		name = EVT_8391000_A
+		ai_chance = 70
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = -5 }
+		
+		command = { type = sleepevent which = 8392002 }
+		command = { type = sleepevent which = 8393001 }
+		command = { type = sleepevent which = 8393002 }
+	}
+	
+	# Let isolationist USA remain
+	action = {
+		name = EVT_8391000_B
+		ai_chance = 70
+		command = { type = belligerence value = -10 }
+		command = { type = dissent value = 5 }
+		
+		command = { type = sleepevent which = 8392002 }
+		command = { type = sleepevent which = 8393000 }
+		command = { type = sleepevent which = 8393002 }
+	}
+	
+	# Occupy USA and create secessionist states
+	action = {
+		name = EVT_8391000_C
+		ai_chance = 70
+		command = { type = belligerence value = 50 }
+		command = { type = dissent value = 5 }
+		
+		command = { type = sleepevent which = 8393000 }
+		command = { type = sleepevent which = 8393001 }
+	}
+	
+	# No deals with capitalist dogs!
+	action = {
+		name = EVT_8391000_D
+		ai_chance = 70
+		command = { type = belligerence value = 100 }
+		command = { type = dissent value = 25 }
+		
+		command = { type = sleepevent which = 8392002 }
+		command = { type = clrflag which = the_red_dusk }
+	}
+	
+}
+
+event = {
+	id = 8391001
+	country = SOV
+
+	name = EVT_8391001_NAME
+	desc = EVT_8391001_DESC
+	picture = nwo\mexican_communists
+	style = 1
+	
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8391000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	# Let Mexicans have their share
+	action = {
+		name = EVT_8391001_A
+		ai_chance = 70
+		command = { type = relation which = MEX value = 150 }
+		command = { type = trigger which = 8391002 }
+	}
+	
+	# We'll take it all
+	action = {
+		name = EVT_8391001_B
+		ai_chance = 30
+		command = { type = relation which = MEX value = -50 }
+		command = { type = sleepevent which = 8392001 }
+	}
+	
+}
+
+event = {
+	id = 8391002
+	country = MEX
+
+	name = EVT_8391002_NAME
+	desc = EVT_8391002_DESC
+	picture = nwo\alta_california
+	style = 1
+
+	# Agree
+	action = {
+		name = EVT_8391002_A
+		ai_chance = 98
+		command = { type = relation which = MEX value = 150 }
+		command = { type = domestic which = political_left value = 4 }
+		command = { type = leave_alliance }
+		command = { type = alliance which = SOV }
+	}
+	
+	# Disagree
+	action = {
+		name = EVT_8391002_B
+		ai_chance = 70
+		command = { type = relation which = SOV value = -50 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = sleepevent which = 8392001 }
+	}
+	
+}
+
+### PHASE THREE: SURRENDER OF USA TAKES PLACE
+
+event = {
+	id = 8392000
+	country = USA
+	save_date = yes
+
+	name = EVT_8392000_NAME
+	desc = EVT_8392000_DESC
+	picture = nwo\soviet_victory_over_usa
+	style = 1
+	
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8391000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8392000_A
+		
+		command = { type = capital which = 1832 } # Chicago
+		command = { type = peace which = SOV value = 0 }
+		command = { type = leave_alliance }	
+		
+		# Delete all the remaining units
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+		
+		# Give a couple of divisions for self-defence
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		
+		# Ceding lands
+		command = { type = secederegion which = JAP value = "Asian Pacific" when = 1 }
+		command = { type = secederegion which = JAP value = "American Pacific" when = 1 }
+		command = { type = secedearea which = JAP value = "Central Solomons" when = 1 }
+		command = { type = secedearea which = JAP value = "North New Hebrides" when = 1 }
+		command = { type = secedearea which = JAP value = "South New Hebrides" when = 1 }
+		command = { type = secederegion which = SOV value = "Central America" when = 1 } # goes to the victor
+		command = { type = secederegion which = ENG value = "New Guinea" when = 1 }
+		command = { type = secederegion which = ENG value = "Caribbean" when = 1 }
+		command = { type = secederegion which = SOV value = "Greenland" when = 1 }
+		command = { type = secederegion which = SOV value = "Iceland" when = 1 }
+		command = { type = secederegion which = SOV value = "Alaska" when = 1 }
+		
+		# Breaking masteries
+		command = { type = end_mastery which = PHI }
+		command = { type = end_mastery which = CUB }
+		command = { type = end_mastery which = JAP }
+		command = { type = end_guarantee which = USA where = PHI }
+	    command = { type = end_guarantee which = USA where = CUB }
+	    command = { type = end_guarantee which = USA where = JAP }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+		command = { type = event which = 8225000 where = SOV when = 2 } ## CEE influence +1
+		command = { type = event which = 8225000 where = SOV when = 3 } ## CEE influence +1
+		command = { type = event which = 8225000 where = SOV when = 4 } ## CEE influence +1
+		command = { type = event which = 8225000 where = SOV when = 5 } ## CEE influence +1
+	}
+}
+
+# Mexican share is given out
+
+event = {
+	id = 8392001
+	country = USA
+
+	name = EVT_8392001_NAME
+	desc = EVT_8392001_DESC
+	picture = nwo\alta_california
+	style = 1
+	
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8392000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8392001_A
+		command = { type = secedearea which = MEX value = "Arizona" when = 1 }
+		command = { type = secedearea which = MEX value = "New Mexico" when = 1 }
+		command = { type = secedeprovince which = MEX value = 1886 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1922 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1923 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1925 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1926 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1927 when = 1 }
+	}
+
+}
+
+# Soviet share is given out
+event = {
+	id = 8392002
+	country = USA
+
+	name = EVT_8392002_NAME
+	desc = EVT_8392002_DESC
+	picture = nwo\invasion_of_usa
+	style = 1
+	
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8392000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8392002_A
+		command = { type = secedearea which = SOV value = "Washington" when = 1 }
+		command = { type = secedearea which = SOV value = "Oregon" when = 1 }
+		command = { type = secedearea which = SOV value = "Idaho" when = 1 }
+		command = { type = secedearea which = SOV value = "Nevada" when = 1 }
+		command = { type = secedearea which = SOV value = "California" when = 1 }
+		command = { type = secedearea which = SOV value = "Maine" when = 1 }
+		command = { type = secedearea which = SOV value = "New Hampshire" when = 1 }
+		command = { type = secedearea which = SOV value = "Massachussets" when = 1 }
+		command = { type = secedearea which = SOV value = "Vermont" when = 1 }
+		command = { type = secedearea which = SOV value = "Connecticut_Rhode Island" when = 1 }
+		command = { type = secedearea which = SOV value = "New Jersey" when = 1 }
+		command = { type = secedearea which = SOV value = "New York" when = 1 }
+		command = { type = secedearea which = SOV value = "Pennsylvania" when = 1 }
+		command = { type = secedearea which = SOV value = "Maryland_Delaware" when = 1 }
+		command = { type = secedearea which = SOV value = "West Virginia" when = 1 }
+		command = { type = secedearea which = SOV value = "Virginia" when = 1 }
+		command = { type = secedearea which = SOV value = "North Carolina" when = 1 }
+		command = { type = secedearea which = SOV value = "South Carolina" when = 1 }
+		command = { type = secedearea which = SOV value = "Georgia" when = 1 }
+		command = { type = secedearea which = SOV value = "Florida" when = 1 }
+		
+		command = { type = secedeprovince which = SOV value = 1896 when = 1 } # Salt Lake City
+		command = { type = secedeprovince which = SOV value = 1899 when = 1 } # Saint George
+		command = { type = secedeprovince which = SOV value = 1897 when = 1 } # Grand Junction
+		command = { type = secedeprovince which = SOV value = 1866 when = 1 } # Casper
+		command = { type = secedeprovince which = SOV value = 1892 when = 1 } # Rock Springs
+	}
+}
+
+### PHASE FOUR: FATE OF UNITED STATES
+
+event = { # USSSA will be formed
+	id = 8393000
+	country = SOV
+	save_date = yes
+
+	name = EVT_8393000_NAME
+	desc = EVT_8393000_DESC
+	picture = nwo\united_soviet_socialist_states_of_america
+	style = 1
+
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8392000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	#  Invite CPUSA to rule
+	action = {
+		name = EVT_8393000_A
+		ai_chance = 70
+		command = { type = belligerence value = 25 }
+		command = { type = set_relation which = USA value = 50 }
+		command = { type = trigger which = 8393003 }
+	}
+	
+	# Allow Socialists to rule
+	action = {
+		name = EVT_8393000_B
+		ai_chance = 30
+		command = { type = belligerence value = 10 }
+		command = { type = set_relation which = USA value = 100 }
+		command = { type = trigger which = 8393004 }
+	}
+}
+
+event = { # Isolationist USA
+	id = 8393001
+	country = SOV
+	save_date = yes
+
+	name = EVT_8393001_NAME
+	desc = EVT_8393001_DESC
+	picture = nwo\socialist_usa
+	style = 1
+
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8392000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	# Make Socialists rule
+	action = {
+		name = EVT_8393001_A
+		ai_chance = 70
+		command = { type = belligerence value = 10 }
+		command = { type = set_relation which = USA value = 50 }
+		command = { type = trigger which = 8393004 }
+	}
+	
+	# Allow isolationist democrats to remain in power
+	action = {
+		name = EVT_8393001_B
+		ai_chance = 30
+		command = { type = belligerence value = -15 }
+		command = { type = set_relation which = USA value = 100 }
+		command = { type = trigger which = 8393005 }
+	}
+}
+
+event = { # USA will be fragmented
+	id = 8393002
+	country = SOV
+	save_date = yes
+
+	name = EVT_8393002_NAME
+	desc = EVT_8393002_DESC
+	picture = nwo\russian_american_friendship
+	style = 1
+
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8392000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8393002_A
+		command = { type = belligerence value = 25 }
+		command = { type = set_relation which = USA value = 50 }
+		command = { type = trigger which = 8393006 }
+	}
+}
+
+# Communist Party of the United States
+event = { 
+	id = 8393003
+	country = USA
+
+	name = EVT_8393003_NAME
+	desc = EVT_8393003_DESC
+	picture = nwo\communist_party_of_usa
+	style = 1
+
+	action = {
+		name = EVT_8393003_A
+		
+		command = { trigger = { event = 8393000 } type = name where = USA which = USSSA }
+		command = { trigger = { event = 8393000 } type = flag_ext where = USA which = "_communist" }
+	
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = set_domestic which = free_market value = 2 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = interventionism value = 5 }
+
+		command = { type = headofstate which = 240020 } # Earl Browder
+		command = { type = headofgovernment which = 240392 } # James W. Ford
+		command = { type = foreignminister which = 240050 } # Robert Minor
+		command = { type = armamentminister which = 240073 } # Elizabeth Gurley Flynn
+		command = { type = ministerofsecurity which = 240089 } # John Abt
+		command = { type = ministerofintelligence which = 240103 } # Harry Haywood
+		command = { type = chiefofstaff which = 240107 } # Hans Amlie
+		command = { type = chiefofarmy which = 240114 } # Steve Nelson
+		command = { type = chiefofnavy which = 240128 } # John Abt
+		command = { type = chiefofair which = 240134 } # John Abt
+	}
+	
+}
+
+# Socialist Party of the United States
+event = { 
+	id = 8393004
+	country = USA
+
+	name = EVT_8393004_NAME
+	desc = EVT_8393004_DESC
+	picture = nwo\socialist_usa
+	style = 1
+	
+	action = {
+		name = EVT_8393004_A
+		
+		command = { trigger = { event = 8393000 } type = name where = USA which = USSSA }
+		command = { trigger = { event = 8393000 } type = flag_ext where = USA which = "_communist" }
+		
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = free_market value = 3 }
+		command = { type = set_domestic which = freedom value = 4 }
+		command = { type = set_domestic which = interventionism value = 3 }
+
+		command = { type = headofstate which = 240021 } # Norman Thomas
+		command = { type = headofgovernment which = 240034 } # James Cannon
+		command = { type = foreignminister which = 240051 } # Eugene Dennis
+		command = { type = armamentminister which = 240072 } # Wyndham Mortimer
+		command = { type = ministerofsecurity which = 240090 } # Daniel Hoan
+		command = { type = ministerofintelligence which = 240103 } # Harry Haywood
+		command = { type = chiefofstaff which = 240379 } # George H. Dern
+		command = { type = chiefofarmy which = 240114 } # Steve Nelson
+		command = { type = chiefofnavy which = 240117 } # Charles Edison
+		command = { type = chiefofair which = 240010 } # Oscar Westover
+	}
+
+}
+
+# Isolationist Democrats
+event = { 
+	id = 8393005
+	country = USA
+
+	name = EVT_8393005_NAME
+	desc = EVT_8393005_DESC
+	picture = nwo\russian_american_friendship
+	style = 1
+	
+	action = {
+		name = EVT_8393005_A
+		
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = interventionism value = 0 }
+
+		command = { type = headofstate which = 240011 } # Henry A. Wallace
+		command = { type = headofgovernment which = 240023 } # Joel B. Clark
+		command = { type = foreignminister which = 240039 } # James Byrnes
+		command = { type = armamentminister which = 240055 } # Leroy Grumman
+		command = { type = ministerofsecurity which = 240078 } # Henry Chalmers
+		command = { type = ministerofintelligence which = 240096 } # Sidney Souers
+		command = { type = chiefofstaff which = 240153 } # Walter Bedell-Smith
+		command = { type = chiefofarmy which = 240110 } # Omar N. Bradley
+		command = { type = chiefofnavy which = 240119 } # Chester W. Nimitz
+		command = { type = chiefofair which = 240010 } # Oscar Westover
+	}
+}
+
+# Dismantling USA
+
+event = { 
+	id = 8393006
+	country = USA
+	save_date = yes
+
+	name = EVT_8393006_NAME
+	desc = EVT_8393006_DESC
+	picture = nwo\usa_divided
+	style = 1
+	
+	action = {
+		name = EVT_8393006_A
+		
+		command = { type = independence which = TEX value = 0 }
+		command = { type = independence which = CSA value = 0 }
+		command = { type = independence which = CAL value = 0 }
+		
+		# Texas
+		command = { type = secedearea which = TEX value = "Texas" when = 1 }
+		command = { type = secedearea which = TEX value = "New Mexico" when = 1 }
+		command = { type = secedearea which = TEX value = "Oklahoma" when = 1 }
+		command = { type = secedearea which = TEX value = "Kansas" when = 1 }
+		command = { type = secedearea which = TEX value = "Colorado" when = 1 }
+		
+		# Confederacy
+		command = { type = secederegion which = CSA value = "Southeast US" when = 1 }
+		command = { type = secedearea which = CSA value = "Louisiana" when = 1 }
+		command = { type = secedearea which = CSA value = "Arkansas" when = 1 }
+		command = { type = secedearea which = CSA value = "Missouri" when = 1 }
+		command = { type = secedearea which = CSA value = "Kentucky" when = 1 }
+		command = { type = secedearea which = CSA value = "Virginia" when = 1 }
+		command = { type = secedearea which = CSA value = "West Virginia" when = 1 }
+		command = { type = secedearea which = CSA value = "Maryland_Delaware" when = 1 }
+		command = { type = secedearea which = CSA value = "Pennsylvania" when = 1 }
+		command = { type = secedearea which = CSA value = "New Jersey" when = 1 }
+		command = { type = secedearea which = CSA value = "Iowa" when = 1 }
+		command = { type = secedearea which = CSA value = "Nebraska" when = 1 }
+		command = { type = secedearea which = CSA value = "Wyoming" when = 1 }
+		
+		# California
+		command = { type = secederegion which = CAL value = "Southwest US" when = 1 }
+		command = { type = secederegion which = CAL value = "Northwest US" when = 1 }
+
+		command = { type = trigger which = 8393003 }
+	}
+	
+}
+
+### PHASE FIVE: SETTING UP SPHERES OF INFLUENCE
+
+event = { 
+	id = 8394000
+	country = SOV
+	save_date = yes
+	
+	name = EVT_8394000_NAME
+	desc = EVT_8394000_DESC
+	picture = nwo\khrushchev_in_usa
+	style = 1
+	
+	trigger = {
+		flag = the_red_dusk
+		OR = {
+			event = { id = 8393001 days = 30 }
+			event = { id = 8393002 days = 30 }
+			event = { id = 8393003 days = 30 }
+			event = { id = 8393006 days = 30 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = EVT_8394000_A
+		command = { trigger = { NOT = { event = 8393001 } } type = make_puppet which = USA }
+		command = { type = alliance which = USA }
+		command = { type = make_puppet which = CSA }
+		command = { type = alliance which = CSA }
+		command = { type = make_puppet which = TEX }
+		command = { type = alliance which = TEX }
+		command = { type = make_puppet which = CAL }
+		command = { type = alliance which = CAL }
+	}
+	
+}
+
+### THE END
+
+event = { 
+	id = 8395000
+	country = REB
+	
+	name = AI_EVENT
+	picture = nwo\empty
+	style = 1
+	
+	trigger = {
+		flag = the_red_dusk
+		event = { id = 8394000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = clrflag which = the_red_dusk }
+	}
+	
+}

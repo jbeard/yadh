@@ -1,0 +1,395 @@
+event = {
+	id = 8004101
+	country = CYP
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+	
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 620011 } # H.H. Makarios III
+		command = { type = headofgovernment which = 620100 } # H.H. Makarios III
+		command = { type = foreignminister which = 620015 } # Harilaos Agapias
+		command = { type = armamentminister which = 620017 } # Traianos Basiliakos
+		command = { type = ministerofintelligence which = 620021 } # Eleferides Clerides
+		command = { type = chiefofstaff which = 620023 } # Giorgios Siradikis
+		command = { type = chiefofarmy which = 620025 } # Dighenis Grivas
+		command = { type = chiefofnavy which = 620027 } # Polo Miltoniades
+		command = { type = chiefofair which = 620029 } # Georgios Vayenas
+	}
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 620101 } # John Klerides
+		command = { type = headofgovernment which = 620102 } # John Klerides
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8004102
+	country = CYP
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 620011 } # H.H. Makarios III
+		command = { type = headofgovernment which = 620100 } # H.H. Makarios III
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 620103 } # Takis Evdokas
+		command = { type = headofgovernment which = 620104 } # Takis Evdokas
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 18 }
+	}
+}
+
+event = {
+	id = 8004103
+	country = CYP
+
+	name = EVT_8004103_NAME
+	desc = EVT_8004103_DESC
+	picture = nwo\cyprus_coup
+	style = 1
+	
+	trigger = {
+		event = 8004112
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = EVT_8004103_A
+		ai_chance = 80
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 620011 } # H.H. Makarios III
+		command = { type = headofgovernment which = 620100 } # H.H. Makarios III
+	}
+	action = {
+		name = EVT_8004103_B
+		ai_chance = 10
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 620105 } # Glafcos Clerides
+		command = { type = headofgovernment which = 620106 } # Glafcos Clerides
+	}
+	action = {
+		name = EVT_8004103_C
+		ai_chance = 10
+		command = { type = dissent value = 20 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 620107 } # Nikos Sampson
+		command = { type = headofgovernment which = 620108 } # Nikos Sampson
+	}
+}
+
+event = {
+	id = 8004104
+	country = CYP
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = nwo\death
+	style = 1
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = sleepminister which = 620011 } # H.H. Makarios III
+		command = { type = headofstate which = 620109 } # Spyros Kyprianou
+		command = { type = headofgovernment which = 620110 } # Spyros Kyprianou
+	}
+}
+
+event = {
+	id = 8004105
+	country = CYP
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 620109 } # Spyros Kyprianou
+		command = { type = headofgovernment which = 620110 } # Spyros Kyprianou
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 620105 } # Glafcos Clerides
+		command = { type = headofgovernment which = 620106 } # Glafcos Clerides
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 18 }
+	}
+}
+
+event = {
+	id = 8004106
+	country = CYP
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 620111 } # George Vassiliou
+		command = { type = headofgovernment which = 620112 } # George Vassiliou
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 620105 } # Glafcos Clerides
+		command = { type = headofgovernment which = 620106 } # Glafcos Clerides
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+### 1974 coup
+
+event = {
+	id = 8004110
+	country = CYP
+
+	name = EVT_8004110_NAME
+	desc = EVT_8004110_DESC
+	picture = nwo\enosis
+	style = 1
+
+	date = { day = 15 month = july year = 1974 }
+	offset = 7
+	deathdate = { day = 30 month = july year = 1974 }
+
+	action = {
+		name = EVT_8004110_A # Carry out the coup
+		ai_chance = 85
+		command = { type = domestic which = democratic value = -3 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8004111 }
+	}
+	
+	action = {
+		name = EVT_8004110_B
+		ai_chance = 15
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8004113 }
+	}
+}
+
+event = {
+	id = 8004111
+	country = TUR
+
+	name = EVT_8004111_NAME
+	desc = EVT_8004111_DESC
+	picture = nwo\enosis
+	style = 1
+
+	action = {
+		name = EVT_8004111_A # Invade!
+		ai_chance = 85
+		command = { type = relation which = GRE value = -150 }
+		command = { type = relation which = CYP value = -250 }
+		command = { type = domestic which = interventionism value = 3 }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8004112 }
+	}
+	
+	action = {
+		name = EVT_8004111_B # Do nothing
+		ai_chance = 15
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8004112
+	country = CYP
+	one_action = yes
+
+	name = EVT_8004112_NAME
+	desc = EVT_8004112_DESC
+	picture = nwo\turkish_cyprus
+	style = 1
+
+	action = {
+		name = EVT_8004112_A # Turkish invasion is successful
+		ai_chance = 85
+		command = { type = relation which = GRE value = -150 }
+		command = { type = relation which = CYP value = -250 }
+		command = { type = secedeprovince which = TUR value = 387 }
+		command = { type = dissent value = 25 }
+		command = { type = sleepevent which = 8004113 }
+	}
+	
+	action = {
+		name = EVT_8004112_B # Turkish invasion fails
+		ai_chance = 15
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = -25 }
+		command = { type = sleepevent which = 8004103 }
+	}
+}
+
+event = {
+	id = 8004113
+	country = CYP
+
+	name = EVT_8004113_NAME
+	desc = EVT_8004113_DESC
+	picture = nwo\enosis
+	style = 1
+	
+	trigger = {
+		exists = GRE
+		NOT = { war = { country = GRE country = CYP } }
+	}
+
+	date = { day = 1 month = august year = 1974 }
+	offset = 7
+	deathdate = { day = 30 month = august year = 1974 }
+
+	action = {
+		name = EVT_8004113_A # Propose to acceede Greece (Game Over)
+		ai_chance = 85
+		command = { type = relation which = GRE value = 150 }
+		command = { type = trigger which = 8004114 }
+	}
+	
+	action = {
+		name = EVT_8004113_B # Don't do this
+		ai_chance = 15
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 8004114
+	country = GRE
+
+	name = EVT_8004114_NAME
+	desc = EVT_8004114_DESC
+	picture = nwo\enosis
+	style = 1
+
+	action = {
+		name = EVT_8004114_A # Yes
+		ai_chance = 99
+		command = { type = inherit which = CYP }
+		command = { type = addcore which = 387 }
+		command = { type = addcore which = 388 }
+	}
+	
+	action = {
+		name = EVT_8004114_B # No
+		ai_chance = 1
+		command = { type = relation which = CYP value = -150 }
+		command = { type = dissent value = 7 }
+	}
+}

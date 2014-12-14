@@ -1,0 +1,323 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Reparations Handling
+# Event List:
+#U08	13300219	War Reparations
+#U08	13300290	Lausanne Conference of 1932 Fails!
+#U08	13300291	Lausanne Conference of 1932 Accepted!
+#U08	13300292	Protest Occupation (leads to Dawes Plan)
+#U08	13300293	Protest Reparations (leads to Young Plan)
+#ALL	13300014	War Reparations received
+
+# War Reparations
+event = { 
+	id = 13300219										
+	country = U08						
+	persistent = yes						
+	
+	date = { day = 1 month = january year = 1919 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 365
+	
+	trigger = {					
+		local_flag = reparations
+		not = { flag = nogerrep2 }
+		not = { flag = ruhr_occupied }
+	}
+
+	name = "EVT_13300219_NAME"							
+	Desc = "EVT_13300219_DESC"
+	Picture = "aar_repar"
+	style = 2
+	
+	action = { 	
+		name = "Pay Reparations."		
+		ai_chance = 40
+		trigger = {
+			atwar = no
+			money = 2000
+			OR = {
+				and = {
+					flag = nogerrep 
+					money = 3000
+				}
+				not = { year = 1923 }
+			}
+			not = {
+				local_flag = depression
+			}
+			#not = { flag = ruhr_return }
+			not = { event = 13300702 } # No Dawes Plan.
+			or = {
+				not = { year = 1923 }
+				random = 5
+				ai = no
+			}
+		}
+		command = { type = dissent value = 5 }
+		command = { type = money value = -2000 }
+		command = { type = resource which = money value = -5000 }
+		command = { type = event which = 13300014 where = ENG when = 7 }
+		command = { type = event which = 13300014 where = FRA when = 7 }
+		command = { type = event which = 13300014 where = USA when = 7 }
+		command = { type = clrflag which = nogerrep }
+	}
+	
+	action = { 	
+		name = "Pay according to the Dawes Plan."		
+		ai_chance = 70	
+		trigger = { 
+			atwar = no
+			flag = ruhr_return
+			not = { 
+				local_flag = depression
+			}
+			event = 13300702 # Dawes Plan Exists
+			not = { event = 13300703 } # Not Young Plan
+		}
+		command = { type =	dissent value = 1 }
+		command = { type = resource which = money value = -2500 }
+		command = { type = clrflag which = nogerrep }
+		command = { type = event which = 13300014 where = ENG when = 7 }
+		command = { type = event which = 13300014 where = FRA when = 7 }
+		command = { type = event which = 13300014 where = USA when = 7 }
+	} 
+	
+	action = { 	
+		name = "Pay according to the Young Plan."		 
+		ai_chance = 90	
+		trigger = { 
+			atwar = no
+			not = {
+				local_flag = depression
+			}
+			event = 13300703 # Young Plan Exists
+		}
+		command = { type = dissent value = 1 }
+		command = { type = resource which =	money value = -1250 }
+		command = { type = clrflag which = nogerrep }
+		command = { type = event which = 13300014 where = ENG when = 7 }
+		command = { type = event which = 13300014 where = FRA when = 7 }
+		command = { type = event which = 13300014 where = USA when = 7 }
+	} 
+	
+	action = { 	
+		name = "This is unfair and will ruin us!"		
+		ai_chance = 40	
+		trigger = {
+			atwar = no
+			or = {
+				not = { flag = nogerrep }
+				flag = ruhr_return
+			}
+			not = {
+				local_flag = depression
+			}
+		}
+		command = { type = dissent value = -5 }
+		command = { type = setflag which = nogerrep }
+		command = { trigger = { flag = ruhr_return } type = clrflag which = ruhr_return }
+		command = { type = relation which =	ENG value = -20 }
+		command = { type = relation which =	FRA value = -20 }
+		command = { type = relation which =	USA value = -20 }
+	}
+	
+	action = { 	
+		name = "We will not be cowed by France's threats!"
+		ai_chance = 50	
+		trigger = { 
+			atwar = no
+			flag = nogerrep
+			not = { flag = ruhr_return }
+			not = {
+				local_flag = depression
+			}
+		}
+		command = { type = dissent value = -10 } 
+		command = { type = setflag which = nogerrep2 } #ruhr occupation
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = FRA value = -20 }
+		command = { type = relation which = USA value = -20 }
+	}
+	
+	action = {
+		name = "Why should we pay our enemies?"		
+		ai_chance = 100	 
+		trigger = {
+			atwar = yes
+			or = {
+				war = { country = U08 country = FRA }
+				war = { country = U08 country = ENG }
+				war = { country = U08 country = USA }
+			}
+		}
+		command = { type = dissent value = -10 }
+		command = { type = local_clrflag which = reparations }
+		command = { type =	relation which = ENG value = -100 }
+		command = { type =	relation which = FRA value = -100 }
+		command = { type =	relation which = USA value = -100 }
+	}
+	
+	action = {
+		ai_chance = 100
+		trigger = {
+			local_flag = depression
+		}
+		name = "We cannot afford to pay!"
+		command = { type = dissent value = -2 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = USA value = -5 }
+		command = { type = trigger which = 13301013 } #Lausanne Conference of 1932, see FRA file.
+	}
+	
+	action = {
+		ai_chance = 100
+		trigger = {
+			atwar = yes
+			not = {
+				or = {
+					war = { country = U08 country = FRA }
+					war = { country = U08 country = ENG }
+					war = { country = U08 country = USA }
+				}
+			}
+			not = { local_flag = depression }
+		}
+		name = "We cannot afford to pay right now!"
+		command = { type = dissent value = -2 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = USA value = -5 }
+	}
+}
+
+# Lausanne Conference of 1932 Fails!
+event = {
+	id = 13300290
+	country = U08
+	
+	name = "Lausanne Conference Fails!"
+	desc = "The British, French, and United States governments have failed to come to an agreement on a pause of reparation repayment due to the current economic crisis."
+	style = 2
+	picture = "aar_lausanne"
+	
+	action = {
+		name = "We cannot continue to pay. End the reparations."
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 13300219 }
+	}
+}
+
+# Lausanne Conference of 1932 Accepted!
+event = {
+	id = 13300291
+	country = U08
+	
+	name = "Lausanne Conference Accepted!"
+	desc = "The Lausanne Conference of 1932 has succeeded in pausing Great War debt and repayment while our individual countries recover economically."
+	style = 2
+	picture = "aar_lausanne"
+	action = {
+		name = "Excellent!"
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = FRA value = 5 }
+		command = { type = relation which = USA value = 5 }
+		command = { type = dissent value = -10 }
+		command = { type = sleepevent which = 13300219 }
+	}
+}
+
+# Protest Occupation (leads to Dawes Plan)
+event = {
+	id = 13300292
+	country = U08
+	save_date = yes
+	
+	decision = {
+		flag = ruhr_occupied
+	}
+	
+	decision_trigger = {
+		flag = ruhr_occupied
+		ai = no
+	}
+	
+	trigger = {
+		flag = ruhr_occupied
+		random = 15
+	}
+	
+	name = "Protest Occupation of the Ruhr"
+	desc = "Launch a diplomatic protest against France's occupation of our soverign territory!"
+	style = 2
+	picture = "aar_ruhrp"
+	decision_picture = "aar_druhrp"
+	
+	date = { day = 1 month = january year = 1919 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 10
+	
+	action = {
+		name = "We are the real war victims! Not the French!"
+		command = { type = trigger which = 13300702 } # Dawes Plan
+	}
+}
+# Protest Reparations (leads to Young Plan)
+event = {
+	id = 13300293
+	country = U08
+	
+	decision = {
+		event = 13300702
+		event = { id = 13300292 days = 1440 }
+	}
+	
+	trigger = {
+		event = 13300702
+		event = { id = 13300292 days = 1440 }
+	}
+
+	name = "Protest Reparations"
+	desc = "After the Dawes Plan was put into operation, it became apparent that Germany still could not realistically meet the huge annual payments, especially over an indefinite period of time. We must protest against this plan for it will ruin our nation!"
+	style = 2
+	picture = "aar_repar"
+	decision_picture = "aar_drepar"
+	
+	date = { day = 1 month = january year = 1919 }
+	deathdate = { day = 1 month = january year = 1939 }
+	offset = 50
+	
+	action = {
+		name = "We are the real war victims! Not the French!"
+		command = { type = trigger which = 13300703 } # Young Plan
+	}
+}
+
+# War Reparations received
+event = { 
+	id = 13300014										
+	persistent = yes										
+	
+	#triggered by U08 event 13300219
+	
+	name = "EVT_13300014_NAME"
+	Desc = "EVT_13300014_DESC"
+	Picture = "aar_repar" 
+	style = 2
+	
+	action = { 	
+		name = "We have expected nothing less."			 
+		command = { trigger = { not = { event = 13300703 } } type = money value = 100 } # No Young Plan
+		command = { trigger = { not = { event = 13300702 } } type = money value = 50 } # No Dawes Plan
+		command = { type = money value = 50 } # No Dawes Plan
+		command = { type = relation which = U08 value = 25 }
+	}
+}

@@ -1,0 +1,235 @@
+event = {
+	id = 8009801
+	country = MON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 300014 } # Gomgchigryn Bumtsend
+		command = { type = headofgovernment which = 300021 } # Jumdjaagijn Tsedenbal
+		command = { type = flag_ext where = MON which = _1940 }
+	}
+}
+
+event = {
+	id = 8009802
+	country = MON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 300200 } # Jamsrangiin Sambuu
+		command = { type = headofgovernment which = 300021 } # Jumdjaagijn Tsedenbal
+	}
+}
+
+event = {
+	id = 8009803
+	country = MON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 300206 } # Jambyn Batmönkh
+	}
+}
+
+event = {
+	id = 8009804
+	country = MON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 300205 } # Jambyn Batmönkh
+		command = { type = headofgovernment which = 300201 } # Dumaagiin Sodnom
+	}
+}
+
+event = {
+	id = 8009805
+	country = MON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 300202 } # Punsalmaagiin Ochirbat
+		command = { type = headofgovernment which = 300203 } # Sharavyn Gungaadorj
+	}
+}
+
+event = {
+	id = 8009806
+	country = MON
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 300204 } # Dashiin Byambasüren
+	}
+}
+
+# Collectivization of livestock
+event = {
+	id = 8009807
+	random = no
+	country = MON
+
+	name = EVT_8009807_NAME
+	desc = EVT_8009807_DESC
+	picture = "nwo\mongolia"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 1000
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8009807_A
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = dissent value = 5 }
+	}
+
+}
+
+# Mongolia in Sino-Soviet split
+event = {
+	id = 8009808
+	country = MON
+
+	name = EVT_8009808_NAME
+	desc = EVT_8009808_DESC
+	picture = "nwo\darkhan"
+	style = 1
+
+	trigger = {
+		government = communist
+		flag = sino_soviet_split
+	}
+
+	date = { day = 1 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8009808_A #"Stand beside USSR"
+		ai_chance = 70
+		command = { type = construct which = ic where = -1 value = 1 }
+		command = { type = add_prov_resource which = -1 value = 1 where = metal }
+		command = { type = add_prov_resource which = -1 value = 2 where = energy }
+		command = { type = relation which = SOV value = 100 }
+		command = { type = relation which = CHC value = -100 }
+	}
+	
+	action_b = {
+		name = EVT_8009808_B #"Stay with Chinese"
+		ai_chance = 30
+		command = { type = relation which = CHC value = 50 }
+	}
+
+}

@@ -1,0 +1,100 @@
+event = {
+	id = 8027201
+	country = U72
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 700224 } # Ha Huy Tap
+		command = { type = headofgovernment which = 700225 } # Ha Huy Tap
+	}
+}
+
+event = {
+	id = 8027202
+	country = U72
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 700226 } # Nguyen Van Cu
+		command = { type = headofgovernment which = 700227 } # Nguyen Van Cu
+	}
+}
+
+event = {
+	id = 8027203
+	country = U72
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 700202 } # Le Duan
+		command = { type = headofgovernment which = 700204 } # Ho Chi Minh
+	}
+}
+
+event = {
+	id = 8027204
+	country = U72
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 700200 } # Ho Chi Minh
+		command = { type = headofgovernment which = 700228 } # Pham Van Dong
+	}
+}
+

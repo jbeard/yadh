@@ -1,0 +1,409 @@
+# Austria is occupied by a single country
+
+event = {
+	id = 8203000
+	tag = { USA ENG FRA CAN U01 U02 AST NZL }
+
+	name = "EVT_8203000_NAME"
+	desc = "EVT_8203000_DESC"
+	picture = "nwo\allied_occupation_of_austria"
+	style = 1
+
+	trigger = {
+		region = { region = "Austria" country = -1 data = 1 value = 100 } # We own whole Austria
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203000_A"
+		ai_chance = 100
+		command = { type = independence which = AUS value = 1 when = 0 }
+	}
+	
+	action = {
+		name = "EVT_8203000_B"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 25 }
+	}
+
+}
+
+event = {
+	id = 8203001
+	tag = { SOV }
+
+	name = "EVT_8203001_NAME"
+	desc = "EVT_8203001_DESC"
+	picture = "nwo\soviet_occupation_of_austria"
+	style = 1
+
+	trigger = {
+		region = { region = "Austria" country = -1 data = 1 value = 100 } # We own whole Austria
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203001_A"
+		ai_chance = 100
+		command = { type = independence which = U16 value = 1 when = 0 }
+	}
+	
+	action = {
+		name = "EVT_8203001_B"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 25 }
+	}
+
+}
+
+# Austria is divided (historical)
+
+# Soviets promote Renner as an Austria HoG
+event = {
+	id = 8203002
+	country = SOV
+
+	name = "EVT_8203002_NAME"
+	desc = "EVT_8203002_DESC"
+	picture = "nwo\karl_renner"
+	style = 1
+
+	trigger = {
+		region = { region = "Austria" country = -1 data = 1 value = 0 } # We own at least some Austria
+		NOT = { region = { region = "Austria" country = -1 data = 1 value = 100 } } # but not whole
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203002_A"
+		ai_chance = 98
+		command = { type = independence which = AUS value = 1 when = 1 }
+		command = { type = sleepevent which = 8203005 }
+		command = { type = trigger which = 8001101 } # Setting up Austrian government
+		command = { type = trigger which = 8203003 }
+	}
+	
+	action = {
+		name = "EVT_8203002_B"
+		ai_chance = 2
+		command = { type = independence which = U16 value = 1 when = 0 }
+		command = { type = make_puppet which = U16 }
+		command = { type = alliance which = U16 }
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 25 }
+		command = { type = sleepevent which = 8203003 }
+	}
+
+}
+
+# Western Allies accept Renner's government
+event = {
+	id = 8203003
+	country = USA
+
+	name = "EVT_8203003_NAME"
+	desc = "EVT_8203003_DESC"
+	picture = "nwo\karl_renner"
+	style = 1
+
+	action = {
+		name = "EVT_8203003_A"
+		ai_chance = 95
+		command = { type = secederegion which = AUS value = "Austria" when = 2 }
+		command = { type = setflag which = neutral_austria }
+		command = { type = trigger which = 8203010 }
+	}
+	
+	action = {
+		name = "EVT_8203003_B"
+		ai_chance = 5
+		command = { type = trigger which = 8203004 }
+	}
+
+}
+
+# No acceptance from Western Allies, Austria will remain divided
+
+event = {
+	id = 8203004
+	country = AUS
+
+	name = "EVT_8203004_NAME"
+	desc = "EVT_8203004_DESC"
+	picture = "nwo\soviet_occupation_of_austria"
+	style = 1
+
+	action = {
+		name = "EVT_8203004_A"
+		ai_chance = 95
+		command = { type = country which = U16 }
+	}
+
+}
+
+event = {
+	id = 8203005
+	tag = { USA ENG FRA CAN U01 U02 AST NZL }
+	persistent = yes
+
+	name = "EVT_8203005_NAME"
+	desc = "EVT_8203005_DESC"
+	picture = "nwo\allied_occupation_of_austria"
+	style = 1
+
+	trigger = {
+		OR = {
+			event = 8203002 # Soviets decided to set up Communist Austria from the beginning
+			event = 8203004 # Soviets decided to set up neutral Austria but we declined and the Communist Austria was set up
+		}
+		region = { region = "Austria" country = -1 data = 1 value = 0 } # We own at least some Austria
+	}
+
+	date = { day = 19 month = october year = 1945 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203005_A"
+		ai_chance = 100
+		command = { type = independence which = AUS value = 1 when = 0 }
+		command = { type = secederegion which = AUS value = "Austria" when = 1 }
+		command = { trigger = { NOT = { event = 8001101 } } type = trigger which = 8001101 } # Setting up Austrian government
+	}
+	
+	action = {
+		name = "EVT_8203005_B"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 25 }
+		command = { type = sleepevent which = 8203005 }
+	}
+
+}
+
+# Setting up neutral Austria
+event = {
+	id = 8203010
+	country = AUS
+
+	name = "EVT_8203010_NAME"
+	desc = "EVT_8203010_DESC"
+	picture = "nwo\allied_occupation_of_austria"
+	style = 1
+
+	action = {
+		name = "EVT_8203010_A"
+		command = { type = trigger which = 8001101 } # Setting up Austrian government
+		command = { type = access which = SOV }
+		command = { type = access which = ENG }
+		command = { type = access which = USA }
+		command = { type = access which = FRA }
+		command = { type = set_domestic which = interventionism value = 1 } # Full isolationism
+	}
+
+}
+
+# Soviet occupation of Austria
+
+event = {
+	id = 8203011
+	country = SOV
+
+	name = "EVT_8203011_NAME"
+	desc = "EVT_8203011_DESC"
+	picture = "nwo\usia"
+	style = 1
+
+	trigger = {
+		flag = neutral_austria
+	}
+
+	date = { day = 1 month = june year = 1946 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203011_A" # USIA
+		command = { type = dissent value = -3 }
+		command = { type = belligerence value = 10 }
+		command = { type = industrial_modifier which = total value = 2 }
+		command = { type = relation which = AUS value = -100 }
+	}
+	
+	action = {
+		name = "EVT_8203011_B" # Harsh terms
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 20 }
+		command = { type = industrial_modifier which = total value = 4 }
+		command = { type = relation which = AUS value = -250 }
+	}
+	
+	action = {
+		name = "EVT_8203011_C" # Lenient terms
+		command = { type = belligerence value = -10 }
+		command = { type = relation which = AUS value = 100 }
+	}
+
+}
+
+event = {
+	id = 8203012
+	country = AUS
+
+	name = "EVT_8203012_NAME"
+	desc = "EVT_8203012_DESC"
+	picture = "nwo\usia"
+	style = 1
+
+	action = {
+		name = "EVT_8203012_A"
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = -10 }
+	}
+
+}
+
+event = {
+	id = 8203013
+	country = AUS
+
+	name = "EVT_8203013_NAME"
+	desc = "EVT_8203013_DESC"
+	picture = "nwo\usia"
+	style = 1
+
+	action = {
+		name = "EVT_8203013_A"
+		command = { type = dissent value = 25 }
+		command = { type = industrial_modifier which = total value = -20 }
+	}
+
+}
+
+# Austrian State Treaty
+
+event = {
+	id = 8203014
+	country = SOV
+
+	name = "EVT_8203014_NAME"
+	desc = "EVT_8203014_DESC"
+	picture = "nwo\austrian_state_treaty"
+	style = 1
+	
+	trigger = {
+		flag = neutral_austria
+	}
+
+	date = { day = 1 month = april year = 1955 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203014_A"
+		command = { type = belligerence value = -10 }
+		command = { type = relation which = AUS value = 100 }
+		command = { type = relation which = USA value = 50 }
+	}
+	
+	action = {
+		name = "EVT_8203014_B"
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 20 }
+		command = { type = sleepevent which = 8203015 }
+		command = { type = sleepevent which = 8203016 }
+	}
+
+}
+
+event = {
+	id = 8203015
+	country = USA
+
+	name = "EVT_8203015_NAME"
+	desc = "EVT_8203015_DESC"
+	picture = "nwo\austrian_state_treaty"
+	style = 1
+	
+	trigger = {
+		event = 8203014
+		flag = neutral_austria
+	}
+
+	date = { day = 1 month = april year = 1955 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203015_A"
+		command = { type = dissent value = -5 }
+	}
+
+}
+
+event = {
+	id = 8203016
+	country = AUS
+
+	name = "EVT_8203016_NAME"
+	desc = "EVT_8203016_DESC"
+	picture = "nwo\austrian_state_treaty"
+	style = 1
+	
+	trigger = {
+		flag = neutral_austria
+	}
+
+	date = { day = 14 month = may year = 1955 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203016_A"
+		command = { type = dissent value = -20 }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = end_access which = ENG }
+		command = { type = end_access which = USA }
+		command = { type = end_access which = FRA }
+	}
+
+}
+
+### Wirtshaftswunder - reversal of occupation effects
+
+event = {
+	id = 8203030
+	country = AUS
+
+	name = "EVT_8203030_NAME"
+	desc = "EVT_8203030_DESC"
+	picture = "nwo\wirtschaftswunder"
+	style = 1
+	
+	date = { day = 1 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8203030_A"
+		command = { trigger = { event = 8203012 } type = industrial_modifier which = total value = 10 }
+		command = { trigger = { event = 8203013 } type = industrial_modifier which = total value = 20 }
+	}
+
+}

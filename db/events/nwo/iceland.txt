@@ -1,0 +1,1038 @@
+event = {
+	id = 8007001
+	country = ICL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 360001 } # Sveinn Bjoernsson
+		command = { type = headofgovernment which = 360020 } # Olafur Thors
+		command = { type = foreignminister which = 360011 } # Stefan J. Stefansson
+		command = { type = armamentminister which = 360023 } # Petur Magnusson
+		command = { type = ministerofsecurity which = 360024 } # Finnur Joensson
+		command = { type = ministerofintelligence which = 360025 } # Ingvar Palmasson
+		command = { type = chiefofstaff which = 360015 } # August Arendrup
+		command = { type = chiefofarmy which = 360016 } # Kai Hammerich
+		command = { type = chiefofnavy which = 360017 } # Paul Ipsen
+		command = { type = chiefofair which = 360018 } # Asger E.V. Grandjean
+	}
+}
+
+event = {
+	id = 8007002
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 360001 } # Sveinn Bjoernsson
+		command = { type = headofgovernment which = 360022 } # Stefan J. Stefansson
+		command = { type = foreignminister which = 360026 } # Bjarni Benediktsson
+		command = { type = armamentminister which = 360027 } # Johann Th. Josefsson
+		command = { type = ministerofsecurity which = 360028 } # Bjarni Benediktsson
+		command = { type = ministerofintelligence which = 360025 } # Ingvar Palmasson
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 360001 } # Sveinn Bjoernsson
+		command = { type = headofgovernment which = 360020 } # Olafur Thors
+		command = { type = foreignminister which = 360021 } # Vilhjalmur Thor
+		command = { type = armamentminister which = 360023 } # Petur Magnusson
+		command = { type = ministerofsecurity which = 360024 } # Finnur Joensson
+		command = { type = ministerofintelligence which = 360025 } # Ingvar Palmasson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007003
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 360001 } # Sveinn Bjoernsson
+		command = { type = headofgovernment which = 360031 } # Steingrimur Steinthorsson
+		command = { type = foreignminister which = 360026 } # Bjarni Benediktsson
+		command = { type = armamentminister which = 360032 } # Eysteinn Joensson
+		command = { type = ministerofsecurity which = 360028 } # Bjarni Benediktsson
+		command = { type = ministerofintelligence which = 360030 } # Steingrimur Steinthorsson
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 360001 } # Sveinn Bjoernsson
+		command = { type = headofgovernment which = 360020 } # Olafur Thors
+		command = { type = foreignminister which = 360003 } # Olafur Thors
+		command = { type = armamentminister which = 360029 } # Bjoern Olofsson
+		command = { type = ministerofsecurity which = 360024 } # Finnur Joensson
+		command = { type = ministerofintelligence which = 360025 } # Ingvar Palmasson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007004
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 360019 } # Asgeir Asgeirsson
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 360100 } # Bjarni J?nsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007005
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360020 } # Olafur Thors
+		command = { type = foreignminister which = 360033 } # Gudmundur Gudmundsson
+		command = { type = armamentminister which = 360029 } # Bjoern Olofsson
+		command = { type = ministerofsecurity which = 360034 } # Einar Arnorsson
+		command = { type = ministerofintelligence which = 360025 } # Ingvar Palmasson
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360031 } # Steingrimur Steinthorsson
+		command = { type = foreignminister which = 360026 } # Bjarni Benediktsson
+		command = { type = armamentminister which = 360032 } # Eysteinn Joensson
+		command = { type = ministerofsecurity which = 360028 } # Bjarni Benediktsson
+		command = { type = ministerofintelligence which = 360030 } # Steingrimur Steinthorsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007006
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360002 } # Hermann Jonasson
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360020 } # Olafur Thors
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007007
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360101 } # Emil Jonsson
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360020 } # Olafur Thors
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007008
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360020 } # Olafur Thors
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360101 } # Emil Jonsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007009
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360102 } # Bjarni Benediktsson
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360101 } # Emil Jonsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007010
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360102 } # Bjarni Benediktsson
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360103 } # Gylfi Gislason
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8007011
+	country = ICL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 360104 } # Kristján Eldjárn
+	}
+}
+
+event = {
+	id = 8007012
+	country = ICL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 360105 } # Jóhann Hafstein
+	}
+}
+
+event = {
+	id = 8007013
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 360106 } # Ólafur Jóhannesson
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360105 } # Jóhann Hafstein
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007014
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360108 } # Geir Hallgrímsson
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360107 } # Benedikt Gröndal
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007015
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 360106 } # Ólafur Jóhannesson
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360108 } # Geir Hallgrímsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8007016
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofgovernment which = 360107 } # Benedikt Gröndal
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360108 } # Geir Hallgrímsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007017
+	country = ICL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 360112 } # Vigdís Finnbogadóttir
+	}
+}
+
+event = {
+	id = 8007018
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360109 } # Gunnar Thoroddsen
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 360106 } # Ólafur Jóhannesson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8007019
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 360113 } # Steingrímur Hermannsson
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360115 } # Thorsteinn Palsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007020
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360115 } # Thorsteinn Palsson
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 360113 } # Steingrímur Hermannsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8007021
+	country = ICL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 360113 } # Steingrímur Hermannsson
+	}
+}
+
+event = {
+	id = 8007022
+	country = ICL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 360111 } # David Oddsson
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 360113 } # Steingrímur Hermannsson
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+### Cod Wars
+
+event = {
+	id = 8007023
+	country = ICL
+
+	name = EVT_8007023_NAME
+	desc = EVT_8007023_DESC
+	picture = nwo\cod_wars
+	decision_picture = nwo\d_cod_wars
+	style = 1
+
+	trigger = {
+		atwar = no
+		exists = ENG
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_8007023_A
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = trigger value = 8007024 }
+	}
+	action = {
+		name = EVT_8007023_B
+		trigger = { ai = yes }
+		ai_chance = 15
+		command = { type = money value = 1 }
+	}
+}
+
+event = {
+	id = 8007024
+	country = ENG
+
+	name = EVT_8007024_NAME
+	desc = EVT_8007024_DESC
+	picture = nwo\cod_wars
+	style = 1
+
+	action = {
+		name = EVT_8007024_A
+		ai_chance = 85
+		command = { type = relation which = ICL value = -50 }
+		command = { type = trigger which = 8007025 }
+	}
+	action = {
+		name = EVT_8007024_B
+		ai_chance = 15
+		command = { type = dissent value = 3 }
+		command = { type = relation which = ICL value = 50 }
+		command = { type = trigger which = 8007026 }
+	}
+}
+
+event = {
+	id = 8007025
+	country = ICL
+	one_action = yes
+
+	name = EVT_8007025_NAME
+	desc = EVT_8007025_DESC
+	picture = nwo\cod_wars
+	style = 1
+
+	action = {
+		name = EVT_8007025_A
+		ai_chance = 85
+		command = { type = industrial_modifier which = total value = 1 }
+	}
+	action = {
+		name = EVT_8007025_B
+		ai_chance = 15
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8007026
+	country = ICL
+
+	name = EVT_8007026_NAME
+	desc = EVT_8007026_DESC
+	picture = nwo\cod_wars
+	style = 1
+
+	action = {
+		name = EVT_8007026_A
+		command = { type = industrial_modifier which = total value = 1 }
+	}
+}
+
+
+
+event = {
+	id = 8007027
+	country = ICL
+
+	name = EVT_8007027_NAME
+	desc = EVT_8007027_DESC
+	picture = nwo\cod_wars
+	decision_picture = nwo\d_cod_wars
+	style = 1
+
+	trigger = {
+		atwar = no
+		exists = ENG
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = EVT_8007027_A
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = trigger value = 8007028 }
+	}
+	action = {
+		name = EVT_8007027_B
+		trigger = { ai = yes }
+		ai_chance = 15
+		command = { type = money value = 1 }
+		command = { type = sleepevent value = 8007029 }
+	}
+}
+
+event = {
+	id = 8007028
+	country = ENG
+
+	name = EVT_8007028_NAME
+	desc = EVT_8007028_DESC
+	picture = nwo\cod_wars
+	style = 1
+
+	action = {
+		name = EVT_8007028_A
+		ai_chance = 85
+		command = { type = relation which = ICL value = -50 }
+		command = { type = trigger which = 8007029 }
+	}
+	action = {
+		name = EVT_8007028_B
+		ai_chance = 15
+		command = { type = dissent value = 3 }
+		command = { type = relation which = ICL value = 50 }
+		command = { type = trigger which = 8007030 }
+	}
+}
+
+event = {
+	id = 8007029
+	country = ICL
+	one_action = yes
+
+	name = EVT_8007029_NAME
+	desc = EVT_8007029_DESC
+	picture = nwo\cod_wars
+	style = 1
+	
+	trigger = {
+		atwar = no
+		exists = ENG
+		event = 8007027
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = EVT_8007029_A
+		ai_chance = 85
+		command = { type = industrial_modifier which = total value = 1 }
+	}
+	action = {
+		name = EVT_8007029_B
+		ai_chance = 15
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8007030
+	country = ICL
+
+	name = EVT_8007030_NAME
+	desc = EVT_8007030_DESC
+	picture = nwo\cod_wars
+	style = 1
+
+	action = {
+		name = EVT_8007030_A
+		command = { type = industrial_modifier which = total value = 1 }
+	}
+}

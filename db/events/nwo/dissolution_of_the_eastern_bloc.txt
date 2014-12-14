@@ -1,0 +1,567 @@
+### There are following levels of Soviet control over Eastern Europe:
+#soviet_control_cee_0 --> USSR starts here
+#soviet_control_cee_1
+#soviet_control_cee_2
+#soviet_control_cee_3
+#soviet_control_cee_4
+#soviet_control_cee_5 --> countries are depuppetted at this point
+#soviet_control_cee_6 --> alliance is broken now (guarantees remain in place)
+#
+#The following walks are made:
+#8500607 - Berlin Airlift succeeds: -1 (historical)
+#8500606 and earlier - Berlin Airlift fails: +1
+#8500702 and others - Berlin Crisis makes Americans leave: +1
+#8500702 and others - Berlin Crisis fails to make Americans leave: -1 (historical)
+#8004307 - Stasi is founded: +1 (historical)
+#8004305 - Berlin Wall is built: +1 (historical)
+#8021308 - Hungarian Revolution succeeds: -3
+#8021309 - Hungarian Revolution fails: +2 (historical)
+#8023223 - Polish Thaw happens: -1 (historical)
+#8004306 - East German uprising is dispersed with big problems: -1
+#8022706 - Tito-Stalin split happens: -1 (historical)
+#8022706 - Tito-Stalin split happens and Yugoslavia wins: -3
+#8022706 - Tito-Stalin split happens and USSR wins: +2
+#8500213 - Cuban Missile Crisis fails for USSR: -1 (historical)
+#8500208 and others - Cuban Missile Crisis succeeds for USSR: +1
+#8500541 - communist victory in Greek Civil War: +1
+#8500820 - North Korea wins Korean War: +1
+#8500821 - South Korea wins Korean War: -1
+#8202002 - USSR allows Marshall Plan for Poland and Czechoslovakia: -1
+#8202002 - USSR allows Marshall Plan for everybody: -2
+#8014261 - United Germany: -1
+#8014228 - 20th Party Congress: -1 (historical)
+#8200105 and earlier - Mao wins civil war: +1 (historical)
+#8216016 - Albania joins Yugoslavia: -1
+#8216025 - Bulgaria joins Yugoslavia: -1
+#
+#Italy becomes communist under Togliatti: +1 (TODO)
+#Soviet Union breaks apart or is conquered: -5
+#USA is conquered by USSR: +5
+#
+#Historical path: -1
+#
+## Levels of Soviet control in respective scenarios:
+#
+# 1945 - soviet_control_cee_0
+#		Berlin Airlift succeeds: -1
+#		Tito-Stalin split happens: -1
+#		Mao wins civil war: +1
+# 1950 - soviet_control_cee_1
+#		Stasi is founded: +1
+# 1953 - soviet_control_cee_0
+# 1956 - soviet_control_cee_0
+#		Hungarian Revolution fails: +2
+#		Polish Thaw happens: -1
+#		20th Party Congress: -1
+# 1959 - soviet_control_cee_2
+#       Berlin Crisis fails to make Americans leave: -1
+#		Berlin Wall is built: +1
+#       Cuban Missile Crisis fails for USSR: -1
+# 1963 - soviet_control_cee_3
+#
+
+### Soviet control over CEE gets higher
+
+event = {
+	id = 8225000
+	country = SOV
+	persistent = yes
+
+	name = EVT_8225000_NAME
+	desc = EVT_8225000_DESC
+	picture = nwo\communism_gets_stronger
+	style = 1
+	
+	trigger = {
+		NOT = { event = 8225005 } # CEE bloc is not dissolved completely
+	}
+
+	action = {
+		name = EVT_8225000_A
+		trigger = { 
+			flag = soviet_control_cee_0
+		}
+		command = { type = dissent value = -3 }
+		command = { type = setflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+	
+	action = {
+		name = EVT_8225000_B
+		trigger = { 
+			flag = soviet_control_cee_1
+		}
+		command = { type = dissent value = -3 }
+		command = { type = setflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+	
+	action = {
+		name = EVT_8225000_C
+		trigger = { 
+			flag = soviet_control_cee_2
+		}
+		command = { type = dissent value = -3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = setflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+	
+    action = {
+		name = EVT_8225000_D
+		trigger = { 
+			flag = soviet_control_cee_3
+		}
+		command = { type = dissent value = -3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = setflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+    
+    action = {
+		name = EVT_8225000_E
+		trigger = { 
+			flag = soviet_control_cee_4
+		}
+		command = { type = dissent value = -3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = setflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+    
+	action = {
+		name = EVT_8225000_F
+		trigger = { 
+			flag = soviet_control_cee_5
+		}
+		command = { type = dissent value = -3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = setflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+		### Recreate puppet statuses
+		command = { type = make_puppet which = U10 }
+		command = { type = make_puppet which = U11 }
+		command = { type = make_puppet which = U12 }
+		command = { type = make_puppet which = U13 }
+		command = { type = make_puppet which = U14 }
+		command = { type = make_puppet which = U15 }
+		command = { type = make_puppet which = U16 }
+		command = { type = make_puppet which = U17 }
+		command = { type = make_puppet which = U18 }
+		command = { type = make_puppet which = U19 }
+		command = { type = make_puppet which = U20 }
+		command = { type = make_puppet which = U21 }
+		command = { type = make_puppet which = U22 }
+		command = { type = make_puppet which = U25 }
+		command = { type = make_puppet which = U26 }
+		command = { trigger = { NOT = { flag = tito_soviet_split } } type = make_puppet which = U27 }
+		command = { type = make_puppet which = U28 }
+		command = { type = make_puppet which = U29 }
+		command = { type = make_puppet which = U30 }
+		command = { type = make_puppet which = U31 }
+		command = { type = make_puppet which = U32 }
+		command = { type = make_puppet which = U33 }
+		command = { type = make_puppet which = U34 }
+		command = { type = make_puppet which = U35 }
+		command = { type = make_puppet which = DDR }
+	}
+	
+	action = {
+		name = EVT_8225000_G
+		trigger = { 
+			flag = soviet_control_cee_6
+		}
+		command = { type = dissent value = -3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = setflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+		### Recreate alliance statuses (triggered by creation of Warsaw Pact event)
+		command = { trigger = { event = 8215030 } type = alliance which = U10 }
+		command = { trigger = { event = 8215030 } type = alliance which = U11 }
+		command = { trigger = { event = 8215030 } type = alliance which = U12 }
+		command = { trigger = { event = 8215030 } type = alliance which = U13 }
+		command = { trigger = { event = 8215030 } type = alliance which = U14 }
+		command = { trigger = { event = 8215030 } type = alliance which = U15 }
+		command = { trigger = { event = 8215030 } type = alliance which = U16 }
+		command = { trigger = { event = 8215030 } type = alliance which = U17 }
+		command = { trigger = { event = 8215030 } type = alliance which = U18 }
+		command = { trigger = { event = 8215030 } type = alliance which = U19 }
+		command = { trigger = { event = 8215030 } type = alliance which = U20 }
+		command = { trigger = { event = 8215030 } type = alliance which = U21 }
+		command = { trigger = { event = 8215030 } type = alliance which = U22 }
+		command = { trigger = { event = 8215030 } type = alliance which = U25 }
+		command = { trigger = { event = 8215030 } type = alliance which = U26 }
+		command = { trigger = { event = 8215030 NOT = { flag = tito_soviet_split } } type = alliance which = U27 }
+		command = { trigger = { event = 8215030 } type = alliance which = U28 }
+		command = { trigger = { event = 8215030 } type = alliance which = U29 }
+		command = { trigger = { event = 8215030 } type = alliance which = U30 }
+		command = { trigger = { event = 8215030 } type = alliance which = U31 }
+		command = { trigger = { event = 8215030 } type = alliance which = U32 }
+		command = { trigger = { event = 8215030 } type = alliance which = U33 }
+		command = { trigger = { event = 8215030 } type = alliance which = U34 }
+		command = { trigger = { event = 8215030 } type = alliance which = U35 }
+		command = { trigger = { event = 8215030 } type = alliance which = DDR }
+	}
+}
+
+event = {
+	id = 8225001
+	country = SOV
+	persistent = yes
+
+	name = EVT_8225001_NAME
+	desc = EVT_8225001_DESC
+	picture = nwo\communism_gets_weaker
+	style = 1
+	
+	trigger = {
+		NOT = { event = 8225005 } # CEE bloc was not dissolved completely
+	}
+
+	action = {
+		name = EVT_8225001_A
+		trigger = { 
+			flag = soviet_control_cee_0
+		}
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = setflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+	
+	action = {
+		name = EVT_8225001_B
+		trigger = { 
+			flag = soviet_control_cee_1
+		}
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = setflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+    
+	action = {
+		name = EVT_8225001_C
+		trigger = { 
+			flag = soviet_control_cee_2
+		}
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = setflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+    
+	action = {
+		name = EVT_8225001_D
+		trigger = { 
+			flag = soviet_control_cee_3
+		}
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = setflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+	}
+	
+	action = {
+		name = EVT_8225001_E
+		trigger = { 
+			flag = soviet_control_cee_4
+		}
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = setflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+		### Break up the puppet system
+		command = { trigger = { puppet = { country = U10 country = SOV } } type = event which = 8225002 where = U10 }
+		command = { trigger = { puppet = { country = U11 country = SOV } } type = event which = 8225002 where = U11 }
+		command = { trigger = { puppet = { country = U12 country = SOV } } type = event which = 8225002 where = U12 }
+		command = { trigger = { puppet = { country = U13 country = SOV } } type = event which = 8225002 where = U13 }
+		command = { trigger = { puppet = { country = U14 country = SOV } } type = event which = 8225002 where = U14 }
+		command = { trigger = { puppet = { country = U15 country = SOV } } type = event which = 8225002 where = U15 }
+		command = { trigger = { puppet = { country = U16 country = SOV } } type = event which = 8225002 where = U16 }
+		command = { trigger = { puppet = { country = U17 country = SOV } } type = event which = 8225002 where = U17 }
+		command = { trigger = { puppet = { country = U18 country = SOV } } type = event which = 8225002 where = U18 }
+		command = { trigger = { puppet = { country = U19 country = SOV } } type = event which = 8225002 where = U19 }
+		command = { trigger = { puppet = { country = U20 country = SOV } } type = event which = 8225002 where = U20 }
+		command = { trigger = { puppet = { country = U21 country = SOV } } type = event which = 8225002 where = U21 }
+		command = { trigger = { puppet = { country = U22 country = SOV } } type = event which = 8225002 where = U22 }
+		command = { trigger = { puppet = { country = U25 country = SOV } } type = event which = 8225002 where = U25 }
+		command = { trigger = { puppet = { country = U26 country = SOV } } type = event which = 8225002 where = U26 }
+		command = { trigger = { puppet = { country = U27 country = SOV } } type = event which = 8225002 where = U27 }
+		command = { trigger = { puppet = { country = U28 country = SOV } } type = event which = 8225002 where = U28 }
+		command = { trigger = { puppet = { country = U29 country = SOV } } type = event which = 8225002 where = U29 }
+		command = { trigger = { puppet = { country = U30 country = SOV } } type = event which = 8225002 where = U30 }
+		command = { trigger = { puppet = { country = U31 country = SOV } } type = event which = 8225002 where = U31 }
+		command = { trigger = { puppet = { country = U32 country = SOV } } type = event which = 8225002 where = U32 }
+		command = { trigger = { puppet = { country = U33 country = SOV } } type = event which = 8225002 where = U33 }
+		command = { trigger = { puppet = { country = U34 country = SOV } } type = event which = 8225002 where = U34 }
+		command = { trigger = { puppet = { country = U35 country = SOV } } type = event which = 8225002 where = U35 }
+		command = { trigger = { puppet = { country = DDR country = SOV } } type = event which = 8225002 where = DDR }
+		
+	}
+	
+	action = {
+		name = EVT_8225001_F
+		trigger = { 
+			flag = soviet_control_cee_5
+		}
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = setflag which = soviet_control_cee_6 }
+		### Break up the Warsaw Pact
+		command = { trigger = { alliance = { country = SOV country = U10 } } type = event which = 8225003 where = U10 }
+		command = { trigger = { alliance = { country = SOV country = U11 } } type = event which = 8225003 where = U11 }
+		command = { trigger = { alliance = { country = SOV country = U12 } } type = event which = 8225003 where = U12 }
+		command = { trigger = { alliance = { country = SOV country = U13 } } type = event which = 8225003 where = U13 }
+		command = { trigger = { alliance = { country = SOV country = U14 } } type = event which = 8225003 where = U14 }
+		command = { trigger = { alliance = { country = SOV country = U15 } } type = event which = 8225003 where = U15 }
+		command = { trigger = { alliance = { country = SOV country = U16 } } type = event which = 8225003 where = U16 }
+		command = { trigger = { alliance = { country = SOV country = U17 } } type = event which = 8225003 where = U17 }
+		command = { trigger = { alliance = { country = SOV country = U18 } } type = event which = 8225003 where = U18 }
+		command = { trigger = { alliance = { country = SOV country = U19 } } type = event which = 8225003 where = U19 }
+		command = { trigger = { alliance = { country = SOV country = U20 } } type = event which = 8225003 where = U20 }
+		command = { trigger = { alliance = { country = SOV country = U21 } } type = event which = 8225003 where = U21 }
+		command = { trigger = { alliance = { country = SOV country = U22 } } type = event which = 8225003 where = U22 }
+		command = { trigger = { alliance = { country = SOV country = U25 } } type = event which = 8225003 where = U25 }
+		command = { trigger = { alliance = { country = SOV country = U26 } } type = event which = 8225003 where = U26 }
+		command = { trigger = { alliance = { country = SOV country = U27 } } type = event which = 8225003 where = U27 }
+		command = { trigger = { alliance = { country = SOV country = U28 } } type = event which = 8225003 where = U28 }
+		command = { trigger = { alliance = { country = SOV country = U29 } } type = event which = 8225003 where = U29 }
+		command = { trigger = { alliance = { country = SOV country = U30 } } type = event which = 8225003 where = U30 }
+		command = { trigger = { alliance = { country = SOV country = U31 } } type = event which = 8225003 where = U31 }
+		command = { trigger = { alliance = { country = SOV country = U32 } } type = event which = 8225003 where = U32 }
+		command = { trigger = { alliance = { country = SOV country = U33 } } type = event which = 8225003 where = U33 }
+		command = { trigger = { alliance = { country = SOV country = U34 } } type = event which = 8225003 where = U34 }
+		command = { trigger = { alliance = { country = SOV country = U35 } } type = event which = 8225003 where = U35 }
+		command = { trigger = { alliance = { country = SOV country = DDR } } type = event which = 8225003 where = DDR }
+	}
+	
+	action = {
+		name = EVT_8225001_G
+		trigger = { 
+			flag = soviet_control_cee_6
+		}
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviet_control_cee_0 }
+		command = { type = clrflag which = soviet_control_cee_1 }
+		command = { type = clrflag which = soviet_control_cee_2 }
+		command = { type = clrflag which = soviet_control_cee_3 }
+		command = { type = clrflag which = soviet_control_cee_4 }
+        command = { type = clrflag which = soviet_control_cee_5 }
+        command = { type = clrflag which = soviet_control_cee_6 }
+
+		command = { type = trigger which = 8225005 }
+	}
+}
+
+### Countries get more freedom
+
+# Depuppetization
+event = {
+	id = 8225002
+	tag = { U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U25 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 DDR }
+	
+	name = EVT_8225002_NAME
+	desc = EVT_8225002_DESC
+	picture = nwo\masses_at_the_lenin_statue
+	style = 1
+
+	action = {
+		name = EVT_8225002_A
+		command = { type = end_puppet }
+	}
+}
+
+# Warsaw Pact is dissolved
+event = {
+	id = 8225003
+	tag = { U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U25 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 DDR }
+	
+	name = EVT_8225003_NAME
+	desc = EVT_8225003_DESC
+	picture = nwo\masses_at_the_lenin_statue
+	style = 1
+
+	action = {
+		name = EVT_8225002_A
+		command = { type = leave_alliance }
+	}
+}
+
+# Soviet bloc completely breaks apart
+event = {
+	id = 8225004
+	tag = { U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U25 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 DDR }
+	
+	name = EVT_8225004_NAME
+	desc = EVT_8225004_DESC
+	picture = nwo\masses_at_the_lenin_statue
+	style = 1
+
+	action = {
+		name = EVT_8225004_A
+		ai_chance = 95
+		command = { type = domestic which = democratic value = 3 }
+		command = { type = domestic which = political_left value = -5 }
+		command = { type = domestic which = freedom value = 3 }
+		command = { type = domestic which = free_market value = 3 }
+
+		command = { type = leave_alliance }
+		command = { type = end_puppet }		
+		command = { type = end_access which = SOV }
+		
+		command = { type = local_clrflag which = block_ideology_change }
+	}
+	action = {
+		name = EVT_8225004_B
+		ai_chance = 5
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = political_left value = -1 }
+
+		command = { type = leave_alliance }
+		command = { type = end_puppet }
+		command = { type = end_access which = SOV }
+		
+		command = { type = local_clrflag which = block_ideology_change }
+	}
+}
+
+### Soviet bloc completely breaks apart
+
+event = {
+	id = 8225005
+	country = SOV
+
+	name = EVT_8225005_NAME
+	desc = EVT_8225005_DESC
+	picture = nwo\masses_at_the_lenin_statue
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = SOV }
+			flag = the_bitter_peace
+			flag = novus_ordo_seclorum
+			event = 8014253 # Intensification of struggles after Stalin's death
+		}
+		### Or manually triggered by 8225001
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8225005_A
+		command = { type = dissent value = 10 }
+        
+        ### End guarantees
+		command = { type = end_guarantee which = SOV where = U10 }
+		command = { type = end_guarantee which = SOV where = U11 }
+		command = { type = end_guarantee which = SOV where = U12 }
+		command = { type = end_guarantee which = SOV where = U13 }
+		command = { type = end_guarantee which = SOV where = U14 }
+		command = { type = end_guarantee which = SOV where = U15 }
+		command = { type = end_guarantee which = SOV where = U16 }
+		command = { type = end_guarantee which = SOV where = U17 }
+		command = { type = end_guarantee which = SOV where = U18 }
+		command = { type = end_guarantee which = SOV where = U19 }
+		command = { type = end_guarantee which = SOV where = U20 }
+		command = { type = end_guarantee which = SOV where = U21 }
+		command = { type = end_guarantee which = SOV where = U22 }
+		command = { type = end_guarantee which = SOV where = U25 }
+		command = { type = end_guarantee which = SOV where = U26 }
+		command = { type = end_guarantee which = SOV where = U27 }
+		command = { type = end_guarantee which = SOV where = U28 }
+		command = { type = end_guarantee which = SOV where = U29 }
+		command = { type = end_guarantee which = SOV where = U30 }
+		command = { type = end_guarantee which = SOV where = U31 }
+		command = { type = end_guarantee which = SOV where = U32 }
+		command = { type = end_guarantee which = SOV where = U33 }
+		command = { type = end_guarantee which = SOV where = U34 }
+		command = { type = end_guarantee which = SOV where = U35 }
+		command = { type = end_guarantee which = SOV where = DDR }
+        
+        command = { type = event which = 8225004 where = U10 }
+		command = { type = event which = 8225004 where = U11 }
+		command = { type = event which = 8225004 where = U12 }
+		command = { type = event which = 8225004 where = U13 }
+		command = { type = event which = 8225004 where = U14 }
+		command = { type = event which = 8225004 where = U15 }
+		command = { type = event which = 8225004 where = U16 }
+		command = { type = event which = 8225004 where = U17 }
+		command = { type = event which = 8225004 where = U18 }
+		command = { type = event which = 8225004 where = U19 }
+		command = { type = event which = 8225004 where = U20 }
+		command = { type = event which = 8225004 where = U21 }
+		command = { type = event which = 8225004 where = U22 }
+		command = { type = event which = 8225004 where = U25 }
+		command = { type = event which = 8225004 where = U26 }
+		command = { type = event which = 8225004 where = U27 }
+		command = { type = event which = 8225004 where = U28 }
+		command = { type = event which = 8225004 where = U29 }
+		command = { type = event which = 8225004 where = U30 }
+		command = { type = event which = 8225004 where = U31 }
+		command = { type = event which = 8225004 where = U32 }
+		command = { type = event which = 8225004 where = U33 }
+		command = { type = event which = 8225004 where = U34 }
+		command = { type = event which = 8225004 where = U35 }
+	}
+
+}
+

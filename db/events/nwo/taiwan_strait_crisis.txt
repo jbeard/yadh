@@ -1,0 +1,462 @@
+# Communist China decides to target Taiwan with artillery bombardment
+# Note that after CCW, there should be a NAP between two Chinas
+event = {
+	id = 8500401
+	country = CHC
+
+	name = EVT_8500401_NAME
+	desc = EVT_8500401_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		flag = CHC_won_civil_war
+		exists = CHI
+	}
+
+	date = { day = 3 month = september year = 1954 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Begin artillery bombardment
+	action = {
+		name = EVT_8500401_A
+		ai_chance = 98
+		command = { type = relation which = CHI value = -100 }
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}	
+	
+	# Stay at peace
+	action = {
+		name = EVT_8500401_B
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = CHI value = 50 }
+		command = { type = dissent value = 3 }
+		command = { type = sleepevent which = 8500402 }
+	}
+}
+
+### USA responds and gives proposal of defense treaty to CHI
+event = {
+	id = 8500402
+	country = USA
+
+	name = EVT_8500402_NAME
+	desc = EVT_8500402_DESC
+	picture = "nwo\usa_taiwan_alliance"
+	style = 1
+
+	trigger = {
+		event = 8500401
+		exists = CHI
+	}
+
+	date = { day = 3 month = september year = 1954 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Propose defense treaty
+	action = {
+		name = EVT_8500402_A
+		ai_chance = 95
+		command = { type = relation which = CHI value = 100 }
+		command = { type = relation which = CHC value = -100 }
+		command = { type = domestic which = interventionism value = 1 }
+	}	
+	
+	# Do nothing
+	action = {
+		name = EVT_8500402_B
+		ai_chance = 5
+		command = { type = relation which = CHI value = -100 }
+		command = { type = relation which = CHC value = 100 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8500403 }
+		command = { type = sleepevent which = 8500405 }
+		command = { type = sleepevent which = 8500406 }
+		# Important: the NAP is cancelled because nothing stops communists from resuming the war
+		command = { type = end_non_aggression which = CHC where = CHI }
+	}
+}
+
+# China accepts defense treaty
+event = {
+	id = 8500403
+	country = CHI
+
+	name = EVT_8500403_NAME
+	desc = EVT_8500403_DESC
+	picture = "nwo\usa_taiwan_alliance"
+	style = 1
+	
+	trigger = {
+		event = 8500402
+		exists = CHC
+	}
+
+	date = { day = 2 month = december year = 1954 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Accept defense treaty
+	action = {
+		name = EVT_8500403_A
+		ai_chance = 100
+		command = { type = guarantee which = USA where = CHI }
+		command = { type = end_non_aggression which = CHC where = CHI }
+		command = { type = relation which = USA value = 100 }
+		command = { type = sleepevent which = 8500404 }
+	}	
+	
+	# No thanks
+	action = {
+		name = EVT_8500403_B
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = end_non_aggression which = CHC where = CHI }
+	}
+}
+
+### Communists try an all-out war, there's no American guarantee
+event = {
+	id = 8500404
+	country = CHC
+
+	name = EVT_8500404_NAME
+	desc = EVT_8500404_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		event = 8500402
+		exists = CHI
+		NOT = { guarantee = { country = USA country = CHI } }
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# "All-out war"
+	action = {
+		name = EVT_8500404_A
+		ai_chance = 95
+		command = { type = war which = CHI }
+	}	
+	
+	# "No thanks"
+	action = {
+		name = EVT_8500404_B
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+### Communists try an all-out war, American guarantee is in place
+event = {
+	id = 8500405
+	country = CHC
+
+	name = EVT_8500405_NAME
+	desc = EVT_8500405_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		event = 8500403
+		exists = CHI
+		guarantee = { country = USA country = CHI }
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Back down
+	action = {
+		name = EVT_8500405_A
+		ai_chance = 95
+		command = { type = domestic which = interventionism value = -1 }
+	}
+	
+	# All-out war
+	action = {
+		name = EVT_8500405_B
+		ai_chance = 5
+		command = { type = war which = CHI }
+	}	
+	
+}
+
+# 1958 Taiwan crisis
+event = {
+	id = 8500406
+	country = CHC
+
+	name = EVT_8500406_NAME
+	desc = EVT_8500406_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		exists = CHI
+		atwar = no
+	}
+
+	date = { day = 23 month = august year = 1958 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Bombardment and air clashes
+	action = {
+		name = EVT_8500406_A
+		ai_chance = 70
+		command = { type = relation which = CHI value = -100 }
+		command = { type = relation which = USA value = -50 }
+		command = { type = trigger which = 8500407 }
+	}
+	
+	# Back down
+	action = {
+		name = EVT_8500406_B
+		ai_chance = 15
+		command = { type = dissent value = 3 }
+	}
+	
+	# All-out war
+	action = {
+		name = EVT_8500406_C
+		ai_chance = 15
+		command = { type = war which = CHI }
+	}	
+	
+}
+
+event = {
+	id = 8500407
+	country = CHI
+
+	name = EVT_8500407_NAME
+	desc = EVT_8500407_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	action = {
+		name = EVT_8500407_A
+		command = { type = add_prov_resource which = 1363 value = 1 where = metal } # Flavor event, Kaohsiung
+	}	
+}
+
+# Mutual Defense Treaty for Taiwan - Communists attack
+event = {
+	id = 8500411
+	country = USA
+
+	name = EVT_8500411_NAME
+	desc = EVT_8500411_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		# Independence of Taiwan is guaranteed
+		guarantee = { country = USA country = CHI }
+		# Yet the communists attacked
+		war = { country = CHC country = CHI }
+		flag = cold_war_pacific
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Take their side!
+	action = {
+		name = EVT_8500411_A
+		ai_chance = 75
+		command = { type = relation which = CHI value = 100 }
+		command = { type = relation which = CHC value = -100 }
+		command = { type = domestic which = interventionism value = 1 }
+	}	
+	
+	# Call for peace but do not act
+	action = {
+		name = EVT_8500411_B
+		ai_chance = 25
+		command = { type = relation which = CHI value = -100 }
+		command = { type = relation which = CHC value = 100 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 10 }
+		command = { type = end_guarantee which = CHI }
+		command = { type = sleepevent which = 8500412 }
+	}
+}
+
+# Soviet reaction to the American intervention
+event = {
+	id = 8500412
+	country = SOV
+
+	name = EVT_8500412_NAME
+	desc = EVT_8500412_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		event = 8500411
+		war = { country = USA country = CHC }
+		flag = cold_war_pacific
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Do nothing
+	action = {
+		name = EVT_8500412_A
+		ai_chance = 75
+		command = { type = relation which = CHI value = 100 }
+		command = { type = relation which = CHC value = -100 }
+		command = { type = relation which = USA value = 20 }
+		command = { type = trigger which = 8500415 } # Americans ally with CHI
+	}
+	
+	# Send ultimatum
+	action = {
+		name = EVT_8500412_B
+		ai_chance = 25
+		command = { type = relation which = CHI value = -100 }
+		command = { type = relation which = CHC value = 100 }
+		command = { type = relation which = USA value = -50 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 15 }
+		command = { type = belligerence value = 15 }
+		command = { type = trigger which = 8500413 }
+	}	
+	
+}
+
+# American reaction to the Soviet ultimatum
+event = {
+	id = 8500413
+	country = USA
+
+	name = EVT_8500413_NAME
+	desc = EVT_8500413_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		event = 86300502
+		war = { country = CHC country = CHI }
+		flag = cold_war_pacific
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# Back off
+	action = {
+		name = EVT_8500413_A
+		ai_chance = 80
+		command = { type = peace which = CHC value = 0 }
+		command = { type = dissent value = 20 }
+		command = { type = trigger which = 8500420 }
+	}
+	
+	# Let us have the war
+	action = {
+		name = EVT_8500413_B
+		ai_chance = 20
+		command = { type = relation which = SOV value = -200 }
+		command = { type = trigger which = 8500414 }
+		command = { type = trigger which = 8500415 } # Americans ally with CHI
+	}
+
+}
+
+# Soviets must decide whether to declare war
+event = {
+	id = 8500414
+	country = SOV
+
+	name = EVT_8500414_NAME
+	desc = EVT_8500414_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	trigger = {
+		event = 86300502
+		war = { country = CHC country = CHI }
+		flag = cold_war_pacific
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# So it is war (WW3)
+	action = {
+		name = EVT_8500414_A
+		ai_chance = 90
+		command = { type = war which = USA }
+	}
+	
+	# Back off
+	action = {
+		name = EVT_8500414_B
+		ai_chance = 10
+		command = { type = dissent value = 20 }
+		command = { type = trigger which = 8500412 }
+	}
+
+}
+
+# Chinese get into alliance with USA
+event = {
+	id = 8500415
+	country = SOV
+
+	name = EVT_8500415_NAME
+	desc = EVT_8500415_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	# Great!
+	action = {
+		name = EVT_8500415_A
+		ai_chance = 100
+		command = { type = alliance which = USA }
+	}
+	
+	# Back off
+	action = {
+		name = EVT_8500415_B
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+
+}
+
+# USA doesn't meet its obligations
+event = {
+	id = 8500420
+	country = CHI
+
+	name = EVT_8500420_NAME
+	desc = EVT_8500420_DESC
+	picture = "nwo\taiwan_strait"
+	style = 1
+
+	action = {
+		name = EVT_8500420_A
+		command = { type = leave_alliance }
+		command = { type = dissent value = 20 }
+	}
+
+}

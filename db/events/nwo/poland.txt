@@ -1,0 +1,278 @@
+event = {
+	id = 8011601
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 60016 } # Wladyslaw Raczkiewicz
+		command = { type = headofgovernment which = 60025 } # Stanislaw Mikolajczyk
+		command = { type = foreignminister which = 60038 } # Tadeusz Romer
+		command = { type = armamentminister which = 60328 } # Jan Kwapinski
+		command = { type = ministerofsecurity which = 60329 } # Stanislaw Kot
+		command = { type = ministerofintelligence which = 60090 } # Jan Kowalewski
+		command = { type = chiefofstaff which = 60327 } # Wladyslaw Anders
+		command = { type = chiefofarmy which = 60102 } # Tadeusz Bor-Komorowski
+		command = { type = chiefofnavy which = 60106 } # Jozef Unrug
+		command = { type = chiefofair which = 60110 } # Ludomil Rayski
+	}
+}
+
+event = {
+	id = 8011602
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 60026 } # Tomasz Arciszewski
+		command = { type = foreignminister which = 60039 } # Adam Tarnowski
+		command = { type = armamentminister which = 60302 } # Jan Kwapinski
+		command = { type = ministerofsecurity which = 60303 } # Adam Pragier 
+		command = { type = chiefofstaff which = 60096 } # Tadeusz Bor-Komorowski
+		command = { type = chiefofarmy which = 60101 } # Wladyslaw Anders
+	}
+}
+
+event = {
+	id = 8011603
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 60300 } # August Zaleski
+		command = { type = headofgovernment which = 60301 } # Tadeusz Bor-Komorowski
+		command = { type = foreignminister which = 60039 } # Adam Tarnowski
+		command = { type = armamentminister which = 60304 } # Tadeusz Bor-Komorowski
+		command = { type = ministerofsecurity which = 60305 } # Zygmunt Berezowski
+		command = { type = chiefofstaff which = 60306 } # Marian Kukiel
+		command = { type = chiefofarmy which = 60101 } # Wladyslaw Anders
+	}
+}
+
+event = {
+	id = 8011604
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 60307 } # Tadeusz Tomaszewski
+		command = { type = foreignminister which = 60308 } # Mieczyslaw Sokolowski
+		command = { type = armamentminister which = 60309 } # Tadeusz Tomaszewski
+		command = { type = ministerofsecurity which = 60310 } # Roman Odzierzynski
+		command = { type = chiefofstaff which = 60311 } # Roman Odzierzynski
+	}
+}
+
+event = {
+	id = 8011605
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 60312 } # Roman Odzierzynski
+		command = { type = foreignminister which = 60308 } # Mieczyslaw Sokolowski
+		command = { type = armamentminister which = 60313 } # Stanislaw Sopicki
+		command = { type = ministerofsecurity which = 60310 } # Roman Odzierzynski
+		command = { type = chiefofstaff which = 60311 } # Roman Odzierzynski
+	}
+}
+
+event = {
+	id = 8011606
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 60314 } # Stanislaw Mackiewicz
+		command = { type = foreignminister which = 60315 } # Stanislaw Mackiewicz
+		command = { type = armamentminister which = 60313 } # Stanislaw Sopicki
+		command = { type = ministerofsecurity which = 60316 } # Stanislaw Mackiewicz
+		command = { type = chiefofarmy which = 60317 } # Michal Karaszewicz-Tokarzewski
+	}
+}
+
+event = {
+	id = 8011607
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 60318 } # Antoni Pajak
+		command = { type = foreignminister which = 60320 } # Aleksander Zawisza
+		command = { type = armamentminister which = 60319 } # Antoni Pajak
+		command = { type = ministerofsecurity which = 60321 } # Jerzy Scibor
+		command = { type = chiefofstaff which = 60322 } # Kazimierz Sawicki 
+	}
+}
+
+event = {
+	id = 8011608
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 60318 } # Antoni Pajak
+		command = { type = foreignminister which = 60320 } # Aleksander Zawisza
+		command = { type = armamentminister which = 60319 } # Antoni Pajak
+		command = { type = ministerofsecurity which = 60323 } # Stanislaw Pomianowski
+		command = { type = chiefofstaff which = 60094 } # Michal Karaszewicz-Tokarzewski
+	}
+}
+
+event = {
+	id = 8011609
+	country = POL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 60318 } # Antoni Pajak
+		command = { type = foreignminister which = 60320 } # Aleksander Zawisza
+		command = { type = armamentminister which = 60324 } # Tadeusz Machalski
+		command = { type = ministerofsecurity which = 60325 } # Stanislaw Lubodziecki
+		command = { type = chiefofstaff which = 60326 } # Antoni Brochwicz-Lewinski
+	}
+}
+

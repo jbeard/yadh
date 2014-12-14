@@ -1,0 +1,1099 @@
+event = {
+	id = 8005701
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 5014 } # Charles de Gaulle
+		command = { type = headofgovernment which = 5029 } # Charles de Gaulle
+		command = { type = foreignminister which = 5043 } # René Lucien Massigli
+		command = { type = armamentminister which = 5071 } # René Pleven
+		command = { type = ministerofsecurity which = 5097 } # André Le Troquer
+		command = { type = ministerofintelligence which = 5116 } # Roger Lantenois
+		command = { type = chiefofstaff which = 5128 } # Pierre Bourges-Maunory
+		command = { type = chiefofarmy which = 5131 } # Jean-Marie Lattre de Tassigny
+		command = { type = chiefofnavy which = 5141 } # Etienne Schlumberger
+		command = { type = chiefofair which = 5151 } # Raymond Roques
+	}
+}
+
+event = {
+	id = 8005702
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5017 } # Felix Gouin
+	}
+}
+
+event = {
+	id = 8005703
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5022 } # Georges Bidault
+	}
+}
+
+event = {
+	id = 8005704
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5011 } # Vincent Auriol
+		command = { type = headofgovernment which = 5167 } # Robert Schumann
+		command = { type = foreignminister which = 5038 } # George Bidault
+		command = { type = armamentminister which = 5174 } # Pierre-Henri Teitgen
+		command = { type = ministerofsecurity which = 5085 } # Jules Moch
+		command = { type = ministerofintelligence which = 5113 } # André Marie
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5187 } # Vincent Auriol
+		command = { type = headofgovernment which = 5022 } # Georges Bidault
+		command = { type = foreignminister which = 5042 } # Pierre Henri Watier
+		command = { type = armamentminister which = 5068 } # Jules Romains
+		command = { type = ministerofsecurity which = 5094 } # André Marie
+		command = { type = ministerofintelligence which = 5117 } # André Boulloche
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005705
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5187 } # Vincent Auriol
+		command = { type = headofgovernment which = 5024 } # André Marie
+		command = { type = foreignminister which = 5173 } # Robert Schumann
+		command = { type = armamentminister which = 5175 } # René Mayer
+		command = { type = ministerofsecurity which = 5094 } # André Marie
+		command = { type = ministerofintelligence which = 5182 } # Robert Lecourt
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5011 } # Vincent Auriol
+		command = { type = headofgovernment which = 5167 } # Robert Schumann
+		command = { type = foreignminister which = 5038 } # George Bidault
+		command = { type = armamentminister which = 5174 } # Pierre-Henri Teitgen
+		command = { type = ministerofsecurity which = 5085 } # Jules Moch
+		command = { type = ministerofintelligence which = 5113 } # André Marie
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005706
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 5024
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5026 } # Antoine Henri Queuille
+		command = { type = armamentminister which = 5176 } # Paul Ramadier
+		command = { type = ministerofintelligence which = 5113 } # André Marie
+	}
+}
+
+event = {
+	id = 8005707
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5187 } # Vincent Auriol
+		command = { type = headofgovernment which = 5022 } # Georges Bidault
+		command = { type = foreignminister which = 5173 } # Robert Schumann
+		command = { type = armamentminister which = 5071 } # René Pleven
+		command = { type = ministerofsecurity which = 5094 } # André Marie
+		command = { type = ministerofintelligence which = 5183 } # René Mayer
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5011 } # Vincent Auriol
+		command = { type = headofgovernment which = 5167 } # Robert Schumann
+		command = { type = foreignminister which = 5038 } # George Bidault
+		command = { type = armamentminister which = 5174 } # Pierre-Henri Teitgen
+		command = { type = ministerofsecurity which = 5085 } # Jules Moch
+		command = { type = ministerofintelligence which = 5113 } # André Marie
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005708
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5187 } # Vincent Auriol
+		command = { type = headofgovernment which = 5168 } # René Pleven
+		command = { type = foreignminister which = 5173 } # Robert Schumann
+		command = { type = ministerofsecurity which = 5085 } # Jules Moch
+		command = { type = ministerofsecurity which = 5179 } # Antoine Henri Queuille
+		command = { type = ministerofintelligence which = 5183 } # René Mayer
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5011 } # Vincent Auriol
+		command = { type = headofgovernment which = 5167 } # Robert Schumann
+		command = { type = foreignminister which = 5038 } # George Bidault
+		command = { type = armamentminister which = 5174 } # Pierre-Henri Teitgen
+		command = { type = ministerofsecurity which = 5085 } # Jules Moch
+		command = { type = ministerofintelligence which = 5113 } # André Marie
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005709
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5187 } # Vincent Auriol
+		command = { type = headofgovernment which = 5170 } # Antoine Pinay
+		command = { type = foreignminister which = 5173 } # Robert Schumann
+		command = { type = armamentminister which = 5071 } # René Pleven
+		command = { type = ministerofsecurity which = 5179 } # Antoine Henri Queuille
+		command = { type = ministerofintelligence which = 5185 } # Leon Martinaud-Deplat
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5011 } # Vincent Auriol
+		command = { type = headofgovernment which = 5169 } # Edgar Faure
+		command = { type = foreignminister which = 5033 } # Léon Blum
+		command = { type = armamentminister which = 5177 } # Jules Moch
+		command = { type = ministerofsecurity which = 5180 } # Charles Brune
+		command = { type = ministerofintelligence which = 5184 } # Edgar Faure
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005710
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5011 } # Vincent Auriol
+		command = { type = headofgovernment which = 5171 } # René Mayer
+		command = { type = foreignminister which = 5033 } # Léon Blum
+		command = { type = armamentminister which = 5071 } # René Pleven
+		command = { type = ministerofsecurity which = 5180 } # Charles Brune
+		command = { type = ministerofintelligence which = 5184 } # Edgar Faure
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5187 } # Vincent Auriol
+		command = { type = headofgovernment which = 5170 } # Antoine Pinay
+		command = { type = foreignminister which = 5173 } # Robert Schumann
+		command = { type = armamentminister which = 5071 } # René Pleven
+		command = { type = ministerofsecurity which = 5179 } # Antoine Henri Queuille
+		command = { type = ministerofintelligence which = 5185 } # Leon Martinaud-Deplat
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005711
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5187 } # Vincent Auriol
+		command = { type = headofgovernment which = 5172 } # Joseph Laniel
+		command = { type = foreignminister which = 5173 } # Robert Schumann
+		command = { type = armamentminister which = 5071 } # René Pleven
+		command = { type = ministerofsecurity which = 5181 } # Leon Martinaud-Deplat
+		command = { type = ministerofintelligence which = 5186 } # Paul Ribeyre
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5011 } # Vincent Auriol
+		command = { type = headofgovernment which = 5171 } # René Mayer
+		command = { type = foreignminister which = 5033 } # Léon Blum
+		command = { type = armamentminister which = 5071 } # René Pleven
+		command = { type = ministerofsecurity which = 5180 } # Charles Brune
+		command = { type = ministerofintelligence which = 5184 } # Edgar Faure
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8005712
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5400 } # René Coty
+		command = { type = headofgovernment which = 5407 } # Pierre Mendes France
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5400 } # René Coty
+		command = { type = headofgovernment which = 5172 } # Joseph Laniel
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005713
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5400 } # René Coty
+		command = { type = headofgovernment which = 5401 } # Guy Mollet
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5400 } # René Coty
+		command = { type = headofgovernment which = 5172 } # Joseph Laniel
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005714
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5402 } # Maurice Bourges-Maunoury
+	}
+}
+
+event = {
+	id = 8005715
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5403 } # Félix Gaillard
+	}
+}
+
+event = {
+	id = 8005716
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5404 } # Charles de Gaulle
+		command = { type = headofgovernment which = 5405 } # Michel Debré
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5404 } # Charles de Gaulle
+		command = { type = headofgovernment which = 5403 } # Félix Gaillard
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5404 } # Charles de Gaulle
+	}
+}
+
+event = {
+	id = 8005717
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5404 } # Charles de Gaulle
+		command = { type = headofgovernment which = 5406 } # Georges Pompidou
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 5401 } # Guy Mollet
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8005718
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5404 } # Charles de Gaulle
+		command = { type = headofgovernment which = 5406 } # Georges Pompidou
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5422 } # François Mitterrand
+		command = { type = headofgovernment which = 5408 } # Gaston Defferre
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8005719
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 5406
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5409 } # Maurice Couve de Murville
+	}
+}
+
+event = {
+	id = 8005720
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5412 } # Georges Pompidou
+		command = { type = headofgovernment which = 5413 } # Jacques Chaban-Delmas
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5410 } # Alain Poher
+		command = { type = headofgovernment which = 5411 } # Jacques Duclos
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005721
+	country = FRA
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = nwo\death
+	style = 1
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = sleepminister which = 5014 } # Charles de Gaulle
+		command = { type = sleepminister which = 5029 } # Charles de Gaulle
+		command = { type = sleepminister which = 5058 } # Charles de Gaulle
+		command = { type = sleepminister which = 5126 } # Charles de Gaulle
+		command = { type = sleepminister which = 5404 } # Charles de Gaulle
+	}
+}
+
+event = {
+	id = 8005722
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 5413
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5414 } # Pierre Messmer
+	}
+}
+
+event = {
+	id = 8005723
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5416 } # Valéry Giscard d'Estaing
+		command = { type = headofgovernment which = 5417 } # Jacques Chirac
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5422 } # François Mitterrand
+		command = { type = headofgovernment which = 5415 } # Pierre Mauroy
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005724
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 5417
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5418 } # Raymond Barre
+	}
+}
+
+event = {
+	id = 8005725
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1981 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5422 } # François Mitterrand
+		command = { type = headofgovernment which = 5415 } # Pierre Mauroy
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5416 } # Valéry Giscard d'Estaing
+		command = { type = headofgovernment which = 5417 } # Jacques Chirac
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 8005726
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 5415
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5423 } # Laurent Fabius
+	}
+}
+
+event = {
+	id = 8005727
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 5423
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5417 } # Jacques Chirac
+	}
+}
+
+event = {
+	id = 8005728
+	country = FRA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 5422 } # François Mitterrand
+		command = { type = headofgovernment which = 5419 } # Michel Rocard
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5420 } # Jacques Chirac
+		command = { type = headofgovernment which = 5418 } # Raymond Barre
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005729
+	country = FRA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 5418
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 5421 } # Édith Cresson
+	}
+}
+
+event = {
+	id = 8005730
+	country = FRA
+
+	name = EVT_8005730_NAME
+	desc = EVT_8005730_DESC
+	picture = "nwo\de_gaulle_fifth_republic"
+	decision_picture = "nwo\d_de_gaulle_fifth_republic"
+	style = 1
+
+	decision = {
+		government = democratic
+		flag = cold_war
+		headofstate = 5404
+	}
+	
+	trigger = {
+		government = democratic
+		flag = cold_war
+		headofstate = 5404
+	}
+
+	date = { day = 1 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8005730_A
+		ai_chance = 98
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = headofstate which = 5404 } # Charles de Gaulle
+	}
+
+	action_b = {
+		name = EVT_8005730_B
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = dissent value = 1 }
+	}
+}

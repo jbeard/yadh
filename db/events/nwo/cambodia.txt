@@ -1,0 +1,785 @@
+event = {
+	id = 8003101
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590017 } # Sisowath Monireth
+		command = { type = foreignminister which = 590067 } # Son Ngoc Thanh
+		command = { type = armamentminister which = 590029 } # Chai Saing Yun
+		command = { type = ministerofsecurity which = 590035 } # Lon Nol
+		command = { type = ministerofintelligence which = 590040 } # Sisowath Watchayavong
+	}
+}
+
+event = {
+	id = 8003102
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590018 } # Sisowath Youtevong
+	}
+}
+
+event = {
+	id = 8003103
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590019 } # Sisowath Watchayavong
+	}
+}
+
+event = {
+	id = 8003104
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590061 } # Samdech Penn Nouth
+	}
+}
+
+event = {
+	id = 8003105
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590062 } # Yem Sambaur
+	}
+}
+
+event = {
+	id = 8003106
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590063 } # Sisowath Monipong
+	}
+}
+
+event = {
+	id = 8003107
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590064 } # Oum Chheang Sun
+	}
+}
+
+event = {
+	id = 8003108
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590065 } # Huy Kanthoul
+	}
+}
+
+event = {
+	id = 8003109
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590061 } # Samdech Penn Nouth
+	}
+}
+
+event = {
+	id = 8003110
+	country = CMB
+
+	name = "EVT_8003110_NAME"
+	desc = "EVT_8003110_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590012 } # H.M. Norodom Suramarit
+		command = { type = headofgovernment which = 590100 } # Leng Ngeth
+	}
+}
+
+event = {
+	id = 8003111
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590012 } # H.M. Norodom Suramarit
+		command = { type = headofgovernment which = 590101 } # Sam Yun
+	}
+}
+
+event = {
+	id = 8003112
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590012 } # H.M. Norodom Suramarit
+		command = { type = headofgovernment which = 590102 } # Sim Var
+	}
+}
+
+event = {
+	id = 8003113
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590012 } # H.M. Norodom Suramarit
+		command = { type = headofgovernment which = 590066 } # Norodom Sihanouk
+	}
+}
+
+event = {
+	id = 8003114
+	country = CMB
+
+	name = "EVT_8003114_NAME"
+	desc = "EVT_8003114_DESC"
+	picture = "nwo\death"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 590012 } # H.M. Norodom Suramarit
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+	}
+}
+
+event = {
+	id = 8003115
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590103 } # Pho Proeung
+	}
+}
+
+event = {
+	id = 8003116
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590061 } # Samdech Penn Nouth
+	}
+}
+
+event = {
+	id = 8003117
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590104 } # Nhiek Tioulong
+	}
+}
+
+event = {
+	id = 8003118
+	country = CMB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590105 } # Norodom Kantol
+	}
+}
+
+event = {
+	id = 8003119
+	country = CMB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 590106 } # Cheng Heng
+		command = { type = headofgovernment which = 590107 } # Lon Nol
+	}
+}
+
+event = {
+	id = 8003120
+	country = CMB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 590108 } # Sisowath Sirik Matak
+	}
+}
+
+event = {
+	id = 8003121
+	country = CMB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 590109 } # Hang Thun Hak
+	}
+}
+
+event = {
+	id = 8003122
+	country = CMB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 590110 } # Long Boret
+	}
+}
+
+event = {
+	id = 8003123
+	country = CMB
+	one_action = yes
+
+	name = EVT_8003123_NAME
+	desc = EVT_8003123_DESC
+	picture = nwo\democratic_kampuchea
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = EVT_8003123_A
+		ai_chance = 98
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 590011 } # H.M. Norodom Sihanouk
+		command = { type = headofgovernment which = 590061 } # Samdech Penn Nouth
+	}
+	
+	action = {
+		name = EVT_8003123_B
+		ai_chance = 2
+		command = { type = dissent value = 30 }
+		command = { type = sleepevent which = 8003124 }
+		command = { type = sleepevent which = 8003125 }
+	}
+}
+
+event = {
+	id = 8003124
+	country = CMB
+
+	name = EVT_8003124_NAME
+	desc = EVT_8003124_DESC
+	picture = nwo\pol_pot
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+		event = 8003123
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_8003124_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 590111 } # Khieu Samphan
+		command = { type = headofgovernment which = 590112 } # Pol Pot
+		command = { type = flag_ext where = CMB which = _1976 }
+		command = { type = name where = CMB which = "CMB76" }
+		command = { type = dissent value = 25 }
+	}
+}
+
+event = {
+	id = 8003125
+	country = CMB
+
+	name = EVT_8003125_NAME
+	desc = EVT_8003125_DESC
+	picture = nwo\killing_fields
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+		event = 8003124
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = EVT_8003125_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 590115 } # Heng Samrin
+		command = { type = headofgovernment which = 590113 } # Heng Samrin
+	}
+}
+
+event = {
+	id = 8003126
+	country = CMB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1981 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 590114 } # Chan Sy
+	}
+}
+
+event = {
+	id = 8003127
+	country = CMB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 590116 } # Hun Sen
+	}
+}
+
+event = {
+	id = 8003128
+	country = CMB
+
+	name = EVT_8003128_NAME
+	desc = EVT_8003128_DESC
+	picture = nwo\cambodia
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8003128_A
+		ai_chance = 99
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = name where = CMB which = "CMB" }
+		command = { type = flag_ext where = CMB which = _1989 }
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8003128_B
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+	}
+}
+

@@ -1,0 +1,629 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+#Event list for Czechoslovakia
+#CZE	13302200	The Outcome of the Great War (historical)
+#CZE	13302210	Karl IV is back in Hungary
+#CZE	13302211	Assassination attempt on Kramar
+#CZE	13302212	Karel Kramár resigns
+#CZE	13302213	The Constitution of 1920
+#CZE	13302214	1920 parliamentary elections
+#CZE	13302215	Vlastimil Tusar resigns
+#CZE	13302216	Hungary restored Habsburg monarchy
+#CZE	13302217	The Little Entente
+#CZE	13302218	The Treaty of Brno
+#CZE	13302219	Polish elections in Silesia
+#CZE	13302220	The Allied Powers force us to stop the war
+#CZE	13302221	1920 presidential elections
+#CZE	13302222	Jan Cerný resigns
+#CZE	13302223	Edouard Beneš resigns
+#CZE	13302224	Vlastimil Tusar passes away
+#CZE	13302225	1925 parliamentary elections
+#CZE	13302226	1927 presidential elections
+#CZE	13302227	1929 parliamentary elections
+
+# Outcome of Great War
+event = {
+	id = 13302200
+	country = CZE
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30	
+	
+	trigger = {
+		atwar = no
+		event = 2192508 #provisional government
+		NOT = { exists = U09 }
+	}
+	
+	name = "EVT_13302200_NAME"
+	desc = "EVT_13302200_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Independence!"
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = headofstate which = 120141 } # Tomás Masaryk
+		command = { type = headofgovernment which = 120140 } # Karel Kramar
+		command = { type = foreignminister which = 120135 } # Edouard Benes
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	}
+}
+
+# Karl back in Hungary
+event = {
+	id = 13302210
+	country = CZE
+	
+	# Triggered by HUN 13301725
+	
+	name = "EVT_13302210_NAME"
+	desc = "EVT_13302210_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Send ultimatum"
+		ai_chance = 100
+		command = { type = trigger which = 13301726 }
+	}
+	
+	action = { 
+		name = "Let it be"
+		ai_chance = 0
+		command = { type = dissent which = 3 }
+	}
+}
+
+# Assassination attempt on Kramár
+event = {
+	id = 13302211
+	country = CZE
+	
+	date = { day = 0 month = may year = 1919 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		incabinet = 120140
+	}
+	
+	name = "EVT_13302211_NAME"
+	desc = "EVT_13302211_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Glad he's still alive"
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+# Kramár resigns
+event = {
+	id = 13302212
+	country = CZE
+	
+	date = { day = 8 month = july year = 1919 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		exists = SOV
+		NOT = { relation = { which = UGS value = 50 } }
+		NOT = { relation = { which = UER value = 50 } }
+		NOT = { relation = { which = UTC value = 50 } }
+		incabinet = 120140
+	}
+	
+	name = "EVT_13302212_NAME"
+	desc = "EVT_13302212_DESC"
+	picture = "minister_resign"
+	style = 2 
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 120136 } # Vlatismil Tusar
+	}
+}
+
+# Constitution of 1920
+event = {
+	id = 13302213
+	country = CZE
+	
+	date = { day = 1 month = january year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		event = 13302200
+		event = 2024501
+		government = democratic
+	}
+	
+	name = "EVT_13302213_NAME"
+	desc = "EVT_13302213_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "For a peaceful and united nation" 
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+	}
+	
+	action = {
+		name = "Regional autonomy? Are you kidding?"
+		ai_chance = 1
+		command = { type = dissent value = 15 }
+		command = { type = province_revoltrisk which = 213 value = 50 }
+	}
+}
+
+# 1920 parliamentary elections
+event = {
+	id = 13302214
+	country = CZE
+	
+	date = { day = 1 month = january year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 7
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = CZE }
+	}
+	
+	name = "EVT_13302214_NAME"
+	desc = "EVT_13302214_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "The Social Democratic Workers Party wins"
+		command = { type = headofgovernment which = 120136 }
+	}
+	
+	#action = TODO
+}
+
+# Tusar resigns
+event = {
+	id = 13302215
+	country = CZE
+	
+	date = { day = 24 month = august year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		incabinet = 120136 
+	}
+	
+	name = "EVT_13302215_NAME"
+	desc = "EVT_13302215_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 120137 } # Jan Cerny
+	}
+}
+
+# Habsburg restored
+event = {
+	id = 13302216
+	country = CZE
+	
+	# Triggered by HUN 13301723
+	
+	name = "Habsburg monarchy restored"
+	desc = "Karl of Austria has been crowned Karl IV King of Hungary. This can threaten our independence."
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "No Habsburg will ever rule again"
+		ai_chance = 50
+		command = { type = war which = HUN }
+	}
+	
+	action = {
+		name = "We don't want another war"
+		ai_chance = 50
+		command = { type = dissent value = 15 }
+	}
+}
+
+# The Little Entente
+event = {
+	id = 13302217
+	country = CZE
+	
+	date = { day = 1 month = january year = 1921 }	
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		atwar = no
+		event = 13301301 # Serbia's outcome of GW
+		NOT = { or = { 
+			exists = U09 
+			war = { country = CZE country = ROM }
+			war = { country = CZE country = SER }
+			alliance = { country = CZE country = ROM }
+			alliance = { country = CZE country = SER }
+			alliance = { country = CZE country = HUN }
+			alliance = { country = SER country = HUN }
+			alliance = { country = ROM country = HUN }
+		} }
+		exists = SER
+		exists = ROM
+	}
+	
+	name = "EVT_13302217_NAME"
+	desc = "EVT_13302217_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "United against Habsburg restoration"
+		ai_chance = 100
+		command = { type = trigger which = 13301324 }
+		command = { type = trigger which = 13301820 }
+	}
+	
+	action = {
+		name = "We don't need them"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 3 }
+	}
+}
+
+# Treaty of Brno
+event = {
+	id = 13302218
+	country = CZE
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30 
+	
+	trigger = {
+		exists = AUS
+		exists = CZE
+		relation = { which = AUS value = 5 }
+		NOT = { war = { country = AUS country = CZE } }
+	}
+	
+	name = "The Treaty of Brno"
+	desc = "EVT_13300112_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "Sign it"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = event which = 13300112 where = AUS when = 2 }
+	}
+	
+	action = {
+		name = "Don't sign"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+# Polish elections in Silesia
+event = {
+	id = 13302219
+	country = CZE
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 100
+	
+	trigger = {
+		exists = POL
+		not = { atwar = POL }
+		event = 2193501
+		owned = { province = 221 data = POL }
+		NOT = { OR = {
+			ispuppet = CZE
+			ispuppet = POL
+			alliance = { country = CZE country = POL }
+		} }
+		army = 4
+	}
+	
+	name = "EVT_13302219_NAME"
+	desc = "EVT_13302219_DESC"
+	
+	action = {
+		name = "We will stop elections by force!"
+		ai_chance = 100
+		command = { type = war which = POL }
+		command = { type = addcore which = 221 }
+		command = { type = addclaim which = 168 }
+		command = { type = addclaim which = 166 }
+	}
+	
+	action = {
+		name = "Let it be"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+}
+
+# The Allies stop the war
+event = {
+	id = 13302220
+	country = CZE
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 10
+	
+	trigger = {
+		war = { country = CZE country = POL }
+		or = {
+			and = { 
+				control = { province = 221 data = CZE }
+				not = { control = { province = 203 data = POL } }
+			}
+			and = { 
+				not = { control = { province = 221 data = CZE } }
+				control = { province = 203 data = POL }
+			}
+			war = { country = POL country = SOV }
+			lost_national = { country = CZE value = 50 }
+		}
+	}
+	
+	name = "EVT_13302220_NAME"
+	desc = "EVT_13302220_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "We must stop this while we still can..."
+		ai_chance = 100
+		command = { trigger = { control = { province = 203 data = POL } not = { control = { province = 221 data = CZE } } } type = removecore which = 221 }
+		command = { trigger = { control = { province = 203 data = POL } not = { control = { province = 221 data = CZE } } } type = removeclaim which = 168 }
+		command = { trigger = { control = { province = 203 data = POL } not = { control = { province = 221 data = CZE } } } type = removeclaim which = 166 }
+		command = { trigger = { control = { province = 221 data = CZE } not = { control = { province = 203 data = POL } } } type = secedeprovince which = CZE when = 2 value = 221 }
+		#command = { trigger = { control = { province = 168 data = CZE } not = { control = { province = 203 data = POL } } } type = secedeprovince which = CZE when = 2 value = 168 }
+		command = { type = peace which = POL }
+	}
+	
+	action = {
+		name = "Poland must pay!"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = set_relation which = ENG value = -200 }
+		command = { type = set_relation which = FRA value = -200 }
+		command = { type = set_relation which = ITA value = -200 }
+	}
+}
+
+# 1920 presidential elections
+event = {
+	id = 13302221
+	country = CZE
+	
+	date = { day = 0 month = january year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		NOT = { ispuppet = CZE }
+		government = democratic
+	}
+	
+	name = "EVT_13302221_NAME"
+	desc = "EVT_13302221_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofstate which = 120141 }
+	}
+}
+
+# Jan Cerný resigns
+event = {
+	id = 13302222
+	country = CZE
+	
+	date = { day = 26 month = september year = 1921 }
+	
+	trigger = {
+		incabinet = 120137
+	}
+	
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 120138 } # Edouard Benes
+	}
+}
+
+# Beneš resigns
+event = {
+	id = 13302223
+	country = CZE
+	
+	date = { day = 7 month = october year = 1922 }
+	
+	trigger = {
+		incabinet = 120138 
+	}
+	
+	name = "Edouard Beneš resigns"
+	desc = "EVT_105_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"	
+		command = { type = headofgovernment which = 120139 }
+	}
+}
+
+# Tusar passes away
+event = {
+	id = 13302224
+	country = CZE
+	
+	date = { day = 22 month = march year = 1924 }
+	
+	trigger = {
+		minister = 120136
+	}
+	
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+	style = 2
+	
+	action = {
+		name = "Rest in peace"
+		command = { type = sleepminister which = 120136 }
+	}
+}	
+
+# 1925 parliamentary elections
+event = {
+	id = 13302225
+	country = CZE
+	
+	date = { day = 15 month = november year = 1925 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = CZE }
+	}
+	
+	name = "EVT_13302225_NAME"
+	desc = "EVT_13302225_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "The Republican Party of Agricultural and Smallholder People wins"
+		ai_chance = 100
+		command = { type = headofgovernment which = 120139 }
+	}
+	
+	action = {
+		name = "The Communist Party wins"
+		ai_chance = 0
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = free_market value = 5 }
+	}
+	
+	action = {
+		name = "The Social Democratic Workers Party wins"
+		ai_chance = 0
+		command = { type = headofgovernment which = 120156 }
+	}
+}
+
+# 1927 presidential elections
+event = {
+	id = 13302226
+	country = CZE
+	
+	date = { day = 0 month = january year = 1929 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30	
+	
+	trigger = {
+		NOT = { ispuppet = CZE }
+		government = democratic
+	}
+	
+	name = "EVT_13302226_NAME"
+	desc = "EVT_13302226_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofstate which = 120141 }
+	}
+}
+
+# 1929 parliamentary elections
+event = {
+	id = 13302227
+	country = CZE
+	
+	date = { day = 27 month = october year = 1929 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = CZE }
+	}
+	
+	name = "EVT_13302227_NAME"
+	desc = "EVT_13302227_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "The Republican Party of Agricultural and Smallholder People wins"
+		ai_chance = 100
+		command = { type = headofgovernment which = 120157 }
+	}
+	
+	action = {
+		name = "The Social Democratic Workers Party wins"
+		ai_chance = 0
+		command = { type = headofgovernment which = 120158 }
+	}
+	
+	action = {
+		name = "The National Social Party wins"
+		ai_chance = 0
+		command = { type = headofgovernment which = 120138 }
+	}
+	
+	action = {
+		name = "The Communist Party wins"
+		ai_chance = 0
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = free_market value = 5 }
+	}
+}

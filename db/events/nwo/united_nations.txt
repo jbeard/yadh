@@ -1,0 +1,3382 @@
+### 1. United Nations vote for intervention in Chinese Civil War
+################################################################
+
+event = {
+	id = 8510100
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		NOT = {
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+		NOT = { war = { country = SOV country = CHI } }
+		NOT = { war = { country = USA country = CHC } }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510101 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510102 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510103 }
+		# command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510104 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510108 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510105 }
+	}
+}
+
+event = {
+	id = 8510101
+	country = USA
+	
+	name = EVT_85101XX_NAME
+	desc = EVT_85101XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85101XX_A
+		trigger = { 
+			NOT = { flag = un_ccw_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		ai_chance = 85
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85101XX_B
+		ai_chance = 14
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_ccw_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85101XX_C
+		ai_chance = 1
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		command = { type = setflag which = un_ccw_totalveto }
+	}
+}
+
+event = {
+	id = 8510102
+	country = ENG
+	
+	name = EVT_85101XX_NAME
+	desc = EVT_85101XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85101XX_A
+		trigger = { 
+			NOT = { flag = un_ccw_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		ai_chance = 80
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85101XX_B
+		ai_chance = 18
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_ccw_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85101XX_C
+		ai_chance = 2
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		command = { type = setflag which = un_ccw_totalveto }
+	}
+}
+
+event = {
+	id = 8510103
+	country = FRA
+	
+	name = EVT_85101XX_NAME
+	desc = EVT_85101XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85101XX_A
+		trigger = { 
+			NOT = { flag = un_ccw_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		ai_chance = 85
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85101XX_B
+		ai_chance = 14
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_ccw_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85101XX_C
+		ai_chance = 1
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		command = { type = setflag which = un_ccw_totalveto }
+	}
+}
+
+# No reason to ask Chiang
+
+event = {
+	id = 8510108
+	country = CHC
+	
+	name = EVT_85101XX_NAME
+	desc = EVT_85101XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85101XX_C
+		ai_chance = 100
+		command = { type = setflag which = un_ccw_totalveto }
+	}
+}
+
+event = {
+	id = 8510105
+	country = SOV
+	
+	name = EVT_85101XX_NAME
+	desc = EVT_85101XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85101XX_C
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		ai_chance = 97
+		command = { type = setflag which = un_ccw_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85101XX_B
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		ai_chance = 3
+		command = { type = setflag which = un_ccw_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85101XX_A
+		trigger = { 
+			NOT = { flag = un_ccw_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		ai_chance = 0
+		command = { type = money value = -1 }
+	}	
+}
+
+### Outcome of the vote: Intervention and material support
+event = {
+	id = 8510106
+	country = CHI
+	
+	name = EVT_8510106_NAME
+	desc = EVT_8510106_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510101
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510102
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510103
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510107
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510105
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_ccw_totalveto }
+		NOT = { flag = un_ccw_interventionveto }
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8510106_A
+		# New units
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+	}
+}
+
+### Outcome of the vote: Material support
+event = {
+	id = 8510107
+	country = CHI
+	
+	name = EVT_8510107_NAME
+	desc = EVT_8510107_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510101
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510102
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510103
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510107
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510105
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_ccw_totalveto }
+		flag = un_ccw_interventionveto
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8510107_A
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+	}	
+}
+
+### 2 . United Nations vote for intervention in Suez Crisis
+##############################################################
+
+event = {
+	id = 8510200
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = EGY country = ISR }
+		NOT = { war = { country = SOV country = ISR } }
+		NOT = { war = { country = USA country = EGY } }
+		flag = cold_war
+		event = 8500305 # Suez War is ongoing
+	}
+
+	date = { day = 1 month = september year = 1956 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510201 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510202 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510203 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510204 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510208 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510205 }
+	}
+}
+
+event = {
+	id = 8510201
+	country = USA
+	
+	name = EVT_85102XX_NAME
+	desc = EVT_85102XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Send material support only
+	action = {
+		name = EVT_85102XX_B
+		ai_chance = 65
+		trigger = { 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = setflag which = un_suez_interventionveto }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85102XX_C
+		ai_chance = 25
+		trigger = { 
+			NOT = { alliance = { country = EGY } }
+		}
+		command = { type = setflag which = un_suez_totalveto }
+	}
+	
+	# Support intervention and material support
+	action = {
+		name = EVT_85102XX_A
+		ai_chance = 10
+		trigger = { 
+			NOT = { flag = un_suez_interventionveto } 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = money value = -1 }
+	}
+}
+
+event = {
+	id = 8510202
+	country = ENG
+	
+	name = EVT_85102XX_NAME
+	desc = EVT_85102XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85102XX_C
+		ai_chance = 95
+		trigger = { 
+			NOT = { alliance = { country = EGY } }
+		}
+		command = { type = setflag which = un_suez_totalveto }
+	}
+	
+	# Support intervention and material support
+	action = {
+		name = EVT_85102XX_A
+		trigger = { 
+			NOT = { flag = un_suez_interventionveto } 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		ai_chance = 1
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85102XX_B
+		ai_chance = 4
+		trigger = { 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = setflag which = un_suez_interventionveto }
+	}
+
+
+}
+
+event = {
+	id = 8510203
+	country = FRA
+	
+	name = EVT_85102XX_NAME
+	desc = EVT_85102XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+	
+	# Veto it!
+	action = {
+		name = EVT_85102XX_C
+		ai_chance = 90
+		trigger = { 
+			NOT = { alliance = { country = EGY } }
+		}
+		command = { type = setflag which = un_suez_totalveto }
+	}
+	
+	# Support intervention and material support
+	action = {
+		name = EVT_85102XX_A
+		ai_chance = 2
+		trigger = { 
+			NOT = { flag = un_suez_interventionveto } 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85102XX_B
+		ai_chance = 8
+		trigger = { 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = setflag which = un_suez_interventionveto }
+	}
+
+}
+
+event = {
+	id = 8510204
+	country = CHI
+	
+	name = EVT_85102XX_NAME
+	desc = EVT_85102XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85102XX_A
+		ai_chance = 50
+		trigger = { 
+			NOT = { flag = un_suez_interventionveto } 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85102XX_B
+		ai_chance = 10
+		trigger = { 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = setflag which = un_suez_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85102XX_C
+		ai_chance = 40
+		trigger = { 
+			NOT = { alliance = { country = EGY } }
+		}
+		command = { type = setflag which = un_suez_totalveto }
+	}
+}
+
+event = {
+	id = 8510208
+	country = CHC
+	
+	name = EVT_85102XX_NAME
+	desc = EVT_85102XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85102XX_A
+		ai_chance = 99
+		trigger = { 
+			NOT = { flag = un_suez_interventionveto } 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85102XX_B
+		ai_chance = 1
+		trigger = { 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = setflag which = un_suez_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85102XX_C
+		ai_chance = 0
+		trigger = { 
+			NOT = { alliance = { country = EGY } }
+		}
+		command = { type = setflag which = un_suez_totalveto }
+	}
+}
+
+event = {
+	id = 8510205
+	country = SOV
+	
+	name = EVT_85102XX_NAME
+	desc = EVT_85102XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85102XX_A
+		ai_chance = 99
+		trigger = { 
+			NOT = { flag = un_suez_interventionveto } 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85102XX_B
+		ai_chance = 1
+		trigger = { 
+			NOT = { war = { country = EGY } }
+			NOT = { alliance = { country = ISR } }
+		}
+		command = { type = setflag which = un_suez_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85102XX_C
+		ai_chance = 0
+		trigger = { 
+			NOT = { alliance = { country = EGY } }
+		}
+		command = { type = setflag which = un_suez_totalveto }
+	}
+}
+
+### Outcome of the vote: Intervention and material support
+event = {
+	id = 8510206
+	country = EGY
+	
+	name = EVT_8510206_NAME
+	desc = EVT_8510206_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510201
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510202
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510203
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510204
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510208
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510205
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_suez_totalveto }
+		NOT = { flag = un_suez_interventionveto }
+	}
+
+	date = { day = 1 month = september year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8510206_A
+		# New units
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+	}
+}
+
+### Outcome of the vote: Material support
+event = {
+	id = 8510207
+	country = EGY
+	
+	name = EVT_8510207_NAME
+	desc = EVT_8510207_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510201
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510202
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510203
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510204
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510208
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510205
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_suez_totalveto }
+		flag = un_suez_interventionveto
+	}
+
+	date = { day = 1 month = september year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8510207_A
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+	}	
+}
+
+### 3. United Nations vote for intervention in Taiwan Straits Crisis
+####################################################################
+
+event = {
+	id = 8510300
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = CHI country = CHC }
+		flag = CHC_won_civil_war
+		NOT = { war = { country = SOV country = CHI } }
+		NOT = { war = { country = USA country = CHC } }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510301 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510302 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510303 }
+		# command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510304 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510308 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510305 }
+	}
+}
+
+event = {
+	id = 8510301
+	country = USA
+	
+	name = EVT_85103XX_NAME
+	desc = EVT_85103XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85103XX_A
+		ai_chance = 98
+		trigger = { 
+			NOT = { flag = un_taiwan_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85103XX_B
+		ai_chance = 2
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_taiwan_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85103XX_C
+		ai_chance = 0
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		command = { type = setflag which = un_taiwan_totalveto }
+	}
+}
+
+event = {
+	id = 8510302
+	country = ENG
+	
+	name = EVT_85103XX_NAME
+	desc = EVT_85103XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85103XX_A
+		trigger = { 
+			NOT = { flag = un_taiwan_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		ai_chance = 95
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85103XX_B
+		ai_chance = 4
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_taiwan_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85103XX_C
+		ai_chance = 1
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		command = { type = setflag which = un_taiwan_totalveto }
+	}
+}
+
+event = {
+	id = 8510303
+	country = FRA
+	
+	name = EVT_85103XX_NAME
+	desc = EVT_85103XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85103XX_A
+		ai_chance = 93
+		trigger = { 
+			NOT = { flag = un_taiwan_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85103XX_B
+		ai_chance = 6
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_taiwan_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85103XX_C
+		ai_chance = 1
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		command = { type = setflag which = un_taiwan_totalveto }
+	}
+}
+
+# No reason to ask Chiang
+
+event = {
+	id = 8510308
+	country = CHC
+	
+	name = EVT_85103XX_NAME
+	desc = EVT_85103XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85103XX_C
+		ai_chance = 100
+		command = { type = setflag which = un_taiwan_totalveto }
+	}
+}
+
+event = {
+	id = 8510305
+	country = SOV
+	
+	name = EVT_85103XX_NAME
+	desc = EVT_85103XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85103XX_C
+		ai_chance = 85
+		trigger = { 
+			NOT = { alliance = { country = CHI } }
+		}
+		command = { type = setflag which = un_taiwan_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85103XX_B
+		ai_chance = 10
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_taiwan_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85103XX_A
+		ai_chance = 5
+		trigger = { 
+			NOT = { flag = un_taiwan_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+### Outcome of the vote: Intervention and material support
+event = {
+	id = 8510306
+	country = CHI
+	
+	name = EVT_8510306_NAME
+	desc = EVT_8510306_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510301
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510302
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510303
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510308
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510305
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_taiwan_totalveto }
+		NOT = { flag = un_taiwan_interventionveto }
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8510306_A
+		# New units
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+	}
+}
+
+### Outcome of the vote: Material support
+event = {
+	id = 8510307
+	country = CHI
+	
+	name = EVT_8510307_NAME
+	desc = EVT_8510307_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510301
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510302
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510303
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510308
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510305
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_taiwan_totalveto }
+		flag = un_taiwan_interventionveto
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8510307_A
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+	}	
+}
+
+### 4. United Nations vote for intervention in Greek Civil War
+##############################################################
+
+event = {
+	id = 8510400
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GRE country = U33 }
+		NOT = { war = { country = SOV country = GRE } }
+		NOT = { war = { country = USA country = U33 } }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = july year = 1948 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510401 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510402 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510403 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510404 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510408 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510405 }
+	}
+}
+
+event = {
+	id = 8510401
+	country = USA
+	
+	name = EVT_85104XX_NAME
+	desc = EVT_85104XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85104XX_A
+		ai_chance = 90
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85104XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = CHI } }
+			NOT = { alliance = { country = CHC } }
+		}
+		command = { type = setflag which = un_gcw_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85104XX_C
+		ai_chance = 5
+		trigger = { 
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_totalveto }
+	}
+}
+
+event = {
+	id = 8510402
+	country = ENG
+	
+	name = EVT_85104XX_NAME
+	desc = EVT_85104XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85104XX_A
+		ai_chance = 80
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85104XX_B
+		ai_chance = 15
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85104XX_C
+		ai_chance = 5
+		trigger = { 
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_totalveto }
+	}
+}
+
+event = {
+	id = 8510403
+	country = FRA
+	
+	name = EVT_85104XX_NAME
+	desc = EVT_85104XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85104XX_A
+		ai_chance = 80
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85104XX_B
+		ai_chance = 15
+		trigger = { 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85104XX_C
+		ai_chance = 5
+		trigger = { 
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_totalveto }
+	}
+}
+
+event = {
+	id = 8510404
+	country = CHI
+	
+	name = EVT_85104XX_NAME
+	desc = EVT_85104XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85104XX_A
+		ai_chance = 90
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85104XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85104XX_C
+		ai_chance = 5
+		trigger = { 
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_totalveto }
+	}
+}
+
+event = {
+	id = 8510408
+	country = CHC
+	
+	name = EVT_85104XX_NAME
+	desc = EVT_85104XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85104XX_C
+		ai_chance = 85
+		trigger = { 
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85104XX_B
+		ai_chance = 10
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85104XX_A
+		ai_chance = 5
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+event = {
+	id = 8510405
+	country = SOV
+	
+	name = EVT_85104XX_NAME
+	desc = EVT_85104XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85104XX_C
+		ai_chance = 85
+		trigger = { 
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85104XX_B
+		ai_chance = 10
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = setflag which = un_gcw_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85104XX_A
+		ai_chance = 5
+		trigger = { 
+			NOT = { flag = un_gcw_interventionveto } 
+			NOT = { war = { country = GRE } }
+			NOT = { alliance = { country = U33 } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+### Outcome of the vote: Intervention and material support
+event = {
+	id = 8510406
+	country = GRE
+	
+	name = EVT_8510406_NAME
+	desc = EVT_8510406_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510401
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510402
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510403
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510404
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510408
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510405
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_gcw_totalveto }
+		NOT = { flag = un_gcw_interventionveto }
+	}
+
+	date = { day = 1 month = july year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8510406_A
+		# New units
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+	}
+}
+
+### Outcome of the vote: Material support
+event = {
+	id = 8510407
+	country = GRE
+	
+	name = EVT_8510407_NAME
+	desc = EVT_8510407_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510401
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510402
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510403
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510404
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510408
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510405
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_gcw_totalveto }
+		flag = un_gcw_interventionveto
+	}
+
+	date = { day = 1 month = july year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8510407_A
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+	}	
+}
+
+### 5. United Nations vote for giving Eritrea to Ethiopia
+##############################################################
+
+event = {
+	id = 8510500
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		event = 8005310
+		flag = cold_war
+		NOT = { control = { province = 817 data = ETH } }
+	}
+
+	date = { day = 1 month = january year = 1952 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510501 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510502 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510503 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510504 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510508 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510505 }
+	}
+}
+
+event = {
+	id = 8510501
+	country = USA
+	
+	name = EVT_85105XX_NAME
+	desc = EVT_85105XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support
+	action = {
+		name = EVT_85105XX_A
+		ai_chance = 99
+		trigger = { NOT = { war = { country = ETH } } }
+		command = { type = money value = -1 }
+		command = { type = relation which = ETH value = 50 }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85105XX_B
+		ai_chance = 1
+		trigger = { NOT = { alliance = { country = ETH } } }
+		command = { type = setflag which = un_eritrea_veto }
+		command = { type = relation which = ETH value = -100 }
+	}
+}
+
+event = {
+	id = 8510502
+	country = ENG
+	
+	name = EVT_85105XX_NAME
+	desc = EVT_85105XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support
+	action = {
+		name = EVT_85105XX_A
+		ai_chance = 99
+		trigger = { NOT = { war = { country = ETH } } }
+		command = { type = money value = -1 }
+		command = { type = relation which = ETH value = 50 }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85105XX_B
+		ai_chance = 1
+		trigger = { NOT = { alliance = { country = ETH } } }
+		command = { type = setflag which = un_eritrea_veto }
+		command = { type = relation which = ETH value = -100 }
+	}
+}
+
+event = {
+	id = 8510503
+	country = FRA
+	
+	name = EVT_85105XX_NAME
+	desc = EVT_85105XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support
+	action = {
+		name = EVT_85105XX_A
+		ai_chance = 99
+		trigger = { NOT = { war = { country = ETH } } }
+		command = { type = money value = -1 }
+		command = { type = relation which = ETH value = 50 }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85105XX_B
+		ai_chance = 1
+		trigger = { NOT = { alliance = { country = ETH } } }
+		command = { type = setflag which = un_eritrea_veto }
+		command = { type = relation which = ETH value = -100 }
+	}
+}
+
+event = {
+	id = 8510504
+	country = CHI
+	
+	name = EVT_85105XX_NAME
+	desc = EVT_85105XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support
+	action = {
+		name = EVT_85105XX_A
+		ai_chance = 99
+		trigger = { NOT = { war = { country = ETH } } }
+		command = { type = money value = -1 }
+		command = { type = relation which = ETH value = 50 }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85105XX_B
+		ai_chance = 1
+		trigger = { NOT = { alliance = { country = ETH } } }
+		command = { type = setflag which = un_eritrea_veto }
+		command = { type = relation which = ETH value = -100 }
+	}	
+}
+
+event = {
+	id = 8510508
+	country = CHC
+	
+	name = EVT_85105XX_NAME
+	desc = EVT_85105XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support
+	action = {
+		name = EVT_85105XX_A
+		ai_chance = 99
+		trigger = { NOT = { war = { country = ETH } } }
+		command = { type = money value = -1 }
+		command = { type = relation which = ETH value = 50 }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85105XX_B
+		ai_chance = 1
+		trigger = { NOT = { alliance = { country = ETH } } }
+		command = { type = setflag which = un_eritrea_veto }
+		command = { type = relation which = ETH value = -100 }
+	}	
+}
+
+event = {
+	id = 8510505
+	country = SOV
+	
+	name = EVT_85105XX_NAME
+	desc = EVT_85105XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support
+	action = {
+		name = EVT_85105XX_A
+		ai_chance = 99
+		trigger = { NOT = { war = { country = ETH } } }
+		command = { type = money value = -1 }
+		command = { type = relation which = ETH value = 50 }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85105XX_B
+		ai_chance = 1
+		trigger = { NOT = { alliance = { country = ETH } } }
+		command = { type = setflag which = un_eritrea_veto }
+		command = { type = relation which = ETH value = -100 }
+	}	
+}
+
+### Outcome of the vote: Ethiopia receives Eritrea
+event = {
+	id = 8510506
+	country = ETH
+	
+	name = EVT_8510506_NAME
+	desc = EVT_8510506_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510501
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510502
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510503
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510504
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510508
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510505
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_eritrea_veto }
+	}
+
+	date = { day = 1 month = january year = 1952 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1953 }
+
+	# Ethiopia gets Eritrea
+	action = {
+		name = EVT_8510506_A
+		command = { type = trigger which = 8005311 }
+	}	
+}
+
+
+### 6. United Nations vote for resolution of Indonesian National Revolution
+############################################################################
+
+event = {
+	id = 8510600
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = INO country = U05 }
+		flag = cold_war
+		flag = cold_war_pacific
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510601 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510602 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510603 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510604 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510608 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510605 }
+	}
+}
+
+event = {
+	id = 8510601
+	country = USA
+	
+	name = EVT_85106XX_NAME
+	desc = EVT_85106XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support peaceful resolution
+	action = {
+		name = EVT_85106XX_B
+		ai_chance = 80
+		trigger = { 
+			NOT = { war = { country = INO } }
+		}
+		command = { type = setflag which = un_indonesia_interventionveto }
+	}
+		
+	# Support military intervention
+	action = {
+		name = EVT_85106XX_A
+		ai_chance = 18
+		trigger = { 
+			NOT = { flag = un_indonesia_interventionveto } 
+			NOT = { war = { country = INO } }
+			NOT = { alliance = { country = U05 } }
+			NOT = { alliance = { country = HOL } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85106XX_C
+		ai_chance = 2
+		trigger = { 
+			NOT = { alliance = { country = INO } } 
+		}
+		command = { type = setflag which = un_indonesia_totalveto }
+	}
+}
+
+event = {
+	id = 8510602
+	country = ENG
+	
+	name = EVT_85106XX_NAME
+	desc = EVT_85106XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support peaceful resolution
+	action = {
+		name = EVT_85106XX_B
+		ai_chance = 75
+		trigger = { 
+			NOT = { war = { country = INO } }
+		}
+		command = { type = setflag which = un_indonesia_interventionveto }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85106XX_C
+		ai_chance = 5
+		trigger = { 
+			NOT = { alliance = { country = INO } } 
+		}
+		command = { type = setflag which = un_indonesia_totalveto }
+	}
+	
+	# Support military intervention
+	action = {
+		name = EVT_85106XX_A
+		ai_chance = 20
+		trigger = { 
+			NOT = { flag = un_indonesia_interventionveto } 
+			NOT = { war = { country = INO } }
+			NOT = { alliance = { country = U05 } }
+			NOT = { alliance = { country = HOL } }
+		}
+		command = { type = money value = -1 }
+	}
+}
+
+event = {
+	id = 8510603
+	country = FRA
+	
+	name = EVT_85106XX_NAME
+	desc = EVT_85106XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+	
+	# Support peaceful resolution
+	action = {
+		name = EVT_85106XX_B
+		ai_chance = 75
+		trigger = { 
+			NOT = { war = { country = INO } }
+		}
+		command = { type = setflag which = un_indonesia_interventionveto }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85106XX_C
+		ai_chance = 5
+		trigger = { 
+			NOT = { alliance = { country = INO } } 
+		}
+		command = { type = setflag which = un_indonesia_totalveto }
+	}
+	
+	# Support military intervention
+	action = {
+		name = EVT_85106XX_A
+		ai_chance = 20
+		trigger = { 
+			NOT = { flag = un_indonesia_interventionveto } 
+			NOT = { war = { country = INO } }
+			NOT = { alliance = { country = U05 } }
+			NOT = { alliance = { country = HOL } }
+		}
+		command = { type = money value = -1 }
+	}
+
+}
+
+event = {
+	id = 8510604
+	country = CHI
+	
+	name = EVT_85106XX_NAME
+	desc = EVT_85106XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support peaceful resolution
+	action = {
+		name = EVT_85106XX_B
+		ai_chance = 85
+		trigger = { 
+			NOT = { war = { country = INO } }
+		}
+		command = { type = setflag which = un_indonesia_interventionveto }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85106XX_C
+		ai_chance = 1
+		trigger = { 
+			NOT = { alliance = { country = INO } } 
+		}
+		command = { type = setflag which = un_indonesia_totalveto }
+	}
+	
+	# Support military intervention
+	action = {
+		name = EVT_85106XX_A
+		ai_chance = 14
+		trigger = { 
+			NOT = { flag = un_indonesia_interventionveto } 
+			NOT = { war = { country = INO } }
+			NOT = { alliance = { country = U05 } }
+			NOT = { alliance = { country = HOL } }
+		}
+		command = { type = money value = -1 }
+	}
+}
+
+event = {
+	id = 8510608
+	country = CHC
+	
+	name = EVT_85106XX_NAME
+	desc = EVT_85106XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support military intervention
+	action = {
+		name = EVT_85106XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_indonesia_interventionveto } 
+			NOT = { war = { country = INO } }
+			NOT = { alliance = { country = U05 } }
+			NOT = { alliance = { country = HOL } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Support peaceful resolution
+	action = {
+		name = EVT_85106XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = INO } }
+		}
+		command = { type = setflag which = un_indonesia_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85106XX_C
+		ai_chance = 0
+		trigger = { 
+			NOT = { alliance = { country = INO } } 
+		}
+		command = { type = setflag which = un_indonesia_totalveto }
+	}
+}
+
+event = {
+	id = 8510605
+	country = SOV
+	
+	name = EVT_85106XX_NAME
+	desc = EVT_85106XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support military intervention
+	action = {
+		name = EVT_85106XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_indonesia_interventionveto } 
+			NOT = { war = { country = INO } }
+			NOT = { alliance = { country = U05 } }
+			NOT = { alliance = { country = HOL } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Support peaceful resolution
+	action = {
+		name = EVT_85106XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = INO } }
+		}
+		command = { type = setflag which = un_indonesia_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85106XX_C
+		ai_chance = 0
+		trigger = { 
+			NOT = { alliance = { country = INO } } 
+		}
+		command = { type = setflag which = un_indonesia_totalveto }
+	}
+}
+
+### Outcome of the vote: Military intervention
+event = {
+	id = 8510606
+	country = INO
+	
+	name = EVT_8510606_NAME
+	desc = EVT_8510606_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510601
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510602
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510603
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510604
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510608
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510605
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_indonesia_totalveto }
+		NOT = { flag = un_indonesia_interventionveto }
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8510606_A
+		# New units
+		command = { type = money value = 1500 }
+		command = { type = supplies value = 5000 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = motorized when = 5 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }
+	}
+}
+
+### Outcome of the vote: Condemnation of Dutch intervention
+event = {
+	id = 8510607
+	country = INO
+	
+	name = EVT_8510607_NAME
+	desc = EVT_8510607_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510601
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510602
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510603
+		}
+		OR = {
+			AND = {
+				NOT = { exists = CHI }
+				NOT = { exists = CHC }
+			}
+			event = 8510604
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510605
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_indonesia_totalveto }
+		flag = un_indonesia_interventionveto
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8510607_A
+		command = { type = dissent value = -10 }
+	}	
+}
+
+### 7. United Nations vote for intervention in Korean War
+##############################################################
+
+event = {
+	id = 8510700
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = KOR country = PRK }
+		NOT = { war = { country = SOV country = KOR } }
+		NOT = { war = { country = USA country = PRK } }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510701 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510702 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510703 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510704 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510708 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510705 }
+	}
+}
+
+event = {
+	id = 8510701
+	country = USA
+	
+	name = EVT_85107XX_NAME
+	desc = EVT_85107XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85107XX_A
+		ai_chance = 99
+		trigger = { 
+			NOT = { flag = un_korea_interventionveto } 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85107XX_B
+		ai_chance = 1
+		trigger = { 
+			NOT = { flag = un_korea_interventionveto } 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = setflag which = un_korea_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85107XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_korea_totalveto }
+	}
+}
+
+event = {
+	id = 8510702
+	country = ENG
+	
+	name = EVT_85107XX_NAME
+	desc = EVT_85107XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85107XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_korea_interventionveto } 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85107XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = setflag which = un_korea_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85107XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_korea_totalveto }
+	}
+}
+
+event = {
+	id = 8510703
+	country = FRA
+	
+	name = EVT_85107XX_NAME
+	desc = EVT_85107XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85107XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_korea_interventionveto } 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85107XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = setflag which = un_korea_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85107XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_korea_totalveto }
+	}
+}
+
+event = {
+	id = 8510704
+	country = CHI
+	
+	name = EVT_85107XX_NAME
+	desc = EVT_85107XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85107XX_A
+		ai_chance = 100
+		trigger = { 
+			NOT = { flag = un_korea_interventionveto } 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85107XX_B
+		ai_chance = 0
+		trigger = { 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = setflag which = un_korea_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85107XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_korea_totalveto }
+	}
+}
+
+event = {
+	id = 8510708
+	country = CHC
+	
+	name = EVT_85107XX_NAME
+	desc = EVT_85107XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85107XX_C
+		ai_chance = 95
+		
+		command = { type = setflag which = un_korea_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85107XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = setflag which = un_korea_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85107XX_A
+		ai_chance = 0
+		trigger = { 
+			NOT = { flag = un_korea_interventionveto } 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+event = {
+	id = 8510705
+	country = SOV
+	
+	name = EVT_85107XX_NAME
+	desc = EVT_85107XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85107XX_C
+		ai_chance = 80
+		
+		command = { type = setflag which = un_korea_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85107XX_B
+		ai_chance = 15
+		trigger = { 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = setflag which = un_korea_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85107XX_A
+		ai_chance = 5
+		trigger = { 
+			NOT = { flag = un_korea_interventionveto } 
+			NOT = { war = { country = KOR } }
+			NOT = { alliance = { country = PRK } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+### Outcome of the vote: Intervention and material support
+event = {
+	id = 8510706
+	country = KOR
+	
+	name = EVT_8510706_NAME
+	desc = EVT_8510706_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510701
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510702
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510703
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510704
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510708
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510705
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_korea_totalveto }
+		NOT = { flag = un_korea_interventionveto }
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8510706_A
+		command = { type = dissent value = -10 }
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+		command = { type = manpowerpool value = 50 when = 0 }
+		command = { type = max_organization which = infantry value = 10 }
+		command = { type = max_organization which = motorized value = 10 }
+		command = { type = max_organization which = mechanized value = 10 }
+		command = { type = max_organization which = armor value = 10 }
+		command = { type = morale which = infantry value = 50 }
+		command = { type = morale which = motorized value = 50 }
+		command = { type = morale which = mechanized value = 50 }
+		command = { type = morale which = armor value = 50 }
+	}
+}
+
+### Outcome of the vote: Material support
+event = {
+	id = 8510707
+	country = KOR
+	
+	name = EVT_8510707_NAME
+	desc = EVT_8510707_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510701
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510702
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510703
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510704
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510708
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510705
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_korea_totalveto }
+		flag = un_korea_interventionveto
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1953 }
+
+	action = {
+		name = EVT_8510707_A
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+		command = { type = manpowerpool value = 50 when = 0 }
+	}	
+}
+
+### 8. United Nations vote for intervention in Hungarian Revolution
+####################################################################
+
+event = {
+	id = 8510800
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		flag = cold_war
+		event = 8501103
+	}
+
+	date = { day = 1 month = july year = 1956 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510801 }
+		command = { trigger = { exists = ENG } type = trigger which = 8510802 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510803 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510804 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510808 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510805 }
+	}
+}
+
+event = {
+	id = 8510801
+	country = USA
+	
+	name = EVT_85108XX_NAME
+	desc = EVT_85108XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85108XX_A
+		ai_chance = 99
+		trigger = { 
+			NOT = { flag = un_hungary_interventionveto } 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85108XX_B
+		ai_chance = 1
+		trigger = { 
+			NOT = { flag = un_hungary_interventionveto } 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = setflag which = un_hungary_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85108XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_hungary_totalveto }
+	}
+}
+
+event = {
+	id = 8510802
+	country = ENG
+	
+	name = EVT_85108XX_NAME
+	desc = EVT_85108XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85108XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_hungary_interventionveto } 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85108XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = setflag which = un_hungary_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85108XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_hungary_totalveto }
+	}
+}
+
+event = {
+	id = 8510803
+	country = FRA
+	
+	name = EVT_85108XX_NAME
+	desc = EVT_85108XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85108XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_hungary_interventionveto } 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85108XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = setflag which = un_hungary_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85108XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_hungary_totalveto }
+	}
+}
+
+event = {
+	id = 8510804
+	country = CHI
+	
+	name = EVT_85108XX_NAME
+	desc = EVT_85108XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85108XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_hungary_interventionveto } 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Send material support only
+	action = {
+		name = EVT_85108XX_B
+		ai_chance = 5
+		trigger = { 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = setflag which = un_hungary_interventionveto }
+	}
+
+	# Veto it!
+	action = {
+		name = EVT_85108XX_C
+		ai_chance = 0
+		command = { type = setflag which = un_hungary_totalveto }
+	}
+}
+
+event = {
+	id = 8510808
+	country = CHC
+	
+	name = EVT_85108XX_NAME
+	desc = EVT_85108XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85108XX_C
+		ai_chance = 60
+		
+		command = { type = setflag which = un_hungary_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85108XX_B
+		ai_chance = 30
+		trigger = { 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = setflag which = un_hungary_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85108XX_A
+		ai_chance = 10
+		trigger = { 
+			NOT = { flag = un_hungary_interventionveto } 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+event = {
+	id = 8510805
+	country = SOV
+	
+	name = EVT_85108XX_NAME
+	desc = EVT_85108XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85108XX_C
+		ai_chance = 100
+		
+		command = { type = setflag which = un_hungary_totalveto }
+	}
+
+	# Send material support only
+	action = {
+		name = EVT_85108XX_B
+		ai_chance = 0
+		trigger = { 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = setflag which = un_hungary_interventionveto }
+	}
+
+	# Support intervention and material support
+	action = {
+		name = EVT_85108XX_A
+		ai_chance = 0
+		trigger = { 
+			NOT = { flag = un_hungary_interventionveto } 
+			NOT = { war = { country = U13 } }
+			NOT = { alliance = { country = SOV } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+### Outcome of the vote: Intervention and material support
+event = {
+	id = 8510806
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510801
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510802
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510803
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510804
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510808
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510805
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_hungary_totalveto }
+		NOT = { flag = un_hungary_interventionveto }
+	}
+
+	date = { day = 1 month = june year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1956 }
+
+	# Send an ultimatum
+
+	action = {
+		name = AI_EVENT
+		# Ultimatum to USSR
+		command = { type = trigger which = 8501110 }
+	}
+}
+
+### Outcome of the vote: Material support
+event = {
+	id = 8510807
+	country = U13
+	
+	name = EVT_8510807_NAME
+	desc = EVT_8510807_DESC
+	picture = "nwo\united_nations"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510801
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510802
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510803
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510804
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510808
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510805
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_hungary_totalveto }
+		flag = un_hungary_interventionveto 
+	}
+
+	date = { day = 1 month = june year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8510807_A
+		command = { type = money value = 2500 }
+		command = { type = supplies value = 10000 }
+		command = { type = manpowerpool value = 50 when = 0 }
+	}	
+}
+
+### 9. United Nations vote for intervention in Falklands War
+############################################################
+
+event = {
+	id = 8510900
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		flag = cold_war
+		event = 8234001
+		owned = { province = 2045 data = ARG }
+	}
+
+	date = { day = 1 month = may year = 1982 }
+	offset = 3
+	deathdate = { day = 29 month = may year = 1982 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8510901 }
+		#command = { trigger = { exists = ENG } type = trigger which = 8510902 }
+		command = { trigger = { exists = FRA } type = trigger which = 8510903 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8510904 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8510908 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8510905 }
+	}
+}
+
+event = {
+	id = 8510901
+	country = USA
+	
+	name = EVT_85109XX_NAME
+	desc = EVT_85109XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85109XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_falklands_veto } 
+			NOT = { alliance = { country = ARG } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85109XX_B
+		ai_chance = 5
+		command = { type = setflag which = un_falklands_veto }
+	}
+}
+
+event = {
+	id = 8510903
+	country = FRA
+	
+	name = EVT_85109XX_NAME
+	desc = EVT_85109XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85109XX_A
+		ai_chance = 80
+		trigger = { 
+			NOT = { flag = un_falklands_veto }
+			NOT = { alliance = { country = ARG } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85109XX_B
+		ai_chance = 20
+		command = { type = setflag which = un_falklands_veto }
+	}
+}
+
+event = {
+	id = 8510904
+	country = CHI
+	
+	name = EVT_85109XX_NAME
+	desc = EVT_85109XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85109XX_A
+		ai_chance = 80
+		trigger = { 
+			NOT = { flag = un_falklands_veto } 
+			NOT = { alliance = { country = ARG } }
+		}
+		command = { type = money value = -1 }
+	}
+	# Veto it!
+	action = {
+		name = EVT_85109XX_B
+		ai_chance = 20
+		command = { type = setflag which = un_falklands_veto }
+	}
+}
+
+event = {
+	id = 8510908
+	country = CHC
+	
+	name = EVT_85109XX_NAME
+	desc = EVT_85109XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85109XX_B
+		ai_chance = 98
+		command = { type = setflag which = un_falklands_veto }
+	}
+
+	# Support intervention
+	action = {
+		name = EVT_85109XX_A
+		ai_chance = 2
+		trigger = { 
+			NOT = { flag = un_falklands_veto } 
+			NOT = { alliance = { country = ARG } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+event = {
+	id = 8510905
+	country = SOV
+	
+	name = EVT_85109XX_NAME
+	desc = EVT_85109XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Veto it!
+	action = {
+		name = EVT_85109XX_B
+		ai_chance = 99
+		command = { type = setflag which = un_falklands_veto }
+	}
+
+	# Support intervention
+	action = {
+		name = EVT_85109XX_A
+		ai_chance = 1
+		trigger = { 
+			NOT = { flag = un_falklands_veto } 
+			NOT = { alliance = { country = ARG } }
+		}
+		command = { type = money value = -1 }
+	}	
+}
+
+### Outcome of the vote: Intervention
+event = {
+	id = 8510906
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8510901
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510903
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510904
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510908
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510905
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_falklands_veto }
+	}
+
+	date = { day = 1 month = may year = 1982 }
+	offset = 3
+	deathdate = { day = 29 month = may year = 1982 }
+
+	# Send an ultimatum
+
+	action = {
+		name = AI_EVENT
+		# Ultimatum to Argentina
+		command = { type = trigger which = 8234030 }
+	}
+}
+
+
+### 10. United Nations vote for intervention in Kuwait War
+############################################################
+
+event = {
+	id = 8511000
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		flag = cold_war
+		event = 8007551
+		owned = { province = 1041 data = IRQ }
+	}
+
+	date = { day = 10 month = january year = 1991 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1991 }
+
+	action = {
+		name = OK
+		command = { trigger = { exists = USA } type = trigger which = 8511001 }
+		command = { trigger = { exists = ENG } type = trigger which = 8511002 }
+		command = { trigger = { exists = FRA } type = trigger which = 8511003 }
+		command = { trigger = { exists = CHI NOT = { flag = CHC_in_UNSC } } type = trigger which = 8511004 }
+		command = { trigger = { exists = CHC flag = CHC_in_UNSC } type = trigger which = 8511008 }
+		command = { trigger = { exists = SOV NOT = { flag = un_soviet_boycott } } type = trigger which = 8511005 }
+	}
+}
+
+event = {
+	id = 8511001
+	country = USA
+	
+	name = EVT_85110XX_NAME
+	desc = EVT_85110XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85110XX_A
+		ai_chance = 100
+		trigger = { 
+			NOT = { flag = un_desertstorm_veto } 
+			NOT = { alliance = { country = IRQ } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85110XX_B
+		ai_chance = 0
+		command = { type = setflag which = un_desertstorm_veto }
+	}
+}
+
+event = {
+	id = 8511002
+	country = ENG
+	
+	name = EVT_85110XX_NAME
+	desc = EVT_85110XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85110XX_A
+		ai_chance = 100
+		trigger = { 
+			NOT = { flag = un_desertstorm_veto } 
+			NOT = { alliance = { country = IRQ } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85110XX_B
+		ai_chance = 0
+		command = { type = setflag which = un_desertstorm_veto }
+	}
+}
+
+event = {
+	id = 8511003
+	country = FRA
+	
+	name = EVT_85110XX_NAME
+	desc = EVT_85110XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85110XX_A
+		ai_chance = 100
+		trigger = { 
+			NOT = { flag = un_desertstorm_veto }
+			NOT = { alliance = { country = IRQ } }
+		}
+		command = { type = money value = -1 }
+	}
+	
+	# Veto it!
+	action = {
+		name = EVT_85110XX_B
+		ai_chance = 0
+		command = { type = setflag which = un_desertstorm_veto }
+	}
+}
+
+event = {
+	id = 8511004
+	country = CHI
+	
+	name = EVT_85110XX_NAME
+	desc = EVT_85110XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85110XX_A
+		ai_chance = 99
+		trigger = { 
+			NOT = { flag = un_desertstorm_veto } 
+			NOT = { alliance = { country = IRQ } }
+		}
+		command = { type = money value = -1 }
+	}
+	# Veto it!
+	action = {
+		name = EVT_85110XX_B
+		ai_chance = 1
+		command = { type = setflag which = un_desertstorm_veto }
+	}
+}
+
+event = {
+	id = 8511008
+	country = CHC
+	
+	name = EVT_85110XX_NAME
+	desc = EVT_85110XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85110XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_desertstorm_veto } 
+			NOT = { alliance = { country = IRQ } }
+		}
+		command = { type = money value = -1 }
+	}	
+	
+	# Veto it!
+	action = {
+		name = EVT_85110XX_B
+		ai_chance = 5
+		command = { type = setflag which = un_desertstorm_veto }
+	}
+}
+
+event = {
+	id = 8511005
+	country = SOV
+	
+	name = EVT_85110XX_NAME
+	desc = EVT_85110XX_DESC
+	picture = "nwo\un_security_council"
+	style = 1
+
+	# Support intervention
+	action = {
+		name = EVT_85110XX_A
+		ai_chance = 95
+		trigger = { 
+			NOT = { flag = un_desertstorm_veto } 
+			NOT = { alliance = { country = IRQ } }
+		}
+		command = { type = money value = -1 }
+	}	
+	
+	# Veto it!
+	action = {
+		name = EVT_85110XX_B
+		ai_chance = 5
+		command = { type = setflag which = un_desertstorm_veto }
+	}
+}
+
+### Outcome of the vote: Intervention
+event = {
+	id = 8511006
+	country = REB
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+	picture = "nwo\united_nations_intervention"
+	style = 1
+
+	trigger = {
+		OR = {
+			NOT = { exists = USA }
+			event = 8511001
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8511002
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8511003
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8511004
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8511008
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8511005
+			flag = un_soviet_boycott
+		}
+		NOT = { flag = un_desertstorm_veto }
+	}
+
+	date = { day = 15 month = january year = 1991 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1991 }
+
+	action = {
+		name = AI_EVENT
+		# Desert Storm
+		command = { type = trigger which = 8007560 }
+	}
+}
+

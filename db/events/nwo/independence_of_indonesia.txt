@@ -1,0 +1,1223 @@
+### War of Independence
+
+# September: Japanese arm Indonesians
+
+event = {
+	id = 8206001
+	country = INO
+
+	name = EVT_8206001_NAME
+	desc = EVT_8206001_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8206001_A
+		# 1 infantry division
+		command = { type = add_division value = infantry when = 11 }
+		# 5 militia divisions
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		# Transports
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		# Specific garrison corps
+		command = { type = add_corps where = 1653 }
+		command = { type = add_division value = garrison when = 5 }
+		command = { type = add_corps where = 1654 }
+		command = { type = add_division value = garrison when = 5 }
+	}
+}
+
+# September: Dutch East India receives units, mostly allied help
+
+event = {
+	id = 8206002
+	country = U05
+
+	name = EVT_8206002_NAME
+	desc = EVT_8206002_DESC
+	picture = "nwo\dutch_east_india"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8206002_A
+		# 4 infantry divisions
+		command = { type = add_corps where = 1647 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_corps where = 1649 }
+		command = { type = add_division value = infantry when = 11 }
+		# 2 militia divisions
+		command = { type = add_corps where = 1636 } # Sumatra
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		# Transports
+		command = { type = add_corps where = 1647 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		command = { type = add_division value = transport when = 3 }
+		# Specific garrison corps
+		command = { type = add_corps where = 1647 }
+		command = { type = add_division value = garrison when = 5 }
+		command = { type = add_corps where = 1569 }
+		command = { type = add_division value = garrison when = 5 }
+	}
+}
+
+# October: An all-out conflict starts
+
+event = {
+	id = 8206003
+	country = INO
+
+	name = EVT_8206003_NAME
+	desc = EVT_8206003_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+
+	trigger = {
+		NOT = { war = { country = INO country = U05 } }
+		exists = U05
+		flag = cold_war_pacific
+		OR = {
+			event = 8206050 # Dutch East India is not a Dutch puppet
+			NOT = { puppet = { country = U05 country = HOL } }
+		}
+	}
+
+	date = { day = 0 month = october year = 1945 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8206003_A
+		ai_chance = 99
+		command = { type = dissent value = 10 }
+		command = { type = war which = U05 }
+		command = { type = supplies value = 1000 }	
+		# Specific garrison corps
+		# command = { type = add_corps where = 1653 }
+		# command = { type = add_division value = garrison when = 5 }
+		# command = { type = add_corps where = 1654 }
+		# command = { type = add_division value = garrison when = 5 }
+	}
+	
+	action = {
+		name = EVT_8007322_B
+		ai_chance = 1
+		command = { type = trigger which = 8206004 }
+	}
+}
+
+# Republicans lay their weapons
+event = {
+	id = 8206004
+	country = U05
+
+	name = EVT_8206004_NAME
+	desc = EVT_8206004_DESC
+	picture = "nwo\dutch_east_india"
+	style = 1
+
+	action = {
+		name = EVT_8206004_A
+		command = { type = inherit which = INO value = 0 }
+		command = { type = province_revoltrisk which = 1648 value = 30 }
+		command = { type = province_revoltrisk which = 1650 value = 30 }
+		command = { type = province_revoltrisk which = 1652 value = 30 }
+		command = { type = province_revoltrisk which = 1653 value = 30 }
+		command = { type = province_revoltrisk which = 1654 value = 30 }
+		command = { type = province_revoltrisk which = 1655 value = 30 }
+		command = { type = province_revoltrisk which = 1656 value = 30 }
+	}
+}
+
+### 30 October: first ceasefire possibility
+
+event = {
+	id = 8206005
+	country = HOL
+
+	name = EVT_8206005_NAME
+	desc = EVT_8206005_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+	
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+
+	date = { day = 25 month = october year = 1945 }
+	offset = 10
+	deathdate = { day = 30 month = november year = 1945 }
+	
+	# Propose ceasefire
+	action = {
+		name = EVT_8206005_A
+		ai_chance = 80
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = INO value = 20 }
+	}
+	
+	# Fight on
+	action = {
+		name = EVT_8206005_B
+		ai_chance = 20
+		command = { type = sleepevent which = 8206007 }
+	}
+}
+
+# Dutch East India feels the result of the ceasefire
+event = {
+	id = 8206006
+	country = U05
+	one_action = yes
+
+	name = EVT_8206006_NAME
+	desc = EVT_8206006_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+	
+	trigger = {
+		event = 8206005
+		war = { country = INO country = U05 }
+	}
+
+	date = { day = 25 month = october year = 1945 }
+	offset = 10
+	deathdate = { day = 30 month = november year = 1945 }
+	
+	# Ceasefire fails
+	action = {
+		name = EVT_8206006_A
+		ai_chance = 90
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8206007 }
+		command = { type = sleepevent which = 8206008 }
+		command = { type = sleepevent which = 8206009 }
+	}
+	
+	# Ceasefire succeeds
+	action = {
+		name = EVT_8206006_B
+		ai_chance = 10
+		command = { type = dissent value = -10 }
+		command = { type = peace which = INO value = 0 }
+		command = { type = secedearea which = -1 value = "Sumatra" when = 2 }
+		command = { type = secedearea which = -1 value = "West Java" when = 2 }
+		command = { type = secedearea which = -1 value = "East Java" when = 2 }
+	}
+}
+
+# Indonesia is faced with Federated Indonesia proposal
+event = {
+	id = 8206007
+	country = INO
+
+	name = EVT_8206007_NAME
+	desc = EVT_8206007_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+	
+	trigger = {
+		event = 8206006
+		war = { country = INO country = U05 }
+	}
+
+	date = { day = 25 month = october year = 1945 }
+	offset = 10
+	deathdate = { day = 30 month = november year = 1945 }
+	
+	# Agree
+	action = {
+		name = EVT_8206007_A
+		ai_chance = 60
+		command = { type = dissent value = -3 }
+		
+	}
+	
+	# Disagree
+	action = {
+		name = EVT_8206007_B
+		ai_chance = 40
+		command = { type = dissent value = 3 }
+		command = { type = war which = U05 }
+		command = { type = sleepevent which = 8206008 }
+	}
+}
+
+#  Ceasefire of 1945: the Dutch agree on Indonesian independence
+event = {
+	id = 8206008
+	country = HOL
+
+	name = EVT_8206008_NAME
+	desc = EVT_8206008_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+	
+	trigger = {
+		event = 8206007
+		NOT = { war = { country = INO country = U05 } }
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 90
+	deathdate = { day = 30 month = march year = 1946 }
+	
+	# Never! (resumption of war)
+	action = {
+		name = EVT_8206008_A
+		ai_chance = 95
+		command = { type = trigger which = 8206009 }
+	}
+	
+	# Agree
+	action = {
+		name = EVT_8206008_B
+		ai_chance = 5
+		command = { type = trigger which = 8206030 } # End of war
+		command = { type = setflag which = federated_indonesia }
+	}
+}
+
+# Resumption of war
+event = {
+	id = 8206009
+	country = U05
+
+	name = EVT_8206008_NAME
+	desc = EVT_8206008_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+	
+	action = {
+		name = EVT_8206008_A
+		command = { type = war which = INO }
+	}
+}
+
+### 1946
+
+# Battle of Surabaya
+event = {
+	id = 8206010
+	country = U05
+
+	name = EVT_8206030_NAME
+	desc = EVT_8206030_DESC
+	picture = "nwo\battle_of_surabaya"
+	style = 1
+	
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+	
+	date = { day = 0 month = january year = 1946 }
+	offset = 90
+	deathdate = { day = 30 month = june year = 1946 }
+	
+	action = {
+		name = EVT_8206030_A
+		command = { type = dissent value = -6 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_corps which = "Sumatran defence force" value = land where = 1636 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = manpowerpool value = 30 }
+	}
+}
+
+# Insurgencies in Sumatra
+event = {
+	id = 8206011
+	country = INO
+	one_action = yes
+
+	name = EVT_8206031_NAME
+	desc = EVT_8206031_DESC
+	picture = "nwo\indonesian_national_revolution"
+	style = 1
+	
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+	
+	date = { day = 0 month = january year = 1946 }
+	offset = 90
+	deathdate = { day = 30 month = june year = 1946 }
+	
+	action = {
+		name = EVT_8206031_A
+		ai_chance = 34
+		command = { type = add_corps which = "Sumatran guerilla" value = land where = 1641 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = manpowerpool value = 30 }
+	}
+	
+	action = {
+		name = EVT_8206031_B
+		ai_chance = 33
+		command = { type = add_corps which = "Sumatran guerilla" value = land where = 1637 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = manpowerpool value = 30 }
+	}
+	
+	action = {
+		name = EVT_8206031_C
+		ai_chance = 33
+		command = { type = add_corps which = "Sumatran guerilla" value = land where = 1640 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = manpowerpool value = 30 }
+	}
+}
+
+### Linggajati Agreement
+
+event = {
+	id = 8206012
+	country = HOL
+
+	name = EVT_8206032_NAME
+	desc = EVT_8206032_DESC
+	picture = "nwo\linggajati_agreement"
+	style = 1
+
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+	
+	date = { day = 0 month = november year = 1946 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1946 }
+	
+	# Propose agreement
+	action = {
+		name = EVT_8206032_A
+		ai_chance = 90
+		command = { type = relation which = INO value = 20 }
+		command = { type = belligerence value = -5 }
+	}
+	
+	# Fight on
+	action = {
+		name = EVT_8206032_B
+		ai_chance = 10
+		command = { type = dissent value = 25 }
+		command = { type = belligerence value = 25 }
+		command = { type = sleepevent which = 8206033 }
+		command = { type = sleepevent which = 8206034 }
+		command = { type = trigger which = 8206035 }
+	}
+}
+
+# Indonesia ratifies Linggajati Agreement
+event = {
+	id = 8206013
+	country = INO
+
+	name = EVT_8206033_NAME
+	desc = EVT_8206033_DESC
+	picture = "nwo\linggajati_agreement"
+	style = 1
+	
+	trigger = {
+		event = 8206012
+		war = { country = INO country = U05 }
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 90
+	deathdate = { day = 30 month = march year = 1947 }
+	
+	# Ratify
+	action = {
+		name = EVT_8206033_A
+		command = { type = dissent value = 7 }
+	}
+	
+	# Don't negotiate!
+	action = {
+		name = EVT_8206033_B
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8206014 }
+		command = { type = trigger which = 8206015 }
+	}
+}
+
+#  Linggajati Agreement: the Dutch agree on Indonesian independence
+event = {
+	id = 8206014
+	country = HOL
+
+	name = EVT_8206034_NAME
+	desc = EVT_8206034_DESC
+	picture = "nwo\linggajati_agreement"
+	style = 1
+	
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+	
+	date = { day = 0 month = july year = 1947 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1947 }
+	
+	# Carry out police action!!!
+	action = {
+		name = EVT_8206034_A
+		ai_chance = 98
+		command = { type = trigger which = 8206035 }
+	}
+	
+	# Agree
+	action = {
+		name = EVT_8206034_B
+		ai_chance = 2
+		command = { type = trigger which = 8206030 } # End of war
+		command = { type = setflag which = federated_indonesia }
+	}
+}
+
+# First "Police action"
+event = {
+	id = 8206015
+	country = U05
+
+	name = EVT_8206035_NAME
+	desc = EVT_8206035_DESC
+	picture = "nwo\indonesian_police_actions"
+	style = 1
+	
+	action = {
+		name = EVT_8206035_A
+		command = { type = dissent value = -10 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_corps where = 1596 }
+		command = { type = add_division value = marine when = 6 }
+		command = { type = add_division value = marine when = 6 }
+		command = { type = add_division value = marine when = 6 }
+		command = { type = manpowerpool value = 30 }
+	}
+}
+
+### 1948
+
+# Second police action
+event = {
+	id = 8206016
+	country = HOL
+
+	name = EVT_8206036_NAME
+	desc = EVT_8206036_DESC
+	picture = "nwo\indonesian_police_actions"
+	style = 1
+
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+	
+	date = { day = 0 month = december year = 1948 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1948 }
+	
+	# Carry out police action!!!
+	action = {
+		name = EVT_8206036_A
+		ai_chance = 98
+		command = { type = trigger which = 8206017 }
+	}
+	
+	# Refrain
+	action = {
+		name = EVT_8206036_B
+		ai_chance = 2
+		command = { type = belligerence value = -2 }
+		command = { type = relation which = INO value = 20 }
+	}
+}
+
+# Police action
+event = {
+	id = 8206017
+	country = U05
+
+	name = EVT_8206037_NAME
+	desc = EVT_8206037_DESC
+	picture = "nwo\indonesian_police_actions"
+	style = 1
+	
+	action = {
+		name = EVT_8206037_A
+		command = { type = dissent value = -10 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_corps where = 1596 }
+		command = { type = add_division value = marine when = 6 }
+		command = { type = add_division value = marine when = 6 }
+		command = { type = add_division value = marine when = 6 }
+		command = { type = manpowerpool value = 30 }
+	}
+}
+
+### Prolonged fight events
+
+# 1944/45
+
+#event = {
+#	id = 8206020
+#	tag = { HOL U05 }
+#	persistent = yes
+#
+#	name = EVT_8206060_NAME
+#	desc = EVT_8206060_DESC
+#	picture = "nwo\indonesia_prolonged_fight"
+#	style = 1
+#	
+#	trigger = {
+#		war = { country = INO country = U05 }
+#	}
+#	
+#	date = { day = 0 month = january year = 1944 }
+#	offset = 90
+#	deathdate = { day = 30 month = december year = 1945 }
+#	
+#	action = {
+#		name = EVT_8206060_A
+#		command = { trigger = { country = U05 } type = dissent value = 1 }
+#		command = { trigger = { country = HOL } type = dissent value = 1 }
+#		command = { trigger = { country = HOL } type = belligerence value = 1 }
+#	}
+#}
+
+# 1946/47
+
+#event = {
+#	id = 8206021
+#	tag = { HOL U05 }
+#	persistent = yes
+#
+#	name = EVT_8206061_NAME
+#	desc = EVT_8206061_DESC
+#	picture = "nwo\indonesia_prolonged_fight"
+#	style = 1
+#	
+#	trigger = {
+#		war = { country = INO country = U05 }
+#	}
+#	
+#	date = { day = 0 month = january year = 1946 }
+#	offset = 90
+#	deathdate = { day = 30 month = december year = 1947 }
+#	
+#	action = {
+#		name = EVT_8206060_A
+#		command = { trigger = { country = U05 } type = dissent value = 2 }
+#		command = { trigger = { country = HOL } type = dissent value = 1 }
+#		command = { trigger = { country = HOL } type = belligerence value = 2 }
+#	}
+#}
+
+# 1948/49
+
+event = {
+	id = 8206022
+	tag = { HOL U05 }
+	persistent = yes
+
+	name = EVT_8206062_NAME
+	desc = EVT_8206062_DESC
+	picture = "nwo\indonesia_prolonged_fight"
+	style = 1
+	
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+	
+	date = { day = 0 month = january year = 1948 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1949 }
+	
+	action = {
+		name = EVT_8206060_A
+		command = { trigger = { country = U05 } type = dissent value = 2 }
+		command = { trigger = { country = HOL } type = dissent value = 1 }
+		command = { trigger = { country = HOL } type = belligerence value = 3 }
+	}
+}
+
+# 1950+
+
+event = {
+	id = 8206023
+	tag = { HOL U05 }
+	persistent = yes
+
+	name = EVT_8206063_NAME
+	desc = EVT_8206063_DESC
+	picture = "nwo\indonesia_prolonged_fight"
+	style = 1
+	
+	trigger = {
+		war = { country = INO country = U05 }
+	}
+	
+	date = { day = 0 month = january year = 1950 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8206060_A
+		command = { trigger = { country = U05 OR = { event = 8510607 event = 8510606 } } type = dissent value = 3 }
+		command = { trigger = { country = U05 OR = { event = 8510607 event = 8510606 } } type = dissent value = 2 }
+		command = { trigger = { country = HOL } type = dissent value = 1 }
+		command = { trigger = { country = HOL } type = belligerence value = 4 }
+		command = { trigger = { country = HOL OR = { event = 8510607 event = 8510606 } } type = belligerence value = 8 }
+	}
+}
+
+### Decision to end the war
+
+# 1945-7 (player only)
+
+event = {
+	id = 8206025
+	tag = { HOL U05 }
+
+	name = EVT_8206065_NAME
+	desc = EVT_8206065_DESC
+	picture = "nwo\end_of_indonesian_national_revolution"
+	decision_picture = "nwo\d_end_of_indonesian_national_revolution"
+	style = 1
+	
+	decision = {
+		war = { country = INO country = U05 }
+		ai = no
+	}
+	
+	trigger = {
+		war = { country = INO country = U05 }
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1945 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1947 }
+	
+	# End the War
+	action = {
+		name = EVT_8206065_A
+		command = { type = trigger which = 8206030 }
+		command = { type = dissent value = -3 }
+	}
+}
+
+# 1948
+
+event = {
+	id = 8206026
+	tag = { HOL U05 }
+	persistent = yes
+
+	name = EVT_8206066_NAME
+	desc = EVT_8206066_DESC
+	picture = "nwo\end_of_indonesian_national_revolution"
+	decision_picture = "nwo\d_end_of_indonesian_national_revolution"
+	style = 1
+	
+	decision = {
+		war = { country = INO country = U05 }
+		OR = {
+			ai = no
+			AND = {
+				ai = HOL
+				ai = U05
+				country = HOL
+			}
+		}
+	}
+	
+	trigger = {
+		war = { country = INO country = U05 }
+		OR = {
+			ai = no
+			AND = {
+				ai = HOL
+				ai = U05
+				country = HOL
+			}
+		}
+	}
+	
+	date = { day = 0 month = january year = 1948 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1948 }
+	
+	# End the War
+	action = {
+		name = EVT_8206066_A
+		ai_chance = 1
+		command = { type = trigger which = 8206030 }
+		command = { type = dissent value = -3 }
+	}
+	
+	# Continue the War
+	action = {
+		name = EVT_8206066_B
+		ai_chance = 99
+		trigger = { ai = yes }
+		command = { type = belligerence value = 1 }
+	}
+}
+
+# 1949+ (UN does not condemn Netherlands)
+
+event = {
+	id = 8206027
+	tag = { HOL U05 }
+	persistent = yes
+
+	name = EVT_8206067_NAME
+	desc = EVT_8206067_DESC
+	picture = "nwo\end_of_indonesian_national_revolution"
+	decision_picture = "nwo\d_end_of_indonesian_national_revolution"
+	style = 1
+	
+	decision = {
+		war = { country = INO country = U05 }
+		OR = {
+			ai = no
+			AND = {
+				ai = HOL
+				ai = U05
+				country = HOL
+			}
+		}
+		NOT = { event = 8510607 } # UN condemnation 
+		NOT = { event = 8510606 } # UN condemnation and military action
+	}
+	
+	trigger = {
+		war = { country = INO country = U05 }
+		OR = {
+			ai = no
+			AND = {
+				ai = HOL
+				ai = U05
+				country = HOL
+			}
+		}
+		NOT = { event = 8510607 } # UN condemnation 
+		NOT = { event = 8510606 } # UN condemnation and military action
+	}
+	
+	date = { day = 0 month = january year = 1949 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	# End the War
+	action = {
+		name = EVT_8206067_A
+		ai_chance = 10
+		command = { type = trigger which = 8206030 }
+		command = { type = dissent value = -5 }
+	}
+	
+	# Continue the War
+	action = {
+		name = EVT_8206067_B
+		ai_chance = 90
+		trigger = { ai = yes }
+		command = { type = belligerence value = 1 }
+	}
+}
+
+# 1949+ (UN condemns Netherlands)
+
+event = {
+	id = 8206028
+	tag = { HOL U05 }
+	persistent = yes
+
+	name = EVT_8206068_NAME
+	desc = EVT_8206068_DESC
+	picture = "nwo\end_of_indonesian_national_revolution"
+	decision_picture = "nwo\d_end_of_indonesian_national_revolution"
+	style = 1
+	
+	decision = {
+		war = { country = INO country = U05 }
+		OR = {
+			ai = no
+			AND = {
+				ai = HOL
+				ai = U05
+				country = HOL
+			}
+		}
+		OR = { 
+			event = 8510607 # UN condemnation 
+			event = 8510606 # UN condemnation and military action
+		} 
+	}
+	
+	trigger = {
+		war = { country = INO country = U05 }
+		OR = {
+			ai = no
+			AND = {
+				ai = HOL
+				ai = U05
+				country = HOL
+			}
+		}
+		OR = { 
+			event = 8510607 # UN condemnation 
+			event = 8510606 # UN condemnation and military action
+		} 
+	}
+	
+	date = { day = 0 month = january year = 1949 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	# End the War
+	action = {
+		name = EVT_8206068_A
+		ai_chance = 30
+		command = { type = trigger which = 8206030 }
+		command = { type = dissent value = -5 }
+	}
+	
+	# Continue the War
+	action = {
+		name = EVT_8206068_B
+		ai_chance = 70
+		trigger = { ai = yes }
+		command = { type = belligerence value = 1 }
+	}
+}
+
+# 1949+ (U05's dissent is very high)
+
+event = {
+	id = 8206029
+	country = U05
+	persistent = yes
+
+	name = EVT_8206069_NAME
+	desc = EVT_8206069_DESC
+	picture = "nwo\end_of_indonesian_national_revolution"
+	style = 1
+	
+	decision = {
+		war = { country = INO country = U05 }
+		dissent = 30
+	}
+	
+	trigger = {
+		war = { country = INO country = U05 }
+		dissent = 30
+	}
+	
+	date = { day = 0 month = january year = 1949 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	# End the War
+	action = {
+		name = EVT_8206069_A
+		ai_chance = 100
+		command = { type = trigger which = 8206030 }
+		command = { type = dissent value = -10 }
+	}
+}
+
+### End of the Indonesian National Revolution
+
+event = {
+	id = 8206030
+	country = U05
+
+	name = EVT_8206070_NAME
+	desc = EVT_8206070_DESC
+	picture = "nwo\end_of_indonesian_national_revolution"
+	style = 1
+	
+	action = {
+		name = EVT_8206070_A
+		command = { type = secederegion which = -2 value = "Indonesia" when = 2 }
+		command = { type = secederegion which = INO value = "Indonesia" when = 1 }
+	    command = { type = peace which = INO value = 0 }
+		command = { type = name where = U05 which = "U0549" }
+		command = { type = capital which = 1596 } # Hollandia
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = dissent value = -10 }
+	}
+}
+
+event = {
+	id = 8206031
+	country = INO
+
+	name = EVT_8206071_NAME
+	desc = EVT_8206071_DESC
+	picture = "nwo\end_of_indonesian_national_revolution"
+	style = 1
+	
+	trigger = {
+		NOT = { war = { country = INO country = U05 } }
+		event = 8206030
+	}
+	
+	date = { day = 0 month = january year = 1945 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8206071_A
+		command = { type = dissent value = -5 }
+		
+	}
+}
+
+# Federates States of Indonesia
+event = {
+	id = 8206032
+	country = U05
+
+	name = EVT_8206072_NAME
+	desc = EVT_8206072_DESC
+	picture = "nwo\federated_indonesia"
+	style = 1
+	
+	trigger = {
+		event = 8206031
+		flag = federated_indonesia
+	}
+	
+	action = {
+		name = EVT_8206072_A
+		command = { type = make_puppet which = INO }
+		command = { type = secedearea which = INO value = "Sumatra" when = 2 }
+		command = { type = secedearea which = INO value = "West Java" when = 2 }
+		command = { type = secedearea which = INO value = "East Java" when = 2 }		
+	}
+}
+
+### Acquisition of Dutch New Guinea
+
+# The Dutch are asked
+
+event = {
+	id = 8206040
+	country = HOL
+
+	name = EVT_8206080_NAME
+	desc = EVT_8206080_DESC
+	picture = nwo\dutch_west_guinea
+	style = 1
+	
+	trigger = {
+		event = 8206030
+		NOT = { flag = federated_indonesia } # Indonesia won the revolution
+		ai = U05
+	}
+	
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	# OK
+	action = {
+		name = EVT_8206080_A
+		command = { type = trigger which = 8206042 }	
+	}
+	
+	# Dont' agree (this means war!)
+	action = {
+		name = EVT_8206080_B
+		command = { type = trigger which = 8206041 }
+		command = { type = dissent value = 15 }
+		command = { type = belligerence value = 25 }
+	}
+}
+
+# The Dutch do not comply
+
+event = {
+	id = 8206041
+	country = INO
+
+	name = EVT_8206081_NAME
+	desc = EVT_8206081_DESC
+	picture = nwo\dutch_west_guinea
+	style = 1
+
+	# Then it is war!
+	action = {
+		name = EVT_8206081_A
+		ai_chance = 90
+		trigger = {
+			OR = {
+				ai = no
+				NOT = { alliance = { country = U05 country = USA } }
+				NOT = { alliance = { country = U05 country = ENG } }
+			}
+		}
+		command = { type = war which = U05 }	
+	}
+	
+	# Back off
+	action = {
+		name = EVT_8206081_B
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -3 }
+	}
+}
+
+# The Dutch agree
+
+event = {
+	id = 8206042
+	country = INO
+
+	name = EVT_8206082_NAME
+	desc = EVT_8206082_DESC
+	picture = nwo\dutch_west_guinea
+	style = 1
+	
+	# OK
+	action = {
+		name = EVT_8206082_A
+		command = { type = inherit which = U05 }	
+	}
+}
+
+### Dutch East India temporarily ceases to be a Dutch puppet
+
+event = {
+	id = 8206050
+	country = U05
+
+	name = EVT_8206050_NAME
+	desc = EVT_8206050_DESC
+	picture = "nwo\dutch_east_india"
+	style = 1
+
+	trigger = {
+		puppet = { country = U05 country = HOL }
+		exists = INO
+		flag = cold_war_pacific
+		NOT = { event = 8206030 } # War ends
+	}
+
+	date = { day = 0 month = september year = 1945 }
+	offset = 7
+	deathdate = { day = 30 month = september year = 1955 }
+
+	action = {
+		name = EVT_8206050_A
+		command = { type = end_puppet }
+	}
+
+}
+
+event = {
+	id = 8206051
+	country = HOL
+
+	name = EVT_8206051_NAME
+	desc = EVT_8206051_DESC
+	picture = "nwo\dutch_east_india"
+	style = 1
+
+	trigger = {
+		NOT = { puppet = { country = U05 country = HOL } }
+		flag = cold_war_pacific
+		event = 8206030 # War ends
+	}
+
+	date = { day = 0 month = september year = 1945 }
+	offset = 7
+	deathdate = { day = 30 month = september year = 1955 }
+
+	action = {
+		name = EVT_8206051_A
+		command = { type = make_puppet which = U05 }
+	}
+
+}
+
+event = {
+	id = 8206052
+	country = U05
+
+	name = EVT_8206052_NAME
+	desc = EVT_8206052_DESC
+	picture = "nwo\dutch_west_guinea"
+	style = 1
+
+	trigger = {
+		puppet = { country = U05 country = HOL }
+		exists = INO
+		flag = cold_war_pacific
+		NOT = { flag = federated_indonesia } # Indonesia won the revolution
+	}
+
+	date = { day = 0 month = september year = 1961 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8206052_A
+		command = { type = end_puppet }
+	}
+
+}

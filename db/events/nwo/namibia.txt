@@ -1,0 +1,362 @@
+event = {
+	id = 8010201
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710001 } # David G. Conradie
+		command = { type = headofgovernment which = 710100 } # David G. Conradie
+	}
+}
+
+event = {
+	id = 8010202
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710101 } # Petrus I. Hoogenhout
+		command = { type = headofgovernment which = 710002 } # Petrus I. Hoogenhout
+	}
+}
+
+event = {
+	id = 8010203
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710102 } # Albertus Roux van Rhijn
+		command = { type = headofgovernment which = 710103 } # Albertus Roux van Rhijn
+	}
+}
+
+event = {
+	id = 8010204
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710104 } # Daniel du Plessis Viljoen
+		command = { type = headofgovernment which = 710105 } # Daniel du Plessis Viljoen
+	}
+}
+
+event = {
+	id = 8010205
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 710106 } # Wentzel Christoffel du Plessis
+		command = { type = headofgovernment which = 710107 } # Wentzel Christoffel du Plessis
+	}
+}
+
+event = {
+	id = 8010206
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 710108 } # Johannes G. H. van der Wath
+		command = { type = headofgovernment which = 710109 } # Johannes G. H. van der Wath
+	}
+}
+
+event = {
+	id = 8010207
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710110 } # Barend J. van der Walt
+		command = { type = headofgovernment which = 710111 } # Barend J. van der Walt
+	}
+}
+
+event = {
+	id = 8010208
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710112 } # Marthinus T. Steyn
+		command = { type = headofgovernment which = 710113 } # Marthinus T. Steyn
+	}
+}
+
+event = {
+	id = 8010209
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710114 } # Gerrit Viljoen
+		command = { type = headofgovernment which = 710115 } # Gerrit Viljoen
+	}
+}
+
+event = {
+	id = 8010210
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710116 } # Danie Hough
+		command = { type = headofgovernment which = 710117 } # Danie Hough
+	}
+}
+
+event = {
+	id = 8010211
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710118 } # Willie van Niekerk
+		command = { type = headofgovernment which = 710119 } # Willie van Niekerk
+	}
+}
+
+event = {
+	id = 8010212
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 710120 } # Louis Pienaar
+		command = { type = headofgovernment which = 710121 } # Louis Pienaar
+	}
+}
+
+event = {
+	id = 8010213
+	country = NAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 710122 } # Sam Nujoma
+		command = { type = headofgovernment which = 710123 } # Hage Geingob
+	}
+}

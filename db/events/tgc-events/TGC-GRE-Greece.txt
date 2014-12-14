@@ -1,0 +1,317 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Yugoslavia and Serbia
+# Event List:
+#GRE	13301500	The Outcome of the Great War (historical)
+#GRE	13301510	The Greek-Turkish War
+#GRE	13301511	Victory in the Greek-Turkish War
+#GRE	13301512	Defeat in the Greek-Turkish War
+
+# Outcome of the Great War
+event = {
+	id = 13301500
+	date = { day = 1 month = january year = 1914 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	country = GRE
+	
+	trigger = {
+		atwar = no
+		or = {
+			event = 2020503
+			event = 2145513
+		}
+		or = {
+			event = 2002509
+			and = {
+				owned = { province = 370 data = -1 }
+				owned = { province = 363 data = -1 }
+				not = {
+					or = {
+						owned = { province = 1004 data = OTT }
+						owned = { province = 1014 data = OTT }
+						owned = { province = 1015 data = OTT }
+						owned = { province = 1021 data = OTT }
+						owned = { province = 1027 data = OTT }
+						owned = { province = 1029 data = OTT }
+					}
+				}
+			}
+		}
+	}
+	
+	name = "EVT_13301500_NAME"							
+	Desc = "EVT_13301500_DESC"
+	Picture = "assistance"
+	
+	action = { 	
+		name = "I happened to have a Megali Idea..."
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = winner }
+		command = { type = addcore which = 388 } # Cyprus
+		command = { type = addcore which = 387 }
+		command = { type = addcore which = 385 } # Ottoman Europe
+		command = { type = addcore which = 370 }
+		command = { type = addcore which = 385 }
+		command = { type = addcore which = 409 }
+		command = { type = ai_prepare_war	which = TUR }
+		command = { type = ai_prepare_war	which = OTT }
+		command = { type = ai which = "switch/GRE_1919.ai" }
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	}
+}
+
+# The Greek-Turkish War
+event = {
+	id = 13301510
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1936 }
+	country = GRE
+	
+	offset = 90
+	
+	trigger = {
+		local_flag = winner
+		event = 2145513
+		atwar = no
+		or = {
+			exists = TUR
+			exists = OTT
+		}
+		army = 10
+		not = { participant = { country = TUR value = 4 } }
+		not = { participant = { country = OTT value = 4 } }
+	}
+	
+	name = "EVT_13301510_NAME"							
+	Desc = "EVT_13301510_DESC"
+	Picture = "assistance"
+	
+	action = { 	
+		name = "Forward to a Greater Greek Empire!"
+		ai_chance = 99
+		command = { type = addclaim which = 1065 }
+		command = { type = addclaim which = 1066 }
+		command = { type = addcore which = 1067 }
+		command = { type = addcore which = 385 } # Ottoman Europe
+		command = { type = addcore which = 370 }
+		command = { type = addcore which = 385 }
+		command = { type = addcore which = 409 }
+		command = { type = addcore which = 383 } #Islands
+		command = { type = addcore which = 381 }
+		command = { type = addcore which = 378 }
+		command = { type = addcore which = 379 }
+		command = { type = addcore which = 388 } # Cyprus
+		command = { type = addcore which = 387 }
+		command = { type = addclaim which = 1071 }
+		command = { type = addcore which = 1068 }
+		command = { type = addcore which = 1078 }
+		command = { type = addcore which = 1076 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { trigger = { not = { transport = 1 } } type = add_division value = transport when = 0 }
+		command = { trigger = { not = { transport = 2 } } type = add_division value = transport when = 0 }
+		command = { trigger = { not = { destroyer = 1 } } type = add_division value = destroyer when = 0 }
+		command = { trigger = { not = { destroyer = 2 } } type = add_division value = destroyer when = 0 }
+		command = { trigger = { not = { light_cruiser = 1 } } type = add_division value = light_cruiser when = 0 }
+		command = { trigger = { not = { light_cruiser = 2 } } type = add_division value = light_cruiser when = 0 }
+		command = { trigger = { not = { light_cruiser = 3 } } type = add_division value = light_cruiser when = 0 }
+		command = { trigger = { not = { heavy_cruiser = 1 } } type = add_division value = heavy_cruiser when = 0 }
+		command = { trigger = { not = { heavy_cruiser = 2 } } type = add_division value = heavy_cruiser when = 0 }
+		command = { trigger = { not = { battleship = 1 } } type = add_division value = battleship when = 0 }
+		command = { type = leave_alliance }
+		command = { trigger = { exists = TUR } type = war which = TUR }
+		command = { trigger = { exists = OTT } type = war which = OTT }
+		command = { type = dissent value = -8 }
+		command = { type = trigger which = 13300421 }	#Turkish Grand National Assembly
+	}
+	action = { 	
+		name = "Let's keep what we have."
+		ai_chance = 1
+		command = { trigger = { exists = TUR } type = relation which = TUR value = 100 }
+		command = { trigger = { exists = OTT } type = relation which = OTT value = 100 }
+	}
+}
+
+# Victory in the Greek-Turkish War
+event = {
+	id = 13301511
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1930 }
+	country = GRE
+	save_date = yes
+	offset = 7
+	
+	trigger = {
+		local_flag = winner
+		event = 13301510
+		or = {
+			and = { war = { country = OTT } lost_national = { country = OTT value = 40 } }
+			and = { war = { country = TUR } lost_national = { country = TUR value = 30 } }
+			and = { war = { country = BUL } lost_national = { country = BUL value = 50 } }
+		}
+		not = { lost_national = { country = GRE value = 20 } }
+	}
+	
+	name = "EVT_13301511_NAME"							
+	Desc = "EVT_13301511_DESC"
+	Picture = "assistance"
+	
+	action = { 	
+		name = "The Megali Idea has finally become reality!"
+		ai_chance = 50
+		trigger = {
+			or = {
+				and = {
+					war = { country = TUR }
+					lost_national = { country = TUR value = 50 }
+				}
+				and = {
+					war = { country = OTT }
+					lost_national = { country = OTT value = 50 }
+				}
+			}
+			not = { war = { country = BUL } }
+		}
+		command = { type = secederegion which = OTT value = anatolia when = 2 }
+		command = { type = secedearea which = BUL value = Bulgaria when = 1 }
+		command = { type = dissent value = -10 }
+	}
+	action = { 	
+		name = "The Megali Idea has finally become reality!"
+		ai_chance = 50
+		trigger = {
+			war = { country = BUL }
+			lost_national = { country = BUL value = 50 }
+		}
+		command = { type = peace which = BUL value = 0 }
+		command = { type = secedeprovince which = GRE value = 320 when = 2 }
+		command = { type = secedeprovince which = GRE value = 319 when = 2 }
+		command = { type = secedeprovince which = GRE value = 324 when = 2 }
+		command = { type = secedeprovince which = GRE value = 325 when = 2 }
+		command = { type = secedeprovince which = GRE value = 328 when = 2 } # Macedonia and Southern Albania join in a wave of nationalism
+		command = { type = secedeprovince which = GRE value = 333 when = 2 }
+		command = { type = secedeprovince which = GRE value = 360 when = 2 }
+		command = { type = secederegion which = OTT value = anatolia when = 2 }
+		command = { type = secedearea which = BUL value = Bulgaria when = 1 }
+		command = { type = dissent value = -10 }
+	}
+	action = { 	
+		name = "We will finish this, here and now!"
+		ai_chance = 50
+		trigger = {
+			event = 2020503
+			not = { war = { country = BUL } }
+			not = { AND = {
+				owned = { province = 320 data = GRE }
+				owned = { province = 319 data = GRE }
+				owned = { province = 324 data = GRE }
+				owned = { province = 325 data = GRE }
+			} }
+		}
+		command = { type = war which = BUL }
+		command = { type = addcore which = 320 }
+		command = { type = addcore which = 319 }
+		command = { type = addcore which = 324 }
+		command = { type = addcore which = 325 }
+		command = { type = dissent value = -2 }
+	}
+}
+
+# Defeat in the Greek-Turkish War
+event = {
+	id = 13301512
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1930 }
+	country = GRE
+	
+	offset = 10
+	
+	trigger = {
+		local_flag = winner
+		event = 13301510
+		or = {
+			war = { country = TUR }
+			war = { country = OTT }
+			war = { country = BUL }
+		}
+		or = {
+			lost_national = { country = GRE value = 30 }
+			year = 1923	#the war ends in a draw after about 5 years
+		}
+	}
+	
+	name = "EVT_13301512_NAME"							
+	Desc = "EVT_13301512_DESC"
+	Picture = "assistance"
+	
+	action = { 	
+		name = "The Megali Idea has become irredentist!"
+		ai_chance = 99
+		command = { type = peace which = BUL value = 0 }
+		command = { trigger = { exists = TUR } type = peace which = TUR value = 0 }
+		command = { trigger = { exists = OTT } type = peace which = OTT value = 0 }
+		command = { type = trigger which = 13300410 }	#Treaty of Lausanne
+		command = { type = removecore value = 320 }
+		command = { type = removecore value = 319 }
+		command = { type = removecore value = 324 }
+		command = { type = removecore value = 325 }
+		command = { type = removecore value = 328 }
+		command = { type = removecore value = 333 }
+		command = { type = removecore value = 360 }
+		command = { type = removecore value = 1057 }
+		command = { type = removecore which = 1066 }
+		command = { type = removecore which = 1067 }
+		command = { type = removecore which = 1071 }
+		command = { type = removecore which = 1068 }
+		command = { type = removecore which = 1078 }
+		command = { type = removecore which = 1076 }
+		command = { type = removecore which = 1079 }
+		command = { type = removeclaim value = 320 }
+		command = { type = removeclaim value = 319 }
+		command = { type = removeclaim value = 324 }
+		command = { type = removeclaim value = 325 }
+		command = { type = removeclaim value = 328 }
+		command = { type = removeclaim value = 333 }
+		command = { type = removeclaim value = 360 }
+		command = { type = removeclaim value = 1057 }
+		command = { type = removeclaim which = 1066 }
+		command = { type = removeclaim which = 1067 }
+		command = { type = removeclaim which = 1071 }
+		command = { type = removeclaim which = 1068 }
+		command = { type = removeclaim which = 1078 }
+		command = { type = removeclaim which = 1076 }
+		command = { type = removeclaim which = 1065 }
+		command = { type = removecore which = 1065 }
+		command = { type = secederegion which = OTT value = anatolia when = 2 }
+		command = { type = secedearea which = BUL value = Bulgaria when = 1 }
+		command = { trigger = { exists = TUR } type = secedeprovince which = TUR value = 384 when = 2 } #return gallipoli to TUR
+		command = { trigger = { exists = OTT } type = secedeprovince which = OTT value = 384 when = 2 } #return gallipoli to OTT
+		command = { trigger = { exists = TUR } type = secedeprovince which = TUR value = 385 when = 2 } #return adrianople to TUR
+		command = { trigger = { exists = OTT } type = secedeprovince which = OTT value = 385 when = 2 } #return adrianople to OTT
+		command = { trigger = { exists = TUR } type = secedeprovince which = TUR value = 1077 when = 2 } #return smyrna to TUR
+		command = { trigger = { exists = OTT } type = secedeprovince which = OTT value = 1077 when = 2 } #return smyrna to OTT
+		command = { type = dissent value = 30 }	
+		
+	}
+	action = { 	
+		name = "Fight on."
+		ai_chance = 1
+		command = { type = dissent value = 50 }
+	}
+}
+
+

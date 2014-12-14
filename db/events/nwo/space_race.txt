@@ -1,0 +1,852 @@
+### 8211000  REB  Decides who's going to get German ballistic engineers
+### 8211001  REB  Decides who's going to get German ballistic engineers
+### 8211002  REB  Decides who's going to get German ballistic engineers
+### 8211003  USA  Operation Paperclip
+### 8211004  SOV  Research of Sergei Korolyov
+### 8211005  REB  Decides which country is the first to put an artificial satellite in space
+### 8211006  REB  Decides which country is the first to put an artificial satellite in space
+### 8211007  REB  Decides which country is the first to put an artificial satellite in space
+### 8211008  SOV  Launch of Sputnik 
+### 8211009  USA  Launch of Sputnik 
+### 8211010  USA  Launch of Explorer 
+### 8211011  SOV  Launch of Explorer
+### 8211012  REB  Decides which country is the first to put a man in space
+### 8211013  REB  Decides which country is the first to put a man in space
+### 8211014  REB  Decides which country is the first to put a man in space
+### 8211015  SOV  Gagarin in Space
+### 8211016  USA  Gagarin in Space
+### 8211017  USA  Shepard in Space
+### 8211018  SOV  Shepard in Space
+### 8211019  REB  Decides which country is the first to put a man in space
+### 8211020  REB  Decides which country is the first to put a man in space
+### 8211021  REB  Decides which country is the first to put a man in space
+### 8211022  SOV  L3 Moon Expedition 
+### 8211023  USA  L3 Moon Expedition
+### 8211024  USA  Apollo 11
+### 8211025  SOV  Apollo 11
+################################################################################################
+# German Ballistic Engineers
+################################################################################################
+event = {
+      id = 8211000
+      country = REB
+
+      trigger = {
+             flag = cold_war
+             exists = DDR # Soviets recieved whole Germany
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1944 }
+      offset = 30
+      deathdate = { day = 29 month = december year = 1948 }
+     
+	 # Soviets get the engineers
+      action = {
+            name = OK
+            ai_chance = 95
+            command = { type = trigger which = 8211004 }
+            command = { type = sleepevent which = 8211001 }
+            command = { type = sleepevent which = 8211002 } 
+      }
+	  
+	  # Americans get the engineers
+      action = {
+            name = OK
+            ai_chance = 5
+            command = { type = trigger which = 8211003 }
+            command = { type = sleepevent which = 8211001 }
+            command = { type = sleepevent which = 8211002 }
+      }
+}
+
+event = {
+      id = 8211001
+      country = REB
+
+      trigger = {
+             flag = cold_war
+             exists = DFR # The Western Allies got the whole Germany
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+        
+      date = { day = 1 month = january year = 1944 }
+      offset = 30
+      deathdate = { day = 29 month = december year = 1948 }
+
+	  # Americans get the engineers
+      action = {
+            name = OK
+            ai_chance = 95
+            command = { type = trigger which = 8211003 }
+            command = { type = sleepevent which = 8211000 }
+            command = { type = sleepevent which = 8211002 }
+      }
+	  
+	  # Soviets get the engineers
+      action = {
+            name = OK
+            ai_chance = 5
+            command = { type = trigger which = 8211004 }
+            command = { type = sleepevent which = 8211000 }
+            command = { type = sleepevent which = 8211002 }
+      }  
+}
+
+event = {
+      id = 8211002
+      country = REB
+
+      trigger = {
+             flag = cold_war
+             NOT = {
+                   exists = DDR
+                   exists = DFR
+             } # Germany is divided
+      }
+        
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1944 }
+      offset = 30
+      deathdate = { day = 29 month = december year = 1948 }
+
+	  # Americans get the engineers
+      action = {
+	    name = OK
+	    ai_chance = 70
+        command = { type = trigger which = 8211003 }
+	    command = { type = sleepevent which = 8211000 }
+	    command = { type = sleepevent which = 8211001 }
+      }	
+
+	  # Soviets get the engineers
+      action = {
+	    name = OK
+	    ai_chance = 30
+	    command = { type = trigger which = 8211004 }
+	    command = { type = sleepevent which = 8211000 }
+	    command = { type = sleepevent which = 8211001 }
+      }	
+}
+###################################################################
+# Initial Research
+###################################################################
+event = {
+      id = 8211003
+      country = USA
+
+      trigger = {
+             flag = cold_war
+      }
+
+      name = EVT_8211003_NAME 
+      desc = EVT_8211003_DESC
+	  picture = nwo/wernher_von_braun
+      style = 1   
+
+      action = {
+            name = EVT_8211003_A
+            command = { type = setflag which = USA_rocket_engineers }
+      }
+}
+
+event = {
+      id = 8211004
+      country = SOV
+      picture = nwo/v2_launch
+
+      trigger = {
+             flag = cold_war
+      }
+
+      name = EVT_8211004_NAME
+      desc = EVT_8211004_DESC
+      style = 1
+
+      action = {
+            name = EVT_8211004_A
+            command = { type = setflag which = SOV_rocket_engineers }
+      }
+}
+############################################################################
+# First Artificial Satellites in Space
+############################################################################
+event = {
+      id = 8211005
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             NOT = {
+                   event = 8211008
+                   event = 8211009
+                   event = 8211010
+                   event = 8211011
+             }
+             flag = SOV_rocket_engineers
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1956 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1963 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 70
+            command = { type = trigger which = 8211008 }
+            command = { type = trigger which = 8211009 }
+      } 
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 5
+            command = { type = trigger which = 8211010 }
+            command = { type = trigger which = 8211011 }
+      }
+
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 25
+      }
+}
+
+event = {
+      id = 8211006
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             NOT = {
+                   event = 8211008
+                   event = 8211009
+                   event = 8211010
+                   event = 8211011
+             }
+             flag = USA_rocket_engineers
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1956 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1963 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 60
+            command = { type = trigger which = 8211008 }
+            command = { type = trigger which = 8211009 }
+      }
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 15
+            command = { type = trigger which = 8211010 }
+            command = { type = trigger which = 8211011 }
+      }
+
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 25
+      }
+}
+
+event = {
+      id = 8211007
+      country = REB
+      persistent = yes
+
+      trigger = {
+              flag = cold_war
+              NOT = {
+                    event = 8211008
+                    event = 8211009
+                    event = 8211010
+                    event = 8211011
+                    flag = SOV_rocket_engineers
+                    flag = USA_rocket_engineers
+              }
+      }
+
+      name = "AI_EVENT"
+      desc = "AI_EVENT"
+      style = 1 
+
+      date = { day = 1 month = january year = 1956 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1963 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 40
+            command = { type = trigger which = 8211008 }
+            command = { type = trigger which = 8211009 }
+      }
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 20
+            command = { type = trigger which = 8211010 }
+            command = { type = trigger which = 8211011 }
+      }
+
+	  # Nobody Succeeds
+      action = {
+            name = OK
+            ai_chance = 40
+      }
+}
+
+event = {
+      id = 8211008
+      country = SOV
+
+      name = EVT_8211008_NAME
+      desc = EVT_8211008_DESC
+	  picture = nwo/sputnik
+      style = 1      
+
+      # Triggered by 8211005
+ 
+      action = {
+            name = EVT_8211008_A
+            command = { type = dissent value = -10 }
+      }
+}
+
+event = {
+      id = 8211009
+      country = USA
+
+      name = EVT_8211009_NAME
+      desc = EVT_8211009_DESC
+	  picture = nwo/sputnik
+      style = 1      
+
+      # Triggered by 8211005
+
+      action = {
+            name = EVT_8211009_A
+            command = { type = dissent value = 10 }
+      }
+}
+
+event = {
+      id = 8211010
+      country = USA
+
+      name = EVT_8211010_NAME
+      desc = EVT_8211010_DESC
+	  picture = nwo/explorer_1 
+      style = 1
+
+      # Triggered by 8211005
+
+      action = {
+            name = EVT_8211010_A
+            command = { type = dissent value = -10 }
+      }
+}
+
+event = {
+      id = 8211011
+      country = SOV
+      
+      name = EVT_8211011_NAME
+      desc = EVT_8211011_DESC
+	  picture = nwo/explorer_1
+      style = 1      
+
+      # Triggered by 8211005
+
+      action = {
+            name = EVT_8211011_A
+            command = { type = dissent value = 10 }
+      }
+}
+#########################################################
+# First Man In Space
+#########################################################
+event = {
+      id = 8211012
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             OR = {
+                  event = 8211008
+                  event = 8211009
+                  event = 8211010
+                  event = 8211011
+             }
+             NOT = {
+                   event = 8211015
+                   event = 8211016
+                   event = 8211017
+                   event = 8211018
+             }
+             flag = SOV_rocket_engineers
+      }
+ 
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1960 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1963 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 70
+            command = { type = trigger which = 8211015 }
+            command = { type = trigger which = 8211016 }
+      }
+ 
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 5
+            command = { type = trigger which = 8211017 }
+            command = { type = trigger which = 8211018 }
+      }
+       
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 25
+      }
+}
+
+event = {
+      id = 8211013
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             OR = {
+                  event = 8211008
+                  event = 8211009
+                  event = 8211010
+                  event = 8211011
+             }
+             NOT = {
+                   event = 8211015
+                   event = 8211016
+                   event = 8211017
+                   event = 8211018
+             }
+             flag = USA_rocket_engineers
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1960 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1963 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 60
+            command = { type = trigger which = 8211015 }
+            command = { type = trigger which = 8211016 }
+      }
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 15
+            command = { type = trigger which = 8211017 }
+            command = { type = trigger which = 8211018 }
+      }
+
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 25
+      }
+}
+
+event = {
+      id = 8211014
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             OR = {
+                  event = 8211008
+                  event = 8211009
+                  event = 8211010
+                  event = 8211011
+             }
+             NOT = {
+                   event = 8211015
+                   event = 8211016
+                   event = 8211017
+                   event = 8211018
+                   flag = SOV_rocket_engineers
+                   flag = USA_rocket_engineers
+             }
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1960 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1963 }
+ 
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 40
+            command = { type = trigger which = 8211015 }
+            command = { type = trigger which = 8211016 }
+      }
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 20
+            command = { type = trigger which = 8211017 }
+            command = { type = trigger which = 8211018 }
+      }
+       
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 40
+      }
+}
+
+event = {
+      id = 8211015
+      country = SOV
+
+      name = EVT_8211015_NAME
+      desc = EVT_8211015_DESC
+	  picture = nwo/gagarin
+      style = 1
+
+      # triggered by 8211012
+ 
+      action = {
+            name = EVT_8211015_A
+            command = { type = dissent value = -10 }
+      }
+}
+
+event = {
+      id = 8211016
+      country = USA
+
+      name = EVT_8211016_NAME
+      desc = EVT_8211016_DESC
+	  picture = nwo/gagarin
+      style = 1
+
+      # triggered by 8211012
+
+      action = {
+            name = EVT_8211016_A
+            command = { type = dissent value = 10 }
+      }
+}
+
+event = {
+      id = 8211017
+      country = USA
+      
+      name = EVT_8211017_NAME
+      desc = EVT_8211017_DESC
+	  picture = nwo/alan_shepard
+      style = 1
+
+      # triggered by 8211012
+
+      action = {
+            name = EVT_8211017_A
+            command = { type = dissent value = -10 }
+      }
+}
+
+event = {
+      id = 8211018
+      country = SOV
+
+      name = EVT_8211018_NAME
+      desc = EVT_8211018_DESC
+	  picture = nwo/alan_shepard
+      style = 1
+
+      # triggered by 8211012
+
+      action = {
+            name = EVT_8211018_A
+            command = { type = dissent value = 10 }
+      }
+}
+
+#########################################################
+# Man on the Moon
+#########################################################
+event = {
+      id = 8211019
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             OR = {
+                  event = 8211015
+                  event = 8211016
+                  event = 8211017
+                  event = 8211019
+             }
+             NOT = {
+                   event = 8211022
+                   event = 8211023
+                   event = 8211024
+                   event = 8211025
+             }
+             flag = SOV_rocket_engineers
+      }
+      
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1968 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1975 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 40
+            command = { type = trigger which = 8211022 }
+            command = { type = trigger which = 8211023 }
+      }
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 40
+            command = { type = trigger which = 8211024 }
+            command = { type = trigger which = 8211025 }
+      }
+
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 20
+      }
+}
+
+event = {
+      id = 8211020
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             OR = {
+                  event = 8211015
+                  event = 8211016
+                  event = 8211017
+                  event = 8211018
+             }
+             NOT = {
+                   event = 8211022
+                   event = 8211023
+                   event = 8211024
+                   event = 8211025
+             }
+             flag = USA_rocket_engineers
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1968 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1975 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 10
+            command = { type = trigger which = 8211022 }
+            command = { type = trigger which = 8211023 }
+      }
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 65
+            command = { type = trigger which = 8211024 }
+            command = { type = trigger which = 8211025 }
+      }
+ 
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 25
+      }
+}
+
+event = {
+      id = 8211021
+      country = REB
+      persistent = yes
+
+      trigger = {
+             flag = cold_war
+             OR = {
+                  event = 8211015
+                  event = 8211016
+                  event = 8211017
+                  event = 8211018
+             }
+             NOT = {
+                   event = 8211022
+                   event = 8211023
+                   event = 8211024
+                   event = 8211025
+             }
+             flag = USA_rocket_engineers
+             flag = SOV_rocket_engineers
+      }
+
+      name = AI_EVENT
+      desc = AI_EVENT
+      style = 1
+
+      date = { day = 1 month = january year = 1968 }
+      offset = 360
+      deathdate = { day = 29 month = december year = 1975 }
+
+	  # Soviets are first
+      action = {
+            name = OK
+            ai_chance = 15
+            command = { type = trigger which = 8211022 }
+            command = { type = trigger which = 8211023 }
+      }
+
+	  # Americans are first
+      action = {
+            name = OK
+            ai_chance = 45
+            command = { type = trigger which = 8211024 }
+            command = { type = trigger which = 8211025 }
+      }
+ 
+	  # Nobody succeeds
+      action = {
+            name = OK
+            ai_chance = 40
+      }
+}
+
+event = {
+      id = 8211022
+      country = SOV
+     
+      name = EVT_8211022_NAME
+      desc = EVT_8211022_DESC
+	  picture = nwo/in_the_ocean_of_storms
+      style = 1
+
+      # triggered by 8211012
+
+      action = {
+            name = EVT_8211022_A
+            command = { type = dissent value = -10 }
+      }
+}
+
+event = {
+      id = 8211023
+      country = USA
+
+      name = EVT_8211023_NAME
+      desc = EVT_8211023_DESC
+	  picture = nwo/in_the_ocean_of_storms
+      style = 1
+
+      # triggered by 8211012
+ 
+      action = {
+            name = EVT_8211023_A
+            command = { type = dissent value = 10 }
+      }
+}
+
+event = {
+      id = 8211024
+      country = USA
+ 
+      name = EVT_8211024_NAME
+      desc = EVT_8211024_DESC
+	  picture = nwo/apollo_11
+      style = 1
+
+      # triggered 8211012
+
+      action = {
+            name = EVT_8211024_A
+            command = { type = dissent value = -10 }
+      }
+}
+
+event = {
+      id = 8211025
+      country = SOV
+     
+      name = EVT_8211025_NAME
+      desc = EVT_8211025_DESC
+	  picture = nwo/apollo_11
+      style = 1
+
+      # triggered by 8211012
+
+      action = {
+            name = EVT_8211025_A
+            command = { type = dissent value = 10 }
+      }
+}

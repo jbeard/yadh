@@ -1,0 +1,224 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+# modified by Limith
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for 
+# Event List:
+# JAP	13301210	The Mukden Incident
+# JAP	13301211	The Invasion of Manchuria Succeeds
+# JAP	13301212	The Showa Period
+# JAP	13301213	The Imperial Way Faction
+
+# Mukden Incident
+# TODO: Remove FTC Requirement.
+event = { 
+	id = 13301210					
+	country = JAP
+	
+	trigger = {
+		exists = JAP		
+	}
+	
+	date = { day = 17 month = 8 year = 1930 }
+	offset = 30									 
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	
+	name = "EVT_13301210_NAME"							
+	Desc = "EVT_13301210_DESC"
+	Picture = "ccip_mukden" 
+	
+	action = { 	
+		name = "Let us make the best of it."		 
+		ai_chance = 100	 
+		command = { type = leave_alliance }
+		command = { trigger = { owned = { province = 1211 data = U67 } } type = war which = U67 }
+		command = { trigger = { owned = { province = 1211 data = U36 } } type = war which = U36 }
+		command = { trigger = { owned = { province = 1211 data = UCH } } type = war which = UCH }
+		command = { trigger = { owned = { province = 1211 data = CHI } } type = war which = CHI }
+		command = { type = dissent value = -15 }
+		command = { type = industrial_modifier which = total value = 15 }
+		command = { type = manpowerpool value = 400 }
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_50 }
+		command = { type = local_setflag which = disarm_army_75 }
+		command = { type = local_clrflag which = disarm_air_0 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_2 }
+		command = { type = local_setflag which = disarm_air_5 }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_setflag which = disarm_naval_200 }
+	}
+	action = { 	
+		name = "Mutiny against the Emperor is unacceptable!"		 
+		ai_chance = 0
+		command = { type =	dissent value = 10 }
+	}
+}
+
+#Invasion of Manchuria Succeeds.
+#TODO: Remove FTC requirement.
+event = {
+	id = 13301211					
+	country = JAP						
+	
+	trigger = {					
+		war = { country = U67 country = JAP }
+		event = 13301210
+		OR = {
+			AND = { 
+				control = { province = 1217 data = JAP } #if they invade through korea
+				control = { province = 1212 data = JAP }
+				control = { province = 1215 data = JAP }
+				control = { province = 1211 data = JAP }
+			}
+			#lost_national = { country = MAN value = 30 } #if they invade from sea
+			}
+		}
+		
+		name = "EVT_13301211_NAME"							
+		Desc = "EVT_13301211_DESC"
+		Picture = "ccip_mukden"
+		
+		offset = 7 #by boat from japan to china & agreement on terms.
+		date = { day = 1 month = january year = 1914 }
+		deathdate = { day = 1 month = january year = 1936 }
+		
+		action = { 	
+			name = "We have won!"		
+			ai_chance = 99
+			command = { type = peace which = CHI value = 0 }
+			command = { type = inherit which = U67 }
+			command = { type = secedearea which = CSX value = "Hebei" when = 2 } # Shanxi takes the border
+			command = { type = secedearea which = JAP value = "Rehe" when = 2 } # peace settlement for manchuria
+			command = { type = secedearea which = JAP value = "Jilin" when = 2 }
+			command = { type = secedearea which = JAP value = "Heilongjiang" when = 2 }
+			command = { type = secedearea which = JAP value = "Liaoning" when = 2 }
+			command = { type = secedeprovince which = JAP value = 1240 when = 2 } # get the missing border provinces
+			command = { type = secedeprovince which = JAP value = 1245 when = 2 }
+			command = { type = secedeprovince which = JAP value = 1246 when = 2 }
+			command = { type = secedeprovince which = JAP value = 1236 when = 2 }
+			command = { trigger = { exists = MAN } type = peace which = MAN value = 0 }
+			command = { trigger = { NOT = { exists = MAN } } type = independence which = MAN value = 1 when = 0 } # liberate MAN
+			command = { type = make_puppet which = MAN } #puppet them
+			command = { type = peace which = CHI value = 0 }
+			command = { type = local_clrflag which = disarm_army_10 }
+			command = { type = local_clrflag which = disarm_army_25 }
+			command = { type = local_clrflag which = disarm_army_50 }
+			command = { type = local_setflag which = disarm_army_75 }
+		}
+		
+		action = { 	
+			name = "We should win another throne for the emperors glory!"		
+			ai_chance = 1	
+			#nothing? maybe international interventions? all out war with the chinese rebels?
+			#TODO: extend this to go ahistorical.
+			command = { type = relation which = USA value = -100 }
+		}		
+	}
+
+	
+# The Showa period
+	event = { 
+		id = 13301212					
+		country = JAP						
+		
+		date = { day = 0 month = 0 year = 1926 }						
+		deathdate = { day = 1 month = january year = 1936 }
+		offset = 365										 
+		
+		trigger = {				 
+			event = 13301211
+			owned = { province = 1221 data = JAP }
+			owned = { province = 1222 data = JAP }
+			owned = { province = 1223 data = JAP }
+			owned = { province = 1224 data = JAP }
+			owned = { province = 1225 data = JAP } #korea
+			owned = { province = 1226 data = JAP }
+			owned = { province = 1227 data = JAP }
+			owned = { province = 1228 data = JAP }
+			owned = { province = 1229 data = JAP }
+			owned = { province = 1230 data = JAP }
+			owned = { province = 1231 data = JAP }
+			owned = { province = 1232 data = JAP }
+			owned = { province = 1233 data = JAP }
+			owned = { province = 1361 data = JAP } # Taiwan
+			owned = { province = 1362 data = JAP }
+			owned = { province = 1363 data = JAP }
+			owned = { province = 1364 data = JAP }
+		}
+		name = "EVT_13301212_NAME"							
+		Desc = "EVT_13301212_DESC"
+		Picture = "japan_victory" 
+		
+		action = { 	
+			name = "Enlightened peace and harmony it is."		
+			command = { type = addcore which = 1221 }
+			command = { type = addcore which = 1222 }
+			command = { type = addcore which = 1223 }
+			command = { type = addcore which = 1224 }
+			command = { type = addcore which = 1225 }
+			command = { type = addcore which = 1226 }
+			command = { type = addcore which = 1227 }
+			command = { type = addcore which = 1228 }
+			command = { type = addcore which = 1229 }
+			command = { type = addcore which = 1230 }
+			command = { type = addcore which = 1231 }
+			command = { type = addcore which = 1232 }
+			command = { type = addcore which = 1233 }
+			command = { type = addcore which = 1361 }
+			command = { type = addcore which = 1362 }
+			command = { type = addcore which = 1363 }
+			command = { type = addcore which = 1364 }
+			command = { type = secedeprovince which = JAP value = 1240 when = 2 } # get the missing border provinces
+			command = { type = secedeprovince which = JAP value = 1245 when = 2 }
+			command = { type = secedeprovince which = JAP value = 1246 when = 2 }
+			command = { type = secedeprovince which = JAP value = 1236 when = 2 }
+		} 			
+	}
+	
+# THe Imperial Way Faction
+	event = { 
+		id = 13301213					
+		country = JAP						
+		
+		date = { day = 1 month = 1 year = 1932 }						
+		deathdate = { day = 1 month = january year = 1936 }
+		offset = 365										 
+		
+		trigger = {					
+			event = 13301212
+			OR = { 
+				puppet = { country = MAN country = JAP }
+				AND = { 
+					owned = { province = 1199 data = JAP }
+					owned = { province = 1205 data = JAP }
+					owned = { province = 1218 data = JAP }
+				}
+			}
+		}
+		name = "EVT_13301213_NAME"							
+		Desc = "EVT_13301213_DESC"
+		Picture = "japanese_reinforcments" 
+		
+		action = { 	
+			name = "War is purifying, death is duty!"	 
+			command = { type = secedeprovince which = JAP value = 1216 when = 2 } #make sure to retain their border-cores to resemble the 1936 setup
+			command = { type = secedeprovince which = JAP value = 1235 when = 2 }
+			command = { type = secedeprovince which = JAP value = 1236 when = 2 }
+			command = { type = domestic which = interventionism value = 3 }
+			command = { type = domestic which = defense_lobby value = 3 } # fixed, was -3, but +defense_lobby means movement towards hawk
+		} 			
+	}
+	

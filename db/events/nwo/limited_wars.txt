@@ -1,0 +1,44 @@
+# Free IDs: 8940000 - 8940009
+
+### Greek Civil War
+
+event = {
+	id = 8940010
+	country = GRE
+
+	name = EVT_LIMITEDWAR_NAME
+	desc = EVT_LIMITEDWAR_DESC
+	picture = nwo\greek_civil_war
+	style = 1
+
+	action = {
+		name = OK
+		command = { type = leave_alliance }
+		command = { type = war which = U33 }
+	}
+}
+
+event = {
+	id = 8940011
+	country = GRE
+	
+	trigger = {
+		event = 8940010
+		NOT = { war = { country = U33 } }
+		flag = cold_war
+	}
+
+	name = EVT_8940011_NAME
+	desc = EVT_8940011_DESC
+	picture = nwo\greek_civil_war
+	style = 1
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = OK
+		command = { type = alliance which = USA }
+	}
+}

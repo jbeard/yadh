@@ -1,0 +1,584 @@
+# USSR places missiles on Cuba
+event = {
+	id = 8500201
+	country = SOV
+	
+	name = EVT_8500201_NAME
+	desc = EVT_8500201_DESC
+	picture = "nwo\castro_with_khrushchev"
+	style = 1
+
+	trigger = {
+		flag = castro_rules
+		flag = cold_war
+	}
+
+	date = { day = 1 month = april year = 1962 }
+	offset = 7
+	deathdate = { day = 29 month = may year = 1962 }
+	
+	# Secretly install missiles
+	action = {
+		name = EVT_8500201_A
+		ai_chance = 88
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	# We won't use Cuba for this
+	action = {
+		name = EVT_8500201_B
+		ai_chance = 12
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8500202 }
+	}
+
+}
+
+# Missiles in Cuba
+event = {
+	id = 8500202
+	country = CUB
+
+	name = EVT_8500202_NAME
+	desc = EVT_8500202_DESC
+	picture = "nwo\castro_with_khrushchev"
+	style = 1
+
+	trigger = {
+		event = 8500201
+		flag = castro_rules
+	}
+
+	date = { day = 1 month = april year = 1962 }
+	offset = 7
+	deathdate = { day = 29 month = may year = 1962 }
+	
+	# Allow missiles
+	action = {
+		name = EVT_8500202_A
+		ai_chance = 94
+		command = { type = leave_alliance }
+		# Construct rocket silo
+		command = { type = construct which = rocket_test where = 1779 value = 1 }
+		# Give productivity boost
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = setflag which = missiles_in_cuba }
+		# Soviets get nuclear parity or advantage
+		command = { trigger = { NOT = { flag = american_nuclear_advantage } } type = setflag which = soviet_nuclear_advantage }
+		command = { trigger = { flag = american_nuclear_advantage } type = clrflag which = american_nuclear_advantage }
+	}
+	
+	action = {
+		name = EVT_8500202_B
+		ai_chance = 6
+		command = { type = relation which = SOV value = -200 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = interventionism value = -6 }
+	}
+
+}
+
+# Missiles in Cuba
+event = {
+	id = 8500203
+	country = USA
+	one_action = yes
+
+	name = EVT_8500203_NAME
+	desc = EVT_8500203_DESC
+	picture = "nwo\cuban_missile_site"
+	style = 1
+
+	trigger = {
+		event = 8500202
+		flag = missiles_in_cuba
+	}
+
+	date = { day = 1 month = october year = 1962 }
+	offset = 7
+	deathdate = { day = 29 month = november year = 1962 }
+	
+	# Missiles are spotted
+	action = {
+		name = EVT_8500203_A
+		ai_chance = 84
+		command = { type = trigger which = 8500204 }
+	}
+	
+	# We don't see anything
+	action = {
+		name = EVT_8500203_B
+		ai_chance = 16
+		command = { type = dissent value = 10 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+}
+
+# Americans detect missiles in Cuba and decide what to do
+event = {
+	id = 8500204
+	country = USA
+
+	name = EVT_8500204_NAME
+	desc = EVT_8500204_DESC
+	picture = "nwo\cuban_missile_crisis_discussion"
+	style = 1
+	
+	# Perform naval quarantine of Cuba
+	action = {
+		name = EVT_8500204_A
+		ai_chance = 78
+		command = { type = dissent value = 5 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = trigger which = 8500207 }
+	}
+	
+	# Do nothing
+	action = {
+		name = EVT_8500204_B
+		ai_chance = 5
+		command = { type = dissent value = 20 }
+		command = { type = relation which = SOV value = 100 }
+		command = { type = domestic which = interventionism value = -3 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+	
+	# Send grave warnings only
+	action = {
+		name = EVT_8500204_C
+		ai_chance = 12
+		command = { type = dissent value = 15 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 8500205 }
+	}
+	
+	# Perform air attacks and declare war (Risk WW3)
+	action = {
+		name = EVT_8500204_D
+		ai_chance = 5
+		command = { type = war which = CUB }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8500206 }
+	}
+
+}
+
+# American diplomatic protest
+event = {
+	id = 8500205
+	country = SOV
+
+	name = EVT_8500205_NAME
+	desc = EVT_8500205_DESC
+	picture = "nwo\cuban_missile_crisis_stevenson"
+	style = 1
+	
+	# Leave the nukes on Cuba
+	action = {
+		name = EVT_8500205_A
+		ai_chance = 95
+		command = { type = belligerence value = 10 }
+		command = { type = relation which = USA value = -50 }
+	}
+	
+	# Withdraw the missiles
+	action = {
+		name = EVT_8500205_B
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		# Trigger End of Cuban Crisis for USA
+		command = { trigger = { NOT = { flag = soviet_nuclear_advantage } } type = setflag which = american_nuclear_advantage }
+		command = { trigger = { flag = soviet_nuclear_advantage } type = clrflag which = soviet_nuclear_advantage }
+		command = { type = clrflag which = missiles_in_cuba }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+
+}
+
+# Soviet reaction to American attack
+event = {
+	id = 8500206
+	country = SOV
+
+	name = EVT_8500206_NAME
+	desc = EVT_8500206_DESC
+	picture = "nwo\cuban_missile_crisis_attack"
+	style = 1
+	
+	# Retaliate (WW3)
+	action = {
+		name = EVT_8500206_A
+		ai_chance = 70
+		command = { type = belligerence value = 10 }
+		command = { type = dissent value = 5 }
+		command = { type = war which = USA }
+	}
+	
+	# Flee with missiles
+	action = {
+		name = EVT_8500206_B
+		ai_chance = 30
+		command = { type = dissent value = 15 }
+		# Trigger End of Cuban Crisis for USA
+		command = { trigger = { NOT = { flag = soviet_nuclear_advantage } } type = setflag which = american_nuclear_advantage }
+		command = { trigger = { flag = soviet_nuclear_advantage } type = clrflag which = soviet_nuclear_advantage }
+		command = { type = clrflag which = missiles_in_cuba }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+
+}
+
+# Naval quarantine of Cuba
+event = {
+	id = 8500207
+	country = SOV
+
+	name = EVT_8500207_NAME
+	desc = EVT_8500207_DESC
+	picture = "nwo\cuban_missile_crisis_quarantine"
+	style = 1
+	
+	# Continue convoys
+	action = {
+		name = EVT_8500207_A
+		ai_chance = 90
+		command = { type = belligerence value = 10 }
+		command = { type = relation which = USA value = -100 }
+	}
+	
+	# Call off convoys
+	action = {
+		name = EVT_8500207_B
+		ai_chance = 8
+		command = { type = belligerence value = -20 }
+		command = { type = relation which = USA value = 100 }
+		# Trigger End of Cuban Crisis for USA
+		command = { trigger = { NOT = { flag = soviet_nuclear_advantage } } type = setflag which = american_nuclear_advantage }
+		command = { trigger = { flag = soviet_nuclear_advantage } type = clrflag which = soviet_nuclear_advantage }
+		command = { type = clrflag which = missiles_in_cuba }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+	
+	# Kennedy thought wrong (WW3)
+	action = {
+		name = EVT_8500207_C
+		ai_chance = 2
+		command = { type = war which = USA }
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8500208 }
+	}
+
+}
+
+# Soviet didn't call off convoys, American reaction
+event = {
+	id = 8500208
+	country = USA
+
+	name = EVT_8500208_NAME
+	desc = EVT_8500208_DESC
+	picture = "nwo\cuban_missile_crisis_danger"
+	style = 1
+
+	trigger = {
+		event = 8500207
+		flag = missiles_in_cuba
+		flag = cold_war
+	}
+
+	date = { day = 20 month = october year = 1962 }
+	offset = 7
+	deathdate = { day = 29 month = november year = 1962 }
+	
+	# Propose negotiations
+	action = {
+		name = EVT_8500208_A
+		trigger = { NOT = { event = 8500209 } }
+		ai_chance = 90
+		command = { type = relation which = SOV value = 10 }
+		command = { type = trigger which = 8500209 }
+	}
+	
+	# Let the matter fall
+	action = {
+		name = EVT_8500208_B
+		ai_chance = 3
+		command = { type = belligerence value = -20 }
+		command = { type = relation which = SOV value = 100 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+	
+	# We had enough, it's war! (WW3)
+	action = {
+		name = EVT_8500208_C
+		ai_chance = 2
+		command = { type = war which = SOV }
+		command = { type = dissent value = 12 }
+	}
+
+}
+
+event = {
+	id = 8500209
+	country = SOV
+
+	name = EVT_8500209_NAME
+	desc = EVT_8500209_DESC
+	picture = "nwo\kennedy_khrushchev"
+	style = 1
+
+	# Demand withdrawal of American missiles
+	action = {
+		name = EVT_8500209_A
+		trigger = { flag = missiles_in_turkey }
+		ai_chance = 85
+		command = { type = relation which = USA value = -10 }
+		command = { type = trigger which = 8500212 }
+	}
+	
+	# Demand economic concessions
+	action = {
+		name = EVT_8500209_B
+		ai_chance = 5
+		command = { type = belligerence value = -20 }
+		command = { type = relation which = USA value = 50 }
+		command = { type = trigger which = 8500210 }
+	}
+
+	# Demand withdrawal from Berlin
+	action = {
+		name = EVT_8500209_C
+		trigger = {
+			exists = DDR
+			exists = DFR
+		}
+		ai_chance = 9
+		command = { type = relation which = USA value = -100 }
+		command = { type = trigger which = 8500211 }
+	}
+
+	# No chance for peace
+	action = {
+		name = EVT_8500209_D
+		ai_chance = 1
+		command = { type = relation which = USA value = -200 }
+		command = { type = dissent value = 10 }		
+	}
+}
+
+# Soviets demanded money
+event = { 
+	id = 8500210
+	country = USA
+
+	name = EVT_8500210_NAME
+	desc = EVT_8500210_DESC
+	picture = "nwo\kennedy_khrushchev"
+	style = 1
+	
+	# Agree to the trade
+	action = {
+		name = EVT_8500210_A
+		ai_chance = 100
+		command = { type = money value = -5000 }
+		command = { type = relation which = SOV value = 50 }
+		# Trigger End of Cuban Crisis for USA
+		command = { trigger = { NOT = { flag = soviet_nuclear_advantage } } type = setflag which = american_nuclear_advantage }
+		command = { trigger = { flag = soviet_nuclear_advantage } type = clrflag which = soviet_nuclear_advantage }
+	}
+
+	# Disagree
+	action = {
+		name = EVT_8500210_B
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 8500213 }
+		command = { type = sleepevent which = 8500214 }
+	}
+}
+
+# Soviets demand Berlin
+event = { 
+	id = 8500211
+	country = USA
+
+	name = EVT_8500211_NAME
+	desc = EVT_8500211_DESC
+	picture = "nwo\kennedy_khrushchev"
+	style = 1
+	
+	# Agree to the trade
+	action = {
+		name = EVT_8500211_A
+		ai_chance = 60
+		command = { type = relation which = SOV value = 100 }
+		# Berlin is red
+		command = { type = clrflag which = divided_berlin }
+		# Trigger End of Cuban Crisis for USA
+		command = { trigger = { NOT = { flag = soviet_nuclear_advantage } } type = setflag which = american_nuclear_advantage }
+		command = { trigger = { flag = soviet_nuclear_advantage } type = clrflag which = soviet_nuclear_advantage }
+		command = { type = clrflag which = missiles_in_cuba }
+		command = { type = sleepevent which = 8500213 }
+		command = { type = sleepevent which = 8500214 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+	# Disagree
+	action = {
+		name = EVT_8500211_B
+		ai_chance = 20
+		command = { type = relation which = SOV value = 100 }
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 8500213 }
+		command = { type = sleepevent which = 8500214 }
+	}
+
+	# We had enough, it's war! (WW3)
+	action = {
+		name = EVT_8500211_C
+		ai_chance = 20
+		command = { type = war which = SOV }
+		command = { type = dissent value = 4 }
+		command = { type = sleepevent which = 8500213 }
+		command = { type = sleepevent which = 8500214 }
+	}
+}
+
+# Soviets demand withdrawal of missiles
+event = {
+	id = 8500212
+	country = USA
+
+	name = EVT_8500212_NAME
+	desc = EVT_8500212_DESC
+	picture = "nwo\kennedy_khrushchev"
+	style = 1
+	
+	# Agree to the trade
+	action = {
+		name = EVT_8500212_A
+		ai_chance = 95
+		command = { type = relation which = SOV value = 100 }
+		command = { type = clrflag which = american_nuclear_advantage }
+		command = { type = clrflag which = missiles_in_cuba }
+	}
+
+	# We had enough, it's war! (WW3)	
+	action = {
+		name = EVT_8500212_B
+		ai_chance = 5
+		command = { type = war which = SOV }
+		command = { type = dissent value = 12 }
+		command = { type = sleepevent which = 8500213 }
+		command = { type = sleepevent which = 8500214 }
+	}
+}
+
+# Aftermath of Cuban Missile Crisis - USSR
+event = {
+	id = 8500213
+	country = SOV
+
+	name = EVT_8500213_NAME
+	desc = EVT_8500213_DESC
+	picture = "nwo\cuban_missile_crisis_aftermath"
+	style = 1
+
+	trigger = {
+		OR = {
+			event = 8500210
+			event = 8500211
+			event = 8500212
+		}
+		flag = cold_war
+		NOT = { flag = missiles_in_cuba }
+	}
+
+	date = { day = 1 month = december year = 1962 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8500213_A
+		command = { type = dissent value = 5 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+
+}
+
+# Aftermath of Cuban Missile Crisis - USA
+event = {
+	id = 8500214
+	country = SOV
+
+	name = EVT_8500214_NAME
+	desc = EVT_8500214_DESC
+	picture = "nwo\cuban_missile_crisis_aftermath"
+	style = 1
+
+	trigger = {
+		OR = {
+			event = 8500210
+			event = 8500211
+			event = 8500212
+		}
+		flag = cold_war
+		NOT = { flag = missiles_in_cuba }
+	}
+
+	date = { day = 1 month = december year = 1962 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8500214_A
+		command = { type = dissent value = -10 }
+	}
+
+}
+
+# End of Cuban Missile Crisis for Cuba
+event = {
+	id = 8500215
+	country = CUB
+
+	name = EVT_8500215_NAME
+	desc = EVT_8500215_DESC
+	picture = "nwo\cuban_missile_crisis_aftermath"
+	style = 1
+
+	trigger = {
+		OR = {
+			event = 8500210
+			event = 8500211
+			event = 8500212
+		}
+		flag = cold_war
+		NOT = { flag = missiles_in_cuba }
+	}
+
+	date = { day = 1 month = december year = 1962 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8500215_A
+		command = { type = dissent value = 10 }
+		command = { type = construct which = rocket_test where = 1779 value = -1 }
+		command = { type = industrial_modifier which = total value = -5 }
+		# Guarantees
+		command = { type = non_aggression which = CUB where = USA }
+		command = { type = end_guarantee which = SOV where = CUB }
+	}
+
+}

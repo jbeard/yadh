@@ -1,0 +1,1286 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Disarming of Nations
+# Event List:
+#ALL	13300080	Disarming of Nations (Ground) - recurring
+#ALL    13300084    Disarming of Nations (Army)
+#ALL	133000802	Disarming of Nations (Air Setup)
+#ALL	133000842	Disarming of Nations (Air Free)
+#Naval Disarmament events can be found in the Naval Treaty file.
+
+# Disarming of Nations (Ground)
+event = {
+	id = 13300080																			 
+	random = no
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30						
+	deathdate = { day = 1 month = january year = 1945 }
+	
+	trigger = {
+		or = {
+			and = {
+				or = {
+				# WWI has started
+					event = 2191503 # GER DoW Russia
+					event = 2191539 # GER DoW Russia
+					event = 2192502 # AH DoW Serbia
+					event = 2192528 # AH DoW Russia
+					event = 2104501 # RUS DoW's AH
+					event = 2104541 # RUS DoW's GER
+					event = 2191505 # France DoW's GER
+				}
+				or = { # WWI has ended
+					and = {
+						or = {
+							event = 2002534 #Versailes
+							event = 2191514 #Mil. defeat
+							event = 2191520 #Abdication + Armistice
+							event = 2191532 #Early defeat
+						}
+						event = 2192507# st. germain
+					}
+					and = {
+						event = 2191512 #Reverse Versailes
+						or = {
+							event = 2191555 #Russia defeated
+							event = 2007529 #SOV defeated
+							event = 2007530 #SOV defeated
+						}
+					}
+				}
+			}
+			# or it did not, and the year is 1916 or later.
+			and = {
+				year = 1916
+				not = {
+					or = {
+						event = 2191503 # GER DoW Russia
+						event = 2191539 # GER DoW Russia
+						event = 2192502 # AH DoW Serbia
+						event = 2192528 # AH DoW Russia
+						event = 2104501 # RUS DoW's AH
+						event = 2104541 # RUS DoW's GER
+						event = 2191505 # France DoW's GER
+					}
+				}
+			}
+		}
+		#If we may gear up
+		or = {
+			#either case 1 (to lift limitations):
+			and = {
+				# it's either 1930 for fascists, or 1935 for all others	
+				or = { 
+					and = { 
+						year = 1930 
+						or = { ideology = fascist ideology = nazi country = JAP country = ITA country = HUN country = GER } 
+					}
+					year = 1935
+				}
+				# and a disarm-flag is set
+				or = {
+					local_flag = disarm_army_10
+					local_flag = disarm_army_25
+					local_flag = disarm_army_50
+					local_flag = disarm_army_75
+				}
+				# and the nation in question is not weimar 
+				not = { and = { 
+					country = U08						 
+					event = 13300200					# if it is a defeated nation
+					atwar = no								# and not at war
+					not = { event = 13300213 } # has not jet started to fall to extremism
+				} }
+			}
+			#or case 2: we have reached our gearing limit				
+			and = {
+				local_flag = disarm_army_10
+				army = 19
+			}
+			and = {
+				local_flag = disarm_army_25
+				army = 30
+			}
+			and = {
+				local_flag = disarm_army_50
+				army = 55
+			}
+			and = {
+				local_flag = disarm_army_75
+				army = 80
+			}
+		}
+	}
+	
+	name = "EVT_13300080_NAME"							
+	Desc = "EVT_13300080_DESC"
+	Picture = "economic" 
+	
+	action = { 											
+		name = "We have exceeded our land force limit of 10 divisions."
+		trigger = {
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_10
+			army = 19
+		}		
+		ai_chance = 1	
+		command = { trigger = { ai = yes } type = demobilize which = land when = 0 where = 0 value = 10 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		command = { type = local_setflag which = geared_down_army }	
+	}
+
+	action = { 											
+		name = "Automatically disband for me"
+		trigger = {
+			ai = no
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_10
+			army = 19
+		}		
+		ai_chance = 1	
+		command = { type = demobilize which = land when = 0 where = 0 value = 10 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		command = { type = local_setflag which = geared_down_army }	
+	}
+
+	action = { 											
+		name = "We have exceeded our land force limit of 25 divisions."
+		trigger = {
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_25
+			army = 30
+		}		
+		ai_chance = 1	
+		command = { trigger = { ai = yes } type = demobilize which = land when = 0 where = 0 value = 25 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		command = { type = local_setflag which = geared_down_army }	
+	}
+
+	action = { 											
+		name = "Automatically disarm for me"
+		trigger = {
+			ai = no
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_25
+			army = 30
+		}		
+		ai_chance = 1	
+		command = { type = demobilize which = land when = 0 where = 0 value = 25 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		command = { type = local_setflag which = geared_down_army }	
+	}
+	
+	action = { 											
+		name = "We have exceeded our land force limit of 50 divisions."
+		trigger = {
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_50
+			army = 55
+		}		
+		ai_chance = 1	
+		command = { trigger = { ai = yes } type = demobilize which = land when = 0 where = 0 value = 50 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		command = { type = local_setflag which = geared_down_army }	
+	}
+
+	action = { 											
+		name = "Automatically disarm for me"
+		trigger = {
+			ai = no
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_50
+			army = 55
+		}		
+		ai_chance = 1	
+		command = { type = demobilize which = land when = 0 where = 0 value = 50 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		command = { type = local_setflag which = geared_down_army }	
+	}
+
+	action = { 											
+		name = "We have exceeded our land force limit of 75 divisions."
+		trigger = {
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_75
+			army = 80
+		}		
+		ai_chance = 1	
+		command = { trigger = { ai = yes } type = demobilize which = land when = 0 where = 0 value = 75 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		
+		command = { type = local_setflag which = geared_down_army }	
+	}
+
+	action = { 											
+		name = "Automatically disarm for me"
+		trigger = {
+			ai = no
+			atwar = no
+			# not for case 1:
+			not = {
+				and = {	
+					or = { 
+						and = { 
+							year = 1932 
+							or = { ideology = fascist ideology = nazi } 
+						}
+						year = 1935
+					}
+					or = {
+						local_flag = disarm_army_10
+						local_flag = disarm_army_25
+						local_flag = disarm_army_50
+						local_flag = disarm_army_75
+					}
+					# not for weimar 
+					not = { and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					} }
+				}
+			}
+			local_flag = disarm_army_75
+			army = 80
+		}		
+		ai_chance = 1	
+		command = { type = demobilize which = land when = 0 where = 0 value = 75 }
+		command = { trigger = { ai = no } type = dissent value = 10 }
+		
+		#not for armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = deactivate_unit_type which = armor }
+		#command = { trigger = { or = { technology = 2070 technology = 6900 } } type = local_setflag which = geared_down_army_armor }
+		command = { trigger = { technology = 1160 } type = deactivate_unit_type which = bergsjaeger }
+		command = { trigger = { technology = 1160 } type = local_setflag which = geared_down_army_bergsjaeger }
+		command = { trigger = { technology = 13060 } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = 13060 } type = local_setflag which = geared_down_army_cavalry }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = garrison }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_garrison }
+		command = { trigger = { technology = 6530 } type = deactivate_unit_type which = hq }
+		command = { trigger = { technology = 6530 } type = local_setflag which = geared_down_army_hq }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = infantry }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_infantry }
+		#not for light_armor, for them, cost/IC is the main limitation
+		#command = { trigger = { or = { and { technology = 2030 technology = 6900 } } } type = deactivate_unit_type which = light_armor }
+		#command = { trigger = { or = { technology = 2030 technology = 6900 } } type = local_setflag which = geared_down_army_light_armor }
+		command = { trigger = { technology = 1560 } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = 1560 } type = local_setflag which = geared_down_army_marine }
+		#not for mechanized, for them, cost/IC is the main limitation
+		#command = { trigger = { technology = 1470 } type = deactivate_unit_type which = mechanized }
+		#command = { trigger = { technology = 1470 } type = local_setflag which = geared_down_army_mechanized }
+		command = { trigger = { technology = 1010 } type = deactivate_unit_type which = militia }
+		command = { trigger = { technology = 1010 } type = local_setflag which = geared_down_army_militia }
+		command = { trigger = { technology = 1396 } type = deactivate_unit_type which = motorized }
+		command = { trigger = { technology = 1396 } type = local_setflag which = geared_down_army_motorized }
+		command = { trigger = { technology = 1670 } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { technology = 1670 } type = local_setflag which = geared_down_army_paratrooper }
+		
+		command = { type = local_setflag which = geared_down_army }	
+	}
+
+	action = { 	
+		name = "We are finished with gearing down."		
+		ai_chance = 99	
+		trigger = {
+			or = {
+				and = { year = 1932 or = { 
+					ideology = fascist
+					ideology = nazi	
+				} }
+				year = 1935
+			}
+			not = { and = { 
+				country = U08						 # not for weimar
+				event = 13300200					# if it is a defeated nation
+				atwar = no								# and not at war
+				not = { event = 13300213 } # has not jet started to fall to extremism
+			} }
+			or = {
+				local_flag = disarm_army_10
+				local_flag = disarm_army_25
+				local_flag = disarm_army_50
+				local_flag = disarm_army_75
+			}
+		}
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_50 }
+		command = { type = local_clrflag which = disarm_army_75 }
+		command = { trigger = { local_flag = geared_down_army_armor } type = activate_unit_type which = armor }
+		command = { trigger = { local_flag = geared_down_army_bergsjaeger } type = activate_unit_type which = bergsjaeger }
+		command = { trigger = { local_flag = geared_down_army_cavalry } type = activate_unit_type which = cavalry }
+		command = { trigger = { local_flag = geared_down_army_garrison } type = activate_unit_type which = garrison }
+		command = { trigger = { local_flag = geared_down_army_hq } type = activate_unit_type which = hq }
+		command = { trigger = { local_flag = geared_down_army_infantry } type = activate_unit_type which = infantry }
+		command = { trigger = { local_flag = geared_down_army_light_armor } type = activate_unit_type which = light_armor }
+		command = { trigger = { local_flag = geared_down_army_marine } type = activate_unit_type which = marine }
+		command = { trigger = { local_flag = geared_down_army_mechanized } type = activate_unit_type which = mechanized }
+		command = { trigger = { local_flag = geared_down_army_militia } type = activate_unit_type which = militia }
+		command = { trigger = { local_flag = geared_down_army_motorized } type = activate_unit_type which = motorized }
+		command = { trigger = { local_flag = geared_down_army_paratrooper } type = activate_unit_type which = paratrooper }
+		command = { type = local_clrflag which = geared_down_army }
+	}				
+}
+
+# Disarming of Nations (Army)
+event = {
+	id = 13300084
+	random = no																			 
+	persistent = yes
+	
+	trigger = {
+		local_flag = geared_down_army 
+		or = {
+			and = { or = {
+				and = {
+					local_flag = disarm_army_10
+					not = { army = 9 }
+				}
+				and = {
+					local_flag = disarm_army_25
+					not = { army = 24 }
+				}
+				and = {
+					local_flag = disarm_army_50
+					not = { army = 49 }
+				}
+				and = {
+					local_flag = disarm_army_75
+					not = { army = 74 }
+				}
+				not = { and = {
+					local_flag = disarm_army_10
+					local_flag = disarm_army_25
+					local_flag = disarm_army_50
+					local_flag = disarm_army_75
+				} }
+			}
+			not = {
+				or = {
+					and = {
+						local_flag = disarm_army_10
+						army = 19
+					}
+					and = {
+						local_flag = disarm_army_25
+						army = 30
+					}
+					and = {
+						local_flag = disarm_army_50
+						army = 55
+					}
+					and = {
+						local_flag = disarm_army_75
+						army = 80
+					}
+				}
+			}
+			}
+			atwar = yes
+		}
+	}
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 14						
+	deathdate = { day = 1 month = january year = 1945 }
+	
+	name = "EVT_13300084_NAME"							
+	Desc = "EVT_13300084_DESC"
+	Picture = "economic" 
+	
+	action = { 	
+		name = "We may extend our army again."
+		command = { trigger = { ai = no } type = dissent value = -10 }
+		command = { trigger = { local_flag = geared_down_army_armor } type = activate_unit_type which = armor }
+		command = { trigger = { local_flag = geared_down_army_bergsjaeger } type = activate_unit_type which = bergsjaeger }
+		command = { trigger = { local_flag = geared_down_army_cavalry } type = activate_unit_type which = cavalry }
+		command = { trigger = { local_flag = geared_down_army_garrison } type = activate_unit_type which = garrison }
+		command = { trigger = { local_flag = geared_down_army_hq } type = activate_unit_type which = hq }
+		command = { trigger = { local_flag = geared_down_army_infantry } type = activate_unit_type which = infantry }
+		command = { trigger = { local_flag = geared_down_army_light_armor } type = activate_unit_type which = light_armor }
+		command = { trigger = { local_flag = geared_down_army_marine } type = activate_unit_type which = marine }
+		command = { trigger = { local_flag = geared_down_army_mechanized } type = activate_unit_type which = mechanized }
+		command = { trigger = { local_flag = geared_down_army_militia } type = activate_unit_type which = militia }
+		command = { trigger = { local_flag = geared_down_army_motorized } type = activate_unit_type which = motorized }
+		command = { trigger = { local_flag = geared_down_army_paratrooper } type = activate_unit_type which = paratrooper }
+		command = { type = local_clrflag which = geared_down_army } 
+	}
+}
+
+# Disarming of Nations (Air Setup)
+event = {
+	id = 133000802																			 
+	random = no
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30						
+	deathdate = { day = 1 month = january year = 1945 }
+	
+	trigger = {
+		or = {
+			and = {
+				or = {
+				# WWI has started
+					event = 2191503 # GER DoW Russia
+					event = 2191539 # GER DoW Russia
+					event = 2192502 # AH DoW Serbia
+					event = 2192528 # AH DoW Russia
+					event = 2104501 # RUS DoW's AH
+					event = 2104541 # RUS DoW's GER
+					event = 2191505 # France DoW's GER
+				}
+				or = { # WWI has ended
+					and = {
+						or = {
+							event = 2002534 #Versailes
+							event = 2191514 #Mil. defeat
+							event = 2191520 #Abdication + Armistice
+							event = 2191532 #Early defeat
+						}
+						event = 2192507# st. germain
+					}
+					and = {
+						event = 2191512 #Reverse Versailes
+						or = {
+							event = 2191555 #Russia defeated
+							event = 2007529 #SOV defeated
+							event = 2007530 #SOV defeated
+						}
+					}
+				}
+			}
+			# or it did not, and the year is 1916 or later.
+			and = {
+				year = 1916
+				not = {
+					or = {
+						event = 2191503 # GER DoW Russia
+						event = 2191539 # GER DoW Russia
+						event = 2192502 # AH DoW Serbia
+						event = 2192528 # AH DoW Russia
+						event = 2104501 # RUS DoW's AH
+						event = 2104541 # RUS DoW's GER
+						event = 2191505 # France DoW's GER
+					}
+				}
+			}
+		}
+
+		atwar = no
+		or = {
+			#or case 2: we have reached our gearing limit				
+			and = {
+				local_flag = disarm_air_0 
+				or = {
+					cas = { value = 1 when = now } 
+					interceptor = { value = 1 when = now } 
+					multi_role = { value = 1 when = now } 
+					naval_bomber = { value = 1 when = now } 
+					strategic_bomber = { value = 1 when = now } 
+					tactical_bomber = { value = 1 when = now }
+				} 
+			}
+			and = {
+				local_flag = disarm_air_1 
+				or = {
+					and = { cas = { value = 1 when = now } not = { local_flag = cas_disabled } }
+					and = { interceptor = { value = 1 when = now } not = { local_flag = interceptor_disabled } }
+					and = { multi_role = { value = 1 when = now } not = { local_flag = multi_role_disabled } }
+					and = { naval_bomber = { value = 1 when = now } not = { local_flag = naval_bomber_disabled } }
+					and = { strategic_bomber = { value = 1 when = now } not = { local_flag = strategic_bomber_disabled } }
+					and = { tactical_bomber = { value = 1 when = now } not = { local_flag = tactical_bomber_disabled } }
+					cas = { value = 2 when = now }
+					interceptor = { value = 2 when = now }
+					multi_role = { value = 2 when = now }
+					naval_bomber = { value = 2 when = now }
+					strategic_bomber = { value = 2 when = now }
+					tactical_bomber = { value = 2 when = now }
+				} 
+			}
+			and = {
+				local_flag = disarm_air_3 
+				or = {
+					and = { cas = { value = 3 when = now } not = { local_flag = cas_disabled } }
+					and = { interceptor = { value = 3 when = now } not = { local_flag = interceptor_disabled } }
+					and = { multi_role = { value = 3 when = now } not = { local_flag = multi_role_disabled } }
+					and = { naval_bomber = { value = 3 when = now } not = { local_flag = naval_bomber_disabled } }
+					and = { strategic_bomber = { value = 3 when = now } not = { local_flag = strategic_bomber_disabled } }
+					and = { tactical_bomber = { value = 3 when = now } not = { local_flag = tactical_bomber_disabled } }
+					cas = { value = 4 when = now }
+					interceptor = { value = 4 when = now }
+					multi_role = { value = 4 when = now }
+					naval_bomber = { value = 4 when = now }
+					strategic_bomber = { value = 4 when = now }
+					tactical_bomber = { value = 4 when = now }
+				} 
+			}
+			and = {
+				local_flag = disarm_air_5 
+				or = {
+					and = { cas = { value = 5 when = now } not = { local_flag = cas_disabled } }
+					and = { interceptor = { value = 5 when = now } not = { local_flag = interceptor_disabled } }
+					and = { multi_role = { value = 5 when = now } not = { local_flag = multi_role_disabled } }
+					and = { naval_bomber = { value = 5 when = now } not = { local_flag = naval_bomber_disabled } }
+					and = { strategic_bomber = { value = 5 when = now } not = { local_flag = strategic_bomber_disabled } }
+					and = { tactical_bomber = { value = 5 when = now } not = { local_flag = tactical_bomber_disabled } }
+					cas = { value = 6 when = now }
+					interceptor = { value = 6 when = now }
+					multi_role = { value = 6 when = now }
+					naval_bomber = { value = 6 when = now }
+					strategic_bomber = { value = 6 when = now }
+					tactical_bomber = { value = 6 when = now }
+				} 
+			}
+		}
+	}
+	
+	name = "EVT_133000802_NAME"							
+	Desc = "EVT_133000802_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We are not permitted to have an airforce."
+		ai_chance = 100
+		trigger = {
+			local_flag = disarm_air_0
+			or = {
+				cas = { value = 1 when = now } 
+				interceptor = { value = 1 when = now } 
+				multi_role = { value = 1 when = now } 
+				naval_bomber = { value = 1 when = now } 
+				strategic_bomber = { value = 1 when = now }
+				tactical_bomber = { value = 1 when = now }
+			} 
+		}
+		command = { trigger = { cas = { value = 1 when = now } } type = deactivate_unit_type which = cas }
+		command = { trigger = { cas = { value = 1 when = now } } type = local_setflag which = cas_disabled }
+		command = { trigger = { cas = { value = 1 when = now } } type = demobilize which = cas when = 0 where = 0 value = 0 }
+		command = { trigger = { interceptor = { value = 1 when = now } } type = deactivate_unit_type which = interceptor }
+		command = { trigger = { interceptor = { value = 1 when = now } } type = local_setflag which = interceptor_disabled }
+		command = { trigger = { interceptor = { value = 1 when = now } } type = demobilize which = interceptor when = 0 where = 0 value = 0 }
+		command = { trigger = { multi_role = { value = 1 when = now } } type = deactivate_unit_type which = multi_role }
+		command = { trigger = { multi_role = { value = 1 when = now } } type = local_setflag which = multi_role_disabled }
+		command = { trigger = { multi_role = { value = 1 when = now } } type = demobilize which = multi_role when = 0 where = 0 value = 0 }
+		command = { trigger = { naval_bomber = { value = 1 when = now } } type = deactivate_unit_type which = naval_bomber }
+		command = { trigger = { naval_bomber = { value = 1 when = now } } type = local_setflag which = naval_bomber_disabled }
+		command = { trigger = { naval_bomber = { value = 1 when = now } } type = demobilize which = naval_bomber when = 0 where = 0 value = 0 }
+		command = { trigger = { strategic_bomber = { value = 1 when = now } } type = deactivate_unit_type which = strategic_bomber }
+		command = { trigger = { strategic_bomber = { value = 1 when = now } } type = local_setflag which = strategic_bomber_disabled }
+		command = { trigger = { strategic_bomber = { value = 1 when = now } } type = demobilize which = strategic_bomber when = 0 where = 0 value = 0 }
+		command = { trigger = { tactical_bomber = { value = 1 when = now } } type = deactivate_unit_type which = tactical_bomber }
+		command = { trigger = { tactical_bomber = { value = 1 when = now } } type = local_setflag which = tactical_bomber_disabled }
+		command = { trigger = { tactical_bomber = { value = 1 when = now } } type = demobilize which = tactical_bomber when = 0 where = 0 value = 0 }
+	}
+	action = { 	
+		name = "We can't sustain an airforce with more than 1 squadron of a type."
+		ai_chance = 100
+		trigger = {
+			local_flag = disarm_air_1
+			or = {
+				and = { cas = { value = 1 when = now } not = { local_flag = cas_disabled } }
+				and = { interceptor = { value = 1 when = now } not = { local_flag = interceptor_disabled } }
+				and = { multi_role = { value = 1 when = now } not = { local_flag = multi_role_disabled } }
+				and = { naval_bomber = { value = 1 when = now } not = { local_flag = naval_bomber_disabled } }
+				and = { strategic_bomber = { value = 1 when = now } not = { local_flag = strategic_bomber_disabled } }
+				and = { tactical_bomber = { value = 1 when = now } not = { local_flag = tactical_bomber_disabled } }
+				cas = { value = 2 when = now }
+				interceptor = { value = 2 when = now }
+				multi_role = { value = 2 when = now }
+				naval_bomber = { value = 2 when = now }
+				strategic_bomber = { value = 2 when = now }
+				tactical_bomber = { value = 2 when = now }
+			} 
+		}
+		command = { trigger = { cas = { value = 1 when = now } } type = deactivate_unit_type which = cas }
+		command = { trigger = { cas = { value = 1 when = now } } type = local_setflag which = cas_disabled }
+		command = { trigger = { cas = { value = 2 when = now } } type = demobilize which = cas when = 0 where = 0 value = 1 }
+		command = { trigger = { interceptor = { value = 1 when = now } } type = deactivate_unit_type which = interceptor }
+		command = { trigger = { interceptor = { value = 1 when = now } } type = local_setflag which = interceptor_disabled }
+		command = { trigger = { interceptor = { value = 2 when = now } } type = demobilize which = interceptor when = 0 where = 0 value = 1 }
+		command = { trigger = { multi_role = { value = 1 when = now } } type = deactivate_unit_type which = multi_role }
+		command = { trigger = { multi_role = { value = 1 when = now } } type = local_setflag which = multi_role_disabled }
+		command = { trigger = { multi_role = { value = 2 when = now } } type = demobilize which = multi_role when = 0 where = 0 value = 1 }
+		command = { trigger = { naval_bomber = { value = 1 when = now } } type = deactivate_unit_type which = naval_bomber }
+		command = { trigger = { naval_bomber = { value = 1 when = now } } type = local_setflag which = naval_bomber_disabled }
+		command = { trigger = { naval_bomber = { value = 2 when = now } } type = demobilize which = naval_bomber when = 0 where = 0 value = 1 }
+		command = { trigger = { strategic_bomber = { value = 1 when = now } } type = deactivate_unit_type which = strategic_bomber }
+		command = { trigger = { strategic_bomber = { value = 1 when = now } } type = local_setflag which = strategic_bomber_disabled }
+		command = { trigger = { strategic_bomber = { value = 2 when = now } } type = demobilize which = strategic_bomber when = 0 where = 0 value = 1 }
+		command = { trigger = { tactical_bomber = { value = 1 when = now } } type = deactivate_unit_type which = tactical_bomber }
+		command = { trigger = { tactical_bomber = { value = 1 when = now } } type = local_setflag which = tactical_bomber_disabled }
+		command = { trigger = { tactical_bomber = { value = 2 when = now } } type = demobilize which = tactical_bomber when = 0 where = 0 value = 1 }
+	}
+	action = { 	
+		name = "We can't sustain an airforce with more than 3 squadron of a type."
+		ai_chance = 100
+		trigger = {
+			local_flag = disarm_air_3
+			or = {
+				and = { cas = { value = 3 when = now } not = { local_flag = cas_disabled } }
+				and = { interceptor = { value = 3 when = now } not = { local_flag = interceptor_disabled } }
+				and = { multi_role = { value = 3 when = now } not = { local_flag = multi_role_disabled } }
+				and = { naval_bomber = { value = 3 when = now } not = { local_flag = naval_bomber_disabled } }
+				and = { strategic_bomber = { value = 3 when = now } not = { local_flag = strategic_bomber_disabled } }
+				and = { tactical_bomber = { value = 3 when = now } not = { local_flag = tactical_bomber_disabled } }
+				cas = { value = 4 when = now }
+				interceptor = { value = 4 when = now }
+				multi_role = { value = 4 when = now }
+				naval_bomber = { value = 4 when = now }
+				strategic_bomber = { value = 4 when = now }
+				tactical_bomber = { value = 4 when = now }
+			} 
+		}
+		command = { trigger = { cas = { value = 3 when = now } } type = deactivate_unit_type which = cas }
+		command = { trigger = { cas = { value = 3 when = now } } type = local_setflag which = cas_disabled }
+		command = { trigger = { cas = { value = 4 when = now } } type = demobilize which = cas when = 0 where = 0 value = 3 }
+		command = { trigger = { interceptor = { value = 3 when = now } } type = deactivate_unit_type which = interceptor }
+		command = { trigger = { interceptor = { value = 3 when = now } } type = local_setflag which = interceptor_disabled }
+		command = { trigger = { interceptor = { value = 4 when = now } } type = demobilize which = interceptor when = 0 where = 0 value = 3 }
+		command = { trigger = { multi_role = { value = 3 when = now } } type = deactivate_unit_type which = multi_role }
+		command = { trigger = { multi_role = { value = 3 when = now } } type = local_setflag which = multi_role_disabled }
+		command = { trigger = { multi_role = { value = 4 when = now } } type = demobilize which = multi_role when = 0 where = 0 value = 3 }
+		command = { trigger = { naval_bomber = { value = 3 when = now } } type = deactivate_unit_type which = naval_bomber }
+		command = { trigger = { naval_bomber = { value = 3 when = now } } type = local_setflag which = naval_bomber_disabled }
+		command = { trigger = { naval_bomber = { value = 4 when = now } } type = demobilize which = naval_bomber when = 0 where = 0 value = 3 }
+		command = { trigger = { strategic_bomber = { value = 3 when = now } } type = deactivate_unit_type which = strategic_bomber }
+		command = { trigger = { strategic_bomber = { value = 3 when = now } } type = local_setflag which = strategic_bomber_disabled }
+		command = { trigger = { strategic_bomber = { value = 4 when = now } } type = demobilize which = strategic_bomber when = 0 where = 0 value = 3 }
+		command = { trigger = { tactical_bomber = { value = 3 when = now } } type = deactivate_unit_type which = tactical_bomber }
+		command = { trigger = { tactical_bomber = { value = 3 when = now } } type = local_setflag which = tactical_bomber_disabled }
+		command = { trigger = { tactical_bomber = { value = 4 when = now } } type = demobilize which = tactical_bomber when = 0 where = 0 value = 3 }
+	}
+	action = { 	
+		name = "We can't sustain an airforce with more than 5 squadron of a type."
+		ai_chance = 100
+		trigger = {
+			local_flag = disarm_air_5
+			or = {
+				and = { cas = { value = 5 when = now } not = { local_flag = cas_disabled } }
+				and = { interceptor = { value = 5 when = now } not = { local_flag = interceptor_disabled } }
+				and = { multi_role = { value = 5 when = now } not = { local_flag = multi_role_disabled } }
+				and = { naval_bomber = { value = 5 when = now } not = { local_flag = naval_bomber_disabled } }
+				and = { strategic_bomber = { value = 5 when = now } not = { local_flag = strategic_bomber_disabled } }
+				and = { tactical_bomber = { value = 5 when = now } not = { local_flag = tactical_bomber_disabled } }
+				cas = { value = 6 when = now }
+				interceptor = { value = 6 when = now }
+				multi_role = { value = 6 when = now }
+				naval_bomber = { value = 6 when = now }
+				strategic_bomber = { value = 6 when = now }
+				tactical_bomber = { value = 6 when = now }
+			} 
+		}
+		command = { trigger = { cas = { value = 5 when = now } } type = deactivate_unit_type which = cas }
+		command = { trigger = { cas = { value = 5 when = now } } type = local_setflag which = cas_disabled }
+		command = { trigger = { cas = { value = 6 when = now } } type = demobilize which = cas when = 0 where = 0 value = 5 }
+		command = { trigger = { interceptor = { value = 5 when = now } } type = deactivate_unit_type which = interceptor }
+		command = { trigger = { interceptor = { value = 5 when = now } } type = local_setflag which = interceptor_disabled }
+		command = { trigger = { interceptor = { value = 6 when = now } } type = demobilize which = interceptor when = 0 where = 0 value = 5 }
+		command = { trigger = { multi_role = { value = 5 when = now } } type = deactivate_unit_type which = multi_role }
+		command = { trigger = { multi_role = { value = 5 when = now } } type = local_setflag which = multi_role_disabled }
+		command = { trigger = { multi_role = { value = 6 when = now } } type = demobilize which = multi_role when = 0 where = 0 value = 5 }
+		command = { trigger = { naval_bomber = { value = 5 when = now } } type = deactivate_unit_type which = naval_bomber }
+		command = { trigger = { naval_bomber = { value = 5 when = now } } type = local_setflag which = naval_bomber_disabled }
+		command = { trigger = { naval_bomber = { value = 6 when = now } } type = demobilize which = naval_bomber when = 0 where = 0 value = 5 }
+		command = { trigger = { strategic_bomber = { value = 5 when = now } } type = deactivate_unit_type which = strategic_bomber }
+		command = { trigger = { strategic_bomber = { value = 5 when = now } } type = local_setflag which = strategic_bomber_disabled }
+		command = { trigger = { strategic_bomber = { value = 6 when = now } } type = demobilize which = strategic_bomber when = 0 where = 0 value = 5 }
+		command = { trigger = { tactical_bomber = { value = 5 when = now } } type = deactivate_unit_type which = tactical_bomber }
+		command = { trigger = { tactical_bomber = { value = 5 when = now } } type = local_setflag which = tactical_bomber_disabled }
+		command = { trigger = { tactical_bomber = { value = 6 when = now } } type = demobilize which = tactical_bomber when = 0 where = 0 value = 5 }
+	}
+}
+
+# Disarming of Nations (Air Free). CANNOT HAVE OVERLAPPING CAP FLAGS!
+# EX: If 0, 1, and 2 are set and we have 1, then it would be disabled in the previous by 0/1, but then enabled by this event.
+event = {
+	id = 133000842
+	random = no																			 
+	persistent = yes
+	
+	trigger = {
+		or = {
+			local_flag = cas_disabled
+			local_flag = interceptor_disabled
+			local_flag = multi_role_disabled
+			local_flag = naval_bomber_disabled
+			local_flag = strategic_bomber_disabled
+			local_flag = tactical_bomber_disabled
+		}
+		or = {
+			atwar = yes # Possible source of bugs
+			and = {
+				# it's either 1930 for fascists, or 1935 for all others	
+				or = { 
+					and = { 
+						year = 1930 
+						or = { ideology = fascist ideology = nazi country = JAP country = ITA country = HUN country = GER } 
+					}
+					year = 1935
+				}
+				# and a disarm-flag is set
+				or = {
+					local_flag = disarm_air_0
+					local_flag = disarm_air_1
+					local_flag = disarm_air_3
+					local_flag = disarm_air_5
+				}
+				# and the nation in question is not weimar 
+				not = {
+					and = { 
+						country = U08						 
+						event = 13300200					# if it is a defeated nation
+						atwar = no								# and not at war
+						not = { event = 13300213 } # has not jet started to fall to extremism
+					}
+				}
+			}
+			and = {
+				local_flag = disarm_air_1
+				or = { 
+					and = { local_flag = cas_disabled not = { cas = { value = 1 when = now } } }
+					and = { local_flag = interceptor_disabled not = { interceptor = { value = 1 when = now } } }
+					and = { local_flag = multi_role_disabled not = { multi_role = { value = 1 when = now } } }
+					and = { local_flag = naval_bomber_disabled not = { naval_bomber = { value = 1 when = now } } }
+					and = { local_flag = strategic_bomber_disabled not = { strategic_bomber = { value = 1 when = now } } }
+					and = { local_flag = tactical_bomber_disabled not = { tactical_bomber = { value = 1 when = now } } }
+				}
+			}
+			and = {
+				local_flag = disarm_air_3
+				or = { 
+					and = { local_flag = cas_disabled not = { cas = { value = 3 when = now } } }
+					and = { local_flag = interceptor_disabled not = { interceptor = { value = 3 when = now } } }
+					and = { local_flag = multi_role_disabled not = { multi_role = { value = 3 when = now } } }
+					and = { local_flag = naval_bomber_disabled not = { naval_bomber = { value = 3 when = now } } }
+					and = { local_flag = strategic_bomber_disabled not = { strategic_bomber = { value = 3 when = now } } }
+					and = { local_flag = tactical_bomber_disabled not = { tactical_bomber = { value = 3 when = now } } }
+				}
+			}
+			and = {
+				local_flag = disarm_air_5
+				or = { 
+					and = { local_flag = cas_disabled not = { cas = { value = 5 when = now } } }
+					and = { local_flag = interceptor_disabled not = { interceptor = { value = 5 when = now } } }
+					and = { local_flag = multi_role_disabled not = { multi_role = { value = 5 when = now } } }
+					and = { local_flag = naval_bomber_disabled not = { naval_bomber = { value = 5 when = now } } }
+					and = { local_flag = strategic_bomber_disabled not = { strategic_bomber = { value = 5 when = now } } }
+					and = { local_flag = tactical_bomber_disabled not = { tactical_bomber = { value = 5 when = now } } }
+				}
+			}
+			not = { # Changed. All countries with an air limit MUST have a flag though.
+				or = {
+					local_flag = disarm_air_0
+					local_flag = disarm_air_1
+					local_flag = disarm_air_3
+					local_flag = disarm_air_5
+				}
+			}
+		}
+	}
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 14						
+	deathdate = { day = 1 month = january year = 1945 }
+	
+	name = "EVT_133000842_NAME"							
+	Desc = "EVT_133000842_DESC"
+	Picture = "economic" 
+	
+	action = { 	
+		name = "We may build new CAS again."
+		trigger = {
+			local_flag = cas_disabled
+			or = {
+				atwar = yes
+				and = { local_flag = disarm_air_1 not = { cas = { value = 1 when = now } } }
+				and = { local_flag = disarm_air_3 not = { cas = { value = 3 when = now } } }
+				and = { local_flag = disarm_air_5 not = { cas = { value = 5 when = now } } }
+				not = { or = { local_flag = disarm_air_0 local_flag = disarm_air_1 local_flag = disarm_air_3 local_flag = disarm_air_5 } }
+			}
+		}		 
+		command = { type = activate_unit_type which = cas }
+		command = { type = local_clrflag which = cas_disabled } 
+	}
+	action = { 	
+		name = "We may build new interceptors again."
+		trigger = {
+			local_flag = interceptor_disabled
+			or = {
+				atwar = yes
+				and = { local_flag = disarm_air_1 not = { interceptor = { value = 1 when = now } } }
+				and = { local_flag = disarm_air_3 not = { interceptor = { value = 3 when = now } } }
+				and = { local_flag = disarm_air_5 not = { interceptor = { value = 5 when = now } } }
+				not = { or = { local_flag = disarm_air_0 local_flag = disarm_air_1 local_flag = disarm_air_3 local_flag = disarm_air_5 } }
+			}
+		}		 
+		command = { type = activate_unit_type which = interceptor }
+		command = { type = local_clrflag which = interceptor_disabled } 
+	}
+	action = { 	
+		name = "We may build new multi role fighters again."
+		trigger = {
+			local_flag = multi_role_disabled
+			or = {
+				atwar = yes
+				and = { local_flag = disarm_air_1 not = { multi_role = { value = 1 when = now } } }
+				and = { local_flag = disarm_air_3 not = { multi_role = { value = 3 when = now } } }
+				and = { local_flag = disarm_air_5 not = { multi_role = { value = 5 when = now } } }
+				not = { or = { local_flag = disarm_air_0 local_flag = disarm_air_1 local_flag = disarm_air_3 local_flag = disarm_air_5 } }
+			}
+		}		 
+		command = { type = activate_unit_type which = multi_role }
+		command = { type = local_clrflag which = multi_role_disabled } 
+	}
+	action = { 	
+		name = "We may build new naval bombers again."
+		trigger = {
+			local_flag = naval_bomber_disabled
+			or = {
+				atwar = yes
+				and = { local_flag = disarm_air_1 not = { naval_bomber = { value = 1 when = now } } }
+				and = { local_flag = disarm_air_3 not = { naval_bomber = { value = 3 when = now } } }
+				and = { local_flag = disarm_air_5 not = { naval_bomber = { value = 5 when = now } } }
+				not = { or = { local_flag = disarm_air_0 local_flag = disarm_air_1 local_flag = disarm_air_3 local_flag = disarm_air_5 } }
+			}
+		}		 
+		command = { type = activate_unit_type which = naval_bomber }
+		command = { type = local_clrflag which = naval_bomber_disabled } 
+	}
+	action = { 	
+		name = "We may build new strategic bombers again."
+		trigger = {
+			local_flag = strategic_bomber_disabled
+			or = {
+				atwar = yes
+				and = { local_flag = disarm_air_1 not = { strategic_bomber = { value = 1 when = now } } }
+				and = { local_flag = disarm_air_3 not = { strategic_bomber = { value = 3 when = now } } }
+				and = { local_flag = disarm_air_5 not = { strategic_bomber = { value = 5 when = now } } }
+				not = { or = { local_flag = disarm_air_0 local_flag = disarm_air_1 local_flag = disarm_air_3 local_flag = disarm_air_5 } }
+			}
+		}		 
+		command = { type = activate_unit_type which = strategic_bomber }
+		command = { type = local_clrflag which = strategic_bomber_disabled } 
+	}
+	action = { 	
+		name = "We may build new tactical bombers again."
+		trigger = {
+			local_flag = tactical_bomber_disabled
+			or = {
+				atwar = yes
+				and = { local_flag = disarm_air_1 not = { tactical_bomber = { value = 1 when = now } } }
+				and = { local_flag = disarm_air_3 not = { tactical_bomber = { value = 3 when = now } } }
+				and = { local_flag = disarm_air_5 not = { tactical_bomber = { value = 5 when = now } } }
+				not = { or = { local_flag = disarm_air_0 local_flag = disarm_air_1 local_flag = disarm_air_3 local_flag = disarm_air_5 } }
+			}
+		}		 
+		command = { type = activate_unit_type which = tactical_bomber }
+		command = { type = local_clrflag which = tactical_bomber_disabled } 
+	}
+	action = { # Ignores reenablikng disabled queue. This even would have to fire again. WAD?
+		name = "Let loose the dogs of war!"
+		trigger = {
+			or = { 
+				
+				and = { 
+					year = 1930 
+					or = { 
+						ideology = fascist
+						ideology = nazi
+						country = JAP
+						country = ITA
+						country = HUN
+						country = GER 
+					} 
+				}
+				year = 1935
+			}
+			# and the nation in question is not weimar 
+			not = { and = { 
+				country = U08						 
+				event = 13300200					# if it is a defeated nation
+				atwar = no								# and not at war
+				not = { event = 13300213 } # has not jet started to fall to extremism
+			} }
+		}
+		command = { type = local_clrflag which = disarm_air_0 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+	}
+}

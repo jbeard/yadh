@@ -1,0 +1,2476 @@
+#############################################################################################
+#
+#	New World Order 2 by Bizon
+#	The Jewel Voice
+#	IDs: 832****
+#	
+#############################################################################################
+
+### PHASE ONE: SURRENDER OF JAPAN
+
+### Possibility of surrender (being at war with USSR increases the likelihood by 10% pts):
+# Okinawa is lost: 10%
+# Atomic bomb dropped: 40%
+# Two atomic bombs dropped: 60%
+# Three atomic bombs dropped: 70%
+# Successful invasion of Home Islands (>10% lost provinces): 80%
+# Japan is annexed before is surrenders
+
+# Loss of Okinawa
+event = {
+	id = 8320000
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8320000_NAME
+	desc = EVT_8320000_DESC
+	picture = nwo\okinawa
+	style = 1
+
+	trigger = {
+		OR = {
+			war = { country = JAP country = USA }
+			war = { country = JAP country = SOV }
+			war = { country = JAP country = CHI }
+		}
+		lost_vp = { country = JAP value = 25 }
+		NOT = { 
+			AND = {
+				control = { province = 1562 data = -1 } # Amami
+				control = { province = 1563 data = -1 } # Okinawa
+				control = { province = 1564 data = -1 } # Okinawa
+			}
+		}
+		NOT = { flag = cold_war_pacific }
+		NOT = { flag = the_jewel_voice }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320000_A
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 80
+		command = { type = dissent value = 3 }
+	}	
+	
+	action = {
+		name = EVT_8320000_A
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+	}	
+	
+	action = {
+		name = EVT_8320000_B
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 20
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+	action = {
+		name = EVT_8320000_B
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 10
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+}
+
+# Japan nuked once
+event = {
+	id = 8320001
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8320001_NAME 
+	desc = EVT_8320001_DESC
+	picture = nwo\atomic_bomb
+	style = 1
+
+	trigger = {
+		OR = {
+			war = { country = JAP country = USA }
+			war = { country = JAP country = SOV }
+			war = { country = JAP country = CHI }
+		}
+		OR = {
+			AND = {
+				nuked = { country = JAP data = -1 }
+				NOT = { nuked = { country = JAP data = -2 } }
+			}
+			AND = {
+				event = 8233101
+				NOT = { event = 8233103 }
+			}
+		}
+		NOT = { flag = cold_war_pacific }
+		NOT = { flag = the_jewel_voice }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320001_A
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 50
+		command = { type = dissent value = 7 }
+	}	
+	
+	action = {
+		name = EVT_8320001_A
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 40
+		command = { type = dissent value = 7 }
+	}	
+	
+	action = {
+		name = EVT_8320001_B
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 50
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+	action = {
+		name = EVT_8320001_B
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 60
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+}
+
+# Japan nuked twice
+event = {
+	id = 8320002
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8320002_NAME 
+	desc = EVT_8320002_DESC
+	picture = nwo\atomic_bomb
+	style = 1
+
+	trigger = {
+		OR = {
+			war = { country = JAP country = USA }
+			war = { country = JAP country = SOV }
+			war = { country = JAP country = CHI }
+		}
+		OR = {
+			AND = {
+				nuked = { country = JAP data = -2 }
+				NOT = { nuked = { country = JAP data = -3 } }
+			}
+			AND = {
+				event = 8233103
+				NOT = { event = 8233105 }
+			}
+		}
+		NOT = { flag = cold_war_pacific }
+		NOT = { flag = the_jewel_voice }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320002_A
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 30
+		command = { type = dissent value = 10 }
+	}	
+	
+	action = {
+		name = EVT_8320002_A
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 40
+		command = { type = dissent value = 10 }
+	}	
+	
+	action = {
+		name = EVT_8320002_B
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 70
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+	action = {
+		name = EVT_8320002_B
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 60
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+}
+
+# Japan nuked three times
+event = {
+	id = 8320003
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8320003_NAME 
+	desc = EVT_8320003_DESC
+	picture = nwo\atomic_bomb
+	style = 1
+
+	trigger = {
+		OR = {
+			war = { country = JAP country = USA }
+			war = { country = JAP country = SOV }
+			war = { country = JAP country = CHI }
+		}
+		OR = {
+			AND = {
+				nuked = { country = JAP data = -3 }
+			}
+			AND = {
+				event = 8233105
+			}
+		}
+		NOT = { flag = cold_war_pacific }
+		NOT = { flag = the_jewel_voice }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320003_A
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 20
+		command = { type = dissent value = 16 }
+	}	
+	
+	action = {
+		name = EVT_8320003_A
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 30
+		command = { type = dissent value = 16 }
+	}	
+	
+	action = {
+		name = EVT_8320003_B
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 80
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+	action = {
+		name = EVT_8320003_B
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 70
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+}
+
+# Japan is successfuly invaded
+event = {
+	id = 8320004
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8320004_NAME 
+	desc = EVT_8320004_DESC
+	picture = nwo\invasion_of_japan
+	style = 1
+
+	trigger = {
+		NOT = { region = { region = "Japan" country = -1 data = 1 value = 75 } }
+		NOT = { flag = cold_war_pacific }
+		NOT = { flag = the_jewel_voice }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320004_A
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 10
+		command = { type = dissent value = 20 }
+	}	
+	
+	action = {
+		name = EVT_8320004_A
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 20
+		command = { type = dissent value = 20 }
+	}	
+	
+	action = {
+		name = EVT_8320004_B
+		trigger	= { war = { country = JAP country = SOV } }
+		ai_chance = 90
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+	action = {
+		name = EVT_8320004_B
+		trigger	= { NOT = { war = { country = JAP country = SOV } } }
+		ai_chance = 80
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+}
+
+# Japan is annexed before they surrender
+event = {
+	id = 8320005
+	save_date = yes
+	
+	name = EVT_8320005_NAME 
+	desc = EVT_8320005_DESC
+	picture = nwo\invasion_of_japan
+	style = 1
+
+	trigger = {
+		control = { province = 1552 data = -1 }
+		NOT = [ exists = JAP }
+		NOT = { flag = cold_war_pacific }
+		NOT = { flag = the_jewel_voice }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320005_A
+		command = { type = setflag which = the_jewel_voice }
+	}	
+	
+}
+
+# Operation Ketsu-Go
+
+event = {
+	id = 8320010
+	country = JAP
+
+	name = EVT_8320010_NAME
+	desc = EVT_8320010_DESC
+	picture = nwo\ketsugo
+	style = 1
+	
+	trigger = {
+		OR = {
+			event = 8320000
+			event = 8320001
+			event = 8320002
+			event = 8320003
+			event = 8320004
+		}
+		NOT = { flag = the_jewel_voice }
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320010_A #"Prepare for defence"
+		ai_chance = 90
+		command = { type = construct which = land_fort where = 1558 value = 4 }	# Kanazawa (Matsushiro Underground Imperial Headquarters)
+		command = { type = construct which = land_fort where = 1552 value = 2 } # Tokyo
+		command = { type = construct which = land_fort where = 1557 value = 2 }	# Nagoya
+		command = { type = construct which = land_fort where = 1553 value = 2 }	# Osaka
+		command = { type = construct which = coastal_fort where = 1552 value = 1 } # Tokyo
+		command = { type = construct which = coastal_fort where = 1559 value = 1 } # Matsuyama
+		command = { type = construct which = coastal_fort where = 1554 value = 1 } # Hiroshima
+		command = { type = construct which = coastal_fort where = 1561 value = 1 } # Kagoshima
+		command = { type = supplies value = -2500 }
+	}
+	
+	action = {
+		name = EVT_8320010_B #"It will be not necessary"
+		ai_chance = 10
+		command = { type = supplies value = 1000 }
+	}	
+	
+}
+
+### Kyujo Incident: failed coup d'etat
+
+event = {
+	id = 8320011
+	country = JAP
+	one_action = yes
+
+	name = EVT_8320011_NAME #"Kyujo Incident"
+	desc = EVT_8320011_DESC #"The Kyujo Incident was an attempted military coup d'etat in Japan at the end of the Second World War. It happened just prior to announcement of Japan's surrender to the Allies. The attempted coup was put into effect to stop the move to surrender and let the move continue."
+	picture = nwo\kyujo_incident
+	style = 1
+	
+	trigger = {
+		OR = {
+			event = 8320001
+			event = 8320002
+			event = 8320003
+			event = 8320004
+		}
+		random = 50
+		flag = the_jewel_voice
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320011_A #"The Army remains loyal to the Emperor"
+		ai_chance = 80
+		command = { type = dissent value = -1 }
+	}	
+	
+	action = {
+		name = EVT_8320011_B #"The Army is deeply inspired"
+		ai_chance = 20
+		command = { type = clrflag which = the_jewel_voice }
+		command = { type = dissent value = 5 }
+		# Set up post-coup government
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = headofstate which = 50001 } # Hirohito
+		command = { type = headofgovernment which = 50400 } # Anami Korechika
+		command = { type = foreignminister which = 50050 } # Shigemitsu Mamoru
+		command = { type = armamentminister which = 50075 } # Nakajima Chikuhei
+		command = { type = ministerofsecurity which = 50106 } # Iimura Jo
+		command = { type = ministerofintelligence which = 50124 } # Koiso Kuniaki
+		command = { type = chiefofstaff which = 50135 } # Umezu Yoshijiro
+		command = { type = chiefofarmy which = 50401 } # Takeshi Mori
+		command = { type = chiefofnavy which = 50150 } # Oikawa Koshiro
+		command = { type = chiefofair which = 50162 } # Anami Korechika
+	}
+}
+
+### Soviet Offensive against Japan
+
+event = { # Cancellation of non-agression pact
+	id = 8320030
+	country = SOV
+	save_date = yes
+
+	name = EVT_8320030_NAME #"Turning eye towards the East"
+	desc = EVT_8320030_DESC #"At the Potsdam conference we vowed to help the Allies in their fight against Japan. This will not only shorten the war in the Far East but can bring us tangible benefits."
+	picture = nwo\invasion_of_manchuria
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { flag = cold_war_pacific }
+		NOT = { 
+			war = { country = SOV country = GER }
+			war = { country = SOV country = JAP }
+			war = { country = SOV country = ENG }
+			war = { country = SOV country = USA }
+			flag = the_jewel_voice
+			non_aggression = { country = JAP country = USA }
+		}
+	}
+
+	date = { day = 1 month = march year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320030_A #"We will soon declare the war"
+		ai_chance = 95
+		command = { type = end_non_aggression which = SOV where = JAP }
+		# Switch AI file
+		command = { type = ai which = "switch/sov_japan.ai" }
+	}	
+	
+	action = {
+		name = EVT_8320030_B #"Remain faithful to the agreement"
+		ai_chance = 5
+		command = { type = relation which = JAP value = 100 }
+		command = { type = sleepevent which = 8320031 }
+	}	
+}
+
+event = { # Manchurian Strategic Offensive Operation
+	id = 8320031
+	country = SOV
+
+	name = EVT_8320031_NAME #"Manchurian Strategic Offensive Operation"
+	desc = EVT_8320031_DESC #"True to the agreement of Potsdam Conference we should enter the war with the Japanese"
+	picture = nwo\invasion_of_manchuria
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		NOT = { flag = cold_war_pacific }
+		event = { id = 8320030 days = 120 }
+		NOT = { 
+			non_aggression = { country = SOV country = JAP }
+			war = { country = SOV country = JAP }
+			war = { country = SOV country = ENG }
+			war = { country = SOV country = USA }
+			flag = the_jewel_voice
+			non_aggression = { country = JAP country = USA }
+		}
+	}
+
+	date = { day = 1 month = june year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320031_A #"OK"
+		ai_chance = 95
+		command = { type = war which = JAP }
+	}
+
+	action = {
+		name = EVT_8320031_B #"We don't want to"
+		ai_chance = 5
+		command = { type = dissent value = 8 }
+		command = { type = ai which = "sov_1945.ai" }
+		command = { type = sleepevent which = 8320032 }
+	}		
+}
+
+event = {
+	id = 8320032
+	country = SOV
+	
+	name = EVT_8320032_NAME #"Operation August Storm"
+	desc = EVT_8320032_DESC #"Huge stockpiles of resources and amount of troops at hand allowed us to swiftly crush the opponent in Manchuria."
+	picture = nwo\invasion_of_manchuria
+	style = 1
+
+	trigger = {
+		NOT = { flag = cold_war_pacific }
+		war = { country = SOV country = JAP }
+		ai = MAN
+		ai = MEN
+		OR = {
+			control = { province = 1199 data = SOV } # Harbin
+			control = { province = 1239 data = SOV } # Jining
+		}
+		event = 8320031
+	}
+	
+	date = { day = 1 month = june year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8320032_A #"OK"
+		command = { type = inherit which = MAN }
+		command = { type = inherit which = MEN }
+	}	
+}
+
+### PHASE TWO: LOCAL NATIONALIST REGIMES GAIN POWER IN SOUTH EAST ASIA
+
+event = {
+	id = 8321000
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8321000_NAME
+	desc = EVT_8321000_DESC
+	picture = nwo\anti_japanese
+	style = 1
+
+	trigger = {
+		OR = {
+			event = { id = 8320000 days = 7 }
+			event = { id = 8320001 days = 7 }
+			event = { id = 8320002 days = 7 }
+			event = { id = 8320003 days = 7 }
+			event = { id = 8320004 days = 7 }
+			event = { id = 8320005 days = 7 }
+		}
+		flag = the_jewel_voice
+	}
+	
+	date = { day = 1 month = june year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8321000_A
+			
+		# Japanese puppets are annexed
+		command = { trigger = { ai = MAN } type = inherit which = MAN }
+		command = { trigger = { ai = MEN } type = inherit which = MEN }
+		command = { trigger = { ai = U74 } type = inherit which = U74 }
+		command = { trigger = { ai = U87 } type = inherit which = U87 }
+		command = { trigger = { ai = SIA alliance = { country = SIA } } type = inherit which = SIA }
+		command = { trigger = { ai = CHI puppet = { country = CHI } } type = inherit which = CHI }
+		
+		### Japan is set to social democrat so all the new countries had "right" domestic setup
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 8 }
+		
+		### Although, Hirohito remains the Emperor
+		command = { type = headofstate which = 50001 }
+		
+		# Countries gain independence
+		command = { trigger = { region = { region = "China" value = 15 } NOT = { exists = CHI } } type = independence which = CHI value = 1 }
+		command = { trigger = { OR = { control = { province = 1395 data = -1 } control = { province = 1399 data = -1 } } NOT = { exists = U72 } } type = independence which = U72 value = 1 }
+		command = { trigger = { control = { province = 1405 data = -1 } NOT = { exists = LAO } } type = independence which = LAO value = 1 }
+		command = { trigger = { control = { province = 1400 data = -1 } NOT = { exists = CMB } } type = independence which = CMB value = 1 }
+		command = { trigger = { area = { area = "Siam" value = 30 } NOT = { exists = SIA } } type = independence which = SIA value = 1 }
+		command = { trigger = { area = { area = "Malacka" value = 20 } NOT = { exists = MLY } } type = independence which = MLY value = 1 }
+		command = { trigger = { control = { province = 1624 data = -1 } NOT = { exists = SAR } } type = independence which = SAR value = 1 }
+		command = { trigger = { control = { province = 1432 data = -1 } NOT = { exists = U75 } } type = independence which = U75 value = 1 }
+		command = { trigger = { region = { region = "Indonesia" value = 15 } NOT = { exists = INO } } type = independence which = INO value = 1 }
+		command = { trigger = { region = { region = "Australia" value = 20 } NOT = { exists = AST } } type = independence which = AST value = 1 }
+		command = { trigger = { region = { region = "India" value = 40 } NOT = { exists = IND } } type = independence which = IND value = 1 }
+		command = { trigger = { area = { area = "Ceylon" value = 100 } NOT = { exists = U83 } } type = independence which = U83 value = 1 }
+		command = { trigger = { AND = { area = { area = "Burma" value = 50 } area = { area = "North Burma" value = 50 } } NOT = { exists = BUR } } type = independence which = BUR value = 1 }
+		command = { trigger = { OR = { area = { area = "Bengal" value = 50 } area = { area = "Pakistan" value = 50 } } NOT = { exists = PAK } } type = independence which = PAK value = 1 }
+		command = { trigger = { region = { region = "Philippines" value = 50 } NOT = { exists = PHI } } type = independence which = PHI value = 1 }
+		
+		# Status quo in China and Korea
+		command = { type = secederegion which = -1 value = "China" when = 2 }
+		command = { type = secederegion which = -1 value = "Korea" when = 2 }
+			
+	}	
+}
+
+# The Allies gives the land to USA/UK
+event = {
+	id = 8321001
+	tag = { ENG AST NZL SAF PHI }
+	save_date = yes
+	
+	name = EVT_8321001_NAME
+	desc = EVT_8321001_DESC
+	picture = nwo\anzac
+	style = 1
+
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8321000 days = 3 }
+	}
+	
+	date = { day = 1 month = june year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8321001_A
+		command = { type = secedearea which = ENG value = "Pakistan" when = 1 }
+		command = { type = secedearea which = ENG value = "Rajastan" when = 1 }
+		command = { type = secedearea which = ENG value = "Eastern Ghat" when = 1 }
+		command = { type = secedearea which = ENG value = "Delhi" when = 1 }
+		command = { type = secedearea which = ENG value = "Himalayas" when = 1 }
+		command = { type = secedearea which = ENG value = "Nagpur" when = 1 }
+		command = { type = secedearea which = ENG value = "Orissa" when = 1 }
+		command = { type = secedearea which = ENG value = "Deccar" when = 1 }
+		command = { type = secedearea which = ENG value = "Bombay" when = 1 }
+		command = { type = secedearea which = ENG value = "Western Ghat" when = 1 }
+		command = { type = secedearea which = ENG value = "East Bengal" when = 1 }
+		command = { type = secedeprovince which = ENG value = 1446 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1447 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1448 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1444 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1445 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1449 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1450 when = 1 }
+		command = { type = secedearea which = ENG value = "Ceylon" when = 1 }
+		command = { type = secedearea which = ENG value = "North Burma" when = 1 }	
+		command = { type = secedearea which = ENG value = "Burma" when = 1 }
+		
+		# Thailand
+		command = { type = secedearea which = USA value = "Siam" when = 1 }
+		command = { type = secedearea which = USA value = "Kra Peninsula" when = 1 }
+		command = { type = secedeprovince which = USA value = 1433 when = 1 }
+		command = { type = secedeprovince which = USA value = 1434 when = 1 }
+		
+		# Cambodia
+		command = { type = secedeprovince which = USA value = 1398 when = 1 }
+		command = { type = secedeprovince which = USA value = 1400 when = 1 }
+		command = { type = secedeprovince which = USA value = 1401 when = 1 }
+		command = { type = secedeprovince which = USA value = 1402 when = 1 }
+		
+		# Laos
+		command = { type = secedeprovince which = USA value = 1391 when = 1 }
+		command = { type = secedeprovince which = USA value = 1394 when = 1 }
+		command = { type = secedeprovince which = USA value = 1404 when = 1 }
+		command = { type = secedeprovince which = USA value = 1405 when = 1 }
+		
+		# Vietnam
+		command = { type = secedeprovince which = USA value = 1392 when = 1 }
+		command = { type = secedeprovince which = USA value = 1393 when = 1 }
+		command = { type = secedeprovince which = USA value = 1395 when = 1 }
+		command = { type = secedeprovince which = USA value = 1396 when = 1 }
+		command = { type = secedeprovince which = USA value = 1397 when = 1 }
+		command = { type = secedeprovince which = USA value = 1399 when = 1 }
+		command = { type = secedeprovince which = USA value = 1403 when = 1 }
+		
+		# Malaya
+		command = { type = secedeprovince which = ENG value = 1435 when = 1 }                                  
+		command = { type = secedeprovince which = ENG value = 1436 when = 1 }                                              
+		command = { type = secedeprovince which = ENG value = 1437 when = 1 }                                              
+		command = { type = secedeprovince which = ENG value = 1438 when = 1 }
+		
+		# Singapore
+		command = { type = secedeprovince which = ENG value = 1635 when = 1 }
+
+		# Indonesia
+		command = { type = secedearea which = USA value = "Sumatra" when = 1 }
+		command = { type = secedearea which = USA value = "West Java" when = 1 }
+		command = { type = secedearea which = USA value = "East Java" when = 1 }
+		command = { type = secedearea which = USA value = "Celebes" when = 1 }
+		command = { type = secedearea which = USA value = "Molucks" when = 1 }
+		command = { type = secedearea which = USA value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = USA value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = USA value = "South Borneo" when = 1 }
+		command = { type = secedearea which = USA value = "Babo" when = 1 }
+		command = { type = secedearea which = USA value = "Sarmi" when = 1 }
+		command = { type = secedearea which = USA value = "Agats" when = 1 }
+
+		command = { type = secedeprovince which = USA value = 1623 when = 1 }
+		command = { type = secedeprovince which = USA value = 1627 when = 1 }
+		command = { type = secedeprovince which = USA value = 1628 when = 1 }
+		
+		# Sarawak
+		command = { type = secedeprovince which = ENG value = 1624 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1626 when = 1 }
+		
+		# Brunei
+		command = { type = secedeprovince which = USA value = 1625 when = 1 }
+		
+		# The Philippines
+		command = { type = secederegion which = USA value = "Philippines" when = 1 }
+	}	
+}
+
+# The main victor is decided and the rest of the lands are ceded
+event = {
+	id = 8321002
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8321002_NAME
+	desc = EVT_8321002_DESC
+	picture = nwo\japan_end_of_war
+	style = 1
+
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8321000 days = 3 }
+	}
+	
+	date = { day = 1 month = june year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Americans are victorious
+	action = {
+		name = EVT_8321002_A
+		trigger = {
+			OR = {
+				control = { province = 1552 data = USA }
+				nuked = { country = USA country = JAP data = 1 }
+				war = { country = JAP country = USA }
+			}
+			# And Soviets are not victorious
+			NOT = {
+				OR = {
+					control = { province = 1552 data = SOV }
+					AND = {
+						nuked = { country = SOV country = JAP data = 1 }
+						NOT = { nuked = { country = USA country = JAP data = 1 } }
+					}
+					region = { region = "Japan" country = SOV value = 50 }
+					AND = {
+						war = { country = JAP country = SOV }
+						NOT = { war = { country = JAP country = USA } }
+					}
+				}
+			}
+			# And Chinese are not victorious
+			NOT = {
+				OR = {
+					control = { province = 1552 data = CHI }
+					AND = {
+						nuked = { country = CHI country = JAP data = 1 }
+						NOT = { nuked = { country = SOV country = JAP data = 1 } }
+						NOT = { nuked = { country = USA country = JAP data = 1 } }
+					}
+					region = { region = "Japan" country = CHI value = 50 }
+					AND = {
+						war = { country = JAP country = CHI }
+						NOT = { war = { country = JAP country = SOV } }
+						NOT = { war = { country = JAP country = USA } }
+					}
+				}
+			}
+		}
+		# Cease-fire
+		command = { type = leave_alliance }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CHC value = 0 }
+		command = { type = peace which = SOV value = 0 }
+		command = { type = peace which = USA value = 0 }
+		command = { type = peace which = ENG value = 0 }
+		command = { type = peace which = FRA value = 0 }
+		command = { type = peace which = HOL value = 0 }
+		command = { type = peace which = AST value = 0 }
+		command = { type = peace which = NZL value = 0 }
+		command = { type = peace which = LEB value = 0 }
+		# Separate peace deals for 1944 scenario (contrib. by Yoshino)
+		command = { type = peace which = SYR value = 0 }
+		command = { type = peace which = OMN value = 0 }
+		command = { type = peace which = YEM value = 0 }
+		command = { type = peace which = U27 value = 0 } 
+		command = { type = peace which = POL value = 0 } 
+		command = { type = peace which = PHI value = 0 }
+		
+		# Generals commit suicide
+		# Anami Korechika
+		command = { type = sleepminister which = 50162 }
+		command = { type = sleepminister which = 50400 }
+		# Isamu Cho
+		command = { type = sleepleader which = 50021 }
+		# Shigeru Honjo
+		command = { type = sleepleader which = 50358 }
+		# Kakuji Kakuta
+		command = { type = sleepleader which = 50234 }
+		# Chikahiko Koizumi
+		command = { type = sleepleader which = 50374 }
+		# Michitaro Komatsubara
+		command = { type = sleepleader which = 50101 }
+		# Chuichi Nagumo
+		command = { type = sleepleader which = 50255 }
+		# Kiyoshi Ogawa
+		command = { type = sleepleader which = 50396 }
+		# Takijiro Onishi
+		command = { type = sleepleader which = 50318 }
+		# Hajime Sugiyama
+		command = { type = sleepminister which = 50133 }
+		command = { type = sleepleader which = 50161 }
+		# Shizuichi Tanaka
+		command = { type = sleepleader which = 50173 }
+		# Takijiro Onishi
+		command = { type = sleepleader which = 50318 }
+		
+		# Delete all the remaining units
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+		
+		# Secede all the remaining lands
+		command = { type = secederegion which = USA value = "Australia" when = 1 }
+		command = { type = secederegion which = USA value = "New Guinea" when = 1 }
+		command = { type = secederegion which = USA value = "Indonesia" when = 1 }
+		command = { type = secederegion which = USA value = "Indochine" when = 1 }
+		command = { type = secederegion which = USA value = "Asian Pacific" when = 1 }
+		command = { type = secederegion which = USA value = "Philippines" when = 1 }
+		command = { type = secederegion which = USA value = "India" when = 1 }
+		command = { type = secederegion which = USA value = "Korea" when = 1 }
+		command = { type = secederegion which = USA value = "China" when = 1 }
+		
+		command = { type = trigger which = 8321004 } # American victory
+	}	
+	# Soviets are victorious
+	action = {
+		name = EVT_8321002_B
+		trigger = {
+			OR = {
+				control = { province = 1552 data = SOV }
+				AND = {
+					nuked = { country = SOV country = JAP data = 1 }
+					NOT = { nuked = { country = USA country = JAP data = 1 } }
+				}
+				region = { region = "Japan" country = SOV value = 50 }
+				AND = {
+					war = { country = JAP country = SOV }
+					NOT = { war = { country = JAP country = USA } }
+				}
+			}
+			# And Chinese are not victorious
+			NOT = {
+				OR = {
+					control = { province = 1552 data = CHI }
+					AND = {
+						nuked = { country = CHI country = JAP data = 1 }
+						NOT = { nuked = { country = SOV country = JAP data = 1 } }
+						NOT = { nuked = { country = USA country = JAP data = 1 } }
+					}
+					region = { region = "Japan" country = CHI value = 50 }
+					AND = {
+						war = { country = JAP country = CHI }
+						NOT = { war = { country = JAP country = SOV } }
+						NOT = { war = { country = JAP country = USA } }
+					}
+				}
+			}
+		}
+		# Cease-fire
+		command = { type = leave_alliance }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CHC value = 0 }
+		command = { type = peace which = SOV value = 0 }
+		command = { type = peace which = USA value = 0 }
+		command = { type = peace which = ENG value = 0 }
+		command = { type = peace which = FRA value = 0 }
+		command = { type = peace which = HOL value = 0 }
+		command = { type = peace which = AST value = 0 }
+		command = { type = peace which = NZL value = 0 }
+		command = { type = peace which = LEB value = 0 }
+		# Separate peace deals for 1944 scenario (contrib. by Yoshino)
+		command = { type = peace which = SYR value = 0 }
+		command = { type = peace which = OMN value = 0 }
+		command = { type = peace which = YEM value = 0 }
+		command = { type = peace which = U27 value = 0 } 
+		command = { type = peace which = POL value = 0 } 
+		command = { type = peace which = PHI value = 0 }
+		
+		# Generals commit suicide
+		# Anami Korechika
+		command = { type = sleepminister which = 50162 }
+		command = { type = sleepminister which = 50400 }
+		# Isamu Cho
+		command = { type = sleepleader which = 50021 }
+		# Shigeru Honjo
+		command = { type = sleepleader which = 50358 }
+		# Kakuji Kakuta
+		command = { type = sleepleader which = 50234 }
+		# Chikahiko Koizumi
+		command = { type = sleepleader which = 50374 }
+		# Michitaro Komatsubara
+		command = { type = sleepleader which = 50101 }
+		# Chuichi Nagumo
+		command = { type = sleepleader which = 50255 }
+		# Kiyoshi Ogawa
+		command = { type = sleepleader which = 50396 }
+		# Takijiro Onishi
+		command = { type = sleepleader which = 50318 }
+		# Hajime Sugiyama
+		command = { type = sleepminister which = 50133 }
+		command = { type = sleepleader which = 50161 }
+		# Shizuichi Tanaka
+		command = { type = sleepleader which = 50173 }
+		# Takijiro Onishi
+		command = { type = sleepleader which = 50318 }
+		
+		# Delete all the remaining units
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+		
+		# Secede all the remaining lands
+		command = { type = secederegion which = SOV value = "Australia" when = 1 }
+		command = { type = secederegion which = SOV value = "New Guinea" when = 1 }
+		command = { type = secederegion which = SOV value = "Indonesia" when = 1 }
+		command = { type = secederegion which = SOV value = "Indochine" when = 1 }
+		command = { type = secederegion which = SOV value = "Asian Pacific" when = 1 }
+		command = { type = secederegion which = SOV value = "Philippines" when = 1 }
+		command = { type = secederegion which = SOV value = "India" when = 1 }
+		command = { type = secederegion which = SOV value = "Korea" when = 1 }
+		command = { type = secederegion which = SOV value = "China" when = 1 }
+		
+		command = { type = trigger which = 8321005 } # Soviet victory
+	}
+	# Chinese are victorious
+	action = {
+		name = EVT_8321002_C
+		trigger = {
+			OR = {
+				control = { province = 1552 data = CHI }
+				AND = {
+					nuked = { country = CHI country = JAP data = 1 }
+					NOT = { nuked = { country = SOV country = JAP data = 1 } }
+					NOT = { nuked = { country = USA country = JAP data = 1 } }
+				}
+				region = { region = "Japan" country = CHI value = 50 }
+				AND = {
+					war = { country = JAP country = CHI }
+					NOT = { war = { country = JAP country = SOV } }
+					NOT = { war = { country = JAP country = USA } }
+				}
+			}
+		}
+		# Cease-fire
+		command = { type = leave_alliance }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CHC value = 0 }
+		command = { type = peace which = SOV value = 0 }
+		command = { type = peace which = USA value = 0 }
+		command = { type = peace which = ENG value = 0 }
+		command = { type = peace which = FRA value = 0 }
+		command = { type = peace which = HOL value = 0 }
+		command = { type = peace which = AST value = 0 }
+		command = { type = peace which = NZL value = 0 }
+		command = { type = peace which = LEB value = 0 }
+		# Separate peace deals for 1944 scenario (contrib. by Yoshino)
+		command = { type = peace which = SYR value = 0 }
+		command = { type = peace which = OMN value = 0 }
+		command = { type = peace which = YEM value = 0 }
+		command = { type = peace which = U27 value = 0 } 
+		command = { type = peace which = POL value = 0 } 
+		command = { type = peace which = PHI value = 0 }
+		
+		# Generals commit suicide
+		# Anami Korechika
+		command = { type = sleepminister which = 50162 }
+		command = { type = sleepminister which = 50400 }
+		# Isamu Cho
+		command = { type = sleepleader which = 50021 }
+		# Shigeru Honjo
+		command = { type = sleepleader which = 50358 }
+		# Kakuji Kakuta
+		command = { type = sleepleader which = 50234 }
+		# Chikahiko Koizumi
+		command = { type = sleepleader which = 50374 }
+		# Michitaro Komatsubara
+		command = { type = sleepleader which = 50101 }
+		# Chuichi Nagumo
+		command = { type = sleepleader which = 50255 }
+		# Kiyoshi Ogawa
+		command = { type = sleepleader which = 50396 }
+		# Takijiro Onishi
+		command = { type = sleepleader which = 50318 }
+		# Hajime Sugiyama
+		command = { type = sleepminister which = 50133 }
+		command = { type = sleepleader which = 50161 }
+		# Shizuichi Tanaka
+		command = { type = sleepleader which = 50173 }
+		# Takijiro Onishi
+		command = { type = sleepleader which = 50318 }
+		
+		# Delete all the remaining units
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+		
+		# Secede all the remaining lands
+		command = { type = secederegion which = CHI value = "Australia" when = 1 }
+		command = { type = secederegion which = CHI value = "New Guinea" when = 1 }
+		command = { type = secederegion which = CHI value = "Indonesia" when = 1 }
+		command = { type = secederegion which = CHI value = "Indochine" when = 1 }
+		command = { type = secederegion which = CHI value = "Asian Pacific" when = 1 }
+		command = { type = secederegion which = CHI value = "Philippines" when = 1 }
+		command = { type = secederegion which = CHI value = "India" when = 1 }
+		command = { type = secederegion which = CHI value = "Korea" when = 1 }
+		command = { type = secederegion which = CHI value = "China" when = 1 }
+		
+		command = { type = trigger which = 8321006 } # Chinese victory
+	}	
+}
+
+event = {
+	id = 8321004
+	country = USA
+	
+	name = EVT_8321004_NAME
+	desc = EVT_8321004_DESC
+	picture = nwo\surrender_japanese_representatives
+	style = 1
+
+	action = {
+		name = EVT_8321004_A
+	
+		command = { type = make_puppet which = JAP }
+		command = { type = non_aggression which = USA where = JAP }
+		command = { type = non_aggression which = SOV where = JAP }
+		command = { type = non_aggression which = ENG where = JAP }
+		command = { type = non_aggression which = CHI where = JAP }
+		command = { type = non_aggression which = CHC where = JAP }
+		command = { type = guarantee which = USA where = JAP }
+	}	
+}
+
+event = {
+	id = 8321005
+	country = SOV
+	
+	name = EVT_8321005_NAME
+	desc = EVT_8321005_DESC
+	picture = nwo\surrender_japanese_representatives
+	style = 1
+
+	action = {
+		name = EVT_8321005_A
+	
+		command = { type = make_puppet which = JAP }
+		command = { type = non_aggression which = USA where = JAP }
+		command = { type = non_aggression which = SOV where = JAP }
+		command = { type = non_aggression which = ENG where = JAP }
+		command = { type = non_aggression which = CHI where = JAP }
+		command = { type = non_aggression which = CHC where = JAP }
+		command = { type = guarantee which = SOV where = JAP }
+	}	
+}
+
+event = {
+	id = 8321006
+	country = CHI
+	
+	name = EVT_8321006_NAME
+	desc = EVT_8321006_DESC
+	picture = nwo\surrender_japanese_representatives
+	style = 1
+
+	action = {
+		name = EVT_8321006_A
+	
+		command = { type = make_puppet which = JAP }
+		command = { type = non_aggression which = USA where = JAP }
+		command = { type = non_aggression which = SOV where = JAP }
+		command = { type = non_aggression which = ENG where = JAP }
+		command = { type = non_aggression which = CHI where = JAP }
+		command = { type = non_aggression which = CHC where = JAP }
+		command = { type = guarantee which = CHI where = JAP }
+	}	
+}
+
+### PHASE THREE: LAND CESSIONS AND GOVERNMENTAL CHANGES
+
+event = {
+	id = 8322000
+	country = JAP
+	save_date = yes
+
+	name = EVT_8322000_NAME
+	desc = EVT_8322000_DESC
+	picture = nwo\japanese_surrender
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8321000 days = 7 }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8322000_A
+		# United States gains
+		command = { type = secederegion which = USA value = "Asian Pacific" when = 1 }
+		command = { type = secederegion which = USA value = "American Pacific" when = 1 }
+		command = { type = secedearea which = USA value = "Central Solomons" when = 1 }
+		command = { trigger = { event = 8321002 } type = secedearea which = USA value = "Ryukyusland" when = 1 }
+				
+		# Soviet Union gains
+		command = { type = secedeprovince which = SOV value = 1541 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1542 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1543 when = 1 }
+		command = { trigger = { event = 8321003 } type = secedearea which = SOV value = "Hokkaido" when = 1 }
+		
+		# Chinese gains
+		command = { type = secedearea which = CHI value = "Taiwan" when = 1 }
+		command = { trigger = { event = 8321004 } type = secedearea which = CHI value = "Ryukyusland" when = 1 }
+		
+		### Remove cores
+		# Japanese islands in the Pacific
+		command = { type = removecore which = 1672 }
+		command = { type = removecore which = 1661 }
+		command = { type = removecore which = 1663 }
+		command = { type = removecore which = 1664 }
+		command = { type = removecore which = 1662 }
+		# Ryukyus - not if Soviets are victorious
+		command = { trigger = { NOT = { event = 8321003 } } type = removecore which = 1564 }
+		command = { trigger = { NOT = { event = 8321003 } } type = removecore which = 1563 }
+		command = { trigger = { NOT = { event = 8321003 } } type = removecore which = 1562 }
+		# Taiwan
+		command = { type = removecore which = 1364 }
+		command = { type = removecore which = 1361 }
+		command = { type = removecore which = 1362 }
+		command = { type = removecore which = 1363 }
+		# Korea
+		command = { type = removecore which = 1221 }
+		command = { type = removecore which = 1222 }
+		command = { type = removecore which = 1223 }
+		command = { type = removecore which = 1224 }
+		command = { type = removecore which = 1225 }
+		command = { type = removecore which = 1226 }
+		command = { type = removecore which = 1227 }
+		command = { type = removecore which = 1228 }
+		command = { type = removecore which = 1229 }
+		command = { type = removecore which = 1230 }
+		command = { type = removecore which = 1231 }
+		command = { type = removecore which = 1232 }
+		command = { type = removecore which = 1233 }
+		# Further north
+		command = { type = removecore which = 1541 }
+		command = { type = removecore which = 1542 }
+		command = { type = removecore which = 1543 }
+		
+		### Remove claims
+		command = { type = removeclaim which = 1665 }
+		command = { type = removeclaim which = 1666 }
+		command = { type = removeclaim which = 1667 }
+		command = { type = removeclaim which = 1668 }
+		command = { type = removeclaim which = 1669 }
+		command = { type = removeclaim which = 1670 }
+		command = { type = removeclaim which = 1671 }
+		command = { type = removeclaim which = 1672 }
+		command = { type = removeclaim which = 1674 }
+		command = { type = removeclaim which = 1675 }
+		command = { type = removeclaim which = 1676 }
+		command = { type = removeclaim which = 1677 }
+		command = { type = removeclaim which = 1681 }
+		command = { type = removeclaim which = 1684 }
+		command = { type = removeclaim which = 1685 }
+		command = { type = removeclaim which = 1686 }
+		command = { type = removeclaim which = 1219 }
+		command = { type = removeclaim which = 1245 }
+		command = { type = removeclaim which = 1683 }
+		command = { type = removeclaim which = 1639 }
+		command = { type = removeclaim which = 1642 }
+		command = { type = removeclaim which = 1640 }
+		command = { type = removeclaim which = 1635 }
+		command = { type = removeclaim which = 1634 }
+		command = { type = removeclaim which = 1637 }
+		command = { type = removeclaim which = 1636 }
+		command = { type = removeclaim which = 1641 }
+		command = { type = removeclaim which = 1638 }
+		command = { type = removeclaim which = 1647 }
+		command = { type = removeclaim which = 1648 }
+		command = { type = removeclaim which = 1646 }
+		command = { type = removeclaim which = 1651 }
+		command = { type = removeclaim which = 1650 }
+		command = { type = removeclaim which = 1649 }
+		command = { type = removeclaim which = 1654 }
+		command = { type = removeclaim which = 1653 }
+		command = { type = removeclaim which = 1652 }
+		command = { type = removeclaim which = 1655 }
+		command = { type = removeclaim which = 1656 }
+		command = { type = removeclaim which = 1643 }
+		command = { type = removeclaim which = 1645 }
+		command = { type = removeclaim which = 1615 }
+		command = { type = removeclaim which = 1616 }
+		command = { type = removeclaim which = 1619 }
+		command = { type = removeclaim which = 1644 }
+		command = { type = removeclaim which = 1657 }
+		command = { type = removeclaim which = 1658 }
+		command = { type = removeclaim which = 1660 }
+		command = { type = removeclaim which = 1659 }
+		command = { type = removeclaim which = 1620 }
+		command = { type = removeclaim which = 1621 }
+		command = { type = removeclaim which = 1622 }
+		command = { type = removeclaim which = 1371 }
+		command = { type = removeclaim which = 1639 }
+		command = { type = removeclaim which = 1642 }
+		command = { type = removeclaim which = 1640 }
+		command = { type = removeclaim which = 1635 }
+		command = { type = removeclaim which = 1634 }
+		command = { type = removeclaim which = 1637 }
+		command = { type = removeclaim which = 1636 }
+		command = { type = removeclaim which = 1641 }
+		command = { type = removeclaim which = 1638 }
+		command = { type = removeclaim which = 1647 }
+		command = { type = removeclaim which = 1648 }
+		command = { type = removeclaim which = 1646 }
+		command = { type = removeclaim which = 1651 }
+		command = { type = removeclaim which = 1650 }
+		command = { type = removeclaim which = 1649 }
+		command = { type = removeclaim which = 1654 }
+		command = { type = removeclaim which = 1653 }
+		command = { type = removeclaim which = 1652 }
+		command = { type = removeclaim which = 1655 }
+		command = { type = removeclaim which = 1656 }
+		command = { type = removeclaim which = 1643 }
+		command = { type = removeclaim which = 1645 }
+		command = { type = removeclaim which = 1615 }
+		command = { type = removeclaim which = 1616 }
+		command = { type = removeclaim which = 1619 }
+		command = { type = removeclaim which = 1644 }
+		command = { type = removeclaim which = 1657 }
+		command = { type = removeclaim which = 1658 }
+		command = { type = removeclaim which = 1660 }
+		command = { type = removeclaim which = 1659 }
+		command = { type = removeclaim which = 1620 }
+		command = { type = removeclaim which = 1621 }
+		command = { type = removeclaim which = 1622 }
+		command = { type = removeclaim which = 1599 }
+		command = { type = removeclaim which = 1600 }
+		command = { type = removeclaim which = 1595 }
+		command = { type = removeclaim which = 1601 }
+		command = { type = removeclaim which = 1618 }
+		command = { type = removeclaim which = 1598 }
+		command = { type = removeclaim which = 1597 }
+		command = { type = removeclaim which = 1596 }
+		command = { type = removeclaim which = 1594 }
+		command = { type = removeclaim which = 1633 }
+		command = { type = removeclaim which = 1631 }
+		command = { type = removeclaim which = 1628 }
+		command = { type = removeclaim which = 1623 }
+		command = { type = removeclaim which = 1627 }
+		command = { type = removeclaim which = 1632 }
+		command = { type = removeclaim which = 1629 }
+		command = { type = removeclaim which = 1630 }
+		command = { type = removeclaim which = 1617 }
+		command = { type = removeclaim which = 1602 }
+		command = { type = removeclaim which = 1603 }
+		command = { type = removeclaim which = 1604 }
+		command = { type = removeclaim which = 1605 }
+		command = { type = removeclaim which = 1606 }
+		command = { type = removeclaim which = 1607 }
+		command = { type = removeclaim which = 1608 }
+		command = { type = removeclaim which = 1609 }
+		command = { type = removeclaim which = 1610 }
+		command = { type = removeclaim which = 1234 }
+		command = { type = removeclaim which = 1572 }
+		command = { type = removeclaim which = 1571 }
+		command = { type = removeclaim which = 1565 }
+		command = { type = removeclaim which = 1569 }
+		command = { type = removeclaim which = 1566 }
+		command = { type = removeclaim which = 1567 }
+		command = { type = removeclaim which = 1570 }
+		command = { type = removeclaim which = 1568 }
+		command = { type = removeclaim which = 1577 }
+		command = { type = removeclaim which = 1575 }
+		command = { type = removeclaim which = 1573 }
+		command = { type = removeclaim which = 1576 }
+		command = { type = removeclaim which = 1574 }
+		command = { type = removeclaim which = 1580 }
+		command = { type = removeclaim which = 1578 }
+		command = { type = removeclaim which = 1579 }
+		command = { type = removeclaim which = 1414 }
+		command = { type = removeclaim which = 1411 }
+		command = { type = removeclaim which = 1406 }
+		command = { type = removeclaim which = 1407 }
+		command = { type = removeclaim which = 1408 }
+		command = { type = removeclaim which = 1409 }
+		command = { type = removeclaim which = 1420 }
+		command = { type = removeclaim which = 1419 }
+		command = { type = removeclaim which = 1415 }
+		command = { type = removeclaim which = 1410 }
+		command = { type = removeclaim which = 1417 }
+		command = { type = removeclaim which = 1416 }
+		command = { type = removeclaim which = 1412 }
+		command = { type = removeclaim which = 1418 }
+		command = { type = removeclaim which = 1421 }
+		command = { type = removeclaim which = 1432 }
+		command = { type = removeclaim which = 1435 }
+		command = { type = removeclaim which = 1436 }
+		command = { type = removeclaim which = 1437 }
+		command = { type = removeclaim which = 1438 }
+		command = { type = removeclaim which = 1624 }
+		command = { type = removeclaim which = 1625 }
+		command = { type = removeclaim which = 1626 }
+	}	
+}
+
+# The occupying powers liberate nations
+event = {
+	id = 8322001
+	country = USA
+
+	name = EVT_8322001_NAME
+	desc = EVT_8322001_DESC
+	picture = nwo\liberation_of_asia
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8321000 days = 3 }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8322001_A
+		command = { trigger = { region = { region = "China" value = 15 } NOT = { exists = CHI } } type = independence which = CHI value = 1 }
+		command = { trigger = { control = { province = 1423 data = -1 } NOT = { exists = SIA } } type = independence which = SIA value = 1 }
+		command = { trigger = { region = { region = "Indonesia" value = 15 } NOT = { exists = U05 } } type = independence which = U05 value = 1 }
+		command = { trigger = { region = { region = "Australia" value = 20 } NOT = { exists = AST } } type = independence which = AST value = 1 }
+		command = { trigger = { region = { region = "India" value = 40 } NOT = { exists = U02 } } type = independence which = U02 value = 1 }
+		command = { trigger = { region = { region = "Philippines" value = 50 } NOT = { exists = PHI } } type = independence which = PHI value = 1 }
+	}	
+}
+
+event = {
+	id = 8322002
+	country = SOV
+
+	name = EVT_8322002_NAME
+	desc = EVT_8322002_DESC
+	picture = nwo\liberation_of_asia
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8321000 days = 3 }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8322002_A
+		command = { trigger = { region = { region = "China" value = 15 } NOT = { exists = CHC } } type = independence which = CHC value = 1 }
+		command = { trigger = { OR = { control = { province = 1395 data = -1 } control = { province = 1399 data = -1 } } NOT = { exists = U72 } } type = independence which = U72 value = 1 }
+		command = { trigger = { control = { province = 1405 data = -1 } NOT = { exists = LAO } } type = independence which = LAO value = 1 }
+		command = { trigger = { control = { province = 1400 data = -1 } NOT = { exists = CMB } } type = independence which = CMB value = 1 }
+		command = { trigger = { area = { area = "Siam" value = 30 } NOT = { exists = SIA } } type = independence which = SIA value = 1 }
+		command = { trigger = { control = { province = 1624 data = -1 } NOT = { exists = SAR } } type = independence which = SAR value = 1 }
+		command = { trigger = { control = { province = 1625 data = -1 } NOT = { exists = BRU } } type = independence which = BRU value = 1 }
+		command = { trigger = { control = { province = 1432 data = -1 } NOT = { exists = U75 } } type = independence which = U75 value = 1 }
+		command = { trigger = { area = { area = "Malacka" value = 20 } NOT = { exists = MLY } } type = independence which = MLY value = 1 }		
+		command = { trigger = { region = { region = "Indonesia" value = 15 } NOT = { exists = INO } } type = independence which = INO value = 1 }
+		command = { trigger = { region = { region = "Australia" value = 20 } NOT = { exists = AST } } type = independence which = AST value = 1 }
+		command = { trigger = { region = { region = "India" value = 40 } NOT = { exists = IND } } type = independence which = IND value = 1 }
+		command = { trigger = { area = { area = "Ceylon" value = 100 } NOT = { exists = U83 } } type = independence which = U83 value = 1 }
+		command = { trigger = { AND = { area = { area = "Burma" value = 50 } area = { area = "North Burma" value = 50 } } NOT = { exists = BUR } } type = independence which = BUR value = 1 }
+		command = { trigger = { OR = { area = { area = "Bengal" value = 50 } area = { area = "Pakistan" value = 50 } } NOT = { exists = PAK } } type = independence which = PAK value = 1 }
+		command = { trigger = { region = { region = "Philippines" value = 50 } NOT = { exists = PHI } } type = independence which = PHI value = 1 }
+	}	
+}
+
+event = {
+	id = 8322003
+	country = CHI
+
+	name = EVT_8322003_NAME
+	desc = EVT_8322003_DESC
+	picture = nwo\liberation_of_asia
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8321000 days = 3 }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8322003_A
+		command = { trigger = { OR = { control = { province = 1395 data = -1 } control = { province = 1399 data = -1 } } NOT = { exists = VIE } } type = independence which = VIE value = 1 }
+		command = { trigger = { control = { province = 1405 data = -1 } NOT = { exists = LAO } } type = independence which = LAO value = 1 }
+		command = { trigger = { control = { province = 1400 data = -1 } NOT = { exists = CMB } } type = independence which = CMB value = 1 }
+		command = { trigger = { area = { area = "Siam" value = 30 } NOT = { exists = SIA } } type = independence which = SIA value = 1 }
+		command = { trigger = { control = { province = 1624 data = -1 } NOT = { exists = SAR } } type = independence which = SAR value = 1 }
+		command = { trigger = { control = { province = 1625 data = -1 } NOT = { exists = BRU } } type = independence which = BRU value = 1 }
+		command = { trigger = { control = { province = 1432 data = -1 } NOT = { exists = U75 } } type = independence which = U75 value = 1 }
+		command = { trigger = { area = { area = "Malacka" value = 20 } NOT = { exists = MLY } } type = independence which = MLY value = 1 }				
+		command = { trigger = { region = { region = "Indonesia" value = 15 } NOT = { exists = INO } } type = independence which = INO value = 1 }
+		command = { trigger = { region = { region = "Australia" value = 20 } NOT = { exists = AST } } type = independence which = AST value = 1 }
+		command = { trigger = { region = { region = "India" value = 40 } NOT = { exists = IND } } type = independence which = IND value = 1 }
+		command = { trigger = { area = { area = "Ceylon" value = 100 } NOT = { exists = U83 } } type = independence which = U83 value = 1 }
+		command = { trigger = { AND = { area = { area = "Burma" value = 50 } area = { area = "North Burma" value = 50 } } NOT = { exists = BUR } } type = independence which = BUR value = 1 }
+		command = { trigger = { OR = { area = { area = "Bengal" value = 50 } area = { area = "Pakistan" value = 50 } } NOT = { exists = PAK } } type = independence which = PAK value = 1 }
+		command = { trigger = { region = { region = "Philippines" value = 50 } NOT = { exists = PHI } } type = independence which = PHI value = 1 }
+	}	
+}
+
+### Head of State is decided
+
+event = {
+	id = 8322004
+	country = USA
+
+	name = EVT_8322004_NAME
+	desc = EVT_8322004_DESC
+	picture = nwo\macarthur_with_hirohito
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = 8321004
+		event = { id = 8322000 days = 3 }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8322004_A
+		ai_chance = 80
+		command = { type = relation which = JAP value = 100 }
+	}	
+	
+	action = {
+		name = EVT_8322004_B
+		ai_chance = 20
+		command = { type = relation which = JAP value = -200 }
+		command = { type = trigger which = 8322007 }
+	}	
+}
+
+event = {
+	id = 8322005
+	country = SOV
+
+	name = EVT_8322005_NAME
+	desc = EVT_8322005_DESC
+	picture = nwo\macarthur_with_hirohito
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = 8321005
+		event = { id = 8322000 days = 3 }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8322005_A
+		ai_chance = 80
+		command = { type = relation which = JAP value = -200 }
+		command = { type = trigger which = 8322008 }
+	}	
+	
+	action = {
+		name = EVT_8322005_B
+		ai_chance = 20
+		command = { type = relation which = JAP value = 100 }
+	}	
+}
+
+event = {
+	id = 8322006
+	country = CHI
+
+	name = EVT_8322006_NAME
+	desc = EVT_8322006_DESC
+	picture = nwo\macarthur_with_hirohito
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = 8321006
+		event = { id = 8322000 days = 3 }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8322006_A
+		ai_chance = 60
+		command = { type = relation which = JAP value = -50 }
+		command = { type = trigger which = 8322009 }
+	}	
+	
+	action = {
+		name = EVT_8322006_B
+		ai_chance = 40
+		command = { type = relation which = JAP value = 100 }
+	}	
+}
+
+### Japan sets its Head of State
+
+# President Kijuro Shidehara
+event = {
+	id = 8322007
+	country = JAP
+
+	name = EVT_8322007_NAME
+	desc = EVT_8322007_DESC
+	picture = nwo\kijuro_shidehara
+	style = 1
+
+	action = {
+		name = EVT_8322007_A
+		command = { type = dissent value = 15 }
+		command = { type = headofstate which = 50402 }
+	}	
+}
+
+#  General Secretary Nosaka Sanzo
+event = {
+	id = 8322008
+	country = JAP
+
+	name = EVT_8322008_NAME
+	desc = EVT_8322008_DESC
+	picture = nwo\sanzo_nosaka
+	style = 1
+	
+	action = {
+		name = EVT_8322008_A
+		command = { type = dissent value = 25 }
+		command = { type = headofstate which = 50012 }
+	}	
+}
+
+# Prince Takamatsu
+event = {
+	id = 8322009
+	country = JAP
+
+	name = EVT_8322009_NAME
+	desc = EVT_8322009_DESC
+	picture = nwo\prince_takamatsu
+	style = 1
+	
+	action = {
+		name = EVT_8322009_A
+		command = { type = dissent value = 5 }
+		command = { type = headofstate which = 50403 }
+	}	
+}
+
+# PHASE FOUR: RESETTING BORDERS
+
+event = {
+	id = 8323000
+	country = REB
+	save_date = yes
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8322000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = { type = trigger which = 8323001 }
+		command = { type = trigger which = 8323002 }
+		command = { type = trigger which = 8323003 }
+	}
+}
+
+event = {
+	id = 8323001
+	country = USA
+	
+	name = EVT_8323001_NAME
+	desc = EVT_8323001_DESC
+	picture = nwo\map_of_asia
+	style = 1
+	
+	action = {
+		name = EVT_8323001_A
+		command = { type = secedearea which = U02 value = "Pakistan" when = 1 }
+		command = { type = secedearea which = PAK value = "Pakistan" when = 1 }
+		command = { type = secedearea which = IND value = "Pakistan" when = 1 }
+		command = { type = secedearea which = ENG value = "Pakistan" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Rajastan" when = 1 }
+		command = { type = secedearea which = IND value = "Rajastan" when = 1 }
+		command = { type = secedearea which = ENG value = "Rajastan" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Eastern Ghat" when = 1 }
+		command = { type = secedearea which = IND value = "Eastern Ghat" when = 1 }
+		command = { type = secedearea which = ENG value = "Eastern Ghat" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Delhi" when = 1 }
+		command = { type = secedearea which = IND value = "Delhi" when = 1 }
+		command = { type = secedearea which = ENG value = "Delhi" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Himalayas" when = 1 }
+		command = { type = secedearea which = IND value = "Himalayas" when = 1 }
+		command = { type = secedearea which = ENG value = "Himalayas" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Nagpur" when = 1 }
+		command = { type = secedearea which = IND value = "Nagpur" when = 1 }
+		command = { type = secedearea which = ENG value = "Nagpur" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Orissa" when = 1 }
+		command = { type = secedearea which = IND value = "Orissa" when = 1 }
+		command = { type = secedearea which = ENG value = "Orissa" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Deccar" when = 1 }
+		command = { type = secedearea which = IND value = "Deccar" when = 1 }
+		command = { type = secedearea which = ENG value = "Deccar" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Bombay" when = 1 }
+		command = { type = secedearea which = IND value = "Bombay" when = 1 }
+		command = { type = secedearea which = ENG value = "Bombay" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Western Ghat" when = 1 }
+		command = { type = secedearea which = IND value = "Western Ghat" when = 1 }
+		command = { type = secedearea which = ENG value = "Western Ghat" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "East Bengal" when = 1 }
+		command = { type = secedearea which = IND value = "East Bengal" when = 1 }
+		command = { type = secedearea which = ENG value = "East Bengal" when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1446 when = 1 }
+		command = { type = secedeprovince which = IND value = 1446 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1446 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1447 when = 1 }
+		command = { type = secedeprovince which = IND value = 1447 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1447 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1448 when = 1 }
+		command = { type = secedeprovince which = IND value = 1448 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1448 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1444 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1444 when = 1 }
+		command = { type = secedeprovince which = IND value = 1444 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1444 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1445 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1445 when = 1 }
+		command = { type = secedeprovince which = IND value = 1445 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1445 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1449 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1449 when = 1 }
+		command = { type = secedeprovince which = IND value = 1449 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1449 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1450 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1450 when = 1 }
+		command = { type = secedeprovince which = IND value = 1450 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1450 when = 1 }
+		
+		command = { type = secedearea which = U83 value = "Ceylon" when = 1 }
+		command = { type = secedearea which = U02 value = "Ceylon" when = 1 }
+		command = { type = secedearea which = IND value = "Ceylon" when = 1 }
+		command = { type = secedearea which = ENG value = "Ceylon" when = 1 }
+		
+		command = { type = secederegion which = CHI value = "China" when = 1 }
+		command = { type = secederegion which = CHC value = "China" when = 1 }
+		
+		command = { type = secedearea which = ENG value = "North Burma" when = 1 }	
+		
+		command = { type = secedearea which = ENG value = "Burma" when = 1 }
+		
+		# Thailand
+		command = { type = secedearea which = SIA value = "Siam" when = 1 }
+		
+		command = { type = secedearea which = SIA value = "Kra Peninsula" when = 1 }
+		
+		command = { type = secedeprovince which = SIA value = 1433 when = 1 }
+		
+		command = { type = secedeprovince which = SIA value = 1434 when = 1 }
+		
+		# Cambodia
+		command = { type = secedeprovince which = CMB value = 1398 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1398 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1398 when = 1 }
+		
+		command = { type = secedeprovince which = CMB value = 1400 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1400 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1400 when = 1 }
+		
+		command = { type = secedeprovince which = CMB value = 1401 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1401 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1401 when = 1 }
+		
+		command = { type = secedeprovince which = CMB value = 1402 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1402 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1402 when = 1 }
+		
+		# Laos
+		command = { type = secedeprovince which = LAO value = 1391 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1391 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1391 when = 1 }
+		
+		command = { type = secedeprovince which = LAO value = 1394 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1394 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1394 when = 1 }
+		
+		command = { type = secedeprovince which = LAO value = 1404 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1404 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1404 when = 1 }
+		
+		command = { type = secedeprovince which = LAO value = 1405 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1405 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1405 when = 1 }
+		
+		# Vietnam
+		command = { type = secedeprovince which = VIE value = 1392 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1392 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1392 when = 1 }
+		
+		command = { type = secedeprovince which = VIE value = 1393 when = 1 }		
+		command = { type = secedeprovince which = U01 value = 1393 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1393 when = 1 }
+		
+		command = { type = secedeprovince which = VIE value = 1395 when = 1 }		
+		command = { type = secedeprovince which = U01 value = 1395 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1395 when = 1 }
+		
+		command = { type = secedeprovince which = VIE value = 1396 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1396 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1396 when = 1 }
+		
+		command = { type = secedeprovince which = VIE value = 1397 when = 1 }
+		command = { type = secedeprovince which = U01 value = 1397 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1397 when = 1 }
+		
+		command = { type = secedeprovince which = VIE value = 1399 when = 1 }		
+		command = { type = secedeprovince which = U01 value = 1399 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1399 when = 1 }
+		
+		command = { type = secedeprovince which = VIE value = 1403 when = 1 }		
+		command = { type = secedeprovince which = U01 value = 1403 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1403 when = 1 }
+		
+		# Malaya
+		command = { type = secedeprovince which = MLY value = 1435 when = 1 }                                  
+		command = { type = secedeprovince which = MLY value = 1436 when = 1 }                                              
+		command = { type = secedeprovince which = MLY value = 1437 when = 1 }                                              
+		command = { type = secedeprovince which = MLY value = 1438 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1435 when = 1 }                                  
+		command = { type = secedeprovince which = ENG value = 1436 when = 1 }                                              
+		command = { type = secedeprovince which = ENG value = 1437 when = 1 }                                              
+		command = { type = secedeprovince which = ENG value = 1438 when = 1 }
+		
+		# Singapore
+		command = { type = secedeprovince which = ENG value = 1635 when = 1 }
+
+		# Indonesia
+		command = { type = secedearea which = U05 value = "Sumatra" when = 1 }
+		command = { type = secedearea which = HOL value = "Sumatra" when = 1 }
+		command = { type = secedearea which = INO value = "Sumatra" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "West Java" when = 1 }
+		command = { type = secedearea which = HOL value = "West Java" when = 1 }
+		command = { type = secedearea which = INO value = "West Java" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "East Java" when = 1 }
+		command = { type = secedearea which = HOL value = "East Java" when = 1 }
+		command = { type = secedearea which = INO value = "East Java" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Celebes" when = 1 }
+		command = { type = secedearea which = HOL value = "Celebes" when = 1 }
+		command = { type = secedearea which = INO value = "Celebes" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Molucks" when = 1 }
+		command = { type = secedearea which = HOL value = "Molucks" when = 1 }
+		command = { type = secedearea which = INO value = "Molucks" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = HOL value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = INO value = "Sunda Islands" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = HOL value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = INO value = "Flores_Timor" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "South Borneo" when = 1 }
+		command = { type = secedearea which = HOL value = "South Borneo" when = 1 }
+		command = { type = secedearea which = INO value = "South Borneo" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Babo" when = 1 }
+		command = { type = secedearea which = HOL value = "Babo" when = 1 }
+		command = { type = secedearea which = INO value = "Babo" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Sarmi" when = 1 }
+		command = { type = secedearea which = HOL value = "Sarmi" when = 1 }
+		command = { type = secedearea which = INO value = "Sarmi" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Agats" when = 1 }
+		command = { type = secedearea which = HOL value = "Agats" when = 1 }
+		command = { type = secedearea which = INO value = "Agats" when = 1 }
+		
+		command = { type = secedeprovince which = U05 value = 1623 when = 1 }
+		command = { type = secedeprovince which = HOL value = 1623 when = 1 }
+		command = { type = secedeprovince which = INO value = 1623 when = 1 }
+		
+		command = { type = secedeprovince which = U05 value = 1627 when = 1 }
+		command = { type = secedeprovince which = HOL value = 1627 when = 1 }
+		command = { type = secedeprovince which = INO value = 1627 when = 1 }
+		
+		command = { type = secedeprovince which = U05 value = 1628 when = 1 }
+		command = { type = secedeprovince which = HOL value = 1628 when = 1 }
+		command = { type = secedeprovince which = INO value = 1628 when = 1 }
+		
+		# Sarawak
+		command = { type = secedeprovince which = ENG value = 1624 when = 1 }
+		command = { type = secedeprovince which = SAR value = 1624 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1626 when = 1 }
+		command = { type = secedeprovince which = SAR value = 1626 when = 1 }
+		
+		# Brunei
+		command = { type = secedeprovince which = ENG value = 1625 when = 1 }
+		
+		# The Philippines
+		command = { type = secederegion which = PHI value = "Philippines" when = 1 }
+	}                                             
+}       
+
+event = {
+	id = 8323002
+	country = SOV
+	
+	name = EVT_8323002_NAME
+	desc = EVT_8323002_DESC
+	picture = nwo\map_of_asia
+	style = 1
+	
+	action = {
+		name = EVT_8323002_A
+		command = { type = secedearea which = PAK value = "Pakistan" when = 1 }
+		command = { type = secedearea which = IND value = "Pakistan" when = 1 }
+		
+		command = { type = secedearea which = IND value = "Rajastan" when = 1 }	
+		command = { type = secedearea which = IND value = "Eastern Ghat" when = 1 }	
+		command = { type = secedearea which = IND value = "Delhi" when = 1 }	
+		command = { type = secedearea which = IND value = "Himalayas" when = 1 }	
+		command = { type = secedearea which = IND value = "Nagpur" when = 1 }
+		command = { type = secedearea which = IND value = "Orissa" when = 1 }		
+		command = { type = secedearea which = IND value = "Deccar" when = 1 }		
+		command = { type = secedearea which = IND value = "Bombay" when = 1 }
+		command = { type = secedearea which = IND value = "Western Ghat" when = 1 }
+		command = { type = secedearea which = IND value = "East Bengal" when = 1 }
+		command = { type = secedeprovince which = IND value = 1446 when = 1 }
+		command = { type = secedeprovince which = IND value = 1447 when = 1 }	
+		command = { type = secedeprovince which = IND value = 1448 when = 1 }
+		
+		command = { type = secedeprovince which = PAK value = 1444 when = 1 }
+		command = { type = secedeprovince which = IND value = 1444 when = 1 }
+		
+		command = { type = secedeprovince which = PAK value = 1445 when = 1 }
+		command = { type = secedeprovince which = IND value = 1445 when = 1 }
+		
+		command = { type = secedeprovince which = PAK value = 1449 when = 1 }
+		command = { type = secedeprovince which = IND value = 1449 when = 1 }
+		
+		command = { type = secedeprovince which = PAK value = 1450 when = 1 }
+		command = { type = secedeprovince which = IND value = 1450 when = 1 }
+		
+		command = { type = secedearea which = U83 value = "Ceylon" when = 1 }
+		command = { type = secedearea which = IND value = "Ceylon" when = 1 }
+		
+		command = { type = secederegion which = CHC value = "China" when = 1 }
+		command = { type = secederegion which = CHI value = "China" when = 1 }
+		
+		command = { type = secedearea which = BUR value = "North Burma" when = 1 }	
+		command = { type = secedearea which = BUR value = "Burma" when = 1 }
+		
+		# Thailand
+		command = { type = secedearea which = SIA value = "Siam" when = 1 }
+		command = { type = secedearea which = SIA value = "Kra Peninsula" when = 1 }
+		command = { type = secedeprovince which = SIA value = 1433 when = 1 }
+		command = { type = secedeprovince which = SIA value = 1434 when = 1 }
+		
+		# Cambodia
+		command = { type = secedeprovince which = CMB value = 1398 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1398 when = 1 }
+		                                          
+		command = { type = secedeprovince which = CMB value = 1400 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1400 when = 1 }
+		                                          
+		command = { type = secedeprovince which = CMB value = 1401 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1401 when = 1 }
+		                                          
+		command = { type = secedeprovince which = CMB value = 1402 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1402 when = 1 }
+		
+		# Laos
+		command = { type = secedeprovince which = LAO value = 1391 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1391 when = 1 }
+		                                          
+		command = { type = secedeprovince which = LAO value = 1394 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1394 when = 1 }
+		                                          
+		command = { type = secedeprovince which = LAO value = 1404 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1404 when = 1 }
+		                                          
+		command = { type = secedeprovince which = LAO value = 1405 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1405 when = 1 }
+		
+		# Vietnam
+		command = { type = secedeprovince which = U72 value = 1392 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1392 when = 1 }
+		                                                   
+		command = { type = secedeprovince which = U72 value = 1393 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1393 when = 1 }
+		                                                   
+		command = { type = secedeprovince which = U72 value = 1395 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1395 when = 1 }
+		                                                   
+		command = { type = secedeprovince which = U72 value = 1396 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1396 when = 1 }
+		
+		command = { type = secedeprovince which = U72 value = 1397 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1397 when = 1 }
+		                                          
+		command = { type = secedeprovince which = U72 value = 1399 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1399 when = 1 }
+		                                          
+		command = { type = secedeprovince which = U72 value = 1403 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1403 when = 1 }
+		
+		# Malaya
+		command = { type = secedeprovince which = MLY value = 1435 when = 1 }                                  
+		command = { type = secedeprovince which = MLY value = 1436 when = 1 }                                              
+		command = { type = secedeprovince which = MLY value = 1437 when = 1 }                                              
+		command = { type = secedeprovince which = MLY value = 1438 when = 1 }
+		
+		# Singapore
+		command = { type = secedeprovince which = U75 value = 1635 when = 1 }
+
+		# Indonesia
+		command = { type = secedearea which = INO value = "Sumatra" when = 1 }	
+		command = { type = secedearea which = INO value = "West Java" when = 1 }	
+		command = { type = secedearea which = INO value = "East Java" when = 1 }
+		command = { type = secedearea which = INO value = "Celebes" when = 1 }
+		command = { type = secedearea which = INO value = "Molucks" when = 1 }
+		command = { type = secedearea which = INO value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = INO value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = INO value = "South Borneo" when = 1 }
+		command = { type = secedearea which = INO value = "Babo" when = 1 }
+		command = { type = secedearea which = INO value = "Sarmi" when = 1 }
+		command = { type = secedearea which = INO value = "Agats" when = 1 }
+		command = { type = secedeprovince which = INO value = 1623 when = 1 }
+		command = { type = secedeprovince which = INO value = 1627 when = 1 }
+		command = { type = secedeprovince which = INO value = 1628 when = 1 }
+		
+		# Sarawak
+		command = { type = secedeprovince which = SAR value = 1624 when = 1 }
+		command = { type = secedeprovince which = SAR value = 1626 when = 1 }
+		
+		# Brunei
+		command = { type = secedeprovince which = BRU value = 1625 when = 1 }
+		
+		# The Philippines
+		command = { type = secederegion which = PHI value = "Philippines" when = 1 }
+	}                                             
+}                                              
+                         
+event = {
+	id = 8323003
+	country = CHI
+	
+	name = EVT_8323003_NAME
+	desc = EVT_8323003_DESC
+	picture = nwo\map_of_asia
+	style = 1
+	
+	action = {
+		name = EVT_8323003_A
+		command = { type = secedearea which = U02 value = "Pakistan" when = 1 }
+		command = { type = secedearea which = PAK value = "Pakistan" when = 1 }
+		command = { type = secedearea which = IND value = "Pakistan" when = 1 }
+		command = { type = secedearea which = ENG value = "Pakistan" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Rajastan" when = 1 }
+		command = { type = secedearea which = IND value = "Rajastan" when = 1 }
+		command = { type = secedearea which = ENG value = "Rajastan" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Eastern Ghat" when = 1 }
+		command = { type = secedearea which = IND value = "Eastern Ghat" when = 1 }
+		command = { type = secedearea which = ENG value = "Eastern Ghat" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Delhi" when = 1 }
+		command = { type = secedearea which = IND value = "Delhi" when = 1 }
+		command = { type = secedearea which = ENG value = "Delhi" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Himalayas" when = 1 }
+		command = { type = secedearea which = IND value = "Himalayas" when = 1 }
+		command = { type = secedearea which = ENG value = "Himalayas" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Nagpur" when = 1 }
+		command = { type = secedearea which = IND value = "Nagpur" when = 1 }
+		command = { type = secedearea which = ENG value = "Nagpur" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Orissa" when = 1 }
+		command = { type = secedearea which = IND value = "Orissa" when = 1 }
+		command = { type = secedearea which = ENG value = "Orissa" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Deccar" when = 1 }
+		command = { type = secedearea which = IND value = "Deccar" when = 1 }
+		command = { type = secedearea which = ENG value = "Deccar" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Bombay" when = 1 }
+		command = { type = secedearea which = IND value = "Bombay" when = 1 }
+		command = { type = secedearea which = ENG value = "Bombay" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "Western Ghat" when = 1 }
+		command = { type = secedearea which = IND value = "Western Ghat" when = 1 }
+		command = { type = secedearea which = ENG value = "Western Ghat" when = 1 }
+		
+		command = { type = secedearea which = U02 value = "East Bengal" when = 1 }
+		command = { type = secedearea which = IND value = "East Bengal" when = 1 }
+		command = { type = secedearea which = ENG value = "East Bengal" when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1446 when = 1 }
+		command = { type = secedeprovince which = IND value = 1446 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1446 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1447 when = 1 }
+		command = { type = secedeprovince which = IND value = 1447 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1447 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1448 when = 1 }
+		command = { type = secedeprovince which = IND value = 1448 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1448 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1444 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1444 when = 1 }
+		command = { type = secedeprovince which = IND value = 1444 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1444 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1445 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1445 when = 1 }
+		command = { type = secedeprovince which = IND value = 1445 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1445 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1449 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1449 when = 1 }
+		command = { type = secedeprovince which = IND value = 1449 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1449 when = 1 }
+		
+		command = { type = secedeprovince which = U02 value = 1450 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1450 when = 1 }
+		command = { type = secedeprovince which = IND value = 1450 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1450 when = 1 }
+		
+		command = { type = secedearea which = U83 value = "Ceylon" when = 1 }
+		command = { type = secedearea which = U02 value = "Ceylon" when = 1 }
+		command = { type = secedearea which = IND value = "Ceylon" when = 1 }
+		command = { type = secedearea which = ENG value = "Ceylon" when = 1 }
+
+		command = { type = secedearea which = BUR value = "North Burma" when = 1 }	
+		command = { type = secedearea which = U02 value = "North Burma" when = 1 }	
+		command = { type = secedearea which = ENG value = "North Burma" when = 1 }	
+		command = { type = secedearea which = BUR value = "Burma" when = 1 }
+		command = { type = secedearea which = U02 value = "Burma" when = 1 }	
+		command = { type = secedearea which = ENG value = "Burma" when = 1 }
+		
+		# Thailand
+		command = { type = secedearea which = SIA value = "Siam" when = 1 }
+		command = { type = secedearea which = SIA value = "Kra Peninsula" when = 1 }
+		command = { type = secedeprovince which = SIA value = 1433 when = 1 }
+		command = { type = secedeprovince which = SIA value = 1434 when = 1 }
+		
+		# Cambodia
+		command = { type = secedeprovince which = U01 value = 1398 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1398 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1398 when = 1 }
+		
+		command = { type = secedeprovince which = U01 value = 1400 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1400 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1400 when = 1 }
+		
+		command = { type = secedeprovince which = U01 value = 1401 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1401 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1401 when = 1 }
+		
+		command = { type = secedeprovince which = U01 value = 1402 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1402 when = 1 }
+		command = { type = secedeprovince which = CMB value = 1402 when = 1 }
+		
+		# Laos
+		command = { type = secedeprovince which = U01 value = 1391 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1391 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1391 when = 1 }
+		
+		command = { type = secedeprovince which = U01 value = 1394 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1394 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1394 when = 1 }
+		
+		command = { type = secedeprovince which = U01 value = 1404 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1404 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1404 when = 1 }
+		
+		command = { type = secedeprovince which = U01 value = 1405 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1405 when = 1 }
+		command = { type = secedeprovince which = LAO value = 1405 when = 1 }
+		
+		# Vietnam
+		command = { type = secedeprovince which = U01 value = 1392 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1392 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1392 when = 1 }
+		                                                   
+		command = { type = secedeprovince which = U01 value = 1393 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1393 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1393 when = 1 }
+		                                                   
+		command = { type = secedeprovince which = U01 value = 1395 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1395 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1395 when = 1 }
+		                                                   
+		command = { type = secedeprovince which = U01 value = 1396 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1396 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1396 when = 1 }
+		
+		command = { type = secedeprovince which = U01 value = 1397 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1397 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1397 when = 1 }
+		                                          
+		command = { type = secedeprovince which = U01 value = 1399 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1399 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1399 when = 1 }
+		                                          
+		command = { type = secedeprovince which = U01 value = 1403 when = 1 }
+		command = { type = secedeprovince which = FRA value = 1403 when = 1 }
+		command = { type = secedeprovince which = VIE value = 1403 when = 1 }
+		
+		# Malaya
+		command = { type = secedeprovince which = ENG value = 1435 when = 1 }                                  
+		command = { type = secedeprovince which = ENG value = 1436 when = 1 }                                              
+		command = { type = secedeprovince which = ENG value = 1437 when = 1 }                                              
+		command = { type = secedeprovince which = ENG value = 1438 when = 1 }
+		command = { type = secedeprovince which = MLY value = 1435 when = 1 }                                  
+		command = { type = secedeprovince which = MLY value = 1436 when = 1 }                                              
+		command = { type = secedeprovince which = MLY value = 1437 when = 1 }                                              
+		command = { type = secedeprovince which = MLY value = 1438 when = 1 }
+		
+		# Singapore
+		command = { type = secedeprovince which = ENG value = 1635 when = 1 }
+		command = { type = secedeprovince which = U75 value = 1635 when = 1 }
+
+		# Indonesia
+		command = { type = secedearea which = U05 value = "Sumatra" when = 1 }
+		command = { type = secedearea which = HOL value = "Sumatra" when = 1 }
+		command = { type = secedearea which = INO value = "Sumatra" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "West Java" when = 1 }
+		command = { type = secedearea which = HOL value = "West Java" when = 1 }
+		command = { type = secedearea which = INO value = "West Java" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "East Java" when = 1 }
+		command = { type = secedearea which = HOL value = "East Java" when = 1 }
+		command = { type = secedearea which = INO value = "East Java" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Celebes" when = 1 }
+		command = { type = secedearea which = HOL value = "Celebes" when = 1 }
+		command = { type = secedearea which = INO value = "Celebes" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Molucks" when = 1 }
+		command = { type = secedearea which = HOL value = "Molucks" when = 1 }
+		command = { type = secedearea which = INO value = "Molucks" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = HOL value = "Sunda Islands" when = 1 }
+		command = { type = secedearea which = INO value = "Sunda Islands" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = HOL value = "Flores_Timor" when = 1 }
+		command = { type = secedearea which = INO value = "Flores_Timor" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "South Borneo" when = 1 }
+		command = { type = secedearea which = HOL value = "South Borneo" when = 1 }
+		command = { type = secedearea which = INO value = "South Borneo" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Babo" when = 1 }
+		command = { type = secedearea which = HOL value = "Babo" when = 1 }
+		command = { type = secedearea which = INO value = "Babo" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Sarmi" when = 1 }
+		command = { type = secedearea which = HOL value = "Sarmi" when = 1 }
+		command = { type = secedearea which = INO value = "Sarmi" when = 1 }
+		
+		command = { type = secedearea which = U05 value = "Agats" when = 1 }
+		command = { type = secedearea which = HOL value = "Agats" when = 1 }
+		command = { type = secedearea which = INO value = "Agats" when = 1 }
+		
+		command = { type = secedeprovince which = U05 value = 1623 when = 1 }
+		command = { type = secedeprovince which = HOL value = 1623 when = 1 }
+		command = { type = secedeprovince which = INO value = 1623 when = 1 }
+		
+		command = { type = secedeprovince which = U05 value = 1627 when = 1 }
+		command = { type = secedeprovince which = HOL value = 1627 when = 1 }
+		command = { type = secedeprovince which = INO value = 1627 when = 1 }
+		
+		command = { type = secedeprovince which = U05 value = 1628 when = 1 }
+		command = { type = secedeprovince which = HOL value = 1628 when = 1 }
+		command = { type = secedeprovince which = INO value = 1628 when = 1 }
+		
+		# Sarawak
+		command = { type = secedeprovince which = ENG value = 1624 when = 1 }
+		command = { type = secedeprovince which = ENG value = 1626 when = 1 }
+		command = { type = secedeprovince which = SAR value = 1624 when = 1 }
+		command = { type = secedeprovince which = SAR value = 1626 when = 1 }
+		
+		# Brunei
+		command = { type = secedeprovince which = ENG value = 1625 when = 1 }
+		command = { type = secedeprovince which = BRU value = 1625 when = 1 }
+		
+		# The Philippines
+		command = { type = secederegion which = PHI value = "Philippines" when = 1 }
+	}                                             
+}    
+            
+event = {
+	id = 8323004
+	country = USA
+	
+	name = EVT_8323004_NAME
+	desc = EVT_8323004_DESC
+	picture = nwo\australian_new_guinea
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8323000 days = 3 }
+		region = { region = "New Guinea" value = 0 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8323004_A
+		command = { type = secederegion which = AST value = "New Guinea" when = 1 }
+	}                                             
+}    
+	
+event = {
+	id = 8323005
+	country = HOL
+	
+	name = EVT_8323005_NAME
+	desc = EVT_8323005_DESC
+	picture = nwo\dutch_east_india
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8323000 days = 3 }
+		OR = {
+			region = { region = "Indonesia" value = 0 }
+			region = { region = "New Guinea" value = 0 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8323005_A
+		command = { type = independence which = U05 value = 1 }
+		command = { type = secederegion which = U05 value = "New Guinea" when = 1 }
+		command = { type = secederegion which = U05 value = "Indonesia" when = 1 }
+	}                                             
+} 
+
+event = {
+	id = 8323006
+	country = FRA
+	
+	name = EVT_8323006_NAME
+	desc = EVT_8323006_DESC
+	picture = nwo\indochina
+	style = 1
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8323000 days = 3 }
+		exists = U03
+		ai = U03
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8323006_A
+		command = { type = inherit which = U03 }
+	}                                             
+} 
+	
+### PHASE FIVE: NORMALIZATION
+
+event = {
+	id = 8324000
+	country = REB
+	save_date = yes
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8323000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}
+}
+
+event = {
+	id = 8324001
+	tag = { KOR PRK VIE U72 LAO SIA BUR INO MLY SAR PHI } 
+	persistent = yes
+
+	name = EVT_8324001_NAME
+	desc = EVT_8324001_DESC
+	picture = nwo\postwar_normalization
+	style = 1
+	
+	trigger = { 
+		flag = the_jewel_voice
+		NOT = { local_flag = event_8324001 }
+		event = { id = 8324000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8324001_A
+		
+		command = { type = local_setflag which = event_8324001 }
+		
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = supplies value = 500 }
+		command = { type = oilpool value = 200 }
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 2000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = money value = 100 }
+		
+		# Post-war cabinets
+		command = { trigger = { country = KOR } type = trigger which = 8008101 }
+		command = { trigger = { country = PRK } type = trigger which = 8011901 }
+		command = { trigger = { country = VIE } type = trigger which = 8018005 }
+		#command = { trigger = { country = U72 } type = trigger which = 8015501 }
+		command = { trigger = { country = LAO } type = trigger which = 8008401 }
+		command = { trigger = { country = SIA } type = trigger which = 8013401 }
+		command = { trigger = { country = BUR } type = trigger which = 8002301 }
+		command = { trigger = { country = INO } type = trigger which = 8007303 }
+		command = { trigger = { country = MLY } type = trigger which = 8009701 }
+		command = { trigger = { country = SAR } type = trigger which = 8012801 }
+		#command = { trigger = { country = PHI } type = trigger which = 8011701 }
+		
+	}
+}
+
+###### THE END
+
+event = {
+	id = 8325000
+	country = REB
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = the_jewel_voice
+		event = { id = 8324000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = { type = clrflag which = the_jewel_voice }
+		command = { type = setflag which = cold_war_pacific }
+	}
+}

@@ -1,0 +1,619 @@
+event = {
+	id = 8002501
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580100 } # Gaston Camille Guibet
+		command = { type = headofgovernment which = 580101 } # Gaston Camille Guibet
+	}
+}
+
+event = {
+	id = 8002502
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580011 } # Pierre Boisson
+		command = { type = headofgovernment which = 580102 } # Pierre Boisson
+	}
+}
+
+event = {
+	id = 8002503
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580012 } # Richard Brunot
+		command = { type = headofgovernment which = 580103 } # Richard Brunot
+	}
+}
+
+event = {
+	id = 8002504
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580013 } # Pierre Charles Cournaire
+		command = { type = headofgovernment which = 580104 } # Pierre Charles Cournarie
+	}
+}
+
+event = {
+	id = 8002505
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580014 } # Hubert E.P. Carras
+		command = { type = headofgovernment which = 580105 } # Hubert E.P. Carras
+	}
+}
+
+event = {
+	id = 8002506
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580015 } # Henri Pierre Nicolas
+		command = { type = headofgovernment which = 580106 } # Henri Pierre Nicolas
+	}
+}
+
+event = {
+	id = 8002507
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580016 } # Robert Delavignette
+		command = { type = headofgovernment which = 580107 } # Robert Delavignette
+	}
+}
+
+event = {
+	id = 8002508
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580017 } # Ren? Hoffherr
+		command = { type = headofgovernment which = 580108 } # Ren? Hoffherr
+	}
+}
+
+event = {
+	id = 8002509
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580109 } # Andr? Soucadaux
+		command = { type = headofgovernment which = 580110 } # Andr? Soucadaux
+	}
+}
+
+event = {
+	id = 8002510
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580111 } # Roland Pr?
+		command = { type = headofgovernment which = 580110 } # Andr? Soucadaux
+	}
+}
+
+event = {
+	id = 8002511
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580111 } # Roland Pr?
+		command = { type = headofgovernment which = 580112 } # Roland Pr?
+	}
+}
+
+event = {
+	id = 8002512
+	country = CAM
+
+	name = "EVT_8002512_NAME"
+	desc = "EVT_8002512_DESC"
+	picture = "nwo\cameroon_independence"
+	style = 1
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = "EVT_8002512_A"
+		ai_chance = 100
+		command = { type = headofstate which = 580111 } # Roland Pr?
+		command = { type = headofgovernment which = 580113 } # Ruben Um Nyob?
+	}
+}
+
+event = {
+	id = 8002513
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580114 } # Pierre Messmer
+		command = { type = headofgovernment which = 580113 } # Ruben Um Nyob?
+	}
+}
+
+event = {
+	id = 8002514
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580114 } # Pierre Messmer
+		command = { type = headofgovernment which = 580019 } # Andre Marie Mbida
+	}
+}
+
+event = {
+	id = 8002515
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 580115 } # Xavier Antoine Torr?
+		command = { type = headofgovernment which = 580116 } # Ahmadou Ahidjo
+	}
+}
+
+event = {
+	id = 8002516
+	country = CAM
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 580018 } # Ahmadou Ahidjo
+		command = { type = headofgovernment which = 580117 } # Charles Assale
+	}
+}
+
+event = {
+	id = 8002517
+	country = CAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 580118 } # Simon Pierre Tchoungui
+	}
+}
+
+event = {
+	id = 8002518
+	country = CAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 580116 } # Ahmadou Ahidjo
+	}
+}
+
+event = {
+	id = 8002519
+	country = CAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 580123 } # Paul Biya
+	}
+}
+
+event = {
+	id = 8002520
+	country = CAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 580122 } # Paul Biya
+		command = { type = headofgovernment which = 580119 } # Bello Bouba Maigari
+	}
+}
+
+event = {
+	id = 8002521
+	country = CAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 580120 } # Luc Ayang
+	}
+}
+
+event = {
+	id = 8002522
+	country = CAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 580123 } # Paul Biya
+	}
+}
+
+event = {
+	id = 8002523
+	country = CAM
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 580121 } # Sadou Hayatou
+	}
+}
+

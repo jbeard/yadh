@@ -1,0 +1,154 @@
+evac_islands = yes
+ferocity = yes
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	CHI = 100
+	UCH = 100
+	}
+
+# Special resistance against "influence" by the listed nations. Value range = [0 - 10]  
+resistance = {  
+	CHI = 10
+	UCH = 10
+}
+befriend = {
+	MAN = 150
+}
+protect = {
+	MAN = 150
+}
+
+target = {
+	#MAN ?
+	1197 = 10
+	1198 = 10
+	1199 = 10
+	1200 = 10
+	1201 = 10
+	1202 = 10
+	1203 = 10
+	1204 = 10
+	1205 = 10
+	1206 = 10
+	1207 = 10
+	1208 = 10
+	1209 = 10
+	1210 = 10
+	1211 = 10
+	1212 = 10
+	1213 = 10
+	1214 = 10
+	1215 = 10
+	1216 = 10
+	1217 = 10
+	1218 = 10
+	1220 = 10
+	1235 = 10
+	1236 = 10
+	1237 = 10
+	1240 = 10
+	1241 = 10
+	1245 = 10
+	1246 = 10
+	1247 = 10
+} 
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+
+garrison = {
+	home_multiplier 	= 0
+	home_peace_cap 		= 0
+	beach			= 0	
+	capital			= 1	
+	war_target		= 100
+	opposing_alliance	= 0	# For neutrals, all alliances are "opposing"
+
+	country_priorities = {
+		CHI = 200
+		UCH = 200
+		RUS = -1
+		MAN = -1
+		MON = -1
+		SIA = -1
+    SOV = -1 
+		POR = -1
+	}
+	ignore = {
+	  1543
+	  1542
+	}
+	#province_priorities = {
+		#Korea
+  #   	1225 = 300 # Soviet frontier
+	#	1224 = 300 
+	#	1226 = 300
+	#	1227 = 300
+	#	1228 = 10 # Seoul South Korea
+	#	1221 = 10 # Pyongyang North Korea
+	#	1222 = 10 # Sariwon
+	#	2463 = 10 # Sokcho
+	#	1229 = 10 # Daejeon
+
+	#}
+	area_multiplier = {
+		
+		#Korea Border
+     	1225 = 10.0 # Soviet frontier
+		1224 = 10.0 
+		1226 = 10.0
+		1227 = 10.0
+
+	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_human 	= reactive
+
+	strength 	= 1.0
+	organisation 	= 1.0
+	soft_attack 	= 1.0
+	hard_attack 	= 1.0
+	ground_defense 	= 1.0
+	dig_in 		= 1.0 # Against defender
+
+} 
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	coastal				= 1	#increase to avoid coastal forts more.
+	beach				= 1	#higher, avoid worst beaches.
+	max_distance   		= 250.0  #About the distance from Japan to Batavia
+	max_staging_distance = 15	# How far should the staging area be from the target invasion point
+	distance			= 0.1	#higher = avoid long distance.
+	pocket				= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island				= 0.1	#prioritise taking pure islands.
+	enemy				= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 		= 2.0	#higher = much more vary of troops nearby
+	air_base			= 1.5 
+    naval_base 			= 0.1 
+    air_support 		= 3.0 
+    redirect 			= nearest
+      
+	staging_province = {
+		1399 # Saigon
+		1361 # Gaoxiong
+		1667 # Truk
+		1553 # Osaka
+		1726 # Rabaul
+	}
+	target = {
+		#China
+		1241 = 2500 # Tianjin
+		1338 = 2500 # Shanghai
+		1333 = 2500 # Nanton
+		1334 = 2500 # Lianyuang
+		1358 = 2400 # Fuzhou
+	} 
+} 

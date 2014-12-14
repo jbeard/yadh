@@ -1,0 +1,10 @@
+# Naval Base construction AI File by Burning
+
+###################################
+# Construction and Tech Research
+###################################
+construction = {
+  air_base = yes
+	max_air_base = 5
+}
+  

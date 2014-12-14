@@ -1,0 +1,50 @@
+SOM;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+770001;Head of State;Rodolfo Graziani;1933;1964;1964;FA;Insignificant Layman;High;L6084;X
+770002;Head of Government;Ruggero Santini;1933;1964;1964;FA;old airmarshal;High;L6232;X
+770003;Foreign Minister;Enrico Martino;1933;1964;1964;FA;Ideological Crusader;High;M575003;X
+770004;Minister of Armament;Giovanni Fornari;1933;1964;1964;FA;Military Entrepreneur;Medium;M575004;X
+770005;Minister of Security;Carlo de Simone;1933;1964;1964;FA;Back Stabber;Medium;L6058;X
+770006;Head of Military Intelligence;Gustavo Pesenti;1933;1964;1964;FA;Dismal Enigma;Medium;M575006;X
+770007;Chief of Staff;Raffaele Orlando;1933;1964;1964;PA;School of Fire Support;Medium;L6111;X
+770008;Chief of Army;Federico Romero;1933;1964;1964;PA;Elastic Defence Doctrine;Medium;L6127;X
+770009;Chief of Navy;Lorenzo Gasparri;1933;1964;1964;PA;Decisive Naval Battle Doctrine;Medium;L6171;X
+770010;Chief of Air Force;Ernesto di Ferro;1933;1964;1964;PA;Naval Aviation Doctrine;Medium;L6206;X
+770011;Head of State;Abdulahi Issa Mohamud;1944;1964;1964;SC;Popular Figurehead;High;M575011;X
+770012;Head of State;Sir Arthur Lawrance;1939;1964;1964;SL;Barking Buffoon;High;M575012;X
+770013;Head of Government;Herbert Pike-Pease;1939;1964;1964;SL;Political Protege;High;M575013;X
+770014;Foreign Minister;Enrico Anzilotti;1944;1964;1964;SC;The Cloak N Dagger Schemer;High;M575014;X
+770015;Foreign Minister;Sir Douglas Hall;1939;1964;1964;SL;Great Compromiser;High;M575015;X
+770016;Foreign Minister;Mohammed Haji Egal;1945;1964;1964;SL;Iron Fisted Brute;High;M575016;X
+770017;Minister of Armament;Graeme Sinclair-Lockhart;1939;1964;1964;SL;Resource Industrialist;Medium;M575017;X
+770018;Minister of Armament;Gabaar Baaka;1945;1964;1964;SL;Tank Proponent;Medium;M575018;X
+770019;Minister of Security;Leslie Sandford;1939;1964;1964;SL;Crime Fighter;Medium;M575019;X
+770020;Minister of Security;Dr. Rashid Ali Shermake;1945;1964;1964;SL;Compassionate Gentleman;Medium;M575020;X
+770021;Head of Military Intelligence;Francesco Caroselli;1944;1964;1964;SC;Political Specialist;Medium;M575021;X
+770022;Head of Military Intelligence;Henry E. Fitzalan-Howard;1939;1964;1964;SL;Logistics Specialist;Medium;M575022;X
+770023;Head of Military Intelligence;Gerald Fisher;1944;1964;1964;SL;Industrial Specialist;Medium;M575023;X
+770024;Chief of Staff;A.L.W. Soames;1939;1964;1964;SL;School of Manoeuvre;Medium;L1283;X
+770025;Chief of Army;Richard McCreery;1939;1964;1964;SL;Armoured Spearhead Doctrine;Medium;L1216;X
+770026;Chief of Army;Muhammed Siad Barre;1945;1964;1964;SL;Guns And Butter Doctrine;Medium;M575026;X
+770027;Chief of Navy;Harold Burrogh;1939;1964;1964;SL;Indirect Approach Doctrine;Medium;L1330;X
+770028;Chief of Air Force;Robert Oxland;1939;1964;1964;SL;Vertical Envelopment Doctrine;Medium;L1466;X
+770100;Head of Government;Rodolfo Graziani;1936;1964;1964;FA;Old General;Medium;L6084;X
+770101;Head of State;Ruggero Santini;1937;1964;1964;FA;Insignificant Layman;Medium;L6232;X
+770102;Head of State;Francesco Caroselli;1938;1964;1964;FA;Insignificant Layman;Medium;M770102;X
+770103;Head of Government;Francesco Caroselli;1938;1964;1964;FA;Old Airmarshal;Medium;M770102;X
+770104;Head of State;Gustavo Pesenti;1940;1964;1964;FA;Popular Figurehead;Medium;M575006;X
+770105;Head of Government;Gustavo Pesenti;1940;1964;1964;FA;Flamboyant Tough Guy;Medium;M575006;X
+770106;Head of State;Sir Reginald Dorman-Smith;1941;1964;1964;SC;Ruthless Powermonger;Medium;M770106;X
+770107;Head of Government;Sir Reginald Dorman-Smith;1941;1964;1964;SC;Backroom Backstabber;Medium;M770106;X
+770108;Head of State;William E. H. Scuphan;1942;1964;1964;SC;Barking Buffoon;Medium;M770108;X
+770109;Head of Government;William E. H. Scuphan;1942;1964;1964;SC;Ambitious Union Boss;Medium;M770108;X
+770110;Head of State;Denis Henry Widcham;1943;1964;1964;SC;Popular Figurehead;Medium;M770110;X
+770111;Head of Government;Denis Henry Widcham;1943;1964;1964;SC;Backroom Backstabber;Medium;M770110;X
+770112;Head of State;Geoffrey Massey Gamble;1948;1964;1964;SC;Weary Stiffneck;Medium;M770112;X
+770113;Head of Government;Geoffrey Massey Gamble;1948;1964;1964;SC;Backroom Backstabber;Medium;M770112;X
+770114;Head of Government;Abdulahi Issa Mohamud;1949;1964;1964;SC;Old Airmarshal;Medium;M575011;X
+770115;Head of State;Giovanni Fornari;1950;1964;1964;SC;Weary Stiffneck;Medium;M575004;X
+770116;Head of State;Enrico Martino;1954;1964;1964;SC;Autocratic Charmer;Medium;M575003;X
+770117;Head of State;Enrico Anzilotti;1957;1964;1964;SC;Powerhungry Demagogue;Medium;M575014;X
+770118;Head of State;Mario Di Stefano;1958;1964;1964;SC;Benevolent Gentleman;Medium;M770118;X
+770119;Head of State;Aden Abdullah Osman Daar;1960;1964;1964;SL;Barking Buffoon;Medium;M770119;X
+770120;Head of Government;Abdirashid Ali Shermarke;1960;1964;1964;SL;Old Airmarshal;Medium;M575020;X

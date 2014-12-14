@@ -1,0 +1,102 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the League of Nations
+# Event List:
+# 13319800	The Great War is over!
+# 13319801  The Times They Are a-changin'
+# TODO: THIS FILE IS BUGGY!
+
+# NOTE: Modified to enforce Peace After WWI among all countries.
+event = {
+	id = 13319800
+	random = no
+	persistent = yes
+
+	date = { day = 1 month = january year = 1918 }
+	offset = 180
+	deathdate = { day = 1 month = january year = 1920 }
+
+	trigger = {
+		NOT = { local_flag = puppetpeace }
+		not = { event = 13300018 }
+		or = {
+			war = { country = ENG }
+			war = { country = FRA }
+			war = { country = SOV }
+			war = { country = RUS }
+			war = { country = SER }
+			war = { country = JAP }
+			war = { country = USA }
+			war = { country = U08 }
+			war = { country = U09 }
+			war = { country = GER }
+		}
+		NOT = { atwar = U08 }
+		ispuppet = yes
+		or = { # WWI Over.
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+			and = {
+				event = 2191512 #Reverse Versailes
+				or = {
+					event = 2191555 #Russia defeated
+					event = 2007529 #SOV defeated
+					event = 2007530 #SOV defeated
+				}
+			}
+		}
+		not = { event = { id = 13319801 days = 30 } }
+	}
+	name = "The Great War is over!"							
+	Desc = "It is time for peace."
+	Picture = "vasconia"
+	
+	action = {
+		name = "Glad we could lend a hand."
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = U08 value = 1 }
+		command = { type = peace which = U09 value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = local_setflag which = puppetpeace }
+		command = { trigger = { not = { event = 13319801 } } type = trigger which = 13319801 }
+	}
+}
+
+event = {
+	id = 13319801
+	random = no
+	save_date = yes
+
+	# Triggered
+
+	name = "The Times They Are a-Changin'"
+	Desc = "It is time for peace."
+	Picture = "vasconia"
+
+	action = {
+	
+		name = "OKAY"
+		command = { }
+	}
+}

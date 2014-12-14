@@ -1,0 +1,1595 @@
+### An event determines belligerent nation
+event = {
+	id = 8310000
+	country = GER
+	save_date = yes
+
+	name = EVT_8310000_NAME
+	desc = EVT_8310000_DESC
+	picture = nwo\fall_of_third_reich
+	style = 1
+
+	trigger = {
+		OR = {
+				war = { country = GER country = USA }
+				war = { country = GER country = ENG }
+				war = { country = GER country = FRA }
+			}
+		war = { country = GER country = SOV } # Germany must be at war with USSR, otherwise there's another peace event chain
+		NOT = {
+			control = { province = 163 data = GER } # Berlin
+			control = { province = 131 data = GER } # Cologne
+			control = { province = 179 data = GER } # Munich
+			control = { province = 145 data = GER } # Essen
+			control = { province = 195 data = GER } # Vienna
+			control = { province = 572 data = GER } # Moscow
+			control = { province = 55 data = GER } # Paris
+			}
+		lost_national = { value = 30 }	
+		NOT = { flag = cold_war }
+		NOT = { flag = ww3 }
+		NOT = { war = { country = USA country = SOV } }
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Apply for unconditional surrender
+	action = { 
+		name = EVT_8310000_A
+		command = { type = setflag which = der_untergang }
+		command = { type = sleepevent which = 8310001 }
+		command = { type = sleepevent which = 8360001 }
+		
+		command = { type = dissent value = 30 }
+		command = { type = secederegion which = USA value = "Norway" when = 1 }
+		command = { type = secederegion which = USA value = "Denmark" when = 1 }
+		command = { type = sleepevent which = 8310001 }
+		# Hitler's suicide
+		command = { type = trigger which = 8310004 }
+		
+		# Late separate surrenders
+		command = { trigger = { NOT = { event = 2006014 } alliance = { country = ITA } } type = trigger which = 2006014 } # Italy
+		command = { trigger = { NOT = { event = 8005520 } war = { country = SOV country = FIN } } type = trigger which = 8005520 } # Finland
+	}
+}
+
+###	German is annexed before it surrenders
+
+event = {
+	id = 8310001
+	save_date = yes
+
+	name = EVT_8310001_NAME
+	desc = EVT_8310001_DESC
+	picture = nwo\fall_of_third_reich
+	style = 1
+
+	trigger = {
+		control = { province = 163 data = -1 } # Berlin
+		NOT = { exists = GER }
+		NOT = { flag = cold_war }
+		NOT = { flag = ww3 }
+		NOT = { war = { country = USA country = SOV } }
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# "The fascist beast is dead"
+	action = {
+		name = EVT_8310001_A
+		command = { type = setflag which = der_untergang }
+		command = { type = sleepevent which = 8310000 }
+		
+		# Late separate surrenders
+		command = { trigger = { NOT = { event = 2006014 } alliance = { country = ITA } } type = trigger which = 2006014 } # Italy
+		command = { trigger = { NOT = { event = 8005520 } war = { country = SOV country = FIN } } type = trigger which = 8005520 } # Finland
+	}
+}
+
+### The Day of Victory
+event = {
+	id = 8310002
+	save_date = yes
+
+	name = EVT_8310002_NAME
+	desc = EVT_8310002_DESC
+	picture = nwo\allied_day_of_victory
+	style = 1
+
+	trigger = {
+		flag = der_untergang
+		OR = {
+			event = { id = 8310000 days = 7 }
+			event = { id = 8310001 days = 7 }
+		}
+		control = { province = 163 data = -1 } # Berlin
+		NOT = { government = communist }
+		NOT = { flag = cold_war }
+		NOT = { flag = ww3 }
+		NOT = { war = { country = USA country = SOV } }
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8310002_A
+		command = { trigger = { exists = GER } type = inherit which = GER }
+		# Trigger events for end of war for the whole Axis alliance
+		command = { trigger = { exists = RSI exists = ITA ai = RSI} type = trigger which = 8310010 } # Italian Social Republic to Italy
+		command = { trigger = { exists = U01 exists = FRA ai = FRA } type = trigger which = 8310011 } # Vichy France to France
+		
+		command = { trigger = { war = { country = RSI } ai = RSI NOT = { exists = ITA } } type = inherit which = RSI } # Italy
+		command = { trigger = { war = { country = FRA } ai = FRA NOT = { exists = U01 } NOT = { alliance = { country = FRA } } } type = inherit which = FRA } # France
+		
+		command = { trigger = { war = { country = CRO } ai = CRO } type = inherit which = CRO } # Croatia
+		command = { trigger = { war = { country = FIN } ai = FIN } type = inherit which = FIN } # Finland
+		command = { trigger = { war = { country = TUR } ai = TUR } type = inherit which = TUR } # Turkey
+		command = { trigger = { war = { country = GRE } ai = GRE } type = inherit which = GRE } # Greece
+		command = { trigger = { war = { country = ALB } ai = ALB } type = inherit which = ALB } # Albania
+		command = { trigger = { war = { country = BUL } ai = BUL } type = inherit which = BUL } # Bulgaria
+		command = { trigger = { war = { country = ROM } ai = ROM } type = inherit which = ROM } # Romania
+		command = { trigger = { war = { country = POR } ai = POR } type = inherit which = POR } # Portugal
+		command = { trigger = { war = { country = SPR } ai = SPR } type = inherit which = SPR } # Republican Spain
+		command = { trigger = { war = { country = SPA } ai = SPA } type = inherit which = SPA } # Nationalist Spain
+		command = { trigger = { war = { country = SCH } ai = SCH } type = inherit which = SCH } # Switzerland
+		command = { trigger = { war = { country = HUN } ai = HUN } type = inherit which = HUN } # Hungary
+		command = { trigger = { war = { country = SLO } ai = SLO } type = inherit which = SLO } # Slovakia
+		command = { trigger = { war = { country = YUG } ai = YUG } type = inherit which = YUG } # Yugoslavia
+		command = { trigger = { war = { country = CZE } ai = CZE } type = inherit which = CZE } # Czechoslovakia
+		command = { trigger = { war = { country = POL } ai = POL } type = inherit which = POL } # Poland
+		command = { trigger = { war = { country = NOR } ai = NOR } type = inherit which = NOR } # Norway
+		command = { trigger = { war = { country = SWE } ai = SWE } type = inherit which = SWE } # Sweden
+		command = { trigger = { war = { country = DEN } ai = DEN } type = inherit which = DEN } # Denmark
+	}
+}
+
+event = {
+	id = 8310003
+	save_date = yes
+
+	name = EVT_8310002_NAME
+	desc = EVT_8310002_DESC
+	picture = nwo\soviet_day_of_victory
+	style = 1
+
+	trigger = {
+		flag = der_untergang
+		OR = {
+			event = { id = 8310000 days = 7 }
+			event = { id = 8310001 days = 7 }
+		}
+		control = { province = 163 data = -1 } # Berlin
+		government = communist
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8310002_A
+		command = { trigger = { exists = GER } type = inherit which = GER }
+		# Trigger events for end of war for the whole Axis alliance
+		command = { trigger = { exists = RSI exists = ITA ai = RSI} type = trigger which = 8310010 } # Italian Social Republic to Italy
+		command = { trigger = { exists = U01 exists = FRA ai = FRA } type = trigger which = 8310011 } # Vichy France to France
+		
+		command = { trigger = { war = { country = RSI } ai = RSI NOT = { exists = ITA } } type = inherit which = RSI } # Italy
+		command = { trigger = { war = { country = FRA } ai = FRA NOT = { exists = U01 } NOT = { alliance = { country = FRA } } } type = inherit which = FRA } # France
+		
+		command = { trigger = { war = { country = CRO } ai = CRO } type = inherit which = CRO } # Croatia
+		command = { trigger = { war = { country = FIN } ai = FIN } type = inherit which = FIN } # Finland
+		command = { trigger = { war = { country = TUR } ai = TUR } type = inherit which = TUR } # Turkey
+		command = { trigger = { war = { country = GRE } ai = GRE } type = inherit which = GRE } # Greece
+		command = { trigger = { war = { country = ALB } ai = ALB } type = inherit which = ALB } # Albania
+		command = { trigger = { war = { country = BUL } ai = BUL } type = inherit which = BUL } # Bulgaria
+		command = { trigger = { war = { country = ROM } ai = ROM } type = inherit which = ROM } # Romania
+		command = { trigger = { war = { country = POR } ai = POR } type = inherit which = POR } # Portugal
+		command = { trigger = { war = { country = SPR } ai = SPR } type = inherit which = SPR } # Republican Spain
+		command = { trigger = { war = { country = SPA } ai = SPA } type = inherit which = SPA } # Nationalist Spain
+		command = { trigger = { war = { country = SCH } ai = SCH } type = inherit which = SCH } # Switzerland
+		command = { trigger = { war = { country = HUN } ai = HUN } type = inherit which = HUN } # Hungary
+		command = { trigger = { war = { country = SLO } ai = SLO } type = inherit which = SLO } # Slovakia
+		command = { trigger = { war = { country = YUG } ai = YUG } type = inherit which = YUG } # Yugoslavia
+		command = { trigger = { war = { country = CZE } ai = CZE } type = inherit which = CZE } # Czechoslovakia
+		command = { trigger = { war = { country = POL } ai = POL } type = inherit which = POL } # Poland
+		command = { trigger = { war = { country = NOR } ai = NOR } type = inherit which = NOR } # Norway
+		command = { trigger = { war = { country = SWE } ai = SWE } type = inherit which = SWE } # Sweden
+		command = { trigger = { war = { country = DEN } ai = DEN } type = inherit which = DEN } # Denmark
+	}
+}
+
+### Hitler's suicide
+
+event = {
+	id = 8310004
+
+	name = EVT_8310004_NAME
+	desc = EVT_8310004_DESC
+	picture = nwo\hitler_suicide
+	style = 1
+
+	action = {
+		name = EVT_8310004_A
+		command = { type = dissent value = 15 }
+		command = { type = headofstate which = 13 } 
+		command = { type = headofgovernment which = 30 }
+		command = { type = foreignminister which = 39 }
+		command = { type = armamentminister which = 65 }
+		command = { type = ministerofsecurity which = 106 } # should be Wilhelm Stuckart
+		command = { type = ministerofintelligence which = 115 }
+		command = { type = chiefofstaff which = 132 }
+		command = { type = chiefofarmy which = 148 }
+		command = { type = chiefofnavy which = 162 }
+		command = { type = chiefofair which = 171 }
+	}
+}
+
+###	Italian Social Republic
+
+event = {
+	id = 8310010
+	country = ITA
+
+	name = EVT_8310010_NAME
+	desc = EVT_8310010_DESC
+	picture = nwo\fall_of_mussolini
+	style = 1
+
+	action = { 
+		name = EVT_8310010_A
+		command = { type = inherit which = RSI }
+	}
+}
+
+### Vichy France
+
+event = {
+	id = 8310011
+	country = U01
+
+	name = EVT_8310011_NAME
+	desc = EVT_8310011_DESC
+	picture = nwo\fall_of_petain
+	style = 1
+	
+	action = {
+		name = EVT_8310011_A
+		command = { type = inherit which = FRA }
+	}
+}
+
+### Out of war
+
+event = {
+	id = 8310020
+	tag = { ITA FRA TUR GRE ALB BUL ROM POR SPR SPA SCH HUN CZE NOR SWE DEN AUS BEL HOL LUX PER IRQ }
+	persistent = yes
+
+	name = EVT_8310020_NAME
+	desc = EVT_8310020_DESC
+	picture = nwo\out_of_war
+	style = 1
+
+	trigger = {
+		flag = der_untergang
+		NOT = { local_flag = event_8310020 }
+		OR = {
+			event = { id = 8310000 days = 3 }
+			event = { id = 8310001 days = 3 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310020_A
+		command = { type = local_setflag which = event_8310020 }
+		command = { trigger = { NOT = { alliance = { country = ENG } alliance = { country = USA } alliance = { country = SOV } } } 
+			type = local_setflag which = out_of_war }
+	}
+}
+
+
+event = {
+	id = 8310021
+	country = FIN
+
+	name = EVT_8310020_NAME
+	desc = EVT_8310020_DESC
+	picture = nwo\out_of_war
+	style = 1
+
+	trigger = {
+		flag = der_untergang
+		OR = {
+			event = { id = 8310000 days = 3 }
+			event = { id = 8310001 days = 3 }
+		}	
+		NOT = { 
+			alliance = { country = ENG }
+			alliance = { country = USA }
+			alliance = { country = SOV }
+			NOT = { event = 8005520 } # Continuation War did not happen
+		} 
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310020_A
+		command = { type = local_setflag which = out_of_war }
+	}
+}
+
+event = {
+	id = 8310022
+	country = POL
+
+	name = EVT_8310020_NAME
+	desc = EVT_8310020_DESC
+	picture = nwo\out_of_war
+	style = 1
+
+	trigger = {
+		flag = der_untergang
+		OR = {
+			event = { id = 8310000 days = 3 }
+			event = { id = 8310001 days = 3 }
+		}	
+		NOT = { 
+			local_flag = warsaw_uprising
+		} 
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310020_A
+		command = { type = local_setflag which = out_of_war }
+	}
+}
+
+event = {
+	id = 8310023
+	country = YUG
+
+	name = EVT_8310020_NAME
+	desc = EVT_8310020_DESC
+	picture = nwo\out_of_war
+	style = 1
+
+	trigger = {
+		flag = der_untergang
+		OR = {
+			event = { id = 8310000 days = 3 }
+			event = { id = 8310001 days = 3 }
+		}	
+		NOT = { 
+			local_flag = tito_uprising
+		} 
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310020_A
+		command = { type = local_setflag which = out_of_war }
+	}
+}
+
+### PHASE TWO: CLEANUP OF PROVINCE OWNERSHIP
+
+event = {
+	id = 8310100
+	country = REB
+	save_date = yes
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = der_untergang
+		OR = {
+			event = { id = 8310002 days = 7 }
+			event = { id = 8310003 days = 7 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = {	type = money value = 1 }
+	}
+}
+
+event = {
+	id = 8310101
+	tag = { CAN AST NZL SAF POL HUN ROM BUL YUG CZE U01 FRA ITA ENG U27 U29 U30 }
+	persistent = yes
+	
+	name = EVT_8310101_NAME
+	desc = EVT_8310101_DESC
+	picture = nwo\allies_in_ww2
+	style = 1
+
+	trigger = {
+		flag = der_untergang
+		event = { id = 8310100 days = 3 }
+		OR = { 
+			alliance = { country = ENG } 
+			alliance = { country = USA } 
+			alliance = { country = SOV } 
+		}
+		NOT = { local_flag = event_8310101 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310101_A
+		trigger = { 
+			OR = { 
+				alliance = { country = ENG } 
+				alliance = { country = USA } 
+			}
+		}
+		command = { type = local_setflag which = event_8310101 }
+		command = { type = secederegion which = USA value = "Anatolia" when = 1 }
+		command = { type = secederegion which = USA value = "Austria" when = 1 }
+		command = { trigger = { NOT = { country = YUG country = ROM country = BUL country = U27 country = U29 country = U30 } } type = secederegion which = USA value = "Balkan" when = 1 }
+		command = { type = secederegion which = USA value = "Baltic States" when = 1 }
+		command = { type = secederegion which = USA value = "Benelux" when = 1 }
+		command = { type = secederegion which = USA value = "Belarus" when = 1 }
+		command = { trigger = { NOT = { country = CZE } } type = secederegion which = USA value = "Czechoslovakia" when = 1 }
+		command = { type = secederegion which = USA value = "Finland" when = 1 }
+		command = { trigger = { NOT = { country = FRA country = U01 } } type = secederegion which = USA value = "France" when = 1 }
+		command = { type = secederegion which = USA value = "Germany" when = 1 }
+		command = { trigger = { NOT = { country = HUN } } type = secederegion which = USA value = "Hungary" when = 1 }
+		command = { trigger = { NOT = { country = ITA } } type = secederegion which = USA value = "Italy" when = 1 }
+		command = { type = secederegion which = USA value = "Kaukasus" when = 1 }
+		command = { type = secederegion which = USA value = "Northern Russia" when = 1 }
+		command = { type = secederegion which = USA value = "Norway" when = 1 }
+		command = { type = secederegion which = USA value = "Persia" when = 1 }
+		command = { trigger = { NOT = { country = POL country = U32 } } type = secederegion which = USA value = "Poland" when = 1 }
+		command = { type = secederegion which = USA value = "Portugal" when = 1 }
+		command = { trigger = { NOT = { country = ROM country = U30 } } type = secederegion which = USA value = "Romania" when = 1 }
+		command = { type = secederegion which = USA value = "Russia" when = 1 }
+		command = { type = secederegion which = USA value = "Southern Russia" when = 1 }
+		command = { type = secederegion which = USA value = "Spain" when = 1 }
+		command = { type = secederegion which = USA value = "Sweden" when = 1 }
+		command = { type = secederegion which = USA value = "Switzerland" when = 1 }
+		command = { type = secederegion which = USA value = "Ukraine" when = 1 }
+		command = { type = secederegion which = USA value = "White Sea Tundra" when = 1 }
+		command = { type = secederegion which = USA value = "Western Russia" when = 1 }
+		
+		# Return North Africa to France
+		command = { trigger = { exists = U01 } type = secederegion which = U01 value = "Morocco" when = 1 }
+		command = { trigger = { exists = U01 } type = secederegion which = U01 value = "Algeria" when = 1 }
+		command = { trigger = { exists = U01 } type = secederegion which = U01 value = "Tunisia" when = 1 }
+		command = { trigger = { NOT = { exists = U01 } } type = secederegion which = FRA value = "Morocco" when = 1 }
+		command = { trigger = { NOT = { exists = U01 } } type = secederegion which = FRA value = "Algeria" when = 1 }
+		command = { trigger = { NOT = { exists = U01 } } type = secederegion which = FRA value = "Tunisia" when = 1 }
+	}
+	
+	action = {
+		name = EVT_8310101_B
+		trigger = { 
+			alliance = { country = SOV } 
+		}
+		command = { type = local_setflag which = event_8310101 }
+		command = { type = secederegion which = SOV value = "Anatolia" when = 1 }
+		command = { type = secederegion which = SOV value = "Austria" when = 1 }
+		command = { trigger = { NOT = { country = YUG country = ROM country = BUL country = U27 country = U29 country = U30 } } type = secederegion which = SOV value = "Balkan" when = 1 }
+		command = { type = secederegion which = SOV value = "Baltic States" when = 1 }
+		command = { type = secederegion which = SOV value = "Benelux" when = 1 }
+		command = { type = secederegion which = SOV value = "Belarus" when = 1 }
+		command = { trigger = { NOT = { country = CZE } } type = secederegion which = SOV value = "Czechoslovakia" when = 1 }
+		command = { type = secederegion which = SOV value = "Finland" when = 1 }
+		command = { trigger = { NOT = { country = FRA country = U01 } } type = secederegion which = SOV value = "France" when = 1 }
+		command = { type = secederegion which = SOV value = "Germany" when = 1 }
+		command = { trigger = { NOT = { country = HUN } } type = secederegion which = SOV value = "Hungary" when = 1 }
+		command = { trigger = { NOT = { country = ITA } } type = secederegion which = SOV value = "Italy" when = 1 }
+		command = { type = secederegion which = SOV value = "Kaukasus" when = 1 }
+		command = { type = secederegion which = SOV value = "Northern Russia" when = 1 }
+		command = { type = secederegion which = SOV value = "Norway" when = 1 }
+		command = { type = secederegion which = SOV value = "Persia" when = 1 }
+		command = { trigger = { NOT = { country = POL country = U32 } } type = secederegion which = SOV value = "Poland" when = 1 }
+		command = { type = secederegion which = SOV value = "Portugal" when = 1 }
+		command = { trigger = { NOT = { country = ROM country = U30 } } type = secederegion which = SOV value = "Romania" when = 1 }
+		command = { type = secederegion which = SOV value = "Russia" when = 1 }
+		command = { type = secederegion which = SOV value = "Southern Russia" when = 1 }
+		command = { type = secederegion which = SOV value = "Spain" when = 1 }
+		command = { type = secederegion which = SOV value = "Sweden" when = 1 }
+		command = { type = secederegion which = SOV value = "Switzerland" when = 1 }
+		command = { type = secederegion which = SOV value = "Ukraine" when = 1 }
+		command = { type = secederegion which = SOV value = "White Sea Tundra" when = 1 }
+		command = { type = secederegion which = SOV value = "Western Russia" when = 1 }
+		
+		# Return North Africa to France
+		command = { trigger = { exists = U01 } type = secederegion which = U01 value = "Morocco" when = 1 }
+		command = { trigger = { exists = U01 } type = secederegion which = U01 value = "Algeria" when = 1 }
+		command = { trigger = { exists = U01 } type = secederegion which = U01 value = "Tunisia" when = 1 }
+		command = { trigger = { NOT = { exists = U01 } } type = secederegion which = FRA value = "Morocco" when = 1 }
+		command = { trigger = { NOT = { exists = U01 } } type = secederegion which = FRA value = "Algeria" when = 1 }
+		command = { trigger = { NOT = { exists = U01 } } type = secederegion which = FRA value = "Tunisia" when = 1 }
+	}
+}
+
+### Europe is red
+
+# Soviet Belgium
+event = {
+	id = 8310110
+	country = BEL
+
+	name = EVT_8310110_NAME
+	desc = EVT_8310110_DESC
+	picture = nwo\communists_march
+	style = 1
+	
+	trigger = {
+		flag = der_untergang
+		event = { id = 8310100 days = 3 }
+		NOT = { 
+			OR = { 
+				area = { area = "Flanders" country = -3 value = 50 } 
+				area = { area = "Wallonia" country = -3 value = 50 } 
+			} 
+		}
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310110_A #"Brussels will be red. Let's remain where we are."
+		ai_chance = 80
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = MAN value = 0 }
+		command = { type = peace which = MEN value = 0 }
+		command = { trigger = { NOT = { exists = CON } } type = country which = CON } # We become Congo
+	}
+	
+	action = {
+		ai_chance = 20
+		name = EVT_8310110_B #"Try to reconciliate. Maybe it won't be so bad as it seems."
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = MAN value = 0 }
+		command = { type = peace which = MEN value = 0 }
+		# We will have communist government but remain one state
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = free_market value = 2 }
+		command = { type = set_domestic which = defense_lobby value = 6 }
+		command = { type = set_domestic which = interventionism value = 1 }
+	}
+}
+
+### Soviet Netherlands
+
+event = {
+	id = 8310111
+	country = HOL
+
+	name = EVT_8310111_NAME
+	desc = EVT_8310111_DESC
+	picture = nwo\communists_march
+	style = 1
+	
+	trigger = {
+		flag = der_untergang
+		event = { id = 8310100 days = 3 }
+		NOT = { area = { area = "Netherlands" country = -3 value = 25 } }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310111_A #"Amsterdam will be red. Let's remain where we are."
+		ai_chance = 80
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = MAN value = 0 }
+		command = { type = peace which = MEN value = 0 }
+		command = { trigger = { exists = U05 } type = inherit which = U05 } # We consolidate our colonies
+		command = { trigger = { NOT = { exists = INO } } type = country which = INO } # We become Indonesia
+	}
+	
+	action = {
+		ai_chance = 20
+		name = EVT_8310111_B #"Try to reconciliate. Maybe it won't be so bad as it seems."
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = MAN value = 0 }
+		command = { type = peace which = MEN value = 0 }
+		# We will have communist government but remain one state
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = free_market value = 2 }
+		command = { type = set_domestic which = interventionism value = 1 }
+	}
+}
+
+### Soviet France
+
+event = {
+	id = 8310112
+	tag = { FRA U01 }
+
+	name = EVT_8310112_NAME
+	desc = EVT_8310112_DESC
+	picture = nwo\communists_march
+	style = 1
+	
+	trigger = {
+		flag = der_untergang
+		event = { id = 8310100 days = 3 }
+		NOT = { region = { region = "France" country = -3 value = 25 } }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310112_A #"All in vain"
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = MAN value = 0 }
+		command = { type = peace which = MEN value = 0 }
+		
+		command = { trigger = { exists = U01 NOT = { country = U01 } } type = inherit which = U01 } # We consolidate our colonies
+		command = { trigger = { exists = FRA NOT = { country = FRA } } type = inherit which = FRA } # We consolidate our colonies
+		
+		command = { type = independence which = LEB value = 0 } # Lebanon
+		command = { type = independence which = SYR value = 0 } # Syria
+		command = { type = independence which = MOR value = 0 } # Morocco
+		command = { type = independence which = TUN value = 0 } # Tunisia
+		command = { type = independence which = MAD value = 0 } # Madagascar
+		command = { type = independence which = U85 value = 0 } # Congo-Brazzaville
+		command = { type = independence which = GAB value = 0 } # Gabon
+		command = { type = independence which = U82 value = 0 } # Central Africa
+		command = { type = independence which = CAM value = 0 } # Cameroon
+		command = { type = independence which = U84 value = 0 } # Chad
+		command = { type = independence which = U94 value = 0 } # Niger
+		command = { type = independence which = U99 value = 0 } # Togo
+		command = { type = independence which = GUI value = 0 } # Guinea
+		command = { type = independence which = U88 value = 0 } # Ivory Coast
+		command = { type = independence which = U81 value = 0 } # Upper Volta
+		command = { type = independence which = BEN value = 0 } # Benin
+		command = { type = independence which = U96 value = 0 } # Senegal
+		command = { type = independence which = U93 value = 0 } # Mauritania
+		command = { type = independence which = MAL value = 0 } # Mali
+		command = { type = independence which = LAO value = 0 } # Laos
+		command = { type = independence which = CMB value = 0 } # Cambodia
+		command = { type = independence which = VIE value = 0 } # Nationalist Vietnam
+		
+		command = { type = secedeprovince which = USA value = 875 } # Cayenne
+		command = { type = secedeprovince which = USA value = 899 } # Martinique
+		command = { type = secedeprovince which = USA value = 898 } # Guadelope
+		command = { type = secedeprovince which = ENG value = 1037 } # Djibouti
+		command = { type = secedeprovince which = USA value = 1689 } # Espiritu Santo
+		command = { type = secedeprovince which = USA value = 1690 } # Efate
+		command = { type = secedeprovince which = USA value = 1688 } # Bank Island
+		command = { type = secedeprovince which = USA value = 1687 } # Mare
+		command = { type = secedeprovince which = USA value = 1691 } # Lifon
+		command = { type = secedeprovince which = USA value = 1692 } # Noumea
+		command = { type = secedeprovince which = USA value = 1751 } # Tahiti
+		command = { type = secedeprovince which = USA value = 1135 } # Reunion
+		
+		command = { trigger = { NOT = { exists = ALG } } type = country which = ALG } # We become Algeria
+	}
+	
+	action = {
+		ai_chance = 10
+		name = EVT_8310112_B #"Red but still standing as one"
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = MAN value = 0 }
+		command = { type = peace which = MEN value = 0 }
+		# We will have communist government but remain one state with our colonies
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = free_market value = 2 }
+		command = { type = set_domestic which = interventionism value = 1 }
+	}
+}
+
+###### PHASE THREE: LIBERATION OF THE NATIONS
+
+event = {
+	id = 8310200
+	country = REB
+	save_date = yes
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = der_untergang
+		event = { id = 8310100 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = { type = trigger which = 8310201 }
+		command = { type = trigger which = 8310202 }
+	}
+}
+
+### Liberation (US version)
+
+event = {
+	id = 8310201
+	country = USA
+	
+	name = EVT_8310201_NAME
+	desc = EVT_8310201_DESC
+	picture = nwo\allied_liberation_of_europe
+	style = 1
+	
+	action = {
+		name = EVT_8310201_A
+		command = { trigger = { region = { region = "France" value = 25 } } type = independence which = FRA value = 1 }
+		command = { trigger = { region = { region = "Italy" value = 25 } } type = independence which = ITA value = 1 }
+		command = { trigger = { region = { region = "Finland" value = 25 } } type = independence which = FIN value = 1 }
+		command = { trigger = { region = { region = "Anatolia" value = 25 } } type = independence which = TUR value = 1 }
+		command = { trigger = { OR = { area = { area = "Thrace" value = 50 } area = { area = "Attica" value = 50 } } } type = independence which = GRE value = 1 }
+		command = { trigger = { area = { area = "Albania" value = 50 } } type = independence which = ALB value = 1 }
+		command = { trigger = { area = { area = "Bulgaria" value = 40 } } type = independence which = BUL value = 1 }
+		command = { trigger = { OR = { area = { area = "South Romania" value = 50 } area = { area = "North Romania" value = 50 } area = { area = "Bessarabia" value = 100 } } } type = independence which = ROM value = 1 }
+		command = { trigger = { region = { region = "Portugal" value = 40 } } type = independence which = POR value = 1 }
+		command = { trigger = { region = { region = "Spain" value = 25 } } type = independence which = SPR value = 1 }
+		command = { trigger = { region = { region = "Switzerland" value = 35 } } type = independence which = SCH value = 1 }
+		command = { trigger = { region = { region = "Hungary" value = 35 } } type = independence which = HUN value = 1 }
+		command = { trigger = { region = { region = "Czechoslovakia" value = 35 } } type = independence which = CZE value = 1 }
+		command = { trigger = { region = { region = "Poland" value = 35 } } type = independence which = POL value = 1 }
+		command = { trigger = { region = { region = "Norway" value = 25 } } type = independence which = NOR value = 1 }
+		command = { trigger = { region = { region = "Sweden" value = 25 } } type = independence which = SWE value = 1 }
+		command = { trigger = { region = { region = "Denmark" value = 50 } } type = independence which = DEN value = 1 }
+		command = { trigger = { OR = { area = { area = "Flanders" value = 50 } area = { area = "Wallonia" value = 50 } } } type = independence which = BEL value = 1 }
+		command = { trigger = { area = { area = "Netherlands" value = 25 } } type = independence which = HOL value = 1 }
+		command = { trigger = { control = { province = 109 data = -1 } } type = independence which = LUX value = 1 }
+		command = { trigger = { area = { area = "Lithuania" value = 40 } } type = independence which = LIT value = 1 }
+		command = { trigger = { area = { area = "Latvia" value = 40 } } type = independence which = LAT value = 1 }
+		command = { trigger = { area = { area = "Estonia" value = 40 } } type = independence which = EST value = 1 }
+		
+		# Independence of Yugoslavia
+		command = { trigger = { AND = { area = { area = "East Serbia" value = 50 } area = { area = "Central Serbia" value = 50 } area = { area = "Bosnia" value = 50 } area = { area = "Croatia" value = 50 } } } type = independence which = YUG value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 338 data = -1 } } type = independence which = SER value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 332 data = -1 } } type = independence which = MTN value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 355 data = -1 } } type = independence which = BOS value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 352 data = -1 } } type = independence which = CRO value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 349 data = -1 } } type = independence which = SLV value = 1 }
+	}
+}
+
+### Liberation (SU version)
+
+event = {
+	id = 8310202
+	country = SOV
+	
+	name = EVT_8310202_NAME
+	desc = EVT_8310202_DESC
+	picture = nwo\soviet_liberation_of_europe
+	style = 1
+	
+	action = {
+		name = EVT_8310202_A
+		ai_chance = 100
+		command = { trigger = { region = { region = "France" value = 50 } } type = independence which = U11 value = 1 }
+		command = { trigger = { region = { region = "Italy" value = 25 } } type = independence which = U14 value = 1 }
+		command = { trigger = { region = { region = "Finland" value = 25 } } type = independence which = U20 value = 1 }
+		command = { trigger = { region = { region = "Anatolia" value = 25 } } type = independence which = U34 value = 1 }
+		command = { trigger = { OR = { area = { area = "Thrace" value = 50 } area = { area = "Attica" value = 50 } } } type = independence which = U33 value = 1 }
+		command = { trigger = { area = { area = "Albania" value = 50 } } type = independence which = U28 value = 1 }
+		command = { trigger = { area = { area = "Bulgaria" value = 40 } } type = independence which = U29 value = 1 }
+		command = { trigger = { OR = { area = { area = "South Romania" value = 50 } area = { area = "North Romania" value = 50 } area = { area = "Bessarabia" value = 100 } } } type = independence which = U30 value = 1 }
+		command = { trigger = { region = { region = "Portugal" value = 40 } } type = independence which = U15 value = 1 }
+		command = { trigger = { region = { region = "Spain" value = 25 } } type = independence which = U35 value = 1 }
+		command = { trigger = { region = { region = "Switzerland" value = 35 } } type = independence which = U26 value = 1 }
+		command = { trigger = { region = { region = "Hungary" value = 35 } } type = independence which = U13 value = 1 }
+		command = { trigger = { region = { region = "Czechoslovakia" value = 35 } } type = independence which = U31 value = 1 }
+		command = { trigger = { region = { region = "Poland" value = 35 } } type = independence which = U32 value = 1 }
+		command = { trigger = { region = { region = "Norway" value = 25 } } type = independence which = U19 value = 1 }
+		command = { trigger = { region = { region = "Sweden" value = 25 } } type = independence which = U21 value = 1 }
+		command = { trigger = { region = { region = "Denmark" value = 50 } } type = independence which = U22 value = 1 }
+		command = { trigger = { OR = { area = { area = "Flanders" value = 50 } area = { area = "Wallonia" value = 50 } } } type = independence which = U17 value = 1 }
+		command = { trigger = { area = { area = "Netherlands" value = 25 } } type = independence which = U10 value = 1 }
+		command = { trigger = { control = { province = 109 data = -1 } } type = independence which = U18 value = 1 }
+		
+		# Independence of Yugoslavia
+		command = { trigger = { AND = { area = { area = "East Serbia" value = 50 } area = { area = "Central Serbia" value = 50 } area = { area = "Bosnia" value = 50 } area = { area = "Croatia" value = 50 } } } type = independence which = U27 value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 338 data = -1 } } type = independence which = SER value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 332 data = -1 } } type = independence which = MTN value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 355 data = -1 } } type = independence which = BOS value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 352 data = -1 } } type = independence which = CRO value = 1 }
+		command = { trigger = { NOT = { exists = YUG exists = U27 } owned = { province = 349 data = -1 } } type = independence which = SLV value = 1 }
+		
+		# Puppetization (if applies)
+		command = { type = make_puppet which = U10 }
+		command = { type = make_puppet which = U11 }
+		command = { type = make_puppet which = U12 }
+		command = { type = make_puppet which = U13 }
+		command = { type = make_puppet which = U14 }
+		command = { type = make_puppet which = U15 }
+		command = { type = make_puppet which = U16 }
+		command = { type = make_puppet which = U17 }
+		command = { type = make_puppet which = U18 }
+		command = { type = make_puppet which = U19 }
+		command = { type = make_puppet which = U20 }
+		command = { type = make_puppet which = U21 }
+		command = { type = make_puppet which = U22 }
+		command = { type = make_puppet which = U26 }
+		command = { trigger = { NOT = { flag = tito_uprising_successful } }type = make_puppet which = U27 }
+		command = { type = make_puppet which = U28 }
+		command = { type = make_puppet which = U29 }
+		command = { type = make_puppet which = U30 }
+		command = { type = make_puppet which = U31 }
+		command = { type = make_puppet which = U32 }
+		command = { type = make_puppet which = U33 }
+		command = { type = make_puppet which = U34 }
+		command = { type = make_puppet which = U35 }
+        
+        # Setting control flag
+        command = { type = setflag which = soviet_control_cee_0 }
+	}
+	
+	action = {
+		name = EVT_8310202_B
+		ai_chance = 0
+		command = { type = dissent value = 50 }
+		command = { type = belligerence value = 300 }
+		# Sleep Eastern Germany independence
+		command = { type = sleepevent which = 8204001 }
+		command = { type = sleepevent which = 8204003 }
+	}
+}
+
+# Liberation of Iceland and secession of Greenland
+
+event = {
+	id = 8310203
+	country = USA
+
+	name = EVT_8310203_NAME
+	desc = EVT_8310203_DESC
+	picture = nwo\greenland
+	style = 1
+	
+	trigger = {
+		flag = der_untergang
+		OR = {
+			AND = {
+				exists = DEN
+				control = { province = 1783 data = -1 }
+			}
+			NOT = { exists = ICL }
+		}
+		event = { id = 8310200 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8310203_A
+		command = { type = secedeprovince which = DEN value = 800 } # Greenland
+		command = { type = independence which = ICL value = 1 when = 1  }
+		
+	}
+}
+
+event = {
+	id = 8310204
+	country = SOV
+
+	name = EVT_8310204_NAME
+	desc = EVT_8310204_DESC
+	picture = nwo\territorial_exchanges
+	style = 1
+	
+	trigger = {
+		flag = der_untergang
+		exists = U32
+		NOT = { exists = POL }
+		event = { id = 8310200 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Historical: Compensate loss of Kresy with Oder-Neisse line
+	action = {
+		name = EVT_8310204_A 
+		ai_chance = 96
+		command = { type = relation which = U32 value = 100 }
+	}
+	
+	# Eastern Neisse line
+	action = {
+		name = EVT_8310204_B 
+		ai_chance = 2
+		command = { type = relation which = U32 value = -100 }
+		command = { type = local_setflag which = poland_west_moregains }
+	}
+	
+	# Little concessions
+	action = {
+		name = EVT_8310204_B 
+		ai_chance = 1
+		command = { type = relation which = U32 value = -100 }
+		command = { type = local_setflag which = poland_west_littlegains }
+	}
+	
+	# Bring back the Boleslaw I's borders!
+	action = {
+		name = EVT_8310204_B 
+		ai_chance = 1
+		command = { type = relation which = U32 value = -100 }
+		command = { type = local_setflag which = poland_west_hugegains }
+	}
+}
+
+###### PHASE FOUR: TERRITORIAL EXCHANGES
+
+event = {
+	id = 8310300
+	country = REB
+	save_date = yes
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = der_untergang
+		event = { id = 8310200 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = { type = trigger which = 8310301 }
+		command = { type = trigger which = 8310302 }
+	}
+}
+
+event = {
+	id = 8310301
+	country = USA
+	
+	name = EVT_8310301_NAME
+	desc = EVT_8310301_DESC
+	picture = nwo\territorial_exchanges
+	style = 1
+	
+	action = {
+		name = EVT_8310301_A
+		command = { type = secederegion which = FRA value = "France" when = 1 }
+		command = { type = secederegion which = U11 value = "France" when = 1 }
+		
+		command = { type = secederegion which = ITA value = "Italy" when = 1 }
+		command = { type = secederegion which = U14 value = "Italy" when = 1 }
+		
+		command = { type = secedearea which = FIN value = "Oesterbotten" when = 1 }
+		command = { type = secedearea which = FIN value = "South Finland" when = 1 }
+		command = { type = secedearea which = FIN value = "Central Finland" when = 1 }
+		command = { type = secedeprovince which = FIN value = 514 when = 1 }
+		command = { type = secedeprovince which = FIN value = 515 when = 1 }
+		command = { type = secedeprovince which = FIN value = 516 when = 1 }
+		command = { type = secedeprovince which = FIN value = 511 when = 1 }
+		command = { type = secedeprovince which = FIN value = 513 when = 1 }
+		command = { type = secedearea which = U20 value = "Oesterbotten" when = 1 }
+		command = { type = secedearea which = U20 value = "South Finland" when = 1 }
+		command = { type = secedearea which = U20 value = "Central Finland" when = 1 }
+		command = { type = secedeprovince which = U20 value = 514 when = 1 }
+		command = { type = secedeprovince which = U20 value = 515 when = 1 }
+		command = { type = secedeprovince which = U20 value = 516 when = 1 }
+		command = { type = secedeprovince which = U20 value = 511 when = 1 }
+		command = { type = secedeprovince which = U20 value = 513 when = 1 }
+		
+		command = { type = secederegion which = TUR value = "Anatolia" when = 1 }
+		command = { type = secederegion which = U34 value = "Anatolia" when = 1 }
+		
+		command = { type = secedearea which = GRE value = "Thrace" when = 1 }
+		command = { type = secedearea which = GRE value = "Attica" when = 1 }
+		command = { type = secedearea which = U33 value = "Thrace" when = 1 }
+		command = { type = secedearea which = U33 value = "Attica" when = 1 }
+		
+		command = { type = secedearea which = ALB value = "Albania" when = 1 }
+		command = { type = secedearea which = U28 value = "Albania" when = 1 }
+		
+		command = { type = secedearea which = BUL value = "Bulgaria" when = 1 }
+		command = { type = secedearea which = U29 value = "Bulgaria" when = 1 }
+		
+		command = { type = secedearea which = ROM value = "South Romania" when = 1 }
+		command = { type = secedearea which = ROM value = "North Romania" when = 1 }
+		command = { type = secedearea which = ROM value = "Bessarabia" when = 1 }
+		command = { type = secedearea which = U30 value = "South Romania" when = 1 }
+		command = { type = secedearea which = U30 value = "North Romania" when = 1 }
+		command = { type = secedearea which = U30 value = "Bessarabia" when = 1 }
+		
+		command = { type = secederegion which = POR value = "Portugal" when = 1 }
+		command = { type = secederegion which = U15 value = "Portugal" when = 1 }
+		
+		command = { type = secederegion which = SPR value = "Spain" when = 1 }
+		command = { type = secederegion which = U35 value = "Spain" when = 1 }
+		
+		command = { type = secederegion which = SCH value = "Switzerland" when = 1 }
+		command = { type = secederegion which = U26 value = "Switzerland" when = 1 }
+		
+		command = { type = secederegion which = HUN value = "Hungary" when = 1 }
+		command = { type = secederegion which = U13 value = "Hungary" when = 1 }
+		
+		command = { type = secederegion which = CZE value = "Czechoslovakia" when = 1 }
+		command = { type = secederegion which = U31 value = "Czechoslovakia" when = 1 }
+		
+		command = { type = secederegion which = POL value = "Poland" when = 1 }
+		command = { type = secederegion which = U32 value = "Poland" when = 1 }
+		command = { type = secedeprovince which = POL value = 181 when = 2 }
+		command = { type = secedeprovince which = POL value = 183 when = 2 }
+		command = { type = secedeprovince which = POL value = 185 when = 2 }
+		command = { type = secedeprovince which = POL value = 164 when = 2 }
+		command = { type = secedeprovince which = POL value = 168 when = 2 }
+		command = { type = secedeprovince which = POL value = 221 when = 2 }
+		command = { type = secedeprovince which = POL value = 161 when = 2 }
+		
+		command = { type = secederegion which = NOR value = "Norway" when = 1 }
+		command = { type = secederegion which = U19 value = "Norway" when = 1 }
+		
+		command = { type = secederegion which = SWE value = "Sweden" when = 1 }
+		command = { type = secederegion which = U21 value = "Sweden" when = 1 }
+		
+		command = { type = secederegion which = DEN value = "Denmark" when = 1 }
+		command = { type = secederegion which = U22 value = "Denmark" when = 1 }
+		
+		command = { type = secedearea which = BEL value = "Flanders" when = 1 }
+		command = { type = secedearea which = BEL value = "Wallonia" when = 1 }
+		command = { type = secedearea which = U17 value = "Flanders" when = 1 }
+		command = { type = secedearea which = U17 value = "Wallonia" when = 1 }
+		
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1 }
+		command = { type = secedearea which = U10 value = "Netherlands" when = 1 }
+		
+		command = { type = secedeprovince which = LUX value = 109 when = 1 }
+		command = { type = secedeprovince which = U18 value = 109 when = 1 }
+
+		command = { type = secedearea which = LIT value = "Lithuania" when = 1 }
+		
+		command = { type = secedearea which = LAT value = "Latvia" when = 1 }
+		
+		command = { type = secedearea which = EST value = "Estonia" when = 1 }
+		
+		command = { type = secedearea which = YUG value = "East Serbia" when = 1 }
+		command = { type = secedearea which = YUG value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = YUG value = "Bosnia" when = 1 }
+		command = { type = secedearea which = YUG value = "Croatia" when = 1 }
+		command = { type = secedearea which = U27 value = "East Serbia" when = 1 }
+		command = { type = secedearea which = U27 value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = U27 value = "Bosnia" when = 1 }
+		command = { type = secedearea which = U27 value = "Croatia" when = 1 }
+		
+		command = { type = secedeprovince which = MTN value = 332 when = 1 }
+		command = { type = secedeprovince which = MTN value = 335 when = 1 }
+		
+		command = { type = secedearea which = SER value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "East Serbia" when = 1 }
+		
+		command = { type = secedearea which = BOS value = "Bosnia" when = 1 }
+		
+		command = { type = secedeprovince which = SLV value = 346 when = 1 }
+		command = { type = secedeprovince which = SLV value = 349 when = 1 }
+		command = { type = secedeprovince which = SLV value = 403 when = 2 }
+		
+		command = { type = secedearea which = CRO value = "Croatia" when = 1 }
+		command = { type = secedeprovince which = CRO value = 406 when = 2 }
+	}
+}
+
+event = {
+	id = 8310302
+	country = SOV
+	
+	name = EVT_8310302_NAME
+	desc = EVT_8310302_DESC
+	picture = nwo\territorial_exchanges
+	style = 1
+	
+	action = {
+		name = EVT_8310302_A
+		command = { type = secederegion which = U11 value = "France" when = 1 }
+		command = { type = secederegion which = FRA value = "France" when = 1 }
+		
+		command = { type = secederegion which = U14 value = "Italy" when = 1 }
+		command = { type = secederegion which = ITA value = "Italy" when = 1 }
+			
+		command = { type = secedearea which = U20 value = "Oesterbotten" when = 1 }
+		command = { type = secedearea which = U20 value = "South Finland" when = 1 }
+		command = { type = secedearea which = U20 value = "Central Finland" when = 1 }
+		command = { type = secedeprovince which = U20 value = 514 when = 1 }
+		command = { type = secedeprovince which = U20 value = 515 when = 1 }
+		command = { type = secedeprovince which = U20 value = 516 when = 1 }
+		command = { type = secedeprovince which = U20 value = 511 when = 1 }
+		command = { type = secedeprovince which = U20 value = 513 when = 1 }
+		command = { type = secedearea which = FIN value = "Oesterbotten" when = 1 }
+		command = { type = secedearea which = FIN value = "South Finland" when = 1 }
+		command = { type = secedearea which = FIN value = "Central Finland" when = 1 }
+		command = { type = secedeprovince which = FIN value = 514 when = 1 }
+		command = { type = secedeprovince which = FIN value = 515 when = 1 }
+		command = { type = secedeprovince which = FIN value = 516 when = 1 }
+		command = { type = secedeprovince which = FIN value = 511 when = 1 }
+		command = { type = secedeprovince which = FIN value = 513 when = 1 }
+		
+		command = { type = secederegion which = U34 value = "Anatolia" when = 1 }
+		command = { type = secederegion which = TUR value = "Anatolia" when = 1 }
+		
+		command = { type = secedearea which = U33 value = "Thrace" when = 1 }
+		command = { type = secedearea which = U33 value = "Attica" when = 1 }
+		command = { type = secedearea which = GRE value = "Thrace" when = 1 }
+		command = { type = secedearea which = GRE value = "Attica" when = 1 }
+		
+		command = { type = secedearea which = U28 value = "Albania" when = 1 }
+		command = { type = secedearea which = ALB value = "Albania" when = 1 }
+		
+		command = { type = secedearea which = U29 value = "Bulgaria" when = 1 }
+		command = { type = secedearea which = BUL value = "Bulgaria" when = 1 }
+		
+		command = { type = secedearea which = U30 value = "South Romania" when = 1 }
+		command = { type = secedearea which = U30 value = "North Romania" when = 1 }
+		command = { type = secedearea which = U30 value = "Bessarabia" when = 1 }
+		command = { type = secedearea which = ROM value = "South Romania" when = 1 }
+		command = { type = secedearea which = ROM value = "North Romania" when = 1 }
+		command = { type = secedearea which = ROM value = "Bessarabia" when = 1 }
+		
+		command = { type = secederegion which = U15 value = "Portugal" when = 1 }
+		command = { type = secederegion which = POR value = "Portugal" when = 1 }
+		
+		command = { type = secederegion which = U35 value = "Spain" when = 1 }
+		command = { type = secederegion which = SPR value = "Spain" when = 1 }
+		
+		command = { type = secederegion which = U26 value = "Switzerland" when = 1 }
+		command = { type = secederegion which = SCH value = "Switzerland" when = 1 }
+		
+		command = { type = secederegion which = U13 value = "Hungary" when = 1 }
+		command = { type = secederegion which = HUN value = "Hungary" when = 1 }
+		
+		command = { type = secederegion which = U31 value = "Czechoslovakia" when = 1 }
+		command = { type = secederegion which = CZE value = "Czechoslovakia" when = 1 }
+		
+		command = { type = secedearea which = U32 value = "Poznan" when = 1 }
+		command = { type = secedearea which = U32 value = "Warsaw" when = 1 }
+		command = { type = secedearea which = U32 value = "Krakow" when = 1 }
+		
+		command = { type = secedeprovince which = U32 value = 181 when = 1 } # Danzing
+		command = { type = secedeprovince which = U32 value = 164 when = 1 } # Oppeln
+		command = { type = secedeprovince which = U32 value = 183 when = 1 } # Elbing
+		command = { type = secedeprovince which = U32 value = 185 when = 1 } # Allenstein
+		command = { type = secedeprovince which = U32 value = 239 when = 1 } # Przemysl
+		command = { type = secedeprovince which = U32 value = 250 when = 1 } # Lomza
+		command = { type = secedeprovince which = U32 value = 252 when = 1 } # Suwalki
+		command = { type = secedeprovince which = U32 value = 254 when = 1 } # Bialystok
+		command = { type = secedeprovince which = U32 value = 168 when = 1 } # Gleiwitz
+		
+		command = { trigger = { NOT = { local_flag = poland_west_littlegains } } type = secedeprovince which = U32 value = 166 when = 1 } # Waldenburg
+		command = { trigger = { NOT = { local_flag = poland_west_littlegains } } type = secedeprovince which = U32 value = 167 when = 1 } # Breslau
+		command = { trigger = { NOT = { local_flag = poland_west_littlegains } } type = secedeprovince which = U32 value = 155 when = 1 } # Stolp
+		command = { trigger = { NOT = { local_flag = poland_west_littlegains } } type = secedeprovince which = U32 value = 161 when = 1 } # Deutsch-Krone
+		command = { trigger = { NOT = { local_flag = poland_west_littlegains local_flag = poland_west_moregains } } type = secedeprovince which = U32 value = 158 when = 1 } # Stettin
+		command = { trigger = { NOT = { local_flag = poland_west_littlegains local_flag = poland_west_moregains } } type = secedeprovince which = U32 value = 159 when = 1 } # Meseritz
+		command = { trigger = { NOT = { local_flag = poland_west_littlegains local_flag = poland_west_moregains } } type = secedeprovince which = U32 value = 165 when = 1 } # Liegnitz
+		command = { trigger = { local_flag = poland_west_hugegains } type = secedeprovince which = U32 value = 172 when = 1 } # Cottbus
+		
+		
+		command = { type = secederegion which = POL value = "Poland" when = 1 }
+		command = { type = secedeprovince which = POL value = 181 when = 1 }
+		command = { type = secedeprovince which = POL value = 183 when = 1 }
+		command = { type = secedeprovince which = POL value = 185 when = 1 }
+		command = { type = secedeprovince which = POL value = 164 when = 1 }
+		command = { type = secedeprovince which = POL value = 168 when = 1 }
+		command = { type = secedeprovince which = POL value = 221 when = 1 }
+		command = { type = secedeprovince which = POL value = 161 when = 1 }
+		
+		command = { type = secederegion which = U19 value = "Norway" when = 1 }
+		command = { type = secederegion which = NOR value = "Norway" when = 1 }
+		
+		command = { type = secederegion which = U21 value = "Sweden" when = 1 }
+		command = { type = secederegion which = SWE value = "Sweden" when = 1 }
+		
+		command = { type = secederegion which = U22 value = "Denmark" when = 1 }
+		command = { type = secederegion which = DEN value = "Denmark" when = 1 }
+		
+		command = { type = secedearea which = U17 value = "Flanders" when = 1 }
+		command = { type = secedearea which = U17 value = "Wallonia" when = 1 }
+		command = { type = secedearea which = BEL value = "Flanders" when = 1 }
+		command = { type = secedearea which = BEL value = "Wallonia" when = 1 }
+		
+		command = { type = secedearea which = U10 value = "Netherlands" when = 1 }
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1 }
+		
+		command = { type = secedeprovince which = U18 value = 109 when = 1 }
+		command = { type = secedeprovince which = LUX value = 109 when = 1 }
+		
+		command = { type = secedearea which = U27 value = "East Serbia" when = 1 }
+		command = { type = secedearea which = U27 value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = U27 value = "Bosnia" when = 1 }
+		command = { type = secedearea which = U27 value = "Croatia" when = 1 }
+		command = { type = secedearea which = YUG value = "East Serbia" when = 1 }
+		command = { type = secedearea which = YUG value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = YUG value = "Bosnia" when = 1 }
+		command = { type = secedearea which = YUG value = "Croatia" when = 1 }
+		
+		command = { type = secedeprovince which = MTN value = 332 when = 1 }
+		command = { type = secedeprovince which = MTN value = 335 when = 1 }
+		
+		command = { type = secedearea which = SER value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "East Serbia" when = 1 }
+		
+		command = { type = secedearea which = BOS value = "Bosnia" when = 1 }
+		
+		command = { type = secedeprovince which = SLV value = 346 when = 1 }
+		command = { type = secedeprovince which = SLV value = 349 when = 1 }
+		command = { type = secedeprovince which = SLV value = 403 when = 2 }
+		
+		command = { type = secedearea which = CRO value = "Croatia" when = 1 }
+		command = { type = secedeprovince which = CRO value = 406 when = 2 }
+		
+		
+		command = { type = addcore which = 257 }
+		command = { type = addcore which = 258 }
+		command = { type = addcore which = 256 }
+		command = { type = addcore which = 255 }
+		command = { type = addcore which = 251 }
+		command = { type = addcore which = 248 }
+		command = { type = addcore which = 247 }
+		command = { type = addcore which = 253 }
+		command = { type = addcore which = 261 }
+		command = { type = addcore which = 182 }
+		command = { type = addcore which = 184 }
+		command = { type = addcore which = 249 }
+		command = { type = addcore which = 245 }
+		command = { type = addcore which = 244 }
+		command = { type = addcore which = 240 }
+		command = { type = addcore which = 238 }
+		command = { type = addcore which = 1543 }
+		command = { type = addcore which = 1119 }
+	}
+}
+
+### Minor territorial cessions
+
+event = {
+	id = 8310303
+	country = U30
+
+	name = EVT_8310303_NAME
+	desc = EVT_8310303_DESC
+	picture = nwo\bessarabia
+	style = 1
+	
+	trigger = { 
+		flag = der_untergang
+		event = { id = 8310300 days = 3 }
+		area = { area = "Bessarabia" value = 0 }
+		NOT = { exists = UKR }
+	}
+
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310303_A #"Cede Bessarabia to USSR"
+		command = { type = secedeprovince which = SOV value = 300 when = 1 } 
+		command = { type = secedeprovince which = SOV value = 302 when = 1 } 
+		command = { type = secedeprovince which = SOV value = 303 when = 1 } 
+		command = { type = secedeprovince which = SOV value = 304 when = 1 } 
+		command = { type = secedeprovince which = SOV value = 305 when = 1 } 
+		command = { type = secedeprovince which = SOV value = 306 when = 1 } 
+		command = { type = trigger which = 8310304 }
+	}
+}
+
+event = {
+	id = 8310304
+	country = SOV
+
+	name = EVT_8310304_NAME
+	desc = EVT_8310304_DESC
+	picture = nwo\bessarabia
+	style = 1
+	
+	action = {
+		name = EVT_8310304_A
+		command = { type = addcore which = 300 }
+		command = { type = addcore which = 302 }
+		command = { type = addcore which = 303 }
+		command = { type = addcore which = 304 }
+		command = { type = addcore which = 305 }
+		command = { type = addcore which = 306 }
+	}
+}
+
+event = {
+	id = 8310305
+	tag = { U13 U31 }
+
+	name = EVT_8310305_NAME
+	desc = EVT_8310305_DESC
+	picture = nwo\transcarpathia
+	style = 1
+	
+	trigger = { 
+		flag = der_untergang
+		event = { id = 8310300 days = 3 }
+		OR = {
+			control = { province = 213 data = -1 }
+			control = { province = 215 data = -1 }
+		}
+		NOT = { exists = UKR }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8310305_A
+		command = { type = secedeprovince which = SOV value = 213 when = 1 }
+		command = { type = secedeprovince which = SOV value = 215 when = 1 }
+		command = { type = trigger which = 8310306 }
+	}
+}
+
+event = {
+	id = 8310306
+	country = SOV
+
+	name = EVT_8310306_NAME
+	desc = EVT_8310306_DESC
+	picture = nwo\transcarpathia
+	style = 1
+	
+	action = {
+		name = EVT_8310306_A
+		command = { type = addcore which = 213 }
+		command = { type = addcore which = 215 }
+	}
+}
+
+###### PHASE FIVE: NORMALIZATION
+
+event = {
+	id = 8310400
+	tag = { FRA ITA FIN TUR GRE ALB BUL ROM POR SPR SCH HUN YUG CZE POL NOR SWE DEN BEL HOL LUX LIT LAT EST BLR UKR GEO ARM AZB U10 U11 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 } 
+	persistent = yes
+
+	name = EVT_8310400_NAME
+	desc = EVT_8310400_DESC
+	picture = nwo\postwar_normalization
+	style = 1
+	
+	trigger = { 
+		flag = der_untergang
+		NOT = { local_flag = event_8310400 }
+		event = { id = 8310300 days = 7 }
+		NOT = { local_flag = out_of_war }
+	}
+	
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8310400_A
+		
+		command = { trigger = { NOT = { flag = cold_war } } type = setflag which = cold_war } ### THE FLAG IS SET HERE
+		command = { type = local_setflag which = event_8310400 }
+		
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = supplies value = 500 }
+		command = { type = oilpool value = 200 }
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 2000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = money value = 100 }
+		
+		# 1
+		command = { trigger = { NOT = { country = LUX country = U18 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { NOT = { country = LUX country = U18 } } type = manpowerpool value = 20 }
+		
+		# 2
+		command = { trigger = { NOT = { country = LUX country = U18 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { NOT = { country = LUX country = U18 } } type = manpowerpool value = 20 }
+		
+		# 3
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 } } type = manpowerpool value = 20 }
+		
+		# 4
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 } } type = manpowerpool value = 20 }
+		
+		# 5
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 country = HOL country = U10 country = NOR country = U19 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 country = HOL country = U10 country = NOR country = U19 } } type = manpowerpool value = 20 }
+		
+		# 6
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 country = HOL country = U10 country = NOR country = U19 country = POR country = U15 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 country = HOL country = U10 country = NOR country = U19 country = POR country = U15 } } type = manpowerpool value = 20 }
+		
+		# 7
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 country = HOL country = U10 country = NOR country = U19 country = POR country = U15 country = HUN country = U13 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { NOT = { country = LUX country = U18 country = ALB country = U28 country = BUL country = U29 country = BEL country = U17 country = HOL country = U10 country = NOR country = U19 country = POR country = U15 country = HUN country = U13 } } type = manpowerpool value = 20 }
+		
+		# 8
+		command = { trigger = { OR = { country = YUG country = U27 country = ROM country = U30 country = POL country = U32 country = FIN country = U20 country = FRA country = U11 country = ITA country = U14 country = SPR country = U35 country = SWE country = U21 country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = YUG country = U27 country = ROM country = U30 country = POL country = U32 country = FIN country = U20 country = FRA country = U11 country = ITA country = U14 country = SPR country = U35 country = SWE country = U21 country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 9
+		command = { trigger = { OR = { country = ROM country = U30 country = POL country = U32 country = FRA country = U11 country = ITA country = U14 country = SPR country = U35 country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = ROM country = U30 country = POL country = U32 country = FRA country = U11 country = ITA country = U14 country = SPR country = U35 country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 10
+		command = { trigger = { OR = { country = ROM country = U30 country = POL country = U32 country = ITA country = U14 country = SPR country = U35 country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = ROM country = U30 country = POL country = U32 country = ITA country = U14 country = SPR country = U35 country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 11
+		command = { trigger = { OR = { country = POL country = U32 country = SPR country = U35 country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = POL country = U32 country = SPR country = U35 country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 12
+		command = { trigger = { OR = { country = POL country = U32 country = SPR country = U35 country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = POL country = U32 country = SPR country = U35 country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 13
+		command = { trigger = { OR = { country = POL country = U32 country = SPR country = U35 country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = POL country = U32 country = SPR country = U35 country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 14
+		command = { trigger = { OR = { country = SPR country = U35 country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = SPR country = U35 country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 15
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# 16
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = infantry when = 12 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = manpowerpool value = 20 }
+		
+		# Extra special divisions
+		command = { trigger = { OR = { country = YUG country = U27 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = BUL country = U29 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = BUL country = U29 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = POL country = U32 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = POL country = U32 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = POL country = U32 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = cavalry when = 12 }
+		command = { trigger = { OR = { country = FRA country = U11 } } type = add_division value = armor when = 3 }
+		command = { trigger = { OR = { country = FRA country = U11 } } type = add_division value = armor when = 3 }
+		command = { trigger = { OR = { country = SPR country = U35 } } type = add_division value = armor when = 3 }
+		command = { trigger = { OR = { country = FRA country = U11 } } type = add_division value = bergsjaeger when = 12 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = bergsjaeger when = 12 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = mechanized when = 1 }
+		command = { trigger = { OR = { country = TUR country = U34 } } type = add_division value = mechanized when = 1 }
+		command = { trigger = { OR = { country = FRA country = U11 } } type = add_division value = hq when = 4 }
+		
+		# Post-war cabinets
+		command = { trigger = { country = FRA } type = trigger which = 8005701 }
+		command = { trigger = { country = ITA } type = trigger which = 8007701 }
+		command = { trigger = { country = FIN } type = trigger which = 8005501 }
+		command = { trigger = { country = TUR } type = trigger which = 8015501 }
+		command = { trigger = { country = GRE } type = trigger which = 8006201 }
+		command = { trigger = { country = ALB } type = trigger which = 8000201 }
+		command = { trigger = { country = BUL } type = trigger which = 8002201 }
+		command = { trigger = { country = ROM } type = trigger which = 8012301 }
+		command = { trigger = { country = POR } type = trigger which = 8011701 }
+		# command = { trigger = { country = SPR } type = trigger which = ... }
+		command = { trigger = { country = SCH } type = trigger which = 8013101 }
+		command = { trigger = { country = HUN } type = trigger which = 8006901 }
+		command = { trigger = { country = YUG } type = trigger which = 8018301 }
+		command = { trigger = { country = CZE } type = trigger which = 8004201 }
+		command = { trigger = { country = POL } type = trigger which = 8011601 }
+		command = { trigger = { country = NOR } type = trigger which = 8010601 }
+		command = { trigger = { country = SWE } type = trigger which = 8014601 }
+		command = { trigger = { country = DEN } type = trigger which = 8004401 }
+		command = { trigger = { country = BEL } type = trigger which = 8001401 }
+		command = { trigger = { country = HOL } type = trigger which = 8006701 }
+		command = { trigger = { country = LUX } type = trigger which = 8009001 }
+		command = { trigger = { country = LIT } type = trigger which = 8008901 }
+		command = { trigger = { country = LAT } type = trigger which = 8008502 }
+		command = { trigger = { country = EST } type = trigger which = 8005202 }
+		command = { trigger = { country = BLR } type = trigger which = 8001702 }
+		command = { trigger = { country = UKR } type = trigger which = 8015601 }
+		command = { trigger = { country = GEO } type = trigger which = 8005902 }
+		command = { trigger = { country = GEO } type = trigger which = 8005903 }
+		command = { trigger = { country = ARM } type = trigger which = 8000902 }
+		command = { trigger = { country = ARM } type = trigger which = 8000903 }
+		command = { trigger = { country = AZB } type = trigger which = 8001301 }
+		command = { trigger = { country = AZB } type = trigger which = 8001302 }
+		#command = { trigger = { country = U10 } type = trigger which = ... }
+		#command = { trigger = { country = U11 } type = trigger which = ... }
+		#command = { trigger = { country = U13 } type = trigger which = ... }
+		#command = { trigger = { country = U14 } type = trigger which = ... }
+		#command = { trigger = { country = U15 } type = trigger which = ... }
+		#command = { trigger = { country = U16 } type = trigger which = ... }
+		#command = { trigger = { country = U17 } type = trigger which = ... }
+		#command = { trigger = { country = U18 } type = trigger which = ... }
+		#command = { trigger = { country = U19 } type = trigger which = ... }
+		#command = { trigger = { country = U20 } type = trigger which = ... }
+		#command = { trigger = { country = U21 } type = trigger which = ... }
+		#command = { trigger = { country = U22 } type = trigger which = ... }
+		#command = { trigger = { country = U26 } type = trigger which = ... }
+		#command = { trigger = { country = U27 } type = trigger which = ... }
+		#command = { trigger = { country = U28 } type = trigger which = ... }
+		#command = { trigger = { country = U29 } type = trigger which = ... }
+		#command = { trigger = { country = U30 } type = trigger which = ... }
+		#command = { trigger = { country = U31 } type = trigger which = ... }
+		#command = { trigger = { country = U32 } type = trigger which = ... }
+		#command = { trigger = { country = U33 } type = trigger which = ... }
+		#command = { trigger = { country = U34 } type = trigger which = ... }
+		#command = { trigger = { country = U35 } type = trigger which = ... }
+	}
+}
+
+###### THE END
+
+event = {
+	id = 8310500
+	country = REB
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = der_untergang
+		event = { id = 8310400 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = { type = clrflag which = der_untergang }
+	}
+}

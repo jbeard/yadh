@@ -1,0 +1,125 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the treaty states
+# Event List:
+#FIN, LAT, EST, LIT, POL, SER, YUG, ALB, U28, BEL, SCH 	13310010	Startup army for the traty-states.
+
+event = { 
+	id = 13310010																			 
+	persistent = yes
+	tag = { FIN LAT EST LIT POL SER YUG ALB U28 BEL SCH CZE }
+	
+	trigger = {
+		or = { 
+			and = {
+				NOT = { army = 2 }
+				NOT = { local_flag = civil_guards }
+				atwar = no #not for revolters
+				OR = { # TODO: Verify this is all of the treaties.
+					event = 2191512 #any treaty resulting in new nations being formed or dis-annexed
+					event = 2002534
+					event = 2024501
+					event = 2007529
+					event = 2007530
+				}
+			}
+			and = {
+				event = 2193501	 #reinforcement for poland, if the polish-soviet war is ongoing.
+				country = POL
+				war = { country = SOV }
+				not = { event = 2193502 }
+				not = { local_flag = polish_reinforcements }
+				or = { 
+					AND = {
+						control = { province = 250 data = SOV } #north occupied
+						control = { province = 254 data = SOV }
+						control = { province = 228 data = SOV }
+					}
+					AND = {
+						control = { province = 228 data = SOV } #the center can't hold!
+						control = { province = 229 data = SOV }
+						control = { province = 234 data = SOV }
+					}
+					AND = {
+						control = { province = 236 data = SOV } #Southern front beaten
+						control = { province = 237 data = SOV }
+						control = { province = 234 data = SOV }
+					} 
+				}
+			}
+		} 
+	}
+	
+	date = { day = 1 month = 1 year = 1914 }
+	offset = 3						
+	deathdate = { day = 1 month = 1 year = 1935 }
+	
+	name = "EVT_13310010_NAME"							
+	Desc = "EVT_13310010_DESC"
+	Picture = "economic" 
+	
+	action = { 	
+		name = "We need to create a civil guard."		
+		ai_chance = 100
+		trigger = { 
+			not = { 
+				event = 2193501
+				country = POL
+			} 
+		}
+		command = { type = local_setflag which = civil_guards }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = militia when = 1 where = police }
+		command = { type = manpowerpool value = 10 } # add a bit of manpower, just in case
+		command = { trigger = { event = 2193501 country = POL } type = manpowerpool value = 100 }
+	}
+
+	action = {
+		name = "We need to create a civil guard."
+		ai_chance = 100
+		trigger = {
+			AND = {
+			event = 2193501
+			country = POL }
+		}
+		command = { type = local_setflag which = civil_guards }
+		command = { type = add_division value = militia when = 1 where = police }
+		command = { type = add_division value = militia when = 1 where = none } #polish reinforcement in the war
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = militia when = 1 where = none }
+		command = { type = add_division value = infantry when = 1 where = none }
+		command = { type = supplies value = 5000 }
+		command = { type = local_setflag which = polish_reinforcements }
+		command = { type = manpowerpool value = 10 } # add a bit of manpower, just in case
+		command = { type = manpowerpool value = 100 }
+	}
+}

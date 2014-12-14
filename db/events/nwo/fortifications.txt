@@ -1,0 +1,259 @@
+### Jogjakarta
+event = {
+	id = 8961654
+	country = INO
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = INO country = U05 } # Indonesian National Revolution
+		control = { province = 1654 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1654 value = 1 } # Jogjakarta
+	}
+}
+
+### Soerabaja
+event = {
+	id = 8961653
+	country = INO
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = INO country = U05 } # Indonesian National Revolution
+		control = { province = 1653 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1653 value = 1 } # Jogjakarta
+	}
+}
+
+### Batavia
+event = {
+	id = 8961647
+	country = U05
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = INO country = U05 } # Indonesian National Revolution
+		control = { province = 1647 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1647 value = 3 } # Batavia
+	}
+}
+
+### Sinuiju
+event = {
+	id = 8961224
+	country = PRK
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = PRK country = KOR } # Korean War
+		control = { province = 1224 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1224 value = 3 } # Sinuiju
+	}
+}
+
+### Ganggye
+event = {
+	id = 8961226
+	country = PRK
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = PRK country = KOR } # Korean War
+		control = { province = 1226 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1226 value = 3 } # Ganggye
+	}
+}
+
+### Hamheung
+event = {
+	id = 8961227
+	country = PRK
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = PRK country = KOR } # Korean War
+		control = { province = 1227 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1227 value = 3 } # Hamheung
+	}
+}
+
+### Chongyin
+event = {
+	id = 8961225
+	country = PRK
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = PRK country = KOR } # Korean War
+		control = { province = 1225 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1225 value = 3 } # Chongyin
+	}
+}
+
+### Busan
+event = {
+	id = 8961232
+	country = KOR
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		war = { country = PRK country = KOR } # Korean War
+		control = { province = 1232 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1232 value = 3 } # Busan
+	}
+}
+
+# Jerusalem
+event = {
+	id = 8961008
+	country = ISR
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		war = { country = ISR country = PAL }
+		control = { province = 1008 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1008 value = 2 } # Tel Aviv
+	}
+}
+
+# Jerusalem
+event = {
+	id = 8961172
+	country = PAL
+
+	name = EVT_FORTIFICATIONS_NAME
+	desc = EVT_FORTIFICATIONS_DESC
+	picture = "nwo\fortifications"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		war = { country = ISR country = PAL }
+		control = { province = 1172 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = construct which = land_fort where = 1172 value = 2 } # Jerusalem
+	}
+}

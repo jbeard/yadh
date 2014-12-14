@@ -1,0 +1,48 @@
+U99;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+900900;Head of State;Sylvanus Olympio;1936;1963;1963;SL;Die-hard Reformer;Very High;togo1;x
+900901;Head of State;Kléber Dadjo;1944;1964;1964;SC;Resigned Generalissimo;Very High;unknown;x
+900902;Head of State;Adolf Friedrich zu Mecklenburg;1936;1964;1964;NS;Benevolent Gentleman;Very High;togo3;x
+900903;Head of State;Nicolas Grunitzky;1936;1964;1964;SD;Die-hard Reformer;Very High;togo2;x
+900904;Head of Government;Nicolas Grunitzky;1936;1964;1964;SD;Smiling Oilman;Very High;togo2;x
+900905;Head of Government;Kléber Dadjo;1944;1964;1964;SC;Old General;Very High;unknown;x
+900906;Head of Government;Adolf Friedrich zu Mecklenburg;1936;1964;1964;NS;Happy Amateur;Very High;togo3;x
+900907;Head of Government;Hans-Georg von Doering;1936;1964;1964;NS;Old General;Very High;unknown;x
+900908;Foreign Minister;Paulin Freitas;1936;1964;1964;SL;Great Compromiser;Very High;unknown;x
+900909;Foreign Minister;Adolf Friedrich zu Mecklenburg;1936;1964;1964;NS;General Staffer;Very High;togo3;x
+900910;Minister of Armament;Octaviano Olympio;1936;1964;1964;ML;Laissez-faire Capitalist;Very High;togo1;x
+900911;Minister of Armament;Nicolas Grunitzky;1936;1964;1964;SD;Laissez-faire Capitalist;Very High;togo2;x
+900912;Minister of Armament;Kwadwo Poku;1936;1964;1964;SC;Administrative Genius;Very High;togo6;x
+900913;Minister of Armament;Martin Aku;1936;1964;1964;LWR;Theoretical Scientist;Very High;unknown;x
+900914;Minister of Armament;Hans Gruner;1936;1964;1964;NS;Theoretical Scientist;Very High;togo4;x
+900915;Minister of Security;Nicolas Grunitzky;1936;1964;1964;SD;Compassionate Gentleman;Very High;togo2;x
+900916;Minister of Security;Kléber Dadjo;1944;1964;1964;SC;Prince of Terror;Very High;unknown;x
+900917;Minister of Security;Gottlob Krause;1936;1964;1964;NS;Man of the People;Very High;togo5;x
+900918;Head of Military Intelligence;Kwadwo Poku;1936;1964;1964;SC;Industrial Specialist;Very High;togo6;x
+900919;Chief of Staff;Kléber Dadjo;1944;1964;1964;SC;School of Fire Support;Very High;unknown;x
+900920;Chief of Staff;Nicolas Grunitzky;1936;1964;1964;SD;School of Fire Support;Very High;togo2;x
+900921;Chief of Staff;Hans-Georg von Doering;1936;1964;1964;NS;School of Defence;Very High;unknown;x
+900922;Chief of Army;Kléber Dadjo;1944;1964;1964;SC;Decisive Battle Doctrine;Very High;unknown;x
+900923;Chief of Army;Nicolas Grunitzky;1936;1964;1964;SD;Guns and Butter Doctrine;Very High;togo2;x
+900924;Chief of Army;Hans-Georg von Doering;1936;1964;1964;NS;Guns and Butter Doctrine;Very High;unknown;x
+900925;Chief of Navy;Jean Gout;1936;1964;1964;SL;Power Projection Doctrine;Very High;M2171;x
+900926;Chief of Navy;Kurt Freiwald;1936;1964;1964;NS;Base Control Doctrine;Very High;M194;x
+900927;Chief of Air Force;Raymond Roques;1936;1964;1964;SL;Carpet Bombing Doctrine;Very High;M2194;x
+900928;Chief of Air Force;Hans Ulrich Rudel;1936;1964;1964;NS;Air Superiority Doctrine;Very High;M210;x
+900929;Head of State;Léon Geismar;1936;1964;1964;SC;Die-Hard Reformer;Very High;M900929;x
+900930;Head of Government;Léon Geismar;1936;1964;1964;SC;Political Protege;Very High;M900929;x
+900931;Head of State;Michel Montagné;1937;1964;1964;SC;Weary Stiffneck;Very High;M900931;x
+900932;Head of Government;Michel Montagné;1937;1964;1964;SC;Smiling Oilman;Very High;M900931;x
+900933;Head of State;Léonce Delpech;1941;1964;1964;SC;Pig-Headed Isolationist;Very High;M900933;x
+900934;Head of Government;Léonce Delpech;1941;1964;1964;SC;Corporate Suit;Very High;M900933;x
+900935;Head of State;Pierre Salceti;1942;1964;1964;SC;Weary Stiffneck;Very High;M900935;x
+900936;Head of Government;Pierre Salceti;1942;1964;1964;SC;Happy Amateur;Very High;M900935;x
+900937;Head of State;Jean Noutary;1944;1964;1964;SC;Insignificant Layman;Very High;M900937;x
+900938;Head of Government;Jean Noutary;1944;1964;1964;SC;Backroom Backstabber;Very High;M900937;x
+900939;Head of State;Jean Cédile;1948;1964;1964;SC;Stern Imperialist;Very High;M900939;x
+900940;Head of Government;Jean Cédile;1948;1964;1964;SC;Naive Optimist;Very High;M900939;x
+900941;Head of State;Laurent Péchoux;1952;1964;1964;SC;Insignificant Layman;Very High;M900941;x
+900942;Head of Government;Laurent Péchoux;1952;1964;1964;SC;Corporate Suit;Very High;M900941;x
+900943;Head of State;Jean Bérard;1955;1964;1964;SC;Insignificant Layman;Very High;M900943;x
+900944;Head of Government;Jean Bérard;1955;1964;1964;SC;Corporate Suit;Very High;M900943;x
+900945;Head of State;Georges Spénale;1957;1984;1984;SC;Die-Hard Reformer;Very High;M900945;x
+900946;Head of Government;Sylvanus Olympio;1958;1963;1963;SL;Happy Amateur;Very High;togo1;x

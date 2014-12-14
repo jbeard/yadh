@@ -1,0 +1,362 @@
+event = {
+	id = 8006401
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665001 } # Louis P. Blacher
+		command = { type = headofgovernment which = 665002 } # Louis P. Blacher
+	}
+}
+
+event = {
+	id = 8006402
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665011 } # Antoine Giacobbi
+		command = { type = headofgovernment which = 665014 } # Antoine Giacobbi
+	}
+}
+
+event = {
+	id = 8006403
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665012 } # Horace Crocicchia
+		command = { type = headofgovernment which = 665015 } # Horace Crocicchia
+	}
+}
+
+event = {
+	id = 8006404
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665013 } # Edouard Terrac
+		command = { type = headofgovernment which = 665016 } # Edouard Terrac
+	}
+}
+
+event = {
+	id = 8006405
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665100 } # Roland Pr?
+		command = { type = headofgovernment which = 665101 } # Roland Pr?
+	}
+}
+
+event = {
+	id = 8006406
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665102 } # Paul Henri Siriex
+		command = { type = headofgovernment which = 665103 } # Paul Henri Siriex
+	}
+}
+
+event = {
+	id = 8006407
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665104 } # Jean Paul Parisot
+		command = { type = headofgovernment which = 665105 } # Jean Paul Parisot
+	}
+}
+
+event = {
+	id = 8006408
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665106 } # Charles-Henri Bonfils
+		command = { type = headofgovernment which = 665107 } # Charles-Henri Bonfils
+	}
+}
+
+event = {
+	id = 8006409
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 665108 } # Jean Ramadier
+		command = { type = headofgovernment which = 665109 } # Jean Ramadier
+	}
+}
+
+event = {
+	id = 8006410
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 665110 } # Ahmed Sékou Touré
+		command = { type = headofgovernment which = 665111 } # Ahmed Sékou Touré
+	}
+}
+
+event = {
+	id = 8006411
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 665112 } # Louis Lansana Beavogui
+	}
+}
+
+event = {
+	id = 8006412
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 665114 } # Lansana Conté
+		command = { type = headofgovernment which = 665113 } # Diarra Traoré
+	}
+}
+
+event = {
+	id = 8006413
+	country = GUI
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 665115 } # Lansana Conté
+	}
+}
+
+event = {
+	id = 8006414
+	country = GUI
+
+	name = EVT_8006414_NAME
+	desc = EVT_8006414_DESC
+	picture = nwo\operation_green_sea
+	decision_picture = nwo\d_operation_green_sea
+	style = 1
+
+	trigger = {
+		atwar = no
+		government = fascist
+		exists = GUI
+		domestic = { type = interventionism value = 2 }
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = EVT_8006414_A
+		ai_chance = 90
+		command = { type = belligerence value = 10 }
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 8006415 }
+	}
+	
+	action = {
+		name = EVT_8006414_B
+		trigger = { ai = yes }
+		ai_chance = 10
+		command = { type = money value = 1 }
+	}
+}
+
+event = {
+	id = 8006415
+	country = GUI
+	one_action = yes
+
+	name = EVT_8006415_NAME
+	desc = EVT_8006415_DESC
+	picture = nwo\operation_green_sea
+	style = 1
+	
+	action = {
+		name = EVT_8006415_A
+		ai_chance = 90
+		command = { type = relation which = POR value = -100 }
+	}
+	
+	action = {
+		name = EVT_8006415_B
+		ai_chance = 10
+		command = { type = dissent value = 10 }
+		command = { type = sleepminister which = 665110 } # Ahmed Sékou Touré
+		command = { type = sleepminister which = 665111 } # Ahmed Sékou Touré
+		command = { type = domestic which = political_left value = -4 }
+	}
+}

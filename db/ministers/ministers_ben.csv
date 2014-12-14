@@ -1,0 +1,130 @@
+BEN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+565001;Head of State;Leon Geismar;1933;1964;1964;SL;Ruthless Powermonger;High;M533001;X
+565002;Head of Government;Julien Georges Lamy;1933;1964;1964;SL;Backroom Backstabber;High;M533002;X
+565003;Foreign Minister;Hubert Deschamps;1933;1964;1964;SL;Iron Fisted Brute;High;M533003;X
+565004;Minister of Armament;Horace Valentin Crocicchia;1933;1964;1964;SL;Battle Fleet Proponent;Medium;M533004;X
+565005;Minister of Security;Louis Bressolles;1933;1964;1964;SL;Crime Fighter;Medium;M533005;X
+565006;Head of Military Intelligence;Albert Mercadier;1933;1964;1964;SL;Technical Specialist;Medium;M533006;X
+565007;Chief of Staff;Jean de Saint-Alary;1933;1964;1964;SL;School of Defence;Medium;M533007;X
+565008;Chief of Army;Leonce Joseph Delpech;1933;1964;1964;SL;Static Defence Doctrine;Medium;M533008;X
+565009;Chief of Navy;Francis d'Oultre Seille;1933;1964;1964;SL;Indirect Approach Doctrine;Medium;M533009;X
+565010;Chief of Air Force;Louis Flury-Hérard;1933;1964;1964;SL;Vertical Envelopment Doctrine;Medium;M533010;X
+565011;Head of State;Michel Lucien Montagne;1933;1964;1964;SL;Autocratic Charmer;High;M533011;X
+565012;Head of State;Leonce Joseph Delpech;1941;1964;1964;SL;Resigned Generalissimo;High;M533008;X
+565013;Head of State;Jean de Saint-Alary;1941;1964;1964;SL;Weary Stiffneck;High;M533007;X
+565014;Head of State;Pierre Salceti;1942;1964;1964;SL;Benevolent Gentleman;High;M533014;X
+565015;Head of State;Albert Mercadier;1943;1964;1964;SL;Stern Imperialist;High;M533006;X
+565016;Head of State;Jean Noutary;1944;1964;1964;SL;Pig-headed Isolationist;High;M533016;X
+565017;Head of State;Gaston Mondon-Vidailhet;1933;1964;1964;PA;Die-hard Reformer;High;M533017;X
+565018;Head of State;Felix Houphouet-Boigny;1933;1994;1994;LWR;Popular Figurehead;High;M533018;X
+565019;Head of Government;Gaston Mondon-Vidailhet;1933;1964;1964;SL;Corporate Suit;High;M533017;X
+565020;Head of Government;Louis Bressolles;1938;1964;1964;SL;Flamboyant Tough Guy;High;M533005;X
+565021;Head of Government;Horace Valentin Crocicchia;1938;1964;1964;SL;Old Admiral;High;M533004;X
+565022;Head of Government;Hubert Deschamps;1941;1964;1964;SL;Naive Optimist;High;M533003;X
+565023;Head of Government;Georges Pierre Rey;1942;1964;1964;SL;Naive Optimist;High;M533023;X
+565024;Head of Government;Andre Latrille;1943;1964;1964;SL;Old General;High;M533024;X
+565025;Head of Government;Henry de Mauduit;1945;1964;1964;SL;Ambitious Union Boss;High;M533025;X
+565026;Head of Government;Oswald Durand;1947;1964;1964;SL;Ambitious Union Boss;High;M533026;X
+565027;Head of Government;Georges Pierre Rey;1933;1964;1964;PA;Political Protege;High;M533023;X
+565028;Head of Government;Sylvanus Olympio;1933;1964;1964;LWR;Corporate Suit;High;M533028;X
+565029;Foreign Minister;Louis Picon;1940;1964;1964;SL;The Cloak N Dagger Schemer;High;M533029;X
+565030;Foreign Minister;Jean Noutary;1943;1964;1964;SL;Great Compromiser;High;M533016;X
+565031;Foreign Minister;Edme-Henri Gallois;1945;1964;1964;SL;Apologetic Clerk;High;M533031;X
+565032;Foreign Minister;Oswald Durand;1933;1964;1964;PA;Iron Fisted Brute;High;M533026;X
+565033;Foreign Minister;Nicolas Grunitzky;1933;1964;1964;LWR;Biased Intellectual;High;M533033;X
+565034;Foreign Minister;Souro Migan Apithy;1942;1964;1964;LWR;Ideological Crusader;High;M533034;X
+565035;Minister of Armament;Georges Pierre Rey;1939;1964;1964;SL;Submarine Proponent;Medium;M533023;X
+565036;Minister of Armament;Epiphanio Olympio;1941;1964;1964;SL;Military Entrepreneur;Medium;M533036;X
+565037;Minister of Armament;Raymond Echanne;1943;1964;1964;SL;laissez-faire capitalist;Medium;M533037;X
+565038;Minister of Armament;Charles Guéritault;1933;1964;1964;PA;Air to Ground Proponent;Medium;M533038;X
+565039;Minister of Armament;Hubert Maga;1933;1964;1964;LWR;Battle Fleet Proponent;Medium;M533039;X
+565040;Minister of Armament;Pierre Azenard;1941;1964;1964;LWR;Air Superiority Proponent;Medium;M533040;X
+565041;Minister of Security;Paul Milleliri;1941;1964;1964;SL;Back Stabber;Medium;M533041;X
+565042;Minister of Security;Henry de Mauduit;1943;1964;1964;SL;Man of the People;Medium;M533025;X
+565043;Minister of Security;André Lavergne;1945;1964;1964;SL;Prince of Terror;Medium;M533043;X
+565044;Minister of Security;Albert Doti;1933;1964;1964;PA;Back Stabber;Medium;M533044;X
+565045;Minister of Security;Maurice Yameogo;1933;1964;1964;LWR;Crime Fighter;Medium;M533045;X
+565046;Head of Military Intelligence;Charles Guéritault;1940;1964;1964;SL;Dismal Enigma;Medium;M533038;X
+565047;Head of Military Intelligence;Oswald Durand;1944;1964;1964;SL;Political Specialist;Medium;M533026;X
+565048;Head of Military Intelligence;Robert Joany;1933;1964;1964;PA;Naval Intelligence Specialist;Medium;M533048;X
+565049;Head of Military Intelligence;Hamani Diori;1933;1964;1964;LWR;Naval Intelligence Specialist;Medium;M533049;X
+565050;Head of Military Intelligence;Babacar Ba;1943;1964;1964;LWR;Industrial Specialist;Medium;M533050;X
+565051;Chief of Staff;Andre Latrille;1943;1964;1964;SL;School of Manoeuvre;Medium;M533024;X
+565052;Chief of Staff;Francis d'Oultre Seille;1933;1964;1964;PA;School of Defence;Medium;M533009;X
+565053;Chief of Staff;Akira Jomo;1933;1964;1964;LWR;School of Psychology;Medium;M533053;X
+565054;Chief of Staff;Ali Saibou;1941;1964;1964;LWR;School of Defence;Medium;M533054;X
+565055;Chief of Army;Pierre Salceti;1942;1964;1964;SL;Elastic Defence Doctrine;Medium;M533014;X
+565056;Chief of Army;Roger Podeur;1933;1964;1964;PA;Decisive Battle Doctrine;Medium;M533056;X
+565057;Chief of Army;Habib al-Aziz;1933;1964;1964;LWR;Elastic Defence Doctrine;Medium;M533057;X
+565058;Chief of Army;Yorgui Koli;1941;1964;1964;LWR;Guns and Butter Doctrine;Medium;M533058;X
+565059;Chief of Navy;Edmond Louveau;1942;1964;1964;SL;Base Control Doctrine;Medium;M533059;X
+565060;Chief of Navy;Jean Lassere;1933;1964;1964;PA;Base Control Doctrine;Medium;M533060;X
+565061;Chief of Navy;Francois Tombalbaye;1933;1964;1964;LWR;Power Projection Doctrine;Medium;M533061;X
+565062;Chief of Air Force;Fred Scamaroni;1941;1964;1964;SL;Army Aviation Doctrine;Medium;M533062;X
+565063;Chief of Air Force;Augustino de Souza;1933;1964;1964;PA;Naval Aviation Doctrine;Medium;M533063;X
+565064;Chief of Air Force;Auguste Denise;1933;1964;1964;LWR;Air Superiority Doctrine;Medium;M533064;X
+565101;Head of State;Maurice Bourgine;1936;1964;1964;SC;Benevolent Gentleman;Medium;M565101;x
+565102;Head of Government;Maurice Bourgine;1936;1964;1964;SC;Flamboyant Tough Guy;Medium;M565102;x
+565103;Head of State;Ernest Gayon;1937;1964;1964;SC;Powerhungry Demagogue;Medium;M565103;x
+565104;Head of Government;Ernest Gayon;1937;1964;1964;SC;Old Airmarshal;Medium;M565104;x
+565105;Head of State;Armand Annet;1938;1964;1964;SC;Powerhungry Demagogue;Medium;M565105;x
+565106;Head of Government;Armand Annet;1938;1964;1964;SC;Old Airmarshal;Medium;M565106;x
+565107;Head of State;Leon Truitard;1940;1964;1964;SC;Resigned Generalissimo;Medium;M565107;x
+565108;Head of Government;Leon Truitard;1940;1964;1964;SC;Flamboyant Tough Guy;Medium;M565108;x
+565109;Head of State;Charles Assier de Pompignan;1943;1964;1964;SC;Stern Imperialist;Medium;M565109;x
+565110;Head of Government;Charles Assier de Pompignan;1943;1964;1964;SC;Happy Amateur;Medium;M565110;x
+565111;Head of State;Robert Legendre;1946;1964;1964;SC;Benevolent Gentleman;Medium;M565111;x
+565112;Head of Government;Robert Legendre;1946;1964;1964;SC;Corporate Suit;Medium;M565112;x
+565113;Head of State;Jean-Georges Chambon;1948;1964;1964;SC;Barking Buffoon;Medium;M565113;x
+565114;Head of Government;Jean-Georges Chambon;1948;1964;1964;SC;Corporate Suit;Medium;M565114;x
+565115;Head of State;Claude Valluy;1949;1964;1964;SC;Ruthless Powermonger;Medium;M565115;x
+565116;Head of Government;Claude Valluy;1949;1964;1964;SC;Backroom Backstabber;Medium;M565116;x
+565117;Head of State;Charles-Henri Bonfils;1951;1964;1964;SC;Weary Stiffneck;Medium;M565117;x
+565118;Head of Government;Charles-Henri Bonfils;1951;1964;1964;SC;Old Airmarshal;Medium;M565118;x
+565119;Head of State;Marc-Casimir Biros;1955;1964;1964;SC;Ruthless Powermonger;Medium;M565119;x
+565120;Head of Government;Marc-Casimir Biros;1955;1964;1964;SC;Old Admiral;Medium;M565120;x
+565121;Head of State;Rene Tirant;1958;1964;1964;SL;Ruthless Powermonger;Medium;M565121;x
+565122;Head of Government;Rene Tirant;1958;1964;1964;SL;Silent Workhorse;Medium;M565122;x
+565123;Minister of Armament;Hubert Maga;1936;1964;1964;LWR;Battle Fleet Proponent;Medium;M533039;x
+565124;Minister of Security;Francis Marie Aupiais;1936;1964;1964;SL;Back Stabber;Medium;M565124;x
+565125;Head of Military Intelligence;Jacques Bertho;1936;1964;1964;SL;Dismal Enigma;Medium;M565125;x
+565126;Minister of Security;Justin Ahomadegbe-Tometin;1936;1964;1964;LWR;Crime Fighter;Medium;M565126;x
+565127;Head of Military Intelligence;David Dessou;1950;1964;1964;LWR;Political Specialist;Medium;M565127;x
+565128;Minister of Armament;Christophe Bokhiri;1950;1964;1964;LWR;Battle Fleet Proponent;Medium;M565128;x
+565129;Minister of Armament;Basile Adjou Moumoni;1950;1964;1964;LWR;Air Superiority Proponent;Medium;M565129;x
+565130;Foreign Minister;Mathieu Kerekou;1950;1964;1964;LWR;Iron Fisted Brute;Medium;M565130;x
+565131;Minister of Security;Emile Zinsou;1950;1964;1964;LWR;Prince of Terror;Medium;M565131;x
+565132;Head of Military Intelligence;Tahirou Congacou;1950;1964;1964;LWR;Industrial Specialist;Medium;M565132;x
+565133;Chief of Staff;Christophe Soglo;1950;1964;1964;LWR;School of Manoeuvre;Medium;M565133;x
+565134;Chief of Staff;Alphonse Alley;1950;1964;1964;LWR;School of Defence;Medium;M565134;x
+565135;Chief of Staff;Paul-Emile de Souza;1958;1964;1964;LWR;School of Psychology;Medium;M565135;x
+565136;Chief of Staff;Jean-Baptiste Hacheme;1958;1964;1964;LWR;School of Defence;Medium;M565136;x
+565137;Chief of Staff;Iropa Kouandete;1958;1964;1964;LWR;School of Defence;Medium;M565137;x
+565138;Chief of Army;Christophe Soglo;1950;1964;1964;LWR;Elastic Defence Doctrine;Medium;M565138;x
+565139;Chief of Army;Alphonse Alley;1950;1964;1964;LWR;Decisive Battle Doctrine;Medium;M565139;x
+565140;Chief of Army;Paul-Emile de Souza;1958;1964;1964;LWR;Elastic Defence Doctrine;Medium;M565140;x
+565141;Chief of Navy;Jean-Baptiste Hacheme;1958;1964;1964;LWR;Power Projection Doctrine;Medium;M565141;x
+565142;Chief of Air Force;Iropa Kouandete;1958;1964;1964;LWR;Army Aviation Doctrine;Medium;M565142;x
+565200;Head of State;Hubert Maga;1960;1964;1964;LWR;Autocratic Charmer;Medium;M565208;x
+565201;Head of Government;Hubert Maga;1960;1964;1964;LWR;Naive Optimist;Medium;M565208;x
+565202;Foreign Minister;Souro Migan Apithy;1942;1964;1964;LWR;Ideological Crusader;High;M533034;x
+565203;Head of Government;Christophe Soglo;1966;1984;1984;PA;Flamboyant Tough Guy;Medium;M565202;x
+565204;Head of State;Alphonse Amadou Alley;1967;1988;1988;PA;Weary Stiffneck;Medium;M565204;x
+565205;Head of Government;Iropa Maurice Kouandété;1967;2004;2004;PA;Corporate Suit;Medium;M565205;x
+565206;Head of State;Émile Zinsou;1968;2020;2020;SC;Barking Buffoon;Medium;M565206;x
+565207;Head of Government;Émile Zinsou;1968;2020;2020;SC;Naive Optimist;Medium;M565206;x
+565208;Head of State;Hubert Maga;1970;2020;2020;PA;Insignificant Layman;Medium;M565208;x
+565209;Head of Government;Hubert Maga;1970;2020;2020;PA;Silent Workhorse;Medium;M565208;x
+565210;Head of State;Mathieu Kérékou;1972;2020;2020;LE;Resigned Generalissimo;High;BEN1;X
+565211;Head of Government;Mathieu Kérékou;1972;2020;2020;LE;Backroom Backstabber;High;BEN1;X
+565212;Foreign Minister;Mathieu Kérékou;1980;2020;2020;LE;Iron Fisted Brute;High;BEN1;X
+565213;Minister of Armament;Mathieu Kérékou;1980;2020;2020;LE;Battle Fleet Proponent;High;BEN1;X
+565214;Minister of Security;Mathieu Kérékou;1980;2020;2020;LE;Crime Fighter;High;BEN1;X
+565215;Head of Military Intelligence;Mathieu Kérékou;1980;2020;2020;LE;Technical Specialist;High;BEN1;X
+565216;Chief of Staff;Mathieu Kérékou;1980;2020;2020;LE;School of Defence;High;BEN1;X
+565217;Chief of Army;Mathieu Kérékou;1980;2020;2020;LE;Static Defence Doctrine;High;BEN1;X
+565218;Chief of Navy;Mathieu Kérékou;1980;2020;2020;LE;Indirect Approach Doctrine;High;BEN1;X
+565219;Chief of Air Force;Mathieu Kérékou;1980;2020;2020;LE;Vertical Envelopment Doctrine;High;BEN1;X
+565220;Head of State;Sourou-Migan Apithy;1964;1990;1990;SC;Insignificant Layman;Medium;M565200;x
+565221;Head of Government;Justin Ahomadegbé-Tometin;1964;2003;2003;SC;Backroom Backstabber;Medium;M565201;x
+565222;Head of State;Christophe Soglo;1966;1984;1984;PA;Powerhungry Demagogue;Medium;M565202;x

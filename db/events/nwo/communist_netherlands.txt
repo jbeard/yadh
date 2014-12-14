@@ -1,0 +1,33 @@
+event = {
+	id = 8021001
+	country = U10
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 865003 } # Paul de Groot
+		command = { type = headofgovernment which = 865007 } # Daniel Goulooze
+		command = { type = foreignminister which = 865016 } # Willem van Ravesteyn
+		command = { type = armamentminister which = 865026 } # Jacobus Engels
+		command = { type = ministerofsecurity which = 865033 } # Hendrickus Sneevliet
+		command = { type = ministerofintelligence which = 865041 } # Ina Willekes-MacDonald
+		command = { type = chiefofstaff which = 865044 } # Geert Sterringa
+		command = { type = chiefofarmy which = 865048 } # Anthon Koejemans
+		command = { type = chiefofnavy which = 865050 } # Fokke Bosman
+		command = { type = chiefofair which = 865053 } # Julius Zegers
+	}
+}
+

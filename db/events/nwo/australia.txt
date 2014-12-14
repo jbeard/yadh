@@ -1,0 +1,2179 @@
+event = {
+	id = 8001001
+	country = AST
+
+	name = "EVT_GOVGENERAL_NAME"
+	desc = "EVT_GOVGENERAL_DESC"
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 225012 } # Henry Duke of Gloucester
+	}
+}
+
+event = {
+	id = 8001002
+	country = AST
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225017 } # Ben Chifley
+		command = { type = foreignminister which = 225028 } # Herbert V. Evatt
+		command = { type = armamentminister which = 225045 } # Stanley J. Goble
+		command = { type = ministerofsecurity which = 225064 } # Herbert V. Evatt
+		command = { type = ministerofintelligence which = 225076 } # John J. Dedman
+	}
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 225015 } # Robert G. Menzies
+		command = { type = foreignminister which = 225026 } # Earle Page
+		command = { type = armamentminister which = 225038 } # Palmer A. McBride
+		command = { type = ministerofsecurity which = 225062 } # Robert A. Parkhill
+		command = { type = ministerofintelligence which = 225074 } # Norman J. Makin
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001003
+	country = AST
+
+	name = "EVT_GOVGENERAL_NAME"
+	desc = "EVT_GOVGENERAL_DESC"
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 225111 } # William John McKell
+	}
+}
+
+event = {
+	id = 8001004
+	country = AST
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225015 } # Robert G. Menzies
+		command = { type = foreignminister which = 225122 } # Percy C. Spender
+		command = { type = armamentminister which = 225124 } # Eric John Harrison
+		command = { type = ministerofsecurity which = 225126 } # Palmer A. McBride
+		command = { type = ministerofintelligence which = 225130 } # John A. Spicer
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225017 } # Ben Chifley
+		command = { type = foreignminister which = 225028 } # Herbert V. Evatt
+		command = { type = armamentminister which = 225123 } # John J. Dedman
+		command = { type = ministerofsecurity which = 225125 } # Herbert V. Johnson
+		command = { type = ministerofintelligence which = 225076 } # John J. Dedman
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8001005
+	country = AST
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225015 } # Robert G. Menzies
+		command = { type = foreignminister which = 225122 } # Percy C. Spender
+		command = { type = armamentminister which = 225124 } # Eric John Harrison
+		command = { type = ministerofsecurity which = 225126 } # Palmer A. McBride
+		command = { type = ministerofintelligence which = 225130 } # John A. Spicer
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225017 } # Ben Chifley
+		command = { type = foreignminister which = 225028 } # Herbert V. Evatt
+		command = { type = armamentminister which = 225123 } # John J. Dedman
+		command = { type = ministerofsecurity which = 225125 } # Herbert V. Johnson
+		command = { type = ministerofintelligence which = 225076 } # John J. Dedman
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8001006
+	country = AST
+
+	name = "EVT_GOVGENERAL_NAME"
+	desc = "EVT_GOVGENERAL_DESC"
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 225131 } # Sir William Slim
+	}
+}
+
+event = {
+	id = 8001007
+	country = AST
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225015 } # Robert G. Menzies
+		command = { type = foreignminister which = 225139 } # Richard G. Casey
+		command = { type = armamentminister which = 225143 } # Philip A.M. McBride
+		command = { type = ministerofsecurity which = 225146 } # Allen Fairhall
+		command = { type = ministerofintelligence which = 225130 } # John A. Spicer
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225137 } # Herbert V. Evatt
+		command = { type = foreignminister which = 225028 } # Herbert V. Evatt
+		command = { type = armamentminister which = 225123 } # John J. Dedman
+		command = { type = ministerofsecurity which = 225125 } # Herbert V. Johnson
+		command = { type = ministerofintelligence which = 225076 } # John J. Dedman
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8001008
+	country = AST
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225015 } # Robert G. Menzies
+		command = { type = foreignminister which = 225139 } # Richard G. Casey
+		command = { type = armamentminister which = 225144 } # Athol G. Townley
+		command = { type = ministerofsecurity which = 225147 } # Gordon Freeth
+		command = { type = ministerofintelligence which = 225150 } # Garfield E. Barwick
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225137 } # Herbert V. Evatt
+		command = { type = foreignminister which = 225141 } # Arthur Calwell
+		command = { type = armamentminister which = 225145 } # Malcolm Fraser
+		command = { type = ministerofsecurity which = 225125 } # Herbert V. Johnson
+		command = { type = ministerofintelligence which = 225076 } # John J. Dedman
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8001009
+	country = AST
+
+	name = "EVT_GOVGENERAL_NAME"
+	desc = "EVT_GOVGENERAL_DESC"
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 225133 } # William Lord Dunrossil
+	}
+}
+
+event = {
+	id = 8001010
+	country = AST
+
+	name = "EVT_GOVGENERAL_NAME"
+	desc = "EVT_GOVGENERAL_DESC"
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 225135 } # William Lord De L'Isle
+	}
+}
+
+event = {
+	id = 8001011
+	country = AST
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225015 } # Robert G. Menzies
+		command = { type = foreignminister which = 225140 } # Garfield E. Barwick
+		command = { type = armamentminister which = 225144 } # Athol G. Townley
+		command = { type = ministerofsecurity which = 225147 } # Gordon Freeth
+		command = { type = ministerofintelligence which = 225150 } # Garfield E. Barwick
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225138 } # Arthur Calwell
+		command = { type = foreignminister which = 225142 } # Gough Whitlam
+		command = { type = armamentminister which = 225145 } # Malcolm Fraser
+		command = { type = ministerofsecurity which = 225148 } # Peter J. Nixon
+		command = { type = ministerofintelligence which = 225151 } # Lionel K. Murphy
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8001012
+	country = AST
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 225300 } # Richard Gardiner Casey
+	}
+}
+
+event = {
+	id = 8001013
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225301 } # Harold Holt
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225138 } # Arthur Calwell
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001014
+	country = AST
+
+	name = EVT_8001014_NAME
+	desc = EVT_8001014_DESC
+	picture = nwo\australian_shore
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 225301
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = EVT_8001014_A
+		ai_chance = 100
+		command = { type = sleepminister which = 225301 } # Harold Holt
+		command = { type = headofgovernment which = 225302 } # John Gorton
+	}
+}
+
+event = {
+	id = 8001015
+	country = AST
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 225303 } # Sir Paul Hasluck
+	}
+}
+
+event = {
+	id = 8001016
+	country = AST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 225302
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 225304 } # William McMahon
+	}
+}
+
+event = {
+	id = 8001017
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225305 } # Gough Whitlam
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225304 } # William McMahon
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001018
+	country = AST
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 225306 } # Sir John Robert Kerr
+	}
+}
+
+event = {
+	id = 8001019
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225307 } # Malcolm Fraser
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225305 } # Gough Whitlam
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001020
+	country = AST
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 225308 } # Sir Zelman Cowen
+	}
+}
+
+event = {
+	id = 8001021
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225307 } # Malcolm Fraser
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225305 } # Gough Whitlam
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8001022
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225307 } # Malcolm Fraser
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225309 } # Bill Hayden
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8001023
+	country = AST
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 225310 } # Sir Ninian Martin Stephen
+	}
+}
+
+event = {
+	id = 8001024
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225311 } # Bob Hawke
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225307 } # Malcolm Fraser
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001025
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225311 } # Bob Hawke
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225312 } # Andrew Peacock
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001026
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225311 } # Bob Hawke
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225313 } # John Howard
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8001027
+	country = AST
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 225314 } # William George Hayden
+	}
+}
+
+event = {
+	id = 8001028
+	country = AST
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 225311 } # Bob Hawke
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 225312 } # Andrew Peacock
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001029
+	country = AST
+
+	name = "EVT_8001029_NAME"
+	desc = "EVT_8001029_DESC"
+	picture = "nwo\dam"
+	style = 1
+
+	date = { day = 1 month = january year = 1955 } # Give a few years to experience the first results
+	offset = 720
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8001029_A"
+		command = { type = dissent value = -3 }
+		# Melbourne
+		command = { type = construct which = ic where = 1708 value = 2 }
+		command = { type = add_prov_resource which = 1708 value = 2 where = metal }
+		command = { type = add_prov_resource which = 1708 value = 4 where = energy }
+		command = { type = add_prov_resource which = 1708 value = 1 where = rare_materials }
+		# Canberra
+		command = { type = construct which = ic where = 1707 value = 3 }
+		command = { type = construct which = infrastructure where = 1707 value = 20 }
+		command = { type = add_prov_resource which = 1707 value = 3 where = metal }
+		command = { type = add_prov_resource which = 1707 value = 12 where = energy } # Big boost to energy production
+		command = { type = add_prov_resource which = 1707 value = 2 where = rare_materials }
+		# Sydney
+		command = { type = construct which = ic where = 1705 value = 2 }
+		command = { type = add_prov_resource which = 1705 value = 2 where = metal }
+		command = { type = add_prov_resource which = 1705 value = 4 where = energy }
+		command = { type = add_prov_resource which = 1705 value = 2 where = rare_materials }
+	}	
+}
+
+event = {
+	id = 8001030
+	random = no
+	country = AST
+	
+	name = "EVT_8001030_NAME"
+	desc = "EVT_8001030_DESC"
+	picture = "nwo\melbourne_1956"
+	style = 1
+	
+	trigger = {
+		NOT = { atwar = AST }
+	}
+
+	date = { day = 1 month = november year = 1956 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = "EVT_8001030_A"
+		command = { type = dissent value = -3 }
+		command = { type = construct which = infrastructure where = 1730 value = 10 }
+	}	
+}
+
+event = {
+	id = 8001031
+	country = AST
+
+	name = "EVT_8001031_NAME"
+	desc = "EVT_8001031_DESC"
+	picture = "nwo\population"
+	style = 1
+	
+	trigger = {
+		flag = cold_war_pacific
+		atwar = no
+	}
+
+	date = { day = 1 month = november year = 1946 }
+	offset = 600
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8001031_A"
+		# Melbourne
+		command = { type = province_manpower which = 1708 value = 1 }
+		# Canberra
+		command = { type = province_manpower which = 1707 value = 1 }
+		# Sydney
+		command = { type = province_manpower which = 1705 value = 1 }
+	}	
+}
+
+event = {
+	id = 8001032
+	country = AST
+
+	name = "EVT_8001032_NAME"
+	desc = "EVT_8001032_DESC"
+	picture = "nwo\australian_aborigines"
+	style = 1
+	
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+
+	date = { day = 1 month = november year = 1960 }
+	offset = 2000
+	deathdate = { day = 29 month = december year = 1970 }
+
+	action = {
+		name = "EVT_8001032_A"
+		command = { type = domestic which = freedom value = 2 }
+	}	
+}
+
+### The following events are from "Australia, A Nation Worth Fighting For 1914-1963" mod, courtesy of OneAussieMan777
+
+event = {
+	id = 8001050
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 7 month = February year = 1946 }
+
+	name = EVT_8001050_NAME
+	desc = EVT_8001050_DESC
+
+	action = {
+		name = EVT_8001050_A
+		command = { type = dissent value = 1 }
+		command = { type = building_prod_mod which = nuclear_reactor value = 20 }
+		command = { type = gain_tech which = 5470 }
+		command = { type = gain_tech which = 5480 }
+		command = { type = gain_tech which = 5490 }
+		command = { type = gain_tech which = 5500 }
+		#command = { type = gain_tech which = 5510 }
+		#command = { type = gain_tech which = 5520 }
+		#command = { type = gain_tech which = 5530 }
+		#command = { type = gain_tech which = 5540 }
+		command = { type = gain_tech which = 7170 }
+		command = { type = gain_tech which = 7180 }
+		command = { type = gain_tech which = 7190 }
+		command = { type = gain_tech which = 16010 }
+		command = { type = research_mod value = 2.5 }
+	}
+}
+		
+##NEED PEACE TRIGGER##
+event = {
+	id = 8001051
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 1 month = May year = 1946 }
+
+	name = EVT_8001051_NAME
+	desc = EVT_8001051_DESC
+	
+	trigger = { atwar = no }
+
+	action = {
+		name = EVT_8001051_A
+		ai_chance = 95
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = free_market value = 2 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+	}
+	action = {
+		name = EVT_8001051_B
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -2 }
+	}
+}
+
+event = {
+	id = 8001052
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 5 month = April year = 1946 }
+	
+	trigger = {
+		atwar = no
+	}
+
+	name = EVT_8001052_NAME
+	desc = EVT_8001052_DESC
+
+	action = {
+		name = EVT_8001052_A
+		command = { type = dissent value = -1 }
+		command = { type = relation which = AST value = 5 }
+		command = { type = relation which = ENG value = 5 }
+	}
+}
+
+event = {
+	id = 8001053
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 12 month = May year = 1946 }
+	
+	trigger = { flag = cold_war_pacific }
+
+	name = EVT_8001053_NAME
+	desc = EVT_8001053_DESC
+
+	action = {
+		name = EVT_8001053_A
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = range which = transport_plane value = 50 }
+		command = { type = range which = tactical_bomber value = 50 }
+		command = { type = range which = strategic_bomber value = 50 }
+		command = { type = range which = escort value = 50 }
+	}
+}
+
+event = {
+	id = 8001054
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 19 month = June year = 1946 }
+
+	name = EVT_8001054_NAME
+	desc = EVT_8001054_DESC
+
+	action = {
+		name = EVT_8001054_A
+		command = { type = construct which = infrastructure where = 1707 value = 10 } #Canberra
+		command = { type = research_mod value = 2 }
+	}
+}
+
+event = {
+	id = 8001055
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 9 month = September year = 1946 }
+
+	name = EVT_8001055_NAME
+	desc = EVT_8001055_DESC
+
+	action = {
+		name = EVT_8001055_A
+		command = { type = industrial_modifier which = total value = 2 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = tc_mod value = 5 }
+	}
+}
+
+event = {
+	id = 8001056
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 16 month = October year = 1946 }
+
+	name = EVT_8001056_NAME
+	desc = EVT_8001056_DESC
+
+	action = {
+		name = EVT_8001056_A
+		command = { type = industrial_modifier which = total value = -2 }
+		command = { type = industrial_modifier which = supplies value = -3 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 8001057
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 29 month = December year = 1946 }
+
+	name = EVT_8001057_NAME
+	desc = EVT_8001057_DESC
+
+	action = {
+		name = EVT_8001057_A
+		ai_chance = 98
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+	action = {
+		name = EVT_8001057_B
+		ai_chance = 2
+		command = { type = dissent value = 15 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -2 }
+	}
+}
+		
+event = {
+	id = 8001058
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 7 month = May year = 1947 }
+
+	name = EVT_8001058_NAME
+	desc = EVT_8001058_DESC
+
+	action = {
+		name = EVT_8001058_A
+		ai_chance = 90
+		command = { type = industrial_modifier which = total value = 1 }
+		command = { type = industrial_modifier which = supplies value = 1.5 }
+		command = { type = dissent value = -10 }
+	}
+	action = {
+		name = EVT_8001058_B
+		ai_chance = 8
+		command = { type = industrial_modifier which = total value = 2 }
+		command = { type = industrial_modifier which = supplies value = 3 }
+		command = { type = dissent value = 6 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action = {
+		name = EVT_8001058_C
+		ai_chance = 2
+		command = { type = industrial_modifier which = total value = 3 }
+		command = { type = industrial_modifier which = supplies value = 6 }
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = free_market value = -2 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = manpowerpool value = -5 }
+	}
+}
+
+event = {
+	id = 8001059
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 6 month = January year = 1947 }
+			
+	name = EVT_8001059_NAME
+	desc = EVT_8001059_DESC
+			
+	action = {
+		name = EVT_8001059_A
+		ai_chance = 95
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = free_market value = 3 }
+	}
+	action = {
+		name = EVT_8001059_B
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+	}
+}
+
+event = {
+	id = 8001060
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 17 month = January year = 1947 }
+			
+	name = EVT_8001060_NAME
+	desc = EVT_8001060_DESC
+	
+	trigger = {
+		NOT = { government = communist }
+		atwar = no
+		flag = cold_war_pacific
+	}
+			
+	action = {
+		name = EVT_8001060_A
+		command = { type = dissent value = -1 }
+		command = { type = intelligence which = them value = -2 }
+		command = { type = army_detection which = us value = 5 }
+		command = { type = intelligence which = us value = 5 }
+		command = { type = relation which = U02 value = 10 }
+		command = { type = relation which = IND value = 10 }
+		command = { type = relation which = JAP value = 10 }
+		command = { type = relation which = NZL value = 10 }
+		command = { type = relation which = FRA value = 10 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = USA value = 10 }
+		command = { type = relation which = AST value = 10 }
+		command = { type = relation which = SOV value = -20 }
+	}
+}
+
+event = {
+	id = 8001061
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 30 month = November Year = 1947 }
+			
+	name = EVT_8001061_NAME
+	desc = EVT_8001061_DESC
+			
+	action = {
+		name = EVT_8001061_A
+		command = { type = dissent value = -2 }
+		command = { type = relative_manpower value = 20 }
+	}
+}
+
+event = {
+	id = 8001062
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 26 month = December Year = 1947 }
+			
+	name = EVT_8001062_NAME
+	desc = EVT_8001062_DESC
+			
+	action = {
+		name = EVT_8001062_A
+		command = { type = dissent value = -2 }
+		command = { type = research_mod value = 2 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = AST value = 20 }
+	}
+}
+
+event = {
+	id = 8001063
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 4 month = February Year = 1948 }
+			
+	name = EVT_8001063_NAME
+	desc = EVT_8001063_DESC
+			
+	action = {
+		name = EVT_8001063_A
+		command = { type = dissent value = 20 }
+		command = { type = tc_mod value = -15 }
+	}
+}
+
+event = {
+	id = 8001064
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 2 month = April Year = 1948 }
+			
+	name = EVT_8001064_NAME
+	desc = EVT_8001064_DESC
+			
+	action = {
+		name = EVT_8001064_A
+		command = { type = dissent value = -20 }
+		command = { type = tc_mod value = 15 }
+	}
+}
+
+event = {
+	id = 8001065
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 22 month = September Year = 1948 }
+			
+	name = EVT_8001065_NAME
+	desc = EVT_8001065_DESC
+			
+	action = {
+		name = EVT_8001065_A
+		command = { type = dissent value = -2 }
+		command = { type = relative_manpower value = 5 }
+		command = { type = attrition_mod value = 5 }
+	}
+}
+
+event = {
+	id = 8001066
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 26 month = January Year = 1949 }
+			
+	name = EVT_8001066_NAME
+	desc = EVT_8001066_DESC
+			
+	action = {
+		name = EVT_8001066_A
+		command = { type = dissent value = -4 }
+	}
+}
+
+event = {
+	id = 8001067
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 20 month = June Year = 1949 }
+			
+	name = EVT_8001067_NAME
+	desc = EVT_8001067_DESC
+			
+	action = {
+		name = EVT_8001067_A
+		command = { type = dissent value = 2 }
+		command = { type = relation which = SOV value = -15 }
+	}
+	action = {
+		name = EVT_8001067_B
+		command = { type = dissent value = 7 }
+		command = { type = relation which = SOV value = -30 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	action = {
+		name = EVT_8001067_C
+		command = { type = dissent value = 14 }
+		command = { type = domestic which = political_left value = 4 }
+		command = { type = relation which = ENG value = -15 }
+		command = { type = relation which = USA value = -15 }
+		command = { type = relation which = SOV value = 25 }
+	}
+}
+
+event = {
+	id = 8001068
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 26 month = June Year = 1949 }
+			
+	name = EVT_8001068_NAME
+	desc = EVT_8001068_DESC	
+			
+	action = {
+		name = EVT_8001068_A
+		command = { type = dissent value = 24 }
+		command = { type = industrial_modifier which = total value = -15 }
+		command = { type = industrial_modifier which = supplies value = -25 }
+		command = { type = supplies value = -5000 }
+	}
+}
+
+
+event = {
+	id = 8001069
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 6 month = July Year = 1949 }
+			
+	name = EVT_8001069_NAME
+	desc = EVT_8001069_DESC
+			
+	action = {
+		name = EVT_8001069_A
+		ai_chance = 98
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+	action = {
+		name = EVT_8001069_B
+		ai_chance = 2
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+}
+
+event = {
+	id = 8001070
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 15 month = August Year = 1949 }
+			
+	name = EVT_8001070_NAME
+	desc = EVT_8001070_DESC
+	
+	trigger = { event = 8001068 }
+			
+	action = {
+		name = EVT_8001070_A
+		command = { type = dissent value = -12 }
+		command = { type = industrial_modifier which = total value = 15 }
+		command = { type = industrial_modifier which = supplies value = 25 }
+	}
+}
+
+event = {
+	id = 8001071
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 30 month = June Year = 1949 }
+			
+	name = EVT_8001071_NAME
+	desc = EVT_8001071_DESC
+			
+	action = {
+		name = EVT_8001071_A
+		command = { type = dissent value = -1 }
+		command = { type = intelligence which = them value = -10 }
+		command = { type = army_detection which = us value = 5 }
+		command = { type = intelligence which = us value = 10 }
+	}
+}
+
+event = {
+	id = 8001072
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 23 month = February year = 1950 }
+			
+	name = EVT_8001072_NAME
+	desc = EVT_8001072_DESC
+
+	action = {
+		name = EVT_8001072_A
+		command = { type = dissent value = 12.5 }
+		command = { type = tc_mod value = -12.5 }
+	}
+}
+
+event = {
+	id = 8001073
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 10 month = April year = 1950 }
+			
+	name = EVT_8001073_NAME
+	desc = EVT_8001073_DESC
+			
+	action = {
+		name = EVT_8001073_A
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = CHC value = -10 }
+	}
+}
+
+event = {
+	id = 8001074
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 29 month = June year = 1950 }
+		
+	name = EVT_8001074_NAME
+	desc = EVT_8001074_DESC
+	
+	trigger = { war = { country = PRK country = KOR } }
+
+	action = {
+		name = EVT_8001074_A
+		ai_chance = 98
+		command = { type = belligerence which = AST value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+	action = {
+		name = EVT_8001074_B
+		ai_chance = 2
+		command = { type = money value = 100 }
+	}
+}
+
+event = {
+	id = 8001075
+	country = AST
+	style = 1
+	picture = nwo\australia
+
+	date = { day = 24 month = April year = 1950 }
+			
+	name = EVT_8001075_NAME
+	desc = EVT_8001075_DESC
+			
+	action = {
+		name = EVT_8001075_A
+		command = { type = dissent value = -10 }
+		command = { type = tc_mod value = 12.5 }
+	}
+}
+
+##EVENT REPEATS AND BALANCES OUT##
+event = {
+	id = 8001076
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 16 month = October year = 1950 }
+			
+	name = EVT_8001076_NAME
+	desc = EVT_8001076_DESC
+			
+	action = {
+		name = EVT_8001076_A
+		command = { type = dissent value = 15 }
+		command = { type = industrial_modifier which = total value = -10 }
+		command = { type = industrial_modifier which = supplies value = -15 }
+		command = { type = tc_mod value = -20 }
+	}
+}
+
+##BALANCE FOR RAILWAY STRIKE##
+event = {
+	id = 8001077
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 18 month = December year = 1950 }
+	
+	trigger = { event = 8001076 }
+			
+	name = EVT_8001077_NAME
+	desc = EVT_8001077_DESC
+			
+	action = {
+		name = EVT_8001077_A
+		command = { type = dissent value = -15 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = industrial_modifier which = supplies value = 15 }
+		command = { type = tc_mod value = 20 }
+	}
+}
+
+event = {
+	id = 8001078
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 9 month = March Year = 1951 }
+			
+	name = EVT_8001078_NAME
+	desc = EVT_8001078_DESC
+			
+	action = {
+		name = EVT_8001078_A
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+
+	action = {
+		name = EVT_8001078_B
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -1 }
+	}
+	action = {
+		name = EVT_8001078_C
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = political_left value = 5 }
+		command = { type = domestic which = democratic value = -2 }
+	}
+}
+
+event = {
+	id = 8001079
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 16 month = March Year = 1951 }
+			
+	name = EVT_8001079_NAME
+	desc = EVT_8001079_DESC
+			
+	action = {
+		name = EVT_8001079_A
+		command = { type = dissent value = 2 }
+		command = { type = max_organization which = land value = 2 }
+		command = { type = max_organization which = naval value = 2 }
+		command = { type = max_organization which = air value = 2 }
+		command = { type = relative_manpower value = 5 }
+	}
+}
+
+event = {
+	id = 8001080
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 1 month = September Year = 1951 }
+			
+	name = EVT_8001080_NAME
+	desc = EVT_8001080_DESC
+			
+	action = {
+		name = EVT_8001080_A
+		command = { type = dissent value = -6 }
+		command = { type = relation which = USA value = 25 }
+		command = { type = relation which = NZL value = 25 }
+		command = { type = relation which = AST value = 25 }
+	}
+}
+
+event = {
+	id = 8001081
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 22 month = September Year = 1951 }
+			
+	name = EVT_8001081_NAME
+	desc = EVT_8001081_DESC
+	
+	trigger = { NOT = { government = communist } }
+			
+	action = {
+		name = EVT_8001081_A
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+
+	action = {
+		name = EVT_8001081_B
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+event = {
+	id = 8001082
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 8 month = September Year = 1952 }
+			
+	name = EVT_8001082_NAME
+	desc = EVT_8001082_DESC
+			
+	action = {
+		name = EVT_8001082_A
+		command = { type = relation which = AST value = 10 }
+		command = { type = relation which = FRA value = 10 }
+		command = { type = relation which = SIA value = 10 }
+		command = { type = relation which = NZL value = 10 }
+		command = { type = relation which = USA value = 10 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = U83 value = 10 }
+		command = { type = relation which = PHI value = 10 }
+	}
+}
+
+event = {
+	id = 8001083
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 15 month = April Year = 1953 }
+			
+	name = EVT_8001083_NAME
+	desc = EVT_8001083_DESC
+			
+	action = {
+		name = EVT_8001083_A
+		command = { type = research_mod value = 2 }
+		command = { type = building_prod_mod which = nuclear_reactor value = 25 }
+	}
+}
+
+event = {
+	id = 8001084
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 3 month = February Year = 1954 }
+			
+	name = EVT_8001084_NAME
+	desc = EVT_8001084_DESC
+			
+	action = {
+		name = EVT_8001084_A
+		command = { type = dissent value = -7 }
+		command = { type = relation which = ENG value = 100 }
+	}
+}
+
+event = {
+	id = 8001085
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 13 month = February Year = 1954 }
+			
+	name = EVT_8001085_NAME
+	desc = EVT_8001085_DESC
+			
+	action = {
+		name = EVT_8001085_A
+		command = { type = research_mod value = 2 }
+	}
+}
+
+event = {
+	id = 8001086
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 6 month = September Year = 1954 }
+			
+	name = EVT_8001086_NAME
+	desc = EVT_8001086_DESC
+			
+	action = {
+		name = EVT_8001086_A
+		ai_chance = 90
+		command = { type = industrial_modifier which = total value = 2.5 }
+		command = { type = industrial_modifier which = supplies value = 2.5 }
+		command = { type = relation which = USA value = 10 }
+		command = { type = relation which = ENG value = 10 }
+	}
+	action = {
+		name = EVT_8001086_B
+		ai_chance = 5
+		command = { type = industrial_modifier which = total value = 2.5 }
+		command = { type = industrial_modifier which = supplies value = 2.5 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = SOV value = 10 }
+		command = { type = dissent value = 15 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = political_left value = 2 }
+	}
+	action = {
+		name = EVT_8001086_C
+		ai_chance = 5
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = relation which = USA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = dissent value = 18 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = political_left value = -2 }
+	}
+}
+
+event = {
+	id = 8001087
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 23 month = April Year = 1955 }
+			
+	name = EVT_8001087_NAME
+	desc = EVT_8001087_DESC
+			
+	action = {
+		name = EVT_8001087_A
+		ai_chance = 90
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+	action = {
+		name = EVT_8001087_B
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+	action = {
+		name = EVT_8001087_C
+		ai_chance = 5
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+event = {
+	id = 8001088
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 17 month = January Year = 1955 }
+			
+	name = EVT_8001088_NAME
+	desc = EVT_8001088_DESC
+			
+	action = {
+		name = EVT_8001088_A
+		command = { type = relation which = USA value = 10 }
+		command = { type = research_mod value = 2 }
+		command = { type = relation which = AST value = 10 }
+	}
+}
+
+
+##BALANCED OUT LATER ON##
+event = {
+	id = 8001089
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 23 month = January Year = 1956 }
+			
+	name = EVT_8001089_NAME
+	desc = EVT_8001089_DESC
+			
+	action = {
+		name = EVT_8001089_A
+		command = { type = dissent value = 15 }
+		command = { type = tc_mod value = -45 }
+	}
+		}
+
+##BALANCED OUT LATER ON##
+event = {
+	id = 8001090
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 17 month = February Year = 1956 }
+			
+	name = EVT_8001090_NAME
+	desc = EVT_8001090_DESC
+			
+	action = {
+		name = EVT_8001090_A
+		command = { type = dissent value = 12 }
+		command = { type = industrial_modifier which = total value = -20 }
+		command = { type = industrial_modifier which = supplies value = -35 }
+	}
+}
+
+event = {
+	id = 8001091
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 18 month = February Year = 1956 }
+			
+	name = EVT_8001091_NAME
+	desc = EVT_8001091_DESC
+	
+	trigger = { event = 8001089 }
+			
+	action = {
+		name = EVT_8001091_A
+		command = { type = dissent value = -15 }
+		command = { type = tc_mod value = 45 }
+	}
+}
+
+event = {
+	id = 8001092
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 12 month = October year = 1956 }
+			
+	name = EVT_8001092_NAME
+	desc = EVT_8001092_DESC
+	
+	trigger = { event = 8001090 }
+			
+	action = {
+		name = EVT_8001092_A
+		command = { type = dissent value = -12 }
+		command = { type = industrial_modifier which = total value = 20 }
+		command = { type = industrial_modifier which = supplies value = 35 }
+	}
+}
+		
+event = {
+	id = 8001093
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 19 month = October year = 1956 }
+			
+	name = EVT_8001093_NAME
+	desc = EVT_8001093_DESC
+			
+	action = {	
+		name = EVT_8001093_A
+		command = { type = dissent value = -5 }
+		command = { type = industrial_modifier which = total value = 2 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+	}
+}
+
+event = {
+	id = 8001094
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 8 month = November year = 1956 }
+			
+	name = EVT_8001094_NAME
+	desc = EVT_8001094_DESC
+	
+	trigger = { NOT = { government = communist } }
+			
+	action = {	
+		name = EVT_8001094_A
+		command = { type = dissent value = -2 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = U13 value = -25 }
+		command = { type = province_manpower which = 1709 value = 3 } #Geelong#
+	}
+	action = {	
+		name = EVT_8001094_B
+		command = { type = dissent value = 5 }
+		command = { type = relation which = SOV value = 5 }
+		command = { type = relation which = U13 value = 5 }
+	}
+}
+		
+event = {
+	id = 8001095
+	country = AST
+	style = 1
+	picture = nwo\australia
+			
+	date = { day = 23 month = August Year = 1957 }
+			
+	name = EVT_8001095_NAME
+	desc = EVT_8001095_DESC
+			
+	action = {
+		name = EVT_8001095_A
+		command = { type = dissent value = -2 }
+		command = { type = tc_mod value = 2 }
+		command = { type = add_division which = "Ansett" value = transport_plane when = 5 }
+		command = { type = range which = transport_plane value = 150 }
+		command = { type = range which = strategic_bomber value = 150 }
+		command = { type = range which = tactical_bomber value = 150 }
+		command = { type = range which = naval_bomber value = 150 }
+	}	
+}
+		
+event = {
+	id = 8001096
+	country = AST
+	style = 1
+	picture = nwo\australia
+	
+	date = { day = 14 month = January Year = 1958 }
+			
+	name = EVT_8001096_NAME
+	desc = EVT_8001096_DESC
+			
+	action = {	
+		name = EVT_8001096_A
+		command = { type = dissent value = -5 }
+		command = { type = tc_mod value = 5 }
+		command = { type = range which = transport_plane value = 1000 }
+		command = { type = range which = strategic_bomber value = 1000 }
+		command = { type = range which = tactical_bomber value = 1000 }
+		command = { type = range which = naval_bomber value = 1000 }
+		command = { type = add_division which = "Southern Aurora" value = transport_plane when = 5 }
+		command = { type = add_division which = "Southern Zephyr" value = transport_plane when = 5 }
+	}	
+}

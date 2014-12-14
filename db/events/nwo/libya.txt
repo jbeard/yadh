@@ -1,0 +1,714 @@
+event = {
+	id = 8008601
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495100 } # Italo Balbo
+		command = { type = headofgovernment which = 495101 } # Italo Balbo
+	}
+}
+
+event = {
+	id = 8008602
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495102 } # Rodolfo Graziani
+		command = { type = headofgovernment which = 495103 } # Rodolfo Graziani
+	}
+}
+
+event = {
+	id = 8008603
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495104 } # Ettore Bastico
+		command = { type = headofgovernment which = 495105 } # Ettore Bastico
+	}
+}
+
+event = {
+	id = 8008604
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495106 } # Giovanni Messe
+		command = { type = headofgovernment which = 495107 } # Giovanni Messe
+	}
+}
+
+event = {
+	id = 8008605
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495108 } # Travers Robert Blackley
+		command = { type = headofgovernment which = 495109 } # Travers Robert Blackley
+	}
+}
+
+event = {
+	id = 8008606
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495110 } # Adrian Pelt
+		command = { type = headofgovernment which = 495109 } # Travers Robert Blackley
+	}
+}
+
+event = {
+	id = 8008607
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 495011 } # HM Idris I al Sanussi
+		command = { type = headofgovernment which = 495111 } # Mahmud al-Muntasir
+		command = { type = foreignminister which = 495015 } # Mahmud al-Muntasir
+		command = { type = armamentminister which = 495017 } # Umar Mansur Kikhia
+		command = { type = ministerofsecurity which = 495020 } # Mustafa ben Halim
+		command = { type = ministerofintelligence which = 495022 } # Abdul Kubar
+		command = { type = chiefofstaff which = 495024 } # Mahammad Sakizli
+		command = { type = chiefofarmy which = 495026 } # Mohammar Sidiq
+		command = { type = chiefofnavy which = 495028 } # H.R.H. Taher Khimlani
+		command = { type = chiefofair which = 495030 } # Ali al-Umlan
+	}
+}
+
+event = {
+	id = 8008608
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495011 } # HM Idris I al Sanussi
+		command = { type = headofgovernment which = 495112 } # Mustafa Ben Halim
+	}
+}
+
+event = {
+	id = 8008609
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495011 } # HM Idris I al Sanussi
+		command = { type = headofgovernment which = 495113 } # Abdul Majid Kubar
+	}
+}
+
+event = {
+	id = 8008610
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495011 } # HM Idris I al Sanussi
+		command = { type = headofgovernment which = 495114 } # Muhammad Osman Said
+	}
+}
+
+event = {
+	id = 8008611
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 495011 } # HM Idris I al Sanussi
+		command = { type = headofgovernment which = 495115 } # Mohieddin Fikini
+	}
+}
+
+event = {
+	id = 8008612
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495111 } # Mahmud al-Muntasir
+	}
+}
+
+event = {
+	id = 8008613
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495116 } # Hussein Maziq
+	}
+}
+
+event = {
+	id = 8008614
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495117 } # Abdul Hamid al-Bakkoush
+	}
+}
+
+event = {
+	id = 8008615
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495118 } # Wanis al-Qaddafi
+	}
+}
+
+event = {
+	id = 8008616
+	country = LBY
+
+	name = EVT_8008616_NAME
+	desc = EVT_8008616_DESC
+	picture = nwo\muammar_gaddafi
+	decision_picture = nwo\d_muammar_gaddafi
+	style = 1
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = EVT_8008616_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 495126 } # Muammar al-Gaddafi
+		command = { type = headofgovernment which = 495119 } # Mahmud Sulayman al-Maghribi
+		command = { type = flag_ext where = LBY which = _1969 }
+	}
+}
+
+event = {
+	id = 8008617
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495120 } # Muammar al-Gaddafi
+	}
+}
+
+event = {
+	id = 8008618
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495121 } # Abdessalam Jalloud
+	}
+}
+
+event = {
+	id = 8008619
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495122 } # Abdul Ati al-Obeidi
+	}
+}
+
+event = {
+	id = 8008620
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495123 } # Jadallah Azzuz at-Talhi
+	}
+}
+
+event = {
+	id = 8008621
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495127 } # Muhammad az-Zaruq Rajab
+	}
+}
+
+event = {
+	id = 8008622
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495123 } # Jadallah Azzuz at-Talhi
+	}
+}
+
+event = {
+	id = 8008623
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495124 } # Umar Mustafa al-Muntasir
+	}
+}
+
+event = {
+	id = 8008624
+	country = LBY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 495125 } # Abuzed Omar Dorda
+	}
+}
+
+event = {
+	id = 8008625
+	country = LBY
+
+	name = EVT_8008625_NAME
+	desc = EVT_8008625_DESC
+	picture = nwo\muammar_gaddafi
+	decision_picture = nwo\d_muammar_gaddafi
+	style = 1
+	
+	trigger = {
+		headofstate = 495126
+	}
+	
+	decision = {
+		headofstate = 495126
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = EVT_8008625_A
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = flag_ext where = LBY which = _1977 }
+	}
+}
+
+event = {
+	id = 8008626
+	country = LBY
+
+	name = EVT_8008626_NAME
+	desc = EVT_8008626_DESC
+	picture = nwo\great_manmade_river
+	decision_picture = nwo\d_great_manmade_river
+	style = 1
+	
+	trigger = {
+		headofstate = 495126
+	}
+	
+	decision = {
+		headofstate = 495126
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = EVT_8008626_A
+		ai_chance = 100
+		command = { type = construct which = ic where = 750 value = 4 }
+		command = { type = construct which = ic where = 761 value = 1 }
+		command = { type = construct which = infrastructure where = 750 value = 30 }
+		command = { type = construct which = infrastructure where = 757 value = 30 }
+		command = { type = construct which = infrastructure where = 756 value = 30 }
+		command = { type = construct which = infrastructure where = 759 value = 30 }
+		command = { type = construct which = infrastructure where = 762 value = 30 }
+		command = { type = construct which = infrastructure where = 763 value = 30 }
+		command = { type = construct which = infrastructure where = 761 value = 30 }
+		command = { type = money value = -2500 }
+	}
+}

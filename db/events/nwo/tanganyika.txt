@@ -1,0 +1,243 @@
+event = {
+	id = 8029701
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 9007032 } # Harold MacMichael
+		command = { type = headofgovernment which = 9007033 } # Harold MacMichael
+	}
+}
+
+event = {
+	id = 8029702
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 9007034 } # Mark Young
+		command = { type = headofgovernment which = 9007035 } # Mark Young
+	}
+}
+
+event = {
+	id = 8029703
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 9007036 } # Wilfrid Jackson
+		command = { type = headofgovernment which = 9007037 } # Wilfrid Jackson
+	}
+}
+
+event = {
+	id = 8029704
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 9007038 } # William Battershill
+		command = { type = headofgovernment which = 9007039 } # William Battershill
+	}
+}
+
+event = {
+	id = 8029705
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 9007040 } # Edward Twining
+		command = { type = headofgovernment which = 9007041 } # Edward Twining
+	}
+}
+
+event = {
+	id = 8029706
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 9007042 } # Richard Turnbull
+		command = { type = headofgovernment which = 9007043 } # Richard Turnbull
+	}
+}
+
+event = {
+	id = 8029707
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 9007044 } # Julius Nyerere
+		command = { type = headofgovernment which = 9007004 } # Julius Nyerere
+	}
+}
+
+event = {
+	id = 8029708
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 9007045 } # Rashidi Kawawa
+	}
+}
+
+event = {
+	id = 8029709
+	country = U97
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 9007004 } # Julius Nyerere
+	}
+}
+
+### Zanzibar joins Tanganyika
+
+event = {
+	id = 8029710
+	country = ENG
+
+	name = EVT_8029710_NAME
+	desc = EVT_8029710_DESC
+	picture = nwo\tanzania
+	style = 1
+	
+	trigger = {
+		exists = U97
+		owned = { province = 852 data = ENG }
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8029710_A
+		ai_chance = 95
+		command = { type = relation which = U97 value = 100 }
+		command = { type = secedeprovince which = U97 value = 852 when = 1 }
+		command = { type = trigger which = 8029711 }
+	}
+	
+	action = {
+		name = EVT_8029710_B
+		ai_chance = 5
+		command = { type = relation which = U97 value = -100 }
+	}
+}
+
+event = {
+	id = 8029711
+	country = U97
+
+	name = EVT_8029711_NAME
+	desc = EVT_8029711_DESC
+	picture = nwo\tanzania
+	style = 1
+
+	action = {
+		name = EVT_8029711_A
+		command = { type = dissent value = -5 }
+		command = { type = name where = U97 which = "U9764" }
+	}
+}

@@ -1,0 +1,501 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for England
+# Event List:
+#ENG	13300900	The Outcome of the Great War (historical)
+#ENG	13300901	Troubles in the Empire's Reaches
+#ENG	13300910	The British Commonwealth of Nations
+#ENG	13300911	Northern Ireland
+#ENG	13300912	The Irish Free State
+#ENG	13300913	Hunger March
+#ENG	13300914	The Locarno Treaties
+#ENG	13300915	The Constitution of Ireland
+#ENG	13300920	Treaty of Taif
+#ENG	13300921	Supplies to Najd
+#ENG	13300922	Kuwait-Nejd Border War
+#ENG	13300923	Lausanne Conference of 1932
+#ENG	13300930	A call for help by Yugoslavia
+
+# Outcome of the Great War
+event = { 
+	id = 13300900
+	country = ENG
+	
+	trigger = {
+		participant = { value = 1 }
+		atwar = no
+		event = 2002534 # versailes
+	}
+	
+	name = "EVT_13300900_NAME"
+	desc = "EVT_13300900_DESC"
+	picture = "aar_versailles"
+	style = 2
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	action = { 	
+		name = "Britain stays the course."																																																								 
+		command = { type = alliance where = 2}
+		command = { type = alliance_leader which = ENG	where = 2 }
+		command = { type = alliance_name which = "allies" where = 2 }
+		command = { type = local_setflag which = winner } 
+		#army
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_setflag which = disarm_army_50 }
+		command = { type = local_clrflag which = disarm_army_75 }
+		#navy
+		command = { type = demobilize which = naval when = 0 where = 0 value = 150 }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_setflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+		#airforce
+		command = { type = demobilize which = air when = 0 where = 0 value = 10 }
+		command = { type = local_clrflag which = disarm_air_0 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_setflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+		# lift embargo
+		command = { trigger = { event = 2001534 } type = stockpile which = all when = war value = 20 }
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+		command = { type = ai which = "aar/national_behavior/eng_bahavior.ai" }
+		# additional AI switch - attempt by Smoggy
+		command = { type = ai which = "aar/unit-construction/aar-buildqueue-ENG-interwar.ai" }
+	}
+}
+
+################################################################################
+# ENG	13300901	Island Troubles/'Troubles Brewing in the Empire's Reaches.'
+# - by Smoggy: created to hold off Cyprus from being able to revolt and declare independence triggering 'continuous' war for the Entente since it cannot be completely conquered by AI easily. This is 1 of 2 events where the 2nd is only required if this is not enough. I am using the first avaialbe event number not used in this document. These events may need a event number change in the future.
+################################################################################
+event = { #Island Troubles
+	id = 13300901
+	random = no
+	persistent = no
+	country = ENG
+	
+	date = { day = 1 month = december year = 1916 }
+	offset = 5
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	trigger = {
+		or = {
+			and = {
+				province_revoltrisk = { province = 387 value = 5 }
+				province_revoltrisk = { province = 388 value = 5 }
+			}
+			province_revoltrisk = { province = 1782 value = 5 }
+		}
+	}
+
+	name = "Troubles brewing in the Empire's reaches."
+	desc = "Some of our colonial provinces are becoming hot-spots for us. Tension and discontent is spreading. We need to do something."
+
+	picture = "news_paper"
+	style = 1
+	
+	action = { ai_chance = 100
+		name = "Allocate resources and activate garrisons to calm the situation!"
+		#Pay around $900 worth in combination of resources if money is not enough; equate to selling for fast money; because resources cannot go below negative, this is best option if money is short but it does take from everything; however, industry will be effected until resources are at surplus.
+		command = { trigger = { not={money = 800} } type = supplies value = -1500 }
+		command = { trigger = { not={money = 800} } type = oilpool value = -250 }
+		command = { trigger = { not={money = 800} } type = metalpool value = -1120 }
+		command = { trigger = { not={money = 800} } type = energypool value = -2000 }
+		command = { trigger = { not={money = 800} } type = rarematerialspool value = -450 }
+		#Pay in money if money is enough; this is the expected scenario.
+		command = { trigger = {money = 800} type = money value = -800 }
+		command = { type = add_corps which = "British Group Fama." value = land where = 387 }
+		command = { type = add_division which = "British Cyprus Garrison 387" value = garrison when = 2 where = police }
+		command = { type = add_corps which = "British Group Nico." value = land where = 388 }
+		command = { type = add_division which = "British Cyprus Garrison 388" value = garrison when = 2 where = police }
+		command = { type = add_corps which = "British Group Jama." value = land where = 1782 }
+		command = { type = add_division which = "British Jamaica Garrison 1782" value = garrison when = 2 where = police }
+		command = { type = dissent value = 3 }
+	}
+	# Code for another event if required:
+	#action = { ai_chance = 0
+	#	name = "Spend the necessary resources to "
+	#	command = { 
+	#		trigger = { money = 1500}
+	#		type = money value = -1500
+	#		type = province_revoltrisk which = 1001 value = -5 
+	#		type = province_revoltrisk which = 1002 value = -5
+	#		type = province_revoltrisk which = 1003 value = -5
+	#	}
+	#}
+}
+
+# British Commonwealth of Nations
+event = {
+	id = 13300910
+	country = ENG
+	persistent = no
+	
+	date = { day = 0 month = 0 year = 1926 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 365
+	
+	trigger = {					
+		event = 13300900
+	}
+	
+	name = "EVT_13300910_NAME"
+	desc = "EVT_13300910_DESC"
+	picture = "aar_commonwealthf"
+	style = 2
+	
+	action = { 	
+		name = "One happy family."
+		command = { trigger = { ai = yes } type = event which = 13390006 where = ENG when = 1 }
+		command = { trigger = { ai = CAN } type = event which = 13390006 where = CAN when = 1 }
+		command = { trigger = { ai = SAF } type = event which = 13390006 where = SAF when = 1 }
+		command = { trigger = { ai = AST } type = event which = 13390006 where = AST when = 1 }
+		command = { type = end_mastery which = CAN }
+		command = { type = end_mastery which = SAF }
+		command = { type = end_mastery which = AST }
+		command = { type = alliance which = CAN }
+		command = { type = alliance which = SAF }
+		command = { type = alliance which = AST }
+		command = { trigger = { not = { owned = { province = 900 data = ENG } } } type = secedeprovince which = ENG value = 900 when = 2 } #suez
+		command = { type = independence which = EGY value = 1 when = 0 }
+		command = { type = independence which = YEM value = 1 when = 0 }
+		command = { type = make_puppet which = EGY }
+		command = { type = make_puppet which = YEM }
+		command = { trigger = { ai = EGY } type = event which = 13390006 where = EGY when = 1 }
+		command = { trigger = { ai = YEM } type = event which = 13390006 where = YEM when = 1 }
+	}
+}
+
+# Northern Ireland
+event = { 
+	id = 13300911
+	country = ENG				 
+	
+	# Triggered
+	
+	name = "EVT_13300911_NAME"
+	desc = "EVT_13300911_DESC"
+	picture = "aar_nirelandf"
+	style = 2
+	
+	action = {
+		ai_chance = 99
+		name = "Maintain central control over N. Ireland"
+		command = { type = addcore which = 35 } # northern ireland
+		command = { type = addcore which = 36 }
+		command = { type = inherit which = U71 value = 0 }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		ai_chance = 1
+		name = "Give them devolved powers"
+		command = { type = make_puppet which = U71 }
+	}
+}
+
+# Irish Independence
+event = {
+	id = 13300912
+	country = ENG										
+	
+	date = { day = 0 month = 0 year = 1922 }
+	offset = 365
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	trigger = {
+		not = {
+			or = {
+				exists = IRE 
+				exists = U71 
+			}
+		}
+	}
+	
+	name = "EVT_13300912_NAME"
+	desc = "EVT_13300912_DESC"
+	picture = "aar_irishindependence"
+	style = 2
+	
+	action = { 	
+		name = "Let them seceede."
+		ai_chance = 100
+		command = { type = removecore which = 30 } # Southern Ireland
+		command = { type = removecore which = 31 }
+		command = { type = removecore which = 32 }
+		command = { type = removecore which = 33 }
+		command = { type = removecore which = 34 }
+		command = { type = removecore which = 35 } # northern ireland, allow IRE to be released including its extra provinces
+		command = { type = removecore which = 36 }
+		command = { type = independence which = IRE value = 0 when = 1 }
+		command = { type = make_puppet which = IRE }
+		command = { type = trigger which = 13300811 }
+	}
+	
+	action = {
+		name = "NEVER!"
+		ai_chance = 0
+		command = { type = independence which = IRE value = 0 when = 1 }
+		command = { type = war which = IRE } # CIVIL WAR DOES NOT WORK!!!
+		command = { type = trigger which = 13300814 } # Irish War for Independence
+	}
+}
+
+# Hunger March
+event = {
+	id = 13300913
+	country = ENG
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 180
+	
+	trigger = {
+		atwar = no
+		local_flag = depression
+	}
+	name = "EVT_13300913_NAME"							
+	Desc = "EVT_13300913_DESC"
+	Picture = "major_worker_strike"
+	
+	action = { 	
+		name = "Damn them!"
+		command = { type =	dissent value = 6 }
+		command = { trigger = { IC = 325 } type = event which = 13300022 where = -1 when = 170 }
+		command = { trigger = { IC = 300 } type = event which = 13300022 where = -1 when = 160 }
+		command = { trigger = { IC = 275 } type = event which = 13300022 where = -1 when = 150 }
+		command = { trigger = { IC = 250 } type = event which = 13300022 where = -1 when = 140 }
+		command = { trigger = { IC = 400 } type = event which = 13300022 where = -1 when = 130 }
+		command = { trigger = { IC = 200 } type = event which = 13300022 where = -1 when = 120 }
+		command = { trigger = { IC = 375 } type = event which = 13300022 where = -1 when = 110 }
+		command = { trigger = { IC = 450 } type = event which = 13300022 where = -1 when = 100 }
+		command = { trigger = { IC = 500 } type = event which = 13300022 where = -1 when = 90 }
+		command = { trigger = { IC = 350 } type = event which = 13300022 where = -1 when = 80 }
+		command = { trigger = { IC = 325 } type = event which = 13300022 where = -1 when = 70 }
+		command = { trigger = { IC = 300 } type = event which = 13300022 where = -1 when = 60 }
+		command = { trigger = { IC = 275 } type = event which = 13300022 where = -1 when = 50 }
+		command = { trigger = { IC = 250 } type = event which = 13300022 where = -1 when = 40 }
+		command = { trigger = { IC = 400 } type = event which = 13300022 where = -1 when = 30 }
+		command = { trigger = { IC = 200 } type = event which = 13300022 where = -1 when = 20 }
+		command = { trigger = { IC = 375 } type = event which = 13300022 where = -1 when = 15 }
+		command = { trigger = { IC = 450 } type = event which = 13300022 where = -1 when = 10 }
+		command = { trigger = { IC = 500 } type = event which = 13300022 where = -1 when = 5 }
+	} 			
+}
+
+# The Locarno Treaties
+event = { 
+	id = 13300914					
+	country = ENG						
+	persistent = yes											 
+	
+	date = { day = 0 month = 0 year = 1925 }
+	offset = 365						
+	deathdate = { day = 0 month = 0 year = 1930 }				 
+	
+	trigger = {					
+		atwar = no
+		exists = U08
+		local_flag = winner
+		not = { flag = germany_invited_to_lon }
+	}
+	
+	name = "EVT_13300914_NAME"							
+	desc = "EVT_13300914_DESC"
+	picture = "vasconia"
+	
+	action = {
+		name = "We think they are all right."		
+		ai_chance = 100	
+		command = { type = trigger which = 13301012 }
+		command = { trigger = { exists = GER } type =	relation which =	GER value = 100 }
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = 100 }
+	}
+	
+	action = {
+		name = "Never!"		 
+		ai_chance = 0	 
+		command = { trigger = { exists = GER } type =	relation which =	GER value = -10 }
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = -10 } 
+	}
+	
+}
+
+# THe Constitution of Ireland
+event = { 
+	id = 13300915										 
+	country = ENG											
+	
+	date = { day = 1 month = 1 year = 1933 }
+	offset = 365														 
+	deathdate = { day = 1 month = january year = 1945 }
+	
+	trigger = {					
+		event = 13300911
+		ispuppet = IRE
+	}
+	name = "EVT_13300915_NAME"							
+	Desc = "EVT_13300915_DESC"
+	Picture = "parliamentary_scandal" 
+	
+	action = { 	
+		name = "Good luck..."
+		command = { type = end_mastery which = IRE }
+	} 			
+}
+
+# Treaty of Taif
+event = {
+	id = 13300920	
+	country = ENG
+	
+	#triggered by U50 13301611
+	
+	name = "Treaty of Taif"
+	desc = "The present-day boundary with Saudi Arabia was established by the 20 May 1934 Treaty of Taif, following the Saudi-Yemeni War of 1934. Yahya's non-recognition of his kingdom's southern boundary with the British Aden Protectorate that had been negotiated by his Ottoman predecessors resulted in occasional clashes with the British."
+	style = 2
+	
+	action = {
+		name = "Accept" 
+		ai_chance = 100
+		command = { type = make_puppet which = YEM }
+		command = { type = relation which = U08 value = 50 }
+		command = { type = peace which = SAU value = 0 }
+		command = { type = trigger which = 13301612 }
+		command = { type = local_setflag which = disarm_army_50 }
+		command = { type = local_setflag which = disarm_naval_150 }
+		command = { type = local_setflag which = disarm_air_3 }
+		command = { type = setflag which = UK_became_master_of_YEM }
+		
+	}
+	action = {
+		name = "Refuse" 
+		ai_chance = 0
+		command = { type = relation which = U50 value = -150 }
+		command = { type = relation which = SAU value = 50 }
+		command = { type = setflag which = UK_refused_to_become_master_of_YEM }
+	}
+}
+
+# Conquest of Jabal Shammar
+event = {
+	id = 13300921	
+	country = ENG
+	
+	#triggered by SAU 13301618
+	
+	name = "Supplies to Najd"
+	desc = "The Conquest of Ha'il, also referred as the Second Saudi–Rashidi War, was engaged by the Saudi forces, which received British military assistance"
+	style = 2
+	
+	action = {
+		trigger = { 
+			war = { country = SAU country = U52 }
+			supplies = 1000
+		}
+		name = "Send them!" 
+		ai_chance = 70
+		command = { type = event which = 13301619 where = SAU when = 7}
+		command = { type = supplies value = -1000 }
+		command = { type = relation which = SAU value = 50 }		
+	}
+	action = {
+		name = "There is no reason" 
+		ai_chance = 30
+		command = { type = relation which = SAU value = -5 }
+	}
+}
+
+# Kuwait-Nejd War
+event = {
+	id = 13300922	
+	country = ENG
+	
+	#triggered by SAU 13301615
+	
+	name = "EVT_13300922_NAME"
+	desc = "EVT_13300922_DESC"
+	style = 2
+	
+	action = {
+		name = "This means war!" 
+		ai_chance = 99
+		command = { type = 	war which = SAU	}
+	}
+	action = {
+		name = "Stay Neutral" 
+		ai_chance = 1
+		command = { type = 	peace which = SAU value = 1 }
+	}
+}
+
+# Lausanne Conference of 1932
+event = {
+	id = 13300923
+	country = ENG
+	
+	# Triggered
+	
+	name = "Lausanne Conference"
+	desc = "The Lausanne Conference was a meeting of representatives from Great Britain, Germany, and France that resulted in an agreement to suspend World War I reparations payments imposed on the defeated countries by the Treaty of Versailles as a result of the economic crisis. Our ally France has already agreed and asks our participation."
+	style = 2
+	picture = "aar_lausanne"
+	
+	action = {
+		name = "Agree to a moratorium"
+		ai_chance = 99
+		command = { type = trigger which = 13300706 }
+		command = { type = relation which = U08 value = 20 }
+		command = { type = relation which = FRA value = 20 }
+		command = { type = relation which = GER value = 20 }
+	}
+	
+	action = {
+		name = "Refuse to delay reparation repayment"
+		ai_chance = 1
+		command = { type = relation which = U08 value = -50 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = FRA value = -25 }
+		command = { type = trigger which = 13300290 }
+	}
+}
+
+# A call for help by Yugoslavia
+event = {
+	id = 13300930
+	country = ENG
+	
+	#triggered by SER 13301325
+	
+	name = "A call for help by Yugoslavia"
+	desc = "EVT_13300930_DESC"
+	style = 2
+	
+	action = {
+		name = "Guarantee their independence"
+		ai_chance = 100
+		command = { type = guarantee which = ENG where = SER }
+		command = { type = trigger which = 13301326 }
+	}
+	
+	action = {
+		name = "None of our business"
+		ai_chance = 0
+		command = { type = relation which = SER value = -40 }
+	}
+} 

@@ -1,0 +1,903 @@
+### Greek Civil War of 1946
+###
+### Soviet aim: Support communist guerilla (U33) and make them win the civil war in Greece
+### American aim: Support central government to help them crush communist guerilla
+### Soviet withdrawal: Greece receives Truman Aid and has a high probability of winning
+### American withdrawal: Communist guerilla receives huge amounts of support
+### Chance of WW3: 0,5%
+###
+
+# Greek communists decide whom to ask for support
+event = { 
+	id = 8500501
+	country = U33
+
+	name = EVT_8500501_NAME
+	desc = EVT_8500501_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+
+	trigger = {
+		war = { country = GRE country = U33 }
+		exists = GRE
+		flag = cold_war
+	}
+
+	date = { day = 1 month = july year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	# Greeks ask Stalin for support: Less probable, far more profitable
+	action = {
+		name = EVT_8500501_A
+		trigger = { exists = U27 } # Communist Yugoslavia
+		ai_chance = 60
+		command = { type = trigger which = 8500503 }
+	}	
+
+	# Greeks ask Stalin for support: Less probable, far more profitable
+	action = {
+		name = EVT_8500501_A
+		trigger = { NOT = { exists = U27 } } # Communist Yugoslavia
+		ai_chance = 15
+		command = { type = trigger which = 8500503 }
+	}	
+	
+	# Greeks ask Tito for support: More probable, but not so stable
+	action = {
+		name = EVT_8500501_B
+		trigger = { exists = U27 } # Communist Yugoslavia
+		ai_chance = 30
+		command = { type = trigger which = 8500502 }
+	}
+	
+	# Fight alone
+	action = {
+		name = EVT_8500501_C
+		ai_chance = 10
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+# Greek communists ask Tito for support
+event = {
+	id = 8500502
+	country = U27
+
+	name = EVT_8500502_NAME
+	desc = EVT_8500502_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+	}
+
+	# Show them our support!
+	action = {
+		name = EVT_8500502_A
+		ai_chance = 70
+		command = { type = trigger which = 8500520 } # Minor support
+	}	
+	
+	# Do nothing
+	action = {
+		name = EVT_8500502_B
+		ai_chance = 30
+		command = { type = relation which = GRE value = 20 }
+		command = { type = relation which = U33 value = -100 }
+	}
+	
+}
+
+# Greek communists ask Stalin for support
+event = {
+	id = 8500503
+	country = SOV
+
+	name = EVT_8500503_NAME
+	desc = EVT_8500503_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+	}
+
+	# Tito-Soviet split
+	# Do nothing
+	action = {
+		name = EVT_8500503_A
+		ai_chance = 75
+		trigger = { flag = tito_soviet_split }
+		command = { type = relation which = GRE value = 20 }
+		command = { type = sleepevent which = 8500504 } # American reaction
+		command = { type = sleepevent which = 8500522 } # Soviet full military intervention
+		command = { type = sleepevent which = 8500523 } # Truman Plan
+	}
+	
+	# Minor support
+	action = {
+		name = EVT_8500503_B
+		ai_chance = 12
+		trigger = { flag = tito_soviet_split }
+		command = { type = trigger which = 8500520 } # Minor support
+		command = { type = sleepevent which = 8500504 } # American reaction
+		command = { type = sleepevent which = 8500522 } # Soviet full military intervention
+	}
+
+	# Major support
+	action = {
+		name = EVT_8500503_C
+		ai_chance = 8
+		trigger = { flag = tito_soviet_split }
+		command = { type = trigger which = 8500521 } # Major support
+		command = { type = sleepevent which = 8500504 } # American reaction
+		command = { type = sleepevent which = 8500522 } # Soviet full military intervention
+	}
+	
+	# Propose military intervention
+	action = {
+		name = EVT_8500503_D
+		ai_chance = 5
+		trigger = { flag = tito_soviet_split }
+		command = { type = trigger which = 8500521 } # Major support
+		command = { type = dissent value = 10 }
+	}	
+		
+	# No Tito-Soviet split
+	# Do nothing
+	action = {
+		name = EVT_8500503_A
+		ai_chance = 45
+		trigger = { NOT = { flag = tito_soviet_split } }
+		command = { type = relation which = GRE value = 20 }
+		command = { type = sleepevent which = 8500504 } # American reaction
+		command = { type = sleepevent which = 8500522 } # Soviet full military intervention
+		command = { type = sleepevent which = 8500523 } # Truman Plan
+	}
+	
+	# Minor support
+	action = {
+		name = EVT_8500503_B
+		ai_chance = 15
+		trigger = { NOT = { flag = tito_soviet_split } }
+		command = { type = trigger which = 8500520 } # Minor support
+		command = { type = sleepevent which = 8500504 } # American reaction
+		command = { type = sleepevent which = 8500522 } # Soviet full military intervention
+	}
+
+	# Major support
+	action = {
+		name = EVT_8500503_C
+		ai_chance = 25
+		trigger = { NOT = { flag = tito_soviet_split } }
+		command = { type = trigger which = 8500521 } # Major support
+		command = { type = sleepevent which = 8500504 } # American reaction
+		command = { type = sleepevent which = 8500522 } # Soviet full military intervention
+	}
+	
+	# Propose military intervention
+	action = {
+		name = EVT_8500503_D
+		ai_chance = 15
+		trigger = { NOT = { flag = tito_soviet_split } }
+		command = { type = trigger which = 8500521 } # Major support
+		command = { type = dissent value = 10 }
+	}	
+}
+
+# Soviets openly help Greek communists - American reaction
+event = {
+	id = 8500504 
+	country = USA
+
+	name = EVT_8500504_NAME
+	desc = EVT_8500504_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+
+	trigger = {
+		event = 8500503
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	# Issue ultimatum
+	action = {
+		name = EVT_8500504_A
+		ai_chance = 60
+		command = { type = trigger which = 8500505 }
+	}
+	
+	# Leave Greece alone
+	action = {
+		name = EVT_8500504_B
+		ai_chance = 40
+		command = { type = trigger which = 8500509 } # Greece leaves NATO
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+# USA stands by Greece - Soviet reaction
+event = {
+	id = 8500505
+	country = SOV
+
+	name = EVT_8500505_NAME
+	desc = EVT_8500505_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	# Restrain ourselves
+	action = {
+		name = EVT_8500505_A
+		ai_chance = 65
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 8500522 } # Soviet full military intervention
+	}
+	
+	# Let us have the war (Possible WW3)
+	action = {
+		name = EVT_8500505_B
+		ai_chance = 35
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8500506 }
+	}
+
+}
+
+# USSR ignores ultimatum - final American reaction
+event = {
+	id = 8500506
+	country = USA
+
+	name = EVT_8500506_NAME
+	desc = EVT_8500506_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	# Then it is war (WW3)
+	action = {
+		name = EVT_8500506_A
+		ai_chance = 80
+		command = { type = alliance which = GRE }
+		command = { type = war which = SOV }
+	}
+	
+	# After all, better not
+	action = {
+		name = EVT_8500506_B
+		ai_chance = 20
+		command = { type = dissent value = 25 }
+		command = { type = trigger which = 8500509 } # Greece leaves NATO
+	}
+
+}
+
+# Greece is betrayed and leaves NATO
+event = {
+	id = 8500509
+	country = GRE
+	picture = "nwo\greek_civil_war"
+	style = 1
+
+	name = EVT_8500509_NAME
+	desc = EVT_8500509_DESC
+
+	action = {
+		name = EVT_8500509_A
+		command = { type = leave_alliance }
+		command = { type = dissent value = 10 }
+	}
+}
+
+### The war fires up
+
+# Government of Greece initiates the civil war
+event = { 
+	id = 8500510
+	country = GRE
+	persistent = yes
+
+	name = EVT_8500510_NAME
+	desc = EVT_8500510_DESC
+	picture = "nwo\greek_civil_war"
+	decision_picture = "nwo\d_greek_civil_war"
+	style = 1
+
+	decision = {
+		NOT = { war = { country = GRE country = U33 } }
+		NOT = { alliance = { country = USA country = U33 } }
+		NOT = { alliance = { country = SOV country = U33 } }
+		NOT = { alliance = { country = GRE country = U33 } }
+		exists = U33
+		flag = cold_war
+		NOT = { event = 8500541 }
+	}
+
+	trigger = {
+		NOT = { war = { country = GRE country = U33 } }
+		NOT = { alliance = { country = USA country = U33 } }
+		NOT = { alliance = { country = SOV country = U33 } }
+		NOT = { alliance = { country = GRE country = U33 } }
+		exists = U33
+		flag = cold_war
+		NOT = { event = 8500541 }
+	}
+
+	date = { day = 1 month = july year = 1946 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8500510_A #"It is time for war!"
+		ai_chance = 50
+		command = { trigger = { alliance = { country = USA country = GRE } } type = trigger which = 8940010 }
+		command = { trigger = { NOT = { alliance = { country = USA country = GRE } } } type = war which = U33 }
+	}	
+
+	action = {
+		name = EVT_8500510_B #"The time is not ripe"
+		ai_chance = 50
+		trigger = { ai = yes }
+		command = { type = relation which = U33 value = 1 }
+	}
+}
+
+# KKE initiates the civil war
+event = { 
+	id = 8500511
+	country = U33
+	persistent = yes
+
+	name = EVT_8500511_NAME
+	desc = EVT_8500511_DESC
+	picture = "nwo\greek_civil_war"
+	decision_picture = "nwo\d_greek_civil_war"
+	style = 1
+
+	decision = {
+		NOT = { war = { country = GRE country = U33 } }
+		NOT = { alliance = { country = USA country = GRE } }
+		NOT = { alliance = { country = SOV country = GRE } }
+		NOT = { alliance = { country = GRE country = U33 } }
+		exists = GRE
+		flag = cold_war
+		NOT = { event = 8500541 }
+	}
+
+	trigger = {
+		NOT = { war = { country = GRE country = U33 } }
+		NOT = { alliance = { country = USA country = GRE } }
+		NOT = { alliance = { country = SOV country = GRE } }
+		NOT = { alliance = { country = GRE country = U33 } }
+		exists = GRE
+		flag = cold_war
+		NOT = { event = 8500541 }
+	}
+
+	date = { day = 1 month = july year = 1946 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8500511_A #"It is time for war!"
+		ai_chance = 50
+		command = { trigger = { alliance = { country = USA country = GRE } } type = trigger which = 8940010 }
+		command = { trigger = { NOT = { alliance = { country = USA country = GRE } } } type = war which = U33 }
+	}	
+
+	action = {
+		name = EVT_8500511_B #"The time is not ripe"
+		ai_chance = 50
+		trigger = { ai = yes }
+		command = { type = relation which = GRE value = 1 }
+	}
+}
+
+### Outside support
+
+# Minor Soviet/Yugoslav support
+
+event = { 
+	id = 8500520
+	country = U33
+
+	name = EVT_8500520_NAME
+	desc = EVT_8500520_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+
+	action = {
+		name = EVT_8500520_A
+		command = { type = dissent value = -3 }
+		command = { type = money value = 100 }
+		command = { type = supplies value = 500 }
+		# Little military support
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+	}
+}
+
+# Major Soviet support
+
+event = { 
+	id = 8500521
+	country = U33
+
+	name = EVT_8500521_NAME
+	desc = EVT_8500521_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+
+	action = {
+		name = EVT_8500521_A
+		command = { type = dissent value = -6 }
+		command = { type = money value = 250 }
+		command = { type = supplies value = 2000 }
+		# Considerable military support
+		command = { type = add_division value = bergsjaeger when = 11 }
+		command = { type = add_division value = bergsjaeger when = 11 }
+		
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+		
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+	}
+}
+
+# Full Soviet support
+
+event = { 
+	id = 8500522
+	country = U33
+
+	name = EVT_8500522_NAME
+	desc = EVT_8500522_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	trigger = {
+		### Americans decided to back off
+		event = 8500509
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	action = {
+		name = EVT_8500522_A
+		ai_chance = 100
+		command = { type = alliance which = SOV }
+		command = { type = dissent value = -6 }
+		command = { type = relation which = SOV value = 100 }
+	}
+	
+	action = {
+		name = EVT_8500522_B # Better not
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = relation which = SOV value = -150 }
+	}
+}
+
+# American answer: Truman Plan
+
+event = { 
+	id = 8500523
+	country = USA
+
+	name = EVT_8500523_NAME
+	desc = EVT_8500523_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	trigger = {
+		war = { country = GRE country = U33 }
+		NOT = { war = { country = GRE country = SOV } }
+		NOT = { war = { country = U33 country = USA } }
+		OR = {
+			event = 8500520
+			event = 8500521
+		} # KKE receives Yugoslav/Soviet help
+		NOT = { event = 8500509 } # We decided to back off
+		
+		domestic = { type = interventionism value = 5 }
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	action = {
+		name = EVT_8500523_A
+		ai_chance = 95
+		command = { type = trigger which = 8500524 }
+		command = { type = dissent value = -3 }
+		command = { type = relation which = SOV value = -100 }
+	}
+	
+	action = {
+		name = EVT_8500523_B # Better not
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = relation which = SOV value = 50 }
+	}
+}
+
+event = { 
+	id = 8500524
+	country = GRE
+
+	name = EVT_8500524_NAME
+	desc = EVT_8500524_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	action = {
+		name = EVT_8500524_A
+		command = { type = dissent value = -4 }
+		command = { type = money value = 250 }
+		command = { type = supplies value = 2000 }
+		# military support
+		command = { type = add_division value = infantry when = 11 }
+		command = { type = add_division value = infantry when = 11 }
+	}
+}
+
+### Initial fervor for communist cause
+
+event = {
+	id = 8500530
+	country = U33
+	persistent = yes
+
+	name = "EVT_8500530_NAME" #Partisans
+	desc = "EVT_8500530_DESC" #"A groups of valiant partisans recruiting itself from local peasants has joined our cause."
+	picture = "nwo\kke_partisans"
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1945
+				NOT = { year = 1947 }
+				random = 25
+			}
+			AND = {
+				year = 1947
+				NOT = { year = 1948 }
+				random = 40
+			}
+			AND = {
+				year = 1948
+				NOT = { year = 1950 }
+				random = 25
+			}
+		}
+		war = { country = GRE country = U33 }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 120
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "EVT_8500530_A" #Join the fight
+		ai_chance = 100
+		command = { type = add_division which = "Partisan militia" value = militia when = 6 }
+	}	
+	
+	action = {
+		name = "EVT_8500530_B" #Save manpower
+		ai_chance = 0
+		command = { type = manpowerpool value = 5 }
+	}	
+}
+
+### Communists are wearing out
+
+event = {
+	id = 8500540
+	country = U33
+	persistent = yes
+
+	name = EVT_8500540_NAME
+	desc = EVT_8500540_DESC
+	picture = "nwo\kke_partisans"
+	style = 1
+
+	trigger = {
+		war = { country = GRE country = U33 }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action = {
+		name = EVT_8500540_A
+		command = { type = dissent value = 3 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = construct which = land_fort where = 367 value = -1 }
+		command = { type = construct which = land_fort where = 369 value = -1 }
+		command = { trigger = { ai = GRE } type = trigger which = 8500543 }
+	}		
+}
+
+### Communist victory in Greek Civil War
+
+event = {
+	id = 8500541
+	country = U33
+
+	name = EVT_8500541_NAME
+	desc = EVT_8500541_DESC
+	picture = "nwo\kke_victory"
+	style = 1
+
+	trigger = {
+		control = { province = 377 data = -1 }
+		area = { area = "Thrace" country = -1 data = 1 value = 80 }
+		area = { area = "Attica" country = -1 data = 1 value = 50 }
+		war = { country = GRE country = U33 }
+		OR = {
+			control = { province = 382 data = GRE } # Crete
+			AND = {
+				owned = { province = 382 data = GRE } # Crete
+				control = { province = 382 data = REB } # Crete
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8500541_A
+		command = { type = dissent value = -25 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = trigger which = 8500542 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}		
+}
+
+### Greeks retreat to Crete
+event = {
+	id = 8500542
+	country = GRE
+
+	name = EVT_8500542_NAME
+	desc = EVT_8500542_DESC
+	picture = "nwo\kke_victory"
+	style = 1
+
+	action = {
+		name = EVT_8500542_A
+		command = { type = dissent value = 20 }
+		command = { type = secedearea which = U33 value = "Thrace" when = 1 }
+		command = { type = secedearea which = U33 value = "Attica" when = 1 }
+	}		
+}
+
+### USA/USSR ultimatum
+
+# Soviets intervene in the war!
+event = {
+	id = 8500550
+	country = USA
+
+	name = EVT_8500550_NAME
+	desc = EVT_8500550_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+
+	trigger = {
+		war = { country = GRE country = U33 }
+		war = { country = SOV country = GRE }
+		NOT = { 
+			alliance = { country = GRE country = USA }
+			war = { country = USA country = U33 }
+		}
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	# Issue ultimatum
+	action = {
+		name = EVT_8500550_A
+		ai_chance = 90
+		command = { type = trigger which = 8500551 }
+	}
+	
+	# Leave Greece alone
+	action = {
+		name = EVT_8500550_B
+		ai_chance = 10
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+# USA stands by Greece - Soviet reaction
+event = {
+	id = 8500551
+	country = SOV
+
+	name = EVT_8500551_NAME
+	desc = EVT_8500551_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	# Restrain ourselves
+	action = {
+		name = EVT_8500551_A
+		ai_chance = 98
+		command = { type = dissent value = 2 }
+		command = { type = peace which = GRE value = 0 }
+	}
+	
+	# Let us have the war (Possible WW3)
+	action = {
+		name = EVT_8500551_B
+		ai_chance = 2
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8500552 }
+	}
+
+}
+
+# USSR ignores ultimatum - final American reaction
+event = {
+	id = 8500552
+	country = USA
+
+	name = EVT_8500552_NAME
+	desc = EVT_8500552_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	# Then it is war (WW3)
+	action = {
+		name = EVT_8500552_A
+		ai_chance = 60
+		command = { type = alliance which = GRE }
+		command = { type = war which = SOV }
+	}
+	
+	# After all, better not
+	action = {
+		name = EVT_8500552_B
+		ai_chance = 40
+		command = { type = dissent value = 10 }
+	}
+
+}
+
+# Americans intervene in the war!
+event = {
+	id = 8500553
+	country = SOV
+
+	name = EVT_8500553_NAME
+	desc = EVT_8500553_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+
+	trigger = {
+		war = { country = GRE country = U33 }
+		war = { country = USA country = U33 }
+		NOT = { 
+			alliance = { country = U33 country = SOV }
+			war = { country = SOV country = GRE }
+		}
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	# Issue ultimatum
+	action = {
+		name = EVT_8500553_A
+		ai_chance = 60
+		command = { type = trigger which = 8500554 }
+	}
+	
+	# Leave Greece alone
+	action = {
+		name = EVT_8500553_B
+		ai_chance = 40
+		command = { type = dissent value = -2 }
+	}
+
+}
+
+# SOV stands by Greece - Soviet reaction
+event = {
+	id = 8500554
+	country = USA
+
+	name = EVT_8500554_NAME
+	desc = EVT_8500554_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	# Restrain ourselves
+	action = {
+		name = EVT_8500554_A
+		ai_chance = 99
+		command = { type = dissent value = 2 }
+		command = { type = peace which = U33 value = 0 }
+	}
+	
+	# Let us have the war (Possible WW3)
+	action = {
+		name = EVT_8500554_B
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8500555 }
+	}
+
+}
+
+# USA ignores ultimatum - final Soviet reaction
+event = {
+	id = 8500555
+	country = SOV
+
+	name = EVT_8500555_NAME
+	desc = EVT_8500555_DESC
+	picture = "nwo\greek_civil_war"
+	style = 1
+	
+	# After all, better not
+	action = {
+		name = EVT_8500555_B
+		ai_chance = 80
+		command = { type = dissent value = 4 }
+	}
+	
+	# Then it is war (WW3)
+	action = {
+		name = EVT_8500555_A
+		ai_chance = 20
+		command = { type = alliance which = U33 }
+		command = { type = war which = USA }
+	}	
+
+}

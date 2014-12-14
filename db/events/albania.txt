@@ -1,0 +1,732 @@
+########################################
+#### BALKAN MOD EVENTS
+########################################
+# This file contains events for Albania
+# Event List:
+#ALB	14200000	The government of Mehdi Frasheri
+#ALB	14200001	The Government of Kostaq Kota
+#ALB	14200002	Trade agreements with Greece and Yugoslavia
+#GRE	14200003	Trade agreements with Albania
+#YUG	14200004	Trade agreements with Albania
+#ITA	14200005	Albania Trade agreements
+#ITA	14200006	A new agreement with the Albanian king
+#ALB	14200007	A new agreement for the Albanian king
+#ALB	14200008	Muslim Insurrection in Southern Albania
+#ALB	14200009	Albania closes the Italian schools
+#ITA	14200010	Albania closes the Italian schools
+#ALB	14200011	The six year plan
+#ALB	14200012	General strike at Kucove oil fields
+#ALB	14200013	Discovery of Driza oil field
+#ITA	14200014	Annexation of Albania
+#ALB	14200015	Italian Ultimatum
+#ITA	14200016	Annexation of Albania - Zog refuses
+#ITA	14200017	Annexation of Albania - Zog accepts
+#ALB	14200018	The end of Italo-Albanian war
+#ALB	14200019	Establishment of the Italian regime
+#ALB	14200020	The Government of Mustafa Merlika
+#ALB	14200021	The Government of Eqrem Libohova
+
+
+event = {
+	id = 14200000	# The Government of Mehdi Frasheri
+	random = no
+	country = ALB
+
+	trigger = {
+		exists = ALB
+		}
+
+	date = { day = 22 month = October year = 1935 }
+
+	name = "The Government of Mehdi Frasheri" # needs text
+	desc = "The Government of Mehdi Frasheri took over after Pandeli Evangjeli retires." 
+	style = 2
+	Picture = "ALB1"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 285001 }
+		command = { type = headofgovernment which = 285024 }
+		}
+	}
+
+
+event = {
+	id = 14200001	# The Government of Kostaq Kota
+	random = no
+	country = ALB
+
+	trigger = {
+		exists = ALB
+		}
+
+	date = { day = 9 month = November year = 1936 }
+
+	name = "The Government of Kostaq Kota" # needs text
+	desc = "The Government of Kostaq Kota took over after Mehdi Frasheri retires." 
+	style = 2
+	Picture = "ALB2"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 285001 }
+		command = { type = headofgovernment which = 285022 }
+		}
+	}
+
+
+event = {
+	id = 14200002	# Trade agreements with Greece and Yugoslavia
+	random = no
+	country = ALB
+	style = 2
+	
+	trigger = {
+		exists = ALB  
+		}
+
+	date = { day = 9 month = June year = 1934 }
+
+	name = "Trade agreements with Greece and Yugoslavia."
+	desc = "By June 1934, Albania had signed trade agreements with Yugoslavia and Greece, and Mussolini had suspended all payments to Tirana. An Italian attempt to intimidate the Albanians by sending a fleet of warships to Albania failed because the Albanians only allowed the forces to land unarmed."
+	picture = "diplomatic_campaign"
+
+	action_a = {
+		name = "Signs the agreements."
+		ai_chance = 100
+		command = { type = relation which = GRE value = 25 }
+		command = { type = relation which = YUG value = 25 }
+		command = { type = trigger which = 14200003 }
+                command = { type = trigger which = 14200004 }
+                command = { type = trigger which = 14200005 }
+                command = { type = metalpool value = 500 }
+                command = { type = money value = 500 }
+		command = { type = supplies value = 200 }
+		command = { type = dissent value = -3 }
+	}
+	action_b = {
+		name = "A waste of time..."
+		ai_chance = 0
+		command = { type = relation which = ITA value = -50 }
+		command = { type = dissent value = 3 }
+		}
+	}
+
+
+event = {
+	id = 14200003
+	random = no
+	country = GRE
+
+
+
+	name = "Trade agreements with Albania"
+	desc = "By June 1934, Albania had signed trade agreements with Yugoslavia and Greece, and Mussolini had suspended all payments to Tirana. An Italian attempt to intimidate the Albanians by sending a fleet of warships to Albania failed because the Albanians only allowed the forces to land unarmed." 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 95
+                command = { type = relation which = ALB value = 25 }
+                command = { type = metalpool value = 500 }
+                command = { type = money value = 500 }
+		command = { type = supplies value = 200 }
+		command = { type = dissent value = -2 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 5
+		command = { type = relation which = YUG value = -25 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+
+
+event = {
+	id = 14200004
+	random = no
+	country = YUG
+
+
+
+	name = "Trade agreements with Albania"
+	desc = "By June 1934, Albania had signed trade agreements with Yugoslavia and Greece, and Mussolini had suspended all payments to Tirana. An Italian attempt to intimidate the Albanians by sending a fleet of warships to Albania failed because the Albanians only allowed the forces to land unarmed." 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 95
+                command = { type = relation which = ALB value = 25 }
+                command = { type = metalpool value = 500 }
+                command = { type = money value = 500 }
+		command = { type = supplies value = 200 }
+		command = { type = dissent value = -2 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 5
+		command = { type = relation which = ALB value = -25 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+
+
+event = {
+	id = 14200005
+	random = no
+	country = ITA
+
+
+
+	name = "Albania Trade agreements."
+	desc = "By June 1934, Albania had signed trade agreements with Yugoslavia and Greece, and Mussolini had suspended all payments to Tirana. An Italian attempt to intimidate the Albanians by sending a fleet of warships to Albania failed because the Albanians only allowed the forces to land unarmed." 
+	style = 2
+	picture = "mittelmeerdivision"
+
+	action_a = {
+		name = "Sending a fleet..."
+		ai_chance = 95
+                command = { type = relation which = ALB value = -25 }
+		command = { type = dissent value = -2 }
+        }
+        action_b = {
+		name = "A waste of time..."
+		ai_chance = 5
+		command = { type = relation which = ALB value = 25 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+
+
+event = {
+	id = 14200006	#
+	random = no
+	country = ITA
+	style = 2
+	
+	trigger = {
+		exists = ALB
+		event = 14200005  
+		}
+
+	date = { day = 10 month = may year = 1936 }
+
+	name = "A new agreement with the Albanian king."
+	desc = "Zog's success in defeating two local rebellions convinced Mussolini that the Italians had to reach a new agreement with the Albanian king.A government of young men led by Mehdi Frasheri, won a commitment from Italy to fulfill financial promises that Mussolini had made to Albania and to grant new loans for harbor improvements at Durres and other projects that kept the Albanian government afloat."
+	picture = "ALB3"
+
+	action_a = {
+		name = "Signs the agreements."
+		ai_chance = 100
+		command = { type = relation which = ALB value = 50 }
+		command = { type = trigger which = 14200007 }
+                command = { type = metalpool value = -500 }
+                command = { type = money value = -500 }
+		command = { type = supplies value = -200 }
+		command = { type = dissent value = -3 }
+	}
+	action_b = {
+		name = "A waste of time..."
+		ai_chance = 0
+		command = { type = relation which = ALB value = -50 }
+		command = { type = dissent value = 3 }
+		}
+	}
+
+
+event = {
+	id = 14200007
+	random = no
+	country = ALB
+
+
+
+	name = "A new agreement for the Albanian king."
+	desc = "Zog's success in defeating two local rebellions convinced Mussolini that the Italians had to reach a new agreement with the Albanian king.A government of young men led by Mehdi Frasheri, won a commitment from Italy to fulfill financial promises that Mussolini had made to Albania and to grant new loans for harbor improvements at Durres and other projects that kept the Albanian government afloat." 
+	style = 2
+	picture = "ALB3"
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 100
+                command = { type = relation which = ITA value = 50 }
+                command = { type = metalpool value = 500 }
+                command = { type = money value = 500 }
+		command = { type = supplies value = 200 }
+		command = { type = dissent value = -3 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 0
+		command = { type = relation which = ITA value = -50 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+
+
+event = {
+         id = 14200008
+         random = no
+         country = ALB
+         trigger = {
+                   exists = ALB
+
+         }
+ 
+         name = "Muslim Insurrection in Southern Albania"
+         desc = "A Muslim insurrection broke out in southern Albania after the Albanian government issued a decree prohibiting the veiling of women. The revolt reflected a larger protest movement which opposed King Zog's dictatorial rule."
+         style = 2
+         picture = "ALB4"
+ 
+         date = { day = 15 month = January year = 1936 }
+ 
+           action_a = {
+                  name = "Curses...!"
+                  command = { type = dissent value = 2 }
+                  command = { type = money value = -10 }
+                  command = { type = manpowerpool value = -5 }
+           }
+
+}
+
+
+event = {
+         id = 14200009
+         random = no
+         country = ALB
+         trigger = {
+                   exists = ALB
+
+         }
+ 
+         name = "Albania closes the Italian schools"
+         desc = "The Albanian government decides to close the Italian schools installed on its territory. Albania is a small underdeveloped country strongly depend on the Italian investments. But the government of King Zog jealously holds so that Italy does not encroach on its sovereignty."
+         style = 2
+         picture = "ALB5"
+ 
+         date = { day = 15 month = june year = 1933 }
+ 
+           action_a = {
+                  name = "Do it."
+                  ai_chance = 100
+                  command = { type = relation which = ITA value = -25 }
+                  command = { type = end_puppet }
+                  command = { type = trigger which = 14200010 }
+                  command = { type = dissent value = -2 }
+        }
+           action_b = {
+                  name = "Useless."
+                  ai_chance = 0
+                  command = { type = relation which = ITA value = 10 }
+                  command = { type = dissent value = 2 }
+           }
+
+}
+
+
+event = {
+         id = 14200010
+         random = no
+         country = ITA
+ 
+         name = "Albania closes the Italian schools"
+         desc = "The Albanian government decides to close the Italian schools installed on its territory. Albania is a small underdeveloped country strongly depend on the Italian investments. But the government of King Zog jealously holds so that Italy does not encroach on its sovereignty."
+         style = 2
+         picture = "ALB5"
+ 
+           action_a = {
+                  name = "Curses...!"
+                  ai_chance = 95
+                  command = { type = relation which = ALB value = -25 }
+                  command = { type = dissent value = 1 }
+           }
+
+}
+
+
+event = {
+	id = 14200011
+	random = no
+	country = ALB
+
+	decision = { event = 14200010 
+                     headofstate = 285001
+                   
+} 
+
+	decision_trigger = {
+		money = 500
+                headofstate = 285001
+                supplies = 100
+	}
+
+	trigger = { event = 14200010 
+                    headofstate = 285001
+                    supplies = 100
+                    money = 500
+    }
+   
+	name = "The six year plan."
+	desc = "The government proposes to King Zog the construction of new factories to improve the production. This program, even if expensive, would result not only in reducing the unemployment and therefore pleasing the population, but creating new companies under the control of the government." 
+	style = 2
+	picture = "6yearplan"
+        decision_picture =  "decision_6yearplan"
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = building_prod_mod which = ic value = 5 }
+                command = { type = construct which = ic where = 359 value = 1 }
+		command = { type = construct which = ic where = 362 value = 1 }
+                command = { type = dissent value = -3 }
+                command = { type = money value = -500 }
+                command = { type = metalpool value = -200 }
+                command = { type = supplies value = -100 }
+	}
+}
+
+
+event = {
+         id = 14200012
+         random = no
+         country = ALB
+         trigger = {
+                   exists = ALB
+
+         }
+ 
+         name = "General strike at Kucove oil fields."
+         desc = "The strike began on February 11 in protest against the dismissal of 60 revolutionary workers and their banishment from Kucove. Its main cause was the dissatisfaction of the popular masses with the despotic regime of King Zog I and the brutal exploitation of the masses by the Italian capitalists. The Kucove strike was led by the workers’ society Puna, in which Communists played the leading role."
+         style = 2
+         picture = "strike"
+ 
+         date = { day = 11 month = February year = 1936 }
+ 
+           action_a = {
+                  name = "Curses...!"
+                  command = { type = dissent value = 2 }
+                  command = { type = money value = -10 }
+                  command = { type = manpowerpool value = -2 }
+           }
+
+}
+
+
+event = {
+         id = 14200013
+         random = no
+         country = ALB
+         trigger = {
+                   exists = ALB
+
+         }
+ 
+         name = "Discovery of Driza oil field."
+         desc = "Driza oil field is an Albanian oil field that was discovered in 1939. It is one of the biggest on-shore oil field of Albania. It began production in 1940 and produces oil. Its proven reserves are about 1,420 million barrels."
+         style = 2
+         picture = "oil_mosul"
+ 
+         date = { day = 11 month = February year = 1939 }
+ 
+           action_a = {
+                  name = "OK!"
+                  command = { type = dissent value = -2 }
+                  command = { type = oilpool value = 2 where = 362 }
+                  command = { type = manpowerpool value = 5 }
+           }
+
+}
+
+
+event = { 
+	id = 14200014
+	random = no
+	country = ITA
+	
+	decision = {
+		event = 2003015 # End of CZE
+		exists = ALB
+		NOT = {    
+			alliance = { country = ALB country = ITA }
+			war = { country = ALB country = ITA }
+		}
+	}
+	decision_trigger = { 
+		OR = {
+			event = 2003015 # End of CZE
+			event = 2003013 # CZE joins Axis
+		}
+		exists = ALB
+		NOT = {    alliance = { country = ALB country = ITA }
+			war = { country = ALB country = ITA }
+		}
+	}
+	trigger = {
+        OR = { 
+			random = 6 
+			AND = { 
+				month = june 
+				year = 1939 
+				random = 50 
+			} 
+		}
+		OR = {
+			event = 2003015 # End of CZE
+			event = 2003013 # CZE joins Axis
+		}
+		exists = ALB
+		NOT = {
+			OR = {
+				alliance = { country = ALB country = ITA }
+				war = { country = ALB country = ITA }
+			}
+		}
+	}
+	
+	name = "EVT_2902_NAME"
+	desc = "EVT_2902_DESC"
+	style = 2
+	picture = "ALB6"
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 30 month = december year = 1963 }
+	
+	action= {
+		name = "ACTIONNAME2902A"
+		ai_chance = 100
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 14200015 } #Alb
+		command = { type = relation which = ALB value = -20 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -5 }
+		command = { type = addclaim which = 329 } #Pristina
+		command = { type = addclaim which = 334 } #Tetovo
+	}
+}
+
+
+event = { 
+	id = 14200015
+	random = no
+	country = ALB
+	
+	# Triggered by ITA 14200014
+	
+	name = "EVT_3500_NAME"
+	desc = "EVT_3500_DESC"
+	style = 2
+	picture = "Mussolini"
+	
+	action_a = {
+		name = "ACTION_NAME_NEVER" # Never!
+		ai_chance = 98
+		command = { trigger = { puppet = { country = ALB country = ITA } } type = end_puppet }
+		command = { type = trigger which = 14200016 }
+	}
+	action_b = {
+		name = "ACTIONNAME3500B" # Very well.
+		ai_chance = 2
+		command = { type = trigger which = 14200017 }
+	}
+}
+
+
+event = { 
+	id = 14200016
+	random = no
+	country = ITA
+	save_date = yes
+	
+	# Triggered by ALB 14200015
+
+	name = "EVT_2903_NAME"
+	desc = "EVT_2903_DESC"
+	style = 2
+	picture = "Corpo_truppe_Volontarie"
+	
+	action_a = {
+		name = "ACTIONNAME2903A" # Declare War
+		ai_chance = 100
+		command = { type = war which = ALB }
+		command = { type = relation which = YUG value = -10 }
+		command = { type = relation which = GRE value = -10 }
+	}
+	action_b = {
+		name = "ACTIONNAME2903B" # We do not dare follow through
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ALB value = 10 }
+		command = { type = removeclaim which = 329 } #Pristina
+		command = { type = removeclaim which = 334 } #Tetovo			
+	}
+}
+
+
+event = { 
+	id = 14200017
+	random = no
+	country = ITA
+	
+	# Triggered by ALB 14200015
+
+	name = "EVT_2904_NAME"
+	desc = "EVT_2904_DESC"
+	style = 2
+	picture = "ALB7"
+	
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { type = inherit which = ALB }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -10 }
+	}
+}
+
+
+event = {
+	id = 14200018	# The end of Italo-Albanian war
+	random = no
+	country = ITA
+	style = 2
+
+	trigger = {
+		war = { country = ITA country = ALB }
+		event = { id = 14200016 days = 60 }
+		}
+
+	date = { day = 1 month = january year = 1937 } #
+	offset = 1
+	deathdate = { day = 30 month = december year = 1965 } #
+
+	name = "The end of Italo-Albanian war." # needs text
+	desc = "The Italian invasion of Albania was a brief military campaign by the Kingdom of Italy against the Albanian Kingdom. The conflict was a result of the imperialist policies of Italian dictator Benito Mussolini. Albania was rapidly overrun, its ruler, King Zog I, forced into exile, and the country made part of the Italian Empire as a separate kingdom in personal union with the Italian crown."
+	Picture = "ALB7"
+
+	action_a = {
+		name = "We own these lands."
+		ai_chance = 100
+		command = { type = inherit which = ALB }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -10 }
+		command = { type = ai which = "switch/ITA_invasion_off.ai" }
+		command = { type = local_clrflag which = ITAalbania }
+	}
+	action_b = {
+		name = "Make Albania a Italian protectorate."
+		ai_chance = 0
+		command = { type = peace which = ALB value = 1 }
+		command = { type = removeclaim which = 359 where = -1 }
+		command = { type = removeclaim which = 360 where = -1 }
+		command = { type = removeclaim which = 361 where = -1 }
+		command = { type = removeclaim which = 362 where = -1 }
+		command = { type = removeclaim which = 329 where = -1 }
+		command = { type = removeclaim which = 334 where = -1 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -5 }
+		command = { type = make_puppet which = ALB }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 14200019 }		
+	}
+}
+
+
+event = {
+         id = 14200019
+         random = no
+         country = ALB
+
+
+
+         name = "Establishment of the Italian regime"
+         desc = "It was practically a union between Italy and Albania, officially led by Italy's King Victor Emmanuel III. Shefqet Verlaci served as the Prime Minister and controlled the day-to-day activities of the Italian protectorate. Albania ceased to exist as an independent country and remained as an autonomous part of the Italian Empire."
+         style = 2
+         picture = "ALB7"
+ 
+           action_a = {
+                  name = ACTION_NAME_OK
+                  command = { type = flag_ext where = alb which = _kig }
+                  command = { type = relation which = ITA value = 200 }
+                  command = { type = set_domestic which = democratic value = 2 }
+                  command = { type = set_domestic which = political_left value = 3 }
+                  command = { type = set_domestic which = free_market value = 7 }
+                  command = { type = set_domestic which = freedom value = 3 }
+                  command = { type = headofstate which = 285249 }
+                  command = { type = headofgovernment which = 285028 }
+                  command = { type = sleepminister which = 285001 }
+                  command = { type = sleepminister which = 285006 }
+                  command = { type = sleepleader which = 285023 }
+           }
+
+}
+
+
+event = {
+	id = 14200020	# The Government of Mustafa Merlika
+	random = no
+	country = ALB
+
+	trigger = {
+		event = 14200019
+		}
+
+	date = { day = 4 month = December year = 1941 }
+
+	name = "The Government of Mustafa Merlika." # needs text
+	desc = "The Government of Mustafa Merlika took over after Shefqet Verlaci retires." 
+	style = 2
+	Picture = "elections1938"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 285249 }
+		command = { type = headofgovernment which = 285027 }
+		}
+	}
+
+
+event = {
+	id = 14200021	# The Government of Eqrem Libohova
+	random = no
+	country = ALB
+
+	trigger = {
+		event = 14200019
+		}
+
+	date = { day = 19 month = January year = 1943 }
+
+	name = "The Government of Eqrem Libohova." # needs text
+	desc = "The Government of Eqrem Libohova took over after Mustafa Merlika retires." 
+	style = 2
+	Picture = "elections1935"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 285249 }
+		command = { type = headofgovernment which = 285029 }
+		}
+	}

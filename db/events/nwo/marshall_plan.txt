@@ -1,0 +1,322 @@
+###########################################################################################
+#	
+#	New World Order 2 by Bizon
+#	Marshall Plan
+#
+###########################################################################################
+
+event = {
+	id = 8202001
+	country = USA
+	
+	name = EVT_8202001_NAME
+	desc = EVT_8202001_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 1 month = may year = 1947 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8202001_A
+		ai_chance = 70
+		command = { type = relation which = FRA value = 150 }
+		command = { type = relation which = ENG value = 150 }
+		command = { type = relation which = SOV value = 50 }
+		command = { type = money value = -2000 }
+	}
+	
+	action = {
+		name = EVT_8202001_B
+		ai_chance = 25
+		command = { type = relation which = FRA value = 150 }
+		command = { type = relation which = ENG value = 150 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8202002 }
+		command = { type = setflag which = marshall_plan_west_only }
+	}
+	
+	action = {
+		name = EVT_8202001_C
+		ai_chance = 5
+		command = { type = relation which = FRA value = -150 }
+		command = { type = relation which = ENG value = -150 }
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8202002 }
+		command = { type = sleepevent which = 8202003 }
+		command = { type = sleepevent which = 8202004 }
+		command = { type = sleepevent which = 8202020 }
+		command = { type = sleepevent which = 8202021 }
+	}
+
+}
+
+event = {
+	id = 8202002
+	country = SOV
+
+	name = EVT_8202002_NAME
+	desc = EVT_8202002_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8616000
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action = {
+		name = EVT_8202002_A
+		ai_chance = 90
+		command = { type = relation which = USA value = -50 }
+		command = { type = dissent value = 10 }
+		command = { type = setflag which = marshall_plan_west_only }
+	}
+	
+	action = {
+		name = EVT_8202002_B
+		ai_chance = 8
+		command = { type = relation which = USA value = 50 }
+		command = { type = setflag which = marshall_plan_west_plus_two }
+		command = { type = dissent value = 5 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+	
+	action = {
+		name = EVT_8202002_C
+		ai_chance = 2
+		command = { type = relation which = USA value = 150 }
+		command = { type = setflag which = marshall_plan_for_all }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 2 } ## CEE influence -1
+	}
+
+}
+
+# Cost of the help
+event = {
+	id = 8202003
+	country = USA
+
+	name = EVT_8202003_NAME
+	desc = EVT_8202003_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = marshall_plan_west_only
+			flag = marshall_plan_west_plus_two
+			flag = marshall_plan_for_all
+		}
+	}
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8202003_A
+		trigger = { flag = marshall_plan_west_only }
+		command = { type = industrial_modifier which = total value = -12 }
+	}
+	
+	action = {
+		name = EVT_8202003_B
+		trigger = { flag = marshall_plan_west_plus_two }
+		command = { type = industrial_modifier which = total value = -13 }
+	}
+	
+	action = {
+		name = EVT_8202003_C
+		trigger = { flag = marshall_plan_for_all }
+		command = { type = industrial_modifier which = total value = -16 }
+	}
+
+}
+
+event = {
+	id = 8202020
+	tag = { AUS BEL LUX DEN FRA GRE ICL IRE ITA HOL NOR POR SWE SCH TUR ENG POL CZE HUN ROM BUL YUG LIT LAT EST BLR UKR SPR }
+	persistent = yes
+
+	name = EVT_820202X_NAME
+	desc = EVT_820202X_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = marshall_plan_west_only
+			flag = marshall_plan_west_plus_two
+			flag = marshall_plan_for_all
+		}
+		NOT = { local_flag = marshall_plan }
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_820202X_A
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = relation which = USA value = 100 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = local_setflag which = marshall_plan }
+	}
+}
+
+event = {
+	id = 8202021
+	tag = { U16 U17 U18 U22 U11 U33 U14 U10 U19 U15 U21 U26 U34 U12 U32 U31 U13 U30 U29 U27 U20 U35 }
+	persistent = yes
+	
+	name = EVT_820202X_NAME
+	desc = EVT_820202X_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = marshall_plan_for_all
+			AND = {
+				flag = marshall_plan_west_plus_two
+				country = U31
+			}
+			AND = {
+				flag = marshall_plan_west_plus_two
+				country = U32
+			}
+		}
+		NOT = { local_flag = marshall_plan }
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_820202X_A
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 3 }
+		command = { type = relation which = USA value = 200 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = local_setflag which = marshall_plan }
+	}
+}
+
+# Germany
+
+event = {
+	id = 8202030
+	tag = { U24 DFR } # only once
+
+	name = EVT_820202X_NAME
+	desc = EVT_820202X_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = marshall_plan_west_only
+			flag = marshall_plan_west_plus_two
+			flag = marshall_plan_for_all
+		}
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_820202X_A
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = relation which = USA value = 100 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = free_market value = 3 }
+	}
+}
+
+event = {
+	id = 8202031
+	tag = { U25 DDR } # only once
+
+	name = EVT_820202X_NAME
+	desc = EVT_820202X_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = marshall_plan_for_all
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_820202X_A
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = relation which = USA value = 100 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 3 }
+	}
+}
+
+# Finland
+
+event = {
+	id = 8202032
+	country = FIN
+
+	name = EVT_820202X_NAME
+	desc = EVT_820202X_DESC
+	picture = "nwo\marshall_plan"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = marshall_plan_for_all
+			AND = {
+				OR = {
+					flag = marshall_plan_west_only
+					flag = marshall_plan_west_plus_two
+				}
+				NOT = { event = 8005511 }
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1949 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = "OK"
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = relation which = USA value = 100 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = free_market value = 3 }
+	}
+}

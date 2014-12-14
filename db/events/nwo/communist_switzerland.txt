@@ -1,0 +1,32 @@
+event = {
+	id = 8022601
+	country = U26
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 945001 } # Josef Wiktor Widmann
+		command = { type = headofgovernment which = 945002 } # Josef Wiktor Widmann
+		command = { type = foreignminister which = 945003 } # Hermann Hessel-Lorenz
+		command = { type = armamentminister which = 945004 } # Emil Frey
+		command = { type = ministerofintelligence which = 945005 } # Theo Maier
+		command = { type = chiefofstaff which = 945006 } # Traugott Meyer
+		command = { type = chiefofarmy which = 945007 } # Emil Frey
+		command = { type = chiefofnavy which = 945008 } # Hermann Hessel-Lorenz
+		command = { type = chiefofair which = 945009 } # Josef Wiktor Widmann
+	}
+}
+

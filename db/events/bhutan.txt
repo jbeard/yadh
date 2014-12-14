@@ -1,0 +1,130 @@
+##### Bután ##### id 302500 - 302999
+
+#############################################
+######  Centralised Government
+#############################################
+event = {
+         id = 13302000
+         random = no
+         country = bhu
+         trigger = {
+                   random = 8
+
+         }
+ 
+         name = "Centralised Government"
+         desc = "Druk Gyalpo continued the process of centralization and modernization of the country, focusing their efforts on schools, stores and roads. Adjustments were made in the provincial divisions and made several international trips."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1935 }
+         offset = 15
+         deathdate = { day = 31 month = january year = 1936 }
+ 
+                
+                picture = "AST52"
+                
+           action_a = {
+                  name = "Continue the reforms"
+                  ai_chance = 99
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = u02 value = 15 }
+                  command = { type = money value = -15 }
+                  command = { type = relative_manpower value = 2 }
+                  command = { type = construct which = infrastructure where = -1 value = 15 }
+           }
+           action_b = {
+                  name = "No further changes are needed"
+                  ai_chance = 1
+                  command = { type = dissent value = 3 }
+                  command = { type = domestic which = freedom value = -1 }
+           }
+
+}
+#############################################
+######  Administration and taxes
+#############################################
+event = {
+         id = 13302001
+         random = no
+         country = bhu
+         trigger = {
+                   random = 8
+
+         }
+ 
+         name = "Administration and taxes"
+         desc = "Following the reform process started, the Bhutan government initiated reform of the administration and taxation to increase revenue and capacity management."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 15
+         deathdate = { day = 31 month = january year = 1939 }
+ 
+                
+                picture = "wage"
+                
+           action_a = {
+                  name = "Continue the reforms"
+                  ai_chance = 99
+                  command = { type = dissent value = 2 }
+                  command = { type = money value = 40 }
+                  command = { type = resource which = money value = 5 }
+                  command = { type = relative_manpower value = 1 }
+                  command = { type = construct which = infrastructure where = -1 value = 5 }
+           }
+           action_b = {
+                  name = "No further changes are needed"
+                  ai_chance = 1
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = freedom value = -1 }
+           }
+
+}
+#############################################
+######  Join the Allies
+#############################################
+event = {
+         id = 13302003
+         random = no
+         country = bhu
+         trigger = {
+		war = { country =eng  country = ger }
+		NOT = { war = { country = bhu country = eng }  }
+		NOT = { alliance = { country = bhu country = eng }  }
+
+         }
+ 
+         name = "Join the Allies"
+         desc = "The countries that formed the British Commonwealth had been given powers to bring his own foreign policy. This enabled him to not be bound or obligated to participate in wars involving the United Kingdom. Although many of these countries, ensured the integrity of the UK and some of them had in its constitution the obligation to defend against aggression. Most of these countries joined the bloc ally."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1947 }
+ 
+                
+                picture = "commonwealth"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  ai_chance = 100
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = domestic which = interventionism value = 1 }
+                  command = { type = sleepevent which = 13301550 }
+                  command = { type = set_relation which = ENG value = 200 }
+                  command = { type = alliance which = ENG }
+                  command = { type = dissent value = -50 }
+           }
+           action_b = {
+                  name = "It is not our war"
+                  command = { type = dissent value = 25 }
+                  command = { type = domestic which = interventionism value = -2 }
+                  command = { type = domestic which = defense_lobby value = -2 }
+                  command = { type = relation which = eng value = -150 }
+                  command = { type = relation which = ger value = 50 }
+                  ai_chance = 0
+           }
+
+}

@@ -1,0 +1,501 @@
+event = {
+	id = 8010501
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715001 } # Sir Bernard H. Bourdillon
+		command = { type = headofgovernment which = 715100 } # Sir Bernard H. Bourdillon
+	}
+}
+
+event = {
+	id = 8010502
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715101 } # John E. Shuckburgh
+		command = { type = headofgovernment which = 715002 } # John E. Shuckburgh
+	}
+}
+
+event = {
+	id = 8010503
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715102 } # Sir Allan C.M. Burns
+		command = { type = headofgovernment which = 715103 } # Sir Allan C.M. Burns
+	}
+}
+
+event = {
+	id = 8010504
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715104 } # Sir Arthur F. Richards
+		command = { type = headofgovernment which = 715105 } # Sir Arthur F. Richards
+	}
+}
+
+event = {
+	id = 8010505
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715106 } # Sir John Stuart Macpherson
+		command = { type = headofgovernment which = 715107 } # Sir John Stuart Macpherson
+	}
+}
+
+event = {
+	id = 8010506
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715108 } # Sir James Wilson Robertson
+		command = { type = headofgovernment which = 715109 } # Sir James Wilson Robertson
+	}
+}
+
+event = {
+	id = 8010507
+	country = NIG
+
+	name = EVT_8010507_NAME
+	desc = EVT_8010507_DESC
+	picture = "nwo\independence_of_nigeria"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = EVT_8010507_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 715011 } # Dr. Nnamdi Azikiwe
+		command = { type = headofgovernment which = 715013 } # Sir Abubabar Tafawa Balewa
+		command = { type = foreignminister which = 715015 } # Stuart McMorris
+		command = { type = armamentminister which = 715017 } # Yahu Awko-Iditti
+		command = { type = ministerofsecurity which = 715019 } # Mohammad Okaziyabu
+		command = { type = ministerofintelligence which = 715021 } # Johnson Ayuiyi-Ironsi
+		command = { type = chiefofstaff which = 715023 } # Yakubu Gowon
+		command = { type = chiefofarmy which = 715025 } # Johnson Ayuiyi-Ironsi
+		command = { type = chiefofnavy which = 715027 } # Hamilton Alula
+		command = { type = chiefofair which = 715029 } # Ifar Ilishuno
+	}
+}
+
+event = {
+	id = 8010508
+	country = NIG
+
+	name = EVT_8010508_NAME
+	desc = EVT_8010508_DESC
+	picture = nwo\nigeria
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = EVT_8010508_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 715110 } # Yakubu Gowon
+		command = { type = headofgovernment which = 715111 } # Joseph Edet Akinwale Wey
+	}
+}
+
+event = {
+	id = 8010509
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715112 } # Murtala Mohammed
+		command = { type = headofgovernment which = 715113 } # Olusegun Obasanjo
+	}
+}
+
+event = {
+	id = 8010510
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715114 } # Olusegun Obasanjo
+		command = { type = headofgovernment which = 715115 } # Shehu Musa Yar'Adua
+	}
+}
+
+event = {
+	id = 8010511
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 715116 } # Shehu Shagari
+		command = { type = headofgovernment which = 715117 } # Alex Ifeanyichukwu Ekwueme
+	}
+}
+
+event = {
+	id = 8010512
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 715121 } # Muhammadu Buhari
+		command = { type = headofgovernment which = 715122 } # Tunde Idiagbon
+	}
+}
+
+event = {
+	id = 8010513
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 715118 } # Ibrahim Babangida
+		command = { type = headofgovernment which = 715119 } # Ebitu Ukiwe
+	}
+}
+
+event = {
+	id = 8010514
+	country = NIG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 715120 } # Augustus Aikhomu
+	}
+}
+
+### Biafran revolt
+
+event = {
+	id = 8010515
+	country = NIG
+
+	name = EVT_8010515_NAME
+	desc = EVT_8010515_DESC
+	picture = nwo\republic_of_biafra
+	style = 1
+
+	trigger = {
+		NOT = { exists = UAP }
+		control = { province = 930 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8010515_A
+		ai_chance = 99
+		command = { type = leave_alliance }
+		command = { type = independence which = UAP value = 0 }
+		command = { type = war which = UAP }
+		command = { type = dissent value = 20 }
+	}
+	
+	action = {
+		name = EVT_8010515_B
+		ai_chance = 1
+		command = { type = leave_alliance }
+		command = { type = independence which = UAP value = 0 }
+		command = { type = dissent value = 20 }
+	}
+}
+
+event = {
+	id = 8010516
+	country = UAP
+
+	name = EVT_8010516_NAME
+	desc = EVT_8010516_DESC
+	picture = nwo\republic_of_biafra
+	style = 1
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8010516_A
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = add_division value = militia when = 6 }
+		command = { type = addcore which = 935 }
+		command = { type = addcore which = 931 }
+		command = { type = addcore which = 930 }
+	}
+}
+
+event = {
+	id = 8010517
+	country = NIG
+
+	name = EVT_8010517_NAME
+	desc = EVT_8010517_DESC
+	picture = nwo\republic_of_biafra
+	style = 1
+	
+	trigger = {
+		war = { country = UAP }
+		area = { area = "South Nigeria" country = UAP value = 50 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8010517_A
+		command = { type = dissent value = 20 }
+		command = { type = peace which = UAP }
+		command = { type = secedeprovince which = UAP value = 935 when = 1 }
+		command = { type = secedeprovince which = UAP value = 931 when = 1 }
+		command = { type = secedeprovince which = UAP value = 930 when = 1 }
+	}
+}

@@ -1,0 +1,158 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Ireland
+# Event List:
+# IRE 13300810 Northern Ireland
+# IRE 13300811 Northern Ireland Vote
+# IRE 13300812 Irish Civil War
+# IRE 13300813 Northern Ireland Wins
+# IRE 13300814 Irish War for Independence
+# IRE 13300815 Irish War for Independence Succeeds
+# IRE 13300816 Irish War for Independence Fails
+# IRE 13300817 End of Irish Civil War
+# IRE 13300818 Northern Ireland Workaround
+
+# Northern Ireland Vote
+event = {
+	id = 13300811
+	country = IRE
+	
+	# Triggered
+	
+	name = "Anglo-Irish Tensions"
+	desc = "While a majority of Ireland support our newfound independence, there are those in the North who have reservations about leaving the United Kingdom. Most of them are of anglo-irish descent and are wary of becoming the minority in the new nation."
+	picture = "aar_irishindependence"
+	style = 2
+	
+	action = {
+		ai_chance = 95
+		name = "Let them vote"
+		command = { type = dissent value = -10 }
+		command = { type = local_setflag which = nivote }
+	}
+	
+	action = {
+		ai_chance = 5
+		name = "Ireland as a whole has already decided!"
+		command = { type = dissent value = 40 }
+		command = { type = event where = IRE which = 13300818 when = 2}
+	}
+	
+}
+
+# Northern Ireland Workaround
+event = {
+	id = 13300818
+	country = IRE
+	one_action = yes
+	
+	# Triggered
+	
+	name = "Northern Ireland Leaders Meet"
+	desc = "A group of Anglo-Irish leaders met today to discuss our unilateral declaration of independence for all of Ireland."
+	picture = "aar_irishindependence"
+	style = 2
+	
+	action = {
+		ai_chance = 90
+		name = "We shall see how they respond."
+		command = { type = local_setflag which = nirevolt }
+	}
+	
+	action = {
+		trigger = {
+			ai = no
+		}
+		ai_chance = 10
+		name = "We shall see how they respond."
+		command = { type = local_setflag which = niaccept }
+	}
+	
+}
+# Northern Ireland
+# TODO: Change event description
+event = {
+	id = 13300810
+	country = IRE
+	
+	trigger = {
+		not = { exists = U71 }
+		owned = { province = 35 data = -1 }
+		owned = { province = 36 data = -1 }
+		or = {
+			and = {
+				event = 13300811
+				local_flag = nivote
+			}
+			event = 13300818
+		}
+	}
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1939 }
+	offset = 7
+	
+	name = "EVT_13300810_NAME"		
+	desc = "EVT_13300810_DESC"
+	picture = "aar_nirelandf"
+	style = 2
+	
+	action = {
+		trigger = {
+			local_flag = nivote
+		}
+		name = "Let them go."
+		ai_chance = 95
+		command = { type = independence which = U71 value = 1 when = 1 }
+		command = { type = dissent value = 5 }
+		command = { type = relation which =	ENG value = 25 }
+		command = { type = trigger which = 13300911 } # Trigger British Annexation of N. Ireland.
+	}
+	
+	action = {
+		trigger = {
+			local_flag = nivote
+		}
+		name = "Force them to stay!"
+		ai_chance = 5
+		command = { type = dissent value = 20 }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = independence which = U71 value = 0 when = 1 }
+		command = { trigger = { not = { army = 2 } } type = add_division value = militia when = 1 }
+		command = { type = war which = U71 } # CIVIL WAR DOES NOT WORK!!!
+		command = { type = relation which =	ENG value = -200 }
+	}
+	
+	action = {
+		trigger = {
+			local_flag = nirevolt
+		}
+		name = "They have risen up in open revolt!"
+		ai_chance = 5 #To avoid errors, not counted.
+		command = { type = dissent value = 5 }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = independence which = U71 value = 0 when = 1 }
+		command = { trigger = { not = { army = 2 } } type = add_division value = militia when = 1 }
+		command = { type = war which = U71 } # CIVIL WAR DOES NOT WORK!!!
+		command = { type = relation which =	ENG value = -200 }
+	}
+	
+	action = {
+		trigger = {
+			local_flag = niaccept
+		}
+		name = "They have agreed to stay!"
+		ai_chance = 5 #To avoid errors, not counted.
+		command = { type = dissent value = -30 }
+		command = { type = relation which =	ENG value = -50 }
+	}
+}

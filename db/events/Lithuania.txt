@@ -1,0 +1,379 @@
+#########################################################################
+# Soviet Union base treaty ultimatum decision for Lithuania
+#########################################################################
+event = {
+	id = 1330251001
+	random = no
+	country = SOV
+
+	decision = {
+		event = 2007020  # Eastern Poland has been given to the USSR
+		exists = LIT
+		NOT = {
+			war = { country = LIT country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = SOV country = LIT }
+		}
+		NOT = {
+			control = { province = 259 }
+			control = { province = 260 }
+			control = { province = 262 }
+			control = { province = 263 }
+		}
+	}
+	
+	trigger = {
+		exists = LIT	
+		event = 2007020  # Eastern Poland has been given to the USSR
+		NOT = {
+			OR = {
+				war = { country = LIT country = SOV }
+				war = { country = GER country = SOV }
+				alliance = { country = SOV country = LIT }				
+			}
+		}
+		NOT = {
+			control = { province = 259 }
+			control = { province = 260 }
+			control = { province = 262 }
+			control = { province = 263 }
+		}
+	}
+
+	name = "Soviet Union imposes Lithuania to sign treaty of mutual assistance"
+	desc = "After Molotov-Ribentrop pact Lithuania was in the sphere of Soviet influence. Soon after Soviet leaders started to plan ocupation of Lithuania."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 9 month = october year = 1939  }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1940 }
+		
+	action = {
+		name = "Demand treaty of mutual assistance" # Demand Lithuania
+		ai_chance = 100
+		command = { type = relation which = LIT value = -10 }
+		command = { type = trigger which = 1330251002 } # Lithuania
+	}
+}
+#########################################################################
+# Base treaty ultimatum
+#########################################################################
+event = {
+	id = 1330251002
+	random = no
+	country = LIT
+
+	name = "Soviet Union is demanding base agreement."
+	desc = "Soviet Union invited foreign minister of Lithuania to negotiate in Moscow on 3 of October. An ultimatum wich requires full military access to Lithuania territory was presented."
+	style = 2
+	picture = "minister_resign"
+
+
+	action_a = {
+		name = "We have no choice but to agree!"
+		ai_chance = 100
+		command = { type = trigger which = 1330251003}
+	}
+	action_b = {
+		name = "We cannot accept this!"
+		ai_chance = 0
+		command = { type = war which = SOV }
+	}
+}
+
+#########################################################################
+# Soviet Union bases in Lithuania
+#########################################################################
+event = {
+	id = 1330251003
+	random = no
+	country = LIT
+	
+	name = "Base treaties"
+	desc = "On 10th of October Lithuania signed the so called base agreement. It was ultimatum presented by SU under threats of invasion. Under terms of this agreement SU had rights to have military bases and station permanent garrison of 20 000 men in the territory of Lithuania. Formally it guarenteed indenpendence of Lithuania."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		name = "Borders are open."
+		command = { type = dissent value = 2 }
+		command = { type = access which = SOV }
+		command = { type = guarantee which = SOV where = LIT}
+		command = { type = relation which = SOV value = -20 }
+		command = { type = trigger which = 1330251009 } # Lithuania get Wilno
+	}
+}
+
+#########################################################################
+# Soviet Union decision for Lithuania new friendly goverment
+#########################################################################
+event = {
+	id = 1330251004
+	random = no
+	country = SOV
+
+	decision = {
+		event = 1330251003  # Base treaties has been accepted
+		exists = LIT
+		NOT = {
+			war = { country = LIT country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = SOV country = LIT }
+		}
+		NOT = {
+			control = { province = 259 }
+			control = { province = 260 }
+			control = { province = 262 }
+			control = { province = 263 }
+		}
+	}
+	
+	trigger = {
+		exists = LIT	
+		event = 1330251003  # Eastern Poland has been given to the USSR
+		NOT = {
+			OR = {
+				war = { country = LIT country = SOV }
+				war = { country = GER country = SOV }
+				alliance = { country = SOV country = LIT }				
+			}
+		}
+		NOT = {
+			control = { province = 259 }
+			control = { province = 260 }
+			control = { province = 262 }
+			control = { province = 263 }
+		}
+	}
+
+	name = "Soviet Union pressures for a SU-friendly goverment"
+	desc = "After base treaty with Lithuania Soviet Union moved about 50 000 troops in Lithuania. In 14th of June V.Molotov presented ultimatum to Lithuania. SU demanded to form Soviet-friendly minister cabinet and let unlimited number of SU troops enter Lithuania!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 14 month = june year = 1940  }
+	offset = 1
+	deathdate = { day = 1 month = december year = 1940 }
+		
+	action = {
+		name = "Demand SU-friendly government!" # Demand Lithuania
+		ai_chance = 100
+		command = { type = relation which = LIT value = -50 }
+		command = { type = trigger which = 1330251005 } # Lithuania
+	}
+}
+
+#########################################################################
+# Ocupation of Lithuania
+#########################################################################
+event = {
+	id = 1330251005
+	random = no
+	country = LIT
+
+	name = "Soviet Union demanding friendly government."
+	desc = "Lithuania has no choice but to accept. About 20 000 SU troops had already entered country and about 200 000 troops were stationed at the border. At this point Lithuania had only 30 000 men in active service!"
+	style = 2
+	picture = "minister_resign"
+
+	action_a = {
+		name = "We have no choice but to agree!"
+		ai_chance = 80
+		command = { type = trigger which = 1330251006}
+	}
+	action_b = {
+		name = "We cannot accept this!"
+		ai_chance = 20
+		command = { type = war which = SOV }
+	}
+}
+
+#########################################################################
+# Soviet Union ocupation of Lithuania for Lithuania
+#########################################################################
+event = {
+	id = 1330251007
+	random = no
+	country = LIT
+	
+	name = "Soviet Union ocupation of Lithuania"
+	desc = "On 17th of June Red army ocupied Lithuania. President of Lithuania Karlis Ulamanis was forced to accept gevernment formed by the Soviet Union."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		name = "Lithuania is no more independent."
+		ai_chance = 100
+		command = { type = dissent value = 10 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = relation which = SOV value = 200 }
+	}
+}
+
+#########################################################################
+# Soviet Union ocupation of Lithuania for Soviet Union
+#########################################################################
+event = {
+	id = 1330251006
+	random = no
+	country = SOV
+	
+	name = "Soviet Union ocupation of Lithuania"
+	desc = "On 17th of June Red army ocupied Lithuania. President of Lithuania Karlis Ulamanis was forced to accept gevernment formed by the Soviet Union."
+	style = 2
+	picture = "minister_resign"
+	
+	action = {
+		ai_chance = 100
+		name = "Lithuania is no more independent."
+		command = { type = relation which = LIT value = 200 }
+		command = { type = make_puppet which = LIT }
+		command = { type = trigger which = 1330251007}
+	}
+}
+
+#########################################################################
+# Soviet Union annexion of Lithuania for Soviet Union
+#########################################################################
+event = {
+	id = 1330251008
+	random = no
+	country = SOV
+
+	decision = {
+		event = 1330251006  # Lithuania is made puppet
+		exists = LIT
+		NOT = {
+			war = { country = LIT country = SOV }
+			war = { country = GER country = SOV }
+		}
+		NOT = {
+			control = { province = 259 }
+			control = { province = 260 }
+			control = { province = 262 }
+			control = { province = 263 }
+		}
+	}
+	
+	trigger = {
+		exists = LIT	
+		event = 1330251006  # Lithuania is made puppet
+		NOT = {
+			OR = {
+				war = { country = LIT country = SOV }
+				war = { country = GER country = SOV }			
+			}
+		}
+		NOT = {
+			control = { province = 259 }
+			control = { province = 260 }
+			control = { province = 262 }
+			control = { province = 263 }
+		}
+	}
+
+	name = "Soviet Union annex Lithuania"
+	desc = "After 21st of July so called 'Tautas Saeima' appealed Lithuania to be included in Soviet Union as LSSR, Soviet Union formally annexed Lithuania at 5th of August"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 2 month = august year = 1940  }
+	offset = 1
+	deathdate = { day = 1 month = december year = 1940 }
+		
+	action = {
+		name = "'Tautas Saeimas plea must be respected!" # Annex Lithuania
+		ai_chance = 100
+		command = { type = addcore which = 258 }
+		command = { type = addcore which = 259 }
+		command = { type = addcore which = 260 }
+		command = { type = addcore which = 262 }
+		command = { type = addcore which = 263 }
+		command = { type = inherit which = LIT }
+
+	}
+}
+
+#########################################################################
+# Wilno region goes to Lithuania
+#########################################################################
+event = {
+	id = 1330251009
+	random = no
+	country = SOV
+
+	trigger = {
+		atwar = no
+		event = 1330251003 # Base treaty ok
+		control = { province = 258 data = SOV } # Wilno is under Soviet rule 
+	}
+	
+	name = "Wilno to Lithuania"
+	desc = "In exchange for bases Soviet Union gave Wilno region which was taken from Poland to Lithuania."
+	style = 2
+	picture = "minister_resign"
+	
+	date = { day = 27 month = October year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "Give it to rightfull owner."
+		command = { type = secedeprovince which = LIT value = 258 }
+		command = { type = trigger which = 1330251010 }
+	}
+}
+
+#########################################################################
+# Wilno region goes to Lithuania in Lithuania
+#########################################################################
+event = {
+	id = 1330251010
+	random = no
+	country = LIT
+
+	name = "Wilno to Lithuania"
+	desc = "In exchange for bases Soviet Union gave Wilno region which was taken from Poland to Lithuania. There was hight discontent with this action in region. Soon riots broke out."
+	style = 2
+	picture = "minister_resign"
+	
+	date = { day = 28 month = October year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "Wilno are ours!"
+		command = { type = dissent value = 3 }
+	}
+}
+
+#########################################################################
+# Soviet ocupation in Lithuania
+#########################################################################
+
+event = {
+	id = 1330251011
+	random = no
+	country = SOV
+
+	trigger = { event = 133025019 }	
+	
+	name = "Lithuanian army reorganized"
+	desc = "After ocupation Lithuanian army was included in red army as 29th Territorial Rifle Corps!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 10 month = august year = 1940 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = "They will be good adition to our army!"
+		ai_chance = 100
+		command = { type = add_division which = "29-i Strelkovyi Korpus" value = infantry when = 7 }
+		command = { type = manpowerpool value = 1 }
+		command = { type = money value = 100 } #free equipement
+	}
+}

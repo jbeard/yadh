@@ -1,0 +1,33 @@
+event = {
+	id = 8021801
+	country = U18
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 905002 } # Martin Karp
+		command = { type = headofgovernment which = 905003 } # Ren? Blum
+		command = { type = foreignminister which = 905009 } # Francois Schammel
+		command = { type = armamentminister which = 905013 } # Jean Pierre Kauder
+		command = { type = ministerofsecurity which = 905017 } # Michel Hansen
+		command = { type = ministerofintelligence which = 905022 } # Max Weckering
+		command = { type = chiefofstaff which = 905025 } # Martin Karp
+		command = { type = chiefofarmy which = 905026 } # Martin Karp
+		command = { type = chiefofnavy which = 905027 } # Paul Medinger
+		command = { type = chiefofair which = 905028 } # Jean Marc Steffen
+	}
+}
+

@@ -1,0 +1,1101 @@
+#############################################################################################
+#
+#	New World Order 2 by Bizon
+#	The Bitter Peace
+#	IDs: 833****
+#	
+#############################################################################################
+
+### PHASE ONE: SOVIET UNION ASKS FOR SURRENDER
+
+event = {
+	id = 8330000
+	country = SOV
+	persistent = yes
+
+	name = EVT_8330000_NAME
+	desc = EVT_8330000_DESC
+	picture = nwo\operation_barbarossa
+	style = 1
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 56 data = GER } # Paris
+			AND = {
+				alliance = { country = GER country = FRA }
+				control = { province = 56 data = FRA } # Paris
+			}
+		}
+		NOT = {
+			control = { province = 187 data = SOV } # Leningrad
+			control = { province = 163 data = SOV } # Stalingrad
+			control = { province = 175 data = SOV } # Moscow
+			control = { province = 1907 data = SOV } # Baku
+		}
+		OR = {
+			NOT = { control = { province = 1572 data = SOV } } # Sverdlovsk
+			NOT = { control = { province = 2191 data = SOV } } # Vladivostok 
+		}
+		OR = {
+			AND = {
+				NOT = {	
+					war = { country = GER country = ENG }
+					war = { country = GER country = USA }
+				}
+				lost_national = { country = SOV value = 35 }
+				lost_ic = { country = SOV value = 40 }
+			}
+			AND = {
+				OR = {
+					AND = {
+						war = { country = GER country = ENG }
+						NOT = { war = { country = GER country = USA } }
+					}
+					AND = {
+						NOT = { war = { country = GER country = ENG } }
+						war = { country = GER country = USA }
+					}
+				}
+				lost_national = { country = SOV value = 45 }
+				lost_ic = { country = SOV value = 50 }
+			}
+			AND = {
+				war = { country = GER country = ENG }
+				war = { country = GER country = USA }
+				lost_national = { country = SOV value = 55 }
+				lost_ic = { country = SOV value = 60 }
+			}
+		}
+		NOT = {	flag = the_bitter_peace	}
+		NOT = { event = 8331000 }
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8330000_A
+		ai_chance = 80
+		command = { type = setflag which = the_bitter_peace }
+		command = { type = dissent value = 15 }
+		command = { type = sleepminister which = 30002 } #Stalin
+		command = { type = sleepminister which = 30011 } #Stalin
+		command = { type = sleepminister which = 30046 } #Stalin
+		command = { type = sleepminister which = 30076 } #Stalin
+		command = { type = sleepminister which = 30104 } #Stalin
+		command = { type = sleepminister which = 30305 } #Stalin
+		command = { type = sleepminister which = 30109 } #Stalin
+		command = { type = sleepminister which = 30012 } #Molotov
+		command = { type = sleepminister which = 30016 } #Molotov
+		command = { type = sleepminister which = 30021 } #Molotov
+		command = { type = set_domestic which = interventionism value = -3 }
+		command = { type = headofstate which = 30013 } # Shvernik
+		command = { type = headofgovernment which = 30017 } # Beria
+		command = { type = ministerofsecurity which = 30028 } # Beria
+		
+		### Sleep claiming Bessarabia and The Winter War
+		command = { type = sleepevent which = 2007022 }
+		command = { type = sleepevent which = 2007026 }
+	}
+	action = {
+		name = EVT_8330000_B
+		ai_chance = 20
+		trigger = { NOT = { dissent = 40 } }
+		command = { type = dissent value = 3 }
+	}
+
+}
+
+### PHASE TWO: DECISION ABOUT OCCUPATION POLICY
+
+event = {
+	id = 8331000
+	country = GER
+	save_date = yes
+
+	name = EVT_8331000_NAME
+	desc = EVT_8331000_DESC
+	picture = nwo\lebensraum_policy
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# Adopt Rosenberg Plan
+	action = {
+		name = EVT_8331000_A
+		ai_chance = 50
+		command = { type = sleepevent which = 8333001 }
+		command = { type = sleepevent which = 8333002 }
+		# Our allies' roles are assessed
+		command = { trigger = { war = { country = SOV country = JAP } } type = trigger which = 8331001 }
+		command = { trigger = { war = { country = SOV country = ROM } } type = trigger which = 8331002 }
+		command = { trigger = { war = { country = SOV country = FIN } } type = trigger which = 8331003 }
+		command = { trigger = { war = { country = SOV country = TUR } } type = trigger which = 8331004 }
+		command = { trigger = { NOT = { war = { country = SOV country = JAP } } } type = sleepevent which = 8332011 }
+		command = { trigger = { NOT = { war = { country = SOV country = ROM } } } type = sleepevent which = 8332014 }
+		command = { trigger = { NOT = { war = { country = SOV country = FIN } } } type = sleepevent which = 8332017 }
+		command = { trigger = { NOT = { war = { country = SOV country = JAP } } } type = sleepevent which = 8332012 }
+		command = { trigger = { NOT = { war = { country = SOV country = ROM } } } type = sleepevent which = 8332015 }
+		command = { trigger = { NOT = { war = { country = SOV country = FIN } } } type = sleepevent which = 8332018 }
+	}
+	
+	# It will be a total occupation!
+	action = {
+		name = EVT_8331000_B
+		ai_chance = 30
+		command = { type = sleepevent which = 8333000 }
+		command = { type = sleepevent which = 8333002 }
+		# Our allies' roles are assessed
+		command = { trigger = { war = { country = SOV country = JAP } } type = trigger which = 8331001 }
+		command = { trigger = { war = { country = SOV country = ROM } } type = trigger which = 8331002 }
+		command = { trigger = { war = { country = SOV country = FIN } } type = trigger which = 8331003 }
+		command = { trigger = { war = { country = SOV country = TUR } } type = trigger which = 8331004 }
+		command = { trigger = { NOT = { war = { country = SOV country = JAP } } } type = sleepevent which = 8332011 }
+		command = { trigger = { NOT = { war = { country = SOV country = ROM } } } type = sleepevent which = 8332014 }
+		command = { trigger = { NOT = { war = { country = SOV country = FIN } } } type = sleepevent which = 8332017 }
+		command = { trigger = { NOT = { war = { country = SOV country = JAP } } } type = sleepevent which = 8332012 }
+		command = { trigger = { NOT = { war = { country = SOV country = ROM } } } type = sleepevent which = 8332015 }
+		command = { trigger = { NOT = { war = { country = SOV country = FIN } } } type = sleepevent which = 8332018 }
+	}
+	
+	# Let them have freedom
+	action = {
+		name = EVT_8331000_C
+		ai_chance = 19
+		command = { type = sleepevent which = 8333000 }
+		command = { type = sleepevent which = 8333001 }
+		# Our allies' roles are assessed
+		command = { trigger = { war = { country = SOV country = JAP } } type = trigger which = 8331001 }
+		command = { trigger = { war = { country = SOV country = ROM } } type = trigger which = 8331002 }
+		command = { trigger = { war = { country = SOV country = FIN } } type = trigger which = 8331003 }
+		command = { trigger = { war = { country = SOV country = TUR } } type = trigger which = 8331004 }
+		command = { trigger = { NOT = { war = { country = SOV country = JAP } } } type = sleepevent which = 8332011 }
+		command = { trigger = { NOT = { war = { country = SOV country = ROM } } } type = sleepevent which = 8332014 }
+		command = { trigger = { NOT = { war = { country = SOV country = FIN } } } type = sleepevent which = 8332017 }
+		command = { trigger = { NOT = { war = { country = SOV country = JAP } } } type = sleepevent which = 8332012 }
+		command = { trigger = { NOT = { war = { country = SOV country = ROM } } } type = sleepevent which = 8332015 }
+		command = { trigger = { NOT = { war = { country = SOV country = FIN } } } type = sleepevent which = 8332018 }
+	}
+	
+	# No deals with Bolsheviks!
+	action = {
+		name = EVT_8331000_D
+		ai_chance = 1
+		command = { type = dissent which = 20 }
+		command = { type = clrflag which = the_bitter_peace }
+	}
+}
+
+event = {
+	id = 8331001
+	country = JAP
+
+	name = EVT_8331001_NAME
+	desc = EVT_8331001_DESC
+	picture = nwo\japanese_gains_in_ussr
+	style = 1
+	
+	action = {
+		name = EVT_8331001_A
+		trigger = {
+			OR = {
+				control = { province = 1191 data = JAP } # Vladivostok
+				alliance = { country = GER country = JAP }
+			}
+		}
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8332012 }
+		command = { type = sleepevent which = 8332013 }
+	}
+	
+	action = {
+		name = EVT_8331001_B
+		trigger = {
+			NOT = {
+				control = { province = 1191 data = JAP } # Vladivostok
+				alliance = { country = GER country = JAP }
+			}
+		}
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8332011 }
+		command = { type = sleepevent which = 8332013 }
+	}
+	
+}
+
+event = {
+	id = 8331002
+	country = ROM
+
+	name = EVT_8331002_NAME
+	desc = EVT_8331002_DESC
+	picture = nwo\romanian_gains_in_ussr
+	style = 1
+
+	action = {
+		name = EVT_8331002_A
+		trigger = {
+			OR = {
+				control = { province = 238 data = -1 } # Kiev
+				control = { province = 258 data = -1 } # Rostov
+				control = { province = 248 data = -1 } # Kharkov
+				control = { province = 163 data = -1 } # Stalingrad
+			}
+		}
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8332015 }
+		command = { type = sleepevent which = 8332016 }
+	}
+	
+	action = {
+		name = EVT_8331002_B
+		trigger = {
+			NOT = {
+				control = { province = 238 data = -1 } # Kiev
+				control = { province = 258 data = -1 } # Rostov
+				control = { province = 248 data = -1 } # Kharkov
+				control = { province = 163 data = -1 } # Stalingrad
+			}
+		}
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8332014 }
+		command = { type = sleepevent which = 8332016 }
+	}
+	
+}
+
+event = {
+	id = 8331003
+	country = FIN
+
+	name = EVT_8331003_NAME
+	desc = EVT_8331003_DESC
+	picture = nwo\finnish_gains_in_ussr
+	style = 1
+	
+	action = {
+		name = EVT_8331003_A
+		trigger = {
+			OR = {
+				control = { province = 187 data = -1 } # Leningrad
+				control = { province = 175 data = -1 } # Moscow
+				control = { province = 154 data = -1 } # Arkhangelsk
+			}
+		}
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8332018 }
+		command = { type = sleepevent which = 8332019 }
+	}
+	
+	action = {
+		name = EVT_8331003_B
+		trigger = {
+			NOT = {
+				control = { province = 187 data = -1 } # Leningrad
+				control = { province = 175 data = -1 } # Moscow
+				control = { province = 154 data = -1 } # Arkhangelsk
+			}
+		}
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8332017 }
+		command = { type = sleepevent which = 8332019 }
+	}
+	
+}
+
+event = {
+	id = 8331004
+	country = TUR
+
+	name = EVT_8331004_NAME
+	desc = EVT_8331004_DESC
+	picture = nwo\turkish_gains_in_ussr
+	style = 1
+	
+	action = {
+		name = EVT_8331004_A
+		command = { type = dissent value = -5 }
+	}	
+}
+
+### PHASE THREE: THE PEACE IS SIGNED AND SOVIET TERRITORIES ARE GIVEN TO THE GERMANS
+
+event = {
+	id = 8332000
+	country = SOV
+	save_date = yes
+
+	name = EVT_8332000_NAME
+	desc = EVT_8332000_DESC
+	picture = nwo\defeat_of_ussr
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8331000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8332000_A
+		command = { type = leave_alliance }	
+		command = { type = peace which = GER value = 0 }			
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = FIN value = 0 }
+		command = { type = peace which = TUR value = 0 }
+		command = { type = peace which = PER value = 0 }
+		command = { type = peace which = USA value = 0 }
+		command = { type = peace which = ENG value = 0 }
+		command = { type = capital which = 1591 } # Novosibirsk
+		# Sleep event making Tuvans join the USSR
+		command = { type = sleepevent which = 2088001 }
+		### Give out the lands
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+		command = { type = secederegion which = GER value = "Finland" when = 1 }
+		command = { type = secederegion which = GER value = "White Sea Tundra" when = 1 }
+		command = { type = secederegion which = GER value = "Northern Russia" when = 1 }
+		command = { type = secederegion which = GER value = "Baltic States" when = 1 }
+		command = { type = secederegion which = GER value = "Western Russia" when = 1 }
+		command = { type = secederegion which = GER value = "Russia" when = 1 }
+		command = { type = secederegion which = GER value = "Belarus" when = 1 }
+		command = { type = secederegion which = GER value = "Poland" when = 1 }
+		command = { type = secederegion which = GER value = "Ukraine" when = 1 }
+		command = { type = secederegion which = GER value = "Southern Russia" when = 1 }
+		command = { type = secederegion which = GER value = "Kaukasus" when = 1 }
+		command = { type = secederegion which = PER value = "Persia" when = 1 }
+		command = { trigger = { region = { region = "Persia" country = ENG value = 30 } } type = secederegion which = ENG value = "Persia" when = 1 }
+		command = { trigger = { region = { region = "Persia" country = GER value = 30 } } type = secederegion which = GER value = "Persia" when = 1 }
+		command = { type = secederegion which = USA value = "Persia" when = 1 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 2 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 3 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 4 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 5 } ## CEE influence -1
+	}
+}
+
+### Giving major spoils to Japan
+event = {
+	id = 8332011
+	country = SOV
+
+	name = EVT_8332011_NAME 
+	desc = EVT_8332011_DESC
+	picture = nwo\japanese_gains_in_ussr
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332011_A
+		command = { type = secederegion which = JAP value = "Far East Siberia" when = 1 }
+		command = { type = secederegion which = JAP value = "Irkutsk" when = 1 }
+		command = { type = secedearea which = JAP value = "Yakutsk" when = 1 }
+		command = { type = secedearea which = JAP value = "Magadan" when = 1 }
+		command = { type = secedearea which = JAP value = "Primorski" when = 1 }
+		command = { type = secedearea which = JAP value = "Khabarovsk" when = 1 }
+		command = { type = secederegion which = JAP value = "Japan" when = 1 }
+	}
+}
+
+### Giving minor spoils to Japan
+event = {
+	id = 8332012
+	country = SOV
+
+	name = EVT_8332012_NAME 
+	desc = EVT_8332012_DESC
+	picture = nwo\japanese_gains_in_ussr
+	style = 1
+
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332012_A
+		command = { type = secedearea which = JAP value = "Primorski" when = 1 }
+		command = { type = secedearea which = JAP value = "Khabarovsk" when = 1 }
+		command = { type = secederegion which = JAP value = "Japan" when = 1 }
+	}
+}
+
+### Giving no spoils to Japan
+event = {
+	id = 8332013
+	country = SOV
+
+	name = EVT_8332013_NAME 
+	desc = EVT_8332013_DESC
+	picture = nwo\japanese_gains_in_ussr
+	style = 1
+
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332013_A
+		command = { type = secederegion which = JAP value = "Japan" when = 1 }
+	}
+}
+
+### Giving major spoils to Romania
+event = {
+	id = 8332014
+	country = GER
+
+	name = EVT_8332014_NAME 
+	desc = EVT_8332014_DESC
+	picture = nwo\romanian_gains_in_ussr
+	style = 1
+
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332014_A
+		command = { type = secedeprovince which = ROM value = 615 when = 1 }
+		command = { type = secedeprovince which = ROM value = 622 when = 1 }
+		command = { type = secedeprovince which = ROM value = 627 when = 1 }
+		command = { type = secedeprovince which = ROM value = 628 when = 1 }
+		command = { type = secedearea which = ROM value = "Odessa" when = 1 }
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+	}
+}
+
+### Giving minor spoils to Romania
+event = {
+	id = 8332015
+	country = GER
+
+	name = EVT_8332015_NAME 
+	desc = EVT_8332015_DESC
+	picture = nwo\romanian_gains_in_ussr
+	style = 1
+
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332015_A
+		command = { type = secedearea which = ROM value = "Odessa" when = 1 }
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+	}
+}
+
+### Giving no spoils to Romania
+event = {
+	id = 8332016
+	country = GER
+
+	name = EVT_8332016_NAME 
+	desc = EVT_8332016_DESC
+	picture = nwo\romanian_gains_in_ussr
+	style = 1
+
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332016_A
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+	}
+}
+
+### Giving major spoils to Finland
+event = {
+	id = 8332017
+	country = GER
+	
+	name = EVT_8332017_NAME 
+	desc = EVT_8332017_DESC
+	picture = nwo\finnish_gains_in_ussr
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332017_A
+		command = { type = secedearea which = FIN value = "Kola" when = 1 }
+		command = { type = secedearea which = FIN value = "Petrozavodsk" when = 1 }
+		command = { type = secedeprovince which = FIN value = 538 when = 1 }
+		command = { type = secedeprovince which = FIN value = 539 when = 1 }
+		command = { type = secedeprovince which = FIN value = 540 when = 1 }
+		command = { type = secederegion which = FIN value = "Finland" when = 1 }
+	}
+}
+
+### Giving minor spoils to Finland
+event = {
+	id = 8332018
+	country = GER
+
+	name = EVT_8332018_NAME 
+	desc = EVT_8332018_DESC
+	picture = nwo\finnish_gains_in_ussr
+	style = 1
+
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332018_A
+		command = { type = secedeprovince which = FIN value = 538 when = 1 }
+		command = { type = secedeprovince which = FIN value = 539 when = 1 }
+		command = { type = secedeprovince which = FIN value = 540 when = 1 }
+		command = { type = secederegion which = FIN value = "Finland" when = 1 }
+	}
+}
+
+### Giving no spoils to Finland
+event = {
+	id = 8332019
+	country = GER
+
+	name = EVT_8332019_NAME 
+	desc = EVT_8332019_DESC
+	picture = nwo\finnish_gains_in_ussr
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332019_A
+		command = { type = secederegion which = FIN value = "Finland" when = 1 }
+	}
+}
+
+### Giving spoils to Turkey
+event = {
+	id = 8332020
+	country = GER
+
+	name = EVT_8332020_NAME 
+	desc = EVT_8332020_DESC
+	picture = nwo\turkish_gains_in_ussr
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 3 }
+		event = 8331004
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8332020_A
+		command = { type = secedearea which = TUR value = "Georgia" when = 1 }
+		command = { type = secedeprovince which = TUR value = 711 when = 1 }
+		command = { type = secedeprovince which = TUR value = 714 when = 1 }
+	}
+}
+
+### PHASE FOUR: FUTURE OF OCCUPIED LANDS
+
+# Rosenberg Plan
+event = {
+	id = 8333000
+	country = GER
+	save_date = yes
+
+	name = EVT_8333000_NAME 
+	desc = EVT_8333000_DESC
+	picture = nwo\alfred_rosenberg
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8333000_A
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+		command = { type = independence which = U40 value = 1 } # Reichskommissariat Ostland
+		command = { type = independence which = U44 value = 1 } # Generalgouvernement Polen
+		command = { type = independence which = U45 value = 1 } # Reichskommissariat Norwegen
+		command = { type = independence which = U46 value = 1 } # Reichskommissariat Niederlande
+		command = { type = independence which = U47 value = 1 } # Reichskommissariat Belgien-Nordfrankreich
+		command = { type = independence which = U48 value = 1 } # Reichskommissariat Turkestan
+		command = { type = independence which = U41 value = 1 } # Reichskommissariat Ukraine
+		command = { type = independence which = U42 value = 1 } # Reichskommissariat Kaukasus
+		command = { type = independence which = U43 value = 1 } # Reichskommissariat Moskowien
+		command = { type = make_puppet which = LIT }
+		command = { type = make_puppet which = LAT } 
+		command = { type = make_puppet which = EST }
+		command = { type = make_puppet which = U40 }
+		command = { type = make_puppet which = U44 } 
+		command = { type = make_puppet which = U45 } 
+		command = { type = make_puppet which = U46 } 
+		command = { type = make_puppet which = U47 } 
+		command = { type = make_puppet which = U48 } 
+		command = { type = make_puppet which = U41 } 
+		command = { type = make_puppet which = U42 } 
+		command = { type = make_puppet which = U43 } 
+		command = { type = alliance which = LIT }		
+		command = { type = alliance which = LAT } 
+		command = { type = alliance which = EST } 
+		command = { type = alliance which = U40 }		
+		command = { type = alliance which = U44 } 
+		command = { type = alliance which = U45 } 
+		command = { type = alliance which = U46 } 
+		command = { type = alliance which = U47 } 
+		command = { type = alliance which = U48 } 
+		command = { type = alliance which = U41 } 
+		command = { type = alliance which = U42 } 
+		command = { type = alliance which = U43 } 
+	}
+}
+
+# Total occupation!
+event = {
+	id = 8333001
+	country = GER
+	save_date = yes
+
+	name = EVT_8333001_NAME 
+	desc = EVT_8333001_DESC
+	picture = nwo\germany_to_the_urals
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8333001_A
+		ai_chance = 80
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+		command = { type = make_puppet which = LIT }
+		command = { type = make_puppet which = LAT }
+		command = { type = make_puppet which = EST }
+		command = { type = alliance which = LIT }
+		command = { type = alliance which = LAT }
+		command = { type = alliance which = EST }
+		command = { type = dissent value = 40 }
+		command = { type = belligerence value = 100 }
+	}
+	
+	action = {
+		name = EVT_8333001_B
+		ai_chance = 20
+		command = { type = dissent value = 45 }
+		command = { type = belligerence value = 110 }
+	}
+}
+
+# Let them have freedom!
+event = {
+	id = 8333002
+	country = GER
+	save_date = yes
+
+	name = EVT_8333002_NAME 
+	desc = EVT_8333002_DESC
+	picture = nwo\russian_liberation_army
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8332000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8333002_A
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+		command = { type = independence which = BLR value = 1 }
+		command = { type = independence which = UKR value = 1 }
+		command = { type = independence which = AZB value = 1 }
+		command = { type = independence which = GEO value = 1 }
+		command = { type = independence which = ARM value = 1 }
+		command = { type = independence which = RUS value = 1 }
+		command = { type = make_puppet which = BLR } 
+		command = { type = make_puppet which = UKR } 
+		command = { type = make_puppet which = AZB } 
+		command = { type = make_puppet which = GEO } 
+		command = { type = make_puppet which = ARM } 
+		command = { type = make_puppet which = RUS } 
+		command = { type = alliance which = BLR } 
+		command = { type = alliance which = UKR } 
+		command = { type = alliance which = AZB } 
+		command = { type = alliance which = GEO } 
+		command = { type = alliance which = ARM } 
+		command = { type = alliance which = RUS } 
+	}
+}
+
+### PHASE FIVE: FUTURE OF USSR
+
+event = { 
+	id = 8334000
+	country = SOV
+	save_date = yes
+
+	name = EVT_8334000_NAME 
+	desc = EVT_8334000_DESC
+	picture = nwo\fall_of_ussr
+	style = 1
+	
+	trigger = {
+		flag = the_bitter_peace
+		OR = {
+			event = { id = 8333000 days = 7 }
+			event = { id = 8333001 days = 7 }
+			event = { id = 8333002 days = 7 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Dissolve USSR and what is left of the Union
+	action = {
+		name = EVT_8334000_A
+		ai_chance = 40
+		command = { type = dissent value = -20 }
+		
+		# We no longer strive for Stalinist ideals
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = set_domestic which = freedom value = 4 }
+		command = { type = set_domestic which = interventionism value = 0 }
+		
+		command = { type = independence which = KAZ value = 0 }
+		command = { type = secederegion which = KAZ value = "Kazakstan" when = 1 }
+		command = { type = independence which = TRK value = 0 }
+		command = { type = independence which = UZB value = 0 }
+		command = { type = independence which = KYG value = 0 }
+		command = { type = independence which = TAJ value = 0 }
+		command = { type = independence which = PRI value = 0 }
+		command = { type = non_aggression which = SOV where = GER }
+		command = { type = access which = GER }
+		command = { type = country which = SIB }
+		
+		# Lose cores
+		command = { type = removecore which = 534 } #Kola
+		command = { type = removecore which = 535 } #Murmansk
+		command = { type = removecore which = 536 } #Arkhangelsk
+		command = { type = removecore which = 537 } #Leningrad
+		command = { type = removecore which = 538 } #Kandalaksha
+		command = { type = removecore which = 539 } #Kem
+		command = { type = removecore which = 540 } #Segezha
+		command = { type = removecore which = 541 } #Petrozavodsk
+		command = { type = removecore which = 542 } #Kestenga
+		command = { type = removecore which = 543 } #Belomorsk
+		command = { type = removecore which = 544 } #Totma
+		command = { type = removecore which = 545 } #Kichmensky Gorodok
+		command = { type = removecore which = 546 } #Velsk
+		command = { type = removecore which = 547 } #Sudostroy
+		command = { type = removecore which = 548 } #Kirillov
+		command = { type = removecore which = 549 } #Volodga
+		command = { type = removecore which = 550 } #Luga
+		command = { type = removecore which = 551 } #Kingisepp
+		command = { type = removecore which = 552 } #Gatchina
+		command = { type = removecore which = 553 } #Gdov
+		command = { type = removecore which = 554 } #Kinry
+		command = { type = removecore which = 555 } #Cherepovets
+		command = { type = removecore which = 556 } #Vytegra
+		command = { type = removecore which = 557 } #Tikhvin
+		command = { type = removecore which = 558 } #Rzhev
+		command = { type = removecore which = 559 } #Borovichi
+		command = { type = removecore which = 560 } #Novgorod
+		command = { type = removecore which = 561 } #Moscow
+		command = { type = removecore which = 562 } #Smolensk
+		command = { type = removecore which = 563 } #Staraya Russa
+		command = { type = removecore which = 564 } #Kirishi
+		command = { type = removecore which = 565 } #Torzhok
+		command = { type = removecore which = 566 } #Opochka
+		command = { type = removecore which = 567 } #Dno
+		command = { type = removecore which = 568 } #Pskov
+		command = { type = removecore which = 569 } #Serpukhov
+		command = { type = removecore which = 570 } #Solnechnogorsk
+		command = { type = removecore which = 571 } #Kalinin
+		command = { type = removecore which = 572 } #Zagorsk
+		command = { type = removecore which = 573 } #Orekhovo-Zuyevo
+		command = { type = removecore which = 574 } #Velikiye Luki
+		command = { type = removecore which = 575 } #Vyazma
+		command = { type = removecore which = 576 } #Safonovo
+		command = { type = removecore which = 577 } #Kaluga
+		command = { type = removecore which = 578 } #Nelidovo
+		command = { type = removecore which = 579 } #Sasovo
+		command = { type = removecore which = 580 } #Ryazan
+		command = { type = removecore which = 581 } #Yelets
+		command = { type = removecore which = 582 } #Oryol
+		command = { type = removecore which = 583 } #Livny
+		command = { type = removecore which = 584 } #Efremov
+		command = { type = removecore which = 585 } #Tula
+		command = { type = removecore which = 586 } #Kozelsk
+		command = { type = removecore which = 587 } #Roslavl
+		command = { type = removecore which = 588 } #Klintsy
+		command = { type = removecore which = 589 } #Bryansk
+		command = { type = removecore which = 590 } #Vitebsk
+		command = { type = removecore which = 591 } #Orsha
+		command = { type = removecore which = 592 } #Borisov
+		command = { type = removecore which = 593 } #Polotsk
+		command = { type = removecore which = 594 } #Bobruisk
+		command = { type = removecore which = 595 } #Minsk
+		command = { type = removecore which = 596 } #Kiev
+		command = { type = removecore which = 597 } #Nikolayev
+		command = { type = removecore which = 598 } #Odessa
+		command = { type = removecore which = 599 } #Poltava
+		command = { type = removecore which = 600 } #Mozyr
+		command = { type = removecore which = 601 } #Slutsk
+		command = { type = removecore which = 602 } #Luban
+		command = { type = removecore which = 603 } #Rechytsa
+		command = { type = removecore which = 604 } #Mogilev
+		command = { type = removecore which = 605 } #Gomel
+		command = { type = removecore which = 606 } #Zheleznogorsk
+		command = { type = removecore which = 607 } #Belgorod
+		command = { type = removecore which = 608 } #Kursk
+		command = { type = removecore which = 609 } #Konotop
+		command = { type = removecore which = 610 } #Sumy
+		command = { type = removecore which = 611 } #Chernigov
+		command = { type = removecore which = 612 } #Nezhin
+		command = { type = removecore which = 613 } #Korosten
+		command = { type = removecore which = 614 } #Kremenchug
+		command = { type = removecore which = 615 } #Zhitomir
+		command = { type = removecore which = 616 } #Vinnitsa
+		command = { type = removecore which = 617 } #Cherkasy
+		command = { type = removecore which = 618 } #Proskurov
+		command = { type = removecore which = 619 } #Uman
+		command = { type = removecore which = 620 } #Novograd-Volynsky
+		command = { type = removecore which = 621 } #Kamenets-Podolsky
+		command = { type = removecore which = 622 } #Mogilev-Podolsky
+		command = { type = removecore which = 623 } #Balta
+		command = { type = removecore which = 624 } #Tiraspol
+		command = { type = removecore which = 625 } #Melitopol
+		command = { type = removecore which = 626 } #Kherson
+		command = { type = removecore which = 627 } #Ochakov
+		command = { type = removecore which = 628 } #Krivoy Rog
+		command = { type = removecore which = 629 } #Kirovograd
+		command = { type = removecore which = 630 } #Zaporozhye
+		command = { type = removecore which = 631 } #Mariupol
+		command = { type = removecore which = 632 } #Dnepropetrovsk
+		command = { type = removecore which = 633 } #Kharkov
+		command = { type = removecore which = 634 } #Sevastopol
+		command = { type = removecore which = 635 } #Rostov-on-Don
+		command = { type = removecore which = 636 } #Voronezh
+		command = { type = removecore which = 637 } #Ulyanovsk
+		command = { type = removecore which = 638 } #Stalingrad
+		command = { type = removecore which = 639 } #Kupyansk
+		command = { type = removecore which = 640 } #Voroshilovgrad
+		command = { type = removecore which = 641 } #Bakhmut
+		command = { type = removecore which = 642 } #Yevpatoria
+		command = { type = removecore which = 643 } #Simferopol
+		command = { type = removecore which = 644 } #Dzhankoy
+		command = { type = removecore which = 645 } #Kerch
+		command = { type = removecore which = 646 } #Surovikino
+		command = { type = removecore which = 647 } #Morozovsk
+		command = { type = removecore which = 648 } #Konstantinovsk
+		command = { type = removecore which = 649 } #Ostrogozhsk
+		command = { type = removecore which = 650 } #Stary Oskol
+		command = { type = removecore which = 651 } #Rossosh
+		command = { type = removecore which = 652 } #Kamensk-Shakhtinsky
+		command = { type = removecore which = 653 } #Tambov
+		command = { type = removecore which = 654 } #Borisoglebsk
+		command = { type = removecore which = 655 } #Lipetsk
+		command = { type = removecore which = 656 } #Pavlovsk
+		command = { type = removecore which = 657 } #Uryupinsk
+		command = { type = removecore which = 658 } #Balashov
+		command = { type = removecore which = 659 } #Penza
+		#command = { type = removecore which = 660 } #Kalach-on-Don
+		command = { type = removecore which = 661 } #Volzhsky
+		command = { type = removecore which = 662 } #Kamyshin
+		command = { type = removecore which = 663 } #Kotelnikovo
+		#command = { type = removecore which = 664 } #Naberezhnye Chelny
+		command = { type = removecore which = 665 } #Tolyatti
+		#command = { type = removecore which = 666 } #Saratov
+		#command = { type = removecore which = 667 } #Izhevsk
+		command = { type = removecore which = 668 } #Kazan
+		command = { type = removecore which = 669 } #Yaroslavl
+		command = { type = removecore which = 670 } #Vladimir
+		command = { type = removecore which = 671 } #Gorky
+		command = { type = removecore which = 672 } #Kirov
+		command = { type = removecore which = 673 } #Perm
+		command = { type = removecore which = 674 } #Krasnodar
+		command = { type = removecore which = 675 } #Volsk
+		command = { type = removecore which = 676 } #Balakowo
+		command = { type = removecore which = 677 } #Kuybyshev
+		command = { type = removecore which = 678 } #Saransk
+		command = { type = removecore which = 679 } #Yoshkar-Ola
+		command = { type = removecore which = 680 } #Zelenodolsk
+		command = { type = removecore which = 681 } #Cheboksary
+		command = { type = removecore which = 682 } #Rybinsk
+		command = { type = removecore which = 683 } #Murom
+		command = { type = removecore which = 684 } #Kostroma
+		command = { type = removecore which = 685 } #Ivanovo
+		command = { type = removecore which = 686 } #Arzamas
+		command = { type = removecore which = 687 } #Syktyvkar
+		command = { type = removecore which = 688 } #Kudymkar
+		command = { type = removecore which = 689 } #Ukhta
+		#command = { type = removecore which = 690 } #Solikamsk
+		command = { type = removecore which = 691 } #Sterlitamak
+		command = { type = removecore which = 692 } #Salsk
+		command = { type = removecore which = 693 } #Maykop
+		command = { type = removecore which = 694 } #Novorossiysk
+		command = { type = removecore which = 695 } #Sochi
+		command = { type = removecore which = 696 } #Cherkessk
+		command = { type = removecore which = 697 } #Volgodonsk
+		command = { type = removecore which = 698 } #Voroshilovsk
+		command = { type = removecore which = 699 } #Elista
+		command = { type = removecore which = 700 } #Grozny
+		command = { type = removecore which = 701 } #Astrakhan
+		command = { type = removecore which = 702 } #Tbilisi
+		command = { type = removecore which = 703 } #Yerevan
+		command = { type = removecore which = 704 } #Baku
+		command = { type = removecore which = 705 } #Khasavyurt
+		command = { type = removecore which = 706 } #Nalchik
+		command = { type = removecore which = 707 } #Vladikavkaz
+		command = { type = removecore which = 708 } #Makhachkala
+		command = { type = removecore which = 709 } #Nazran
+		command = { type = removecore which = 710 } #Tskhinvali
+		command = { type = removecore which = 711 } #Kutaisi
+		command = { type = removecore which = 712 } #Sukhumi
+		command = { type = removecore which = 713 } #Stepanakert
+		command = { type = removecore which = 714 } #Nakhchivan
+	}
+	
+	# Revive the Romanovs' tsardom
+	action = {
+		name = EVT_8334000_B
+		ai_chance = 40
+		trigger = { NOT = { exists = RUS } }
+		# We no longer strive for Stalinist ideals
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = interventionism value = 2 }
+		command = { type = dissent value = 10 }
+		command = { type = non_aggression which = SOV where = GER }
+		command = { type = access which = GER }
+		command = { type = country which = RUS }
+	}
+	
+	# The red banner still unites us!
+	action = {
+		name = EVT_8334000_C
+		ai_chance = 20
+		trigger = { NOT = { dissent = 25 } }
+		command = { type = dissent value = 25 }
+		command = { type = non_aggression which = SOV where = GER }
+		command = { type = access which = GER }
+		command = { type = set_domestic which = interventionism value = 2 }
+	}
+	
+}
+
+### THE END
+
+event = { 
+	id = 8335000
+	country = REB
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = the_bitter_peace
+		event = { id = 8334000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = OK
+		command = { type = clrflag which = the_bitter_peace }
+	}
+}

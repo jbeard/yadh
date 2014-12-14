@@ -1,0 +1,943 @@
+########################################
+#### BALKAN MOD EVENTS
+########################################
+# This file contains events for Romania
+# Event List:
+#ROM	14400000	Monument to Simion Murafa, Alexei Mateevici and Andrei Hodorogea
+#ROM	14400001	The Ploughmen's Front
+#ROM	14400002	Grivita Railcar Workshops strike
+#ROM	14400003	The Government of Ion G. Duca
+#ROM	14400004	Ion Duca banned the Iron Guard
+#ROM	14400005	The assassination of Ion G. Duca
+#ROM	14400006	The Amicii URSS association
+#ROM	14400007	1936 Craiova Trial
+#ROM	14400008	The Tour of Romania
+#ROM	14400009	The creation of Straja Tarii
+#ROM	14400010	The 1937 general elections
+#ROM	14400011	A Royal dictatorship declared
+#ROM	14400012	1938 Constitution of Romania
+#ROM	14400013	The six year plan
+#ROM	14400014	The death of Miron Cristea
+#ROM	14400015	The death of Miron Cristea
+#ROM	14400016	The assassination of Armand Calinescu
+#ROM	14400017	Constantin Argetoianu takes power
+#ROM	14400018	Gheorghe Tatarescu takes power
+#ROM	14400019	Ion Gigurtu takes power
+#ROM	14400020	The abdication of King Carol II
+#ROM	14400021	National Legionary State
+#ROM	14400022	The Jilava Massacre
+#ROM	14400023	The death of Corneliu Zelea Codreanu
+#ROM	14400024	The execution of King Carol II
+#ROM	14400025	Romania referendum of 1938
+#ROM	14400026	The Jilava Massacre
+#ROM	14400027	The death of Alexandru Averescu
+#ROM	14400028	The death of Octavian Goga
+#ROM	14400029	The Vrancea earthquake
+#ROM	14400030	Legionnaires' rebellion and Bucharest pogrom
+
+
+event = {
+	id = 14400000	# Monument to Simion Murafa, Alexei Mateevici and Andrei Hodorogea
+	random = no
+	country = ROM
+	style = 2
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 11 month = may year = 1933 }
+
+	name = "Monument to Simion Murafa, Alexei Mateevici and Andrei Hodorogea." # needs text
+	desc = "The monument was opened in 1933. The monument was dedicated to Simeon G. Murafa, Alexei Mateevici, and Andrei Hodorogea. All of them died In the evening of August 20, 1917 some 200 Russian soldiers, with Bolshevist leaders, seized and murdered two of the most conspicuous Moldavian leaders, Andrei Hodorogea and Simeon G. Murafa, in Chisinau itself."
+	Picture = "ROM01"
+
+	action_a = {
+		name = "We need to do this."
+		ai_chance = 100
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = -100 }
+		command = { type = money value = -50 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { type = manpowerpool value = -10 }
+		}
+	}
+
+
+event = {
+	id = 14400001	# Ploughmen's Front
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 23 month = June year = 1933 }
+
+	name = "The Ploughmen's Front." # needs text
+	desc = "The Ploughmen's Front was a Romanian left-wing agrarian-inspired political organisation of ploughmen, founded at Deva in 1933 and led by Petru Groza.Groza aimed to improve the situation of the peasantry ,calling for a social security program in the countryside and tax reform favourable to small holdings.The group was also republican in ambitions, probably from the moment it was created. At its peak in 1946, the Front had over 1 million members." 
+	style = 2
+	Picture = "ROM02"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14400002	# Grivita Railcar Workshops strike
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 30 month = may year = 1933 }
+
+	name = "Grivita Railcar Workshops strike." # needs text
+	desc = "In the Grivita Railcar Workshops, some workers had also mounted a great strike, which later ended in violence, many of them being shot in the clashes with the Police and Gendarmes." 
+	style = 2
+	Picture = "ROM03"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14400003	# The Government of Ion G. Duca
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 14 month = November year = 1933 }
+
+	name = "The Government of Ion G. Duca." # needs text
+	desc = "In November, 1933, King Carol II asked Duca to head the government as prime minister in preparation for the December elections. In this capacity, Duca worked to keep the rising support for the Iron Guard, also known as The Legion of the Archangel Michael, a fascist movement led by Corneliu Zelea Codreanu." 
+	style = 2
+	Picture = "ROM04"
+
+	action_a = {
+		name = "Place Ion G. Duca..."
+		ai_chance = 100
+		command = { type = headofstate which = 110001 }
+		command = { type = headofgovernment which = 110198 }
+		command = { type = dissent value = -3 }
+	}
+	action_b = {
+		name = "Place Gheorghe Tatarescu..."
+		ai_chance = 0
+		command = { type = headofstate which = 110001 }
+		command = { type = headofgovernment which = 110002 }
+		command = { type = dissent value = 3 }
+		}
+	}
+
+
+event = {
+	id = 14400004	# Ion Duca banned the Iron Guard
+	random = no
+	country = ROM
+	style = 2
+
+	trigger = {
+		headofgovernment = 110198
+		}
+
+	date = { day = 30 month = November year = 1933 }
+
+	name = "Ion Duca banned the Iron Guard." # needs text
+	desc = "Duca worked to keep the rising support for the Iron Guard, also known as The Legion of the Archangel Michael, a fascist movement led by Corneliu Zelea Codreanu, in check, even outlawing the All for the Fatherland-party, which was their political arm. What followed was a time of violence when police on orders from Duca sometimes attacked Iron Guard-members and jailed thousands of them."
+	Picture = "ROM23"
+
+	action_a = {
+		name = "Ban them...!"
+		ai_chance = 100
+		command = { type = manpowerpool value = -5 }
+		command = { type = dissent value = -4 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 4 }
+		command = { type = manpowerpool value = 5 }
+		}
+	}
+
+
+event = {
+	id = 14400005	# The assassination of Ion G. Duca
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400004
+		}
+
+	date = { day = 30 month = December year = 1933 }
+
+	name = "The assassination of Ion G. Duca." # needs text
+	desc = "On December 10, 1933, the Romanian Liberal Prime Minister Ion Duca banned the Iron Guard. After a brief period of arrests, beatings, torture and even killings, Iron Guard member Nicolae Constantinescu accompanied by two other persons retaliated on December 29, 1933 by assassinating Duca on the platform of the Sinaia railway station as a form of revenge." 
+	style = 2
+	Picture = "ROM04"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110002 }
+		command = { type = sleepminister which = 110198 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14400006	# The Amicii URSS association
+	random = no
+	country = ROM
+	style = 2
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 11 month = may year = 1934 }
+
+	name = "The Amicii URSS association." # needs text
+	desc = "Was a cultural association in interwar Romania, uniting left-wing and anti-fascist intellectuals who advocated a detente between their country and Joseph Stalin's Soviet Union.Created in the spring of 1934 by Petre Constantinescu-Iasi, an activist of the previously outlawed Romanian Communist Party."
+	Picture = "27mart"
+
+	action_a = {
+		name = "We need them."
+		ai_chance = 100
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = -50 }
+		command = { type = money value = -30 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "Ban them...!"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = sleepevent which = 14400007 }
+		}
+	}
+
+
+event = {
+	id = 14400007	# 1936 Craiova Trial
+	random = no
+	country = ROM
+	style = 2
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 5 month = June year = 1936 }
+
+	name = "1936 Craiova Trial." # needs text
+	desc = "Police arrested for activity against the Romanian state and disturbing the peace Ana Pauker, a leader of the Romanian Communist Party, together with Smil Marcovici and Dimitrie Ganev, members of the Communist Party were found guilty and received the maximum penalty 20 years in prison and a fine of 100,000 lei."
+	Picture = "ROM05"
+
+	action_a = {
+		name = "Found them guilty."
+		ai_chance = 100
+		command = { type = manpowerpool value = -3 }
+		command = { type = dissent value = 1 }
+	}
+	action_b = {
+		name = "Release them free."
+		ai_chance = 0
+		command = { type = dissent value = -1 }
+		command = { type = manpowerpool value = 3 }
+		}
+	}
+
+
+event = {
+	id = 14400008	# The Tour of Romania
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 15 month = June year = 1934 }
+
+	name = "The Tour of Romania." # needs text
+	desc = "Inspired by Tour de France, the monthly publication Car Magazine held in August 1910 the first edition of Circuit Wallachia. The competition took 12 riders at the start on the route Bucharest–Sinaia–Targoviste–Butimanu–Bucharest. The race lasted for three editions. Since 1934 the newspaper Daily Sport, in collaboration with Romanian Cycling Federation has organized the Tour of Romania." 
+	style = 2
+	Picture = "ROM06"
+
+	action_a = {
+		name = "Do it."
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = -300 }
+		command = { type = money value = -300 }
+		command = { type = construct which = infrastructure where = 315 value = 5 }
+		command = { type = construct which = infrastructure where = 308 value = 5 }
+		command = { type = construct which = infrastructure where = 316 value = 5 }
+		command = { type = construct which = infrastructure where = 312 value = 5 }
+	}
+	action_b = {
+		name = "A waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14400009	# The creation of Straja Tarii
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 15 month = June year = 1935 }
+
+	name = "The creation of Straja Tarii." # needs text
+	desc = "Was a paramilitary youth organization created in 1935 by King Carol II to counter the growing influence the Iron Guard had over the youth of Romania.The monarch modelled it on the Nazi Germany's Hitler Youth, and took inspiration from other fascist groups such as the Italian Balilla." 
+	style = 2
+	Picture = "ROM07"
+
+	action_a = {
+		name = "Do it."
+		ai_chance = 100
+		command = { type = add_division which = "1.Straja Tarii phalanx" value = infantry when = 2 }
+		command = { type = add_division which = "2.Straja Tarii phalanx" value = infantry when = 2 }
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = -100 }
+		command = { type = money value = -100 }
+		command = { type = manpowerpool value = -10 }
+	}
+	action_b = {
+		name = "A waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14400010	# The 1937 general elections
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 28 month = December year = 1937 }
+
+	name = "The 1937 general elections." # needs text
+	desc = "Octavian Goga became Prime Minister of Romania and served December 28, 1937 to February 10, 1938. He had been appointed by King Carol, in his attempt to enforce his own personal dictatorship. During his short period in government, Goga was mostly known for the first anti-Semitic laws which were passed." 
+	style = 2
+	Picture = "elections1935"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110019 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14400011	# A Royal dictatorship declared
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 11 month = February year = 1938 }
+
+	name = "A Royal dictatorship declared." # needs text
+	desc = "In a bid for political unity against the Iron Guard, which was gaining popularity, in 1938, Carol dismissed the government headed by Octavian Goga. The activity of the parliament and of all political parties was suspended and the country was to be governed by royal decree. Miron Cristea will be the right person? or a coalition with The Iron Guard will be the solution?" 
+	style = 2
+	Picture = "ROM08"
+
+	action_a = {
+		name = "A Royal dictatorship declared...?"
+		ai_chance = 100
+		command = { type = sleepevent which = 14400015 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 110020 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "A coalition with The Iron Guard...?"
+		ai_chance = 0
+		command = { type = sleepevent which = 14400012 }
+		command = { type = sleepevent which = 14400014 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = headofgovernment which = 110155 }
+		command = { type = dissent value = 8 }
+		command = { type = revolt which = 311 }
+		command = { type = revolt which = 310 }
+		command = { type = revolt which = 315 }
+		command = { type = trigger which = 14400024 }
+		}
+	}
+
+
+event = {
+	id = 14400012	# 1938 Constitution of Romania
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 20 month = February year = 1938 }
+
+	name = "1938 Constitution of Romania." # needs text
+	desc = "On February 20, a new constitution was announced, which organized Romania as a 'corporatist state' similar to the one of Fascist Italy, with a parliament made up of representatives of the guilds of farmers, workers and intellectuals.Four days later, on February 24, the constitution was approved, with 99.87% of votes for, through a plebiscite, described by a contemporary article in The Manchester Guardian as a 'farse'..." 
+	style = 2
+	Picture = "little_entente_end"
+
+	action_a = {
+		name = "Approved!"
+		ai_chance = 100
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "Do nothing..."
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = revolt which = 311 }
+		}
+	}
+
+
+event = {
+	id = 14400013
+	random = no
+	country = ROM
+
+	decision = { money = 100 
+                     metal = 100
+                   
+} 
+
+	decision_trigger = {
+		money = 1500
+                metal = 500
+                supplies = 500
+	}
+
+	trigger = { exists = ROM 
+                    metal = 500
+                    supplies = 500
+                    money = 1500
+    }
+   
+	name = "The six year plan."
+	desc = "The government proposes to King Carol II the construction of new factories to improve the production. This program, even if expensive, would result not only in reducing the unemployment and therefore pleasing the population, but creating new companies under the control of the government." 
+	style = 2
+	picture = "6yearplan"
+        decision_picture =  "decision_6yearplan"
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = building_prod_mod which = ic value = 5 }
+                command = { type = construct which = ic where = 316 value = 1 }
+		command = { type = construct which = ic where = 310 value = 1 }
+                command = { type = construct which = ic where = 311 value = 1 }
+		command = { type = construct which = ic where = 315 value = 1 }
+                command = { type = dissent value = -3 }
+                command = { type = money value = -1500 }
+                command = { type = metalpool value = -500 }
+                command = { type = supplies value = -500 }
+	}
+}
+
+
+event = {
+	id = 14400014	# The death of Miron Cristea
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 6 month = March year = 1939 }
+
+	name = "The death of Miron Cristea." # needs text
+	desc = "On February 24, 1939, Cristea arrived in Cannes, France, but contracted pneumonia while waiting for his niece in the Nice railway station. He stayed in Cannes for treatment, but died two weeks later, on March 6, of bronchopneumonia complicated by heart disease.Armand Calinescu replaced the ailing Miron Cristea as Premier, being considered the 'man of steel' able to prevent Iron Guard's political violence and to keep Romania out of the pro-German war camp." 
+	style = 2
+	Picture = "ROM09"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110021 }
+		command = { type = sleepminister which = 110020 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14400015	# The death of Miron Cristea
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 6 month = March year = 1939 }
+
+	name = "The death of Miron Cristea." # needs text
+	desc = "His health deteriorated in January 1939, suffering from two heart attacks,which prompted his doctors to recommend him to stay in a warmer place for a few months, in order to avoid the harsher Romanian winter. On February 24, 1939, Cristea arrived in Cannes, France, but contracted pneumonia while waiting for his niece in the Nice railway station. He stayed in Cannes for treatment, but died two weeks later, on March 6, of bronchopneumonia complicated by heart disease." 
+	style = 2
+	Picture = "ROM09"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 110020 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14400016	# The assassination of Armand Calinescu
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400014
+		}
+
+	date = { day = 21 month = September year = 1939 }
+
+	name = "The assassination of Armand Calinescu." # needs text
+	desc = "Having been secretly blacklisted at the same time as Nicolae Titulescu, Dinu Bratianu, and General Gavrila Marinescu,Calinescu was assassinated in Bucharest by Iron Guard members under the direct leadership of Sima.Gheorghe Argesanu was selected as premier by King Carol II after the assassination." 
+	style = 2
+	Picture = "ROM10"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110022 }
+		command = { type = sleepminister which = 110021 }
+		command = { type = sleepminister which = 110064 }
+		command = { type = dissent value = 3 }
+		}
+	}
+
+
+event = {
+	id = 14400017	# Constantin Argetoianu takes power
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400016
+		}
+
+	date = { day = 28 month = September year = 1939 }
+
+	name = "Constantin Argetoianu takes power." # needs text
+	desc = "Constantin Argetoianu was selected as premier by King Carol II, he was the second in quick succession to the violent clash between the Guard and monarch after Gheorghe Argesanu's." 
+	style = 2
+	Picture = "ROM11"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110023 }
+		}
+	}
+
+
+event = {
+	id = 14400018	# Gheorghe Tatarescu takes power
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400017
+		}
+
+	date = { day = 24 month = November year = 1939 }
+
+	name = "Gheorghe Tatarescu takes power." # needs text
+	desc = "Gheorghe Tatarescu was selected as premier by King Carol II, he was the third in quick succession to the violent clash between the Guard and monarch after Constantin Argetoianu's." 
+	style = 2
+	Picture = "ROM12"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110002 }
+		}
+	}
+
+
+event = {
+	id = 14400019	# Ion Gigurtu takes power
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400018
+		}
+
+	date = { day = 4 month = July year = 1940 }
+
+	name = "Ion Gigurtu takes power." # needs text
+	desc = "Ion Gigurtu was selected as premier by King Carol II, he was the fourth in quick succession to the violent clash between the Guard and monarch after Gheorghe Tatarescu's." 
+	style = 2
+	Picture = "ROM13"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110024 }
+		}
+	}
+
+
+event = {
+	id = 14400020	# The abdication of King Carol II
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400018
+		}
+
+	date = { day = 7 month = September year = 1940 }
+
+	name = "The abdication of King Carol II." # needs text
+	desc = "Carol was forced to step down largely as the result of a series of humiliating losses of territory first Bessarabia and northern Bukovina lost over 50,000 km to the Soviet Union. The Second Vienna Award, passed 43,492 km in Northern Transylvania to Hungary. Also, the Treaty of Craiova, looming at the time of Carol's resignation, was signed September 7, 1940 and gave the southern part of Dobrudja to Bulgaria." 
+	style = 2
+	Picture = "ROM14"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = headofstate which = 110014 }
+		command = { type = sleepminister which = 110001 }
+		command = { type = sleepminister which = 110011 }
+		command = { type = sleepminister which = 110012 }
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 14400021 }
+		}
+	}
+
+
+event = { 
+	id = 14400021
+	random = no
+	country = ROM
+	
+	# Triggered by ROM 14400020
+
+	name = "National Legionary State."
+	desc = "The National Legionary State took power upon the abdication of King Carol II.The regime was a single-party dictatorship dominated by the overtly fascist Iron Guard in uneasy conjunction with the head of government and Conducator Ion Antonescu, the leader of the Romanian Army, who had been named prime minister."
+	style = 2
+	picture = "ROM15"
+	
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { type = headofgovernment which = 110025 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+
+event = {
+	id = 14400022	# The Jilava Massacre
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400021
+		}
+
+	date = { day = 26 month = November year = 1940 }
+
+	name = "The Jilava Massacre." # needs text
+	desc = "The Jilava Massacre took place during the night beginning on November 26, 1940, at Jilava penitentiary, near Bucharest, Romania. 64 political detainees were killed by the Iron Guard, with further high-profile assassinations in the immediate aftermath. Coming about halfway through the fascist National Legionary State, it led to the first open clash between the Guard and conducator Ion Antonescu." 
+	style = 2
+	Picture = "ROM16"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 110022 }
+		command = { type = sleepminister which = 110006 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14400023	# The death of Corneliu Zelea Codreanu 
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400012
+		}
+
+	date = { day = 26 month = April year = 1938 }
+
+	name = "The death of Corneliu Zelea Codreanu." # needs text
+	desc = "Codreanu was arrested and imprisoned in April 1938, and ultimately strangled to death along with several other legionnaires by their Gendarmerie escort on the night of November 29–30, 1938, purportedly during an attempt to escape from prison. It is generally agreed that there was no such escape attempt, and that Codreanu and the others were killed on the King's orders." 
+	style = 2
+	Picture = "ROM17"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 110016 }
+		command = { type = sleepminister which = 110155 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = { 
+	id = 14400024
+	random = no
+	country = ROM
+	
+	# Triggered by ROM 14400020
+
+	name = "The execution of King Carol II."
+	desc = "Under the terms of the deal which created Carol II Carol transferred most of his dictatorial powers to the Iron Guard and became the only legal party in Romania.King Carol was executed by Iron Guard as the result of a series of humiliating losses of territory and for the thousands deaths of Iron Guard Legionnaires."
+	style = 2
+	picture = "ROM18"
+	
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 110014 }
+		command = { type = sleepminister which = 110001 }
+		command = { type = sleepminister which = 110011 }
+		command = { type = sleepminister which = 110012 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+
+event = {
+	id = 14400025	# Romania referendum of 1938
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400024
+		}
+
+	date = { day = 7 month = September year = 1938 }
+
+	name = "Romania referendum of 1938." # needs text
+	desc = "Under Iron Guard Legionnaires King Carol II was executed. His eldest son and successor, King Michael I, was soon after asked by the parliament to leave Romania so the nation could decide what form of government it should adopt. In a 1938 plebiscite, Romanian People voted to create a Iron Guard Romania or maintaining the monarchy?" 
+	style = 2
+	Picture = "elections1935"
+
+	action_a = {
+		name = "A Iron Guard Romania."
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = headofstate which = 110016 }
+		command = { type = headofgovernment which = 110030 }
+		command = { type = sleepminister which = 110013 }
+		command = { type = sleepminister which = 110014 }
+		command = { type = dissent value = -5 }
+		command = { type = flag_ext where = rom which = _iron }
+		command = { type = name where = ROM which = "ROM38" }
+	}
+	action_b = {
+		name = "Maintaining the monarchy."
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = revolt which = 311 }
+		}
+	}
+
+
+event = {
+	id = 14400026	# The Jilava Massacre
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400025
+		}
+
+	date = { day = 26 month = November year = 1939 }
+
+	name = "The Jilava Massacre." # needs text
+	desc = "The Jilava Massacre took place during the night beginning on November 26, 1939, at Jilava penitentiary, near Bucharest, Romania. 64 political detainees were killed by the Iron Guard, with further high-profile assassinations in the immediate aftermath. Coming about halfway through the fascist Legionary State." 
+	style = 2
+	Picture = "ROM16"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 110022 }
+		command = { type = sleepminister which = 110006 }
+		command = { type = sleepminister which = 110021 }
+		command = { type = sleepminister which = 110064 }
+		command = { type = sleepminister which = 110198 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14400027	# The death of Alexandru Averescu
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 2 month = October year = 1938 }
+
+	name = "The death of Alexandru Averescu." # needs text
+	desc = "Alexandru Averescu was a Romanian marshal and populist politician. A Romanian Armed Forces Commander during World War I, he served as Prime Minister of three separate cabinets.He died in Bucharest, and was buried in the World War I heroes' crypt in Marasti." 
+	style = 2
+	Picture = "ROM19"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 110121 }
+		command = { type = sleepminister which = 110126 }
+		command = { type = sleepminister which = 110137 }
+		command = { type = sleepminister which = 110151 }
+		command = { type = sleepminister which = 110156 }
+		command = { type = sleepminister which = 110190 }
+		command = { type = sleepminister which = 110193 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14400028	# The death of Octavian Goga
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 7 month = May year = 1938 }
+
+	name = "The death of Octavian Goga." # needs text
+	desc = "Octavian Goga was a Romanian politician, poet, playwright, journalist, and translator.Goga suffered a stroke on May 5, 1938. He died two days later. His body lay in state in Bucharest's Palace Atheneum, with a floral tribute from Nazi Germany leader Adolf Hitler adorning the glass-topped casket." 
+	style = 2
+	Picture = "ROM20"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 110019 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14400029	# The Vrancea earthquake
+	random = no
+	country = ROM
+
+	trigger = {
+		exists = ROM
+		}
+
+	date = { day = 10 month = November year = 1938 }
+
+	name = "The Vrancea earthquake." # needs text
+	desc = "The Vrancea earthquake registered a magnitude of 7.4 or 7.7 on the Richter scale. Its epicenter lied in Vrancea zone at a depth of about 133 km.Its effects were devastating in central and southern Moldavia and Walachia. The number of victims was estimated at 1,000 dead and 4,000 injured, mostly in Moldova." 
+	style = 2
+	Picture = "ROM21"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = construct which = infrastructure where = 299 value = -5 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14400030	# Legionnaires' rebellion and Bucharest pogrom
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 14400022
+		}
+
+	date = { day = 21 month = January year = 1941 }
+
+	name = "Legionnaires' rebellion and Bucharest pogrom." # needs text
+	desc = "As the privileges of the paramilitary organisation Iron Guard were being cut off by Conducator Ion Antonescu, members of the Iron Guard, also known as the Legionnaires, revolted. During the rebellion and pogrom, the Iron Guard killed 125 Jews and 30 soldiers died in the confrontation with the rebels. Following it, the Iron Guard movement was banned and 9,000 of its members were imprisoned." 
+	style = 2
+	Picture = "ROM22"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 110074 }
+		command = { type = sleepminister which = 110018 }
+		command = { type = sleepminister which = 110030 }
+		command = { type = sleepminister which = 110048 }
+		command = { type = dissent value = 2 }
+		}
+	}

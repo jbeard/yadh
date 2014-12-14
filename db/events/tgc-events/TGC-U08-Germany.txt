@@ -1,0 +1,621 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Germany
+# Event List:
+#U08	13300200	The Outcome of the Great War (historical)
+#U08	13300201	The Failure of 1918 Summer Offensive
+#U08	13300210	The Kapp Putsch
+#{ U08 GER }	13300211	The Spirit of Locarno
+#U08	13300212	The Beer Hall Putsch
+#U08	13300213	Adolf Hitler
+#U08	13300214	Decline of the Republic
+#U08	13300215	Decline of the Republic2
+#U08	13300216	The End of the Republic
+#{ U08 GER }	13300218	The Treaty of Rapallo
+#SOV	13300237	Alliance with Communist Germany
+#DDR	13300238	Alliance Proposition from Stalin
+#U08	13300240	Thalmann dissolves the Reichstag
+#U08	13300241	Hitler dissolves the Reichstag
+#GER	13300242	Enabling Act
+#U08	13300243	Reichstag Fire
+
+
+
+# Outcome of Great War
+event = { 
+	id = 13300200											
+	country = U08														
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30						
+	deathdate = { day = 1 month = january year = 1935 }
+	save_date = yes
+	
+	trigger = {					
+		event = 2002534 # end of the second reich
+		atwar = no
+		NOT = { headofstate = 855001 } # so Wilhelm II abdicated first and replaced by Vollzugrat-Ebert
+	}
+	name = "EVT_13300200_NAME"							
+	Desc = "EVT_13300200_DESC"
+	Picture = "surrender" 
+	
+	action = { 	
+		name = "I feel Responsible!"		
+		ai_chance = 100	
+		command = { type = local_setflag which = loser }
+		command = { type = local_setflag which = reparations } #accept our responsibility
+		#cleanup kronprinz plan
+		command = { trigger = { local_flag = AAR-2191505-Kronprint-cleanup } type = industrial_modifier which = total value = -50 } # Percents 
+		command = { trigger = { local_flag = AAR-2191505-Kronprint-cleanup } type = industrial_modifier which = supplies value = -100 } # Percents
+		command = { trigger = { local_flag = AAR-2191505-Kronprint-cleanup } type = local_clrflag which = AAR-2191505-Kronprint-cleanup } 
+		#cleanup balancing for WW1
+		command = { type = industrial_modifier which = total value = -15 } #set at line 144 in 2191503 # War on Russia ?
+		#army
+		command = { type = demobilize which = land when = 0 where = 0 value = 25 }
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_setflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_50 }
+		command = { type = local_clrflag which = disarm_army_75 }
+		#navy
+		command = { type = demobilize which = naval when = 1 where = 0 value = 20 }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_setflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+		#airforce - none allowed
+		command = { type = strength which = air when = 0 where = 0 value = 0.0 }
+		command = { type = local_setflag which = disarm_air_0 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+		#isolate them a bit
+		command = { type = domestic which = defense_lobby value = -3 }
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = domestic which = professional_army value = -6 }	
+		#dissent
+		command = { trigger = { not = { dissent = 5 } } type = dissent value = 25 }	#minimum dissent = 30
+		command = { trigger = { not = { dissent = 10 } } type = dissent value = 20 } 
+		command = { trigger = { not = { dissent = 15 } } type = dissent value = 15 } 
+		command = { trigger = { not = { dissent = 20 } } type = dissent value = 10 }	
+		command = { trigger = { not = { dissent = 25 } } type = dissent value = 5 }
+		#lift embargo
+		command = { trigger = { event = 2191541 } type = stockpile which = all when = war value = 20 }
+		command = { trigger = { event = 2191541 not = { event = 2191542 } } type = wartime_ic_mod value = 10 } # don't, if germany had blockadeed britain too.
+		
+		# Vollzugs/Zentralrat
+		command = { type = sleepminister which = 855200 }
+		command = { type = sleepminister which = 855201 }
+		# make ebert HOS and Scheidemann HOG
+		command = { type = headofstate which = 855202 }
+		command = { type = headofgovernment which = 855204 }
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+		# additional AI switch - attempt by Smoggy
+		command = { type = ai which = "aar/unit-construction/aar-buildqueue-GER-interwar.ai" }
+	}
+	action = { 	
+		name = "We are innocent victims and bear no responsibility!"		
+		ai_chance = 0	
+		command = { type = local_setflag which = loser }
+		command = { type =	dissent value = 2 }
+		command = { type =	relation which =	ENG value = -200 }
+		command = { type =	relation which =	FRA value = -200 }
+		command = { type =	relation which =	USA value = -200 }
+		command = { type =	relation which =	ITA value = -200 }
+		command = { type =	relation which =	JAP value = -200 }
+		command = { type =	relation which =	BEL value = -200 }
+		command = { type =	relation which =	HOL value = -200 }
+		command = { type =	relation which =	SOV value = -200 }
+		command = { type =	belligerence value = 10 }
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	} 			
+}
+
+event = {
+	id = 13300201	# The Failure of 1918 Summer Offensive
+	country = U08
+	
+	trigger = {
+		NOT = { OR = { control = { province = 53 data = -1 } 	# Paris
+						control = { province = 45 data = -1 }
+						control = { province = 56 data = -1 }
+						control = { province = 99 data = -1 }
+						control = { province = 100 data = -1 }
+						control = { province = 49 data = -1 }
+			}
+		}
+	}
+	
+	name = "The Failure of 1918 Summer Offensive"
+	desc = "Our last chance is gone, 1918 summer offensive ends in failure. Unrest is growing, we are doomed..." 
+	style = 2
+	
+	date = { day = 0 month = october year = 1918 }
+	offset = 5
+	deathdate = { day = 30 month = december year = 1925 }
+	
+	action = {
+		name = "Accept the inevitable"
+		command = { type = dissent value = 65 } # High chances to trigger surrender chain in case of revolution
+	}
+}
+
+# Kapp Putsch
+event = { 
+	id = 13300210											
+	country = U08													 
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1934 }
+	offset = 365										
+	
+	
+	trigger = {					
+		local_flag=loser
+		not = { ideology = paternal_autocrat }
+		atwar = no
+	}
+	name = "EVT_13300210_NAME"							
+	Desc = "EVT_13300210_DESC"
+	Picture = "15th_army" 
+	
+	action = { 	
+		name = "It's just too early!"		
+		ai_chance = 100	
+		command = { type =	domestic which = defense_lobby value = -3 }
+		command = { type =	domestic which = political_left value = 1 }
+		command = { type =	dissent value = 5 }
+	}
+	action = { 	
+		name = "They succeed."		
+		ai_chance = 0	
+		command = { type =	set_domestic which = democratic value = 2 }	# paternal autocrat
+		command = { type =	set_domestic which = political_left value = 5 }
+		command = { type =	domestic which = defense_lobby value = 3 }
+		command = { type = domestic which = interventionism value = 8 }
+		command = { type = headofstate which = 855305 } # Walther von Lüttwitz
+		command = { type = headofgovernment which = 855306 } # Wolfgang Kapp
+		command = { type = ministerofintelligence which = 855333 } # Hermann Ehrhardt
+		command = { type =	dissent value = 20 }
+		
+	} 			
+}
+
+# The Spirit of Locarno
+event = { 
+	id = 13300211
+	persistent = yes												 
+	
+	date = { day = 1 month = january year = 1924 }
+	deathdate = { day = 1 month = january year = 1934 }
+	offset = 30										
+	
+	trigger = {					
+		or = {
+			country = U08
+			country = GER
+		}
+		local_flag=loser
+		flag = germany_invited_to_lon
+		not = { flag = germany_in_lon }
+	}
+	
+	name = "EVT_13300211_NAME"							
+	Desc = "EVT_13300211_DESC"
+	Picture = "vasconia" 
+	
+	action = { 	
+		name = "We no longer feel like a pariah!"		
+		ai_chance = 100	
+		command = { type = removecore which = 226 }
+		command = { type = removecore which = 222 }
+		command = { type = removecore which = 225 }
+		command = { type = removecore which = 221 }
+		command = { type = removecore which = 224 }
+		command = { type = removecore which = 261 }
+		command = { type = removecore which = 110 }
+		command = { type = removecore which = 109 }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = -30 }
+		command = { type = local_setflag which = lon_member }
+		command = { type = setflag which = germany_in_lon }
+	}
+	action = { 	
+		name = "Germany is way nicer than the world."		
+		ai_chance = 0	
+		command = { type =	dissent value = 1 }
+		command = { type =	relation which = ENG value = -200 }
+		command = { type =	relation which = USA value = -100 }
+		command = { type =	relation which = FRA value = -200 }
+		command = { type =	relation which = ITA value = -100 }
+		command = { type =	relation which = BEL value = -100 }
+		command = { type =	relation which = HOL value = -100 }
+		command = { type =	belligerence value = 5 }
+	} 			
+}	
+
+# The Beer Hall Putsch
+event = { 
+	id = 13300212											
+	country = U08													
+	
+	date = { day = 1 month = january year = 1923 }
+	deathdate = { day = 1 month = january year = 1934 }						
+	offset = 365										 
+	
+	trigger = {					
+		local_flag=loser
+		flag=march_on_rome
+	}
+	name = "EVT_13300212_NAME"							
+	Desc = "EVT_13300212_DESC"
+	Picture = "allied_strategic_defeat" 
+	
+	action = { 	
+		name = "Arrest the Leaders!"		
+		ai_chance = 100	
+		command = { type = setflag which = hitler_arrested }
+		command = { type = belligerence value = -10 }
+		command = { type = dissent value = -20 }
+	}
+	action = { 	
+		name = "Shoot the Leaders!"		
+		ai_chance = 0	
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = dissent value = 5 }
+	} 			
+}
+
+# Adolf Hitler
+event = { 
+	id = 13300213											
+	country = U08						
+	persistent = yes								 
+	
+	date = { day = 1 month = january year = 1924 }
+	deathdate = { day = 1 month = january year = 1934 }					
+	offset = 365						
+	
+	trigger = {					
+		flag=hitler_arrested
+	}
+	name = "EVT_13300213_NAME"							
+	Desc = "EVT_13300213_DESC"
+	Picture = "VIC" 
+	
+	action = { 	
+		name = "Release the Prisoner!"		
+		ai_chance = 100	
+		command = { type = setflag which = hitler_free }
+		command = { type = clrflag which = hitler_arrested }
+		command = { type =	belligerence value = -10 }
+		command = { type =	dissent value = -10 }
+		command = { type =	domestic which = political_left value = -1 }
+	}
+	action = { 	
+		name = "He is dangerous, keep him locked."		
+		ai_chance = 0	
+		command = { type =	dissent value = 5 }
+		command = { type =	domestic which = political_left value = 2 }
+	} 			
+}
+
+# The Treaty of Rapallo
+event = { 
+	id = 13300218																								 
+	
+	date = { day = 0 month = 0 year = 1914 }						
+	offset = 365						
+	deathdate = { day = 0 month = 0 year = 1930 }				 
+	
+	trigger = {					
+		or = {
+			country = U08
+			country = GER
+		}
+		exists = SOV
+		not = { atwar = SOV }
+		OR = {
+			event = 2007529
+			event = 2007530
+		}
+	}
+	name = "EVT_13300218_NAME"							
+	Desc = "EVT_13300218_DESC"
+	Picture = "soviet_directive" 
+	
+	action = { 	
+		name = "Normalize our relations with the Soviets."		
+		ai_chance = 100	
+		command = { type = trigger which = 13300310 }
+		command = { type = set_relation which = SOV value = 50 }
+	}
+	action = { 	
+		name = "Niemals!"		 
+		ai_chance = 0
+		command = { type = relation which = SOV value = -10 }
+	}
+}
+
+# Reichstag Fire
+event = { 
+	
+	id = 13300243																								 
+	random = no
+	country = U08
+	
+	date = { day = 27 month = 1 year = 1933 }											 
+	offset = 1
+	deathdate = { day = 30 month = december year = 1964 }
+	
+	trigger = {	
+		headofgovernment = 855308 # Hitler is chancellor 
+		NOT = { headofstate = 855302 } # but not president
+	}
+	
+	name = "Reichstag Fire"							
+	Desc = "The Reichstag fire was an arson attack on the Reichstag building in Berlin on 27 February 1933. The event is seen as pivotal in the establishment of Nazi Germany."
+	style = 2
+	picture = "Reichstag" 
+	
+	action = { 	
+		name = "It is time to crush Communists!"		
+		ai_chance = 100
+		command = { type = dissent value = 3 }
+	}
+	
+	
+}
+
+# Alliance with Communist Germany
+event = {
+	id = 13300237
+	random = no
+	country = SOV
+	decision = {
+		
+		exists = DDR
+		NOT = { alliance = { country = SOV country = DDR } }
+		NOT = { ispuppet = SOV }
+		OR = {
+			NOT = { ispuppet = DDR }
+			puppet = { country = DDR country = SOV }
+		}
+	}
+	decision_trigger = {
+		relation = { which = DDR value = 100 }
+	}
+	trigger = {
+		
+		exists = DDR
+		random = 50
+		NOT = { alliance = { country = SOV country = DDR } }
+		NOT = { ispuppet = SOV }
+		OR = {
+			NOT = { ispuppet = DDR }
+			puppet = { country = DDR country = SOV }
+		}		
+	}
+	
+	date = { day = 1 month = january year = 1932 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1964 }
+	name = "Alliance with DDR"
+	desc = "After the rise of Thälmann to power, Stalin proposed military alliance to Democratic German Republic."
+	style = 2
+	picture = "news_paper"
+	decision_picture = "decision_anticominternpact"
+	action = {
+		name = "Propose Alliance"
+		command = { type = trigger which = 13300238 }
+	}
+}
+
+
+
+# Alliance Proposition from Stalin
+event = {
+	id = 13300238
+	random = no
+	country = DDR
+	name = "Alliance Proposition from Stalin"
+	desc = "Stalin offered formal military pact between new German Democratic Republic and Soviet Union."
+	style = 2
+	picture = "news_paper"
+	action_a = {
+		name = "Da!"
+		command = { type = leave_alliance }
+		command = { type = alliance which = SOV }
+		
+	}
+}
+
+#########################################################################
+#	Thalmann dissolves the Reichstag
+#########################################################################
+
+
+event = { 
+	
+	id = 13300240																								 
+	random = no
+	country = U08
+	
+	
+	trigger = {	
+		headofstate = 855357
+		atwar = no	
+	}
+	
+	
+	name = "Dissolution of Reichstag"							
+	Desc = "Three months after becoming president in 1932 Presidential Elections, President Thälmann dissolved the Reichstag and declared German Democratic Republic"
+	style = 2
+	picture = "news_paper" 
+	
+	
+	date = { day = 13 month = 5 year = 1932 }	
+	offset = 1
+	deathdate = { day = 30 month = december year = 1964 }
+	
+	action = { 	
+		name = "Onward Comrades!"		
+		ai_chance = 100
+		command = { type = country which = DDR }
+		command = { type = domestic which = political_left value = 6 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = dissent value = 40 }
+		command = { type = waketeam which = 625013 } #AEG
+		command = { type = waketeam which = 625014 } #Krupp
+		command = { type = waketeam which = 625015 } #I.G. Farben
+		command = { type = waketeam which = 625016 } #Siemens & Halske
+		command = { type = waketeam which = 625017 } #Werner Heisenberg
+		command = { type = waketeam which = 625018 } #Konrad Zuse
+		command = { type = waketeam which = 625019 } #Mauser Werke
+		command = { type = waketeam which = 625020 } #MAN
+		command = { type = waketeam which = 625021 } #Opel
+		command = { type = waketeam which = 625022 } #Rheinmetall
+		command = { type = waketeam which = 625023 } #Volkswagen
+		command = { type = waketeam which = 625024 } #Volksmarinewerft
+		command = { type = waketeam which = 625025 } #Blohm & Voss
+		command = { type = waketeam which = 625026 } #Luftschiffbau Zeppelin
+		command = { type = waketeam which = 625027 } #Gothaer Waggonfabrik
+		command = { type = waketeam which = 625028 } #Messerschmitt
+		command = { type = waketeam which = 625029 } #Focke-Wulf
+		command = { type = waketeam which = 625030 } #Arado
+		command = { type = waketeam which = 625031 } #Adolf Galland
+		command = { type = waketeam which = 625032 } #Jäger Kampfschule
+		#Cores on eastern provinces of Germany
+		command = { type = addcore which = 158 } #Stettin
+		command = { type = addcore which = 155 } #Stolp
+		command = { type = addcore which = 161 } #Deutsch Krone
+		command = { type = addcore which = 159 } #Meseritz
+		command = { type = addcore which = 165 } #Liegnitz
+		command = { type = addcore which = 167 } #Breslau
+		command = { type = addcore which = 164 } #Oppeln
+		command = { type = addcore which = 166 } #Waldenburg
+		command = { type = addcore which = 168 } #Gleiwitz
+		command = { type = addcore which = 183 } #Elbing
+		command = { type = addcore which = 184 } #Konigsberg
+		command = { type = addcore which = 182 } #Tilsit
+		command = { type = addcore which = 185 } #Allenstein
+		#cores on Poland and Lithuania
+		command = { type = addcore which = 221 } #Katowice
+		command = { type = addcore which = 224 } #Poznan
+		command = { type = addcore which = 225 } #Bygoszcz
+		command = { type = addcore which = 181 } #Danzig
+		command = { type = addcore which = 261 } #Klaipeda		
+		
+	}
+	
+	
+	
+}
+
+
+
+#########################################################################
+#	Hitler dissolves the Reichstag
+#########################################################################
+
+
+event = { 
+	
+	id = 13300241																								 
+	random = no
+	country = U08
+	
+	trigger = {	
+		headofstate = 855302
+		atwar = no	
+	}
+	
+	
+	name = "Dissolution of Reichstag"							
+	Desc = "Three months after becoming president in 1932 Presidential Elections, President Hitler dissolved the Reichstag and merged the office of Chancellor and President"
+	style = 2
+	picture = "Reichstag" 
+	
+	
+	
+	date = { day = 13 month = 5 year = 1932 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1964 }	
+	
+	action = { 	
+		name = "Sieg Heil!"
+		ai_chance = 100
+		command = { type = country which = GER }						
+		command = { type = domestic which = democratic value = -3 } 
+		command = { type = domestic which = political_left value = -4 } # become national socialist
+		command = { type = headofstate which = 1 } # Hitler
+		command = { type = headofgovernment which = 2 } # Hess
+		command = { type = foreignminister which = 3 } # Von Neurath
+		command = { type = ministerofsecurity which = 5 } # Frick
+		command = { type = ministerofintelligence which = 6 } # Canaris
+		command = { type = armamentminister which = 4 } # Von Blomberg
+		command = { type = chiefofstaff which = 7 } # Beck
+		command = { type = chiefofarmy which = 8 } # fritsch
+		command = { type = chiefofnavy which = 9 }	# raeder
+		command = { type = chiefofair which = 10 } # göring
+	}
+}
+
+
+# Pass Enabling Act
+event = {
+	id = 13300242
+	random = no
+	country = GER
+	decision = {
+		event = 13300236 # March 1933 General Elections
+		OR = {
+			headofstate = 1 # Hitler
+			headofgovernment = 22 # Hitler
+		}
+	}
+	decision_trigger = {
+		OR = {
+			headofstate = 1 # Hitler
+			headofgovernment = 22 # Hitler
+		}
+	}
+	trigger = {	
+		random = 50
+		OR = {
+			headofstate = 1 # Hitler
+			headofgovernment = 22 # Hitler
+		}
+		event = 13300236 # March 1933 General Elections
+	}
+	
+	date = { day = 1 month = january year = 1933 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1963 }
+	
+	name = "Enabling Act"
+	desc = "EVT_13300242_DESC"
+	style = 2
+	picture = "Reichstag"
+	decision_picture = "decision_anticominternpact"
+	
+	action = {
+		name = "There is no room for opposition"
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+

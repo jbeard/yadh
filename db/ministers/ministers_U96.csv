@@ -1,0 +1,55 @@
+U96;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+900600;Head of State;Léopold Sédar Senghor;1944;1964;1964;LWR;Pig-headed Isolationist;Very High;senegal10;x
+900601;Head of State;Louis Lefebvre;1936;1964;1964;SL;Stern Imperialist;Very High;senegal1;x
+900602;Head of State;Jean Paul Parisot ;1936;1964;1964;SC;Stern Imperialist;Very High;senegal6;x
+900603;Head of Government;Mamadou Dia;1944;1964;1964;LE;Flamboyant Tough Guy;Very High;unknown;x
+900604;Head of Government;Louis Lefebvre;1936;1964;1964;SL;Silent Workhorse;Very High;senegal1;x
+900605;Head of Government;Jean Paul Parisot ;1936;1964;1964;SC;Silent Workhorse;Very High;senegal6;x
+900606;Head of Government;Léopold Sédar Senghor;1944;1964;1964;LWR;Political Protege;Very High;senegal10;x
+900607;Foreign Minister;Ousmane Socé;1937;1964;1964;SL;Biased Intellectual;Very High;senegal2;x
+900608;Foreign Minister;Birago Diop;1936;1964;1964;ML;Biased Intellectual;Very High;senegal11;x
+900609;Foreign Minister;Lamine Guèye;1944;1964;1964;LWR;Iron Fisted Brute;Very High;senegal13;x
+900610;Foreign Minister;Doudou Thiam;1944;1964;1964;LE;Biased Intellectual;Very High;unknown;x
+900611;Minister of Armament;Jean Alfred Diallo;1949;1964;1964;LWR;Tank Proponent;Very High;unknown;x
+900612;Minister of Armament;Abdul Injai;1936;1964;1964;PA;Administrative Genius;Very High;senegal8;x
+900613;Minister of Armament;Louis Lefebvre;1936;1964;1964;SL;Resource Industrialist;Very High;senegal1;x
+900614;Minister of Security;Abdoulaye Sadji;1944;1964;1964;SL;Silent Lawyer;Very High;senegal3;x
+900616;Minister of Security;Demba Diop;1936;1964;1964;LWR;Man of the People;Very High;senegal7;x
+900617;Minister of Security;Ibrahim Niass;1936;1964;1964;SC;Man of the People;Very High;senegal9;x
+900618;Head of Military Intelligence;Ousmane Socé;1937;1964;1964;SL;Logistics Specialist;Very High;senegal2;x
+900619;Head of Military Intelligence;Abdul Injai;1936;1964;1964;PA;Logistics Specialist;Very High;senegal8;x
+900620;Head of Military Intelligence;Roger Roche;1936;1964;1964;ST;Political Specialist;Very High;unknown;x
+900621;Chief of Staff;Jean Alfred Diallo;1944;1964;1964;LE;School of Psychology;Very High;unknown;x
+900622;Chief of Staff;Paul Legentilhomme;1936;1964;1964;ML;School of Psychology;Very High;senegal4;x
+900623;Chief of Staff;Aline Sitoe Diatta;1941;1964;1964;SD;School of Defence;Very High;unknown;x
+900624;Chief of Staff;Jean Paul Parisot ;1936;1964;1964;SC;School of Fire Support;Very High;senegal6;x
+900625;Chief of Army;Charles N'Tchoréré;1936;1964;1964;ML;Guns and Butter Doctrine;Very High;senegal5;x
+900626;Chief of Army;Jean Alfred Diallo;1944;1964;1964;LE;Armoured Spearhead Doctrine;Very High;unknown;x
+900627;Chief of Navy;Léopold Sédar Senghor;1944;1964;1964;LWR;Indirect Approach Doctrine;Very High;senegal10;x
+900628;Chief of Navy;Louis Lefebvre;1936;1964;1964;SL;Decisive Naval Battle Doctrine;Very High;senegal1;x
+900629;Chief of Air Force;Léopold Sédar Senghor;1944;1964;1964;LWR;Vertical Envelopment Doctrine;Very High;senegal10;x
+900630;Chief of Air Force;Louis Lefebvre;1936;1964;1964;SL;Vertical Envelopment Doctrine;Very High;senegal1;x
+900631;Head of State;Maurice Beurnier;1936;1964;1964;SC;Barking Buffoon;Very High;M900631;x
+900632;Head of Government;Maurice Beurnier;1936;1964;1964;SC;Old Airmarshal;Very High;M900631;x
+900633;Head of State;Georges Pierre Rey;1941;1964;1964;SC;Insignificant Layman;Very High;M900633;x
+900634;Head of Government;Georges Pierre Rey;1941;1964;1964;SC;Political Protege;Very High;M900633;x
+900635;Head of State;Hubert Jules Deschamps;1943;1964;1964;SC;Insignificant Layman;Very High;M900635;x
+900636;Head of Government;Hubert Jules Deschamps;1943;1964;1964;SC;Ambitious Union Boss;Very High;M900635;x
+900640;Head of State;Charles Jean Dagain;1944;1964;1964;SC;Powerhungry Demagogue;Very High;M900637;x
+900641;Head of Government;Charles Jean Dagain;1944;1964;1964;SC;Silent Workhorse;Very High;M900637;x
+900642;Head of State;Pierre Louis Maestracci;1945;1964;1964;SC;Powerhungry Demagogue;Very High;M900639;x
+900643;Head of Government;Pierre Louis Maestracci;1945;1964;1964;SC;Old Airmarshal;Very High;M900639;x
+900644;Head of State;Oswald Durand;1946;1964;1964;SC;Weary Stiffneck;Very High;M900641;x
+900645;Head of Government;Oswald Durand;1946;1964;1964;SC;Backroom Backstabber;Very High;M900641;x
+900646;Head of State;Laurent Marcel Wiltord;1947;1964;1964;SC;Pig-Headed Isolationist;Very High;M900643;x
+900647;Head of Government;Laurent Marcel Wiltord;1947;1964;1964;SC;Old Airmarshal;Very High;M900643;x
+900648;Head of State;Camille Victor Bailly;1951;1964;1964;SC;Barking Buffoon;Very High;M900645;x
+900649;Head of Government;Camille Victor Bailly;1951;1964;1964;SC;Silent Workhorse;Very High;M900645;x
+900650;Head of State;Lucien Eugene Geay;1952;1964;1964;SC;Benevolent Gentleman;Very High;M900647;x
+900651;Head of Government;Lucien Eugene Geay;1952;1964;1964;SC;Naive Optimist;Very High;M900647;x
+900652;Head of State;Maxime Jourdain;1954;1964;1964;SC;Barking Buffoon;Very High;M900649;x
+900653;Head of Government;Maxime Jourdain;1954;1964;1964;SC;Old Admiral;Very High;M900649;x
+900654;Head of State;Jean Colombani;1956;1964;1964;SC;Pig-Headed Isolationist;Very High;M900651;x
+900655;Head of Government;Jean Colombani;1956;1964;1964;SC;Flamboyant Tough Guy;Very High;M900651;x
+900656;Head of State;Pierre Lami;1959;1964;1964;SC;Powerhungry Demagogue;Very High;M900653;x
+900657;Head of Government;Pierre Lami;1959;1964;1964;SC;Old Airmarshal;Very High;M900653;x

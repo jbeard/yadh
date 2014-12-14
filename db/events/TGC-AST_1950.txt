@@ -1,0 +1,2583 @@
+##########Australia, A Nation Worth Fighting For 1950-1960 by OneAussieMan777#############
+
+##PROPER EFFECTS TO BE ADDED##
+#event = {
+#	id = 88880451
+#	TAG =  { AST }
+#	style = 0
+#			
+#	date = { day = 9 month = january year = 1950 }
+#
+#	name = "Colombo Plan"
+#	desc = "88880451_DESC"
+#
+#	action = {
+#		name = "Here's to new beginnings."
+#	command = { }
+#	}
+#		}
+#
+
+
+event = {
+	id = 88880452
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 8 month = February year = 1950 }
+			
+	name = "Petrol Rationing Ends"
+	desc = "88880452_DESC"
+
+	action = {
+		name = "I think I'll go for a long drive."
+	command = { type = dissent value = -2 }
+	command = { type = domestic which = free_market value = 1 }
+	}
+		}
+
+event = {
+	id = 88880453
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 23 month = February year = 1950 }
+			
+	name = "STRIKE STRIKE STRIKE!"
+	desc = "88880453_DESC"
+
+	action = {
+		name = "This isn't good..."
+	command = { type = dissent value = 12.5 }
+	command = { type = tc_mod value = -12.5 }
+	}
+		}
+
+event = {
+	id = 88880454
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 10 month = April year = 1950 }
+			
+	name = "Communist Party Dissolution Act"
+	desc = "88880454_DESC"
+			
+	action = {
+		name = "Better dead, than red."
+	command = { type = relation which = SOV value = -10 }
+	command = { type = relation which = CHC value = -10 }
+	}
+		}
+
+event = {
+	id = 88880455
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 23 month = May year = 1950 }
+			
+	name = "Health System Overhaul"
+	desc = "88880455_DESC"
+
+	action = {
+		name = "For a healthy Australia."
+	command = { type = dissent value = -2 }
+	command = { type = attrition_mod value = 3 }
+	command = { type = trickleback_mod value = 5 }
+	command = { type = relative_manpower value = 2 }
+	}
+		}
+
+##FRA AND ENG ALSO ILLEGALLY INTRODUCED MYXO POSSIBLE EVENT OPPORTUNITIES FROM THEM##
+event = {
+	id = 88880456
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 15 month = May year = 1950 }
+			
+	name = "Myxo Released"
+	desc = "88880456_DESC"
+			
+	action = {
+		name = "Let's eradicate this pest."
+	command = { type = dissent value = -1 }
+	command = { type = research_mod value = 2 }
+	}
+		}
+
+event = {
+	id = 88880457
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 23 month = June year = 1950 }
+			
+	name = "Child Endowment Scheme"
+	desc = "88880457_DESC"
+			
+	action = {
+		name = "Family friendly."
+	command = { type = dissent value = -1 }
+	command = { type = relative_manpower value = 2 }
+	}
+		}
+
+event = {
+	id = 88880458
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 26 month = June year = 1950 }
+
+	name = "TAA Air Disaster"
+	desc = "88880458_DESC"
+
+	action = {
+		name = "We must do something about this."
+	command = { type = dissent value = 3 }
+
+	}
+		}
+
+
+##MUST WORK OUT COUNTRY TAGS##
+event = {
+	id = 88880459
+	TAG = { AST }
+	style = 0
+			
+	date = { day = 29 month = June year = 1950 }
+		
+	name = "Aid To Sth Korea"
+	desc = "88880459_DESC"
+
+	action = {
+		name = "Death to Reds."
+	command = { type = belligerence which = AST value = 5 }
+	command = { type = domestic which = interventionism value = 1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	}
+	action = {
+		name = "Never"
+	command = { }
+	}
+		}
+
+##MUST WORK OUT TAGS##
+event = {
+	id = 88880460
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 6 month = July year = 1950 }
+			
+	name = "Australia Discusses Korean War"
+	desc = "88880460_DESC"
+
+	action = {
+		name = "I don't think we have a choice."
+	command = { type = belligerence which = AST value = 5 }
+	command = { type = domestic which = interventionism value = 1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	}
+		}
+
+##MUST WORK OUT TAGS##
+event = {
+	id = 88880461
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 26 month = July year = 1950 }
+			
+	name = "Australia Enters Sth Korea"
+	desc = "88880461_DESC"
+			
+	action = {
+		name = "Smash the Reds."
+	command = { type = dissent value = -2 }
+	}
+		}
+
+event = {
+	id = 88880462
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 12 month = October year = 1950 }
+			
+	name = "Wages Increased"
+	desc = "88880462_DESC"
+			
+	action = {
+		name = "Happy workers are efficient workers."
+	command = { type = dissent value = -10 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 2 }
+	}
+		}
+event = {
+	id = 88880463
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 24 month = April year = 1950 }
+			
+	name = "Vic Tram Strike Ends"
+	desc = "88880463_DESC"
+			
+	action = {
+		name = "Finally!"
+	command = { type = dissent value = -10 }
+	command = { type = tc_mod value = 12.5 }
+	}
+		}
+
+##EVENT REPEATS AND BALANCES OUT##
+event = {
+	id = 88880464
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 16 month = October year = 1950 }
+			
+	name = "STRIKE STRIKE STRIKE!"
+	desc = "88880464_DESC"
+			
+	action = {
+		name = "This isn't what we needed!"
+	command = { type = dissent value = 20 }
+	command = { type = industrial_modifier which = total value = -10 }
+	command = { type = industrial_modifier which = supplies value = -15 }
+	command = { type = tc_mod value = -30 }
+	}
+		}
+
+##BALANCE FOR RAILWAY STRIKE##
+event = {
+	id = 88880514
+	TAG =  { AST }
+	style = 0
+			
+	date = { day = 18 month = December year = 1950 }
+			
+	name = "Vic, SA Railway Strikes End"
+	desc = "88880514_DESC"
+			
+	action = {
+		name = "Thank God for that!"
+	command = { type = dissent value = -20 }
+	command = { type = industrial_modifier which = total value = 10 }
+	command = { type = industrial_modifier which = supplies value = 15 }
+	command = { type = tc_mod value = 30 }
+	}
+		}
+
+event = {
+	id = 88880465
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 20 month = October year = 1950 }
+			
+	name = "Communist Party Dissolution Act Becomes Law"
+	desc = "88880465_DESC"
+			
+	action = {
+		name = "Better dead, than red."
+	command = { type = dissent value = -1 }
+	command = { type = relation which = SOV value = -10 }
+	}
+		}
+##NEED CORRECT TAGS AND WAR TRIGGERS##
+#event = {
+#	id = 88880466
+#	TAG =  { AST }
+#	style = 0	
+#			
+#	date = { day = 22 month = October Year = 1950 }
+#			
+#	name = "First Battle In Korea"
+#	desc = "88880466_DESC"
+#			
+#	action = {
+#		name = "Glad to help out."
+#	command = { type = dissent value = -1 }
+#	command = { type = relation which = USA value = 15 }
+#	}
+#		}
+#
+
+event = {
+	id = 88880467
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 28 month = october Year = 1950 }
+			
+	name = "End Of Smith's Weekly"
+	desc = "88880467_DESC"
+			
+	action = {
+		name = "What a shame."
+	command = { type = dissent value = 2 }
+	}
+		}
+
+event = {
+	id = 88880468
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 19 month = February Year = 1951 }
+			
+	name = "Bookie Murderers On Trial"
+	desc = "88880468_DESC"
+			
+	action = {	
+		name = "I am disgusted, HANG THEM!"
+	command = { type = dissent value = 2 }
+	}
+	
+	action = {	
+		name = "I don't believe in the death penalty."
+	command = { type = dissent value = 15 }
+	command = { type = domestic which = political_left value = 4 }
+	}
+		}
+
+event = {
+	id = 88880469
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 9 month = March Year = 1951 }
+			
+	name = "Anti-Communist Act Deemed Illegal"
+	desc = "88880469_DESC"
+			
+	action = {
+		name = "You WHAT!!?"
+	command = { type = dissent value = 3 }
+	command = { type = domestic which = freedom value = 2 }
+	command = { type = domestic which = political_left value = 1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+
+	action = {
+		name = "I'll tell you The Law."
+	command = { type = dissent value = 10 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = political_left value = -2 }
+	command = { type = domestic which = democratic value = -1 }
+	}
+	action = {
+		name = "Commies already own the country."
+	command = { type = dissent value = 20 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = political_left value = 5 }
+	command = { type = domestic which = democratic value = -2 }
+	}
+		}
+
+event = {
+	id = 88880471
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 16 month = March Year = 1951 }
+			
+	name = "National Service"
+	desc = "88880471_DESC"
+			
+	action = {
+		name = "Plenty of uniforms for everyone!"
+	command = { type = dissent value = 2 }
+	command = { type = max_organization which = land value = 2 }
+	command = { type = max_organization which = naval value = 2 }
+	command = { type = max_organization which = air value = 2 }
+	command = { type = relative_manpower value = 5 }
+	}
+		}
+##NEED PROPER TAGS AND WAR TRIGGERS##
+event = {
+	id = 88880470
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 5 month = April Year = 1951 }
+			
+	name = "Australia Captures Chusan"
+	desc = "88880470_DESC"
+			
+	action = {
+		name = "One step closer to victory"
+	command = { type = dissent value = -1 }
+	}
+		}
+
+event = {
+	id = 88880472
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 5 month = April Year = 1951 }
+			
+	name = "Australia Crosses The 38th"
+	desc = "88880472_DESC"
+			
+	action = {
+		name = "Nearly there men."
+	command = { type = dissent value = -2 }
+	}
+		}
+
+event = {
+	id = 88880473
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = July Year = 1951 }
+			
+	name = "NSW Introduces Paid Sick And Long Service Leave"
+	desc = "88880473_DESC"
+			
+	action = {
+		name = "Don't waste your sickies now..."
+	command = { type = dissent value = -5 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 2 }
+	}
+		}
+## ADD TECH TEAM SHELL REFINERY ## ##ADD OIL TO GEELONG/1709##
+event = {
+	id = 88880474
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 29 month = July Year = 1951 }
+			
+	name = "Shell Refinery Opens In Geelong"
+	desc = "88880474_DESC"
+			
+	action = {
+		name = "Welcome Shell."
+	command = { type = dissent value = -5 }
+	command = {type = wartime_ic_mod value = 10 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 2 }
+	}
+		}
+
+event = {
+	id = 88880475
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 16 month = August Year = 1951 }
+			
+	name = "Australian Financial Review"
+	desc = "88880475_DESC"
+			
+	action = {
+		name = "Ensuring a bright, energetic future."
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = free_market value = 1 }
+	}
+		}
+
+event = {
+	id = 88880476
+	TAG =  { AST USA NZL }
+	style = 0	
+			
+	date = { day = 1 month = September Year = 1951 }
+			
+	name = "ANZUS Pact Signed"
+	desc = "88880476_DESC"
+			
+	action = {
+		name = "Ensuring the safety of The West."
+	command = { type = dissent value = -6 }
+	command = { type = relation which = USA value = 25 }
+	command = { type = relation which = NZL value = 25 }
+	command = { type = relation which = AST value = 25 }
+	}
+		}
+
+event = {
+	id = 88880477
+	TAG =  { AST ARG BEL BOL BRA CMB CAN CHL COL CZE DOM ECU EGY SAL ETH FRA GRE GUA HON HAI INO PER IRQ JAP LAO LEB LIB LUX HOL NIC NOR POL PHI PAK PAN PRU SAU U83 SOV TUR USA ENG SYR URU VEN UIC }
+	style = 0	
+			
+	date = { day = 9 month = September Year = 1951 }
+			
+	name = "Peace Treaty Signed In San Francisco"
+	desc = "88880477_DESC"
+			
+	action = {
+		name = "To a new era of peace."
+	command = { type = relation which = POR value = -10 }
+	command = { type = relation which = ITA value = -10 }
+	command = { type = relation which = AST value = 10 }
+	command = { type = relation which = ARG value = 10 }
+	command = { type = relation which = BEL value = 10 }
+	command = { type = relation which = BOL value = 10 }
+	command = { type = relation which = BRA value = 10 }
+	command = { type = relation which = CMB value = 10 }
+	command = { type = relation which = CAN value = 10 }
+	command = { type = relation which = CHL value = 10 }
+	command = { type = relation which = COL value = 10 }
+	command = { type = relation which = CZE value = 10 }
+	command = { type = relation which = DOM value = 10 }
+	command = { type = relation which = ECU value = 10 }
+	command = { type = relation which = EGY value = 10 }
+	command = { type = dissent value = -2 }
+	command = { type = relation which = SAL value = 10 }
+	command = { type = relation which = ETH value = 10 }
+	command = { type = relation which = FRA value = 10 }
+	command = { type = relation which = GRE value = 10 }
+	command = { type = relation which = GUA value = 10 }
+	command = { type = relation which = HON value = 10 }
+	command = { type = relation which = HAI value = 10 }
+	command = { type = relation which = INO value = 10 }
+	command = { type = relation which = PER value = 10 }
+	command = { type = relation which = IRQ value = 10 }
+	command = { type = relation which = JAP value = 10 }
+	command = { type = relation which = LAO value = 10 }
+	command = { type = relation which = LEB value = 10 }
+	command = { type = relation which = LIB value = 10 }
+	command = { type = relation which = LUX value = 10 }
+	command = { type = relation which = HOL value = 10 }
+	command = { type = relation which = NIC value = 10 }
+	command = { type = relation which = NOR value = 10 }
+	command = { type = relation which = POL value = 10 }
+	command = { type = relation which = PHI value = 10 }
+	command = { type = relation which = PAK value = 10 }
+	command = { type = relation which = PAN value = 10 }
+	command = { type = relation which = PRU value = 10 }
+	command = { type = relation which = SAU value = 10 }
+	command = { type = relation which = U83 value = 10 }
+	command = { type = relation which = SOV value = -10 }
+	command = { type = relation which = TUR value = 10 }
+	command = { type = relation which = USA value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = relation which = SYR value = 10 }
+	command = { type = relation which = URU value = 10 }
+	command = { type = relation which = VEN value = 10 }
+	command = { type = relation which = UIC value = 10 }
+	}
+		}
+
+event = {
+	id = 88880478
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 22 month = September Year = 1951 }
+			
+	name = "Anti-Communist Referendum Defeated"
+	desc = "88880478_DESC"
+			
+	action = {
+		name = "Bugger it."
+	command = { type = dissent value = 5 }
+	command = { type = domestic which = political_left value = 1 }
+	command = { type = domestic which = democratic value = 1 }
+	command = { type = domestic which = freedom value = 1 }
+	}
+
+	action = {
+		name = "I say it wasn't defeated."
+	command = { type = dissent value = 20 }
+	command = { type = domestic which = political_left value = -1 }
+	command = { type = domestic which = democratic value = -1 }
+	command = { type = domestic which = freedom value = -1 }
+	}
+		}
+
+event = {
+	id = 88880479
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 26 month = September Year = 1951 }
+			
+	name = "Arthur Fadden Puts On Tax Hikes"
+	desc = "88880479_DESC"
+			
+	action = {
+		name = "For a better marketplace."
+	command = { type = dissent value = 5 }
+	command = { type = domestic which = free_market value = -1 }
+	}
+		}
+
+event = {
+	id = 88880480
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 12 month = November Year = 1951 }
+			
+	name = "A Call To The People"
+	desc = "88880480_DESC"
+			
+	action = {
+		name = "In purity lies security."
+	command = { type = dissent value = -5 }
+	}
+		}
+
+##MUST ADD OIL TO FREMANTLE AND ADD ANGLO-IRANIAN OIL TECHTEAM TO AST##
+event = {
+	id = 88880481
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 16 month = January Year = 1952 }
+			
+	name = "Anglo-Iranian Oil Opens In WA"
+	desc = "88880481_DESC"
+			
+	action = {
+		name = "To new ventures."
+	command = { type = dissent value = -5 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 2 }
+	}
+		}
+
+event = {
+	id = 88880482
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 21 month = January Year = 1952 }
+			
+	name = "Ealing Studios Close Their Doors"
+	desc = "88880482_DESC"
+			
+	action = {
+		name = "What a shame."
+	command = { type = dissent value = 2 }
+	}
+		}
+
+event = {
+	id = 88880483
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 8 month = February Year = 1952 }
+			
+	name = "God Save The Queen"
+	desc = "88880483_DESC"
+			
+	action = {
+		name = "God Save The Queen!."
+	command = { type = dissent value = -5 }
+	}
+		}
+
+event = {
+	id = 88880484
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 7 month = March Year = 1952 }
+			
+	name = "Australia Cuts Imports"
+	desc = "88880484_DESC"
+			
+	action = {
+		name = "Australia will remain strong."
+	command = { type = dissent value = -2 }
+	command = { type = industrial_modifier which = total value = 10 }
+	command = { type = industrial_modifier which = supplies value = 15 }
+	command = {type = wartime_ic_mod value = 20 }
+	}
+		}
+
+
+##MUST ADD TECH TEAM TO USA UK AND AST, COMBINED DEVELOPMENT AGENCY##
+event = {
+	id = 88880485
+	TAG =  { AST ENG USA }
+	style = 0	
+			
+	date = { day = 2 month = April Year = 1952 }
+			
+	name = "Combined Development Agency"
+	desc = "88880485_DESC"
+			
+	action = {
+		name = "To a new atomic era."
+	command = { type = research_mod value = 2.5 }
+	}
+		}
+
+event = {
+	id = 88880486
+	TAG =  { AST FRA SIA NZL USA ENG PHI }
+	style = 0	
+			
+	date = { day = 8 month = September Year = 1952 }
+			
+	name = "SEATO Signed"
+	desc = "88880486_DESC"
+			
+	action = {
+		name = "Let's defeat bolshevism together."
+	command = { type = relation which = AST value = 10 }
+	command = { type = relation which = FRA value = 10 }
+	command = { type = relation which = SIA value = 10 }
+	command = { type = relation which = NZL value = 10 }
+	command = { type = relation which = USA value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = relation which = PHI value = 10 }
+	}
+		}
+
+##1% DISSENT PER CHILD##
+event = {
+	id = 88880487
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 9 month = September Year = 1952 }
+			
+	name = "5 Children Die In Fire"
+	desc = "88880487_DESC"
+			
+	action = {
+		name = "Poor little mites."
+	command = { type = dissent value = 5 }
+	}
+		}
+
+event = {
+	id = 88880488
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 3 month = October Year = 1952 }
+			
+	name = "Nuclear Detonation"
+	desc = "88880488_DESC"
+			
+	action = {
+		name = "Behind the cloud is a silver lining."
+	command = { type = dissent value = 1 }
+	command = { type = research_mod value = 2.5 }
+	}
+		}
+
+event = {
+	id = 88880489
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 15 month = November Year = 1952 }
+			
+	name = "Jimmy Curruthers Wins World Bantanweight Title"
+	desc = "88880489_DESC"
+			
+	action = {
+		name = "Way to go Jimbo!"
+	command = { type = dissent value = -3 }
+	}
+		}
+
+##MUST ADD NSW UNIVERSITY OF TECHNOLOGY TECHTEAM##
+event = {
+	id = 88880490
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 15 month = November Year = 1952 }
+			
+	name = "NSW University of Technology"
+	desc = "88880490_DESC"
+			
+	action = {
+		name = "Australia's technological hub."
+	command = { type = dissent value = -2 }
+	command = { type = research_mod value = 2.5 }
+	}
+		}
+
+event = {
+	id = 88880491
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 16 month = July Year = 1952 }
+			
+	name = "Peking Peace Conference"
+	desc = "88880491_DESC"
+			
+	action = {
+		name = "Something needs to be done."
+	command = { type = dissent value = 4 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+event = {
+	id = 88880492
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 11 month = September Year = 1952 }
+			
+	name = "Peking Conference Labelled as Fake"
+	desc = "88880492_DESC"
+			
+	action = {
+		name = "Things will never be the same."
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880493
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 12 month = Septemmber Year = 1952 }
+			
+	name = "Menzies Voices Concerns Over Peking"
+	desc = "88880493_DESC"
+			
+	action = {
+		name = "Peking won't like this"
+	command = { type = dissent value = 2 }
+	command = { type = domestic which = political_left value = -1 }
+	command = { type = relation which = SOV value = -20 }
+	command = { type = relation which = CHC value = -20 }
+	}
+		}
+
+event = {
+	id = 88880494
+	TAG =  { AST JAP }
+	style = 0	
+			
+	date = { day = 7 month = January Year = 1953 }
+			
+	name = "Haruhiko Hishi Comes To Australia"
+	desc = "88880494_DESC"
+			
+	action = {
+		name = "Time to turn the page."
+	command = { type = dissent value = -2 }
+	command = { type = relation which = JAP value = 20 }
+	command = { type = relation which = AST value = 20 }
+	}
+		}
+
+event = {
+	id = 88880495
+	TAG =  { AST ENG USA }
+	style = 0	
+			
+	date = { day = 8 month = January Year = 1953 }
+			
+	name = "Combined Development Agency"
+	desc = "88880495_DESC"
+			
+	action = {
+		name = "This is the atom of progress."
+	command = { type = dissent value = -2 }
+	command = { type = relation which = USA value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = relation which = AST value = 10 }
+	command = { type = industrial_modifier which = supplies value = 7 }
+	}
+		}
+
+event = {
+	id = 88880496
+	TAG =  { AST FRA }
+	style = 0	
+			
+	date = { day = 20 month = January Year = 1953 }
+			
+	name = "French Painting Today"
+	desc = "88880496_DESC"
+			
+	action = {
+		name = "Le artiste magnifique!"
+	command = { type = dissent value = -2 }
+	command = { type = relation which = FRA value = 10 }
+	command = { type = relation which = AST value = 10 }
+	}
+		}
+
+event = {
+	id = 88880497
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = February Year = 1953 }
+			
+	name = "Australian Television"
+	desc = "88880497_DESC"
+			
+	action = {
+		name = "Flick on the idiot box."
+	command = { type = dissent value = -2 }
+	command = { type = domestic which = freedom value = 1 }
+	}
+		}
+
+event = {
+	id = 88880498
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 20 month = March Year = 1953 }
+			
+	name = "Television Act"
+	desc = "88880498_DESC"
+			
+	action = {
+		name = "Flick on the idiot box."
+	command = { type = dissent value = -2 }
+	command = { type = domestic which = freedom value = 1 }
+	}
+		}
+
+
+##CREAT TECHTEAM ATOMIC ENERGY COMMISSION##
+event = {
+	id = 88880499
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 15 month = April Year = 1953 }
+			
+	name = "Atomic Energy Commission Founded"
+	desc = "88880499_DESC"
+			
+	action = {
+		name = "We will be the next nuclear power."
+	command = { type = research_mod value = 2 }
+	command = { type = building_prod_mod which = nuclear_reactor value = 25 }
+	}
+		}
+
+event = {
+	id = 88880500
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 2 month = June Year = 1953 }
+			
+	name = "The Queen's Coronation"
+	desc = "88880500_DESC"
+			
+	action = {
+		name = "God save the Queen."
+	command = { type = dissent value = -8 }
+	}
+		}
+
+event = {
+	id = 88880501
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 24 month = June Year = 1953 }
+			
+	name = "Australia-British Nuclear Research"
+	desc = "88880501_DESC"
+			
+	action = {
+		name = "We will be the next nuclear power."
+	command = { type = research_mod value = 2 }
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880502
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = July Year = 1953 }
+			
+	name = "Healthcare Reforms"
+	desc = "88880502_DESC"
+			
+	action = {
+		name = "Here's to a healthy nation."
+	command = { type = relative_manpower value = 1 }
+	command = { type = attrition_mod value = 5 }
+	command = { type = trickleback_mod value = 5 }
+	command = { type = dissent value = -1 }
+	}
+		}
+
+event = {
+	id = 88880503
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 27 month = October Year = 1953 }
+			
+	name = "Arbitration Court Makes Ruling"
+	desc = "88880503_DESC"
+			
+	action = {
+		name = "Pay's gone up enough."
+	command = { type = dissent value = 3 }
+	}
+		}
+
+##MUST CREATE TECHTEAH WOOMERA TEST RANGE## ROCKET/NUKE SKILLS ALSO MAKE CLONE FOR ENG
+event = {
+	id = 88880504
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 13 month = October Year = 1953 }
+			
+	name = "Woomera Test Range Opens"
+	desc = "88880504_DESC"
+			
+	action = {
+		name = "Check for the silver lining."
+	command = { type = dissent value = 2 }
+	command = { type = research_mod value = 2 }
+	}
+		}
+
+event = {
+	id = 88880505
+	TAG =  { AST USA }
+	style = 0	
+			
+	date = { day = 11 month = December Year = 1953 }
+			
+	name = "Income Tax Act"
+	desc = "88880505_DESC"
+			
+	action = {
+		name = "Here's to free trade."
+	command = { type = relation which = AST value = 25 }
+	command = { type = relation which = USA value = 25 }
+	}
+		}
+
+##-70% DISSENT REFLECTS POPULATION WHO SAW ROYAL FAMILY##
+event = {
+	id = 88880506
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 3 month = February Year = 1954 }
+			
+	name = "Royal Visit"
+	desc = "88880506_DESC"
+			
+	action = {
+		name = "Here's to the Royal Family."
+	command = { type = dissent value = -70 }
+	command = { type = relation which = ENG value = 100 }
+	}
+		}
+
+##UNSURE WHETHER TO ADD TECHTEAM##
+event = {
+	id = 88880507
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 13 month = February Year = 1954 }
+			
+	name = "Permanent Antarctic Post"
+	desc = "88880507_DESC"
+			
+	action = {
+		name = "Time for new discoveries."
+	command = { type = research_mod value = 2 }
+	}
+		}
+
+event = {
+	id = 88880508
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 13 month = February Year = 1954 }
+			
+	name = "26 Die In NSW Cyclone And Flood"
+	desc = "88880508_DESC"
+			
+	action = {
+		name = "Poor Devils."
+	command = { type = dissent value = 2 }
+	command = { type = tc_mod value = -2 }
+	command = { type = manpower when = on_upgrade value = -0.2 }
+	}
+		}
+
+event = {
+	id = 88880509
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 13 month = April year = 1954 }
+			
+	name = "Soviet Espionage Inquiry"
+	desc = "88880509_DESC"
+			
+	action = {
+		name = "Go get the Communists Digger."
+	command = { type = relation which = SOV value = -15 }
+	command = { type = intelligence which = them value = -2 }
+	command = { type = intelligence which = us value = 5 }
+	command = { type = army_detection which = us value = 5 }
+	command = { type = army_detection which = them value = -5 }
+	command = { type = air_detection which = us value = 10 }
+	command = { type = air_detection which = them value = -5 }
+	}
+		}
+
+event = {
+	id = 88880510
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 14 month = April year = 1954 }
+			
+	name = "ALP Declares Inquiry Support"
+	desc = "88880510_DESC"
+			
+	action = {
+		name = "Go get the Communists Digger."
+	command = { type = relation which = SOV value = -15 }
+	command = { type = domestic which = political_left value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+
+	action = {
+		name = "We must also crush the Unions."
+	command = { type = relation which = SOV value = -25 }
+	command = { type = domestic which = political_left value = -2 }
+	command = { type = domestic which = democratic value = -2 }
+	command = { type = dissent value = 20 }
+	}
+
+	action = {
+		name = "Why? They already run the country."
+	command = { type = relation which = SOV value = 150 }
+	command = { type = relation which = USA value = -150 }
+	command = { type = relation which = ENG value = -150 }
+	command = { type = domestic which = political_left value = 5 }
+	command = { type = domestic which = democratic value = -2 }
+	command = { type = dissent value = 40 }
+	}
+		}
+
+event = {
+	id = 88880511
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 20 month = April year = 1954 }
+			
+	name = "Mrs Petrov Also Seeks Asylum"
+	desc = "88880511_DESC"
+			
+	action = {
+		name = "Say hello to Lady Freedom."
+	command = { type = relation which = SOV value = -10 }
+	}
+	
+	action = {
+		name = "Send them back."
+	command = { type = relation which = SOV value = 10 }
+	command = { type = dissent value = 10 }
+	}
+		}
+
+event = {
+	id = 88880512
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 25 month = April year = 1954 }
+			
+	name = "USSR Breaks Off Diplomatic Ties"
+	desc = "88880512_DESC"
+			
+	action = {
+		name = "We didn't want Red products anyway."
+	command = { type = relation which = SOV value = -20 }
+	command = { type = embargo which = SOV where = AST value = 1 }
+	command = { type = embargo which = AUS where = SOV value = 1 }
+	}
+
+	action = {
+		name = "We can always beg forgiveness."
+	command = { type = relation which = SOV value = 25 }
+	command = { type = embargo which = USA where = AST value = 1 }
+	command = { type = embargo which = ENG where = AST value = 1 }
+	command = { type = money value = -10 }
+	}
+		}
+
+event = {
+	id = 88880513
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 29 month = April year = 1954 }
+			
+	name = "Diplomats Return To Homelands"
+	desc = "88880513_DESC"
+			
+	action = {
+		name = "We didn't want Red products anyway."
+	command = { type = relation which = SOV value = -20 }
+	command = { type = embargo which = SOV where = AST value = 1 }
+	command = { type = embargo which = AUS where = SOV value = 1 }
+	}
+
+	action = {
+		name = "We can always beg forgiveness."
+	command = { type = relation which = SOV value = 25 }
+	command = { type = embargo which = USA where = AST value = 1 }
+	command = { type = embargo which = ENG where = AST value = 1 }
+	command = { type = money value = -10 }
+	}
+
+	action = {
+		name = "We've been pushed too far."
+	command = { type = war which = SOV }
+	}
+		}
+
+event = {
+	id = 88880515
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 30 month = June Year = 1954 }
+			
+	name = "Population Census"
+	desc = "88880515_DESC"
+			
+	action = {
+		name = "We are a growing Australasian Power"
+	command = { type = province_manpower which = 1708 value = 5 } #Melbourne#
+	command = { type = province_manpower which = 1709 value = 5 } #Geelong#
+	command = { type = province_manpower which = -1 value = 1 }
+	}
+		}
+
+event = {
+	id = 88880516
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 6 month = September Year = 1954 }
+			
+	name = "Uranium Mine Opens"
+	desc = "88880516_DESC"
+			
+	action = {
+		name = "Let's celebrate our endeavour"
+	command = { type = industrial_modifier which = total value = 5 }
+	command = { type = industrial_modifier which = supplies value = 5 }
+	command = { type = relation which = USA value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	}
+	action = {
+		name = "Let's celebrate our Red endeavour"
+	command = { type = industrial_modifier which = total value = 5 }
+	command = { type = industrial_modifier which = supplies value = 5 }
+	command = { type = relation which = USA value = -20 }
+	command = { type = relation which = ENG value = -20 }
+	command = { type = relation which = SOV value = 10 }
+	command = { type = dissent value = 15 }
+	command = { type = domestic which = democratic value = -2 }
+	command = { type = domestic which = political_left value = 2 }
+	}
+	action = {
+		name = "My uranium!"
+	command = { type = industrial_modifier which = total value = 2.5 }
+	command = { type = industrial_modifier which = supplies value = 2.5 }
+	command = { type = relation which = USA value = -10 }
+	command = { type = relation which = ENG value = -10 }
+	command = { type = dissent value = 18 }
+	command = { type = domestic which = democratic value = -2 }
+	command = { type = domestic which = political_left value = -2 }
+	}
+		}
+
+event = {
+	id = 88880517
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 22 month = November Year = 1954 }
+			
+	name = "Mo Passes Away"
+	desc = "88880517_DESC"
+			
+	action = {
+		name = "He will be remembered."
+	command = { type = dissent value = 1 }
+	}
+		}
+##NEEDS CORRECT TRIGGERS##
+#event = {
+#	id = 88880518
+#	TAG =  { AST }
+#	style = 0	
+#			
+#	date = { day = 15 month = September Year = 1954 }
+#			
+#	name = "The 3rd Withdrawn"
+#	desc = "88880518_DESC"
+#			
+#	action = {
+#		name = "Beaten Communism again."
+#	command = { type = dissent value = -2 }
+#	}
+#		}
+#
+#
+##MONEY COMES FROM LICENCES SOLD##
+event = {
+	id = 88880519
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = January Year = 1955 }
+			
+	name = "Telecast Licence Sales"
+	desc = "88880519_DESC"
+			
+	action = {	
+		name = "Behold the glowing box"
+	command = { type = dissent value = -3 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = democratic value = 1 }
+	command = { type = money value = 20 }
+	}
+	action = {	
+		name = "A new way to control people"
+	command = { type = dissent value = 3 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = democratic value = -1 }
+	}
+		}
+
+event = {
+	id = 88880520
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 25 month = February Year = 1955 }
+			
+	name = "NSW Floods"
+	desc = "88880520_DESC"
+			
+	action = {	
+		name = "Let's pick up the pieces."
+	command = { type = dissent value = 5 }
+	command = { type = tc_mod value = -5 }
+	}
+		}
+
+event = {
+	id = 88880521
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 27 month = February year = 1955 }
+			
+	name = "Labour Falls Apart"
+	desc = "88880521_DESC"
+			
+	action = {	
+		name = "The world thinks we're a laughing stock!"
+	command = { type = dissent value = 2 }
+	}
+		}
+
+event = {
+	id = 88880522
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 15 month = March year =1955 }
+			
+	name = "Labour's Rift Widens"
+	desc = "88880522_DESC"
+			
+	action = {	
+		name = "The world thinks we're a laughing stock!"
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880523
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 29 month = March year = 1955 }
+			
+	name = "Labour Self Destructs"
+	desc = "88880523_DESC"
+			
+	action = {	
+		name = "The world thinks we're a laughing stock!"
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880524
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 30 month = March year = 1955 }
+			
+	name = "Labour Continues Infighting"
+	desc = "88880524_DESC"
+			
+	action = {	
+		name = "The world thinks we're a laughing stock!"
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880525
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = April year = 1955 }
+			
+	name = "Menzies Announces Malaysian Support"
+	desc = "88880525_DESC"
+			
+	action = {	
+		name = "We must help the less fortunate"
+	command = { type = dissent value = 1 }
+	command = { type = domestic which = interventionism value = 1 }
+	}
+	action = {	
+		name = "We mustn't interfere"
+	command = { type = dissent value = 1 }
+	command = { type = domestic which = interventionism value = -1 }
+	}
+		}
+
+event = {
+	id = 88880526
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 4 month = April Year = 1955 }
+			
+	name = "Maralinga Announced"
+	desc = "88880526_DESC"
+			
+	action = {
+		name = "Time for new discoveries."
+	command = { type = research_mod value = 2 }
+	command = { type = dissent value = 2 }
+	}
+		}
+
+event = {
+	id = 88880527
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 7 month = April Year = 1955 }
+			
+	name = "Labour Woes Worsen"
+	desc = "88880527_DESC"
+			
+	action = {
+		name = "Not again."
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880528
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 17 month = April Year = 1955 }
+			
+	name = "The New Labour Party"
+	desc = "88880528_DESC"
+			
+	action = {
+		name = "Wonderful."
+	command = { type = dissent value = -2 }
+	}
+		}
+
+event = {
+	id = 88880529
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 20 month = April Year = 1955 }
+			
+	name = "Lost Confidence"
+	desc = "88880529_DESC"
+			
+	action = {
+		name = "Hopefully this is the end"
+	command = { type = dissent value = 2 }
+	}
+		}
+
+event = {
+	id = 88880530
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 23 month = April Year = 1955 }
+			
+	name = "Snowy Mountains Phase One"
+	desc = "88880530_DESC"
+			
+	action = {
+		name = "Harnessing Mother Nature"
+	command = { type = dissent value = -2 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 5 }
+	}
+		}
+
+event = {
+	id = 88880531
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 23 month = April Year = 1955 }
+			
+	name = "Letters Of Hope"
+	desc = "88880531_DESC"
+			
+	action = {
+		name = "Keep an eye out for Reds"
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = political_left value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+	action = {
+		name = "We must stifle their voices now"
+	command = { type = dissent value = 10 }
+	command = { type = domestic which = political_left value = 1 }
+	command = { type = domestic which = democratic value = -1 }
+	command = { type = domestic which = freedom value = -1 }
+	}
+	action = {
+		name = "All schools and workplaces will hear it"
+	command = { type = dissent value = 7 }
+	command = { type = domestic which = political_left value = 1 }
+	command = { type = domestic which = democratic value = -1 }
+	command = { type = domestic which = freedom value = -1 }
+	}
+		}
+
+event = {
+	id = 88880532
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 28 month = May Year = 1955 }
+			
+	name = "Labour Victoria Destroyed"
+	desc = "88880532_DESC"
+			
+	action = {
+		name = "Hello Henry"
+	command = { type = dissent value = -2 }
+	}
+		}
+
+event = {
+	id = 88880533
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 11 month = June Year = 1955 }
+			
+	name = "Bankstown Observer Trial"
+	desc = "88880533_DESC"
+			
+	action = {
+		name = "Off you go."
+	command = { type = dissent value = 4 }
+	}
+		}
+
+event = {
+	id = 88880534
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 30 month = June Year = 1955 }
+			
+	name = "New Vehicles On The Road"
+	desc = "88880534_DESC"
+			
+	action = {
+		name = "Just going for a drive."
+	command = { type = dissent value = -1 }
+	command = { type = tc_mod value = 10 }
+	}
+		}
+
+event = {
+	id = 88880535
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 5 month = July Year = 1955 }
+			
+	name = "New Aluminium Mine"
+	desc = "88880535_DESC"
+			
+	action = {
+		name = "New jobs and opportunities await."
+	command = { type = dissent value = -1 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 2 }
+	command = { type = resource which = rare_materials value = 10 }
+	}
+		}
+
+event = {
+	id = 88880536
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 30 month = August Year = 1955 }
+			
+	name = "New Steelmills"
+	desc = "88880536_DESC"
+			
+	action = {
+		name = "Heavy industry, the backbone of a country."
+	command = { type = dissent value = -1 }
+	command = { type = industrial_modifier which = total value = 5 }
+	command = { type = industrial_modifier which = supplies value = 10 }
+	command = { type = resource which = metal value = 10 }
+	}
+		}
+##MILITARY ACCESS TO TAG WHICH ???, TRIGGERED/SLEEPEVENT BY 0525##
+#event = {
+#	id = 88880537
+#	TAG =  { AST }
+#	style = 0	
+#			
+#	date = { day = 13 month = September Year = 1955 }
+#			
+#	name = "Australia Enters Malaya"
+#	desc = "88880537_DESC"
+#			
+#	action = {
+#		name = "Off you go."
+#	command = { type = dissent value = 1 }
+#	}
+#		}
+#
+#
+
+event = {
+	id = 88880538
+	TAG =  { AST ENG USA FRA }
+	style = 0	
+			
+	date = { day = 28 month = November Year = 1955 }
+			
+	name = "Summer Of The 17th Doll"
+	desc = "88880538_DESC"
+			
+	action = {
+		name = "Ray Lawler be praised!"
+	command = { type = dissent value = -2 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = relation which = USA value = 10 }
+	command = { type = relation which = AST value = 10 }
+	command = { type = relation which = FRA value = 10 }
+	}
+		}
+
+##UNSURE OF CORRECT PROVINCE IDs-MUST FIX IMMEDIATLEY-EVENT ID 0540 LEFT BLANK##
+#event = {
+#	id = 88880539
+#	TAG =  { ENG }
+#	style = 0	
+#			
+#	date = { day = 22 month = November Year = 1955 }
+#			
+#	name = "The Cocos Isles Are Ours"
+#	desc = "88880539_DESC"
+#			
+#	action = {
+#		name = ""
+#	command = { type = dissent value = -2 }
+#	command = { type = relation which = AST value = 10 }
+#	}
+#		}
+#
+##UNSURE OF CORRECT PROVINCE IDs-MUST FIX IMMEDIATLEY-EVENT ID 0540 LEFT BLANK##
+#event = {
+#	id = 88880539
+#	TAG =  { ENG }
+#	style = 0	
+#			
+#	date = { day = 22 month = November Year = 1955 }
+#			
+#	name = "The Cocos Isles Are Ours"
+#	desc = "88880539_DESC"
+#			
+#	action = {
+#		name = ""
+#	command = { type = dissent value = -2 }
+#	command = { type = relation which = AST value = 10 }
+#	}
+#		}
+#
+
+##MUST NOT BE COMMIE TRIGGER NEEDED##
+event = {
+	id = 88880541
+	TAG =  { AST USA }
+	style = 0	
+			
+	date = { day = 17 month = January Year = 1955 }
+			
+	name = "Cooperative Surveilance"
+	desc = "88880541_DESC"
+			
+	action = {
+		name = "Who would've thought..."
+	command = { type = relation which = USA value = 10 }
+	command = { type = research_mod value = 2 }
+	command = { type = relation which = AST value = 10 }
+	}
+		}
+
+##MILITARY ACCESS TO TAG WHICH ???, TRIGGERED/SLEEPEVENT BY 0525##
+#event = {
+#	id = 88880542
+#	TAG =  { AST }
+#	style = 0	
+#			
+#	date = { day = 1 month = January Year = 1956 }
+#			
+#	name = "Malayan Crisis"
+#	desc = "88880542_DESC"
+#			
+#	action = {
+#		name = "This is for our security to."
+#	command = { }
+#	}
+#		}
+#
+#
+
+event = {
+	id = 88880543
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 22 month = January Year = 1956 }
+			
+	name = "The Circular Quay Is Finished"
+	desc = "88880543_DESC"
+			
+	action = {
+		name = "Finally"
+	command = { type = dissent value = -2 }
+	command = { type = tc_mod value = 5 }
+	command = { type = construct which = infrastructure where = 1705 value = 10 } #Sydney#
+	}
+		}
+##BALANCED OUT LATER ON##
+event = {
+	id = 88880544
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 23 month = January Year = 1956 }
+			
+	name = "STRIKE STRIKE STRIKE!"
+	desc = "88880544_DESC"
+			
+	action = {
+		name = "Damn Union thugs!"
+	command = { type = dissent value = 30 }
+	command = { type = tc_mod value = -45 }
+	}
+		}
+
+##BALANCED OUT LATER ON##
+event = {
+	id = 88880545
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 17 month = February Year = 1956 }
+			
+	name = "STRIKE STRIKE STRIKE!"
+	desc = "88880545_DESC"
+			
+	action = {
+		name = "Damn Union thugs!"
+	command = { type = dissent value = 27 }
+	command = { type = industrial_modifier which = total value = -20 }
+	command = { type = industrial_modifier which = supplies value = -35 }
+	}
+		}
+
+event = {
+	id = 88880546
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 18 month = February Year = 1956 }
+			
+	name = "Waterside Strike Ends"
+	desc = "88880546_DESC"
+			
+	action = {
+		name = "About bloody time!"
+	command = { type = dissent value = -30 }
+	command = { type = tc_mod value = 45 }
+	}
+		}
+
+##TRIGGERS AST NOT-COMMIE-ENG NON-COMMIE-OR BOTH COMMIE##
+event = {
+	id = 88880547
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 1 month = March Year = 1956 }
+			
+	name = "First Commercial Uranium Deal"
+	desc = "88880547_DESC"
+			
+	action = {
+		name = "Fuel for a war, fuel for a future"
+	command = { type = relation which = AST value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = industrial_modifier which = total value = 1 }
+	command = { type = industrial_modifier which = supplies value = 1 }
+	command = { type = double_nuke_prod }
+	}
+		}
+
+event = {
+	id = 88880548
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 9 month = March Year = 1956 }
+			
+	name = "Sir E. Goossens Scandal"
+	desc = "88880548_DESC"
+			
+	action = {
+		name = "Such disesteem!"
+	command = { type = relation which = AST value = -5 }
+	command = { type = relation which = ENG value = -5 }
+	command = { type = dissent value = 5 }
+	}
+		}
+
+##ONLY IF DEMOCRATIC##
+event = {
+	id = 88880549
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 24 month = March Year = 1956 }
+			
+	name = "Victorian Pub Referendum"
+	desc = "88880549_DESC"
+			
+	action = {
+		name = "Pity, I like a good drink"
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = freedom value = -1 }
+	}
+		}
+
+event = {
+	id = 88880550
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 30 month = March Year = 1956 }
+			
+	name = "The Dutch-Australian Connection"
+	desc = "88880550_DESC"
+			
+	action = {
+		name = "We are one, but we are many"
+	command = { type = relation which = HOL value = 10 }
+	command = { type = dissent value = -2 }
+	command = { type = province_manpower which = 1708 value = 2 } #Melbourne#
+	command = { type = province_manpower which = 1703 value = 2 } #Sydney#
+	command = { type = province_manpower which = -1 value = 1 } #Random#
+	}
+		}
+
+##IF DEMOCRATIC ONLY##
+event = {
+	id = 88880551
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 25 month = April Year = 1956 }
+			
+	name = "Vince Gair's Return"
+	desc = "88880551_DESC"
+			
+	action = {
+		name = "1st Jan 57 will see reform"
+	command = { type = dissent value = -1 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 4 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+##IF DEMOCRATIC ONLY##
+event = {
+	id = 88880552
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 25 month = April Year = 1956 }
+			
+	name = "Vince Gair's Return"
+	desc = "88880552_DESC"
+			
+	action = {
+		name = "It's his right"
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+event = {
+	id = 88880553
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 16 month = May Year = 1956 }
+			
+	name = "Montebello Detonation"
+	desc = "88880553_DESC"
+			
+	action = {
+		name = "The world will fear our power"
+	command = { type = relation which = AST value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = nuke_damage value = 25 }
+	command = { type = research_mod value = 2 }
+	command = { type = dissent value = 2 }
+	}
+		}
+event = {
+	id = 88880554
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 24 month = May Year = 1956 }
+			
+	name = "National Wage Rises"
+	desc = "88880554_DESC"
+			
+	action = {	
+		name = "Happiness is productiveness"
+	command = { type = industrial_modifier which = total value = 5 }
+	command = { type = industrial_modifier which = supplies value = 10 }
+	command = { type = dissent value = -5 }
+	}
+		}
+
+event = {
+	id = 88880555
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = June Year = 1956 }
+			
+	name = "Polio vaccines"
+	desc = "88880555_DESC"
+			
+	action = {	
+		name = "We will be plagued no more"
+	command = { type = relative_manpower value = 10 }
+	command = { type = trickleback_mod value = 5 }
+	command = { type = attrition_mod value = 5 }
+	command = { type = dissent value = -5 }
+	}
+		}
+event = {
+	id = 88880556
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = June Year = 1956 }
+	offset = 7
+	deathdate = { day = 1 month = June Year = 1960 }
+			
+	name = "Private School Funding"
+	desc = "88880556_DESC"
+
+			
+	action = {	
+		name = "For a brighter, smarter Australia"
+	command = { type = research_mod value = 1 }
+	command = { type = dissent value = -2 }
+	command = { type = money value = -20 }
+	}
+		}
+##MONEY COMES FROM LICENCES SOLD##
+event = {
+	id = 88880557
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 16 month = September year = 1956 }
+			
+	name = "Telecast Licence Sales"
+	desc = "88880557_DESC"
+			
+	action = {	
+		name = "Behold the glowing box"
+	command = { type = dissent value = -3 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = democratic value = 1 }
+	command = { type = money value = 20 }
+	}
+	action = {	
+		name = "A new way to control people"
+	command = { type = dissent value = 3 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = democratic value = -1 }
+	}
+		}
+
+event = {
+	id = 88880558
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 27 month = September Year = 1956 }
+			
+	name = "First 'Thunderbolt'"
+	desc = "88880558_DESC"
+			
+	action = {
+		name = "The world will fear our power"
+	command = { type = relation which = AST value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = nuke_damage value = 25 }
+	command = { type = research_mod value = 2 }
+	command = { type = dissent value = 2 }
+	}
+		}
+event = {
+	id = 88880559
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 12 month = October year = 1956 }
+			
+	name = "The Shearers Get To Work"
+	desc = "88880559_DESC"
+			
+	action = {
+		name = "About time!!!"
+	command = { type = dissent value = -27 }
+	command = { type = industrial_modifier which = total value = 20 }
+	command = { type = industrial_modifier which = supplies value = 35 }
+	}
+		}
+event = {
+	id = 88880560
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 19 month = October year = 1956 }
+			
+	name = "Eildon Dam Opens"
+	desc = "88880560_DESC"
+			
+	action = {	
+		name = "Australia will soon be drought free"
+	command = { type = dissent value = -5 }
+	command = { type = industrial_modifier which = total value = 5 }
+	command = { type = industrial_modifier which = supplies value = 10 }
+	}
+		}
+event = {
+	id = 88880561
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = October year = 1956 }
+			
+	name = "ASIO Is Founded"
+	desc = "88880561_DESC"
+			
+	action = {	
+		name = "Nobody Will Spy On Us."
+	command = { type = intelligence which = them value = -2 }
+	command = { type = intelligence which = us value = 2 }
+	command = { type = army_detection which = us value = 2 }
+	command = { type = army_detection which = them value = -2 }
+	command = { type = air_detection which = us value = 2 }
+	command = { type = air_detection which = them value = -2 }
+	}
+		}
+event = {
+	id = 88880562
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 5 month = November year = 1956 }
+			
+	name = "ABC Begins Broadcasting"
+	desc = "88880562_DESC"
+			
+	action = {	
+		name = "Enjoy the ABC folks"
+	command = { type = dissent value = -5 }
+	}
+		}
+##TRIGGER=NOT COMMUNIST OR ALLIANCE SOV##
+event = {
+	id = 88880563
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 8 month = November year = 1956 }
+			
+	name = "3000 Flee Hungary Tyranny"
+	desc = "88880563_DESC"
+			
+	action = {	
+		name = "We will help them resettle"
+	command = { type = dissent value = -2 }
+	command = { type = relation which = SOV value = -10 }
+	command = { type = relation which = U13 value = -25 } #U13 MAY WANT WAR FOR REVENGE 'COLD WAR GOES HOT'#
+	command = { type = province_manpower which = 1709 value = 3 } #Geelong#
+	}
+	action = {	
+		name = "Bugger them! They may be spies."
+	command = { type = dissent value = 5 }
+	command = { type = relation which = SOV value = 5 }
+	command = { type = relation which = U13 value = 5 }
+	}
+		}
+##NEEDS TRIGGER NOT AT WAR##
+event = {
+	id = 88880564
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 19 month = November year = 1956 }
+			
+	name = "ABC Melbourne"
+	desc = "88880564_DESC"
+			
+	action = {	
+		name = "Prepare to write history"
+	command = { type = dissent value = -2 }
+	}
+		}
+##NEEDS TRIGGER NOT AT WAR#OTHER EVENTS TO BE ADDED##
+event = {
+	id = 88880565
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 22 month = November year = 1956 }
+			
+	name = "Melbourne Olympics"
+	desc = "88880565_DESC"
+			
+	action = {	
+		name = "Today we make history"
+	command = { type = dissent value = -5 }
+	}
+		}
+##TRIGGER=NOT COMMUNIST OR ALLIANCE SOV##
+event = {
+	id = 88880566
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 9 month = December year = 1956 }
+			
+	name = "Hungarian Athletes Seek Asylum"
+	desc = "88880566_DESC"
+			
+	action = {	
+		name = "We will help them resettle"
+	command = { type = dissent value = -2 }
+	command = { type = relation which = SOV value = -20 }
+	command = { type = relation which = U13 value = -35 } #U13 MAY WANT WAR FOR REVENGE 'COLD WAR GOES HOT'#
+	}
+	action = {	
+		name = "Bugger them! They may be spies."
+	command = { type = dissent value = 5 }
+	command = { type = relation which = SOV value = 5 }
+	command = { type = relation which = U13 value = 5 }
+	}
+		}
+event = {
+	id = 88880567
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 24 month = December year = 1956 }
+			
+	name = "Woman's Day"
+	desc = "88880567_DESC"
+			
+	action = {	
+		name = "Engaging the modern woman"
+	command = { type = dissent value = -5 }
+	}
+		}
+event = {
+	id = 88880568
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 19 month = January year = 1957 }
+			
+	name = "Argus Closes"
+	desc = "88880568_DESC"
+			
+	action = {	
+		name = "Such a shame"
+	command = { type = dissent value = 3 }
+	}
+		}
+##MUST MUST MUST ADD PICTURE##
+event = {
+	id = 88880569
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 29 month = January year = 1957 }
+			
+	name = "Sydney Opera House Winner"
+	desc = "88880569_DESC"
+			
+	action = {	
+		name = "Behold the sails"
+	command = { type = dissent value = -5 }
+	}
+		}
+##NOT SURE OF EFFECTS HERE##
+event = {
+	id = 88880570
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 1 month = May year = 1957 }
+			
+	name = "Birthday Ballots Announced"
+	desc = "88880570_DESC"
+			
+	action = {	
+		name = "Congratulations, you've been drafted"
+	command = { type = dissent value = 2 }
+	command = { type = relative_manpower value = 7 }
+	}
+		}
+event = {
+	id = 88880571
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 27 month = May year = 1957 }
+			
+	name = "Birthday Ballots Drawn"
+	desc = "88880571_DESC"
+			
+	action = {	
+		name = "Congratulations, you've been drafted"
+	command = { }
+	}
+		}
+event = {
+	id = 88880572
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 24 month = June Year = 1957 }
+			
+	name = "Snowy Mountains Phase Two"
+	desc = "88880572_DESC"
+			
+	action = {
+		name = "Harnessing Mother Nature"
+	command = { type = dissent value = -2 }
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 5 }
+	}
+		}
+##WILL NEED JAP RESPONSIVE EVENTS##
+event = {
+	id = 88880573
+	TAG =  { AST JAP }
+	style = 0	
+			
+	date = { day = 6 month = July Year = 1957 }
+			
+	name = "Most Favoured Nation"
+	desc = "88880573_DESC"
+			
+	action = {
+		name = "Hello our Nippon friends"
+	command = { type = dissent value = -2 }
+	command = { type = relation which = JAP value = 10 }
+	}
+	action = {
+		name = "We want nothing to do with the Nippon"
+	command = { type = dissent value = 5 }
+	command = { type = relation which = JAP value = -20 }
+	}	
+		}
+##NEED TRIGGER-ONLY IF DEMOCRATIC##
+event = {
+	id = 88880574
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 3 month = August Year = 1957 }
+			
+	name = "Liberal Comes To Power In QLD"
+	desc = "88880574_DESC"
+			
+	action = {
+		name = "Here's to democracy"
+	command = { type = dissent value = -2 }
+	command = { type = domestic which = democratic value = 1 }
+	}	
+		}
+##MAY CREATE TECHTEAM ANSETT##
+event = {
+	id = 88880575
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 23 month = August Year = 1957 }
+			
+	name = "Ansett Takes Off"
+	desc = "88880575_DESC"
+			
+	action = {
+		name = "There goes a pioneer"
+	command = { type = dissent value = -2 }
+	command = { type = tc_mod value = 2 }
+	command = { type = add_division which = "Ansett" value = transport_plane when = 5 }
+	command = { type = range which = transport_plane value = 150 }
+	command = { type = range which = strategic_bomber value = 150 }
+	command = { type = range which = tactical_bomber value = 150 }
+	command = { type = range which = naval_bomber value = 150 }
+	}	
+		}
+event = {
+	id = 88880576
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 10 month = October Year = 1957 }
+			
+	name = "Sydney Armenian Church"
+	desc = "88880576_DESC"
+			
+	action = {
+		name = "Bless you all"
+	command = { type = dissent value = -2 }
+	}	
+		}
+event = {
+	id = 88880577
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 24 month = October Year = 1957 }
+			
+	name = "Canberra Development Plan"
+	desc = "88880577_DESC"
+			
+	action = {
+		name = "For a stronger Australia"
+	command = { type = dissent value = -3 }
+	command = { type = construct which = infrastructure where = 1707 value = 20 } #Canberra#
+	}	
+		}
+event = {
+	id = 88880578
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 24 month = October Year = 1957 }
+			
+	name = "Turnbull Scandal"
+	desc = "88880578_DESC"
+			
+	action = {
+		name = "You WHAT???"
+	command = { type = dissent value = -3 }
+	}	
+		}
+event = {
+	id = 88880579
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 26 month = November Year = 1957 }
+			
+	name = "Wyndham Scheme"
+	desc = "88880579_DESC"
+			
+	action = {
+		name = "For a clever country"
+	command = { type = dissent value = -3 }
+	command = { type = research_mod value = 2 }
+	}	
+		}
+event = {
+	id = 88880580
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 12 month = February Year = 1957 }
+			
+	name = "They're A Weird Mob"
+	desc = "88880580_DESC"
+			
+	action = {	
+		name = "Gotta love Aussie Humour"
+	command = { type = dissent value = -3 }
+	}	
+		}
+event = {
+	id = 88880581
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 14 month = January Year = 1958 }
+			
+	name = "Around The World Service"
+	desc = "88880581_DESC"
+			
+	action = {	
+		name = "This is a wonderful day"
+	command = { type = dissent value = -5 }
+	command = { type = tc_mod value = 5 }
+	command = { type = range which = transport_plane value = 1000 }
+	command = { type = range which = strategic_bomber value = 1000 }
+	command = { type = range which = tactical_bomber value = 1000 }
+	command = { type = range which = naval_bomber value = 1000 }
+	command = { type = add_division which = "Southern Aurora" value = transport_plane when = 5 }
+	command = { type = add_division which = "Southern Zephyr" value = transport_plane when = 5 }
+	}	
+		}
+##NEEDS TRIGGER-NOT COMMIE##
+event = {
+	id = 88880582
+	TAG =  { AST }
+	style = 0	
+			
+	date = { day = 3 month = February Year = 1958 }
+			
+	name = "Frank And Dennis Hursey"
+	desc = "88880582_DESC"
+			
+	action = {	
+		name = "Union scum!"
+	command = { type = dissent value = 7 }
+	}	
+		}
+event = {
+	id = 88880583
+	TAG =  { AST ENG }
+	style = 0	
+			
+	date = { day = 5 month = February Year = 1958 }
+			
+	name = "British PM Visits"
+	desc = "88880582_DESC"
+			
+	action = {	
+		name = "58 years and not a moment too soon"
+	command = { type = dissent value = -2 }
+	command = { type = relation which = AST value = 10 }
+	command = { type = relation which = ENG value = 10 }
+	}	
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

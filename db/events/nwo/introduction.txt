@@ -1,0 +1,51 @@
+###########################################################################################
+#
+#	New World Order 2 by Bizon
+#
+#	Introductory events designed for setting up proper flags and sleeping events.
+#
+###########################################################################################
+
+event = {
+	id = 8000900
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+	
+	trigger = {
+		flag = cold_war
+		NOT = { flag = ww3 }
+		war = { country = USA country = SOV }
+	}
+	
+	date = { day = 0 month = january year = 1933 }
+    offset = 1
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = OK
+		command = { type = setflag which = ww3 }
+	}
+
+}
+
+event = {
+	id = 8000999
+
+	name = EVT_ENDOFHISTORY_NAME
+	desc = EVT_ENDOFHISTORY_DESC
+	picture = "nwo\end_of_history"
+	style = 1
+	
+	date = { day = 0 month = january year = 1964 }
+    offset = 1
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# Good, I'm done!
+	action = {
+		name = EVT_ENDOFHISTORY_A
+		command = { type = money value = 1 }
+	}
+
+}

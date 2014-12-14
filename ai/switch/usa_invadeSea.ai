@@ -1,0 +1,274 @@
+# USA in South east asia AI File by DrBob    for wif2
+
+exp_force_ratio = 0.0
+exp_force_ratios = { } 
+
+combat = {
+	GER = 100
+	JAP = 130
+	ITA = 20
+	VIC = 1
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	country_priorities = {
+		CAN = -1
+		MEX = -1
+		SPA = -1
+		SPR = -1
+		SCH = -1
+		VIC = -1
+		GER = 60
+		JAP = 60
+		ITA = 100
+	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= op_defensive
+	distrib_vs_human 	= op_defensive
+
+	enemy_reinf_days	= 2
+	reserve_prop		= 0.25
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.3
+	withdraw_odds		= 0.6
+
+  	enemy_handicap = { } 
+   	passivity = { } 
+} 
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+	invasion		= yes
+ 	base			= 0.01 # 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random			= 0.02	#How big a random range.  (1.0 = 1%)
+	coastal			= 0.2 # 0.1	#increase to avoid coastal forts more.
+	beach			= 0.1 # 0.1	#higher, avoid worst beaches.
+	distance		= 0.5 # 0.1	#higher = avoid long distance.
+	max_distance  		= 120.0  #About the distance from Japan to Batavia
+	max_staging_distance = 110.0	# How far should the staging area be from the target invasion point
+	pocket			= 0.1	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island			= 0.1	#prioritise taking pure islands.
+	enemy			= 0.1	#higher = much more vary of troops in province.
+	adjacentenemy 		= 0.1	#higher = much more vary of troops nearby
+	air_base		= 0.1
+    naval_base 			= 0.1 
+    air_support 		= 0.1 
+    redirect 			= priority
+	ignore			= no
+	help_allies 		= yes
+      
+	staging_province = { 
+		1889 # San Francisco
+		1886
+		1734 # Pearl harbour
+
+		
+
+ }
+
+	target = {
+
+
+		# -----------------
+		# Italy
+		
+
+		#Central Pacific  dh
+		1677 = 2700
+		1676 = 2700
+
+		#South Pacific
+
+		
+		1680 = 3000 #Tarawa  dh
+		
+
+		#New Zealand
+		
+
+		#Australia
+		
+
+		#Coral Sea  dh
+		
+		1736 = 2500
+		
+		1607 = 3000 #Port Moresby
+
+		#Carolinese  dh
+		1670 = 2000
+		
+		
+		1667 = 2500 #Truk
+		
+
+		#Molucca  dh
+		
+		1683 = 2000
+		
+		#Borneo   dh
+		
+		1600 = 3000 #fak
+		
+		1624 = 3000 #Kuching
+
+		#Java
+		
+		 #Batavia
+	
+		#Sumatra
+		
+		#Hainan
+		
+		#Philippines   DH
+		
+		1565 = 1000
+		1566 = 2000
+		1567 = 1000
+		
+
+		#Luzon
+
+		#Formose
+	
+		#RyuKyu Islands
+
+		#Malaisia
+		 #Singapore
+		 #Kuala Lumpur
+		
+
+		#Indochina
+		
+		 #Bangkok
+		
+		 #Saigon
+		
+
+		#Sakhalin
+		
+
+		#China-Korea  dh
+		
+		1338 = 1000
+		1334 = 1000
+		
+		1358 = 1001 
+		
+		#Kyushu
+		
+		#Shikoku
+		
+		#Japan    DH
+		 1561 = 1500
+		 1559 = 1500
+		
+		 1552 = 500 #Tokyo
+		
+
+		#Hokaido     DH
+		
+		1564 = 1001 # oka
+
+		#Canada - vancouver
+		
+
+		#USA-West Coast
+		
+
+		#Latin America
+		
+		# ATLANTIC OCEAN
+		# -------------
+		#Islands in cold Water
+		
+
+		#Bahamas and Bermuda
+		
+
+		#Mid Atlantic
+		
+
+		#South America
+		
+
+		#Carabean
+		
+
+		# MEDITERRANEAN SEA
+		# -----------------
+
+
+		   # Malta
+
+		# North Africa
+		
+		
+		 # Tunisia
+		 
+		 # Algeria
+		 
+		 # Morocco
+		 # Casa
+
+		# Peninsula Ibérica
+
+		
+
+		# Middle East
+			# Palestine
+		
+			# Syria
+		
+			# Palestine
+		
+			# Lebanon
+
+		#Temp Shut Down of Europe
+		#Norway
+		
+
+		# Baltic States (in case of un-holy alliance)
+		
+
+		# German
+		
+	
+		# Atlantic Wall
+		
+
+
+	
+	} 
+} 
+	admiral = {
+
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 50    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 75 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 50 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+
+            target = { 2636 = 250 2639 = 225 2631 = 200 2414 = 175 2424 = 175 2426 = 175 
+
+			2473 = 300 2475 = 300 2416 = 300 2476 = 300 2480 = 300 2490 = 300
+
+			2482 = 200 2484 = 200 2555 = 175 2486 = 150 2489 = 150 2488 = 150			
+
+		  } 
+
+            
+
+	#  core = {  }
+
+}

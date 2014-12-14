@@ -1,0 +1,2254 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+# Revised by Limith. 
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the naval treaties
+# Event List:
+#-Treaty Enter--------------------------
+# USA	13310050	The Washington Naval Conference
+# USA	13310051	The Black Chamber
+# USA ENG FRA ITA JAP	13310052	Sign the Washington Naval Treaty?
+# USA ENG FRA ITA JAP	13310053	Three Power Naval Conference - Geneva Naval Conference (shortcut to london naval treaty)
+# USA ENG FRA ITA JAP	13310054	London Naval Treaty
+# ENG 13310059	Host Second London Naval Disarmament Conference?
+# USA ENG FRA ITA JAP 13310060	Signing the Second London Naval Treaty
+# ALL	13310055	Geneva Conference on the Reduction and Limitation of Arms - Second Geneva Conference
+# GER U08	13310056	Ask the Brits for a separate naval treaty.
+# ENG 13310057	The Germans are ready to debate naval armament!
+# GER U08 13310058	The Anglo-German Naval Agreement
+#-Treaty Exit----------------------------
+# USA ENG FRA ITA JAP U08 GER	13310062	Naval Treaty Expires or is Violated
+#-Country Specific Disarmament-----------
+# USA	13310070	Naval Treaty Broken!
+# ENG	13310071	Naval Treaty Broken!
+# JAP	13310072	Naval Treaty Broken!
+# U08/U09	13310073	Naval Treaty Broken!
+# FRA	13310078	Naval Treaty Broken!
+# ITA	13310080	Naval Treaty Broken!
+#-Country Specific Rearmament------------
+# USA	13310074	Naval Disarmament Completed
+# ENG	13310075	Naval Disarmament Completed
+# JAP	13310076	Naval Disarmament Completed
+# U08/U09	13310077	Naval Disarmament Completed
+# FRA	13310079	Naval Disarmament Completed
+# ITA	13310081	Naval Disarmament Completed
+#-Generic Limitations (Other)--------------------
+# ALL	13310083	Destroyer Limit Reached
+# ALL	133100831	We can build more destroyers
+# ALL	13310084	Transport Limit Reached
+# ALL	133100841	We can build more transports
+
+################
+# Treaty Enter #
+################
+
+# The Washington Naval Conference
+event = {
+	id = 13310050
+
+	country = USA
+
+	trigger = {
+		event = 14400117
+	}
+
+	name = "EVT_13310050_NAME"							
+	Desc = "EVT_13310050_DESC"
+	Picture = "british_naval_reinforcments"
+
+	date = { day = 1 month = november year = 1921 }
+	offset = 365
+	deathdate = { day = 1 month = november year = 1935 }
+
+	action = {
+		name = "It's very important for preserving peace, freedom and prosperity!"
+		ai_chance = 100
+		command = { type = setflag which = washington_naval_conference }
+		command = { type = event which = 13310051 where = USA }
+		command = { trigger = { exists = USA } type = event which = 13310052 where = USA when = 180 }
+		command = { trigger = { exists = ENG } type = event which = 13310052 where = ENG when = 180 }
+		command = { trigger = { exists = FRA } type = event which = 13310052 where = FRA when = 180 }
+		command = { trigger = { exists = ITA } type = event which = 13310052 where = ITA when = 180 }
+		command = { trigger = { exists = JAP } type = event which = 13310052 where = JAP when = 180 }
+	}
+
+	action = {
+		name = "Disarm...what?!"
+		ai_chance = 0
+		command = { type = belligerence value = 50 }
+		command = { type = dissent value = 20 }
+	}
+}
+
+# The Black Chamber - Spy on the Japs?
+event = {
+	id = 13310051
+	country = USA
+
+	#Triggered
+
+	name = "EVT_13310051_NAME"							
+	Desc = "EVT_13310051_DESC"
+	Picture = "constitutional"
+
+	action = { 	
+		name = "The Japs are a threat."
+		ai_chance = 100
+		command = { type = setflag which = washington_naval_conference_japan_espionage }
+	}
+
+	action = { 	
+		name = "This voids the conference's very spirit!"
+		ai_chance = 0
+		command = { type = 	belligerence value = -5 }
+		command = { type = 	domestic which = interventionism value = -1 }
+		command = { type = 	domestic which = defense_lobby value = -1 }
+	}
+}
+
+# Sign the Washington Naval Treaty?
+event = {
+	id = 13310052
+	persistent = yes
+	tag = { USA ENG FRA ITA JAP }
+
+	# Triggered
+
+	name = "EVT_13310052_NAME"							
+	Desc = "EVT_13310052_DESC"
+
+	Picture = "dd_transfer"
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				atwar = no
+			}
+			not = { local_flag = naval_treaty_void }
+		}
+		name = "Sign it."
+		ai_chance = 100
+		command = { type = local_setflag which = washington_naval_treaty }
+		command = { type = event which = 13310053 where = -1 when = 30 }
+	}
+	action = {
+		trigger = {
+			not = { local_flag = naval_treaty_void }
+		}
+		name = "I don't believe in it."
+		ai_chance = 0
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = 10 }
+		command = { type = local_setflag which = naval_treaty_void }
+	}
+}
+
+# Three Power Naval Conference - Geneva Naval Conference (shortcut to london naval treaty)
+event = {
+	id = 13310053
+	tag = { USA ENG FRA ITA JAP }
+	persistent = yes
+
+	#Triggered
+
+	name = "EVT_13310053_NAME"							
+	Desc = "EVT_13310053_DESC"
+
+	Picture = "american_naval_reinforcments2"
+
+	action = {
+		trigger = {
+			not = { local_flag = naval_treaty_void }
+			not = { local_flag = naval_treaty_success }
+			or = {
+				ai = no
+				atwar = no
+			}
+		}
+		name = "We are not convinced."
+		ai_chance = 45
+		command = { type = local_setflag which = had_three_powers }
+		command = { type = setflag which = three_powers_failed }
+		command = { type = sleepevent which = 13310053 }
+		command = { type = dissent value = 1 }
+	}
+
+	action = {
+		trigger = {
+			not = { local_flag = naval_treaty_void }
+			not = { local_flag = naval_treaty_success }
+		}
+		name = "This is important..."
+		ai_chance = 55
+		command = { type = local_setflag which = had_three_powers }
+		command = { type = belligerence value = -10 }
+	}
+}
+
+# London Naval Treaty
+event = {
+	id = 13310054
+	persistent = yes
+	tag = { USA ENG FRA ITA JAP }
+
+	trigger = {
+		local_flag = washington_naval_treaty
+		not = { local_flag = naval_treaty_void }
+		not = { local_flag = london_naval_treaty }
+		or = {
+			year = 1930
+			and = {
+				random = 30
+				not = { flag = three_powers_failed }
+			}
+		}
+	}
+
+	name = "EVT_13310054_NAME"							
+	Desc = "EVT_13310054_DESC"
+	Picture = "british_naval_reinforcments"
+
+	date = { day = 5 month = august year = 1927 }
+	offset = 180
+	deathdate = { day = 4 month = august year = 1931 }
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				atwar = no
+			}
+		}
+		name = "World Peace is more important than a few ships."
+		ai_chance = 100
+		command = { type = local_setflag which = london_naval_treaty }
+		command = { type = deactivate_unit_type which = nuclear_submarine } #'big-gun' submarine is bad
+		command = { trigger = { local_flag = geneva_conference country = ENG not = { local_flag = naval_treaty_void } } type = event which = 13310059 where = ENG when = 15 }
+	}
+	action = { 	
+		name = "We need to defend ourself."
+		ai_chance = 0
+		command = { type = belligerence value = 30 }
+		command = { type = dissent value = 5 }
+		command = { type = local_setflag which = naval_treaty_void }
+	}
+}
+
+# Geneva Conference on the Reduction and Limitation of Arms - Second Geneva Conference (set preparatory local flag for second london naval conference AND Anglo-German Naval Agreement)
+event = {
+	id = 13310055
+	persistent = yes
+
+	trigger = {
+		flag = london_naval_treaty
+		atwar = no
+		not = { atwar = U08 } #no big war going on
+		not = { atwar = GER }
+		not = { atwar = ENG }
+		not = { atwar = FRA }
+		not = { atwar = JAP }
+		not = { atwar = ITA }
+		not = { local_flag = naval_treaty_void }
+		not = { local_flag = geneva_conference }
+	}
+
+	name = "EVT_13310055_NAME"							
+	Desc = "EVT_13310055_DESC"
+	Picture = "naval_reinforcements"
+
+	date = { day = 1 month = 1 year = 1932 }
+	offset = 300
+	deathdate = { day = 30 month = december year = 1933 }
+
+	action = { 	
+		name = "Send a delegation"
+		ai_chance = 100
+		command = { type = local_setflag which = geneva_conference }
+		command = { type = setflag which = geneva_conference }
+		command = { trigger = { local_flag = london_naval_treaty country = ENG not = { local_flag = naval_treaty_void } } type = event which = 13310059 where = ENG when = 15 }
+		command = { 
+			trigger = { 
+				event = 13300200 # Germany has lost the war
+				or = {
+					country = U08
+					country = GER
+				}
+			}
+			type = event which = 13310056 where = -1 when = 7 
+		}
+
+}
+	action = { 	
+		name = "Don't attend"
+		ai_chance = 0
+		command = { type = belligerence value = 30 }
+		command = { type =	dissent value = 5 }
+		command = { type = local_setflag which = naval_treaty_void }
+		command = { trigger = { or = { country = U08 country = GER } } type = sleepevent which = 13310056 }
+	}
+}
+
+# Host Second London Naval Disarmament Conference?
+event = {
+	id = 13310059
+	country = ENG
+
+	#Triggered
+
+	name = "EVT_13310059_NAME"							
+	Desc = "EVT_13310059_DESC"
+	Picture = "american_naval_reinforcments2"
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				atwar = no
+			}
+		}
+		name = "Plan this great event."
+		ai_chance = 100
+		command = { type = setflag which = london_naval_conference2 }
+		command = { trigger = { exists = USA not = { atwar = USA } } type = event which = 13310060 where = USA when = 30 }
+		command = { trigger = { exists = ENG not = { atwar = ENG } } type = event which = 13310060 where = ENG when = 30 }
+		command = { trigger = { exists = FRA not = { atwar = FRA } } type = event which = 13310060 where = FRA when = 30 }
+		command = { trigger = { exists = ITA not = { atwar = ITA } } type = event which = 13310060 where = ITA when = 30 }
+		command = { trigger = { exists = JAP not = { atwar = JAP } } type = event which = 13310060 where = JAP when = 30 }
+	}
+
+	action = { 	
+		name = "Si vis pacem, para bellum."
+		ai_chance = 0
+		command = { type = 	belligerence value = 30 }
+		command = { type =	dissent value = 10 }
+	}
+}
+
+# Signing the Second London Naval Treaty
+event = {
+	id = 13310060
+	tag = { USA ENG FRA ITA JAP }
+	persistent = yes
+	
+	#Triggered
+
+	name = "EVT_13310060_NAME"							
+	Desc = "EVT_13310060_DESC"
+	Picture = "american_ships_in_dock"
+
+	action = {
+		trigger = {
+			local_flag = geneva_conference
+			local_flag = london_naval_treaty
+			not = { local_flag = naval_treaty_void }
+			or = {
+				ai = no
+				atwar = no
+			}
+		}
+		name = "Until into '42 then."
+		ai_chance = 100
+		command = { type = local_setflag which = london_naval_treaty2 }
+		command = { type = deactivate_unit_type which = nuclear_submarine } #'big-gun' submarine is bad
+		command = { type = scrap_model which = battleship value = 11 }
+		command = { type = scrap_model which = battleship value = 12 }
+		command = { type = scrap_model which = battleship value = 13 }
+		command = { trigger = { country = JAP } type = local_clrflag which = disarm_naval_10 }
+		command = { trigger = { country = JAP } type = local_clrflag which = disarm_naval_25 }
+		command = { trigger = { country = JAP } type = local_clrflag which = disarm_naval_50 }
+		command = { trigger = { country = JAP } type = local_clrflag which = disarm_naval_100 }
+		command = { trigger = { country = JAP } type = local_setflag which = disarm_naval_150 }
+		command = { trigger = { country = JAP } type = local_clrflag which = disarm_naval_200 }
+		command = { type = belligerence value = -10 }
+	}
+
+	action = {
+		trigger = {
+			local_flag = geneva_conference
+			local_flag = london_naval_treaty
+			not = { local_flag = naval_treaty_void }
+		}
+		name = "We shall not sign."
+		ai_chance = 0
+		command = { type = 	belligerence value = 30 }
+		command = { type =	dissent value = 10 }
+	}
+}
+
+# Ask the Brits for a separate naval treaty.
+event = {
+	id = 13310056
+	tag = { GER U08 }
+
+	#Triggered
+
+	name = "EVT_13310056_NAME"							
+	Desc = "EVT_13310056_DESC"
+	Picture = "royal_navy_reinforcments"
+	
+	action = {
+		trigger = {
+			not = { local_flag = naval_treaty_void }
+		}
+		name = "Rebuild our navy, and send Herrn Ribbentrop to negotiate with the Brits."
+		ai_chance = 100
+		command = { type = event which = 13310057 where = ENG when = 90 }
+		command = { type = activate_unit_type which = nuclear_submarine }
+		command = { type = activate_unit_type which = submarine }
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = activate_unit_type which = carrier }
+		command = { type = activate_unit_type which = battleship }
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_setflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+	}
+	action = {
+		trigger = {
+			not = { local_flag = naval_treaty_void }
+		}
+		name = "We will do this without the Brits."
+		ai_chance = 0
+		command = { type = activate_unit_type which = nuclear_submarine }
+		command = { type = activate_unit_type which = submarine }
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = activate_unit_type which = carrier }
+		command = { type = activate_unit_type which = battleship }
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = belligerence value = 50 }
+	}
+}
+
+# The Germans are ready to debate naval armament!
+event = {
+	id = 13310057
+	country = ENG
+
+	#Triggered
+
+	name = "EVT_13310057_NAME"							
+	Desc = "EVT_13310057_DESC"
+	Picture = "american_naval_reinforcments2"
+	
+	action = {
+		name = "Show our good will, 33,5 percent it shall be."
+		ai_chance = 100
+		command = { type = event which = 13310058 where = GER when = 7 }
+		command = { type = relation which = GER value = 100 }
+	}
+
+	action = { 	
+		name = "Do they think we are fools?"
+		ai_chance = 0
+		command = { type = belligerence value = 30 }
+	}
+}
+
+# The Anglo-German Naval Agreement
+event = {
+	id = 13310058
+	country = GER
+
+	#Triggered
+	
+	name = "EVT_13310058_NAME"							
+	Desc = "EVT_13310058_DESC"
+	Picture = "royal_navy_reinforcments"
+	
+	action = { 	
+		name = "Nice! Continue extending the Kriegsmarine."
+		ai_chance = 100
+		command = { type = local_setflag which = anglo_german_naval_agreement }
+		command = { type = deactivate_unit_type which = escort_carrier }
+		command = { type = deactivate_unit_type which = carrier }
+		command = { type = deactivate_unit_type which = battleship }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_setflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+	}
+
+	action = { 	
+		name = "Enough of this! Revenge!"
+		ai_chance = 0
+		command = { type = 	belligerence value = 30 }
+	}
+}
+
+###############
+# Treaty Exit #
+###############
+
+# The End of the Naval Treaties - Naval Treaties Expire or are Violated
+event = {
+	id = 13310062
+	tag = { USA ENG FRA ITA JAP U08 GER }
+	persistent = yes
+
+	date = { day = 1 month = march year = 1918 }
+	offset = 30
+	deathdate = { day = 30 month = march year = 1964 }
+
+	trigger = {
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			local_flag = washington_naval_treaty
+			local_flag = london_naval_treaty
+			local_flag = anglo_german_naval_agreement
+		}
+		OR = {
+			atwar = USA # the scent of napalm...
+			atwar = ENG # ... in the morning
+			atwar = yes
+			# washington naval treay has expired, and london naval treaty has not happened.
+			AND = {
+				local_flag = washington_naval_treaty
+				not = { flag = london_naval_treaty }
+				year = 1931 # ... after the expiration of eight years from the coming into force of the present Treaty
+			}
+			# london 1 has expired, and london 2 did not happen
+			AND = {
+				local_flag = london_naval_treaty
+				not = { flag = london_naval_treaty2 }
+				year = 1938 # london1 expired at the end of '37
+			}
+			# london 2 has expired
+			AND = {
+				local_flag = london_naval_treaty2
+				year = 1943 # scheduled to expire in '42
+			}
+			and = {
+				country = JAP
+				event = 13301213 #incursion in china
+			}
+			and = {
+				or = {
+					country = GER
+					country = U08
+				}
+				local_flag = anglo_german_naval_agreement
+				flag = Munich
+			}
+			and = {
+				country = ITA
+				event = 13300612
+			}
+		}
+	}
+	name = "EVT_13310062_NAME"							
+	Desc = "EVT_13310062_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "Where is the nearest shipyard around here?"
+		ai_chance = 100
+		command = { type = local_setflag which = naval_treaty_void }
+		command = { type = activate_unit_type which = nuclear_submarine }
+		command = { type = activate_unit_type which = submarine }
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = activate_unit_type which = carrier }
+		command = { type = activate_unit_type which = battleship }
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = activate_unit_type which = destroyer }
+		command = { type = local_clrflag which = washington_naval_treaty }
+		command = { type = local_clrflag which = london_naval_treaty }
+		command = { type = local_clrflag which = london_naval_treaty2 }
+		command = { type = local_clrflag which = anglo_german_naval_agreement }
+	}
+}
+
+################################
+# Country Specific Disarmament #
+################################
+
+# Naval Treaty Broken - USA
+event = {
+	id = 13310070
+	persistent = yes
+	country = USA
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					AND = { carrier = { value = 4 when = now } NOT = { local_flag = carrier_disabled } }
+					AND = { escort_carrier = { value = 7 when = now } NOT = { local_flag = escort_carrier_disabled } }
+					AND = { battlecruiser = { value = 4 when = now } NOT = { local_flag = battlecruiser_disabled } }
+					AND = { battleship = { value = 16 when = now } NOT = { local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					AND = { heavy_cruiser = { value = 19 when = now } NOT = { local_flag = heavy_cruiser_disabled } }
+					AND = { light_cruiser = { value = 28 when = now } NOT = { local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310070_NAME"							
+	Desc = "EVT_13310070_DESC"
+	Picture = "american_carrier"
+	
+	action = {
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			carrier = { value = 4 when = now }
+			not = { local_flag = carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = carrier when = 0 where = 0 value = 3 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = carrier }
+		command = { trigger = { ai = no } type = local_setflag which = carrier_disabled }
+	}
+
+	action = { 	
+		name = "We need to decomission escort carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			escort_carrier = { value = 7 when = now }
+			not = { local_flag = escort_carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = escort_carrier when = 0 where = 0 value = 6 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = escort_carrier }
+		command = { trigger = { ai = no } type = local_setflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battlecruiser = { value = 4 when = now }
+			not = { local_flag = battlecruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battlecruiser when = 0 where = 0 value = 3 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battlecruiser }
+		command = { trigger = { ai = no } type = local_setflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battleship = { value = 16 when = now }
+			not = { local_flag = battleship_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battleship when = 0 where = 0 value = 15 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battleship }
+		command = { trigger = { ai = no } type = local_setflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			heavy_cruiser = { value = 19 when = now }
+			not = { local_flag = heavy_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = heavy_cruiser when = 0 where = 0 value = 18 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = heavy_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			light_cruiser = { value = 28 when = now }
+			not = { local_flag = light_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = light_cruiser when = 0 where = 0 value = 27 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = light_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = light_cruiser_disabled }
+	}
+}
+
+# Naval Treaty Broken - ENG
+event = {
+	id = 13310071
+	persistent = yes
+	country = ENG
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					AND = { carrier = { value = 5 when = now } NOT = { local_flag = carrier_disabled } }
+					AND = { escort_carrier = { value = 3 when = now } NOT = { local_flag = escort_carrier_disabled } }
+					AND = { battlecruiser = { value = 3 when = now } NOT = { local_flag = battlecruiser_disabled } }
+					AND = { battleship = { value = 17 when = now } NOT = { local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					AND = { heavy_cruiser = { value = 16 when = now } NOT = { local_flag = heavy_cruiser_disabled } }
+					AND = { light_cruiser = { value = 35 when = now } NOT = { local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310071_NAME"							
+	Desc = "EVT_13310071_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			carrier = { value = 5 when = now }
+			not = { local_flag = carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = carrier when = 0 where = 0 value = 4 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = carrier }
+		command = { trigger = { ai = no } type = local_setflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			escort_carrier = { value = 3 when = now }
+			not = { local_flag = escort_carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = escort_carrier when = 0 where = 0 value = 2 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = escort_carrier }
+		command = { trigger = { ai = no } type = local_setflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battlecruiser = { value = 3 when = now }
+			not = { local_flag = battlecruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battlecruiser when = 0 where = 0 value = 2 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battlecruiser }
+		command = { trigger = { ai = no } type = local_setflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battleship = { value = 17 when = now }
+			not = { local_flag = battleship_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battleship when = 0 where = 0 value = 16 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battleship }
+		command = { trigger = { ai = no } type = local_setflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			heavy_cruiser = { value = 16 when = now }
+			not = { local_flag = heavy_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = heavy_cruiser when = 0 where = 0 value = 15 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = heavy_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			light_cruiser = { value = 35 when = now }
+			not = { local_flag = light_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = light_cruiser when = 0 where = 0 value = 34 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = light_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = light_cruiser_disabled }
+	}
+}
+
+# Naval Treaty Broken - JAP
+event = {
+	id = 13310072
+	persistent = yes
+	country = JAP
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					AND = { carrier = { value = 5 when = now } NOT = { local_flag = carrier_disabled } }
+					AND = { escort_carrier = { value = 2 when = now } NOT = { local_flag = escort_carrier_disabled } }
+					AND = { battlecruiser = { value = 5 when = now } NOT = { local_flag = battlecruiser_disabled } }
+					AND = { battleship = { value = 10 when = now } NOT = { local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					AND = { heavy_cruiser = { value = 12 when = now } NOT = { local_flag = heavy_cruiser_disabled } }
+					AND = { light_cruiser = { value = 18 when = now } NOT = { local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310072_NAME"							
+	Desc = "EVT_13310072_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			carrier = { value = 5 when = now }
+			not = { local_flag = carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = carrier when = 0 where = 0 value = 4 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = carrier }
+		command = { trigger = { ai = no } type = local_setflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			escort_carrier = { value = 2 when = now }
+			not = { local_flag = escort_carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = escort_carrier when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = escort_carrier }
+		command = { trigger = { ai = no } type = local_setflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battlecruiser = { value = 5 when = now }
+			not = { local_flag = battlecruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battlecruiser when = 0 where = 0 value = 4 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battlecruiser }
+		command = { trigger = { ai = no } type = local_setflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battleship = { value = 10 when = now }
+			not = { local_flag = battleship_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battleship when = 0 where = 0 value = 9 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battleship }
+		command = { trigger = { ai = no } type = local_setflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			heavy_cruiser = { value = 12 when = now }
+			not = { local_flag = heavy_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = heavy_cruiser when = 0 where = 0 value = 11 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = heavy_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			light_cruiser = { value = 18 when = now }
+			not = { local_flag = light_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = light_cruiser when = 0 where = 0 value = 17 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = light_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = light_cruiser_disabled }
+	}
+}
+
+# Naval Treaty Broken - GER/U08
+event = {
+	id = 13310073
+	persistent = yes
+	tag = { GER U08 }
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		# washington
+		local_flag = anglo_german_naval_agreement
+		OR = {
+			AND = { carrier = { value = 2 when = now } NOT = { local_flag = carrier_disabled } }
+			AND = { escort_carrier = { value = 2 when = now } NOT = { local_flag = escort_carrier_disabled } }
+			AND = { battlecruiser = { value = 6 when = now } NOT = { local_flag = battlecruiser_disabled } }
+			AND = { battleship = 2 NOT = { local_flag = battleship_disabled } }
+			AND = { heavy_cruiser = 6 NOT = { local_flag = heavy_cruiser_disabled } }
+			AND = { light_cruiser = { value = 12 when = now } NOT = { local_flag = light_cruiser_disabled } }
+		}		
+	}
+	name = "EVT_13310073_NAME"							
+	Desc = "EVT_13310073_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			carrier = { value = 2 when = now }
+			not = { local_flag = carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = carrier when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = carrier }
+		command = { trigger = { ai = no } type = local_setflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			escort_carrier = { value = 2 when = now }
+			not = { local_flag = escort_carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = escort_carrier when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = escort_carrier }
+		command = { trigger = { ai = no } type = local_setflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battlecruiser = { value = 6 when = now }
+			not = { local_flag = battlecruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battlecruiser when = 0 where = 0 value = 5 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battlecruiser }
+		command = { trigger = { ai = no } type = local_setflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battleship = { value = 2 when = now }
+			not = { local_flag = battleship_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battleship when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battleship }
+		command = { trigger = { ai = no } type = local_setflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			heavy_cruiser = { value = 6 when = now }
+			not = { local_flag = heavy_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = heavy_cruiser when = 0 where = 0 value = 5 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = heavy_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			light_cruiser = { value = 12 when = now }
+			not = { local_flag = light_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = heavy_cruiser when = 0 where = 0 value = 11 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = light_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = light_cruiser_disabled }
+	}
+}
+
+###############################
+# Country Specific Rearmament #
+###############################
+
+# Disarmament Complete - USA
+event = {
+	id = 13310074
+	persistent = yes
+	country = USA
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					NOT = { AND = { carrier = { value = 4 } local_flag = carrier_disabled } }
+					NOT = { AND = { escort_carrier = { value = 7 } local_flag = escort_carrier_disabled } }
+					NOT = { AND = { battlecruiser = { value = 4 } local_flag = battlecruiser_disabled } }
+					NOT = { AND = { battleship = { value = 15 } local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					NOT = { AND = { heavy_cruiser = { value = 19 } local_flag = heavy_cruiser_disabled } }
+					NOT = { AND = { light_cruiser = { value = 28 } local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310074_NAME"							
+	Desc = "EVT_13310074_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { carrier = { value = 4 } }
+			local_flag = carrier_disabled
+		}
+		command = { type = activate_unit_type which = carrier }
+		command = { type = local_clrflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { escort_carrier = { value = 7 } }
+			local_flag = escort_carrier_disabled
+		}
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = local_clrflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battlecruiser = { value = 4 } }
+			local_flag = battlecruiser_disabled
+		}
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = local_clrflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battleship = { value = 15 } }
+			local_flag = battleship_disabled
+		}
+		command = { type = activate_unit_type which = battleship }
+		command = { type = local_clrflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { heavy_cruiser = { value = 19 } }
+			local_flag = heavy_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = local_clrflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { light_cruiser = { value = 28 } }
+			local_flag = light_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = local_clrflag which = light_cruiser_disabled }
+	}
+}
+
+# Disarmament Complete - ENG
+event = {
+	id = 13310075
+	persistent = yes
+	country = ENG
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					NOT = { AND = { carrier = { value = 4 } local_flag = carrier_disabled } }
+					NOT = { AND = { escort_carrier = { value = 3 } local_flag = escort_carrier_disabled } }
+					NOT = { AND = { battlecruiser = { value = 3 } local_flag = battlecruiser_disabled } }
+					NOT = { AND = { battleship = { value = 17 } local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					NOT = { AND = { heavy_cruiser = { value = 16 } local_flag = heavy_cruiser_disabled } }
+					NOT = { AND = { light_cruiser = { value = 35 } local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310075_NAME"							
+	Desc = "EVT_13310075_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { carrier = { value = 4 } }
+			local_flag = carrier_disabled
+		}
+		command = { type = activate_unit_type which = carrier }
+		command = { type = local_clrflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { escort_carrier = { value = 3 } }
+			local_flag = escort_carrier_disabled
+		}
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = local_clrflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battlecruiser = { value = 3 } }
+			local_flag = battlecruiser_disabled
+		}
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = local_clrflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battleship = { value = 17 } }
+			local_flag = battleship_disabled
+		}
+		command = { type = activate_unit_type which = battleship }
+		command = { type = local_clrflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { heavy_cruiser = { value = 16 } }
+			local_flag = heavy_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = local_clrflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { light_cruiser = { value = 35 } }
+			local_flag = light_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = local_clrflag which = light_cruiser_disabled }
+	}
+}
+
+# Disarmament Complete - JAP
+event = {
+	id = 13310076
+	persistent = yes
+	country = JAP
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					NOT = { AND = { carrier = { value = 5 } local_flag = carrier_disabled } }
+					NOT = { AND = { escort_carrier = { value = 2 } local_flag = escort_carrier_disabled } }
+					NOT = { AND = { battlecruiser = { value = 5 } local_flag = battlecruiser_disabled } }
+					NOT = { AND = { battleship = { value = 10 } local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					NOT = { AND = { heavy_cruiser = { value = 12 } local_flag = heavy_cruiser_disabled } }
+					NOT = { AND = { light_cruiser = { value = 18 } local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310076_NAME"							
+	Desc = "EVT_13310076_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { carrier = { value = 5 } }
+			local_flag = carrier_disabled
+		}
+		command = { type = activate_unit_type which = carrier }
+		command = { type = local_clrflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { escort_carrier = { value = 2 } }
+			local_flag = escort_carrier_disabled
+		}
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = local_clrflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battlecruiser = { value = 5 } }
+			local_flag = battlecruiser_disabled
+		}
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = local_clrflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battleship = { value = 10 } }
+			local_flag = battleship_disabled
+		}
+		command = { type = activate_unit_type which = battleship }
+		command = { type = local_clrflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { heavy_cruiser = { value = 12 } }
+			local_flag = heavy_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = local_clrflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { light_cruiser = { value = 18 } }
+			local_flag = light_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = local_clrflag which = light_cruiser_disabled }
+	}
+}
+
+# Naval Treaty Broken - FRA
+event = {
+	id = 13310078
+	persistent = yes
+	country = FRA
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					AND = { carrier = { value = 2 when = now } NOT = { local_flag = carrier_disabled } }
+					AND = { escort_carrier = { value = 2 when = now } NOT = { local_flag = escort_carrier_disabled } }
+					AND = { battlecruiser = { value = 3 when = now } NOT = { local_flag = battlecruiser_disabled } }
+					AND = { battleship = { value = 5 when = now } NOT = { local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					AND = { heavy_cruiser = { value = 6 when = now } NOT = { local_flag = heavy_cruiser_disabled } }
+					AND = { light_cruiser = { value = 10 when = now } NOT = { local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310078_NAME"							
+	Desc = "EVT_13310078_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			carrier = { value = 2 when = now }
+			not = { local_flag = carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = carrier when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = carrier }
+		command = { trigger = { ai = no } type = local_setflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			escort_carrier = { value = 2 when = now }
+			not = { local_flag = escort_carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = escort_carrier when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = escort_carrier }
+		command = { trigger = { ai = no } type = local_setflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battlecruiser = { value = 3 when = now }
+			not = { local_flag = battlecruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battlecruiser when = 0 where = 0 value = 2 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battlecruiser }
+		command = { trigger = { ai = no } type = local_setflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battleship = { value = 5 when = now }
+			not = { local_flag = battleship_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battleship when = 0 where = 0 value = 4 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battleship }
+		command = { trigger = { ai = no } type = local_setflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			heavy_cruiser = { value = 6 when = now }
+			not = { local_flag = heavy_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = heavy_cruiser when = 0 where = 0 value = 5 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = heavy_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			light_cruiser = { value = 10 when = now }
+			not = { local_flag = light_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = light_cruiser when = 0 where = 0 value = 9 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = light_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = light_cruiser_disabled }
+	}
+}
+
+# Naval Treaty Broken - ITA
+event = {
+	id = 13310080
+	persistent = yes
+	country = ITA
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					AND = { carrier = { value = 2 when = now } NOT = { local_flag = carrier_disabled } }
+					AND = { escort_carrier = { value = 2 when = now } NOT = { local_flag = escort_carrier_disabled } }
+					AND = { battlecruiser = { value = 3 when = now } NOT = { local_flag = battlecruiser_disabled } }
+					AND = { battleship = { value = 6 when = now } NOT = { local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					AND = { heavy_cruiser = { value = 6 when = now } NOT = { local_flag = heavy_cruiser_disabled } }
+					AND = { light_cruiser = { value = 10 when = now } NOT = { local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310080_NAME"							
+	Desc = "EVT_13310080_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			carrier = { value = 2 when = now }
+			not = { local_flag = carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = carrier when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = carrier }
+		command = { trigger = { ai = no } type = local_setflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			escort_carrier = { value = 2 when = now }
+			not = { local_flag = escort_carrier_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = escort_carrier when = 0 where = 0 value = 1 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = escort_carrier }
+		command = { trigger = { ai = no } type = local_setflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battlecruiser = { value = 3 when = now }
+			not = { local_flag = battlecruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battlecruiser when = 0 where = 0 value = 2 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battlecruiser }
+		command = { trigger = { ai = no } type = local_setflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			battleship = { value = 6 when = now }
+			not = { local_flag = battleship_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = battleship when = 0 where = 0 value = 5 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = battleship }
+		command = { trigger = { ai = no } type = local_setflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			heavy_cruiser = { value = 6 when = now }
+			not = { local_flag = heavy_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = heavy_cruiser when = 0 where = 0 value = 5 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = heavy_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			light_cruiser = { value = 10 when = now }
+			not = { local_flag = light_cruiser_disabled }
+		}
+		command = { trigger = { ai = yes } type = demobilize which = light_cruiser when = 0 where = 0 value = 5 }
+		command = { trigger = { ai = no } type = deactivate_unit_type which = light_cruiser }
+		command = { trigger = { ai = no } type = local_setflag which = light_cruiser_disabled }
+	}
+}
+
+# Disarmament Complete - GER/U08
+event = {
+	id = 13310077
+	persistent = yes
+	tag = { GER U08 }
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		# washington
+		local_flag = anglo_german_naval_agreement
+		OR = {
+			NOT = { AND = { carrier = { value = 2 } local_flag = carrier_disabled } }
+			NOT = { AND = { escort_carrier = { value = 2 } local_flag = escort_carrier_disabled } }
+			NOT = { AND = { battlecruiser = { value = 6 } local_flag = battlecruiser_disabled } }
+			NOT = { AND = { battleship = { value = 2 } local_flag = battleship_disabled } }
+			NOT = { AND = { heavy_cruiser = { value = 6 } local_flag = heavy_cruiser_disabled } }
+			NOT = { AND = { light_cruiser = { value = 12 } local_flag = light_cruiser_disabled } }
+		}		
+	}
+	name = "EVT_13310077_NAME"							
+	Desc = "EVT_13310077_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { carrier = { value = 2 } }
+			local_flag = carrier_disabled
+		}
+		command = { type = activate_unit_type which = carrier }
+		command = { type = local_clrflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { escort_carrier = { value = 2 } }
+			local_flag = escort_carrier_disabled
+		}
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = local_clrflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battlecruiser = { value = 6 } }
+			local_flag = battlecruiser_disabled
+		}
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = local_clrflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battleship = { value = 2 } }
+			local_flag = battleship_disabled
+		}
+		command = { type = activate_unit_type which = battleship }
+		command = { type = local_clrflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { heavy_cruiser = { value = 6 } }
+			local_flag = heavy_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = local_clrflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { light_cruiser = { value = 12 } }
+			local_flag = light_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = local_clrflag which = light_cruiser_disabled }
+	}
+}
+
+# Disarmament Complete - FRA
+event = {
+	id = 13310079
+	persistent = yes
+	country = FRA
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					NOT = { AND = { carrier = { value = 2 } local_flag = carrier_disabled } }
+					NOT = { AND = { escort_carrier = { value = 2 } local_flag = escort_carrier_disabled } }
+					NOT = { AND = { battlecruiser = { value = 3 } local_flag = battlecruiser_disabled } }
+					NOT = { AND = { battleship = { value = 5 } local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					NOT = { AND = { heavy_cruiser = { value = 6 } local_flag = heavy_cruiser_disabled } }
+					NOT = { AND = { light_cruiser = { value = 10 } local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310079_NAME"							
+	Desc = "EVT_13310079_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { carrier = { value = 2 } }
+			local_flag = carrier_disabled
+		}
+		command = { type = activate_unit_type which = carrier }
+		command = { type = local_clrflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { escort_carrier = { value = 2 } }
+			local_flag = escort_carrier_disabled
+		}
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = local_clrflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battlecruiser = { value = 3 } }
+			local_flag = battlecruiser_disabled
+		}
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = local_clrflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battleship = { value = 5 } }
+			local_flag = battleship_disabled
+		}
+		command = { type = activate_unit_type which = battleship }
+		command = { type = local_clrflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { heavy_cruiser = { value = 6 } }
+			local_flag = heavy_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = local_clrflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { light_cruiser = { value = 10 } }
+			local_flag = light_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = local_clrflag which = light_cruiser_disabled }
+	}
+}
+
+# Disarmament Complete - ITA
+event = {
+	id = 13310081
+	persistent = yes
+	country = ITA
+	
+	date = { day = 1 month = march year = 1918 }
+	offset = 7
+	deathdate = { day = 30 month = march year = 1964 }
+	
+	trigger = {
+		atwar = no
+		NOT = { local_flag = naval_treaty_void }
+		OR = {
+			AND = {
+				# washington
+				or = {
+					local_flag = washington_naval_treaty
+					local_flag = london_naval_treaty
+				}
+				OR = {
+					NOT = { AND = { carrier = { value = 2 } local_flag = carrier_disabled } }
+					NOT = { AND = { escort_carrier = { value = 2 } local_flag = escort_carrier_disabled } }
+					NOT = { AND = { battlecruiser = { value = 3 } local_flag = battlecruiser_disabled } }
+					NOT = { AND = { battleship = { value = 6 } local_flag = battleship_disabled } }
+				}
+			}
+			AND = {
+				# london 1
+				local_flag = london_naval_treaty
+				OR = {
+					NOT = { AND = { heavy_cruiser = { value = 6 } local_flag = heavy_cruiser_disabled } }
+					NOT = { AND = { light_cruiser = { value = 10 } local_flag = light_cruiser_disabled } }
+				}
+			}
+		}		
+	}
+	name = "EVT_13310081_NAME"							
+	Desc = "EVT_13310081_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We need to decomission carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { carrier = { value = 2 } }
+			local_flag = carrier_disabled
+		}
+		command = { type = activate_unit_type which = carrier }
+		command = { type = local_clrflag which = carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission escort_carriers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { escort_carrier = { value = 2 } }
+			local_flag = escort_carrier_disabled
+		}
+		command = { type = activate_unit_type which = escort_carrier }
+		command = { type = local_clrflag which = escort_carrier_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battlecruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battlecruiser = { value = 3 } }
+			local_flag = battlecruiser_disabled
+		}
+		command = { type = activate_unit_type which = battlecruiser }
+		command = { type = local_clrflag which = battlecruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission battleships, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			NOT = { battleship = { value = 6 } }
+			local_flag = battleship_disabled
+		}
+		command = { type = activate_unit_type which = battleship }
+		command = { type = local_clrflag which = battleship_disabled }
+	}
+	action = { 	
+		name = "We need to decomission heavy cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { heavy_cruiser = { value = 6 } }
+			local_flag = heavy_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = heavy_cruiser }
+		command = { type = local_clrflag which = heavy_cruiser_disabled }
+	}
+	action = { 	
+		name = "We need to decomission light cruisers, according to the treaty."
+		ai_chance = 100
+		trigger = {
+			local_flag = london_naval_treaty
+			NOT = { light_cruiser = { value = 10 } }
+			local_flag = light_cruiser_disabled
+		}
+		command = { type = activate_unit_type which = light_cruiser }
+		command = { type = local_clrflag which = light_cruiser_disabled }
+	}
+}
+
+###############################
+# Generic Limitations (Other) #
+###############################
+
+#destroyer limit
+event = {
+	id = 13310083																			
+	random = no
+	persistent = yes
+
+	date = { day = 1 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1935 }
+	
+	trigger = {
+		or = {
+			and = {
+				or = {
+				# WWI has started
+					event = 2191503 # GER DoW Russia
+					event = 2191539 # GER DoW Russia
+					event = 2192502 # AH DoW Serbia
+					event = 2192528 # AH DoW Russia
+					event = 2104501 # RUS DoW's AH
+					event = 2104541 # RUS DoW's GER
+					event = 2191505 # France DoW's GER
+				}
+				or = { # WWI has ended
+					and = {
+						or = {
+							event = 2002534 #Versailes
+							event = 2191514 #Mil. defeat
+							event = 2191520 #Abdication + Armistice
+							event = 2191532 #Early defeat
+						}
+						event = 2192507# st. germain
+					}
+					and = {
+						event = 2191512 #Reverse Versailes
+						or = {
+							event = 2191555 #Russia defeated
+							event = 2007529 #SOV defeated
+							event = 2007530 #SOV defeated
+						}
+					}
+				}
+			}
+			# or it did not, and the year is 1916 or later.
+			and = {
+				year = 1916
+				not = {
+					or = {
+						event = 2191503 # GER DoW Russia
+						event = 2191539 # GER DoW Russia
+						event = 2192502 # AH DoW Serbia
+						event = 2192528 # AH DoW Russia
+						event = 2104501 # RUS DoW's AH
+						event = 2104541 # RUS DoW's GER
+						event = 2191505 # France DoW's GER
+					}
+				}
+			}
+		}
+		atwar = no
+		not = { local_flag = destroyer_disabled }
+		or = {				
+			and = {
+				not = { IC = 50 }
+				destroyer = { value = 18 when = now }
+			}
+			and = {
+				IC = 50
+				not = { ic = 75 }
+				destroyer = { value = 27 when = now }
+			}
+			and = {
+				IC = 75
+				not = { ic = 100 }
+				destroyer = { value = 52 when = now }
+			}
+			and = {
+				IC = 100
+				not = { ic = 150 }
+				destroyer = { value = 77 when = now }
+			}
+			and = {
+				IC = 150
+				not = { ic = 200 }
+				destroyer = { value = 102 when = now }
+			}
+			and = {
+				IC = 200
+				destroyer = { value = 152 when = now }
+			}
+		}
+	}
+	
+	name = "EVT_13310083_NAME"							
+	Desc = "EVT_13310083_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We should decomission some destroyers"
+		ai_chance = 0
+		trigger = { ai = no }
+		command = { type = deactivate_unit_type which = destroyer }
+		command = { type = local_setflag which = destroyer_disabled }
+	}
+	action = { 	
+		name = "Tell the Grand Admiral to decomission the oldest destroyers"
+		trigger = { ai = no }
+		command = { trigger = { not = { IC = 50 } } type = demobilize which = destroyer when = 0 where = 0 value = 15 }
+		command = { trigger = { IC = 50 not = { ic = 75 } } type = demobilize which = destroyer when = 0 where = 0 value = 25 }
+		command = { trigger = { IC = 75 not = { ic = 100 } } type = demobilize which = destroyer when = 0 where = 0 value = 50 }
+		command = { trigger = { IC = 100 not = { ic = 150 } } type = demobilize which = destroyer when = 0 where = 0 value = 75 }
+		command = { trigger = { IC = 150 not = { ic = 200 } } type = demobilize which = destroyer when = 0 where = 0 value = 100 }
+		command = { trigger = { IC = 200 } type = demobilize which = destroyer when = 0 where = 0 value = 150 }
+	}
+	action = { 	
+		name = "We should decomission some destroyers"
+		ai_chance = 90
+		trigger = { ai = yes }
+		command = { trigger = { not = { IC = 50 } } type = demobilize which = destroyer when = 0 where = 0 value = 14 }
+		command = { trigger = { IC = 50 not = { ic = 75 } } type = demobilize which = destroyer when = 0 where = 0 value = 24 }
+		command = { trigger = { IC = 75 not = { ic = 100 } } type = demobilize which = destroyer when = 0 where = 0 value = 49 }
+		command = { trigger = { IC = 100 not = { ic = 150 } } type = demobilize which = destroyer when = 0 where = 0 value = 74 }
+		command = { trigger = { IC = 150 not = { ic = 200 } } type = demobilize which = destroyer when = 0 where = 0 value = 99 }
+		command = { trigger = { IC = 200 } type = demobilize which = destroyer when = 0 where = 0 value = 149 }
+	}
+	action = { 	
+		name = "Reassign outdated destroyers for convoy escort duty"
+		ai_chance = 10
+		command = { trigger = { not = { IC = 50 } } type = demobilize which = destroyer when = 0 where = 0 value = 14 }
+		command = { trigger = { IC = 50 not = { ic = 75 } } type = demobilize which = destroyer when = 0 where = 0 value = 24 }
+		command = { trigger = { IC = 75 not = { ic = 100 } } type = demobilize which = destroyer when = 0 where = 0 value = 49 }
+		command = { trigger = { IC = 100 not = { ic = 150 } } type = demobilize which = destroyer when = 0 where = 0 value = 74 }
+		command = { trigger = { IC = 150 not = { ic = 200 } } type = demobilize which = destroyer when = 0 where = 0 value = 99 }
+		command = { trigger = { IC = 200 } type = demobilize which = destroyer when = 0 where = 0 value = 149 }
+		command = { type = escort_pool value = 5 }
+		command = { type = transport_pool value = 10 }
+	}		
+}
+
+#destroyers enabled again
+event = {
+	id = 133100831																			
+	random = no
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30						
+	deathdate = { day = 1 month = january year = 1945 }
+	
+	trigger = {
+		local_flag = destroyer_disabled
+		or = {
+			atwar = yes
+			year = 1935
+			atwar = GER
+			and = {
+				not = { IC = 50 }
+				not = { destroyer = { value = 15 } }
+			}
+			and = {
+				IC = 50
+				not = { ic = 75 }
+				not = { destroyer = { value = 25 } }
+			}
+			and = {
+				IC = 75
+				not = { ic = 100 }
+				not = { destroyer = { value = 50 } }
+			}
+			and = {
+				IC = 100
+				not = { ic = 150 }
+				not = { destroyer = { value = 75 } }
+			}
+			and = {
+				IC = 150
+				not = { ic = 200 }
+				not = { destroyer = { value = 100 } }
+			}
+			and = {
+				IC = 200
+				not = { destroyer = { value = 150 } }
+			}
+		}
+	}
+	
+	name = "EVT_133100831_NAME"							
+	Desc = "EVT_133100831_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We can build more destroyers!"
+		ai_chance = 100
+		command = { type = activate_unit_type which = destroyer }
+		command = { type = local_clrflag which = destroyer_disabled }
+	}
+}
+
+#transport ship limit
+event = {
+	id = 13310084																			
+	random = no
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1915 }
+	offset = 30						
+	deathdate = { day = 1 month = january year = 1935 }
+	
+	trigger = {
+		or = {
+			and = {
+				or = {
+				# WWI has started
+					event = 2191503 # GER DoW Russia
+					event = 2191539 # GER DoW Russia
+					event = 2192502 # AH DoW Serbia
+					event = 2192528 # AH DoW Russia
+					event = 2104501 # RUS DoW's AH
+					event = 2104541 # RUS DoW's GER
+					event = 2191505 # France DoW's GER
+				}
+				or = { # WWI has ended
+					and = {
+						or = {
+							event = 2002534 #Versailes
+							event = 2191514 #Mil. defeat
+							event = 2191520 #Abdication + Armistice
+							event = 2191532 #Early defeat
+						}
+						event = 2192507# st. germain
+					}
+					and = {
+						event = 2191512 #Reverse Versailes
+						or = {
+							event = 2191555 #Russia defeated
+							event = 2007529 #SOV defeated
+							event = 2007530 #SOV defeated
+						}
+					}
+				}
+			}
+			# or it did not, and the year is 1916 or later.
+			and = {
+				year = 1916
+				not = {
+					or = {
+						event = 2191503 # GER DoW Russia
+						event = 2191539 # GER DoW Russia
+						event = 2192502 # AH DoW Serbia
+						event = 2192528 # AH DoW Russia
+						event = 2104501 # RUS DoW's AH
+						event = 2104541 # RUS DoW's GER
+						event = 2191505 # France DoW's GER
+					}
+				}
+			}
+		}
+		atwar = no
+		not = { local_flag = transport_disabled }
+		or = {				
+			and = {
+				not = { IC = 50 }
+				transport = { value = 4 when = now }
+			}
+			and = {
+				IC = 50
+				not = { IC = 75 }
+				transport = { value = 7 when = now }
+			}
+			and = {
+				IC = 75
+				not = { IC = 100 }
+				transport = { value = 13 when = now }
+			}
+			and = {
+				IC = 100
+				not = { IC = 150 }
+				transport = { value = 18 when = now }
+			}
+			and = {
+				IC = 150
+				not = { IC = 200 }
+				transport = { value = 23 when = now }
+			}
+			and = {
+				IC = 200
+				transport = { value = 28 when = now }
+			}
+		}
+	}
+	
+	name = "EVT_13310084_NAME"							
+	Desc = "EVT_13310084_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We should decomission some transport ships"
+		ai_chance = 0
+		trigger = { ai = no }
+		command = { type = deactivate_unit_type which = transport }
+		command = { type = local_setflag which = transport_disabled }
+	}
+	action = { 	
+		name = "Tell the Grand Admiral to decomission the oldest transport ships"
+		trigger = { ai = no }
+		command = { trigger = { not = { IC = 50 } } type = demobilize which = transport when = 0 where = 0 value = 2 }
+		command = { trigger = { IC = 50 not = { IC = 75 } } type = demobilize which = transport when = 0 where = 0 value = 5 }
+		command = { trigger = { IC = 75 not = { IC = 100 } } type = demobilize which = transport when = 0 where = 0 value = 10 }
+		command = { trigger = { IC = 100 not = { IC = 150 } } type = demobilize which = transport when = 0 where = 0 value = 15 }
+		command = { trigger = { IC = 150 not = { IC = 200 } } type = demobilize which = transport when = 0 where = 0 value = 20 }
+		command = { trigger = { IC = 200 } type = demobilize which = transport when = 0 where = 0 value = 25 }
+	}
+	action = { 	
+		name = "We should decomission some transport ships"
+		ai_chance = 90
+		trigger = { ai = yes }
+		command = { trigger = { not = { IC = 50 } } type = demobilize which = transport when = 0 where = 0 value = 1 }
+		command = { trigger = { IC = 50 not = { IC = 75 } } type = demobilize which = transport when = 0 where = 0 value = 4 }
+		command = { trigger = { IC = 75 not = { IC = 100 } } type = demobilize which = transport when = 0 where = 0 value = 9 }
+		command = { trigger = { IC = 100 not = { IC = 150 } } type = demobilize which = transport when = 0 where = 0 value = 14 }
+		command = { trigger = { IC = 150 not = { IC = 200 } } type = demobilize which = transport when = 0 where = 0 value = 19 }
+		command = { trigger = { IC = 200 } type = demobilize which = transport when = 0 where = 0 value = 24 }
+	}
+	action = { 	
+		name = "Reassign outdated transport ships for convoy duty"
+		ai_chance = 10
+		command = { trigger = { not = { IC = 50 } } type = demobilize which = transport when = 0 where = 0 value = 1 }
+		command = { trigger = { IC = 50 not = { IC = 75 } } type = demobilize which = transport when = 0 where = 0 value = 4 }
+		command = { trigger = { IC = 75 not = { IC = 100 } } type = demobilize which = transport when = 0 where = 0 value = 9 }
+		command = { trigger = { IC = 100 not = { IC = 150 } } type = demobilize which = transport when = 0 where = 0 value = 14 }
+		command = { trigger = { IC = 150 not = { IC = 200 } } type = demobilize which = transport when = 0 where = 0 value = 19 }
+		command = { trigger = { IC = 200 } type = demobilize which = transport when = 0 where = 0 value = 24 }
+		command = { type = transport_pool value = 10 }
+	}		
+}
+
+#transport ship enabled again
+event = {
+	id = 133100841																			
+	random = no
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30						
+	deathdate = { day = 1 month = january year = 1945 }
+	
+	trigger = {
+		local_flag = transport_disabled
+		or = {
+			atwar = yes
+			year = 1935
+			atwar = GER
+			and = {
+				not = { IC = 50 }
+				not = { transport = { value = 2 } }
+			}
+			and = {
+				IC = 50
+				not = { IC = 75 }
+				not = { transport = { value = 5 } }
+			}
+			and = {
+				IC = 75
+				not = { IC = 100 }
+				not = { transport = { value = 10 } }
+			}
+			and = {
+				IC = 100
+				not = { IC = 150 }
+				not = { transport = { value = 15 } }
+			}
+			and = {
+				IC = 150
+				not = { IC = 200 }
+				not = { transport = { value = 20 } }
+			}
+			and = {
+				IC = 200
+				not = { transport = { value = 25 } }
+			}
+		}
+	}
+	
+	name = "EVT_133100841_NAME"							
+	Desc = "EVT_133100841_DESC"
+	Picture = "american_carrier"
+	
+	action = { 	
+		name = "We can build more transport ships!"
+		ai_chance = 100
+		command = { type = activate_unit_type which = transport }
+		command = { type = local_clrflag which = transport_disabled }
+	}
+}

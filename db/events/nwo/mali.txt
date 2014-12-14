@@ -1,0 +1,494 @@
+event = {
+	id = 8009201
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695100 } # Matteo Alfassa
+		command = { type = headofgovernment which = 695101 } # Matteo Alfassa
+	}
+}
+
+event = {
+	id = 8009202
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695102 } # Ferdinand J.L. Rougier
+		command = { type = headofgovernment which = 695103 } # Ferdinand J.L. Rougier
+	}
+}
+
+event = {
+	id = 8009203
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695104 } # Jean Desanti
+		command = { type = headofgovernment which = 695105 } # Jean Desanti
+	}
+}
+
+event = {
+	id = 8009204
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695106 } # Auguste Calvel
+		command = { type = headofgovernment which = 695107 } # Auguste Calvel
+	}
+}
+
+event = {
+	id = 8009205
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695108 } # Edmond Louveau
+		command = { type = headofgovernment which = 695109 } # Edmond Louveau
+	}
+}
+
+event = {
+	id = 8009206
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695110 } # Salvador Jean Etch?ber
+		command = { type = headofgovernment which = 695111 } # Salvador Jean Etch?ber
+	}
+}
+
+event = {
+	id = 8009207
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695112 } # Albert Jean Mouragues
+		command = { type = headofgovernment which = 695113 } # Albert Jean Mouragues
+	}
+}
+
+event = {
+	id = 8009208
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695114 } # Lucien Eugene Geay
+		command = { type = headofgovernment which = 695115 } # Lucien Eugene Geay
+	}
+}
+
+event = {
+	id = 8009209
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695116 } # Henri Victor Gipoulon
+		command = { type = headofgovernment which = 695117 } # Henri Victor Gipoulon
+	}
+}
+
+event = {
+	id = 8009210
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 695118 } # Jean Charles Sicurani
+		command = { type = headofgovernment which = 695119 } # Jean-Marie Kon?
+	}
+}
+
+event = {
+	id = 8009211
+	country = MAL
+
+	name = EVT_8009211_NAME
+	desc = EVT_8009211_DESC
+	picture = "nwo\independence_of_mali"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = EVT_8009211_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 695120 } # Modibo Keita
+		command = { type = headofgovernment which = 695121 } # Modibo Keita
+		command = { type = foreignminister which = 695025 } # Modibo Keita
+		command = { type = armamentminister which = 695029 } # Mamadou Dia
+		command = { type = ministerofsecurity which = 695034 } # Mamadou Konat?
+		command = { type = ministerofintelligence which = 695037 } # Aoua Keita
+		command = { type = chiefofstaff which = 695040 } # Abdallah Soumare
+		command = { type = chiefofarmy which = 695043 } # Henri Rol-Tanguy
+		command = { type = chiefofnavy which = 695045 } # Ousmane Ibrahim Sall
+		command = { type = chiefofair which = 695048 } # Oumar Ousseynou
+	}
+}
+
+event = {
+	id = 8009212
+	country = MAL
+
+	name = EVT_8009212_NAME
+	desc = EVT_8009212_DESC
+	picture = nwo\moussa_traore
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = EVT_8009212_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 695126 } # Moussa Traoré
+		command = { type = headofgovernment which = 695122 } # Yoro Diakité
+	}
+}
+
+event = {
+	id = 8009213
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 695127 } # Moussa Traoré
+	}
+}
+
+event = {
+	id = 8009214
+	country = MAL
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 695123 } # Mamadou Dembelé
+	}
+}
+
+event = {
+	id = 8009215
+	country = MAL
+
+	name = EVT_8009215_NAME
+	desc = EVT_8009215_DESC
+	picture = nwo\amadaou_toure
+	style = 1
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8009215_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 695124 } # Amadou Toumani Touré
+		command = { type = headofgovernment which = 695125 } # Soumana Sacko
+	}
+}
+
+# Union with Senegal
+
+event = {
+	id = 8009216
+	country = MAL
+
+	name = EVT_8009216_NAME
+	desc = EVT_8009216_DESC
+	picture = "nwo\union_of_mali"
+	style = 1
+	
+	trigger = {
+		NOT = { exists = U96 }
+		control = { province = 978 data = -1 }
+	}
+
+	date = { day = 1 month = january year = 1960 }
+	offset = 150
+	deathdate = { day = 29 month = december year = 1961 }
+
+	action_a = {
+		name = EVT_8009216_A
+		ai_chance = 80
+		command = { type = independence which = U96 value = 0 }
+		command = { type = name where = MAL which = MAL60  }
+		command = { type = flag_ext where = MAL which = _1961  }
+	}
+	
+	action_b = {
+		name = EVT_8009216_B
+		ai_chance = 20
+		command = { type = dissent value = 20 }
+		command = { type = addcore which = 977 }
+		command = { type = addcore which = 978 }
+		command = { type = addcore which = 980 }
+		command = { type = addcore which = 983 }
+	}
+
+}
+
+# Leftist policies
+
+event = {
+	id = 8009217
+	country = MAL
+
+	name = EVT_8009217_NAME
+	desc = EVT_8009217_DESC
+	picture = "nwo\leftist_mali"
+	style = 1
+
+	date = { day = 1 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8009217_A
+		ai_chance = 75
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = dissent value = 3 }
+	}
+	
+	action_b = {
+		name = EVT_8009217_B
+		ai_chance = 25
+		command = { type = dissent value = -1 }
+	}
+
+}

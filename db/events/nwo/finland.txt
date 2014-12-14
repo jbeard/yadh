@@ -1,0 +1,1006 @@
+event = {
+	id = 8005501
+	country = FIN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 145011 } # Carl G. Mannerheim
+		command = { type = headofgovernment which = 145031 } # Juho K. Paasikivi
+		command = { type = foreignminister which = 145044 } # Carl J. Enckell
+		command = { type = armamentminister which = 145053 } # Mauno Pekkala
+		command = { type = ministerofsecurity which = 145073 } # Valfrid Eskola
+		command = { type = ministerofintelligence which = 145096 } # Georg Gripenberg
+		command = { type = chiefofstaff which = 145102 } # Carl G. Mannerheim
+		command = { type = chiefofarmy which = 145107 } # Carl G. Mannerheim
+		command = { type = chiefofnavy which = 145110 } # Kaarlo Pakkala
+		command = { type = chiefofair which = 145114 } # Olavi Sarko
+	}
+}
+
+event = {
+	id = 8005502
+	country = FIN
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 145011 } # Carl G. Mannerheim
+		command = { type = headofgovernment which = 145031 } # Juho K. Paasikivi
+		command = { type = foreignminister which = 145044 } # Carl J. Enckell
+		command = { type = armamentminister which = 145059 } # Jarl Lundqvist
+		command = { type = ministerofsecurity which = 145080 } # Kaarlo H. Hillilae
+		command = { type = ministerofintelligence which = 145092 } # Berndt R. von Fieandt
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 145011 } # Carl G. Mannerheim
+		command = { type = headofgovernment which = 145123 } # Karl A. Fagerholm
+		command = { type = foreignminister which = 145044 } # Carl J. Enckell
+		command = { type = armamentminister which = 145053 } # Mauno Pekkala
+		command = { type = ministerofsecurity which = 145073 } # Valfrid Eskola
+		command = { type = ministerofintelligence which = 145090 } # Bruno Suviranta
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005503
+	country = FIN
+
+	name = "EVT_8005503_NAME"
+	desc = "EVT_8005503_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = "EVT_8005503_A"
+		ai_chance = 100
+		command = { type = headofstate which = 145012 } # Juho K. Paasikivi
+		command = { type = headofgovernment which = 145023 } # Mauno Pekkala
+	}
+}
+
+event = {
+	id = 8005504
+	country = FIN
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 145012 } # Juho K. Paasikivi
+		command = { type = headofgovernment which = 145123 } # Karl A. Fagerholm
+		command = { type = foreignminister which = 145044 } # Carl J. Enckell
+		command = { type = armamentminister which = 145124 } # Ralf Johan Toerngren
+		command = { type = ministerofsecurity which = 145125 } # Karl A. Fagerholm
+		command = { type = ministerofintelligence which = 145090 } # Bruno Suviranta
+	}
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 145012 } # Juho K. Paasikivi
+		command = { type = headofgovernment which = 145023 } # Mauno Pekkala
+		command = { type = foreignminister which = 145044 } # Carl J. Enckell
+		command = { type = armamentminister which = 145066 } # Georg A. de Gripenberg
+		command = { type = ministerofsecurity which = 145080 } # Kaarlo H. Hillilä
+		command = { type = ministerofintelligence which = 145090 } # Bruno Suviranta
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005505
+	country = FIN
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 145012 } # Juho K. Paasikivi
+		command = { type = headofgovernment which = 145022 } # Urho K. Kekkonen
+		command = { type = foreignminister which = 145126 } # ?ke Henrik Gartz
+		command = { type = armamentminister which = 145129 } # Onni A. Hiltunen
+		command = { type = ministerofsecurity which = 145071 } # Urho K. Kekkonen
+		command = { type = ministerofintelligence which = 145096 } # Georg Gripenberg
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 145012 } # Juho K. Paasikivi
+		command = { type = headofgovernment which = 145123 } # Karl A. Fagerholm
+		command = { type = foreignminister which = 145044 } # Carl J. Enckell
+		command = { type = armamentminister which = 145124 } # Ralf Johan Toerngren
+		command = { type = ministerofsecurity which = 145125 } # Karl A. Fagerholm
+		command = { type = ministerofintelligence which = 145090 } # Bruno Suviranta
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8005506
+	country = FIN
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 145012 } # Juho K. Paasikivi
+		command = { type = headofgovernment which = 145022 } # Urho K. Kekkonen
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 145012 } # Juho K. Paasikivi
+		command = { type = headofgovernment which = 145123 } # Karl A. Fagerholm
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8005507
+	country = FIN
+
+	name = "EVT_8005507_NAME"
+	desc = "EVT_8005507_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "EVT_8005507_A"
+		ai_chance = 100
+		command = { type = headofstate which = 145302 } # Urho K. Kekkonen
+		command = { type = headofgovernment which = 145123 } # Karl A. Fagerholm
+	}
+}
+
+event = {
+	id = 8005508
+	country = FIN
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 145302 } # Urho K. Kekkonen
+		command = { type = headofgovernment which = 145300 } # Vieno J. Sukselainen
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 145302 } # Urho K. Kekkonen
+		command = { type = headofgovernment which = 145123 } # Karl A. Fagerholm
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005509
+	country = FIN
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 145302 } # Urho K. Kekkonen
+		command = { type = headofgovernment which = 145301 } # Ahti Karjalainen
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 145302 } # Urho K. Kekkonen
+		command = { type = headofgovernment which = 145123 } # Karl A. Fagerholm
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8005510
+	country = FIN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 145301
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145303 } # Johannes Virolainen
+	}
+}
+
+event = {
+	id = 8005511
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145304 } # Rafael Paasio
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145303 } # Johannes Virolainen
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005512
+	country = FIN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 145304
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145305 } # Mauno Koivisto
+	}
+}
+
+event = {
+	id = 8005513
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145301 } # Ahti Karjalainen
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145305 } # Mauno Koivisto
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005514
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145304 } # Rafael Paasio
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145301 } # Ahti Karjalainen
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005515
+	country = FIN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 145304
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145311 } # Kalevi Sorsa
+	}
+}
+
+event = {
+	id = 8005516
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145306 } # Martti Miettunen
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145311 } # Kalevi Sorsa
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005517
+	country = FIN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145311 } # Kalevi Sorsa
+	}
+}
+
+event = {
+	id = 8005518
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145305 } # Mauno Koivisto
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145307 } # Harri Holkeri
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8005519
+	country = FIN
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = nwo\death
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = sleepminister which = 145302 } # Urho K. Kekkonen
+		command = { type = sleepminister which = 145022 } # Urho K. Kekkonen
+		command = { type = sleepminister which = 145071 } # Urho K. Kekkonen
+		command = { type = sleepminister which = 145128 } # Urho K. Kekkonen
+		command = { type = headofstate which = 145310 } # Mauno Koivisto
+		command = { trigger = { headofgovernment = 145311 } type = headofgovernment which = 145311 } # Kalevi Sorsa
+	}
+}
+
+event = {
+	id = 8005520
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145311 } # Kalevi Sorsa
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145307 } # Harri Holkeri
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8005521
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145307 } # Harri Holkeri
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145311 } # Kalevi Sorsa
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8005522
+	country = FIN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 145309 } # Esko Aho
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 145308 } # Ulf Sundqvist
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+### The death of Carl Mannerheim
+
+event = {
+	id = 8005523
+	country = FIN
+
+	name = EVT_8005523_NAME
+	desc = EVT_8005523_DESC
+	picture = "nwo\mannerheim"
+	style = 1
+
+	date = { day = 28 month = january year = 1951 }
+	offset = 1
+	deathdate = { day = 29 month = january year = 1951 }
+
+	action = {
+		name = EVT_DEATH
+		command = { type = sleepminister which = 145011 }
+		command = { type = sleepminister which = 145102 }
+		command = { type = sleepminister which = 145107 }
+		command = { type = sleepminister which = 145122 }
+		command = { type = sleepminister which = 145138 }
+		command = { type = sleepminister which = 145146 }
+		command = { type = sleepteam which = 145006 }
+		command = { type = sleepleader which = 145051 }
+	}
+}
+
+# YYA Treaty
+event = {
+	id = 8005524
+	country = FIN
+
+	name = EVT_8005524_NAME
+	desc = EVT_8005524_DESC
+	picture = "nwo\yya_treaty"
+	style = 1
+
+	trigger = {
+		government = democratic
+		exists = SOV
+		event = 8005527 # Finland historically ends the Continuation War
+		NOT = { war = { country = FIN country = SOV } }
+	}
+
+	date = { day = 6 month = april year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action = {
+		name = EVT_8005524_A
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = dissent value = -5 }
+		command = { type = set_relation which = SOV value = 100 }
+		command = { type = set_relation which = USA value = 0 }
+		command = { type = set_relation which = ENG value = 0 }
+		command = { type = non_aggression which = SOV where = FIN }
+		command = { type = guarantee which = SOV where = FIN }
+		command = { type = access which = SOV }
+		command = { type = sleepevent which = 8202032 } # Sleep Marshall Plan for Finland
+	}
+
+	action = {
+		name = EVT_8005524_B
+		ai_chance = 10
+		command = { type = leave_alliance }
+		command = { type = dissent value = 30 }
+		command = { type = set_relation which = SOV value = -200 }
+		command = { type = end_non_aggression which = SOV where = FIN }
+		command = { type = end_guarantee which = SOV where = FIN }
+	}
+
+}
+
+# Helsinki Olympic Games 1952
+event = {
+	id = 8005525
+	country = FIN
+
+	name = EVT_8005525_NAME
+	desc = EVT_8005525_DESC
+	picture = "nwo\helsinki_1956"
+	style = 1
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 19 month = july year = 1952 }
+	offset = 7
+	deathdate = { day = 3 month = august year = 1952 }
+
+	action_a = {
+		name = EVT_8005525_A
+		command = { type = dissent value = -3 }
+	}
+
+}
+
+### Finnish Continuation War
+
+event = {
+	id = 8005526
+	country = SOV
+
+	name = EVT_8005526_NAME
+	desc = EVT_8005526_DESC
+	picture = "nwo\finnish_continuation_war"
+	style = 1
+
+	trigger = { 
+		OR = {
+			AND = {
+				control = { province = 531 data = SOV } #Viipuri
+				control = { province = 521 data = SOV } #Vaasa
+				control = { province = 524 data = SOV } #Turku
+				}
+			control = { province = 525 data = SOV } # Helsingfors
+			lost_national = { country = FIN value = 25 }
+			}
+		war = { country = FIN country = SOV } 
+		NOT = {
+			flag = cold_war
+			flag = ww3
+		}
+	}
+
+	date = { day = 1 month = september year = 1943 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	# Press for some concessions but do not push too far
+	action = {
+		name = EVT_8005526_A
+		ai_chance = 97
+		command = { type = trigger which = 8005527 }
+		}
+		
+	# Kuusinen's regime is to be set up
+	action = { 
+		name = EVT_8005526_B
+		ai_chance = 3
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 35 }
+		command = { type = money value = -500 }
+		}
+}
+
+# Finland surrenders and signs separate peace (FIN)
+event = {
+	id = 8005527
+	country = FIN
+
+	name = EVT_8005527_NAME
+	desc = EVT_8005527_DESC
+	picture = "nwo\finnish_continuation_war"
+	style = 1
+
+	action = {
+		name = EVT_8005527_A
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = SOV value = 517 when = 1 } # Petsamo
+		command = { type = secedeprovince which = SOV value = 519 when = 1 } # Salla
+		command = { type = secedeprovince which = SOV value = 530 when = 1 } # Terijoki, in case it hasn't been ceded before
+		command = { type = secedeprovince which = SOV value = 531 when = 1 } # Viipuri, in case it hasn't been ceded before
+		command = { type = secedeprovince which = SOV value = 532 when = 1 } # Sortavala, in case it hasn't been ceded before
+		command = { type = access which = SOV }
+		command = { type = set_relation which = SOV value = 0 }
+		command = { type = set_relation which = GER value = -300 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = defense_lobby value = 3 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		command = { type = war which = GER }
+	}
+	
+	action = {
+		name = EVT_8005527_B
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = sleepevent which = 8005524 }
+	}
+}

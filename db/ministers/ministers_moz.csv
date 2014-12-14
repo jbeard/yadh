@@ -1,0 +1,61 @@
+MOZ;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+705001;Head of State;José Pereira Cabral;1933;1964;1964;PA;Resigned Generalissimo;High;M569001;X
+705002;Head of Government;José Nunes de Oliveira;1933;1964;1964;PA;old airmarshal;High;M569002;X
+705003;Foreign Minister;Louis de Sousa é Vasconcelos;1933;1964;1964;PA;General Staffer;High;M569003;X
+705004;Minister of Armament;Augusto Nunes Diaz;1933;1964;1964;PA;Military Entrepreneur;Medium;M569004;X
+705005;Minister of Security;Joao Tristao de Bettencourt;1933;1964;1964;PA;Prince of Terror;Medium;M569005;X
+705006;Head of Military Intelligence;Antonio Conceicao Neves;1933;1964;1964;PA;Naval Intelligence Specialist;Medium;M569006;X
+705007;Chief of Staff;Louis de Sousa é Vasconcelos;1933;1964;1964;PA;School of Psychology;Medium;M569003;X
+705008;Chief of Army;Joao Martins de Carvalho;1933;1964;1964;PA;Guns and Butter Doctrine;Medium;M569008;X
+705009;Chief of Navy;Tomas Garcia Rosado;1933;1964;1964;PA;Power Projection Doctrine;Medium;M569009;X
+705010;Chief of Air Force;José de Sá Aruajo;1933;1964;1964;PA;Air Superiority Doctrine;Medium;M569010;X
+705011;Head of State;Henrique Nunes Garcia;1933;1964;1964;SL;Benevolent Gentleman;High;M569011;X
+705012;Head of State;Sebastiao Cabral Funchal;1933;1964;1964;LWR;Powerhungry Demagogue;High;M569012;X
+705013;Head of Government;José Zaluar Nunes;1933;1964;1964;SL;Political Protege;High;M569013;X
+705014;Head of Government;José Barollo Rodrigues;1933;1964;1964;LWR;Naive Optimist;High;M569014;X
+705015;Foreign Minister;Joao Reis é Canto;1933;1964;1964;SL;Ideological Crusader;High;M569015;X
+705016;Foreign Minister;Maria Estella de Bettencourt;1933;1964;1964;LWR;Biased Intellectual;High;M569016;X
+705017;Minister of Armament;Adolfo Camaraquintinga;1933;1964;1964;SL;laissez-faire capitalist;Medium;M569017;X
+705018;Minister of Armament;Paulo Inacio;1933;1964;1964;LWR;Infantry Proponent;Medium;M569018;X
+705019;Minister of Security;Luis Pereira Gomes;1933;1964;1964;SL;Compassionate Gentleman;Medium;M569019;X
+705020;Minister of Security;Leonardo Santos Simao;1933;1964;1964;LWR;Crime Fighter;Medium;M569020;X
+705021;Head of Military Intelligence;Joao Kaulza de Arriaga;1944;1964;1964;PA;Logistics Specialist;Medium;M569021;X
+705022;Head of Military Intelligence;Joao Silva Nunes;1933;1964;1964;SL;Technical Specialist;Medium;M569022;X
+705023;Head of Military Intelligence;Carlos dos Santos;1933;1964;1964;LWR;Industrial Specialist;Medium;M569023;X
+705024;Chief of Staff;Artur Ivens Ferraz;1942;1964;1964;PA;School of Mass Combat;Medium;M569024;X
+705025;Chief of Staff;Jose Lobato Guerra;1933;1964;1964;SL;School of Fire Support;Medium;M569025;X
+705026;Chief of Staff;Federico da Costa Lopes da Silva;1933;1964;1964;LWR;School of Manoeuvre;Medium;M569026;X
+705027;Chief of Army;Jose de Barros Rodrigues;1942;1964;1964;PA;Elastic Defence Doctrine;Medium;M569027;X
+705028;Chief of Army;Antonio Taveira Pereira;1933;1964;1964;SL;Armoured Spearhead Doctrine;Medium;M569028;X
+705029;Chief of Army;Patricio Nunes Gomes;1933;1964;1964;LWR;Decisive Battle Doctrine;Medium;M569029;X
+705030;Chief of Navy;Antonio Rodrigues Ribeiro;1933;1964;1964;SL;Indirect Approach Doctrine;Medium;M569030;X
+705031;Chief of Navy;Cesare Ponjo;1933;1964;1964;LWR;Open Seas Doctrine;Medium;M569031;X
+705032;Chief of Air Force;Antonio Val-Covo;1933;1964;1964;SL;Naval Aviation Doctrine;Medium;M569032;X
+705033;Chief of Air Force;Oliva Nuno Tomas;1933;1964;1964;LWR;Vertical Envelopment Doctrine;Medium;M569033;X
+705100;Head of Government;José Pereira Cabral;1936;1964;1964;SC;Corporate Suit;Medium;M569001;X
+705101;Head of State;José Nunes de Oliveira;1938;1964;1964;SC;Popular Figurehead;Medium;M569002;X
+705102;Head of State;Joao Tristao de Bettencourt;1941;1964;1964;SC;Autocratic Charmer;Medium;M705102;X
+705103;Head of Government;Joao Tristao de Bettencourt;1941;1964;1964;SC;Corporate Suit;Medium;M705103;X
+705104;Head of State;Luis de Sousa;1947;1964;1964;SC;Ruthless Powermonger;Medium;M705104;X
+705105;Head of Government;Luis de Sousa;1947;1964;1964;SC;Happy Amateur;Medium;M705105;X
+705106;Head of State;Gabriel Mauricio Teixeira;1949;1964;1964;SC;Popular Figurehead;Medium;M705106;X
+705107;Head of Government;Gabriel Mauricio Teixeira;1949;1964;1964;SC;Flamboyant Tough Guy;Medium;M705107;X
+705108;Head of State;Pedro Correia de Barros;1958;1964;1964;SC;Resigned Generalissimo;Medium;M705108;X
+705109;Head of Government;Pedro Correia de Barros;1958;1964;1964;SC;Flamboyant Tough Guy;Medium;M705109;X
+705110;Head of State;Manuel Maria Rodrigues;1961;1970;1970;SC;Die-Hard Reformer;Medium;M705110;X
+705111;Head of Government;Manuel Maria Rodrigues;1961;1970;1970;SC;Old General;Medium;M705111;X
+705112;Head of State;José Augusto Almeida;1964;2020;2020;SC;Popular Figurehead;Medium;M705112;X
+705113;Head of Government;José Augusto Almeida;1964;2020;2020;SC;Old Airmarshal;Medium;M705112;X
+705114;Head of State;Baltazar Rebelo de Sousa;1968;2003;2003;SC;Popular Figurehead;Medium;M705114;X
+705115;Head of Government;Baltazar Rebelo de Sousa;1968;2003;2003;SC;Corporate Suit;Medium;M705114;X
+705116;Head of State;Eduardo Arantes e Oliveira;1972;1983;1983;SC;Insignificant Layman;Medium;M705116;X
+705117;Head of Government;Eduardo Arantes e Oliveira;1972;1983;1983;SC;Corporate Suit;Medium;M705116;X
+705118;Head of State;Vítor Crespo;1974;2020;2020;SC;Autocratic Charmer;Medium;M705118;X
+705119;Head of Government;Vítor Crespo;1974;2020;2020;SC;Ambitious Union Boss;Medium;M705118;X
+705120;Head of Government;Joaquim Chissano;1975;2020;2020;LWR;Corporate Suit;Medium;MOZ2;X
+705121;Head of State;Joaquim Chissano;1986;2020;2020;SD;Autocratic Charmer;Medium;MOZ2;X
+705122;Head of Government;Mario da Graca Machungo;1986;2020;2020;SD;Happy Amateur;Medium;M705122;X
+705123;Head of State;Samora Machel;1975;1987;2004;LE;Die-hard Reformer;High;MOZ1;X
+705124;Head of Government;Samora Machel;1975;1987;2004;LE;Flamboyant Tough Guy;High;MOZ1;X
+705125;Foreign Minister;Joaquim Chissano;1985;2020;2020;LWR;Great Compromiser;High;MOZ2;X
+705126;Minister of Armament;Armando Guebuza;1985;1992;1992;LWR;Administrative Genius;Medium;MOZ3;X

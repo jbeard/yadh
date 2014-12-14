@@ -1,0 +1,417 @@
+### Hungarian Revolution 1956
+
+event = {
+	id = 8501101
+	country = U13
+
+	name = EVT_8501101_NAME
+	desc = EVT_8501101_DESC
+	picture = nwo\hungarian_revolution_1956
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		atwar = no
+	}
+
+	date = { day = 23 month = october year = 1956 }
+	offset = 1
+	deathdate = { day = 25 month = october year = 1956 }
+
+	action = {
+		name = EVT_8501101_A #"Topple the statue of Stalin"
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = set_relation which = SOV value = -200 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = local_setflag which = block_ideology_switch }
+		# Maintain previous govt
+		command = { type = headofstate which = 880105 } # Ern? Ger?
+		command = { type = headofgovernment which = 880039 } # Imre Nagy
+	}
+	
+	action = {
+		name = EVT_8501101_B #"Maintain order at all costs"
+		ai_chance = 5
+		command = { type = dissent value = 30 }
+		command = { type = sleepevent value = 8501102 }
+	}
+
+}
+
+event = {
+	id = 8501102
+	country = U13
+
+	name = EVT_8501102_NAME #"Hungarian Neutrality"
+	desc = EVT_8501102_DESC
+	style = 1
+
+	trigger = {
+		event = 8501101
+		flag = cold_war
+		atwar = no
+	}
+
+	date = { day = 30 month = october year = 1956 }
+	offset = 1
+	deathdate = { day = 2 month = november year = 1956 }
+
+	action = {
+		name = EVT_8501102_A #"Freedom!"
+		ai_chance = 95
+		command = { type = leave_alliance }
+		command = { type = end_puppet }
+		command = { type = end_access which = SOV }
+		command = { type = end_guarantee which = SOV where = U13 }
+		command = { type = end_non_aggression which = SOV where = U13 }
+	}
+	
+	action = {
+		name = EVT_8501102_B #"Back down"
+		ai_chance = 5
+		command = { type = dissent value = 20 }
+		command = { type = sleepevent value = 8501103 }
+	}
+
+}
+
+event = {
+	id = 8501103
+	country = SOV
+
+	name = EVT_8501103_NAME #"Soviet reaction to Hungarian Revolution"
+	desc = EVT_8501103_DESC
+	picture = nwo\hungarian_revolution_1956
+	style = 1
+
+	trigger = {
+		event = 8501102
+		flag = cold_war
+	}
+
+	date = { day = 4 month = november year = 1956 }
+	offset = 1
+	deathdate = { day = 6 month = november year = 1956 }
+
+	action = {
+		name = EVT_8501103_A #"We must intervene"
+		ai_chance = 98
+		command = { type = dissent value = -2 }
+	}
+	
+	action = {
+		name = EVT_8501103_B #"Let them discover their path to Communism"
+		ai_chance = 2
+		command = { type = dissent value = 10 }
+		command = { type = trigger value = 8501104 }
+		command = { type = sleepevent value = 8501114 } # resolution of the revolt
+		command = { type = sleepevent value = 8510800 } # UN meeting
+	}
+
+}
+
+event = {
+	id = 8501114
+	country = REB
+
+	name = EVT_8501113_NAME
+	desc = EVT_8501113_DESC
+	picture = nwo\allied_intervention
+	style = 1
+	
+	trigger = {
+		event = 8501103
+		flag = cold_war
+		NOT = {
+			event = 8501104
+			event = 8501105
+			event = 8501106
+			event = 8501115
+		}
+	}
+
+	date = { day = 30 month = october year = 1956 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1956 }
+	
+	action = {
+		name = OK
+		ai_chance = 199
+		trigger = {
+			NOT = {
+				event = 8510806
+				event = 8510807
+			} # No foreign support
+		}
+		command = { type = trigger which = 8501105 }
+		command = { type = trigger which = 8501106 }
+	}
+	
+	action = {
+		name = OK
+		ai_chance = 1
+		trigger = {
+			NOT = {
+				event = 8510806
+				event = 8510807
+			} # No foreign support
+		}
+		command = { type = trigger which = 8501104 }
+		command = { type = trigger which = 8501115 }
+	}
+	
+	action = {
+		name = OK
+		ai_chance = 95
+		trigger = {
+			OR = {
+				event = 8510806
+				event = 8510807
+			} # foreign support
+		}
+		command = { type = trigger which = 8501105 }
+		command = { type = trigger which = 8501106 }
+	}
+	
+	action = {
+		name = OK
+		ai_chance = 5
+		trigger = {
+			OR = {
+				event = 8510806
+				event = 8510807
+			} # foreign support
+		}
+		command = { type = trigger which = 8501104 }
+		command = { type = trigger which = 8501115 }
+	}
+}
+
+# Success of the Revolution
+
+event = {
+	id = 8501104
+	country = U13
+
+	name = EVT_8501104_NAME #"Hungarian Revolution succeeds"
+	desc = EVT_8501104_DESC
+	picture = nwo\hungarian_revolution_1956_victory
+	style = 1
+
+	action = {
+		name = EVT_8501104_A
+		command = { type = relation which = SOV value = -100 }
+		command = { type = trigger which = 8021308 }
+		command = { type = local_clrflag which = block_ideology_switch }
+	}
+
+}
+
+event = {
+	id = 8501115
+	country = SOV
+
+	name = EVT_8501115_NAME #"Hungarian Revolution succeeds"
+	desc = EVT_8501115_DESC
+	picture = nwo\hungarian_revolution_1956_victory
+	style = 1
+
+	action = {
+		name = EVT_8501115_A
+		command = { type = dissent value = 10 }
+		# TODO: Loosen grasp over Eastern Europe
+	}
+
+}
+
+# Failure of the Revolution
+
+event = {
+	id = 8501105
+	country = SOV
+
+	name = EVT_8501105_NAME #"Hungarian Revolution fails"
+	desc = EVT_8501105_DESC
+	picture = nwo\hungarian_revolution_1956_defeat
+	style = 1
+
+	action = {
+		name = EVT_8501105_A #"Victory!"
+		command = { type = make_puppet which = U13 }
+		
+	}
+
+}
+
+event = {
+	id = 8501106
+	country = U13
+
+	name = EVT_8501106_NAME #"Failure of Hungarian Revolution"
+	desc = EVT_8501106_DESC
+	picture = nwo\hungarian_revolution_1956_defeat
+	style = 1
+
+	action = {
+		name = EVT_8501106_A
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = set_relation which = SOV value = 50 }
+		command = { type = trigger which = 8021309 }
+		command = { type = local_clrflag which = block_ideology_switch }
+	}
+
+}
+
+### USSR faces United Nations military intervention
+
+event = {
+	id = 8501110
+	country = SOV
+
+	name = EVT_8501110_NAME
+	desc = EVT_8501110_DESC
+	picture = nwo\united_nations
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		war = { country = SOV country = U13 }
+		event = 8510806
+	}
+
+	date = { day = 1 month = june year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1956 }
+	
+	action = {
+		name = EVT_8501110_A # Withdraw
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8501104 }
+		command = { type = trigger which = 8501115 }
+	}
+
+	action = {
+		name = EVT_8501110_B # Ignore
+		ai_chance = 20
+		command = { type = dissent value = 50 }
+		command = { type = trigger which = 8501111 }
+	}
+}
+
+event = {
+	id = 8501111
+	country = USA
+
+	name = EVT_8501111_NAME
+	desc = EVT_8501111_DESC
+	picture = nwo\united_nations
+	style = 1
+
+	action = {
+		name = EVT_8501111_A # Declare war
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+		command = { type = war which = SOV }
+	}
+
+	action = {
+		name = EVT_8501111_B # Ignore
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+	}
+}
+
+### United Nations do not intervene
+
+event = {
+	id = 8501112
+	country = USA
+
+	name = EVT_8501112_NAME
+	desc = EVT_8501112_DESC
+	picture = nwo\allied_intervention
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		war = { country = SOV country = U13 }
+		# There was voting but the outcome is 'no'
+		OR = {
+			NOT = { exists = USA }
+			event = 8510801
+		}
+		OR = {
+			NOT = { exists = ENG }
+			event = 8510802
+		}
+		OR = {
+			NOT = { exists = FRA }
+			event = 8510803
+		}
+		OR = {
+			NOT = { exists = CHI }
+			flag = CHC_in_UNSC
+			event = 8510804
+		}
+		OR = {
+			NOT = { exists = CHC }
+			NOT = { flag = CHC_in_UNSC }
+			event = 8510808
+		}
+		OR = {
+			NOT = { exists = SOV }
+			event = 8510805
+			flag = un_soviet_boycott
+		}
+		OR = {
+			flag = un_hungary_interventionveto
+			flag = un_hungary_totalveto
+		}
+	}
+
+	date = { day = 1 month = june year = 1956 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1956 }
+	
+	action = {
+		name = EVT_8501112_A # Ignore
+		ai_chance = 99
+		command = { type = dissent value = 3 }
+	}
+
+	action = {
+		name = EVT_8501112_B # Push it
+		ai_chance = 1
+		command = { type = dissent value = 35 }
+		command = { type = trigger which = 8501113 }
+	}
+}
+
+event = {
+	id = 8501113
+	country = SOV
+
+	name = EVT_8501113_NAME
+	desc = EVT_8501113_DESC
+	picture = nwo\allied_intervention
+	style = 1
+	
+	action = {
+		name = EVT_8501113_A # Ignore
+		ai_chance = 95
+		command = { type = war which = USA }
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8501113_B # Withdraw
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+		command = { type = trigger which = 8501104 }
+		command = { type = trigger which = 8501115 }
+	}
+}

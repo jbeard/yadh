@@ -1,0 +1,879 @@
+# Demobilization switches
+
+# Communist China
+
+event = {
+	id = 8970280
+	country = CHC
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		NOT = { local_flag = block_demobilization }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970281
+	country = CHC
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		local_flag = block_demobilization
+		OR = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Kurdistan
+
+event = {
+	id = 8970820
+	country = KUR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970821
+	country = KUR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Indonesia
+
+event = {
+	id = 8970730
+	country = INO
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970731
+	country = INO
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Dutch East India
+
+event = {
+	id = 8972050
+	country = U05
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8972051
+	country = U05
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Israel
+
+event = {
+	id = 8970760
+	country = ISR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970761
+	country = ISR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970762
+	country = ISR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970763
+	country = ISR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1958 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Lebanon
+
+event = {
+	id = 8970870
+	country = LEB
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970871
+	country = LEB
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Transjordan
+
+event = {
+	id = 8970790
+	country = JOR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970791
+	country = JOR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Syria
+
+event = {
+	id = 8971470
+	country = SYR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8971471
+	country = SYR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Egypt
+
+event = {
+	id = 8970490
+	country = EGY
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970491
+	country = EGY
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970492
+	country = EGY
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970493
+	country = EGY
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1958 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Iraq
+
+event = {
+	id = 8970750
+	country = IRQ
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970751
+	country = IRQ
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# India
+
+event = {
+	id = 8970720
+	country = IND
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970721
+	country = IND
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Pakistan
+
+event = {
+	id = 8971100
+	country = PAK
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8971101
+	country = PAK
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Greece
+
+event = {
+	id = 8970620
+	country = GRE
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970621
+	country = GRE
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Communist Greece
+
+event = {
+	id = 8972330
+	country = U33
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8972331
+	country = U33
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Communist Korea
+
+event = {
+	id = 8971190
+	country = PRK
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8971191
+	country = PRK
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1954 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Nationalist Korea
+
+event = {
+	id = 8970810
+	country = KOR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8970811
+	country = KOR
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war_pacific
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1954 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}
+
+# Palestine
+
+event = {
+	id = 8971110
+	country = PAL
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		NOT = { local_flag = block_demobilization }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_setflag which = block_demobilization }
+	}	
+}
+
+event = {
+	id = 8971111
+	country = PAL
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		flag = cold_war
+		local_flag = block_demobilization
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "OK"
+		command = { type = local_clrflag which = block_demobilization }
+	}	
+}

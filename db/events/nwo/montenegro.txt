@@ -1,0 +1,528 @@
+event = {
+	id = 8010101
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390100 } # Blazo Jovanovic
+		command = { type = headofgovernment which = 390101 } # Milovan Dijas
+	}
+}
+
+event = {
+	id = 8010103
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390100 } # Blazo Jovanovic
+		command = { type = headofgovernment which = 390102 } # Nikola Miljanic
+	}
+}
+
+event = {
+	id = 8010104
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390100 } # Blazo Jovanovic
+		command = { type = headofgovernment which = 390103 } # Milos Rasovic
+	}
+}
+
+event = {
+	id = 8010105
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390100 } # Blazo Jovanovic
+		command = { type = headofgovernment which = 390106 } # Nikola Kovacevic
+	}
+}
+
+event = {
+	id = 8010106
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390100 } # Blazo Jovanovic
+		command = { type = headofgovernment which = 390107 } # Filip Bajkovic
+	}
+}
+
+event = {
+	id = 8010107
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390100 } # Blazo Jovanovic
+		command = { type = headofgovernment which = 390108 } # Dordije Pajkovic
+	}
+}
+
+event = {
+	id = 8010108
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390104 } # Dordije Pajkovic
+		command = { type = headofgovernment which = 390038 } # Veselin Duranovic
+	}
+}
+
+event = {
+	id = 8010109
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390110 } # Veljko Milatovic
+		command = { type = headofgovernment which = 390111 } # Vidoje Zarkovic
+	}
+}
+
+event = {
+	id = 8010110
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390112 } # Vidoje Zarkovic
+		command = { type = headofgovernment which = 390113 } # Zarko Bulajic
+	}
+}
+
+event = {
+	id = 8010111
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390110 } # Veljko Milatovic
+		command = { type = headofgovernment which = 390114 } # Marko Orlandic
+	}
+}
+
+event = {
+	id = 8010112
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 390115 } # Momcilo Cemovic
+	}
+}
+
+event = {
+	id = 8010113
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390116 } # Veselin Duranovic
+		command = { type = headofgovernment which = 390117 } # Radivoje Brajovic
+	}
+}
+
+event = {
+	id = 8010114
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390118 } # Marko Orlandic
+	}
+}
+
+event = {
+	id = 8010115
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 390119 } # Miodrag Vlahovic
+	}
+}
+
+event = {
+	id = 8010116
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390120 } # Branislav Soskic
+	}
+}
+
+event = {
+	id = 8010117
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390121 } # Radivoje Brajovic
+		command = { type = headofgovernment which = 390122 } # Vuko Vukadinovic
+	}
+}
+
+event = {
+	id = 8010118
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390123 } # Bozina Ivanovic
+	}
+}
+
+event = {
+	id = 8010119
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 390124 } # Branko Kostic
+		command = { type = headofgovernment which = 390125 } # Radoje Kontic
+	}
+}
+
+event = {
+	id = 8010120
+	country = MTN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 390126 } # Momir Bulatovic
+		command = { type = headofgovernment which = 390127 } # Milo Dukanovic
+	}
+}

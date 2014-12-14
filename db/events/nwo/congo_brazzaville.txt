@@ -1,0 +1,297 @@
+event = {
+	id = 8028501
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1938 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800523 } # Dieudonn? Reste
+		command = { type = headofgovernment which = 800524 } # Dieudonn? Reste
+	}
+}
+
+event = {
+	id = 8028502
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800525 } # L?on Solomiac
+		command = { type = headofgovernment which = 800526 } # L?on Solomiac
+	}
+}
+
+event = {
+	id = 8028503
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800527 } # Pierre Francois Boisson
+		command = { type = headofgovernment which = 800528 } # Pierre Francois Boisson
+	}
+}
+
+event = {
+	id = 8028504
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800500 } # Edgard de Larminat
+		command = { type = headofgovernment which = 800529 } # Edgard de Larminat
+	}
+}
+
+event = {
+	id = 8028505
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800530 } # Adolphe ?bou?
+		command = { type = headofgovernment which = 800531 } # Adolphe ?bou?
+	}
+}
+
+event = {
+	id = 8028506
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800532 } # Ange Bayardelle
+		command = { type = headofgovernment which = 800533 } # Ange Bayardelle
+	}
+}
+
+event = {
+	id = 8028507
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800534 } # Jean Soucadaux
+		command = { type = headofgovernment which = 800535 } # Jean Soucadaux
+	}
+}
+
+event = {
+	id = 8028508
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800536 } # Bernard Cornut-Gentille
+		command = { type = headofgovernment which = 800537 } # Bernard Cornut-Gentille
+	}
+}
+
+event = {
+	id = 8028509
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800538 } # Paul Louis Gabriel Chauvet
+		command = { type = headofgovernment which = 800539 } # Paul Louis Gabriel Chauvet
+	}
+}
+
+event = {
+	id = 8028510
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 800508 } # Jacques Opangault 
+	}
+}
+
+event = {
+	id = 8028511
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800540 } # Pierre Messmer
+	}
+}
+
+event = {
+	id = 8028512
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 800541 } # Yvon Bourges
+		command = { type = headofgovernment which = 800542 } # Fulbert Youlou
+	}
+}
+
+event = {
+	id = 8028513
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 800504 } # Fulbert Youlou
+	}
+}
+
+event = {
+	id = 8028514
+	country = U85
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 800502 } # Alphonse Massemba-D?bat
+		command = { type = headofgovernment which = 800505 } # Alphonse Massemba-D?bat
+	}
+}
+

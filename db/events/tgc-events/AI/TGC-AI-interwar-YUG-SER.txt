@@ -1,0 +1,33 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+#SER		1330133901	AI SWITCH
+
+event = {
+	id = 1330133901
+	random = no
+	persistent = no
+	country = SER
+	
+	trigger = {
+		event = 2084508
+		ai = yes
+	}
+	
+	name = "AI_EVENT"						
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 15
+	deathdate = { day = 30 month = 11 year = 1936 }
+	
+	action = {
+		name = "AI_EVENT" #Garrison change
+		command = { type = ai which = "yug_1936.ai" }
+	}
+}

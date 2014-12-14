@@ -1,0 +1,11 @@
+# Naval Base construction AI File by Burning
+
+###################################
+# Construction and Tech Research
+###################################
+construction = {
+  fort_borders = {
+    FRA, POL, BEL
+  } 
+}
+  

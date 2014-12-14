@@ -1,0 +1,886 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for economic balancing
+# Event List:
+#ALL	13309910/11	The Interwar Economy - Second Industrial Revolution
+#ALL	13309920/21	Winds of Change
+#ALL	13309923	The death of the Second Industrial Revolution
+#ALL	13309924	Strengthening the War Industry
+#ALL	133099241	##No name, breaks the naval treaty in case of drastical change of a nation##
+#ALL	13309925/26	AI EVENTS
+
+
+event = {
+	id = 13309910
+	
+	persistent = yes
+	date = { day = 1 month = 1 year = 1914 }
+	offset = 2
+	deathdate = { day = 30 month = december year = 1934 }
+	trigger = {
+		atwar = no
+		not = { atwar = U08 } #no big war going on
+		not = { atwar = GER } 
+		not = { atwar = ENG }
+		not = { atwar = FRA }
+		not = { atwar = JAP }
+		not = { atwar = ITA }
+		not = {
+			and = {
+				year = 1930
+				or = { 
+					country = ITA
+					country = JAP
+					country = HUN
+					country = SER
+					country = YUG
+					country = MAN
+				}
+			}
+		}
+		or = { # WWI Over.
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+			and = {
+				event = 2191512 #Reverse Versailes
+				or = {
+					event = 2191555 #Russia defeated
+					event = 2007529 #SOV defeated
+					event = 2007530 #SOV defeated
+				}
+			}
+		}
+		not = { country = SOV }
+		not = { local_flag = interwar_economics }
+	}
+	name = "The post-war Economy"							
+	Desc = "EVT_13309910_DESC"
+	Picture = "naval_reinforcements"
+	action = { 	
+		name = "Time to invest into civil technology!"
+		ai_chance = 100
+		
+		command = { trigger = { not = { or = { ideology = fascist ideology = nazi } } } type = building_prod_mod which = ic value = -200 } #regular build-time +200% [sic]
+		command = { trigger = { not = { or = { ideology = fascist ideology = nazi } } } type = building_prod_mod which = anti_air value = -200 } #regular build-time +200% [sic]
+		command = { type = local_setflag which = interwar_economics }
+		command = { trigger = { or = { 
+					country = ITA
+					country = JAP
+					country = HUN
+					country = SER
+					country = YUG
+					country = MAN
+				} } type = building_prod_mod which = ic value = -100 } #regular build-time +100% [sic]
+		command = { trigger = { or = { 
+					country = ITA
+					country = JAP
+					country = HUN
+					country = SER
+					country = YUG
+					country = MAN
+				} } type = building_prod_mod which = anti_air value = -100 } #regular build-time +100% [sic]
+		command = { trigger = { or = { 
+					country = ITA
+					country = JAP
+					country = HUN
+					country = SER
+					country = YUG
+					country = MAN
+				} } type = local_setflag which = interwar_economics_fascist }
+	}
+}	
+
+event = {
+	id = 13309911
+	
+	persistent = yes
+	date = { day = 1 month = 1 year = 1930 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1935 }
+	trigger = {
+		local_flag = interwar_economics
+		or = {
+			year = 1936
+			and = {
+				year = 1930
+				or = { 
+					country = ITA
+					country = JAP
+					country = HUN
+					country = SER
+					country = YUG
+					country = MAN
+				}
+			}
+		}
+	}
+	name = "The post-war Economy"							
+	Desc = "EVT_13309910_DESC"
+	Picture = "naval_reinforcements"
+	action = { 	
+		name = "Times are changing..."
+		ai_chance = 100
+		command = { trigger = { not = { local_flag = interwar_economics_fascist } } type = building_prod_mod which = ic value = 200 } #regular build-time -200% [sic]
+		command = { trigger = { not = { local_flag = interwar_economics_fascist } } type = building_prod_mod which = anti_air value = 200 } #regular build-time -200% [sic]
+		command = { type = local_clrflag which = interwar_economics }
+		command = { trigger = { local_flag = interwar_economics_fascist }	type = building_prod_mod which = ic value = 100 }
+		command = { trigger = { local_flag = interwar_economics_fascist }	type = building_prod_mod which = anti_air value = 100 }
+		command = { trigger = { local_flag = interwar_economics_fascist }	type = local_clrflag which = interwar_economics_fascist }
+	}
+}
+
+event = {
+	id = 13309920
+	
+	persistent = yes
+	date = { day = 1 month = 1 year = 1914 }
+	offset = 365
+	deathdate = { day = 30 month = december year = 1933 }
+	trigger = {
+		atwar = no
+		not = { atwar = U08 } #no big war going on
+		not = { atwar = GER } 
+		not = { atwar = ENG }
+		not = { atwar = FRA }
+		#calculation needs to be at least a bit accurate
+		#no rebels running around
+		NOT = { lost_national = { value = 5 } }
+		NOT = { lost_IC = { value = 5 } }
+		NOT = { dissent = 5 }
+		or = { # WWI Over.
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+			and = {
+				event = 2191512 #Reverse Versailes
+				or = {
+					event = 2191555 #Russia defeated
+					event = 2007529 #SOV defeated
+					event = 2007530 #SOV defeated
+				}
+			}
+		}
+		or = {
+			local_flag = interwar_economics
+			country = SOV
+		}
+		not = { local_flag = ic_sanitizer }
+		not = { local_flag = ic_sanitizer_stage1 }
+	}
+	name = "EVT_13309920_NAME"							
+	Desc = "EVT_13309920_DESC"
+	Picture = "naval_reinforcements"
+	action = { 	
+		name = "Finally, the war is over!" #stage 1
+		trigger = { 
+			not = { country = SOV }
+			not = { country = GER }
+		}
+		ai_chance = 100
+		command = { type = local_setflag which = ic_sanitizer_stage1 }
+		command = { trigger = { or = { country = ITA country = JAP country = HUN country = MAN country = FIN } } type = building_prod_mod which = ic value = 50 } #regular build-time -50% [sic]
+		command = { trigger = { not = { IC = 5 } } type = local_setflag which = ic_sanitizer5 }
+		command = { trigger = { IC = 5 not = { IC = 10 } } type = local_setflag which = ic_sanitizer10 }
+		command = { trigger = { IC = 10 not = { IC = 15 } } type = local_setflag which = ic_sanitizer15 }
+		command = { trigger = { IC = 15 not = { IC = 25 } } type = local_setflag which = ic_sanitizer25 }
+		command = { trigger = { IC = 25 not = { IC = 35 } } type = local_setflag which = ic_sanitizer35 }
+		command = { trigger = { IC = 35 not = { IC = 50 } } type = local_setflag which = ic_sanitizer50 }
+		command = { trigger = { IC = 50 not = { IC = 65 } } type = local_setflag which = ic_sanitizer65 }
+		command = { trigger = { IC = 65 not = { IC = 80 } } type = local_setflag which = ic_sanitizer80 }
+		command = { trigger = { IC = 80 not = { IC = 100 } } type = local_setflag which = ic_sanitizer100 }
+		command = { trigger = { IC = 100 not = { IC = 120 } } type = local_setflag which = ic_sanitizer120 }
+		command = { trigger = { IC = 120 not = { IC = 150 } } type = local_setflag which = ic_sanitizer150 }
+		command = { trigger = { IC = 150 not = { IC = 175 } } type = local_setflag which = ic_sanitizer175 }
+		command = { trigger = { IC = 175 not = { IC = 200 } } type = local_setflag which = ic_sanitizer200 }
+		command = { trigger = { IC = 200 not = { IC = 250 } } type = local_setflag which = ic_sanitizer250 }
+		command = { trigger = { IC = 250 not = { IC = 300 } } type = local_setflag which = ic_sanitizer300 }
+		command = { trigger = { IC = 300 not = { IC = 350 } } type = local_setflag which = ic_sanitizer350 }
+		command = { trigger = { IC = 350 not = { IC = 400 } } type = local_setflag which = ic_sanitizer400 }
+		command = { trigger = { IC = 400 } type = local_setflag which = ic_sanitizer450 }
+	}																													 
+	action = { 	
+		name = "Finally, the war is over!" #stage 1
+		trigger = { or = { country = GER country = U08 } }
+		ai_chance = 100
+		command = { trigger = { not = { IC = 175 } } type = local_setflag which = ic_sanitizer175 }
+		command = { trigger = { IC = 175 } type = local_setflag which = ic_sanitizer200 }
+		command = { type = local_setflag which = ic_sanitizer }
+		#DONE here
+	}
+	action = { 	
+		name = "Finally, the war is over!" #stage 1
+		trigger = { or = { country = SOV country = RUS } }
+		ai_chance = 100
+		#command = { type = building_prod_mod which = ic value = 50 } #regular build-time -50% [sic]
+		command = { type = local_setflag which = ic_sanitizer250 }
+		command = { type = local_setflag which = ic_sanitizer }
+		#DONE here
+	}
+}
+event = {
+	id = 13309921
+	
+	persistent = yes
+	date = { day = 1 month = 1 year = 1914 }
+	offset = 2
+	deathdate = { day = 30 month = december year = 1933 }
+	trigger = {
+		local_flag = ic_sanitizer_stage1
+		not = { local_flag = ic_sanitizer }
+	}
+	name = "EVT_13309920_NAME"							
+	Desc = "EVT_13309920_DESC"
+	Picture = "naval_reinforcements"
+	action = { 	
+		name = "Peace and Prosperity!" #the war industry is obsolete!
+		trigger = { 
+			local_flag = ic_sanitizer_stage1 
+			not = { local_flag = loser }
+			not = { country = JAP }
+			not = { country = ITA } 
+		}
+		ai_chance = 100
+		command = { type = local_setflag which = ic_sanitizer }
+		command = { type = building_prod_mod which = ic value = -50 } #regular build-time +50% [sic]
+		#reduce by one index
+		command = { trigger = { local_flag = ic_sanitizer80 } type = local_setflag which = ic_sanitizer65 }
+		command = { trigger = { local_flag = ic_sanitizer80 } type = local_clrflag which = ic_sanitizer80 }
+		command = { trigger = { local_flag = ic_sanitizer100 } type = local_setflag which = ic_sanitizer80 }
+		command = { trigger = { local_flag = ic_sanitizer100 } type = local_clrflag which = ic_sanitizer100 }
+		command = { trigger = { local_flag = ic_sanitizer120 } type = local_setflag which = ic_sanitizer100 }
+		command = { trigger = { local_flag = ic_sanitizer120 } type = local_clrflag which = ic_sanitizer120 }
+		command = { trigger = { local_flag = ic_sanitizer150 } type = local_setflag which = ic_sanitizer120 }
+		command = { trigger = { local_flag = ic_sanitizer150 } type = local_clrflag which = ic_sanitizer150 }
+		command = { trigger = { local_flag = ic_sanitizer175 } type = local_setflag which = ic_sanitizer150 }
+		command = { trigger = { local_flag = ic_sanitizer175 } type = local_clrflag which = ic_sanitizer175 }
+		command = { trigger = { local_flag = ic_sanitizer200 } type = local_setflag which = ic_sanitizer175 }
+		command = { trigger = { local_flag = ic_sanitizer200 } type = local_clrflag which = ic_sanitizer200 }
+		command = { trigger = { local_flag = ic_sanitizer250 } type = local_setflag which = ic_sanitizer200 }
+		command = { trigger = { local_flag = ic_sanitizer250 } type = local_clrflag which = ic_sanitizer250 }
+		command = { trigger = { local_flag = ic_sanitizer300 } type = local_setflag which = ic_sanitizer250 }
+		command = { trigger = { local_flag = ic_sanitizer300 } type = local_clrflag which = ic_sanitizer300 }
+		command = { trigger = { local_flag = ic_sanitizer350 } type = local_setflag which = ic_sanitizer300 }
+		command = { trigger = { local_flag = ic_sanitizer350 } type = local_clrflag which = ic_sanitizer350 }
+		command = { trigger = { local_flag = ic_sanitizer400 } type = local_setflag which = ic_sanitizer350 }
+		command = { trigger = { local_flag = ic_sanitizer400 } type = local_clrflag which = ic_sanitizer400 }
+	}
+	action = { 	
+		name = "Revenge!" #prepare for round two... invest in the war economy
+		trigger = { 
+			local_flag = ic_sanitizer_stage1
+			or = { 
+				local_flag = loser 
+				country = JAP
+				country = ITA
+			}
+		}
+		ai_chance = 100
+		command = { type = local_setflag which = ic_sanitizer }
+		#increase by one index		
+		command = { trigger = { local_flag = ic_sanitizer250 } type = local_setflag which = ic_sanitizer300 }
+		command = { trigger = { local_flag = ic_sanitizer250 } type = local_clrflag which = ic_sanitizer250 }
+		command = { trigger = { local_flag = ic_sanitizer200 } type = local_setflag which = ic_sanitizer250 }
+		command = { trigger = { local_flag = ic_sanitizer200 } type = local_clrflag which = ic_sanitizer200 }
+		command = { trigger = { local_flag = ic_sanitizer175 } type = local_setflag which = ic_sanitizer200 }
+		command = { trigger = { local_flag = ic_sanitizer175 } type = local_clrflag which = ic_sanitizer175 }
+		command = { trigger = { local_flag = ic_sanitizer250 } type = local_clrflag which = ic_sanitizer250 }
+		command = { trigger = { local_flag = ic_sanitizer150 } type = local_setflag which = ic_sanitizer175 }
+		command = { trigger = { local_flag = ic_sanitizer150 } type = local_clrflag which = ic_sanitizer150 }
+		command = { trigger = { local_flag = ic_sanitizer120 } type = local_setflag which = ic_sanitizer150 }
+		command = { trigger = { local_flag = ic_sanitizer120 } type = local_clrflag which = ic_sanitizer120 }
+		command = { trigger = { local_flag = ic_sanitizer100 } type = local_setflag which = ic_sanitizer120 }
+		command = { trigger = { local_flag = ic_sanitizer100 } type = local_clrflag which = ic_sanitizer100 }
+		command = { trigger = { local_flag = ic_sanitizer80 } type = local_setflag which = ic_sanitizer100 }
+		command = { trigger = { local_flag = ic_sanitizer80 } type = local_clrflag which = ic_sanitizer80 }
+		command = { trigger = { local_flag = ic_sanitizer65 } type = local_setflag which = ic_sanitizer80 }
+		command = { trigger = { local_flag = ic_sanitizer65 } type = local_clrflag which = ic_sanitizer65 }
+		command = { trigger = { local_flag = ic_sanitizer50 } type = local_setflag which = ic_sanitizer65 }
+		command = { trigger = { local_flag = ic_sanitizer50 } type = local_clrflag which = ic_sanitizer50 }
+		command = { trigger = { local_flag = ic_sanitizer35 } type = local_setflag which = ic_sanitizer50 }
+		command = { trigger = { local_flag = ic_sanitizer35 } type = local_clrflag which = ic_sanitizer35 }
+		command = { trigger = { local_flag = ic_sanitizer25 } type = local_setflag which = ic_sanitizer35 }
+		command = { trigger = { local_flag = ic_sanitizer25 } type = local_clrflag which = ic_sanitizer25 }
+		command = { trigger = { local_flag = ic_sanitizer15 } type = local_setflag which = ic_sanitizer25 }
+		command = { trigger = { local_flag = ic_sanitizer15 } type = local_clrflag which = ic_sanitizer15 }
+		command = { trigger = { local_flag = ic_sanitizer10 } type = local_setflag which = ic_sanitizer15 }
+		command = { trigger = { local_flag = ic_sanitizer10 } type = local_clrflag which = ic_sanitizer10 }
+		command = { trigger = { local_flag = ic_sanitizer5 } type = local_setflag which = ic_sanitizer10 }
+		command = { trigger = { local_flag = ic_sanitizer5 } type = local_clrflag which = ic_sanitizer5 }
+	}
+}
+
+# Purge excess IC
+# How much wood would a woodchuck chuck if a woodchuck could chuck wood? 
+# A woodchuck would chuck as much wood as a woodchuck could chuck if a woodchuck could chuck wood.
+event = { 
+	id = 13309923														 
+	random = no						
+	persistent = yes
+	
+	date = { day = 1 month = 1 year = 1914 }
+	offset = 90
+	deathdate = { day = 1 month = 1 year = 1936 }
+	
+	trigger = {
+		or = {
+			#collapse due to the depression
+			and = {
+				local_flag = depression
+				not = { local_flag = depression_over }
+				atwar = no
+				not = { year = 1935 }
+				or = {
+					and = {
+						local_flag = ic_sanitizer5
+						IC = 7
+					}
+					and = {
+						local_flag = ic_sanitizer10
+						IC = 15
+					}
+					and = {
+						local_flag = ic_sanitizer15
+						IC = 20
+					}
+					and = {
+						local_flag = ic_sanitizer25
+						IC = 30
+					}
+					and = {
+						local_flag = ic_sanitizer35
+						IC = 45
+					}
+					and = {
+						local_flag = ic_sanitizer50
+						IC = 65
+					}
+					and = {
+						local_flag = ic_sanitizer65
+						IC = 85
+					}
+					and = {
+						local_flag = ic_sanitizer80
+						IC = 100
+					}
+					and = {
+						local_flag = ic_sanitizer100
+						IC = 120
+					}
+					and = {
+						local_flag = ic_sanitizer120
+						IC = 150
+					}
+					and = {
+						local_flag = ic_sanitizer150
+						IC = 175
+					}
+					and = {
+						local_flag = ic_sanitizer175
+						IC = 200
+					}
+					and = {
+						local_flag = ic_sanitizer200
+						IC = 220
+					}
+					and = {
+						local_flag = ic_sanitizer250
+						IC = 270
+					}
+					and = {
+						local_flag = ic_sanitizer300
+						IC = 310
+					}
+					and = {
+						local_flag = ic_sanitizer350
+						IC = 370
+					}
+					and = {
+						local_flag = ic_sanitizer400
+						IC = 450
+					}
+				}
+			}
+			#for low IC nations: double IC is a brickwall
+			and = {
+				local_flag = ic_sanitizer5
+				IC = 15
+			}
+			and = {
+				local_flag = ic_sanitizer10
+				IC = 20
+			}
+			and = {
+				local_flag = ic_sanitizer15
+				IC = 30
+			}
+			and = {
+				local_flag = ic_sanitizer25
+				IC = 45
+			}
+			and = {
+				local_flag = ic_sanitizer35
+				IC = 70
+			}
+			# for larger nations, growing more than 40/50 IC's is an issue too 
+			and = {
+				local_flag = ic_sanitizer50
+				IC = 90
+			}
+			and = {
+				local_flag = ic_sanitizer65
+				IC = 120
+			}
+			and = {
+				local_flag = ic_sanitizer80
+				IC = 130
+			}
+			and = {
+				local_flag = ic_sanitizer100
+				IC = 150
+			}
+			and = {
+				local_flag = ic_sanitizer120
+				IC = 170
+			}
+			and = {
+				local_flag = ic_sanitizer150
+				IC = 200
+			}
+			and = {
+				local_flag = ic_sanitizer175
+				IC = 225
+			}
+			and = {
+				local_flag = ic_sanitizer200
+				IC = 250
+			}
+			and = {
+				local_flag = ic_sanitizer250
+				IC = 300
+			}
+			and = {
+				local_flag = ic_sanitizer300
+				IC = 350
+			}
+			and = {
+				local_flag = ic_sanitizer350
+				IC = 400
+			}
+			and = {
+				local_flag = ic_sanitizer400
+				IC = 450
+			}
+		}
+	}
+	
+	name = "EVT_13309923_NAME"							
+	Desc = "EVT_13309923_DESC"
+	Picture = "economic" 
+	
+	
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100		
+		trigger = {
+			not = { IC = 10 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 1 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100		
+		trigger = {
+			IC = 10
+			not = { IC = 20 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 2 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100		
+		trigger = {
+			IC = 20
+			not = { IC = 50 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 3 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100		
+		trigger = {
+			IC = 50
+			not = { IC = 100 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 4 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100		
+		trigger = {
+			IC = 100
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 5 } # some of the people had no option but to join the army
+	}
+}
+
+#cleans up the IC-sanitizer if at war
+event = {
+	id = 13309924
+	
+	persistent = yes
+	date = { day = 1 month = 1 year = 1914 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1945 }
+	# this events allows nations to exploit war to step by step increase their IC-limit.
+	# it's not an exploit, but a feature, actually.
+	# it allows nations like italy and japan to expand their industrial base overtime.
+	trigger = {
+		atwar = yes
+		or = {
+			local_flag = ic_sanitizer
+			local_flag = ic_sanitizer_stage1
+			local_flag = ic_sanitizer5
+			local_flag = ic_sanitizer10
+			local_flag = ic_sanitizer15
+			local_flag = ic_sanitizer25
+			local_flag = ic_sanitizer35
+			local_flag = ic_sanitizer50
+			local_flag = ic_sanitizer65
+			local_flag = ic_sanitizer80
+			local_flag = ic_sanitizer100
+			local_flag = ic_sanitizer120
+			local_flag = ic_sanitizer150
+			local_flag = ic_sanitizer175
+			local_flag = ic_sanitizer200
+			local_flag = ic_sanitizer250
+			local_flag = ic_sanitizer300
+			local_flag = ic_sanitizer350
+			local_flag = ic_sanitizer400
+		}
+	}
+	name = "EVT_13309924_NAME"							
+	Desc = "EVT_13309924_DESC"
+	Picture = "naval_reinforcements"
+	action = { 	
+		name = "To arms!" 
+		ai_chance = 100
+		command = { type = local_clrflag which = ic_sanitizer_stage1 }
+		command = { type = local_clrflag which = ic_sanitizer }
+		command = { type = local_clrflag which = ic_sanitizer5 }
+		command = { type = local_clrflag which = ic_sanitizer10 }
+		command = { type = local_clrflag which = ic_sanitizer15 }
+		command = { type = local_clrflag which = ic_sanitizer25 }
+		command = { type = local_clrflag which = ic_sanitizer35 }
+		command = { type = local_clrflag which = ic_sanitizer50 }
+		command = { type = local_clrflag which = ic_sanitizer65 }
+		command = { type = local_clrflag which = ic_sanitizer80 }
+		command = { type = local_clrflag which = ic_sanitizer100 }
+		command = { type = local_clrflag which = ic_sanitizer120 }
+		command = { type = local_clrflag which = ic_sanitizer150 }
+		command = { type = local_clrflag which = ic_sanitizer175 }
+		command = { type = local_clrflag which = ic_sanitizer200 }
+		command = { type = local_clrflag which = ic_sanitizer250 }
+		command = { type = local_clrflag which = ic_sanitizer300 }
+		command = { type = local_clrflag which = ic_sanitizer350 }
+		command = { type = local_clrflag which = ic_sanitizer400 }
+	}
+}
+
+#RESET the IC-sanitizer
+#it's a separate event, but essentially does the same as 13309924
+#could be extended in the future
+event = {
+	id = 133099241
+	persistent = yes
+
+	#to be called by other events, if a nation drastically changes shape
+
+	name = "EVT_133099241_NAME"							
+	Desc = "EVT_133099241_DESC"
+	Picture = "naval_reinforcements"
+	action = { 	
+		name = "Previous restrictions no longer apply in this time of change." 
+		ai_chance = 100
+		command = { type = local_clrflag which = ic_sanitizer_stage1 }
+		command = { type = local_clrflag which = ic_sanitizer }
+		command = { type = local_clrflag which = ic_sanitizer5 }
+		command = { type = local_clrflag which = ic_sanitizer10 }
+		command = { type = local_clrflag which = ic_sanitizer15 }
+		command = { type = local_clrflag which = ic_sanitizer25 }
+		command = { type = local_clrflag which = ic_sanitizer35 }
+		command = { type = local_clrflag which = ic_sanitizer50 }
+		command = { type = local_clrflag which = ic_sanitizer65 }
+		command = { type = local_clrflag which = ic_sanitizer80 }
+		command = { type = local_clrflag which = ic_sanitizer100 }
+		command = { type = local_clrflag which = ic_sanitizer120 }
+		command = { type = local_clrflag which = ic_sanitizer150 }
+		command = { type = local_clrflag which = ic_sanitizer175 }
+		command = { type = local_clrflag which = ic_sanitizer200 }
+		command = { type = local_clrflag which = ic_sanitizer250 }
+		command = { type = local_clrflag which = ic_sanitizer300 }
+		command = { type = local_clrflag which = ic_sanitizer350 }
+		command = { type = local_clrflag which = ic_sanitizer400 }
+	}
+}
+
+
+event = {
+	id = 13309925
+	
+	persistent = yes
+	date = { day = 1 month = october year = 1914 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1937 }
+	trigger = {
+		not = { local_flag = depression }
+		not = { local_flag = depression_over }
+		OR = {
+			money = 5000
+			AND = {
+				NOT = { IC = 80 }
+				money = 3000
+			}
+			AND = {
+				NOT = { IC = 50 }
+				money = 2000
+			}
+		}
+		ai = yes
+		atwar = no
+	}
+	name = "AI_EVENT"
+	action = { 	
+		name = "AI_EVENT"
+		ai_chance = 25
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 15 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 50 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = air_base where = -1 value = 1 }
+		command = { trigger = { IC = 15 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { money = 4000 IC = 50 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { money = 5000 IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -1 value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = -1 }
+		command = { trigger = { IC = 80 } type = money value = -5000 }
+		command = { trigger = { IC = 50 NOT = { IC = 80 } } type = money value = -3000 }
+		command = { trigger = { IC = 15 NOT = { IC = 50 } } type = money value = -2000 }
+		command = { trigger = { NOT = { IC = 15 } } type = money value = -750 }
+	}
+	action = { 	
+		name = "AI_EVENT"
+		ai_chance = 50
+		trigger = {
+			or = { 
+				government = fascist
+				local_flag = loser
+			}
+		}
+		command = { type = dissent value = -1 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 15 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 50 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 80 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 80 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = air_base where = -1 value = 1 }
+		command = { trigger = { IC = 15 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 50 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -1 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { trigger = { IC = 80 } type = money value = -5000 }
+		command = { trigger = { IC = 50 NOT = { IC = 80 } } type = money value = -3000 }
+		command = { trigger = { IC = 15 NOT = { IC = 50 } } type = money value = -2000 }
+		command = { trigger = { NOT = { IC = 15 } } type = money value = -750 }
+	}
+	action = { 	
+		name = "AI_EVENT"
+		ai_chance = 50
+		trigger = {
+			or = { 
+				government = fascist
+				local_flag = loser
+			}
+		}
+		command = { type = dissent value = -1 }
+		command = { type = construct which = ic where = -1 value = 1 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 15 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 50 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 80 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 15 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 50 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -1 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = money value = -5000 }
+		command = { trigger = { IC = 50 NOT = { IC = 80 } } type = money value = -3000 }
+		command = { trigger = { IC = 15 NOT = { IC = 50 } } type = money value = -2000 }
+		command = { trigger = { NOT = { IC = 15 } } type = money value = -750 }
+	}
+}
+
+event = {
+	id = 13309926
+	
+	persistent = yes
+	date = { day = 1 month = october year = 1914 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1937 }
+	trigger = {
+		atwar = no
+		ai = yes
+	}
+	name = "AI_EVENT"							
+
+	action = { 	
+		name = "AI_EVENT"
+		ai_chance = 25
+		trigger = {
+			not = { government = fascist }
+			not = { local_flag = loser }
+		}
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 50 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 15 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 50 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -1 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { trigger = { or = { 
+			and = {
+				government = democratic
+				not = { policy = { type = free_market value = 7 } }
+			}
+			and = {
+				government = fascist
+				not = { policy = { type = free_market value = 4 } }
+			}
+			and = {
+				local_flag = loser
+				not = { policy = { type = free_market value = 5 } }
+			}
+		} } type = domestic which = free_market value = 1 }
+		command = { type = dissent value = -1 }
+	}
+	action = { 	
+		name = "AI_EVENT"
+		ai_chance = 50
+		trigger = {
+			or = { 
+				government = fascist
+				local_flag = loser
+			}
+		}
+		command = { type = dissent value = -1 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 15 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 50 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 80 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 80 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 15 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 50 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -1 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -1 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { trigger = { or = { 
+			and = {
+				government = democratic
+				not = { policy = { type = free_market value = 7 } }
+			}
+			and = {
+				government = fascist
+				not = { policy = { type = free_market value = 4 } }
+			}
+			and = {
+				local_flag = loser
+				not = { policy = { type = free_market value = 5 } }
+			}
+		} } type = domestic which = free_market value = 1 }
+	}
+	action = { 	
+		name = "AI_EVENT"
+		ai_chance = 50
+		trigger = {
+			or = { 
+				government = fascist
+				local_flag = loser
+			}
+		}
+		command = { type = dissent value = -1 }
+		command = { trigger = { IC = 50 } type = construct which = ic where = -1 value = 1 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 15 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 50 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { trigger = { IC = 80 } type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 15 } type = construct which = air_base where = -1 value = 1 }
+		command = { trigger = { IC = 50 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { IC = 80 } type = construct which = air_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -4 value = 1 }
+		command = { trigger = { or = { country = JAP country = JAP } } type = construct which = naval_base where = -1 value = 1 }
+	}
+}
+

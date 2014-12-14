@@ -1,0 +1,1154 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions - Elections
+#################################
+# by Sargeras :-O
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# Event list:
+#ROM 	13321800 	1919 General Elections
+#ROM	13321801	King Ferdinand dissolves Vaida-Voevod's government
+#ROM	13321802	1920 General Elections
+#ROM	13321803	Scandal in Avarescu's cabinet
+#ROM	13321804	Alexandru Avarescu resigns
+#ROM	13321805	Take Ionescu resigns
+#ROM	13321806	1922 General Elections
+#ROM	13321808	1926 General Elections
+#ROM	13321809	Avarescu forced to resign
+#ROM	13321810	1927 General Elections
+#ROM	13321811	Death of King Ferdinand
+#ROM	13321812	Death of Ion Bratianu
+#ROM	13321813	1928 General Elections
+#ROM	13321814	1931 General Elections
+#ROM	13321815	Royal scandal discovered!
+#ROM	13321816	Nicolae Iorga resigns
+#ROM	13321817	1932 General Elections
+#ROM	13321818	The return of Carol II
+
+event = {
+	id = 13321800
+	country = ROM
+	save_date = yes
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = ROM }
+	}
+
+	date = { day = 8 month = november year = 1919 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 20
+
+	name = "ELECTION_TITLE"
+	desc = "The Romanian National Party emerged as the largest party in Parliament, winning 169 of the 568 seats in the Chamber of Deputies and 76 of the 216 seats in the Senate."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		name = "Romanian National Party wins"
+		ai_chance = 98
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110197 } } type = wakeminister which = 110197 }
+		command = { trigger = { ai = yes not = { minister = 110141 } } type = wakeminister which = 110141 }
+		command = { trigger = { ai = yes not = { minister = 110173 } } type = wakeminister which = 110173 }
+		command = { trigger = { ai = yes not = { minister = 110187 } } type = wakeminister which = 110187 }
+		command = { type = headofgovernment which = 110197 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = foreignminister which = 110141 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = armamentminister which = 110173 } # Aurel Vlad
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110187 } # Artur Vaitoianu
+	}
+
+	action = {
+		name = "National Liberal Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 110196 } } type = wakeminister which = 110196 }
+		command = { trigger = { ai = yes not = { minister = 110140 } } type = wakeminister which = 110140 }	
+		command = { trigger = { ai = yes not = { minister = 110186 } } type = wakeminister which = 110186 }	
+		command = { type = headofgovernment which = 110196 } # Ion I.C. Bratianu
+		command = { trigger = { ai = yes } type = foreignminister which = 110140 } # Nicolae Misu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110186 } # Alexandru Costantinescu
+	}
+
+	action = {
+		name = "Peasants' Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { trigger = { not = { minister = 110198 } } type = wakeminister which = 110198 }
+		command = { trigger = { ai = yes not = { minister = 110192 } } type = wakeminister which = 110192 }
+		command = { type = headofgovernment which = 110198 } # Ion Mihalache
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110192 } # Nicolae Lupu
+	}
+
+	action = {	
+		name = "Socialist Party wins"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+	}
+}
+
+# King Ferdinand dissolves Vaida-Voevod's government
+event = {
+	id = 13321801
+	country = ROM
+
+	trigger = {
+		government = democratic
+		OR = {
+			headofstate = 110159
+			headofstate = 110160
+		}
+		headofgovernment = 110197
+		event = { id = 13321800 days = 170 }
+	}
+
+	date = { day = 12 month = march year = 1920 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 1
+
+	name = "King Ferdinand dissolves Vaida-Voevod's government"
+	desc = "Alexandru Vaida Voevod's radical approach toward the land reforms made King Ferdinand dissolve his government in March 1920, to be replaced by one formed by General Alexandru Averescu's People's Party."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = domestic which = democratic value = -1 } 
+		command = { trigger = { not = { minister = 110151 } } type = wakeminister which = 110151 } 
+		command = { trigger = { not = { minister = 110143 } } type = wakeminister which = 110143 }
+		command = { trigger = { not = { minister = 110176 } } type = wakeminister which = 110176 }
+		command = { trigger = { not = { minister = 110190 } } type = wakeminister which = 110190 }
+		command = { type = headofgovernment which = 110151 } # Alexandru Averescu
+		command = { type = foreignminister which = 110143 } # Duiliu Zamfirescu
+		command = { type = armamentminister which = 110176 } # Constantin Argetoianu
+		command = { type = ministerofsecurity which = 110190 } # Alexandru Averescu
+	}
+}
+
+# 1920 General Elections
+event = {
+	id = 13321802
+	country = ROM
+	save_date = yes
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = ROM }
+		event = { id = 13321800 days = 360 }
+	}
+
+	date = { day = 27 month = may year = 1920 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 2
+
+	name = "ELECTION_TITLE"
+	desc = "General elections were held in Romania between 25 and 27 May 1920. The result was a victory for the People's Party, which won 206 of the 366 seats in the Chamber of Deputies and 124 of the 166 seats in the Senate."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110151
+					}
+				}
+			}
+		}
+		name = "People's Party wins"
+		ai_chance = 98
+		command = { type = dissent value = -1 } 
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110197 incabinet = 110196 incabinet = 110198 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110151 } } type = wakeminister which = 110151 }
+		command = { trigger = { ai = yes not = { minister = 110143 } } type = wakeminister which = 110143 }
+		command = { trigger = { ai = yes not = { minister = 110176 } } type = wakeminister which = 110176 }
+		command = { trigger = { ai = yes not = { minister = 110190 } } type = wakeminister which = 110190 }	
+		command = { type = headofgovernment which = 110151 } # Alexandru Avarescu
+		command = { trigger = { ai = yes } type = foreignminister which = 110143 } # Duiliu Zamfirescu
+		command = { trigger = { ai = yes } type = armamentminister which = 110176 } # Constantin Argentoianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110190 } # Alexandru Avarescu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110197
+					}
+				}
+			}
+		}
+		name = "Romanian National Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 } 
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110196 incabinet = 110198 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110197 } } type = wakeminister which = 110197 }
+		command = { trigger = { ai = yes not = { minister = 110141 } } type = wakeminister which = 110141 }
+		command = { trigger = { ai = yes not = { minister = 110173 } } type = wakeminister which = 110173 }
+		command = { trigger = { ai = yes not = { minister = 110187 } } type = wakeminister which = 110187 }
+		command = { type = headofgovernment which = 110197 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = foreignminister which = 110141 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = armamentminister which = 110173 } # Aurel Vlad
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110187 } # Artur Vaitoianu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110196
+					}
+				}
+			}
+		}
+		name = "National Liberal Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110197 incabinet = 110198 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 110196 } } type = wakeminister which = 110196 }
+		command = { trigger = { ai = yes not = { minister = 110141 } } type = wakeminister which = 110140 }
+		command = { trigger = { ai = yes not = { minister = 110187 } } type = wakeminister which = 110186 }
+		command = { type = headofgovernment which = 110196 } # Ion I.C. Bratianu
+		command = { trigger = { ai = yes } type = foreignminister which = 110140 } # Nicolae Misu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110186 } # Alexandru Costantinescu
+	}
+
+	action = {	
+		name = "Socialist Party wins"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110196 incabinet = 110197 incabinet = 110198 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+	}
+}
+
+# Scandal in Averescu's cabinet
+event = {
+	id = 13321803
+	country = ROM
+
+	trigger = {
+		headofgovernment = 110151
+		incabinet = 110176
+	}
+
+	date = { day = 1 month = march year = 1921 }
+	deathdate = { day = 30 month = march year = 1921 }
+	offset = 30
+
+	name = "Scandal in Avarescu's cabinet"
+	desc = "In March 1921, it was uncovered that an associate of Constantin Argetoianu had attempted to contract a 20 million lire loan with a bank in Italy, using as collateral Romanian war bonds that he had illegally obtained from the Finance Ministry reserve."
+	
+	action = {
+		name = "Appoint Titulescu"
+		ai_chance = 100
+		command = { trigger = { not = { minister = 110168 } } type = wakeminister which = 110168 }
+		command = { type = armamentminister which = 110168 } # Nicolae Titulescu
+		command = { type = dissent value = -1 }
+	}
+
+	action = {
+		name = "Leave Argetoianu in place"
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+	}
+}
+
+# Alexandru Averescu resigns
+event = {
+	id = 13321804
+	country = ROM
+
+	trigger = {
+		incabinet = 110151
+	}
+
+	date = { day = 17 month = december year = 1921 }
+	deathdate = { day = 18 month = december year = 1921 }
+	offset = 1
+
+	name = "Alexandru Averescu resigns"
+	desc = "Following a series of political scandals and unpopular policies, Alexandru Averescu resigned from his position."
+	picture = "minister_resign"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 110157 } } type = wakeminister which = 110157 }
+		command = { trigger = { not = { minister = 110146 } } type = wakeminister which = 110146 }
+		command = { trigger = { not = { minister = 110168 } } type = wakeminister which = 110168 }
+		command = { trigger = { not = { minister = 110195 } } type = wakeminister which = 110195 }
+		command = { type = headofgovernment which = 110157 } # Take Ionescu
+		command = { type = foreignminister which = 110146 } # Gheorghe Derussi
+		command = { type = armamentminister which = 110168 } # Nicolae Titulescu
+		command = { type = ministerofsecurity which = 110195 } # Ion Camarasescu
+	}
+}
+
+# Take Ionescu resigns
+event = {
+	id = 13321805
+	country = ROM
+
+	trigger = {
+		incabinet = 110157
+	}
+
+	date = { day = 19 month = january year = 1922 }
+	deathdate = { day = 20 month = january year = 1922 }
+	offset = 1
+
+	name = "Take Ionescu resigns"
+	desc = "Ionescu had to resign after a motion of no confidence."
+	picture = "minister_resign"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 110196 } } type = wakeminister which = 110196 }
+		command = { trigger = { not = { minister = 110147 } } type = wakeminister which = 110147 }
+		command = { trigger = { not = { minister = 110178 } } type = wakeminister which = 110178 }
+		command = { trigger = { not = { minister = 110187 } } type = wakeminister which = 110187 }
+		command = { type = headofgovernment which = 110196 } # Ion I.C. Bratianu
+		command = { type = foreignminister which = 110147 } # Ion G. Duca
+		command = { type = armamentminister which = 110178 } # Vintila Bratianu
+		command = { type = ministerofsecurity which = 110187 } # Artur Vaitoianu
+	}
+}
+
+# 1922 General Elections
+event = { 
+	id = 13321806
+	country = ROM
+	save_date = yes
+	trigger = { 
+		government = democratic 
+		NOT = { ispuppet = ROM }
+		event = { id = 13321802 days = 720 }
+	}
+		
+
+	date = { day = 3 month = march year = 1922 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 1
+
+	name = "ELECTION_TITLE"
+	desc = "General elections were held in Romania between 1 and 3 March 1922. The result was a victory for the National Liberal Party, which won 222 of the 372 seats in the Chamber of Deputies and 111 of the 148 seats in the Senate."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110196
+					}
+				}
+			}
+		}
+		name = "National Liberal Party wins"
+		ai_chance = 97
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110197 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 110196 } } type = wakeminister which = 110196 }
+		command = { trigger = { ai = yes not = { minister = 110196 } } type = wakeminister which = 110147 }
+		command = { trigger = { ai = yes not = { minister = 110178 } } type = wakeminister which = 110178 }
+		command = { trigger = { ai = yes not = { minister = 110187 } } type = wakeminister which = 110187 }
+		command = { type = headofgovernment which = 110196 } # Ion I.C. Bratianu
+		command = { trigger = { ai = yes } type = foreignminister which = 110147 } # Ion G. Duca
+		command = { trigger = { ai = yes } type = armamentminister which = 110178 } # Vintila Bratianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110187 } # Artur Vaitoianu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110151
+					}
+				}
+			}
+		}
+		name = "People's Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 } 
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110196 incabinet = 110197 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110151 } } type = wakeminister which = 110151 }
+		command = { trigger = { ai = yes not = { minister = 110143 } } type = wakeminister which = 110143 }
+		command = { trigger = { ai = yes not = { minister = 110176 } } type = wakeminister which = 110176 }
+		command = { trigger = { ai = yes not = { minister = 110190 } } type = wakeminister which = 110190 }
+		command = { type = headofgovernment which = 110151 } # Alexandru Avarescu
+		command = { trigger = { ai = yes } type = foreignminister which = 110143 } # Duiliu Zamfirescu
+		command = { trigger = { ai = yes } type = armamentminister which = 110176 } # Constantin Argentoianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110190 } # Alexandru Avarescu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110198
+					}
+				}
+			}
+		}
+		name = "Peasants' Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110196 incabinet = 110197 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { trigger = { not = { minister = 110198 } } type = wakeminister which = 110198 }
+		command = { trigger = { ai = yes not = { minister = 110192 } } type = wakeminister which = 110192 }
+		command = { trigger = { ai = yes } type = headofgovernment which = 110198 } # Ion Mihalache
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110192 } # Nicolae Lupu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110197
+					}
+				}
+			}
+		}
+		name = "Romanian National Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110196 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110197 } } type = wakeminister which = 110197 }
+		command = { trigger = { ai = yes not = { minister = 110141 } } type = wakeminister which = 110141 }
+		command = { trigger = { ai = yes not = { minister = 110173 } } type = wakeminister which = 110173 }
+		command = { trigger = { ai = yes not = { minister = 110187 } } type = wakeminister which = 110187 }
+		command = { type = headofgovernment which = 110197 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = foreignminister which = 110141 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = armamentminister which = 110173 } # Aurel Vlad
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110187 } # Artur Vaitoianu
+	}
+
+	action = {
+		name = "Federation of Socialist Parties from Romania wins"
+		ai_chance = 0
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+	}
+}
+
+# Royal scandal discovered!
+event = {
+	id = 13321815
+	country = ROM
+
+	trigger = { 
+		government = democratic 
+		NOT = { headofstate = 110011 } 
+	}
+
+	date = { day = 1 month = january year = 1925 }
+	deathdate = { day = 21 month = july year = 1927 } # after Ferdinand's death
+	offset = 180
+
+	name = "Royal scandal discovered!"
+	desc = "Prince Carol's marriage with Princess Helen of Greece and Denmark soon collapsed in the wake of Carol's affair with Elena 'Magda' Lupescu, the Roman Catholic daughter of a Jewish pharmacist and his Roman Catholic wife. As a result of the scandal, he renounced his right to the throne on 28 December 1925 in favour of his son by Crown Princess Helen, Michael (Mihai), who became King in July 1927."
+	picture = "congress"
+	style = 2
+
+	action = {
+		name = "It's a shame! He must renounce!"
+		ai_chance = 99
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = event which = 13321818 when = 1800 }
+	}
+
+	action = {
+		name = "As future king, he can do whatever he wants!"
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = freedom value = 3 }
+		command = { type = sleepevent which = 13321818 }
+	}
+}
+
+# 1926 General Elections
+event = {
+	id = 13321808
+	country = ROM
+	save_date = yes
+	trigger = { 
+		government = democratic 
+		NOT = { ispuppet = ROM }
+		event = { id = 13321806 days = 1440 }
+	}
+
+	date = { day = 30 month = march year = 1926 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 1
+
+	name = "ELECTION_TITLE"
+	desc = "General elections were held in Romania in May and June 1926. The result was a victory for the People's Party, which won 292 of the 387 seats in the Chamber of Deputies and 107 of the 115 seats in the Senate."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110151
+					}
+				}
+			}
+		}
+		name = "People's Party wins"
+		ai_chance = 98
+		command = { type = dissent value = -1 } 
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110197 incabinet = 110198 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110151 } } type = wakeminister which = 110151 }
+		command = { trigger = { ai = yes not = { minister = 110203 } } type = wakeminister which = 110203 }
+		command = { trigger = { ai = yes not = { minister = 110209 } } type = wakeminister which = 110209 }
+		command = { trigger = { ai = yes not = { minister = 110190 } } type = wakeminister which = 110190 }
+		command = { type = headofgovernment which = 110151 } # Alexandru Averescu
+		command = { trigger = { ai = yes } type = foreignminister which = 110203 } # Ion Mitilineu
+		command = { trigger = { ai = yes } type = armamentminister which = 110209 } # Ion Lapedatu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110190 } # Alexandru Averescu
+	}
+
+	action = {
+		name = "National Peasants' Bloc wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110196 } } } type = dissent value = -5 } 
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { trigger = { not = { minister = 110031 } } type = wakeminister which = 110031 }
+		command = { trigger = { ai = yes not = { minister = 110141 } } type = wakeminister which = 110141 }
+		command = { trigger = { ai = yes not = { minister = 110173 } } type = wakeminister which = 110173 }
+		command = { trigger = { ai = yes not = { minister = 110192 } } type = wakeminister which = 110192 }
+		command = { type = headofgovernment which = 110031 } # Iuliu Maniu
+		command = { trigger = { ai = yes } type = foreignminister which = 110141 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = armamentminister which = 110173 } # Aurel Vlad
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110192 } # Nicolae Lupu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110196
+					}
+				}
+			}
+		}
+		name = "National Liberal Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110197 incabinet = 110198 } } } type = dissent value = -5 } 
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 110196 } } type = wakeminister which = 110196 }
+		command = { trigger = { ai = yes not = { minister = 110140 } } type = wakeminister which = 110140 }
+		command = { trigger = { ai = yes not = { minister = 110178 } } type = wakeminister which = 110178 }
+		command = { trigger = { ai = yes not = { minister = 110186 } } type = wakeminister which = 110186 }
+		command = { type = headofgovernment which = 110196 } # Ion I.C. Bratianu
+		command = { trigger = { ai = yes } type = foreignminister which = 110140 } # Nicolae Misu
+		command = { trigger = { ai = yes } type = armamentminister which = 110178 } # Vintila Bratianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110186 } # Alexandru Costantinescu
+	}
+
+	action = {
+		name = "The National-Christian Defense League takes power"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 1 }
+	}
+}
+
+# Avarescu forced to resign
+event = { 
+	id = 13321809
+	country = ROM
+
+	trigger = {
+		government = democratic
+		incabinet = 110151 
+	}
+
+	date = { day = 4 month = june year = 1927 }
+	deathdate = { day = 5 month = june year = 1927 }
+	offset = 1
+
+	name = "Averescu forced to resign"
+	desc = "In 1927, Avarescu's cabinet could rule thanks to the support granted by Ion Bratianu's Liberal Party. This support was withdrew when Avarescu showed signs of friendship with far right groups and Prince Carol II, enemy of the Liberals."
+	picture = "minister_resign"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 110199 } } type = wakeminister which = 110199 }
+		command = { trigger = { not = { minister = 110204 } } type = wakeminister which = 110204 }
+		command = { trigger = { not = { minister = 110211 } } type = wakeminister which = 110211 }
+		command = { trigger = { not = { minister = 110213 } } type = wakeminister which = 110213 }
+		command = { type = headofgovernment which = 110199 } # Barbu Stirbey
+		command = { type = foreignminister which = 110204 } # Barbu Stirbey
+		command = { type = armamentminister which = 110211 } # Barbu Stirbey
+		command = { type = ministerofsecurity which = 110213 } # Barbu Stirbey
+	}
+}
+
+# 1927 General Elections
+event = {
+	id = 13321810
+	country = ROM
+	save_date = yes
+	trigger = { 
+		government = democratic 
+		NOT = { ispuppet = ROM }
+		event = { id = 13321808 days = 360 }
+	}
+
+	date = { day = 14 month = june year = 1927 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 1
+
+	name = "ELECTION_TITLE"
+	desc = "The Chamber of Deputies was elected on 7 June, whilst the Senate was elected in three stages on 10, 12 and 14 June. The result was a victory for the National Liberal Party, which won 318 of the 387 seats in the Chamber of Deputies and 92 of the 113 seats in the Senate."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110196
+					}
+				}
+			}
+		}
+		name = "National Liberal Party wins"
+		ai_chance = 98
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110031 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 110196 } } type = wakeminister which = 110196 }
+		command = { trigger = { ai = yes not = { minister = 110205 } } type = wakeminister which = 110205 }
+		command = { trigger = { ai = yes not = { minister = 110178 } } type = wakeminister which = 110178 }
+		command = { trigger = { ai = yes not = { minister = 110215 } } type = wakeminister which = 110215 }
+		command = { type = headofgovernment which = 110196 } # Ion I.C. Bratianu
+		command = { trigger = { ai = yes } type = foreignminister which = 110205 } # Ion I.C. Bratianu
+		command = { trigger = { ai = yes } type = armamentminister which = 110178 } # Vintila Bratianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110215 } # Ion G. Duca
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110031
+					}
+				}
+			}
+		}
+		name = "National Peasants' Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }	
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110196 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { trigger = { not = { minister = 110031 } } type = wakeminister which = 110031 }
+		command = { trigger = { ai = yes not = { minister = 110141 } } type = wakeminister which = 110141 }
+		command = { trigger = { ai = yes not = { minister = 110173 } } type = wakeminister which = 110173 }
+		command = { trigger = { ai = yes not = { minister = 110192 } } type = wakeminister which = 110192 }
+		command = { type = headofgovernment which = 110031 } # Iuliu Maniu
+		command = { trigger = { ai = yes } type = foreignminister which = 110141 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = armamentminister which = 110173 } # Aurel Vlad
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110192 } # Nicolae Lupu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110151
+					}
+				}
+			}
+		}
+		name = "People's Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 } 
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110031 incabinet = 110196 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110151 } } type = wakeminister which = 110151 }
+		command = { trigger = { ai = yes not = { minister = 110200 } } type = wakeminister which = 110200 }
+		command = { trigger = { ai = yes not = { minister = 110209 } } type = wakeminister which = 110209 }
+		command = { trigger = { ai = yes not = { minister = 110190 } } type = wakeminister which = 110190 }
+		command = { type = headofgovernment which = 110151 } # Alexandru Averescu
+		command = { trigger = { ai = yes } type = foreignminister which = 110200 } # Ion Mitilescu
+		command = { trigger = { ai = yes } type = armamentminister which = 110209 } # Ion Lapedatu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110190 } # Alexandru Averescu
+	}
+}
+
+# Death of King Ferdinand
+event = {
+	id = 13321811
+	country = ROM
+
+	trigger = { 
+		OR = {
+			minister = 110159
+			minister = 110160
+		}
+	}
+
+	date = { day = 20 month = july year = 1927 }
+	deathdate = { day = 21 month = july year = 1927 }
+	offset = 1
+
+	name = "Death of King Ferdinand"
+	desc = "Ferdinand died in Sinaia in 1927, and was succeeded by his grandson Michael I, under a regency. The regency had three members, one of whom was Ferdinand's second son, Prince Nicholas."
+	picture = "minister_died2"
+	style = 2
+
+	action = {
+		name = "May the King rest in peace"
+		command = { trigger = { not = { minister = 110013 } } type = wakeminister which = 110013 }
+		command = { type = headofstate which = 110013 } # Mihai I
+		command = { type = sleepminister which = 110159 }
+		command = { type = sleepminister which = 110160 }
+		command = { type = sleepminister which = 110120 }
+	}
+}
+
+# Death of Ion Bratianu
+event = {
+	id = 13321812
+	country = ROM
+
+	trigger = { minister = 110196 }
+
+	date = { day = 24 month = november year = 1927 }
+	deathdate = { day = 25 month = november year = 1927 }
+	offset = 1	
+
+	name = "Death of Ion Bratianu"
+	desc = "Ion I.C. Bratianu died in Bucharest, from complications of laryngitis, and was replaced as Prime Minister by his brother Vintila Bratianu until the calling of elections."
+	picture = "minister_died2"
+	style = 2
+
+	action = {
+		name = "Rest in peace"
+		command = { trigger = { incabinet = 110196 } type = headofgovernment which = 110200 } # Vintila Bratianu
+		command = { trigger = { incabinet = 110205 } type = foreignminister which = 110003 } # Nicolae Titulescu
+		command = { type = sleepminister which = 110196 }
+		command = { type = sleepminister which = 110205 }
+		command = { type = sleepminister which = 110181 }
+	}
+}
+
+# 1928 General Elections
+event = {
+	id = 13321813
+	country = ROM
+	save_date = yes
+	trigger = { 
+		government = democratic 
+		NOT = { ispuppet = ROM }
+		event = { id = 13321810 days = 360 }
+	}
+
+	date = { day = 10 month = november year = 1928 }
+	deathdate = { day = 10 month = november year = 1929 }
+	offset = 2
+
+	name = "ELECTION_TITLE"
+	desc = "General elections were held in Romania in December 1928. The Chamber of Deputies was elected on 12 December, whilst the Senate was elected in three stages on 15, 17 and 19 December. The result was a victory for the National Peasants' Party-led alliance, which won 348 of the 387 seats in the Chamber of Deputies and 105 of the 110 seats in the Senate."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110031
+					}
+				}
+			}
+		}
+		name = "National Peasants' Party wins"
+		ai_chance = 98
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110200 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { trigger = { not = { minister = 110031 } } type = wakeminister which = 110031 }
+		command = { trigger = { ai = yes not = { minister = 110206 } } type = wakeminister which = 110206 }
+		command = { trigger = { ai = yes not = { minister = 110177 } } type = wakeminister which = 110177 }
+		command = { trigger = { ai = yes not = { minister = 110218 } } type = wakeminister which = 110218 }
+		command = { type = headofgovernment which = 110031 } # Iuliu Maniu
+		command = { trigger = { ai = yes } type = foreignminister which = 110206 } # Gheorghe Minorescu
+		command = { trigger = { ai = yes } type = armamentminister which = 110177 } # Mihai Popovici
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110218 } # Alexandru Vaida-Voevod
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110200
+					}
+				}
+			}
+		}
+		name = "National Liberal Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110031 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 110200 } } type = wakeminister which = 110200 }
+		command = { trigger = { ai = yes not = { minister = 110003 } } type = wakeminister which = 110003 }
+		command = { trigger = { ai = yes not = { minister = 110178 } } type = wakeminister which = 110178 }
+		command = { trigger = { ai = yes not = { minister = 110215 } } type = wakeminister which = 110215 }
+		command = { type = headofgovernment which = 110200 } # Vintila Bratianu
+		command = { trigger = { ai = yes } type = foreignminister which = 110003 } # Nicolae Titulescu
+		command = { trigger = { ai = yes } type = armamentminister which = 110178 } # Vintila Bratianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110215 } # Ion G. Duca
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110151
+					}
+				}
+			}
+		}
+		name = "National Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 } 
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110200 incabinet = 110031 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110151 } } type = wakeminister which = 110151 }
+		command = { trigger = { ai = yes not = { minister = 110203 } } type = wakeminister which = 110203 }
+		command = { trigger = { ai = yes not = { minister = 110209 } } type = wakeminister which = 110209 }
+		command = { trigger = { ai = yes not = { minister = 110190 } } type = wakeminister which = 110190 }
+		command = { type = headofgovernment which = 110151 } # Alexandru Averescu
+		command = { trigger = { ai = yes } type = foreignminister which = 110203 } # Ion Mitilineu
+		command = { trigger = { ai = yes } type = armamentminister which = 110209 } # Ion Lapedatu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110190 } # Alexandru Averescu
+	}
+}
+
+# The return of Carol II
+event = {
+	id = 13321818
+	country = ROM
+
+	# triggered by 13321815	
+
+	name = "The return of Carol II"	
+	desc = "Returning to the country unexpectedly on 7 June 1930, Carol reneged on the renunciation and was proclaimed King the following day, replacing his son (Michael) on the throne."
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 110011 } } type = wakeminister which = 110011 }
+		command = { type = headofstate which = 110011 }
+	}
+}
+
+# 1931 General Elections
+event = {
+	id = 13321814
+	country = ROM
+	save_date = yes
+	trigger = { 
+		government = democratic
+		NOT = { ispuppet = ROM }
+		event = { id = 13321813 days = 1080 }
+	}
+
+	date = { day = 5 month = june year = 1931 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 2
+
+	name = "ELECTION_TITLE"
+	desc = "General elections were held in Romania in June 1931. The Chamber of Deputies was elected on 1 June, whilst the Senate was elected in three stages on 4, 6 and 8 June. The result was a victory for the National Union, an alliance of the National Party, the National Liberal Party, the German Party, the Agrarian Union Party, the Vlad Tepes League and several other parties."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		name = "National Union wins"
+		ai_chance = 98
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110200 incabinet = 110031 incabinet = 110151 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110202 } } type = wakeminister which = 110202 }
+		command = { trigger = { ai = yes not = { minister = 110208 } } type = wakeminister which = 110208 }
+		command = { trigger = { ai = yes not = { minister = 110176 } } type = wakeminister which = 110176 }
+		command = { trigger = { ai = yes not = { minister = 110194 } } type = wakeminister which = 110194 }
+		command = { type = headofgovernment which = 110202 } # Nicolae Iorga
+		command = { trigger = { ai = yes } type = foreignminister which = 110208 } # Dimitrie I.G. Ghica
+		command = { trigger = { ai = yes } type = armamentminister which = 110176 } # Constantin Argetoianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110194 } # Constantin Argetoianu
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110031
+					}
+				}
+			}
+		}
+		name = "National Peasants' Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110200 incabinet = 110151 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { trigger = { not = { minister = 110031 } } type = wakeminister which = 110031 }
+		command = { trigger = { ai = yes not = { minister = 110206 } } type = wakeminister which = 110206 }
+		command = { trigger = { ai = yes not = { minister = 110177 } } type = wakeminister which = 110177 }
+		command = { trigger = { ai = yes not = { minister = 110216 } } type = wakeminister which = 110216 }
+		command = { type = headofgovernment which = 110031 } # Iuliu Maniu
+		command = { trigger = { ai = yes } type = foreignminister which = 110208 } # Gheorghe Mironescu
+		command = { trigger = { ai = yes } type = armamentminister which = 110177 } # Mihai Popovici
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110216 } # Alexandru Vaida-Voevod
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110151
+					}
+				}
+			}
+		}
+		name = "People's Party wins"
+		ai_chance = 1
+		command = { type = dissent value = -3 } 
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110200 incabinet = 110031 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { trigger = { not = { minister = 110151 } } type = wakeminister which = 110151 }
+		command = { trigger = { ai = yes not = { minister = 110200 } } type = wakeminister which = 110200 }
+		command = { trigger = { ai = yes not = { minister = 110206 } } type = wakeminister which = 110206 }
+		command = { trigger = { ai = yes not = { minister = 110190 } } type = wakeminister which = 110190 }
+		command = { type = headofgovernment which = 110151 } # Alexandru Avarescu
+		command = { trigger = { ai = yes } type = foreignminister which = 110203 } # Ion Mitilineu
+		command = { trigger = { ai = yes } type = armamentminister which = 110209 } # Ion Lapedatu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110190 } # Alexandru Avarescu
+	}
+
+	#action = {
+		#name = "National Liberal Party - Bratianu wins"
+		#TODO
+}
+
+# Nicolae Iorga resigns
+event = {
+	id = 13321816
+	country = ROM
+
+	trigger = {
+		incabinet = 110202
+		local_flag = depression
+	}
+
+	date = { day = 5 month = june year = 1932 }
+	deathdate = { day = 5 month = june year = 1933 }
+	offset = 2
+
+	name = "Nicolae Iorga resigns"
+	desc = "The major issue facing Iorga was the economic crisis, part of the Great Depression, and he was largely unsuccessful in tackling it. Nicolae Iorga presented his cabinet's resignation in May 1932, returning to academic life."
+	picture = "minister_resign"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = dissent value = 2 }
+		command = { trigger = { not = { minister = 110197 } } type = wakeminister which = 110197 }
+		command = { trigger = { not = { minister = 110141 } } type = wakeminister which = 110141 }
+		command = { trigger = { not = { minister = 110220 } } type = wakeminister which = 110220 }
+		command = { trigger = { not = { minister = 110216 } } type = wakeminister which = 110216 }
+		command = { type = headofgovernment which = 110197 } # Alexandru Vaida-Voevod
+		command = { type = foreignminister which = 110141 } # Alexandru Vaida-Voevod
+		command = { type = armamentminister which = 110220 } # Gheorghe Minorescu
+		command = { type = ministerofsecurity which = 110216 } # Alexandru Vaida-Voevod
+	}
+}
+
+# 1932 General Elections
+event = {
+	id = 13321817
+	country = ROM
+	save_date = yes
+	trigger = { 
+		government = democratic 
+		NOT = { ispuppet = ROM }
+		event = { id = 13321814 days = 360 }
+	}
+
+	date = { day = 26 month = july year = 1932 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 1
+
+	name = "ELECTION_TITLE"
+	desc = "General elections were held in Romania in July 1932. The Chamber of Deputies was elected on 17 July, whilst the Senate was elected in three stages on 20, 24 and 26 July. The result was a victory for the National Peasants' Party-German Party alliance, which won 274 of the 387 seats in the Chamber of Deputies and 104 of the 113 seats in the Senate."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110197
+					}
+				}
+			}
+		}
+		name = "National Peasants' Party - German Party alliance wins"
+		ai_chance = 99
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 50 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 50 }
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110202 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { trigger = { not = { minister = 110197 } } type = wakeminister which = 110197 }
+		command = { trigger = { ai = yes not = { minister = 110141 } } type = wakeminister which = 110141 }
+		command = { trigger = { ai = yes not = { minister = 110220 } } type = wakeminister which = 110220 }
+		command = { trigger = { ai = yes not = { minister = 110216 } } type = wakeminister which = 110216 }
+		command = { type = headofgovernment which = 110197 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = foreignminister which = 110141 } # Alexandru Vaida-Voevod
+		command = { trigger = { ai = yes } type = armamentminister which = 110220 } # Gheorghe Minorescu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110216 } # Alexandru Vaida-Voevod
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 110200
+					}
+				}
+			}
+		}
+		name = "National Liberal Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 or = { incabinet = 110151 incabinet = 110202 incabinet = 110031 } } } type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 110200 } } type = wakeminister which = 110200 }
+		command = { trigger = { ai = yes not = { minister = 110003 } } type = wakeminister which = 110003 }
+		command = { trigger = { ai = yes not = { minister = 110178 } } type = wakeminister which = 110178 }
+		command = { trigger = { ai = yes not = { minister = 110215 } } type = wakeminister which = 110215 }
+		command = { type = headofgovernment which = 110200 } # Vintila Bratianu
+		command = { trigger = { ai = yes } type = foreignminister which = 110003 } # Nicolae Titulescu
+		command = { trigger = { ai = yes } type = armamentminister which = 110178 } # Vintila Bratianu
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 110215 } # Ion G. Duca
+	}
+
+	action = {
+		name = "The Iron Guard is in power!"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofstate which = 110016 } # Corneliu Codreanu
+		command = { type = headofgovernment which = 110155 } # Corneliu Codreanu
+		#TODO rest of cabinet
+	}
+}

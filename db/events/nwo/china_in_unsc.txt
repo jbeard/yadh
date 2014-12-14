@@ -1,0 +1,204 @@
+### China in United Nations Security Council
+
+# If Communist China is the only China, they automatically get the place
+
+event = {
+	id = 8207000
+	country = CHC
+
+	name = EVT_8207000_NAME
+	desc = EVT_8207000_DESC
+	picture = "nwo\communist_china_in_unsc"
+	style = 1
+	
+	trigger = {
+		NOT = { exists = CHI }
+		NOT = { exists = UCH }
+		atwar = no
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8207000_A
+		command = { type = setflag which = CHC_in_UNSC }
+	}                                                           
+}
+
+# If Nationalists retreat to Taiwan, the US have the possibility to withdraw their support for them
+
+event = {
+	id = 8207001
+	country = USA
+
+	name = EVT_8207001_NAME
+	desc = EVT_8207001_DESC
+	picture = "nwo\communist_china_in_unsc"
+	decision_picture = "nwo\d_communist_china_in_unsc"
+	style = 1
+	
+	decision = {
+		exists = CHC
+		exists = CHI
+		NOT = { exists = UCH }
+		flag = CHC_won_civil_war
+		NOT = { flag = CHC_in_UNSC }
+	}
+	
+	trigger = {
+		exists = CHC
+		exists = CHI
+		NOT = { exists = UCH }
+		flag = CHC_won_civil_war
+		NOT = { flag = CHC_in_UNSC }
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8207001_A
+		ai_chance = 1
+		command = { type = trigger which = 8207002 }
+		command = { type = relation which = CHC value = 200 }
+	}  
+	
+	action = {
+		name = EVT_8207001_B
+		ai_chance = 99
+		trigger = { ai = yes }
+		command = { type = money value = -1 }
+	}	
+}
+
+event = {
+	id = 8207002
+	country = CHC
+
+	name = EVT_8207002_NAME
+	desc = EVT_8207002_DESC
+	picture = "nwo\communist_china_in_unsc"
+	style = 1
+
+	action = {
+		name = EVT_8207002_A
+		ai_chance = 1
+		command = { type = setflag which = CHC_in_UNSC }
+		command = { type = dissent value = -5 }
+	}  
+}
+
+### Soviet boycott of UNSC meetings (has influence on Korean War)
+
+event = {
+	id = 8207003
+	country = SOV
+
+	name = EVT_8207003_NAME
+	desc = EVT_8207003_DESC
+	picture = "nwo\soviet_boycott_of_unsc"
+	decision_picture = "nwo\d_soviet_boycott_of_unsc"
+	style = 1
+	
+	decision = {
+		exists = CHC
+		exists = CHI
+		NOT = { exists = UCH }
+		flag = CHC_won_civil_war
+		NOT = { flag = CHC_in_UNSC }
+	}
+	
+	trigger = {
+		exists = CHC
+		exists = CHI
+		NOT = { exists = UCH }
+		flag = CHC_won_civil_war
+		NOT = { flag = CHC_in_UNSC }
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 30 month = july year = 1950 }
+
+	action = {
+		name = EVT_8207003_A
+		ai_chance = 95
+		command = { type = trigger which = 8207004 }
+		command = { type = setflag which = un_soviet_boycott }
+	}  
+	
+	action = {
+		name = EVT_8207003_B
+		ai_chance = 5
+		trigger = { ai = yes }
+		command = { type = money value = -1 }
+	}	
+}
+
+event = {
+	id = 8207004
+	country = USA
+
+	name = EVT_8207004_NAME
+	desc = EVT_8207004_DESC
+	picture = "nwo\soviet_boycott_of_unsc"
+	style = 1
+
+	action = {
+		name = EVT_8207004_A
+		ai_chance = 99
+		command = { type = relation which = CHC value = -100 }
+		command = { type = relation which = SOV value = -20 }
+	}  
+	
+	# Invite Mao to UNSC
+	action = {
+		name = EVT_8207004_B
+		ai_chance = 1
+		command = { type = trigger which = 8207002 }
+		command = { type = clrflag which = un_soviet_boycott }
+		command = { type = relation which = CHC value = 200 }
+		command = { type = relation which = SOV value = 50 }
+	}	
+}
+
+event = {
+	id = 8207005
+	country = SOV
+
+	name = EVT_8207005_NAME
+	desc = EVT_8207005_DESC
+	picture = "nwo\soviet_boycott_of_unsc"
+	decision_picture = "nwo\d_soviet_boycott_of_unsc"
+	style = 1
+	
+	decision = {
+		flag = un_soviet_boycott
+	}
+	
+	trigger = {
+		flag = un_soviet_boycott
+	}
+
+	date = { day = 0 month = september year = 1950 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	# End boycott
+	action = {
+		name = EVT_8207005_A
+		ai_chance = 100
+		command = { type = clrflag which = un_soviet_boycott }
+	}  
+	
+	# Continue
+	action = {
+		name = EVT_8207005_B
+		ai_chance = 0
+		trigger = { ai = yes }
+		command = { type = dissent value = 1 }
+	}	
+}

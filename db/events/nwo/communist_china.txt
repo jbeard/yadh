@@ -1,0 +1,1750 @@
+event = {
+	id = 8002801
+	country = CHC
+
+	name = "EVT_BIRTHDAY_NAME"
+	desc = "EVT_BIRTHDAY_DESC"
+	picture = "nwo\birthday"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = "EVT_HAPPYBIRTHDAY"
+		ai_chance = 100
+		command = { type = headofstate which = 51300 } # Mao Zedong
+		command = { type = headofgovernment which = 51301 } # Mao Zedong
+	}
+}
+
+event = {
+	id = 8002802
+	country = CHC
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 51019 } # Li Kenong
+		command = { type = armamentminister which = 51025 } # Wang Fengbo
+		command = { type = ministerofsecurity which = 51033 } # Gao Xue
+		command = { type = ministerofintelligence which = 51040 } # Xie Juezai
+	}
+}
+
+event = {
+	id = 8002803
+	country = CHC
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofgovernment which = 51051 } # Zhou Enlai
+		command = { type = foreignminister which = 51052 } # Zhou Enlai
+		command = { type = armamentminister which = 51053 } # Peng Dehuai
+		command = { type = ministerofsecurity which = 51054 } # Ren Bishi
+		command = { type = ministerofintelligence which = 51055 } # Peng Zhen
+	}
+}
+
+event = {
+	id = 8002804
+	country = CHC
+
+	name = "EVT_BIRTHDAY_NAME"
+	desc = "EVT_BIRTHDAY_DESC"
+	picture = "nwo\birthday"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = "EVT_HAPPYBIRTHDAY"
+		ai_chance = 100
+		command = { type = headofstate which = 51302 } # Mao Zedong
+		command = { type = headofgovernment which = 51303 } # Mao Zedong
+	}
+}
+
+event = {
+	id = 8002805
+	country = CHC
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 51052 } # Zhou Enlai
+		command = { type = armamentminister which = 51053 } # Peng Dehuai
+		command = { type = ministerofsecurity which = 51128 } # Luo Ruiqing
+		command = { type = ministerofintelligence which = 51061 } # Bo Yibo
+	}
+}
+
+event = {
+	id = 8002806
+	country = CHC
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 51056 } # Chen Yi
+		command = { type = armamentminister which = 51057 } # Lin Biao
+		command = { type = ministerofsecurity which = 51060 } # Zeng Shan
+		command = { type = ministerofintelligence which = 51062 } # Li Xiannian
+	}
+}
+
+event = {
+	id = 8002807
+	country = CHC
+
+	name = "EVT_BIRTHDAY_NAME"
+	desc = "EVT_BIRTHDAY_DESC"
+	picture = "nwo\birthday"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = "EVT_HAPPYBIRTHDAY"
+		ai_chance = 100
+		command = { type = headofstate which = 51304 } # Mao Zedong
+		command = { type = headofgovernment which = 51305 } # Mao Zedong
+	}
+}
+
+event = {
+	id = 8002808
+	country = CHC
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 51056 } # Chen Yi
+		command = { type = armamentminister which = 51057 } # Lin Biao
+		command = { type = ministerofsecurity which = 51129 } # Xie Fuzhi
+		command = { type = ministerofintelligence which = 51062 } # Li Xiannian
+	}
+}
+
+event = {
+	id = 8002809
+	country = CHC
+
+	name = EVT_8002809_NAME
+	desc = EVT_8002809_DESC
+	picture = nwo\mao_zedong_death
+	style = 1
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = EVT_8002809_A
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 10 }
+		
+		command = { type = headofstate which = 51311 } # Hua Guofeng
+		command = { type = headofgovernment which = 51312 } # Hua Guofeng
+		
+		command = { type = sleepminister which = 51001 } # Mao Zedong
+		command = { type = sleepminister which = 51002 } # Mao Zedong
+		command = { type = sleepminister which = 51031 } # Mao Zedong
+		command = { type = sleepminister which = 51177 } # Mao Zedong
+		command = { type = sleepminister which = 51182 } # Mao Zedong
+		command = { type = sleepminister which = 51300 } # Mao Zedong
+		command = { type = sleepminister which = 51301 } # Mao Zedong
+		command = { type = sleepminister which = 51302 } # Mao Zedong
+		command = { type = sleepminister which = 51303 } # Mao Zedong
+		command = { type = sleepminister which = 51304 } # Mao Zedong
+		command = { type = sleepminister which = 51305 } # Mao Zedong
+		
+		command = { type = headofstate which = 51311 } # Hua Guofeng
+		command = { type = headofgovernment which = 51312 } # Hua Guofeng
+	}
+}
+
+event = {
+	id = 8002810
+	country = CHC
+
+	name = EVT_8002810_NAME
+	desc = EVT_8002810_DESC
+	picture = nwo\deng_xiaoping
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = EVT_8002810_A
+		ai_chance = 95
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 51313 } # Deng Xiaoping
+		
+		command = { type = sleepminister which = 51185 } # Jiang Qing / Madame Mao
+		command = { type = sleepminister which = 51311 } # Hua Guofeng
+		
+		command = { type = sleepminister which = 51326 } # Zhang Chunqiao
+		command = { type = sleepminister which = 51327 } # Jiang Qing
+	}
+	
+	action = {
+		name = EVT_8002810_B # Leave Hua in power
+		ai_chance = 4
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = dissent value = 10 }
+		
+		command = { type = sleepminister which = 51313 } # Deng Xiaoping
+		command = { type = sleepminister which = 51185 } # Jiang Qing / Madame Mao
+		
+		command = { type = sleepminister which = 51326 } # Zhang Chunqiao
+		command = { type = sleepminister which = 51327 } # Jiang Qing
+		
+	}
+	
+	action = {
+		name = EVT_8002810_C # Gang of Four succeeds
+		ai_chance = 1
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = dissent value = 20 }
+		
+		command = { type = sleepminister which = 51313 } # Deng Xiaoping
+		command = { type = ministerofsecurity which = 51185 } # Jiang Qing / Madame Mao
+		command = { type = sleepminister which = 51311 } # Hua Guofeng
+		command = { type = sleepminister which = 51312 } # Hua Guofeng
+		
+		command = { type = headofstate which = 51326 } # Zhang Chunqiao
+		command = { type = headofgovernment which = 51327 } # Jiang Qing
+	}
+}
+
+event = {
+	id = 8002811
+	country = CHC
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+		headofstate = 51313
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 51314 } # Zhao Ziyang
+		command = { type = sleepminister which = 51312 } # Hua Guofeng
+	}
+}
+
+event = {
+	id = 8002812
+	country = CHC
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+		headofstate = 51313
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 51315 } # Li Peng
+	}
+}
+
+### Chinese reforms
+
+event = {
+	id = 8002813
+	country = CHC
+	
+	name = EVT_8002813_NAME
+	desc = EVT_8002813_DESC
+	picture = "nwo\china_land_reform"
+	style = 1
+
+	trigger = {
+		government = communist
+		flag = CHC_won_civil_war
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8002813_A
+		ai_chance = 95
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = industrial_modifier which = total value = 4 }
+	}
+
+	action = {
+		name = EVT_8002813_B
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 8002814
+	country = CHC
+
+	name = EVT_8002814_NAME
+	desc = EVT_8002814_DESC
+	picture = "nwo\chinese_anti_campaigns"
+	style = 1
+
+	trigger = {
+		government = communist
+		flag = CHC_won_civil_war
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8002814_A
+		ai_chance = 95
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = industrial_modifier which = total value = 2 }
+	}
+
+	action = {
+		name = EVT_8002814_B
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 8002815
+	country = CHC
+
+	name = EVT_8002815_NAME
+	desc = EVT_8002815_DESC
+	picture = "nwo\chinese_anti_campaigns"
+	style = 1
+	
+	trigger = {
+		government = communist
+		flag = CHC_won_civil_war
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8002815_A
+		ai_chance = 95
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = industrial_modifier which = total value = 2 }
+	}
+
+	action = {
+		name = EVT_8002815_B
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 8002816
+	country = CHC
+	
+	name = EVT_8002816_NAME
+	desc = EVT_8002816_DESC
+	picture = "nwo\great_leap_forward"
+	style = 1
+
+	trigger = {
+		government = communist
+		flag = CHC_won_civil_war
+	}
+
+	date = { day = 1 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8002816_A
+		ai_chance = 95
+		command = { type = industrial_modifier which = total value = 3 }
+	}
+
+	action = {
+		name = EVT_8002816_B
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 8002817 }
+	}
+}
+
+event = {
+	id = 8002817
+	country = CHC
+
+	name = EVT_8002817_NAME
+	desc = EVT_8002817_DESC
+	picture = "nwo\iron_furnaces"
+	style = 1
+
+	trigger = {
+		government = communist
+		event = 8002816
+	}
+
+	date = { day = 1 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8002817_A
+		command = { type = industrial_modifier which = total value = -12 }
+		command = { type = dissent value = 10 }
+		command = { type = relative_manpower value = -50 }
+	}
+
+}
+
+### Sino-Soviet tensions
+
+event = {
+	id = 8002818
+	country = CHC
+
+	name = EVT_8002818_NAME
+	desc = EVT_8002818_DESC
+	picture = "nwo\mao_with_khrushchev"
+	style = 1
+
+	trigger = {
+		government = communist
+		flag = CHC_won_civil_war
+		flag = cold_war
+		exists = SOV
+		event = 8014217 # Destalinization
+	}
+
+	date = { day = 1 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# 8014224: U2 incident increases chance by 10 pts
+	# 8500213: Historical end of Cuban Missile Crisis: by 25 pts
+	# 8229020 or 8229030: Chinese victory against India: by 15 pts	
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 50
+		trigger = {
+			NOT = {
+				event = 8014224
+				event = 8500213
+				event = 8229020 event = 8229030
+			}
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 60
+		trigger = {
+			event = 8014224
+			NOT = {
+				event = 8500213
+				event = 8229020 event = 8229030
+			}
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 75
+		trigger = {
+			event = 8500213
+			NOT = {
+				event = 8014224
+				event = 8229020 event = 8229030
+			}
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 65
+		trigger = {
+			OR = { event = 8229020 event = 8229030 }
+			NOT = {
+				event = 8014224
+				event = 8500213
+			}
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 85
+		trigger = {
+			NOT = { event = 8229020 event = 8229030 }
+			AND = {
+				event = 8014224
+				event = 8500213
+			}
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 90
+		trigger = {
+			NOT = { event = 8014224 }
+			AND = {
+				OR = { event = 8229020 event = 8229030 }
+				event = 8500213
+			}
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 75
+		trigger = {
+			NOT = { event = 8500213 }
+			AND = {
+				OR = { event = 8229020 event = 8229030 }
+				event = 8014224
+			}
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_A
+		ai_chance = 100
+		trigger = {
+			event = 8500213
+			OR = { event = 8229020 event = 8229030 }
+			event = 8014224
+		}
+		command = { trigger = { alliance = { country = CHC country = SOV } } type = leave_alliance }
+		command = { type = end_access which = SOV }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = sino_soviet_split }
+	}
+	
+	action = {
+		name = EVT_8002818_B
+		ai_chance = 8
+		command = { type = dissent value = -3 }
+	}
+	
+	action = {
+		name = EVT_8002818_C
+		ai_chance = 2
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 8002819 }
+	}
+
+}
+
+event = { # Response to the military alliance offer
+	id = 8002819
+	country = SOV
+
+	name = EVT_8002819_NAME
+	desc = EVT_8002819_DESC
+	picture = "nwo\mao_with_khrushchev"
+	style = 1
+	
+	action = {
+		name = EVT_8002819_A
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+		command = { type = relation which = CHC value = -100 }
+	}
+	
+	action = {
+		name = EVT_8002819_B
+		ai_chance = 20
+		trigger = {
+			OR = {
+				NOT = { ai = yes }
+				domestic = { type = interventionism value = 3 }
+			}
+		}
+		command = { type = dissent value = 3 }
+		command = { type = alliance which = CHC }
+		command = { type = relation which = CHC value = 100 }
+		command = { type = belligerence value = 50 }
+	}
+
+}
+
+### Cultural revolution
+
+event = {
+	id = 8002820
+	country = CHC
+
+	name = EVT_8002820_NAME
+	desc = EVT_8002820_DESC
+	picture = nwo\cultural_revolution
+	style = 1
+
+	trigger = {
+		atwar = no
+		OR = {
+			headofstate = 51001
+			headofstate = 51300
+			headofstate = 51302
+			headofstate = 51304
+		}
+	}
+
+	date = { day = 1 month = january year = 1966 }
+	offset = 720
+	deathdate = { day = 29 month = december year = 1972 }
+
+	action = {
+		name = EVT_8002820_A
+		command = { type = industrial_modifier which = total value = -20 }
+		command = { type = dissent value = 30 }
+	}
+
+}
+
+### Sino-Soviet border conflict
+
+event = {
+	id = 8002821
+	country = CHC
+
+	name = EVT_8002821_NAME
+	desc = EVT_8002821_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	trigger = {
+		atwar = no
+		exists = SOV
+		flag = cold_war
+		flag = sino_soviet_split
+	}
+
+	date = { day = 1 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1968 }
+
+	action = {
+		name = EVT_8002821_A # Put demands forward!
+		ai_chance = 95
+		command = { type = dissent value = -8 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = addcore which = 1104 }
+		command = { type = addclaim which = 1191 }
+		command = { type = addclaim which = 1192 }
+		command = { type = addclaim which = 1193 }
+		command = { type = addclaim which = 1194 }
+		command = { type = addclaim which = 1195 }
+		command = { type = addclaim which = 1196 }
+		command = { type = addclaim which = 1190 }
+		command = { type = addclaim which = 1185 }
+	}
+	
+	action = {
+		name = EVT_8002821_B
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8002822 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+event = {
+	id = 8002822
+	country = SOV
+
+	name = EVT_8002822_NAME
+	desc = EVT_8002822_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	trigger = {
+		NOT = { war = { country = CHC country = SOV } }
+		exists = CHC
+		flag = cold_war
+		flag = sino_soviet_split
+		event = 8002821
+	}
+
+	date = { day = 1 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1968 }
+
+	action = {
+		name = EVT_8002822_A # Refuse and amass troops at the border
+		ai_chance = 95
+		command = { type = dissent value = -8 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = CHC value = -120 }
+	}
+	
+	action = {
+		name = EVT_8002822_B # Give in to demands
+		command = { type = dissent value = 8 }
+		command = { type = sleepevent which = 8002823 }
+		command = { type = secedeprovince which = CHC value = 1104 when = 1 }
+		command = { type = relation which = CHC value = 50 }
+	}
+
+}
+
+### Border clashes
+
+event = {
+	id = 8002823
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		NOT = { war = { country = CHC country = SOV } }
+		event = 8002822
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1969 }
+	offset = 180
+	deathdate = { day = 29 month = june year = 1969 }
+
+	action = {
+		name = EVT_8002823_A # Chinese gain an upper hand
+		ai_chance = 5
+		command = { type = trigger which = 8002824 }
+	}
+	
+	action = {
+		name = EVT_8002823_B # Clashes are inconclusive
+		ai_chance = 90
+		command = { type = trigger which = 8002826 }
+		command = { type = trigger which = 8002827 }
+	}
+	
+	action = {
+		name = EVT_8002823_C # Soviets gain an upper hand
+		ai_chance = 5
+		command = { type = trigger which = 8002828 }
+	}
+
+}
+
+event = {
+	id = 8002824
+	country = CHC
+
+	name = EVT_8002824_NAME
+	desc = EVT_8002824_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	action = {
+		name = EVT_8002824_A # We achieved immediate goals
+		ai_chance = 95
+		command = { type = dissent value = -8 } 
+		command = { trigger = { control = { province = 1104 data = SOV } } type = secedeprovince which = CHC value = 1104 when = 2 }
+		command = { type = removeclaim which = 1191 }
+		command = { type = removeclaim which = 1192 }
+		command = { type = removeclaim which = 1193 }
+		command = { type = removeclaim which = 1194 }
+		command = { type = removeclaim which = 1195 }
+		command = { type = removeclaim which = 1196 }
+		command = { type = removeclaim which = 1190 }
+		command = { type = removeclaim which = 1185 }
+	}
+	
+	action = {
+		name = EVT_8002824_B # Under the guidance of Mao, go further!
+		ai_chance = 5
+		command = { type = trigger which = 8002825 }
+		command = { type = dissent value = -10 }
+	}
+	
+}
+
+event = {
+	id = 8002825
+	country = SOV
+
+	name = EVT_8002825_NAME
+	desc = EVT_8002825_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	action = {
+		name = EVT_8002825_A # Then it is war
+		ai_chance = 55
+		command = { type = war which = SOV }
+	}
+	
+	action = {
+		name = EVT_8002825_B # Withdraw
+		ai_chance = 45
+		command = { type = dissent value = 15 }
+		command = { type = secedeprovince which = CHC value = 1104 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1191 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1192 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1193 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1194 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1195 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1196 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1190 when = 1 }
+		command = { type = secedeprovince which = CHC value = 1185 when = 1 }
+	}
+	
+}
+
+event = {
+	id = 8002826
+	country = SOV
+
+	name = EVT_8002826_NAME
+	desc = EVT_8002826_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	action = {
+		name = EVT_8002826_A
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = CHC value = 1104 when = 1 }
+	}
+	
+}
+
+event = {
+	id = 8002827
+	country = CHC
+
+	name = EVT_8002827_NAME
+	desc = EVT_8002827_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	action = {
+		name = EVT_8002827_A
+		command = { type = dissent value = 5 }
+		command = { type = removeclaim which = 1191 }
+		command = { type = removeclaim which = 1192 }
+		command = { type = removeclaim which = 1193 }
+		command = { type = removeclaim which = 1194 }
+		command = { type = removeclaim which = 1195 }
+		command = { type = removeclaim which = 1196 }
+		command = { type = removeclaim which = 1190 }
+		command = { type = removeclaim which = 1185 }
+	}
+	
+}
+
+event = {
+	id = 8002828
+	country = SOV
+
+	name = EVT_8002828_NAME
+	desc = EVT_8002828_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	action = {
+		name = EVT_8002828_A # We achieved immediate goals
+		ai_chance = 99
+		command = { type = dissent value = -8 } 
+		command = { trigger = { control = { province = 1202 data = CHC } } type = secedeprovince which = SOV value = 1202 when = 2 }
+		command = { trigger = { control = { province = 1204 data = CHC } } type = secedeprovince which = SOV value = 1204 when = 2 }
+		command = { type = addclaim which = 1202 }
+		command = { type = addclaim which = 1204 }
+	}
+	
+	action = {
+		name = EVT_8002828_B # Go further!
+		ai_chance = 1
+		command = { type = trigger which = 8002829 }
+		command = { type = dissent value = 4 }
+		command = { type = addclaim which = 1200 }
+		command = { type = addclaim which = 1201 }
+		command = { type = addclaim which = 1197 }
+		command = { type = addclaim which = 1202 }
+		command = { type = addclaim which = 1204 }
+		command = { type = addclaim which = 1205 }
+		command = { type = addclaim which = 1212 }
+	}
+	
+}
+
+event = {
+	id = 8002829
+	country = CHC
+
+	name = EVT_8002829_NAME
+	desc = EVT_8002829_DESC
+	picture = nwo\sino_soviet_border_conflict
+	style = 1
+
+	action = {
+		name = EVT_8002829_A # Then it is war
+		ai_chance = 55
+		command = { type = war which = SOV }
+	}
+	
+	action = {
+		name = EVT_8002829_B # Withdraw
+		ai_chance = 45
+		command = { type = dissent value = 20 }
+		command = { type = secedeprovince which = SOV value = 1200 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1201 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1197 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1202 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1204 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1205 when = 1 }
+		command = { type = secedeprovince which = SOV value = 1212 when = 1 }
+		command = { type = removeclaim which = 1191 }
+		command = { type = removeclaim which = 1192 }
+		command = { type = removeclaim which = 1193 }
+		command = { type = removeclaim which = 1194 }
+		command = { type = removeclaim which = 1195 }
+		command = { type = removeclaim which = 1196 }
+		command = { type = removeclaim which = 1190 }
+		command = { type = removeclaim which = 1185 }
+	}
+	
+}
+
+# Deng Xiaoping
+
+event = {
+	id = 8002830
+	country = CHC
+
+	name = EVT_8002830_NAME
+	desc = EVT_8002830_DESC
+	picture = nwo\chinese_economy
+	style = 1
+	
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 1 month = june year = 1978 }
+	offset = 720
+	deathdate = { day = 29 month = december year = 1984 }
+
+	action = {
+		name = EVT_8002830_A
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = dissent value = -5 }
+	}
+	
+}
+
+event = {
+	id = 8002831
+	country = CHC
+
+	name = EVT_8002831_NAME
+	desc = EVT_8002831_DESC
+	picture = nwo\chinese_economy
+	style = 1
+	
+	decision = {
+		headofstate = 51313
+		atwar = no
+	}
+	
+	decision_trigger = {
+		headofstate = 51313
+		atwar = no
+		NOT = { domestic = { type = political_left value = 9 } }
+	}
+	
+	trigger = {
+		headofstate = 51313
+		atwar = no
+		NOT = { domestic = { type = political_left value = 9 } }
+	}
+
+	date = { day = 1 month = june year = 1982 }
+	offset = 1080
+	deathdate = { day = 29 month = december year = 1988 }
+
+	action = {
+		name = EVT_8002831_A
+		command = { type = industrial_modifier which = total value = 15 }
+		command = { type = dissent value = 5 }
+	}
+	
+}
+
+### Return of Hongkong
+
+event = {
+	id = 8002832
+	country = CHC
+
+	name = EVT_8002832_NAME
+	desc = EVT_8002832_DESC
+	picture = nwo\chinese_hongkong
+	decision_picture = nwo\d_chinese_hongkong
+	style = 1
+	
+	decision = {
+		control = { province = 1371 data = ENG }
+	}
+	
+	decision_trigger = {
+		atwar = no
+		control = { province = 1371 data = ENG }
+	}
+	
+	trigger = {
+		atwar = no
+		control = { province = 1371 data = ENG }
+	}
+
+	date = { day = 1 month = june year = 1984 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1991 }
+
+	action = {
+		name = EVT_8002832_A
+		ai_chance = 93
+		command = { type = trigger which = 8002833 }
+		command = { type = dissent value = -5 }
+		command = { type = addcore which = 1371 }
+		command = { type = addcore which = 1372 }
+	}
+	
+	action = {
+		name = EVT_8002832_B # We want it and we want it NOW
+		ai_chance = 5
+		trigger = { headofstate = 51313 }
+		command = { type = trigger which = 8002834 }
+		command = { type = belligerence value = 5 }
+		command = { type = addcore which = 1371 }
+		command = { type = addcore which = 1372 }
+	}
+	
+	action = {
+		name = EVT_8002832_B # We want it and we want it NOW
+		ai_chance = 93
+		trigger = { NOT = { headofstate = 51313 } }
+		command = { type = trigger which = 8002834 }
+		command = { type = belligerence value = 5 }
+		command = { type = addcore which = 1371 }
+		command = { type = addcore which = 1372 }
+	}
+	
+	action = {
+		name = EVT_8002832_C # We have other priorities
+		trigger = { ai = yes }
+		ai_chance = 2
+		command = { type = dissent value = 2 }
+	}
+	
+}
+
+# China expects transfer in 1997
+event = {
+	id = 8002833
+	country = ENG
+
+	name = EVT_8002833_NAME
+	desc = EVT_8002833_DESC
+	picture = nwo\chinese_hongkong
+
+	action = {
+		name = EVT_8002833_A
+		ai_chance = 98
+		command = { type = relation which = CHC value = 100 }
+		command = { type = belligerence value = -10 }
+		command = { type = removecore which = 1371 }
+		command = { type = removeclaim which = 1371 }
+	}
+	
+	action = {
+		name = EVT_8002833_B
+		ai_chance = 2
+		command = { type = relation which = CHC value = -100 }
+		command = { type = belligerence value = 10 }
+		command = { type = dissent value = 5 }
+	}
+	
+}
+
+# China expects transfer now
+event = {
+	id = 8002834
+	country = ENG
+
+	name = EVT_8002834_NAME
+	desc = EVT_8002834_DESC
+	picture = nwo\chinese_hongkong
+
+	action = {
+		name = EVT_8002834_A
+		ai_chance = 60
+		command = { type = relation which = CHC value = 100 }
+		command = { type = belligerence value = -10 }
+		command = { type = secedeprovince which = CHC value = 1371 when = 1 }
+		command = { type = removecore which = 1371 }
+		command = { type = removeclaim which = 1371 }
+	}
+	
+	action = {
+		name = EVT_8002834_B
+		ai_chance = 40
+		command = { type = relation which = CHC value = -50 }
+	}
+	
+}
+
+### Tiananmen Square massacre
+
+event = {
+	id = 8002840
+	country = CHC
+
+	name = EVT_8002840_NAME
+	desc = EVT_8002840_DESC
+	picture = nwo\tiananmen_square_protests
+	
+	trigger = {
+		atwar = no
+		government = communist
+	}
+	
+	date = { day = 1 month = may year = 1989 }
+	offset = 30
+	deathdate = { day = 29 month = may year = 1989 }
+
+	action = {
+		name = EVT_8002840_A # Let them be 
+		ai_chance = 75
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 2 }
+	}
+	
+	action = {
+		name = EVT_8002840_B # Crack down on protesters
+		ai_chance = 25
+		command = { type = dissent value = 5 }		
+		command = { type = sleepevent which = 8002841 }
+		command = { type = sleepevent which = 8002842 }
+		command = { type = sleepevent which = 8002843 }
+	}
+	
+}
+
+event = {
+	id = 8002841
+	country = CHC
+
+	name = EVT_8002841_NAME
+	desc = EVT_8002841_DESC
+	picture = nwo\tiananmen_square_massacre
+	
+	trigger = {
+		atwar = no
+		government = communist
+		event = 8002840
+		random = 95
+	}
+	
+	date = { day = 1 month = july year = 1989 }
+	offset = 30
+	deathdate = { day = 29 month = july year = 1989 }
+
+	action = {
+		name = EVT_8002841_A # Crack down on protesters
+		ai_chance = 75
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 8002842 }
+		command = { type = sleepevent which = 8002843 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -3 }
+	}
+	
+	action = {
+		name = EVT_8002841_B # Let them be
+		ai_chance = 25
+		command = { type = dissent value = 20 }
+	}
+	
+}
+
+event = {
+	id = 8002842
+	country = CHC
+
+	name = EVT_8002842_NAME
+	desc = EVT_8002842_DESC
+	picture = nwo\tiananmen_square_massacre
+	
+	trigger = {
+		atwar = no
+		government = communist
+		event = 8002841
+		random = 90
+	}
+	
+	date = { day = 1 month = september year = 1989 }
+	offset = 30
+	deathdate = { day = 29 month = september year = 1989 }
+
+	action = {
+		name = EVT_8002842_A # Crack down on protesters
+		ai_chance = 80
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8002843 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -3 }
+	}
+	
+	action = {
+		name = EVT_8002842_B # Let them be
+		ai_chance = 20
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = free_market value = 3 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+	
+}
+
+event = {
+	id = 8002843
+	country = CHC
+
+	name = EVT_8002843_NAME
+	desc = EVT_8002843_DESC
+	picture = nwo\tiananmen_square_massacre
+	
+	trigger = {
+		atwar = no
+		government = communist
+		event = 8002842
+		random = 85
+	}
+	
+	date = { day = 1 month = december year = 1989 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1989 }
+
+	action = {
+		name = EVT_8002843_A # Bring in the army
+		ai_chance = 90
+		command = { type = dissent value = 25 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -5 }
+		command = { type = domestic which = free_market value = -4 }
+		command = { type = sleepevent which = 8002844 }
+	}
+	
+	action = {
+		name = EVT_8002843_B # Rescind monopoly of power
+		ai_chance = 10
+		command = { type = dissent value = 40 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = domestic which = freedom value = 4 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+}
+
+### First free election in CHC
+
+event = {
+	id = 8002844
+	country = CHI
+
+	name = EVT_8002844_NAME
+	desc = EVT_8002844_DESC
+	picture = nwo\democratic_china
+	
+	trigger = {
+		NOT = { war = { country = CHI country = CHC } }
+		event = 8002843
+		exists = CHC
+	}
+	
+	date = { day = 1 month = february year = 1990 }
+	offset = 30
+	deathdate = { day = 29 month = february year = 1990 }
+
+	action = {
+		name = EVT_8002844_A # Yes, as long as proper party wins
+		ai_chance = 70
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CHC value = 100 }
+		command = { type = sleepevent which = 8002848 }
+	}
+	
+	action = {
+		name = EVT_8002844_B # Yes, without strings attached (Game Over)
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = relation which = CHC value = 200 }
+		command = { type = sleepevent which = 8002846 }
+	}
+	
+	action = {
+		name = EVT_8002844_C # Never
+		ai_chance = 10
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = relation which = CHC value = -50 }
+		command = { type = sleepevent which = 8002846 }
+		command = { type = sleepevent which = 8002848 }
+	}
+	
+}
+
+event = {
+	id = 8002845
+	country = CHC
+
+	name = EVT_8002845_NAME
+	desc = EVT_8002845_DESC
+	picture = nwo\democratic_china
+	
+	trigger = {
+		atwar = no
+		event = 8002843
+	}
+	
+	date = { day = 1 month = march year = 1990 }
+	offset = 30
+	deathdate = { day = 29 month = march year = 1990 }
+
+	action = {
+		name = EVT_8002845_A # Elect conciliationists
+		ai_chance = 80
+		command = { type = dissent value = -10 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = country which = UCH }
+	}
+	
+	action = {
+		name = EVT_8002845_B # Elect nationalists
+		ai_chance = 15
+		command = { type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = non_aggression which = CHC where = CHI }
+		command = { type = country which = UCH }
+	}
+	
+	action = {
+		name = EVT_8002845_C # Elect communists back
+		ai_chance = 5
+		command = { type = dissent value = -30 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 51313 } # Deng Xiaoping
+		command = { type = headofgovernment which = 51315 } # Li Peng
+	}
+	
+}
+
+### Taiwan decides
+
+event = {
+	id = 8002846
+	country = CHI
+
+	name = EVT_8002846_NAME
+	desc = EVT_8002846_DESC
+	picture = nwo\united_china
+	
+	trigger = {
+		atwar = no
+		event = 8002845
+	}
+	
+	date = { day = 1 month = april year = 1990 }
+	offset = 30
+	deathdate = { day = 29 month = april year = 1990 }
+
+	action = {
+		name = EVT_8002846_A # Join! (Game Over)
+		ai_chance = 70
+		trigger = { exists = UCH NOT = { exists = CHC } NOT = { non_aggression = { country = UCH country = CHI } } }
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8002846_B # Never!
+		ai_chance = 30
+		trigger = { exists = UCH NOT = { exists = CHC } NOT = { non_aggression = { country = UCH country = CHI } } }
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CHC value = -200 }
+		command = { type = sleepevent which = 8002847 }
+	}
+	
+	# Nationalists won
+	
+	action = {
+		name = EVT_8002846_A # Join! (Game Over)
+		ai_chance = 90
+		trigger = { exists = UCH NOT = { exists = CHC } non_aggression = { country = UCH country = CHI } }
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8002846_B # Never!
+		ai_chance = 10
+		trigger = { exists = UCH NOT = { exists = CHC } non_aggression = { country = UCH country = CHI } }
+		command = { type = dissent value = 10 }
+		command = { type = relation which = CHC value = -200 }
+		command = { type = sleepevent which = 8002847 }
+	}
+	
+	# Communists won
+	
+	action = {
+		name = EVT_8002846_A # Join! (Game Over)
+		ai_chance = 10
+		trigger = { exists = CHC NOT = { exists = UCH } }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = EVT_8002846_B # Never!
+		ai_chance = 90
+		trigger = { exists = CHC NOT = { exists = UCH } }
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CHC value = -200 }
+		command = { type = sleepevent which = 8002847 }
+	}
+	
+}
+
+### China annexes Taiwan after the decision
+
+event = {
+	id = 8002847
+	tag = { CHC UCH }
+
+	name = EVT_8002847_NAME
+	desc = EVT_8002847_DESC
+	picture = nwo\united_china
+	
+	trigger = {
+		atwar = no
+		event = 8002846
+		exists = CHI
+	}
+	
+	date = { day = 1 month = may year = 1990 }
+	offset = 30
+	deathdate = { day = 29 month = may year = 1990 }
+
+	action = {
+		name = EVT_8002847_A
+		command = { type = dissent value = -10 }
+		command = { type = inherit which = CHI }
+	}
+	
+}
+
+### China annexes Taiwan unilaterally
+
+event = {
+	id = 8002848
+	tag = { CHC UCH }
+
+	name = EVT_8002848_NAME
+	desc = EVT_8002848_DESC
+	picture = nwo\united_china
+	
+	trigger = {
+		atwar = no
+		event = 8002845
+		exists = CHI
+	}
+	
+	date = { day = 1 month = may year = 1990 }
+	offset = 30
+	deathdate = { day = 29 month = may year = 1990 }
+
+	action = {
+		name = EVT_8002848_A
+		command = { type = dissent value = -10 }
+		command = { type = inherit which = CHI }
+	}
+	
+}
+
+#### Ping-pong diplomacy
+
+event = {
+	id = 8002850
+	country = CHC
+
+	name = EVT_8002850_NAME
+	desc = EVT_8002850_DESC
+	picture = nwo\ping_pong_diplomacy
+	decision_picture = nwo\d_ping_pong_diplomacy
+	
+	decision = {
+		relation = { which = USA value = -100 }
+		exists = USA
+		NOT = { flag = CHC_in_UNSC }
+		flag = cold_war
+	}
+	
+	decision_trigger = {
+		atwar = no
+		relation = { which = USA value = -100 }
+		exists = USA
+		NOT = { flag = CHC_in_UNSC }
+		flag = cold_war
+	}
+	
+	trigger = {
+		atwar = no
+		relation = { which = USA value = -100 }
+		exists = USA
+		NOT = { flag = CHC_in_UNSC }
+		flag = cold_war
+	}
+	
+	date = { day = 1 month = april year = 1971 }
+	offset = 7
+	deathdate = { day = 29 month = april year = 1971 }
+
+	action = {
+		name = EVT_8002850_A # Invite
+		ai_chance = 98
+		command = { type = trigger which = 8002851 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8002850_B
+		trigger = { ai = yes }
+		ai_chance = 2
+		command = { type = money value = 1 }
+		command = { type = sleepevent which = 8002851 }
+	}
+	
+}
+
+event = {
+	id = 8002851
+	country = USA
+
+	name = EVT_8002851_NAME
+	desc = EVT_8002851_DESC
+	picture = nwo\nixon_visit_to_china
+
+	trigger = {
+		NOT = { war = { country = USA country = CHC } }
+		flag = cold_war
+		exists = CHC
+		event = 8002850
+	}
+	
+	date = { day = 1 month = april year = 1971 }
+	offset = 7
+	deathdate = { day = 29 month = april year = 1971 }
+
+	action = {
+		name = EVT_8002851_A # Accept and expel CHI from UNSC
+		ai_chance = 90
+		command = { type = trigger which = 8002852 }
+		command = { type = trigger which = 8002853 }
+		command = { type = relation which = CHC value = 150 }
+	}
+	
+	action = {
+		name = EVT_8002851_B
+		ai_chance = 10
+		command = { type = relation which = CHC value = -150 }
+	}
+	
+}
+
+event = {
+	id = 8002852
+	country = CHC
+
+	name = EVT_8002852_NAME
+	desc = EVT_8002852_DESC
+	picture = nwo\communist_china_in_unsc
+
+	action = {
+		name = EVT_8002852_A
+		command = { type = dissent value = -5 }
+		command = { type = setflag which = CHC_in_UNSC }
+	}
+}
+
+event = {
+	id = 8002853
+	country = CHI
+
+	name = EVT_8002853_NAME
+	desc = EVT_8002853_DESC
+	picture = nwo\communist_china_in_unsc
+
+	action = {
+		name = EVT_8002853_A
+		command = { type = dissent value = 10 }
+		command = { type = relation which = USA value = -100 }
+	}
+	
+}
+

@@ -1,0 +1,853 @@
+####################################
+# GREEK MOD EVENTS
+####################################
+# This file contains events for GRE,GER,ENG,
+# Event List:
+#GRE	14000500	1933 Football Championship
+#GRE	14000501	General strike at lignite mines
+#GRE	14000502	Labour demonstrations in Kalamata
+#GRE	14000503	1934 Football Championship
+#GRE	14000504	Violent clashes in Thessaloniki
+#GRE	14000505	Social Insurance Institute (IKA)
+#GRE	14000506	The ancient theatre of Epidaurus
+#GRE	14000507	Anniversary of the 1821 Revolution
+#GRE	14000508	The death of Konstantinos Kavafis
+#GRE	14000509	The Greco-Turkish Pact of Cordial Friendship
+#GRE	14000510	Thessaloniki International Trade Fair
+#GRE	14000511	International Olympic Committee conference
+#GER	14000512	International Olympic Committee conference
+#GRE	14000513	Karolos Koun's 'Laiki Skini'(People's Theatre)
+#GRE	14000514	The death of Patriarch Meletius IV of Constantinople
+#GRE	14000515	The Olympic Flame debut,1936
+#GER	14000516	The Olympic Flame debut,1936
+#GRE	14000517	King Edward VIII and Mrs Simpson on holiday in Greece
+#ENG	14000518	King Edward VIII and Mrs Simpson on holiday in Greece
+#GRE	14000519	Joseph Goebbels official visit to Greece
+#GER	14000520	Joseph Goebbels official visit to Greece
+#GRE	14000521	The Reburial of King Constantine I
+#GRE	14000522	The Labour Battalions
+#GRE	14000523	The Royal Wedding of Prince Paul and Princess Frederica
+#GRE	14000524	Radio Station of Athens
+#GRE	14000525	The Greco-Turkish Additional Treaty
+#GRE	14000526	The statue of King Constantine I
+#GRE	14000527	General Steam Navigation Company of Greece
+#GRE	14000528	The Law of'Idionymon'
+#GRE	14000529	Heraklion International Airport
+#GRE	14000530	Technical and Aeronautical Exploitations
+
+
+event = {
+	id = 14000500	# 1933 Football Championship
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 2 month = July year = 1933 }
+
+	name = "1933 Football Championship" # needs text
+	desc = "Olympiakos clinch the 1933 Football Championship by defeating AEK 2-0 on a forfeit win. Olympiakos were ahead 3-2 when the game was interrupted due to fan trouble."
+	Picture = "champgre"
+
+	action_a = {
+		name = "The king of sports...!"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000501	# General strike at lignite mines
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 10 month = August year = 1933 }
+
+	name = "General strike at lignite mines." # needs text
+	desc = "Striking lignite mine workers in Aliveri clash with the police. Six persons are wounded."
+	Picture = "Aliveri"
+
+	action_a = {
+		name = "Curses...!"
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000502	# Labour demonstrations in Kalamata
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 11 month = May year = 1934 }
+
+	name = "Labour demonstrations in Kalamata." # needs text
+	desc = "The Labour demonstrations in Kalamata culminated in three days of unrest and ended with a full-scale riot and seven workers killed by the army.."
+	Picture = "Kalamata"
+
+	action_a = {
+		name = "Curses...!"
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000503	# 1934 Football Championship
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 17 month = June year = 1934 }
+
+	name = "1933 Football Championship." # needs text
+	desc = "Olympiakos clinch the 1934 Football Championship by defeating Iraklis 2-1 in their second playoff game."
+	Picture = "champgre"
+
+	action_a = {
+		name = "The king of sports...!"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000504	# Violent clashes in Thessaloniki
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 9 month = May year = 1936 }
+
+	name = "Violent clashes in Thessaloniki." # needs text
+	desc = "Violent clashes in Thessaloniki, between striking tobacco workers and police, result in 12 deaths with dozens more injured."
+	Picture = "saloniki"
+
+	action_a = {
+		name = "Curses...!"
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000505	# Social Insurance Institute (IKA)
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 4 month = March year = 1937 }
+
+	name = "Social Insurance Institute (IKA)." # needs text
+	desc = "The IKA was founded on March 4, 1937, in order to satisfy the legal precepts established in the Constitution. It is constituted by representations of the Workers, Employers and the government.It is the largest social institution in Greece."
+	Picture = "ikagre"
+
+	action_a = {
+		name = "create it now..."
+		ai_chance = 100
+		command = { type = relative_manpower value = 1 }
+		command = { type = supplies value = -100 }
+		command = { type = money value = -50 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = relative_manpower value = -1 }
+		command = { type = dissent value = 3 }
+		}
+	}
+
+
+event = {
+	id = 14000506	# The ancient theatre of Epidaurus
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 11 month = September year = 1938 }
+
+	name = "The ancient theatre of Epidaurus." # needs text
+	desc = "The ancient theatre of Epidaurus is put to use again after 2000 years. The first play put on is 'Electra' by Sophocles.The theater was designed by Polykleitos the Younger in the 4th century BC. The original 34 rows were extended in Roman times by another 21 rows. As is usual for Greek theatres, the view on a lush landscape behind the scene is an integral part of the theatre itself and is not to be obscured. It seats up to 15,000 people."
+	Picture = "epidavros"
+
+	action_a = {
+		name = "We need to do this."
+		ai_chance = 100
+		command = { type = construct which = infrastructure where = 373 value = 5 }
+		command = { type = supplies value = -200 }
+		command = { type = money value = -100 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14000507
+	country = GRE
+	persistent = yes
+
+	trigger = {
+		day = 25
+		month = 3
+		NOT = {
+			day = 26
+		}
+		NOT = {
+			month = 4
+		}
+	}
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1999 }
+	picture = "GreekAnniversary"
+	style = 2
+
+	name = "Anniversary of the 1821 Revolution."
+	desc = "In the 25th of March of 1821 the Greek poppulation in Balkans and Minor Asia revolted against Ottoman opressors. Even if few in number, with little equipment and almost no international help, they managed to defeat the powerful Ottoman Empire and create a free Hellenic State in the southern Greece!"
+
+	action_a = {
+		name = "A glorius day for Hellenism!"
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		}
+	}
+
+
+event = {
+	id = 14000508	# The death of Konstantinos Kavafis
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 29 month = april year = 1933 }
+
+	name = "The death of Konstantinos Kavafis." # needs text
+	desc = "Konstantinos Kavafis was a Greek poet who lived in Alexandria and worked as a journalist and civil servant. He published 154 poems dozens more remained incomplete or in sketch form. His most important poetry was written after his fortieth birthday.He died of cancer of the larynx on April 29, 1933."
+	Picture = "Kavafis"
+
+	action_a = {
+		name = "An icon gone forever."
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000509	# The Greco-Turkish Pact of Cordial Friendship
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 14 month = september year = 1933 }
+
+	name = "The Greco-Turkish Pact of Cordial Friendship."
+	desc = "Kemal Ataturk and Eleftherios Venizelos respectively, were determined to establish normal relations between the two states. After years of negotiations, the agreement of friendship, neutrality and arbitration was signed.Following on from this, another guarantee agreement was signed on 14 September 1933, aimed at promoting the relations of the two countries 'into a clearly defensive alliance'."
+	picture = "CordialPact"
+
+	action_a = {
+		name = "Sign the pact."
+		ai_chance = 100
+		command = { type = relation which = TUR value = 50 }
+		command = { type = dissent value = -2 }
+		command = { type = money value = -100 }
+	}
+	action_b = {
+		name = "will be enemies forever."
+		ai_chance = 0
+		command = { type = relation which = TUR value = -50 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14000510
+	country = GRE
+	style = 2
+	persistent = yes
+	picture = "saloniki1"
+
+	trigger = {
+		atwar = no
+		day = 25
+		month = 9
+		NOT = {
+			day = 26
+		}
+		NOT = {
+			month = 10
+		}
+	}
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1999 }
+
+	name = "Thessaloniki International Trade Fair."
+	desc = "The Thessaloniki International Trade Fair is an annual commercial exhibition event of great importance in Greece and Southeastern Europe, taking place at Thessaloniki International Exhibition Center in Thessaloniki, Greece. The fair was first held in 1926.Similar trade fairs of the city have occurred regularly since the Byzantine era, attracting traders from all over the Balkans."
+
+	action_a = {
+		name = "Perfectly!!!"
+		ai_chance = 100
+		command = { type = research_mod value = 1 }
+		command = { type = industrial_modifier which = total value = 1 }
+		command = { type = industrial_modifier which = supplies value = 2 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000511	# International Olympic Committee conference
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		exists = GER
+		}
+
+	date = { day = 10 month = may year = 1934 }
+
+	name = "International Olympic Committee conference."
+	desc = "In May 1934, Greece had the great honor to host the International Olympic Committee conference. The meeting, held in Athens, was considered as one of the greatest events in the Olympic history, also to the attendees was minister of the Interior for Prussia, and Reich Commissioner of Aviation Hermann Goring with the President of the German Olympic Committee Dr. Lewald and the Secretary General Carl Diem."
+	Picture = "GoringGreece"
+
+	action_a = {
+		name = "The Reichsmarks are welcome..."
+		ai_chance = 100
+		command = { type = relation which = GER value = 10 }
+		command = { type = trigger which = 14000512 }
+		}
+	}
+
+
+event = {
+	id = 14000512	# International Olympic Committee conference
+	random = no
+	country = GER
+	style = 2
+
+	name = "International Olympic Committee conference."
+	desc = "In May 1934, Greece had the great honor to host the International Olympic Committee conference. The meeting, held in Athens, was considered as one of the greatest events in the Olympic history, also to the attendees was minister of the Interior for Prussia, and Reich Commissioner of Aviation Hermann Goring with the President of the German Olympic Committee Dr. Lewald and the Secretary General Carl Diem."
+	Picture = "GoringGreece"
+
+	action_a = {
+		name = "The Greeks are a great Nation..."
+		ai_chance = 100
+		command = { type = relation which = GRE value = 10 }
+		}
+	}
+
+
+event = {
+	id = 14000513	# Karolos Koun's 'Laiki Skini'(People's Theatre)
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 10 month = november year = 1934 }
+
+	name = "Karolos Koun's 'Laiki Skini'(People's Theatre)."
+	desc = "Karolos Koun was a Greek theater director, widely known for his lively staging of ancient Greek plays.In 1934, he founded the famous 'Laiki Skini'and gave premieres such as 'Orestia', 'Oedipus Tyrannous', 'Persae', 'Birds', 'Acharnians','Plutos'and other."
+	Picture = "KarolosKoun"
+
+	action_a = {
+		name = "We're going theater tonight!"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = relative_manpower value = 5 }
+		command = { type = province_manpower which = 377 value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000514	# The death of Patriarch Meletius IV of Constantinople
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 28 month = july year = 1935 }
+
+	name = "The death of Patriarch Meletius IV of Constantinople."
+	desc = "Meletius IV was the Ecumenical Patriarch of Constantinople from 1921 to 1923.He also served as Greek Patriarch of Alexandria under the episcopal name Meletius II from 1926 to 1935.He was the only Eastern Orthodox hierarch in history to serve successively as the senior bishop of three autocephalous churches.He died in 1935 in Alexandria."
+	Picture = "MeletiusIV"
+
+	action_a = {
+		name = "Rest in peace."
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000515	# The Olympic Flame debut,1936
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 20 month = july year = 1936 }
+
+	name = "The Olympic Flame debut,1936."
+	desc = "The modern convention of moving the Olympic flame via a relay system from Greece to the Olympic venue began in 1936. Carl Diem devised the idea of the torch relay for the 1936 Summer Olympics in Berlin that was organized by the Nazis.The Olympic flame was lit by a concave mirror in Olympia, Greece and transported over 3,187 kilometres by 3,331 runners in twelve days and eleven nights from Greece to Berlin."
+	Picture = "MeletiusIV"
+
+	action_a = {
+		name = "Let the games begin."
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = trigger which = 14000516 }
+		}
+	}
+
+
+event = {
+	id = 14000516	# The Olympic Flame debut,1936
+	random = no
+	country = GER
+	style = 2
+
+	name = "The Olympic Flame debut,1936."
+	desc = "The modern convention of moving the Olympic flame via a relay system from Greece to the Olympic venue began in 1936. Carl Diem devised the idea of the torch relay for the 1936 Summer Olympics in Berlin that was organized by the Nazis.The Olympic flame was lit by a concave mirror in Olympia, Greece and transported over 3,187 kilometres by 3,331 runners in twelve days and eleven nights from Greece to Berlin."
+	Picture = "GeorgEdward"
+
+	action_a = {
+		name = "Let the games begin."
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = relation which = GRE value = 10 }
+		}
+	}
+
+
+event = {
+	id = 14000517	# King Edward VIII and Mrs Simpson on holiday in Greece
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		exists = ENG
+		}
+
+	date = { day = 10 month = september year = 1936 }
+
+	name = "King Edward VIII and Mrs Simpson on holiday in Greece."
+	desc = "King Edward VIII and Mrs Simpson on holiday in Greece.They stayed in 'Villa Mon Repos', on the island of Corfu, Greece.There they met with important people of society of Greece.They discussed about the political situation in Europe both parties agreed to continue improving their relations."
+	Picture = "GeorgEdward"
+
+	action_a = {
+		name = "Long live the king!"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = trigger which = 14000518 }
+		}
+	}
+
+
+event = {
+	id = 14000518	# King Edward VIII and Mrs Simpson on holiday in Greece
+	random = no
+	country = ENG
+	style = 2
+
+	name = "King Edward VIII and Mrs Simpson on holiday in Greece."
+	desc = "King Edward VIII and Mrs Simpson on holiday in Greece.They stayed in 'Villa Mon Repos', on the island of Corfu, Greece.There they met with important people of society of Greece.They discussed about the political situation in Europe both parties agreed to continue improving their relations."
+	Picture = "GeorgEdward"
+
+	action_a = {
+		name = "Long live the king!"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = relation which = GRE value = 10 }
+		}
+	}
+
+
+event = {
+	id = 14000519	# Joseph Goebbels official visit to Greece
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		exists = GER
+		}
+
+	date = { day = 28 month = september year = 1936 }
+
+	name = "Joseph Goebbels official visit to Greece."
+	desc = "Reich Minister of Propaganda Joseph Goebbels visited Greece in September 1936.Joseph Goebbels as a huge admirer of the ancient Greeks, was natural to visit Akropolis, Parthenon, ancient Sparta and the site of the Battle of Marathon also met the Prime Minister and government ministers.Trade cooperation was also agreed, and both parties agreed to continue improving their relations."
+	Picture = "GoebbelsGreece"
+
+	action_a = {
+		name = "The Reichsmarks are welcome..."
+		ai_chance = 100
+		command = { type = construct which = ic where = -1 value = 1 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = trigger which = 14000520 }
+		}
+	}
+
+
+event = {
+	id = 14000520	# Joseph Goebbels official visit to Greece
+	random = no
+	country = GER
+	style = 2
+
+	name = "Joseph Goebbels official visit to Greece."
+	desc = "Reich Minister of Propaganda Joseph Goebbels visited Greece in September 1936.Joseph Goebbels as a huge admirer of the ancient Greeks, was natural to visit Akropolis, Parthenon, ancient Sparta and the site of the Battle of Marathon also met the Prime Minister and government ministers.Trade cooperation was also agreed, and both parties agreed to continue improving their relations."
+	Picture = "GoebbelsGreece"
+
+	action_a = {
+		name = "The Greeks are a great Nation..."
+		ai_chance = 100
+		command = { type = construct which = ic where = -1 value = -1 }
+		command = { type = relation which = GRE value = 10 }
+		}
+	}
+
+
+event = {
+	id = 14000521	# The Reburial of King Constantine I
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		event = 14000008
+		exists = GRE
+		}
+
+	date = { day = 23 month = november year = 1936 }
+
+	name = "The Reburial of King Constantine I."
+	desc = "With the restoration of the monarchy in Greece, the remains of King Constantine, King George's father, his consort, Sophia, and his mother, Olga, are to be brought to Greece from Florence, where they rest in the crypt of the Russian Church.They will be buried in the Royal family's tomb at Tatoi, near Athens."
+	Picture = "ConstantineReburial"
+
+	action_a = {
+		name = "Rest in peace."
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000522	# The Labour Battalions
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		event = 14000008
+		exists = GRE
+		}
+
+	date = { day = 10 month = december year = 1937 }
+
+	name = "The Labour Battalions (Tagmata Ergasias)." # needs text
+	desc = "The Labour Battalions was a paramilitary organization manned by unemployed Greeks during the quasi-fascist 4th of August regime in Greece.The first Labour Battalion was created in Athens under the leadership of John Vezanis, and it consisted of 400 people. Inspired in the Nazi Sturmabteilung (SA), the Labour Battalionists wore a gray uniform and as a symbol they had a pickaxe and a shovel crosswise in a rombo square."
+	Picture = "LabourBattalions"
+
+	action_a = {
+		name = "We need them..."
+		ai_chance = 100
+		command = { type = research_mod value = 1 }
+		command = { type = industrial_modifier which = total value = 1 }
+		command = { type = industrial_modifier which = supplies value = 2 }
+		command = { type = supplies value = -200 }
+		command = { type = money value = -100 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14000523	# The Royal Wedding of Prince Paul and Princess Frederica
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		event = 14000008
+		exists = GRE
+		}
+
+	date = { day = 9 month = january year = 1938 }
+
+	name = "The Royal Wedding of Prince Paul and Princess Frederica."
+	desc = "Prince Paul was the son of King Constantine I of Greece.They married in Athens on 9 January 1938.Ten months after their marriage, their first child, Princess Sophia (the future Queen Sofia of Spain), was born on 2 November 1938. On 2 June 1940, their son and heir, Crown Prince Constantine (the future King Constantine II), was born."
+	Picture = "PrincePaul"
+
+	action_a = {
+		name = "Long live the Prince Paul and Princess Frederica."
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000524	# Radio Station of Athens
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 26 month = March year = 1938 }
+
+	name = "Radio Station of Athens."
+	desc = "The radio broadcaster came on air for the first time on 25 March 1938, and its official opening was announced in May 1938.It was called 'Radio Station of Athens'.It was a project undertaken and technically developed by the German corporation Telefunken. The first radio transmitter was established in Liossia and its studios were located in Zappeion Megaron, inside the National Garden area."
+	Picture = "RadioAthens"
+
+	action_a = {
+		name = "Here Radio Station of Athens..."
+		ai_chance = 100
+		command = { type = construct which = radar_station where = 377 value = 1 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000525	# The Greco-Turkish Additional Treaty
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 27 month = april year = 1938 }
+
+	name = "The Greco-Turkish Additional Treaty."
+	desc = "Greece and Turkey sign the Additional Treaty to the Treaty of Friendship, Neutrality, Conciliation and Arbitration of October 30th, 1930, and to the Pact of Cordial Friendship of September 14th, 1933."
+	picture = "AdditionalTreaty"
+
+	action_a = {
+		name = "Sign the pact."
+		ai_chance = 100
+		command = { type = relation which = TUR value = 20 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "will be enemies forever."
+		ai_chance = 0
+		command = { type = relation which = TUR value = -20 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14000526	# The statue of King Constantine I
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		event = 14000008
+		exists = GRE
+		}
+
+	date = { day = 11 month = november year = 1938 }
+
+	name = "The statue of King Constantine I."
+	desc = "The unveiling of the statue took place on 11 November 1938 by King George II in the presence of the royal family, the Prime Minister Ioannis Metaxas and the entire Cabinet, the Holy Synod and the Archbishop, politicians, academics, judicial and military authoritie."
+	Picture = "StatueConstantine"
+
+	action_a = {
+		name = "He was a great king."
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000527	# General Steam Navigation Company of Greece
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 26 month = april year = 1939 }
+
+	name = "General Steam Navigation Company of Greece."
+	desc = "The General Steam Navigation Company of Greece formally known as 'Greek Line' was a passenger ship line that operated from 1939 until 1975. The Line was owned by the Ormos Shipping Company. The line operated transatlantic and short to long distance voyages. The company later began operating leisure cruises as the jet age replaced passenger ships as the means of transportation across the Atlantic Ocean."
+	Picture = "Greekline"
+
+	action_a = {
+		name = "Perfectly!!!"
+		ai_chance = 100
+		command = { type = construct which = naval_base where = 377 value = 1 }
+		command = { type = industrial_modifier which = supplies value = 1 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000528	# The Law of'Idionymon'
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		event = 14000008
+		}
+
+	date = { day = 27 month = december year = 1936 }
+
+	name = "The Law of'Idionymon'."
+	desc = "The Law of'Idionymon' voted in 1929 (Law 4229) it was aiming to penalize the 'insurrectional' ideas and in particular to fire prosecution against communists, anarchists and enforce repression against the unionist mobilizations.After Metaxas Regime in 1936, the 'Idionymon' formed the basis for Compulsory Law 117/1936, which featured harsher provisions, including five-year jail terms and internal exile."
+	picture = "Idionymon"
+
+	action_a = {
+		name = "Vote the law!!!"
+		ai_chance = 100
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000529	# Heraklion International Airport
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 13 month = March year = 1939 }
+
+	name = "Heraklion International Airport."
+	desc = "The airport first opened in March 1939. This was then merely a piece of flat agricultural land. The first aeroplane (a Junkers Ju-52) carried the first passengers to the site. During the Second World War operations ceased, but in fall 1946 traffic re-assumed, introducing the DC-3 aircraft."
+	Picture = "Greekairport"
+
+	action_a = {
+		name = "Perfectly!!!"
+		ai_chance = 100
+		command = { type = construct which = air_base where = 382 value = 1 }
+		command = { type = industrial_modifier which = supplies value = 0.5 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 14000530	# Technical and Aeronautical Exploitations
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 10 month = november year = 1935 }
+
+	name = "Technical and Aeronautical Exploitations."
+	desc = "Technical and Aeronautical Exploitations was a Greek airline formed in 1935 by Stephanos Zotos operating from a base at Tatoi Airport north of Athens.Its first aircraft were a de Havilland DH 87 Hornet Moth, registered as SX-AAI, and a de Havilland DH 82A Tiger Moth, with registration SX-AAK."
+	Picture = "GreekTAE"
+
+	action_a = {
+		name = "Perfectly!!!"
+		ai_chance = 100
+		command = { type = construct which = air_base where = 377 value = 1 }
+		command = { type = industrial_modifier which = supplies value = 0.5 }
+		command = { type = dissent value = -1 }
+		}
+	}

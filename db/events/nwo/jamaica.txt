@@ -1,0 +1,169 @@
+event = {
+	id = 8028901
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800925 } # Edward Brandis Denham
+		command = { type = headofgovernment which = 800926 } # Edward Brandis Denham
+	}
+}
+
+event = {
+	id = 8028902
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800900 } # Sir Arthur F. Richards
+		command = { type = headofgovernment which = 800901 } # Sir Arthur F. Richards
+	}
+}
+
+event = {
+	id = 8028903
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800927 } # John Huggins
+		command = { type = headofgovernment which = 800928 } # John Huggins
+	}
+}
+
+event = {
+	id = 8028904
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800929 } # Hugh Mackintosh Foot
+		command = { type = headofgovernment which = 800930 } # Hugh Mackintosh Foot
+	}
+}
+
+event = {
+	id = 8028905
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 800921 } # Alexander Bustamante
+		command = { type = headofgovernment which = 800931 } # Norman Washington Manley
+	}
+}
+
+event = {
+	id = 8028906
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800932 } # Kenneth Blackburne
+	}
+}
+
+event = {
+	id = 8028907
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 800921 } # Alexander Bustamante
+	}
+}
+
+event = {
+	id = 8028908
+	country = U89
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 800933 } # Clifford Campbell
+	}
+}
+

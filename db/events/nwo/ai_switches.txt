@@ -1,0 +1,4035 @@
+# AI_switches
+
+###
+#
+# Each country belongs to an AI category, determining its construction scheme and production queues, roughly according to
+# approximate tech level at a given point of time. West_europe and east_europe categories refer to democratic/nationalist
+# and communist countries respectively, not necessarily having strict geographic meaning.
+#
+# There are following special rules that enable alternative AIs:
+#
+# 1. If Nationalist China wins the civil war (or unites with communists peacefully), CHI_united_XXXX.ai files are used since 1950.
+# 2. If Japan falls under Soviet or Chinese occupation and influence, respectively, JAP_SOV_XXXX.ai and JAP_CHI_XXXX.ai files are used.
+# 3. If Germany is united peacefully as a neutral state, GER_neutral_XXXX.ai files are used, since 1950. Note that historically neutral
+#	 Austria uses normal AUS_XXXX.ai file and only if it is non-neutral, it either gets standard west_europe AI, or east_europe, in case
+#	 of a communist tag.
+# 4. In case of WW3 firing, several countries get special AI files, aimed at more aggresive invasions and front options and other 
+#	 characteristics for: USA (builds more rockets and transport vessels, constructs much less), FRA (stops construction, concentrates on
+#	 land divisions), ENG (stops construction, builds more aircrafts and transport vessels, constructs much less), DFR and DDR
+#	 (stop construction, concentrate on land divisions), CHI and CHC (construct less and have lower neutrality, since 1950),
+#	 JAP (stop construction, starts to build military), SOV (constructs much less, focuses on navy and land divisions).
+# 5. Some countries receive special AI that is meant to be active during times of prescripted wars. Wars that are covered are:
+#	 - Chinese Civil War: CHI and CHC get their special AI for the start of the war (CHI_1947.ai and CHC_1947.ai) and if the war ends 
+#	   before 1950, CHI_1949.ai and CHC_1949.ai are loaded. If Nationalists win before 1950, CHI_1945.ai is loaded instead;
+#	 - Korean War: KOR and PRK use their standard 1950 AI at the beginning of the war. When KOR is meant to counterattack, 1951 AI is loaded,
+#	   when stalemate happens 1952 AI is loaded; finally after the war ends, AIs are reverted to KOR_1950.ai and PRK_1950.ai (and non-
+#	   aggression pact enforces peace).
+#
+###
+
+### AFRICA
+
+event = {
+	id = 8710001
+	tag = { ALG ANG BEN CAM CON EAF EQA ETH GAB GLD GUI LBY LIB MAD MAL MOR MOZ NAM NIG RHO SIE SOM SUD TUN 
+			EGY SAF }
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_africa_1945.ai }
+		command = { trigger = { country = EGY } type = ai which = EGY_1945.ai }
+		command = { trigger = { country = SAF } type = ai which = SAF_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_africa_1950.ai }
+		command = { trigger = { country = EGY } type = ai which = EGY_1950.ai }
+		command = { trigger = { country = SAF } type = ai which = SAF_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_africa_1960.ai }
+		command = { trigger = { country = EGY } type = ai which = EGY_1960.ai }
+		command = { trigger = { country = SAF } type = ai which = SAF_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_africa_1970.ai }
+		command = { trigger = { country = EGY } type = ai which = EGY_1970.ai }
+		command = { trigger = { country = SAF } type = ai which = SAF_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_africa_1980.ai }
+		command = { trigger = { country = EGY } type = ai which = EGY_1980.ai }
+		command = { trigger = { country = SAF } type = ai which = SAF_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_africa_1990.ai }
+	#	command = { trigger = { country = EGY } type = ai which = EGY_1990.ai }
+	#	command = { trigger = { country = SAF } type = ai which = SAF_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+
+}
+
+### ASIA
+
+event = {
+	id = 8710002
+	tag = { AFG ARA ARM AZB BHU BRU BUR CGX CMB CSX CXB CYN CYP GEO IDC KAZ KUR KYG LAO MAN MEN NEP OMN OTT PHI PRI SAR SAU SIB SIK TAJ TAN TRA TRK UZB YEM 
+			IND INO IRQ JOR LEB MLY MON NZL PAK PAL PER SIA SYR TIB TUR U05 U72 VIE
+			# JAP CHC CHI KOR PRK get separate events
+	}
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { trigger = { country = IND } type = ai which = IND_1945.ai }
+		command = { trigger = { country = INO } type = ai which = INO_1945.ai }
+		command = { trigger = { country = IRQ } type = ai which = IRQ_1945.ai }
+		command = { trigger = { country = JOR } type = ai which = JOR_1945.ai }
+		command = { trigger = { country = LEB } type = ai which = LEB_1945.ai }
+		command = { trigger = { country = MLY } type = ai which = MLY_1945.ai }
+		command = { trigger = { country = MON } type = ai which = MON_1945.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1945.ai }
+		command = { trigger = { country = PAK } type = ai which = PAK_1945.ai }
+		command = { trigger = { country = PAL } type = ai which = PAL_1945.ai }
+		command = { trigger = { country = PER } type = ai which = PER_1945.ai }
+		command = { trigger = { country = SIA } type = ai which = SIA_1945.ai }
+		command = { trigger = { country = SYR } type = ai which = SYR_1945.ai }
+		command = { trigger = { country = TIB } type = ai which = TIB_1945.ai }
+		command = { trigger = { country = TUR } type = ai which = TUR_1945.ai }
+		command = { trigger = { country = U05 } type = ai which = U05_1945.ai }
+		command = { trigger = { country = U72 } type = ai which = U72_1945.ai }
+		command = { trigger = { country = VIE } type = ai which = VIE_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { trigger = { country = IND } type = ai which = IND_1950.ai }
+		command = { trigger = { country = INO } type = ai which = INO_1950.ai }
+		command = { trigger = { country = IRQ } type = ai which = IRQ_1950.ai }
+		command = { trigger = { country = JOR } type = ai which = JOR_1950.ai }
+		command = { trigger = { country = LEB } type = ai which = LEB_1950.ai }
+		command = { trigger = { country = MLY } type = ai which = MLY_1950.ai }
+		command = { trigger = { country = MON } type = ai which = MON_1950.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1950.ai }
+		command = { trigger = { country = PAK } type = ai which = PAK_1950.ai }
+		command = { trigger = { country = PAL } type = ai which = PAL_1950.ai }
+		command = { trigger = { country = PER } type = ai which = PER_1950.ai }
+		command = { trigger = { country = SIA } type = ai which = SIA_1950.ai }
+		command = { trigger = { country = SYR } type = ai which = SYR_1950.ai }
+		command = { trigger = { country = TIB } type = ai which = TIB_1950.ai }
+		command = { trigger = { country = TUR } type = ai which = TUR_1950.ai }
+		command = { trigger = { country = U05 } type = ai which = U05_1950.ai }
+		command = { trigger = { country = U72 } type = ai which = U72_1950.ai }
+		command = { trigger = { country = VIE } type = ai which = VIE_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_asia_1960.ai }
+		command = { trigger = { country = IND } type = ai which = IND_1960.ai }
+		command = { trigger = { country = INO } type = ai which = INO_1960.ai }
+		command = { trigger = { country = IRQ } type = ai which = IRQ_1960.ai }
+		command = { trigger = { country = JOR } type = ai which = JOR_1960.ai }
+		command = { trigger = { country = LEB } type = ai which = LEB_1960.ai }
+		command = { trigger = { country = MLY } type = ai which = MLY_1960.ai }
+		command = { trigger = { country = MON } type = ai which = MON_1960.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1960.ai }
+		command = { trigger = { country = PAK } type = ai which = PAK_1960.ai }
+		command = { trigger = { country = PAL } type = ai which = PAL_1960.ai }
+		command = { trigger = { country = PER } type = ai which = PER_1960.ai }
+		command = { trigger = { country = SIA } type = ai which = SIA_1960.ai }
+		command = { trigger = { country = SYR } type = ai which = SYR_1960.ai }
+		command = { trigger = { country = TIB } type = ai which = TIB_1960.ai }
+		command = { trigger = { country = TUR } type = ai which = TUR_1960.ai }
+		command = { trigger = { country = U05 } type = ai which = U05_1960.ai }
+		command = { trigger = { country = U72 } type = ai which = U72_1960.ai }
+		command = { trigger = { country = VIE } type = ai which = VIE_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_asia_1970.ai }
+		command = { trigger = { country = IND } type = ai which = IND_1970.ai }
+		command = { trigger = { country = INO } type = ai which = INO_1970.ai }
+		command = { trigger = { country = IRQ } type = ai which = IRQ_1970.ai }
+		command = { trigger = { country = JOR } type = ai which = JOR_1970.ai }
+		command = { trigger = { country = LEB } type = ai which = LEB_1970.ai }
+		command = { trigger = { country = MLY } type = ai which = MLY_1970.ai }
+		command = { trigger = { country = MON } type = ai which = MON_1970.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1970.ai }
+		command = { trigger = { country = PAK } type = ai which = PAK_1970.ai }
+		command = { trigger = { country = PAL } type = ai which = PAL_1970.ai }
+		command = { trigger = { country = PER } type = ai which = PER_1970.ai }
+		command = { trigger = { country = SIA } type = ai which = SIA_1970.ai }
+		command = { trigger = { country = SYR } type = ai which = SYR_1970.ai }
+		command = { trigger = { country = TIB } type = ai which = TIB_1970.ai }
+		command = { trigger = { country = TUR } type = ai which = TUR_1970.ai }
+		command = { trigger = { country = U05 } type = ai which = U05_1970.ai }
+		command = { trigger = { country = U72 } type = ai which = U72_1970.ai }
+		command = { trigger = { country = VIE } type = ai which = VIE_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_asia_1980.ai }
+		command = { trigger = { country = IND } type = ai which = IND_1980.ai }
+		command = { trigger = { country = INO } type = ai which = INO_1980.ai }
+		command = { trigger = { country = IRQ } type = ai which = IRQ_1980.ai }
+		command = { trigger = { country = JOR } type = ai which = JOR_1980.ai }
+		command = { trigger = { country = LEB } type = ai which = LEB_1980.ai }
+		command = { trigger = { country = MLY } type = ai which = MLY_1980.ai }
+		command = { trigger = { country = MON } type = ai which = MON_1980.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1980.ai }
+		command = { trigger = { country = PAK } type = ai which = PAK_1980.ai }
+		command = { trigger = { country = PAL } type = ai which = PAL_1980.ai }
+		command = { trigger = { country = PER } type = ai which = PER_1980.ai }
+		command = { trigger = { country = SIA } type = ai which = SIA_1980.ai }
+		command = { trigger = { country = SYR } type = ai which = SYR_1980.ai }
+		command = { trigger = { country = TIB } type = ai which = TIB_1980.ai }
+		command = { trigger = { country = TUR } type = ai which = TUR_1980.ai }
+		command = { trigger = { country = U05 } type = ai which = U05_1980.ai }
+		command = { trigger = { country = U72 } type = ai which = U72_1980.ai }
+		command = { trigger = { country = VIE } type = ai which = VIE_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_asia_1990.ai }
+	#	command = { trigger = { country = IND } type = ai which = IND_1990.ai }
+	#	command = { trigger = { country = INO } type = ai which = INO_1990.ai }
+	#	command = { trigger = { country = IRQ } type = ai which = IRQ_1990.ai }
+	#	command = { trigger = { country = JOR } type = ai which = JOR_1990.ai }
+	#	command = { trigger = { country = LEB } type = ai which = LEB_1990.ai }
+	#	command = { trigger = { country = MLY } type = ai which = MLY_1990.ai }
+	#	command = { trigger = { country = MON } type = ai which = MON_1990.ai }
+	#	command = { trigger = { country = NZL } type = ai which = NZL_1990.ai }
+	#	command = { trigger = { country = PAK } type = ai which = PAK_1990.ai }
+	#	command = { trigger = { country = PAL } type = ai which = PAL_1990.ai }
+	#	command = { trigger = { country = PER } type = ai which = PER_1990.ai }
+	#	command = { trigger = { country = SIA } type = ai which = SIA_1990.ai }
+	#	command = { trigger = { country = SYR } type = ai which = SYR_1990.ai }
+	#	command = { trigger = { country = TIB } type = ai which = TIB_1990.ai }
+	#	command = { trigger = { country = TUR } type = ai which = TUR_1990.ai }
+	#	command = { trigger = { country = U05 } type = ai which = U05_1990.ai }
+	#	command = { trigger = { country = U72 } type = ai which = U72_1990.ai }
+	#	command = { trigger = { country = VIE } type = ai which = VIE_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+
+}
+
+### AMERICA
+
+event = {
+	id = 8710003
+	tag = { BOL CHL COL COS DOM ECU GUA GUY HAI HON NIC PAN PAR PRU SAL URU VEN 
+			ARG BRA MEX CUB
+	}
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_america_1945.ai }
+		command = { trigger = { country = ARG } type = ai which = ARG_1945.ai }
+		command = { trigger = { country = BRA } type = ai which = BRA_1945.ai }
+		command = { trigger = { country = MEX } type = ai which = MEX_1945.ai }
+		command = { trigger = { country = CUB } type = ai which = CUB_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_america_1950.ai }
+		command = { trigger = { country = ARG } type = ai which = ARG_1950.ai }
+		command = { trigger = { country = BRA } type = ai which = BRA_1950.ai }
+		command = { trigger = { country = MEX } type = ai which = MEX_1950.ai }
+		command = { trigger = { country = CUB } type = ai which = CUB_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_america_1960.ai }
+		command = { trigger = { country = ARG } type = ai which = ARG_1960.ai }
+		command = { trigger = { country = BRA } type = ai which = BRA_1960.ai }
+		command = { trigger = { country = MEX } type = ai which = MEX_1960.ai }
+		command = { trigger = { country = CUB } type = ai which = CUB_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_america_1970.ai }
+		command = { trigger = { country = ARG } type = ai which = ARG_1970.ai }
+		command = { trigger = { country = BRA } type = ai which = BRA_1970.ai }
+		command = { trigger = { country = MEX } type = ai which = MEX_1970.ai }
+		command = { trigger = { country = CUB } type = ai which = CUB_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_america_1980.ai }
+		command = { trigger = { country = ARG } type = ai which = ARG_1980.ai }
+		command = { trigger = { country = BRA } type = ai which = BRA_1980.ai }
+		command = { trigger = { country = MEX } type = ai which = MEX_1980.ai }
+		command = { trigger = { country = CUB } type = ai which = CUB_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_america_1990.ai }
+	#	command = { trigger = { country = ARG } type = ai which = ARG_1990.ai }
+	#	command = { trigger = { country = BRA } type = ai which = BRA_1990.ai }
+	#	command = { trigger = { country = MEX } type = ai which = MEX_1990.ai }
+	#	command = { trigger = { country = CUB } type = ai which = CUB_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+### WESTERN EUROPE
+
+event = {
+	id = 8710004
+	tag = { ALB BLR BOS BUL CAL CRO CSA CZE EST EUS FLA GER HUN ICL LAT LIT LUX MTN POL QUE ROM RSI RUS SCA SCH SCO SER SLO SLV SPR TEX UKR VIC WLL YUG U01 U06 U23 U38 U71 U73 U76 
+			AST BEL CAN DEN FIN GRE HOL IRE ITA NZL POR SPA SWE 
+			# AUS DFR ENG USA FRA get separate events
+	}
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+		OR = {
+			NOT = {
+				country = BLR country = BOS country = CRO country = EST country = EUS country = FLA country = ICL country = LAT country = LIT country = MTN country = RUS country = SCA country = SCO country = SER country = SLO country = SLV country = SPR country = UKR country = WLL country = U73 country = U76
+				} # The remaining countries should always be non-communist because they have a communist tag counterpart.
+			NOT = { government = communist }
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { trigger = { country = AST } type = ai which = AST_1945.ai }
+		command = { trigger = { country = BEL } type = ai which = BEL_1945.ai }
+		command = { trigger = { country = CAN } type = ai which = CAN_1945.ai }
+		command = { trigger = { country = DEN } type = ai which = DEN_1945.ai }
+		command = { trigger = { country = FIN } type = ai which = FIN_1945.ai }
+		command = { trigger = { country = GRE } type = ai which = GRE_1945.ai }
+		command = { trigger = { country = HOL } type = ai which = HOL_1945.ai }
+		command = { trigger = { country = IRE } type = ai which = IRE_1945.ai }
+		command = { trigger = { country = ITA } type = ai which = ITA_1945.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1945.ai }
+		command = { trigger = { country = POR } type = ai which = POR_1945.ai }
+		command = { trigger = { country = SCH } type = ai which = SCH_1945.ai }
+		command = { trigger = { country = SPA } type = ai which = SPA_1945.ai }
+		command = { trigger = { country = SWE } type = ai which = SWE_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { trigger = { country = AST } type = ai which = AST_1950.ai }
+		command = { trigger = { country = BEL } type = ai which = BEL_1950.ai }
+		command = { trigger = { country = CAN } type = ai which = CAN_1950.ai }
+		command = { trigger = { country = DEN } type = ai which = DEN_1950.ai }
+		command = { trigger = { country = FIN } type = ai which = FIN_1950.ai }
+		command = { trigger = { country = GRE } type = ai which = GRE_1950.ai }
+		command = { trigger = { country = HOL } type = ai which = HOL_1950.ai }
+		command = { trigger = { country = IRE } type = ai which = IRE_1950.ai }
+		command = { trigger = { country = ITA } type = ai which = ITA_1950.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1950.ai }
+		command = { trigger = { country = POR } type = ai which = POR_1950.ai }
+		command = { trigger = { country = SCH } type = ai which = SCH_1950.ai }
+		command = { trigger = { country = SPA } type = ai which = SPA_1950.ai }
+		command = { trigger = { country = SWE } type = ai which = SWE_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { trigger = { country = AST } type = ai which = AST_1960.ai }
+		command = { trigger = { country = BEL } type = ai which = BEL_1960.ai }
+		command = { trigger = { country = CAN } type = ai which = CAN_1960.ai }
+		command = { trigger = { country = DEN } type = ai which = DEN_1960.ai }
+		command = { trigger = { country = FIN } type = ai which = FIN_1960.ai }
+		command = { trigger = { country = GRE } type = ai which = GRE_1960.ai }
+		command = { trigger = { country = HOL } type = ai which = HOL_1960.ai }
+		command = { trigger = { country = IRE } type = ai which = IRE_1960.ai }
+		command = { trigger = { country = ITA } type = ai which = ITA_1960.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1960.ai }
+		command = { trigger = { country = POR } type = ai which = POR_1960.ai }
+		command = { trigger = { country = SCH } type = ai which = SCH_1960.ai }
+		command = { trigger = { country = SPA } type = ai which = SPA_1960.ai }
+		command = { trigger = { country = SWE } type = ai which = SWE_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { trigger = { country = AST } type = ai which = AST_1970.ai }
+		command = { trigger = { country = BEL } type = ai which = BEL_1970.ai }
+		command = { trigger = { country = CAN } type = ai which = CAN_1970.ai }
+		command = { trigger = { country = DEN } type = ai which = DEN_1970.ai }
+		command = { trigger = { country = FIN } type = ai which = FIN_1970.ai }
+		command = { trigger = { country = GRE } type = ai which = GRE_1970.ai }
+		command = { trigger = { country = HOL } type = ai which = HOL_1970.ai }
+		command = { trigger = { country = IRE } type = ai which = IRE_1970.ai }
+		command = { trigger = { country = ITA } type = ai which = ITA_1970.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1970.ai }
+		command = { trigger = { country = POR } type = ai which = POR_1970.ai }
+		command = { trigger = { country = SCH } type = ai which = SCH_1970.ai }
+		command = { trigger = { country = SPA } type = ai which = SPA_1970.ai }
+		command = { trigger = { country = SWE } type = ai which = SWE_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { trigger = { country = AST } type = ai which = AST_1980.ai }
+		command = { trigger = { country = BEL } type = ai which = BEL_1980.ai }
+		command = { trigger = { country = CAN } type = ai which = CAN_1980.ai }
+		command = { trigger = { country = DEN } type = ai which = DEN_1980.ai }
+		command = { trigger = { country = FIN } type = ai which = FIN_1980.ai }
+		command = { trigger = { country = GRE } type = ai which = GRE_1980.ai }
+		command = { trigger = { country = HOL } type = ai which = HOL_1980.ai }
+		command = { trigger = { country = IRE } type = ai which = IRE_1980.ai }
+		command = { trigger = { country = ITA } type = ai which = ITA_1980.ai }
+		command = { trigger = { country = NZL } type = ai which = NZL_1980.ai }
+		command = { trigger = { country = POR } type = ai which = POR_1980.ai }
+		command = { trigger = { country = SCH } type = ai which = SCH_1980.ai }
+		command = { trigger = { country = SPA } type = ai which = SPA_1980.ai }
+		command = { trigger = { country = SWE } type = ai which = SWE_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { trigger = { country = AST } type = ai which = AST_1990.ai }
+	#	command = { trigger = { country = BEL } type = ai which = BEL_1990.ai }
+	#	command = { trigger = { country = CAN } type = ai which = CAN_1990.ai }
+	#	command = { trigger = { country = DEN } type = ai which = DEN_1990.ai }
+	#	command = { trigger = { country = FIN } type = ai which = FIN_1990.ai }
+	#	command = { trigger = { country = GRE } type = ai which = GRE_1990.ai }
+	#	command = { trigger = { country = HOL } type = ai which = HOL_1990.ai }
+	#	command = { trigger = { country = IRE } type = ai which = IRE_1990.ai }
+	#	command = { trigger = { country = ITA } type = ai which = ITA_1990.ai }
+	#	command = { trigger = { country = NZL } type = ai which = NZL_1990.ai }
+	#	command = { trigger = { country = POR } type = ai which = POR_1990.ai }
+	#	command = { trigger = { country = SCH } type = ai which = SCH_1990.ai }
+	#	command = { trigger = { country = SPA } type = ai which = SPA_1990.ai }
+	#	command = { trigger = { country = SWE } type = ai which = SWE_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+### EAST EUROPE
+
+event = {
+	id = 8710005
+	tag = { BLR BOS CRO EST EUS FLA ICL LAT LIT MTN RUS SCA SCO SER SLO SLV SPR UKR WLL U10 U11 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U73 U76 
+			U13 U27 U28 U29 U30 U31 U32 U33
+			# SOV DDR get separate events
+	}
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+		OR = {
+			NOT = {
+				country = BLR country = BOS country = CRO country = EST country = EUS country = FLA country = ICL country = LAT country = LIT country = MTN country = RUS country = SCA country = SCO country = SER country = SLO country = SLV country = SPR country = UKR country = WLL country = U73 country = U76
+				}
+			government = communist
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_easteurope_1945.ai }
+		command = { trigger = { country = U13 } type = ai which = U13_1945.ai }
+		command = { trigger = { country = U27 } type = ai which = U27_1945.ai }
+		command = { trigger = { country = U28 } type = ai which = U28_1945.ai }
+		command = { trigger = { country = U29 } type = ai which = U29_1945.ai }
+		command = { trigger = { country = U30 } type = ai which = U30_1945.ai }
+		command = { trigger = { country = U31 } type = ai which = U31_1945.ai }
+		command = { trigger = { country = U32 } type = ai which = U32_1945.ai }
+		command = { trigger = { country = U33 } type = ai which = U33_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_easteurope_1950.ai }
+		command = { trigger = { country = U13 } type = ai which = U13_1950.ai }
+		command = { trigger = { country = U27 } type = ai which = U27_1950.ai }
+		command = { trigger = { country = U28 } type = ai which = U28_1950.ai }
+		command = { trigger = { country = U29 } type = ai which = U29_1950.ai }
+		command = { trigger = { country = U30 } type = ai which = U30_1950.ai }
+		command = { trigger = { country = U31 } type = ai which = U31_1950.ai }
+		command = { trigger = { country = U32 } type = ai which = U32_1950.ai }
+		command = { trigger = { country = U33 } type = ai which = U33_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_easteurope_1960.ai }
+		command = { trigger = { country = U13 } type = ai which = U13_1960.ai }
+		command = { trigger = { country = U27 } type = ai which = U27_1960.ai }
+		command = { trigger = { country = U28 } type = ai which = U28_1960.ai }
+		command = { trigger = { country = U29 } type = ai which = U29_1960.ai }
+		command = { trigger = { country = U30 } type = ai which = U30_1960.ai }
+		command = { trigger = { country = U31 } type = ai which = U31_1960.ai }
+		command = { trigger = { country = U32 } type = ai which = U32_1960.ai }
+		command = { trigger = { country = U33 } type = ai which = U33_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_easteurope_1970.ai }
+		command = { trigger = { country = U13 } type = ai which = U13_1970.ai }
+		command = { trigger = { country = U27 } type = ai which = U27_1970.ai }
+		command = { trigger = { country = U28 } type = ai which = U28_1970.ai }
+		command = { trigger = { country = U29 } type = ai which = U29_1970.ai }
+		command = { trigger = { country = U30 } type = ai which = U30_1970.ai }
+		command = { trigger = { country = U31 } type = ai which = U31_1970.ai }
+		command = { trigger = { country = U32 } type = ai which = U32_1970.ai }
+		command = { trigger = { country = U33 } type = ai which = U33_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_easteurope_1980.ai }
+		command = { trigger = { country = U13 } type = ai which = U13_1980.ai }
+		command = { trigger = { country = U27 } type = ai which = U27_1980.ai }
+		command = { trigger = { country = U28 } type = ai which = U28_1980.ai }
+		command = { trigger = { country = U29 } type = ai which = U29_1980.ai }
+		command = { trigger = { country = U30 } type = ai which = U30_1980.ai }
+		command = { trigger = { country = U31 } type = ai which = U31_1980.ai }
+		command = { trigger = { country = U32 } type = ai which = U32_1980.ai }
+		command = { trigger = { country = U33 } type = ai which = U33_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_easteurope_1990.ai }
+	#	command = { trigger = { country = U13 } type = ai which = U13_1990.ai }
+	#	command = { trigger = { country = U27 } type = ai which = U27_1990.ai }
+	#	command = { trigger = { country = U28 } type = ai which = U28_1990.ai }
+	#	command = { trigger = { country = U29 } type = ai which = U29_1990.ai }
+	#	command = { trigger = { country = U30 } type = ai which = U30_1990.ai }
+	#	command = { trigger = { country = U31 } type = ai which = U31_1990.ai }
+	#	command = { trigger = { country = U32 } type = ai which = U32_1990.ai }
+	#	command = { trigger = { country = U33 } type = ai which = U33_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+### AUSTRIA (AUS)
+
+event = {
+	id = 8700010
+	country = AUS
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { trigger = { flag = neutral_austria } type = ai which = AUS_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { trigger = { flag = neutral_austria } type = ai which = AUS_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { trigger = { flag = neutral_austria } type = ai which = AUS_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { trigger = { flag = neutral_austria } type = ai which = AUS_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { trigger = { flag = neutral_austria } type = ai which = AUS_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { trigger = { flag = neutral_austria } type = ai which = AUS_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+### PEOPLE'S REPUBLIC OF CHINA (CHC)
+
+event = {
+	id = 8700011
+	country = CHC
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { war = { country = CHI country = CHC } }
+			NOT = { OR = { flag = CHC_won_civil_war flag = CHI_won_civil_war } }
+			} # It is still before CCW
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { type = ai which = CHC_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1947
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			war = { country = CHI country = CHC }
+			NOT = { OR = { flag = CHC_won_civil_war flag = CHI_won_civil_war } }
+			} # CCW rages on!
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { type = ai which = CHC_1947.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1949
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { war = { country = CHI country = CHC } }
+			flag = CHC_won_civil_war
+			} # CCW ended before 1950
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { type = ai which = CHC_1949.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_setflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			OR = { flag = CHC_won_civil_war flag = CHI_won_civil_war }
+			flag = ww3
+			} # if CCW is still in place, AI is not changed
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = CHC_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			OR = { flag = CHC_won_civil_war flag = CHI_won_civil_war }
+			NOT = { flag = ww3 }
+			} # if CCW is still in place, AI is not changed
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = CHC_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}		
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_asia_1960.ai }
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = CHC_1960.ai }
+		command = { trigger = { flag = ww3 } type = ai which = CHC_WW3_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_asia_1970.ai }
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = CHC_1970.ai }
+		command = { trigger = { flag = ww3 } type = ai which = CHC_WW3_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_asia_1980.ai }
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = CHC_1980.ai }
+		command = { trigger = { flag = ww3 } type = ai which = CHC_WW3_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_asia_1990.ai }
+	#	command = { trigger = { NOT = { flag = ww3 } } type = ai which = CHC_1990.ai }
+	#	command = { trigger = { flag = ww3 } type = ai which = CHC_WW3_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1947 }
+	#	command = { type = local_clrflag which = ai_1949 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}		
+}
+
+### REPUBLIC OF CHINA (CHI)
+
+event = {
+	id = 8700012
+	country = CHI
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { war = { country = CHI country = CHC } }
+			NOT = { OR = { flag = CHC_won_civil_war flag = CHI_won_civil_war } }
+			} # It is still before CCW
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { type = ai which = CHI_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1947
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			war = { country = CHI country = CHC }
+			NOT = { OR = { flag = CHC_won_civil_war flag = CHI_won_civil_war } }
+			} # CCW rages on!
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { type = ai which = CHI_1947.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1949
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { war = { country = CHI country = CHC } }
+			OR = { flag = CHC_won_civil_war flag = CHI_won_civil_war }
+			} # CCW ended before 1950
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { trigger = { flag = CHC_won_civil_war } type = ai which = CHI_1949.ai }
+		command = { trigger = { flag = CHI_won_civil_war } type = ai which = CHI_1945.ai }
+		command = { trigger = { flag = CHC_won_civil_war } type = local_clrflag which = ai_1945 }
+		command = { trigger = { flag = CHI_won_civil_war } type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { trigger = { flag = CHC_won_civil_war } type = local_setflag which = ai_1949 }
+		command = { trigger = { flag = CHI_won_civil_war } type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			OR = { flag = CHC_won_civil_war NOT = { exists = CHC }}
+			flag = ww3
+			} # if CCW is still in place, AI is not changed
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { trigger = { NOT = { exists = CHC } } type = ai which = CHI_united_WW3_1950.ai }
+		command = { trigger = { exists = CHC } type = ai which = CHI_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			OR = { flag = CHC_won_civil_war NOT = { exists = CHC }}
+			NOT = { flag = ww3 }
+			} # if CCW is still in place, AI is not changed
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { trigger = { NOT = { exists = CHC } } type = ai which = CHI_united_1950.ai }
+		command = { trigger = { exists = CHC } type = ai which = CHI_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}		
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_asia_1960.ai }
+		command = { trigger = { flag = ww3 NOT = { exists = CHC } } type = ai which = CHI_united_WW3_1960.ai }
+		command = { trigger = { NOT = { flag = ww3 } NOT = { exists = CHC } } type = ai which = CHI_united_1960.ai }
+		command = { trigger = { flag = ww3 exists = CHC } type = ai which = CHI_WW3_1960.ai }
+		command = { trigger = { NOT = { flag = ww3 } exists = CHC } type = ai which = CHI_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_asia_1970.ai }
+		command = { trigger = { flag = ww3 NOT = { exists = CHC } } type = ai which = CHI_united_WW3_1970.ai }
+		command = { trigger = { NOT = { flag = ww3 } NOT = { exists = CHC } } type = ai which = CHI_united_1970.ai }
+		command = { trigger = { flag = ww3 exists = CHC } type = ai which = CHI_WW3_1970.ai }
+		command = { trigger = { NOT = { flag = ww3 } exists = CHC } type = ai which = CHI_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_asia_1980.ai }
+		command = { trigger = { flag = ww3 NOT = { exists = CHC } } type = ai which = CHI_united_WW3_1980.ai }
+		command = { trigger = { NOT = { flag = ww3 } NOT = { exists = CHC } } type = ai which = CHI_united_1980.ai }
+		command = { trigger = { flag = ww3 exists = CHC } type = ai which = CHI_WW3_1980.ai }
+		command = { trigger = { NOT = { flag = ww3 } exists = CHC } type = ai which = CHI_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1947 }
+		command = { type = local_clrflag which = ai_1949 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_asia_1990.ai }
+	#	command = { trigger = { flag = ww3 NOT = { exists = CHC } } type = ai which = CHI_united_WW3_1990.ai }
+	#	command = { trigger = { NOT = { flag = ww3 } NOT = { exists = CHC } } type = ai which = CHI_united_1990.ai }
+	#	command = { trigger = { flag = ww3 exists = CHC } type = ai which = CHI_WW3_1990.ai }
+	#	command = { trigger = { NOT = { flag = ww3 } exists = CHC } type = ai which = CHI_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1947 }
+	#	command = { type = local_clrflag which = ai_1949 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+### EAST GERMANY (DDR)
+
+event = {
+	id = 8700013
+	country = DDR
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945_ww3 } 
+			year = 1945	NOT = { year = 1950 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_easteurope_1945.ai }
+		command = { type = ai which = DDR_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_easteurope_1945.ai }
+		command = { type = ai which = DDR_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_easteurope_1950.ai }
+		command = { type = ai which = DDR_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_easteurope_1950.ai }
+		command = { type = ai which = DDR_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_easteurope_1960.ai }
+		command = { trigger = { flag = ww3 } type = ai which = DDR_WW3_1960.ai } # rearmament
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = DDR_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_easteurope_1970.ai }
+		command = { trigger = { flag = ww3 } type = ai which = DDR_WW3_1970.ai } # rearmament
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = DDR_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_easteurope_1980.ai }
+		command = { trigger = { flag = ww3 } type = ai which = DDR_WW3_1980.ai } # rearmament
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = DDR_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_easteurope_1990.ai }
+	#	command = { trigger = { flag = ww3 } type = ai which = DDR_WW3_1990.ai } # rearmament
+	#	command = { trigger = { NOT = { flag = ww3 } } type = ai which = DDR_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}
+}
+
+event = {
+	id = 8700225
+	country = U25
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = {
+			flag = ww3
+			NOT = { local_flag = ai_1945_ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_easteurope_1945.ai }
+		command = { type = ai which = U25_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+	}	
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = {
+			NOT = { flag = ww3 }
+			NOT = { local_flag = ai_1945 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_easteurope_1945.ai }
+		command = { type = ai which = U25_1945.ai } 
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+	}	
+	
+}
+
+### WEST GERMANY (DFR)
+
+event = {
+	id = 8700045
+	country = DFR
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945_ww3 } 
+			year = 1945	NOT = { year = 1950 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = DFR_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = DFR_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = DFR_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = DFR_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { trigger = { flag = ww3 } type = ai which = DFR_WW3_1960.ai } # rearmament
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = DFR_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { trigger = { flag = ww3 } type = ai which = DFR_WW3_1970.ai } # rearmament
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = DFR_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { trigger = { flag = ww3 } type = ai which = DFR_WW3_1980.ai } # rearmament
+		command = { trigger = { NOT = { flag = ww3 } } type = ai which = DFR_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { trigger = { flag = ww3 } type = ai which = DFR_WW3_1990.ai } # rearmament
+	#	command = { trigger = { NOT = { flag = ww3 } } type = ai which = DFR_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+event = {
+	id = 8700224
+	country = U24
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = {
+			flag = ww3
+			NOT = { local_flag = ai_1945_ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = U24_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+	}	
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = {
+			NOT = { flag = ww3 }
+			NOT = { local_flag = ai_1945 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = U24_1945.ai } 
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+	}	
+	
+}
+
+### UNITED KINGDOM (ENG)
+
+event = {
+	id = 8700050
+	country = ENG
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945_ww3 } 
+			year = 1945	NOT = { year = 1950 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = ENG_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = ENG_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = ENG_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = ENG_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1960 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960_ww3 } 
+			year = 1960	NOT = { year = 1970 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { type = ai which = ENG_WW3_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_setflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 } 
+			year = 1960	NOT = { year = 1970 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { type = ai which = ENG_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1970 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970_ww3 } 
+			year = 1970	NOT = { year = 1980 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { type = ai which = ENG_WW3_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_setflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 } 
+			year = 1970	NOT = { year = 1980 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { type = ai which = ENG_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+
+	# 1980 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980_ww3 } 
+			year = 1980	NOT = { year = 1990 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { type = ai which = ENG_WW3_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_setflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 } 
+			year = 1980	NOT = { year = 1990 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { type = ai which = ENG_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	## 1990 WW3
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990_ww3 } 
+	#		year = 1990
+	#		flag = ww3
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { type = ai which = ENG_WW3_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_clrflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_setflag which = ai_1990_ww3 }
+	#}
+	#
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 } 
+	#		year = 1990
+	#		NOT = { flag = ww3 }
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { type = ai which = ENG_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_clrflag which = ai_1990_ww3 }
+	#}	
+}
+
+### FRANCE (FRA)
+
+event = {
+	id = 8700057
+	country = FRA
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945_ww3 } 
+			year = 1945	NOT = { year = 1950 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = FRA_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = FRA_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = FRA_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = FRA_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1960 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960_ww3 } 
+			year = 1960	NOT = { year = 1970 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { type = ai which = FRA_WW3_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_setflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 } 
+			year = 1960	NOT = { year = 1970 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { type = ai which = FRA_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1970 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970_ww3 } 
+			year = 1970	NOT = { year = 1980 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { type = ai which = FRA_WW3_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_setflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 } 
+			year = 1970	NOT = { year = 1980 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { type = ai which = FRA_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1980 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980_ww3 } 
+			year = 1980	NOT = { year = 1990 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { type = ai which = FRA_WW3_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_setflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 } 
+			year = 1980	NOT = { year = 1990 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { type = ai which = FRA_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	## 1990 WW3
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990_ww3 } 
+	#		year = 1990
+	#		flag = ww3
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { type = ai which = FRA_WW3_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_clrflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_setflag which = ai_1990_ww3 }
+	#}
+	#
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 } 
+	#		year = 1990
+	#		NOT = { flag = ww3 }
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { type = ai which = FRA_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_clrflag which = ai_1990_ww3 }
+	#}	
+}
+
+### JAPAN (JAP)
+
+event = {
+	id = 8700078
+	country = JAP
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+		OR = {
+			not = { ispuppet = yes }
+			puppet = { country = JAP country = USA }
+		}
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945_ww3 } 
+			year = 1945	NOT = { year = 1950 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_WW3_1945.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_WW3_1945.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_1945.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_1945.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_WW3_1950.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_WW3_1950.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_1950.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_1950.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1960 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960_ww3 } 
+			year = 1960	NOT = { year = 1970 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_WW3_1960.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_WW3_1960.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_WW3_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_setflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 } 
+			year = 1960	NOT = { year = 1970 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_1960.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_1960.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1970 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970_ww3 } 
+			year = 1970	NOT = { year = 1980 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_WW3_1970.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_WW3_1970.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_WW3_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_setflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 } 
+			year = 1970	NOT = { year = 1980 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_1970.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_1970.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1980 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980_ww3 } 
+			year = 1980	NOT = { year = 1990 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_WW3_1980.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_WW3_1980.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_WW3_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_setflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 } 
+			year = 1980	NOT = { year = 1990 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_1980.ai }
+		command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_1980.ai }
+		command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	## 1990 WW3
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990_ww3 } 
+	#		year = 1990
+	#		flag = ww3
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_WW3_1990.ai }
+	#	command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_WW3_1990.ai }
+	#	command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_WW3_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_clrflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_setflag which = ai_1990_ww3 }
+	#}
+	#
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 } 
+	#		year = 1990
+	#		NOT = { flag = ww3 }
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { trigger = { NOT = { puppet = { country = JAP country = CHI } puppet = { country = JAP country = SOV } } } type = ai which = JAP_1990.ai }
+	#	command = { trigger = { puppet = { country = JAP country = CHI } } type = ai which = JAP_CHI_1990.ai }
+	#	command = { trigger = { puppet = { country = JAP country = SOV } } type = ai which = JAP_SOV_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_clrflag which = ai_1990_ww3 }
+	#}	
+}
+
+### REPUBLIC OF KOREA (KOR)
+
+event = {
+	id = 8700081
+	country = KOR
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { type = ai which = KOR_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950 - AI file for Korean initial defense / postwar 1950s AI
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			OR = {
+				AND = {
+					war = { country = KOR country = PRK }
+					NOT = {
+						event = 8510706
+						alliance = { country = KOR country = USA }
+					}
+				}
+				NOT = { war = { country = KOR country = PRK } }
+			}
+		}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = KOR_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1951 - Korean counterattack in the North
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1951 } 
+			year = 1950	NOT = { year = 1960 }
+			war = { country = KOR country = PRK }
+			# American or UN help
+			OR = {
+				event = 8510706
+				alliance = { country = KOR country = USA }
+			}
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = KOR_1951.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1952 - stalemate in Korean War
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1952 } 
+			year = 1950	NOT = { year = 1960 }
+			war = { country = KOR country = PRK }
+			AND = { event = 8500836 event = 8500837 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = KOR_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_setflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_asia_1960.ai }
+		command = { type = ai which = KOR_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_asia_1970.ai }
+		command = { type = ai which = KOR_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_asia_1980.ai }
+		command = { type = ai which = KOR_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_asia_1990.ai }
+	#	command = { type = ai which = KOR_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1951 }
+	#	command = { type = local_clrflag which = ai_1952 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+### PEOPLE'S REPUBLIC OF KOREA (PRK)
+
+event = {
+	id = 8700119
+	country = PRK
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_asia_1945.ai }
+		command = { type = ai which = PRK_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1950 - AI file for Korean initial offensive / postwar 1950s AI
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			OR = {
+				AND = {
+					war = { country = KOR country = PRK }
+					NOT = {
+						event = 8510706
+						alliance = { country = KOR country = USA }
+					}
+				}
+				NOT = { war = { country = KOR country = PRK } }
+			}
+		}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = PRK_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1951 - Korean counterattack in the North
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1951 } 
+			year = 1950	NOT = { year = 1960 }
+			war = { country = KOR country = PRK }
+			# American or UN help
+			OR = {
+				event = 8510706
+				alliance = { country = KOR country = USA }
+			}
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = PRK_1951.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1952 - stalemate in Korean War
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1952 } 
+			year = 1950	NOT = { year = 1960 }
+			war = { country = KOR country = PRK }
+			AND = { event = 8500836 event = 8500837 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_asia_1950.ai }
+		command = { type = ai which = PRK_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_setflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 }
+			year = 1960	NOT = { year = 1970 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_asia_1960.ai }
+		command = { type = ai which = PRK_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 }
+			year = 1970	NOT = { year = 1980 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_asia_1970.ai }
+		command = { type = ai which = PRK_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 }
+			year = 1980	NOT = { year = 1990 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_asia_1980.ai }
+		command = { type = ai which = PRK_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1951 }
+		command = { type = local_clrflag which = ai_1952 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+	}	
+	
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 }
+	#		year = 1990	
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_asia_1990.ai }
+	#	command = { type = ai which = PRK_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1951 }
+	#	command = { type = local_clrflag which = ai_1952 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#}	
+}
+
+### SOVIET UNION (SOV)
+
+event = {
+	id = 8700142
+	country = SOV
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945_ww3 } 
+			year = 1945	NOT = { year = 1950 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_easteurope_1945.ai }
+		command = { type = ai which = SOV_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_easteurope_1945.ai }
+		command = { type = ai which = SOV_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_easteurope_1950.ai }
+		command = { type = ai which = SOV_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_easteurope_1950.ai }
+		command = { type = ai which = SOV_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+
+	# 1960 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960_ww3 } 
+			year = 1960	NOT = { year = 1970 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_easteurope_1960.ai }
+		command = { type = ai which = SOV_WW3_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_setflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 } 
+			year = 1960	NOT = { year = 1970 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_easteurope_1950.ai }
+		command = { type = ai which = SOV_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+
+	# 1970 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970_ww3 } 
+			year = 1970	NOT = { year = 1980 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_easteurope_1970.ai }
+		command = { type = ai which = SOV_WW3_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_setflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 } 
+			year = 1970	NOT = { year = 1980 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_easteurope_1970.ai }
+		command = { type = ai which = SOV_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}		
+	
+	# 1980 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980_ww3 } 
+			year = 1980	NOT = { year = 1990 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_easteurope_1980.ai }
+		command = { type = ai which = SOV_WW3_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_setflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 } 
+			year = 1980	NOT = { year = 1990 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_easteurope_1980.ai }
+		command = { type = ai which = SOV_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	## 1990 WW3
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990_ww3 } 
+	#		year = 1990
+	#		flag = ww3
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_easteurope_1990.ai }
+	#	command = { type = ai which = SOV_WW3_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_clrflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_setflag which = ai_1990_ww3 }
+	#}
+	#
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 } 
+	#		year = 1990
+	#		NOT = { flag = ww3 }
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_easteurope_1990.ai }
+	#	command = { type = ai which = SOV_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_clrflag which = ai_1990_ww3 }
+	#}	
+}
+
+### UNITED STATES (USA)
+
+event = {
+	id = 8700158
+	country = USA
+	persistent = yes
+
+	name = "AI_EVENT"
+
+	trigger = {
+		ai = yes
+		NOT = { exists = GER }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 9999 }
+
+	# 1945 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945_ww3 } 
+			year = 1945	NOT = { year = 1950 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = USA_WW3_1945.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_setflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1945
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1945 } 
+			year = 1945	NOT = { year = 1950 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1945.ai }
+		command = { type = ai which = default_westeurope_1945.ai }
+		command = { type = ai which = USA_1945.ai }
+		command = { type = local_setflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1950 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950_ww3 } 
+			year = 1950	NOT = { year = 1960 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = USA_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_setflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1950
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1950 } 
+			year = 1950	NOT = { year = 1960 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = USA_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_setflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1960 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960_ww3 } 
+			year = 1960	NOT = { year = 1970 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { type = ai which = USA_WW3_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_setflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1960
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1960 } 
+			year = 1960	NOT = { year = 1970 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1960.ai }
+		command = { type = ai which = default_westeurope_1960.ai }
+		command = { type = ai which = USA_1960.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_setflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1970 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970_ww3 } 
+			year = 1970	NOT = { year = 1980 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1950.ai }
+		command = { type = ai which = default_westeurope_1950.ai }
+		command = { type = ai which = USA_WW3_1950.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_setflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}	
+	
+	# 1970
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1970 } 
+			year = 1970	NOT = { year = 1980 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1970.ai }
+		command = { type = ai which = default_westeurope_1970.ai }
+		command = { type = ai which = USA_1970.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_setflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1980 WW3
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980_ww3 } 
+			year = 1980	NOT = { year = 1990 }
+			flag = ww3
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { type = ai which = USA_WW3_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_clrflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_setflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	# 1980
+	action = {
+		name = "OK" 
+		trigger = { 
+			NOT = { local_flag = ai_1980 } 
+			year = 1980	NOT = { year = 1990 }
+			NOT = { flag = ww3 }
+			}
+		command = { type = ai which = default_1980.ai }
+		command = { type = ai which = default_westeurope_1980.ai }
+		command = { type = ai which = USA_1980.ai }
+		command = { type = local_clrflag which = ai_1945 }
+		command = { type = local_clrflag which = ai_1950 }
+		command = { type = local_clrflag which = ai_1960 }
+		command = { type = local_clrflag which = ai_1970 }
+		command = { type = local_setflag which = ai_1980 }
+		command = { type = local_clrflag which = ai_1990 }
+		command = { type = local_clrflag which = ai_1945_ww3 }
+		command = { type = local_clrflag which = ai_1950_ww3 }
+		command = { type = local_clrflag which = ai_1960_ww3 }
+		command = { type = local_clrflag which = ai_1970_ww3 }
+		command = { type = local_clrflag which = ai_1980_ww3 }
+		command = { type = local_clrflag which = ai_1990_ww3 }
+	}
+	
+	## 1990 WW3
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990_ww3 } 
+	#		year = 1990
+	#		flag = ww3
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { type = ai which = USA_WW3_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_clrflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_setflag which = ai_1990_ww3 }
+	#}
+	#
+	## 1990
+	#action = {
+	#	name = "OK" 
+	#	trigger = { 
+	#		NOT = { local_flag = ai_1990 } 
+	#		year = 1990
+	#		NOT = { flag = ww3 }
+	#		}
+	#	command = { type = ai which = default_1990.ai }
+	#	command = { type = ai which = default_westeurope_1990.ai }
+	#	command = { type = ai which = USA_1990.ai }
+	#	command = { type = local_clrflag which = ai_1945 }
+	#	command = { type = local_clrflag which = ai_1950 }
+	#	command = { type = local_clrflag which = ai_1960 }
+	#	command = { type = local_clrflag which = ai_1970 }
+	#	command = { type = local_clrflag which = ai_1980 }
+	#	command = { type = local_setflag which = ai_1990 }
+	#	command = { type = local_clrflag which = ai_1945_ww3 }
+	#	command = { type = local_clrflag which = ai_1950_ww3 }
+	#	command = { type = local_clrflag which = ai_1960_ww3 }
+	#	command = { type = local_clrflag which = ai_1970_ww3 }
+	#	command = { type = local_clrflag which = ai_1980_ww3 }
+	#	command = { type = local_clrflag which = ai_1990_ww3 }
+	#}	
+}

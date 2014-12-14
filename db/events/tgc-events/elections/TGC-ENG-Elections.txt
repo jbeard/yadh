@@ -1,0 +1,1239 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions - Elections
+#################################
+# by Nymet260
+# fixup by burning
+# Updated by Agent Larkin
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# Event List:
+#ENG 133209500 British Post-war Election
+#ENG 133209501 1922 general election
+#ENG 133209502 1923 general election
+#ENG 133209503 1924 general election
+#ENG 133209504 1929 general election
+#ENG 133209505 1931 general election
+#ENG 133209507 1923 election after 1922 Communist victory
+#ENG 133209508 1923 election after 1922 contested Communist victory
+#ENG 133209509 1929 election with Communist government
+#ENG 133209510 1931 general election with Communist government
+#ENG 133209511 1931 general election with Fascist government
+#ENG 133209512 New Chief of Staff Appointed - Henry Wilson
+#ENG 133209513 Henry Wilson died
+#ENG 133209514 Frederick Lambart retired
+#ENG 133209515 Louis Alexander Mountbatten Retired
+#ENG 133209516 David Beatty retired
+#ENG 133209517 Charles Madden retired
+#ENG 133209518 Hugh Trenchard is appointed
+#ENG 133209519 Hugh Trenchard has retired
+#ENG 133209520 - 133209524 - 133209528 Armed Forces Officer Reorganization
+#ENG 133209521 - 133209525 - 133209529 Leading the Army?
+#ENG 133209522 - 133209526 - 133209530 Leading the Navy?
+#ENG 133209523 - 133209527 - 133209531 Leading the Air force?
+#ENG 133209532 New Chief of Staff - Tom Winthringham
+
+########################################
+## British Elections
+########################################	
+
+# British Post-war Election
+event = {
+	id = 133209500
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		event = 2002534 #Versailles Treaty Signed
+	}
+	
+	name = "British Post-war Election"
+	desc = "This was the first election since WW1, with the Conservative party running as a coliation front with the Liberal party. However some Liberals however were against this coliation front and ran alone with H.H Asquith leading the effort. This combined effort would isolate the Labour party from winning."
+	offset = 180
+	date = { day = 1 month = January year = 1917 }
+	##date = { day = 28 month = December year = 1918 } ##Historical date
+	deathdate = { day = 14 month = November year = 1922 }
+	
+	
+	action_a = {
+		ai_chance = 98
+		name = "Coalition Front take the Victory"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10128} #David Lloyd George
+		command = { type = foreignminister which = 10257 } #Arthur Balfour
+		command = { type = armamentminister which = 10289 } #Austen Chamberlain
+		command = { type = ministerofsecurity which = 10321 } #Edward Shortt
+		command = { type = ministerofintelligence which = 10276 } # Mansfield Smith-Cumming
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "The Labour Party Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } # George V
+		command = { type = headofgovernment which = 10019 } #Clement Attlee
+		command = { type = foreignminister which = 10260 } #Ramsay MacDonald
+		command = { type = armamentminister which = 10306 } #Philip Snowden
+		command = { type = ministerofsecurity which = 10322 } #Arthur Henderson
+		command = { type = ministerofintelligence which = 10276 } # Mansfield Smith-Cumming
+	}
+	action_C = {
+		ai_chance = 1
+		name = "The Liberal Party Makes A Comeback"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 10001 } # George V
+		command = { type = headofgovernment which = 10264 } #Herbert Henry Asquith
+		command = { type = foreignminister which = 10250 } #Edward Grey
+		command = { type = armamentminister which = 10286 } #John Morley
+		command = { type = ministerofsecurity which = 10318 } #John Simon
+		command = { type = ministerofintelligence which = 10276 } # Mansfield Smith-Cumming
+	}			
+}	
+
+# 1922 General Election
+event = {
+	id = 133209501
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "ELECTION_TITLE"
+	desc = "the 1922 general election was a huge upset in a shift of power. The Conservatives still managed an easy victory but the Labour party gained a large number of seats far more then the now divided Liberal party. This was also the year the Communist Party of Great Britain was formed and attempted to obtain seats by running within the Labour party. They would manage to seat only a single member."
+	
+	offset = 2
+	date = { day = 15 month = November year = 1922 }
+	deathdate = { day = 15 month = November year = 1923 }
+	
+	
+	action_a = {
+		ai_chance = 1
+		name = "Labour Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10416 } #J. R. Clynes
+		command = { type = foreignminister which = 10260 } #Ramsay MacDonald
+		command = { type = armamentminister which = 10306 } #Philip Snowden
+		command = { type = ministerofsecurity which = 10322 } #Arthur Henderson
+		command = { type = ministerofintelligence which = 10276 } # Mansfield Smith-Cumming
+		
+	}
+	action_b = {
+		ai_chance = 98
+		name = "Conservatives Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10269 } #Andrew Bonar Law
+		command = { type = foreignminister which = 10252 } #George Curzon
+		command = { type = armamentminister which = 10304 } #Stanley Baldwin
+		command = { type = ministerofsecurity which = 10323 } #William Bridgeman
+		command = { type = ministerofintelligence which = 10276 } # Mansfield Smith-Cumming
+	}	
+	action_c = {
+		ai_chance = 1
+		name = "Dear Lord! The CPGB Has Secured A Majority! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10417 } #Tom Mann
+		command = { type = foreignminister which = 10340 } #Harry Pollitt 
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10280 } #William Gallacher
+		command = { type = local_setflag which = ENGC1}
+	}			
+}
+
+# 1923 Election
+event = {
+	id = 133209502
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "ELECTION_TITLE"
+	desc = "The election of 1923 saw the shift of power from the Conservatives to the Labour party most in due party by the Liberal party whom managed to divide the Conservative vote. Although this was a great victory for the Labour party it would be a short lived one."
+	
+	offset = 2
+	date = { day = 6 month = December year = 1923 }
+	deathdate = { day = 6 month = December year = 1924 }
+	
+	action_a = {
+		ai_chance = 1
+		name = "Labour Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10418 } #Arthur Henderson
+		command = { type = armamentminister which = 10306 } #Philip Snowden
+		command = { type = ministerofsecurity which = 10419 } #J. R. Clynes
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 98
+		name = "Conservatives Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10002 } #Stanley Baldwin
+		command = { type = foreignminister which = 10252 } #George Curzon
+		command = { type = armamentminister which = 10305 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 10323 } #William Bridgeman
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+	}		
+	action_c = {
+		ai_chance = 1
+		name = "The CPGB Has Secured A Majority! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10417 } #Tom Mann
+		command = { type = foreignminister which = 10340 } #Harry Pollitt 
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10280  } #William Gallacher
+		command = { type = local_setflag which = ENGC2}
+		command = { type = local_setflag which = ENGC5}
+	}			
+}	
+
+# 1924 Election
+event = {
+	id = 133209503
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The 1924 election was the election that would change Britain forever. Although the change isnt massive but on the political scale it would be, as government would now be polarized between the Conservatives and Labour party. The liberal party was 'shot in the foot' in this election year and nearly lost all of their seats as well as the labour party performing poorly and losing a chunk of voters to the Conservatives which allowed them a land side victory."
+	
+	date = { day = 29 month = October year = 1924 }
+	deathdate = { day = 29 month = October year = 1925 }
+	
+	action_a = {
+		ai_chance = 1
+		name = "Labour Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } # Geroge V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10420 } #William Adamson
+		command = { type = armamentminister which = 10306 } #Philip Snowden
+		command = { type = ministerofsecurity which = 10419 } #J. R. Clynes
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 98
+		name = "Conservatives Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10002 } #Stanley Baldwin 
+		command = { type = foreignminister which = 10259 } #Austen Chamberlain
+		command = { type = armamentminister which = 10154 } #Winston Churchill
+		command = { type = ministerofsecurity which = 10324 } #William Joynson-Hicks
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+	}
+	action_c = {
+		ai_chance = 1
+		name = "The CPGB Has Secured A Majority! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10417 } #Tom Mann
+		command = { type = foreignminister which = 10340 } #Harry Pollitt 
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10280  } #William Gallacher
+		command = { type = local_setflag which = ENGC2}
+		command = { type = local_setflag which = ENGC6}
+	}		
+}		
+
+# 1929 Election
+event = {
+	id = 133209504
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "In the 1929 election, although the Conservatives did achieve a popular vote, they however did not win majority in government, the Labour party took that title. With the Conservative parties cabinets being rather unimagintive and rather 'old' many looked towards the Labour parties new ideas. This is also the first years that the young British Facist party would finally mature and formalize, however their influnce in government was rather poor."
+	
+	date = { day = 30 month = May year = 1929 }
+	deathdate = { day = 30 month = May year = 1930 }
+	
+	action_a = {
+		ai_chance = 97
+		name = "Labour Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10418 } #Arthur Henderson
+		command = { type = armamentminister which = 10306 } #Philip Snowden
+		command = { type = ministerofsecurity which = 10419 } #J. R. Clynes
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Conservatives Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10002 } #Stanley Baldwin
+		command = { type = foreignminister which = 10126 } #Viscount Templewood
+		command = { type = armamentminister which = 10305 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 10335 } #Sir John Gilmour
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+	}		
+	action_c = {
+		ai_chance = 1
+		name = "The CPGB Has Secured A Majority! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10265 } #Harry Pollitt
+		command = { type = foreignminister which = 10034 } #D.N. Pritt
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10088 } #Anthony Blunt
+		command = { type = local_setflag which = ENGC2}
+		command = { type = local_setflag which = ENGC7}
+	}		
+	action_d = {
+		ai_chance = 1
+		name = "The British Facsist Party Shall Dominate! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10421 } #R.B.D. Blakeney
+		command = { type = foreignminister which = 10031 } #Archibald Ramsay
+		command = { type = armamentminister which = 10047 } #Neil Francis-Hawkins
+		command = { type = ministerofsecurity which = 10066 } #Arnold Spencer-Leese
+		command = { type = ministerofintelligence which = 10083 } #Maxwell Knight
+	}			
+}		
+
+# 1931 General Election	
+event = {
+	id = 133209505
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2
+	name = "ELECTION_TITLE"
+	desc = "EVT_133209505_DESC" 
+	
+	date = { day = 27 month = October year = 1931 }
+	deathdate = { day = 27 month = October year = 1932 }
+	
+	action_a = {
+		ai_chance = 99
+		name = "Labour Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10336 } #Sir John Simon
+		command = { type = armamentminister which = 10305 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 10302 } #Herbert Samuel
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Conservatives Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } # George V
+		command = { type = headofgovernment which = 10002 } #Stanley Baldwin
+		command = { type = foreignminister which = 10126 } #Viscount Templewood
+		command = { type = armamentminister which = 10305 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 10335 } #Sir John Gilmour
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+	}	
+	action_c = {
+		ai_chance = 1
+		name = "The CPGB Has Secured A Majority! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10265 } #Harry Pollitt
+		command = { type = foreignminister which = 10033 } #Phil Piratin
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10089 } #Kim Philby
+		command = { type = local_setflag which = ENGC3}
+		command = { type = local_setflag which = ENGC8}
+	}		
+	action_d = {
+		ai_chance = 1
+		name = "Oswald And The New Party Shall Reign Supreme! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10020 } #Oswald Mosley
+		command = { type = foreignminister which = 10031 } #Archibald Ramsay
+		command = { type = armamentminister which = 10049 } #Jorian Jenks
+		command = { type = ministerofsecurity which = 10423 } #William Joyce
+		command = { type = ministerofintelligence which = 10083 } #Maxwell Knight
+		command = { type = local_setflag which = ENGF}
+	}		
+}
+####################################
+##Alternative British Dictatotorial outcomes
+####################################
+
+# 1923 election after 1922 Communist victory
+event = {
+	id = 133209507
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = ENGC5} ##prevents a double election
+	}
+	
+	name = "ELECTION_TITLE"
+	desc = "With the Communist victory back in 1922 there was another major shift in the political power of polarization. The Conservative party suffered a major dissention within the party and several of its members were jailed for random offenses. the Conservative party taking a far back seat in this election the Liberals took the chance to reclaim its glory and seat count within government while the Labour party pushes for for more socialist changes."
+	
+	offset = 2
+	date = { day = 6 month = December year = 1923 }
+	deathdate = { day = 6 month = December year = 1924 }
+	
+	
+	action_a = {
+		ai_chance = 10
+		name = "Labour Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10418 } #Arthur Henderson
+		command = { type = armamentminister which = 10306 } #Philip Snowden
+		command = { type = ministerofsecurity which = 10419 } #J. R. Clynes
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 5
+		name = "Liberals Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10264 } #Herbert Henry Asquith
+		command = { type = foreignminister which = 10250 } #Edward Grey
+		command = { type = armamentminister which = 10291 } #David Lloyd George
+		command = { type = ministerofsecurity which = 10310 } #Herbert Gladstone
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+	}		
+	action_c = {
+		ai_chance = 85
+		name = "The CPGB Wins "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10417 } #Tom Mann
+		command = { type = foreignminister which = 10340 } #Harry Pollitt 
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10280  } #William Gallacher
+	}			
+}	
+
+# 1923 election after 1922 contested Communist victory
+event = {
+	id = 133209508
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = ENGC6} ##prevents a double election
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "With the Communist victory in the 1923 general election being heavily contested, the leftist parties and Conservative members banded together to form the Popular Front in an attempt to dethrone the Communist from parliment."
+	
+	date = { day = 29 month = October year = 1924 }
+	deathdate = { day = 29 month = October year = 1925 }
+	
+	action_a = {
+		ai_chance = 25
+		name = "Popular Front Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 10001 } # Geroge V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10259 } #Austen Chamberlain
+		command = { type = armamentminister which = 10154 } #Winston Churchill
+		command = { type = ministerofsecurity which = 10419 } #J. R. Clynes
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 75
+		name = "The CPGB Wins "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10417 } #Tom Mann
+		command = { type = foreignminister which = 10340 } #Harry Pollitt 
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10280  } #William Gallacher
+	}		
+}	
+
+# 1929 election with Communist government	
+event = {
+	id = 133209509
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = ENGC7} ##prevents a double election
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The General election of 1929 is one where the more democratic leaning parties begin to falter. The labour party suffered some internal strife but managed to recover how over a major dissention within the Liberal party caused them to spliter into two groups, the National Liberal party and the Liberal party, greatly weakening the chance of a Liberal victory. Although the renegade National Liberal party attempted to run as their own party they would not win very many seats in parliment seat"
+	
+	date = { day = 30 month = May year = 1929 }
+	deathdate = { day = 30 month = May year = 1930 }
+	
+	action_a = {
+		ai_chance = 10
+		name = "Labour Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10418 } #Arthur Henderson
+		command = { type = armamentminister which = 10306 } #Philip Snowden
+		command = { type = ministerofsecurity which = 10419 } #J. R. Clynes
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 5
+		name = "National Liberal Party Win"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10128} #David Lloyd George
+		command = { type = foreignminister which = 10250 } #Edward Grey
+		command = { type = armamentminister which = 10302 } #Herbert Samuel
+		command = { type = ministerofsecurity which = 10312 } #Reginald McKenna
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+	}		
+	action_c = {
+		ai_chance = 85
+		name = "The CPGB Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10021 } #Harry Pollitt
+		command = { type = foreignminister which = 10034 } #D.N. Pritt
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10088 } #Anthony Blunt
+	}				
+}	
+
+# 1931 election with Communist government		
+event = {
+	id = 133209510
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = ENGC8} ##prevents a double election
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The 1931 election was an exciting one. The liberal parties whom many have no recovered from their 1929 fiascos managed to band together as well as some renegade Conservatives to fourm the National Labour front. This front which stood for democratic socalism attempted to relive the Communist of many of their seats and end their dominance of parliment"
+	
+	date = { day = 27 month = October year = 1931 }
+	deathdate = { day = 27 month = October year = 1932 }
+	
+	
+	action_a = {
+		ai_chance = 25
+		name = "National Labour Front"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10334 } #Ramsay MacDonald
+		command = { type = foreignminister which = 10418 } #Arthur Henderson
+		command = { type = armamentminister which = 10042 } #Hugh Dalton
+		command = { type = ministerofsecurity which = 10302 } #Herbert Samuel
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 75
+		name = "Let the Commune Rise!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10021 } #Harry Pollitt
+		command = { type = foreignminister which = 10033 } #Phil Piratin
+		command = { type = armamentminister which = 10342 } #Shapurji Saklatvala
+		command = { type = ministerofsecurity which = 10315 } #Charles Trevelyan
+		command = { type = ministerofintelligence which = 10089 } #Kim Philby
+	}				
+}
+
+# 1931 general election with Fascist government
+event = {
+	id = 133209511
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = fascist
+		NOT = {local_flag = ENGF} ##prevents a double election
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "EVT_133209511_DESC"
+	
+	date = { day = 27 month = October year = 1931 }
+	deathdate = { day = 27 month = October year = 1932 }
+	
+	
+	action_a = {
+		ai_chance = 5
+		name = "Democratic Front Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10002 } #Stanley Baldwin
+		command = { type = foreignminister which = 10126 } #Viscount Templewood
+		command = { type = armamentminister which = 10305 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 10335 } #Sir John Gilmour
+		command = { type = ministerofintelligence which = 10006 } #Sir Hugh Sinclair
+		
+	}	
+	action_b = {
+		ai_chance = 40
+		name = "Imperial Fascist Party Shall Dominate!	"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10316 } #Arnold Spencer Leese
+		command = { type = foreignminister which = 10031 } #Archibald Ramsay
+		command = { type = armamentminister which = 10047 } #Neil Francis-Hawkins
+		command = { type = ministerofsecurity which = 10425 } #Henry Hamilton Beamish
+		command = { type = ministerofintelligence which = 10083 } #Maxwell Knight
+	}		
+	action_c = {
+		ai_chance = 55
+		name = "Oswald And The British Union Secures Victory! "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 0 }
+		command = { type = headofstate which = 10001 } #George V
+		command = { type = headofgovernment which = 10020 } #Oswald Mosley
+		command = { type = foreignminister which = 10031 } #Archibald Ramsay
+		command = { type = armamentminister which = 10049 } #Jorian Jenks
+		command = { type = ministerofsecurity which = 10423 } #William Joyce
+		command = { type = ministerofintelligence which = 10083 } #Maxwell Knight
+	}		
+}
+
+####################################
+##Historical British Military head's Change events
+####################################	
+
+# New Chief of Staff Appointed - Henry Wilson
+event = {
+	id = 133209512
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "New Chief of Staff Appointed"
+	desc = "Henry Wilson is in, Douglas died back in 1915"
+	
+	offset = 2
+	date = { day = 19 month = February year = 1918 }
+	deathdate = { day = 19 month = February year = 1919 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Henry Wilson"
+		command = { type = chiefofstaff which = 10248 } # Henry Wilson
+		command = { type = chiefofarmy which = 10226 } # Henry Wilson
+		command = { type = sleepminister which = 10243 } #Charles Douglas
+		command = { type = sleepminister which = 10220 } #Charles Douglas
+	}				
+}	
+
+# Henry Wilson died
+event = {
+	id = 133209513
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Henry Wilson Died"
+	desc = "Frederick Lambart is in, Henry was assassinated."
+	
+	offset = 2
+	date = { day = 20 month = February year = 1922 }
+	deathdate = { day = 25 month = February year = 1922 }
+	
+	action = {
+		ai_chance = 100
+		name = "Appoint Frederick Lambart" 
+		command = { type = chiefofstaff which = 10249 } # Frederick Rudolph Lambart
+		command = { type = chiefofarmy which = 10227 } # Frederick Rudolph Lambart
+		command = { type = sleepminister which = 10226 } # Henry Wilson
+		command = { type = sleepminister which = 10248 } # Henry Wilson
+	}				
+}	
+
+# Frederick Lambart retired
+event = {
+	id = 133209514
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Frederick Lambart Retired"
+	desc = "George Milne is in, Frederick Lambert has retired."
+	
+	offset = 2
+	date = { day = 20 month = February year = 1926 }
+	deathdate = { day = 25 month = February year = 1926 }
+	
+	action = {
+		ai_chance = 100
+		name = "Appoint George Milne"
+		command = { type = chiefofstaff which = 10426 } #George Milne
+		command = { type = chiefofarmy which = 10427 } #George Milne
+		command = { type = sleepminister which = 10249 } # Frederick Rudolph Lambart
+		command = { type = sleepminister which = 10227 } # Frederick Rudolph Lambart
+	}				
+}
+
+# Louis Alexander Mountbatten Retired
+event = {
+	id = 133209515
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Louis Alexander Mountbatten Retired" 
+	desc = "David Beatty is in, Mountbatten retired back in 1915"
+	
+	offset = 2
+	date = { day = 1 month = January year = 1919 }
+	deathdate = { day = 1 month = January year = 1920 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint David Beatty"
+		command = { type = chiefofnavy which = 10233 } # David Beatty
+		command = { type = sleepminister which = 10232 } # Louis Alexander Mountbatten
+	}				
+}
+
+# David Beatty retired
+event = {
+	id = 133209516
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "David Beatty Retired"
+	desc = "Charles Madden is in"
+	
+	offset = 2
+	date = { day = 5 month = July year = 1927 }
+	deathdate = { day = 5 month = July year = 1928 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles Madden"
+		command = { type = chiefofnavy which = 10428 } # Charles Madden
+		command = { type = sleepminister which = 10233 } # David Beatty
+	}				
+}
+
+# Charles Madden retired
+event = {
+	id = 133209517
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Charles Madden Retired"
+	desc = "Frederick Field is in"
+	
+	offset = 2
+	date = { day = 1 month = March year = 1930 }
+	deathdate = { day = 1 month = March year = 1931 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Frederick Field"
+		command = { type = chiefofnavy which = 10429 } # Frederick Field
+		command = { type = sleepminister which = 10428 } # Charles Madden
+	}				
+}
+
+# Hugh Trenchard is appointed
+event = {
+	id = 133209518
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Hugh Trenchard is appointed"
+	desc = "Hugh Trenchard is in."
+
+	offset = 2
+	date = { day = 1 month = March year = 1919 }
+	deathdate = { day = 1 month = March year = 1920 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Hugh Trenchard"
+		command = { type = chiefofair which = 10212 } # Hugh Trenchard
+	}				
+}
+
+# Hugh Trenchard has retired
+event = {
+	id = 133209519
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Hugh Trenchard has retired"
+	desc = "John Salmond is in, Hugh Trenchard has retired."
+	
+	offset = 2
+	date = { day = 1 month = January year = 1930 }
+	deathdate = { day = 1 month = January year = 1931 }
+	
+	action = {
+		ai_chance = 100
+		name = "Appoint John Salmond"
+		command = { type = chiefofair which = 10337 } # John Salmond
+		command = { type = sleepminister which = 10212 } # Hugh Trenchard
+	}				
+}	
+
+####################################
+##Communist British Military head's Change events
+####################################	
+event = {
+	id = 133209520
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = ENGC1 #Good till 1923 election
+	}
+	
+	date = { day = 1 month = January year = 1914 }
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "The Assembly wishes to oust the bourgeoisie generals within our military and bring in officers who truely represent the people!"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Comrade Emanuel Shinwell will purge the enemies of the people!"
+		command = { type = chiefofstaff which = 10347 } # Emanuel Shinwell
+		command = { type = trigger which = 133209521 }
+		command = { type = trigger which = 133209522 }
+		command = { type = trigger which = 133209523 }
+		command = { type = local_clrflag which = ENGC1 }
+	}				
+}
+event = {
+	id = 133209521
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209520
+	
+	name = "Leading The Army?" 
+	desc = "Both generals but a strong emphasis on defense however Emanuel and more connections then Alexander"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Emanuel Shinwell"
+		command = { type = chiefofarmy which = 10348 } # Emanuel Shinwell
+	}
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Bill Alexander"
+		command = { type = chiefofarmy which = 10108 } # Bill Alexander
+	}			
+}	
+event = {
+	id = 133209522
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209520
+	
+	name = "Leading the Navy?"
+	desc = "Sir Andrew Cunningham is the only able bodied leader for the navy"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Sir Andrew Cunningham"
+		command = { type = chiefofnavy which = 10110 } # Andrew Cunningham
+	}		
+}	
+event = {
+	id = 133209523
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209520
+	
+	name = "Leading the Airforce?"
+	desc = "William Wedgwood Benn is the only able bodies leader for the air force"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint William Wedgwood Benn"
+		command = { type = chiefofair which = 10350} # William Wedgwood Benn
+	}					
+}
+event = {
+	id = 133209524
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = ENGC2 #Good till 1929 election
+	}
+	
+	date = { day = 1 month = January year = 1914 } 
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "The Assembly wishes to oust the bourgeoisie generals within our military and bring in officers who truely represent the people!"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Comrade Tom Wintringham will purge the enemies of the people!"
+		command = { type = chiefofstaff which = 10100 } # Tom Wintringham
+		command = { type = trigger which = 133209525 }
+		command = { type = trigger which = 133209526 }
+		command = { type = trigger which = 133209527 }
+		command = { type = local_clrflag which = ENGC2 }
+	}				
+}
+event = {
+	id = 133209525
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209524
+	
+	name = "Leading The Army?" 
+	desc = "Both generals but a strong emphasis on defense however Emanuel had a fading popularity"
+	
+	action_a = {
+		ai_chance = 30
+		name = "Appoint Emanuel Shinwell"
+		command = { type = chiefofarmy which = 10348 } # Emanuel Shinwell
+	}
+	action_b = {
+		ai_chance = 70
+		name = "Appoint Bill Alexander"
+		command = { type = chiefofarmy which = 10108 } # Bill Alexander
+	}			
+}	
+event = {
+	id = 133209526
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209524
+	
+	name = "Leading the Navy?"
+	desc = "Sir Andrew Cunningham is the only able bodied leader for the navy"
+	
+	action_b = {
+		ai_chance = 100
+		name = "Appoint Sir Andrew Cunningham"
+		command = { type = chiefofnavy which = 10110 } # Andrew Cunningham
+	}		
+}	
+event = {
+	id = 133209527
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209524
+	
+	name = "Leading the Airforce?"
+	desc = "William Wedgwood Benn is the only able bodies leader for the air force"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint William Wedgwood Benn"
+		command = { type = chiefofair which = 10350 } # William Wedgwood Benn
+	}					
+}
+event = {
+	id = 133209528
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = ENGC3
+	}
+	
+	date = { day = 1 month = January year = 1914 }
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "The Assembly wishes to oust the bourgeoisie generals within our military and bring in officers who truely represent the people!"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Comrade Tom Wintringham will purge the enemies of the people!"
+		command = { type = chiefofstaff which = 10100 } # Tom Wintringham
+		command = { type = trigger which = 133209529 }
+		command = { type = trigger which = 133209530 }
+		command = { type = trigger which = 133209531 }
+		command = { type = local_clrflag which = ENGC3 }
+	}				
+}
+event = {
+	id = 133209529
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209528
+	
+	name = "Leading The Army?" 
+	desc = "Both favour static defense. Emanuel Shinwell is a LWR while Bill Alexander is a ST. "
+	
+	action_a = {
+		ai_chance = 30
+		name = "Appoint Emanuel Shinwell"
+		command = { type = chiefofarmy which = 10348 } #Emanuel Shinwell
+	}
+	action_b = {
+		ai_chance = 70
+		name = "Appoint Bill Alexander"
+		command = { type = chiefofarmy which = 10108 } #Bill Alexander
+	}			
+}	
+event = {
+	id = 133209530
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209528
+	
+	name = "Leading the Navy?"
+	desc = "Fred Copeman is a strong proponent of submarine and indirect warfare while Cunningham believes in power projection."
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Fred Copeman"
+		command = { type = chiefofnavy which = 10115 } # Fred Copeman
+	}			
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Sir Andrew Cunningham"
+		command = { type = chiefofnavy which = 10349 } # Andrew Cunningham
+	}		
+}	
+event = {
+	id = 133209531
+	random = no
+	country = ENG
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133209528
+	
+	name = "Leading the Airforce?"
+	desc = "Wedgewood puts more emphasis on aerial superiority while Strachey believes in more of a strategic bombardment doctrine." #Corrected a few spelling and grammer mistakes
+	
+	action_a = {
+		ai_chance = 30
+		name = "Appoint William Wedgwood Benn"
+		command = { type = chiefofair which = 10350 } # William Wedgwood Benn
+	}
+	action_a = {
+		ai_chance = 70
+		name = "Appoint John Strachey"
+		command = { type = chiefofair which = 10124 } # John Strachey
+	}		
+}
+event = {
+	id = 133209532
+	random = no
+	country = ENG
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+	}
+	
+	name = "New Chief of Staff"
+	desc = "Emanuel Shinwell fell out of favor, Tom Wintringham is in "
+	
+	offset = 2
+	date = { day = 1 month = March year = 1923 }
+	deathdate = { day = 1 month = March year = 1924 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Tom Wintringham"
+		command = { type = chiefofstaff which = 10100 } # Tom Wintringham
+	}				
+}

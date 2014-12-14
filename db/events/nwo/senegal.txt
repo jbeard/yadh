@@ -1,0 +1,360 @@
+event = {
+	id = 8029601
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900631 } # Maurice Beurnier
+		command = { type = headofgovernment which = 900632 } # Maurice Beurnier
+	}
+}
+
+event = {
+	id = 8029602
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900601 } # Louis Lefebvre
+		command = { type = headofgovernment which = 900604 } # Louis Lefebvre
+	}
+}
+
+event = {
+	id = 8029603
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900602 } # Jean Paul Parisot 
+		command = { type = headofgovernment which = 900605 } # Jean Paul Parisot 
+	}
+}
+
+event = {
+	id = 8029604
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900633 } # Georges Pierre Rey
+		command = { type = headofgovernment which = 900634 } # Georges Pierre Rey
+	}
+}
+
+event = {
+	id = 8029605
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900635 } # Hubert Jules Deschamps
+		command = { type = headofgovernment which = 900636 } # Hubert Jules Deschamps
+	}
+}
+
+event = {
+	id = 8029606
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900640 } # Charles Jean Dagain
+		command = { type = headofgovernment which = 900641 } # Charles Jean Dagain
+	}
+}
+
+event = {
+	id = 8029607
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900642 } # Pierre Louis Maestracci
+		command = { type = headofgovernment which = 900643 } # Pierre Louis Maestracci
+	}
+}
+
+event = {
+	id = 8029608
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900644 } # Oswald Durand
+		command = { type = headofgovernment which = 900645 } # Oswald Durand
+	}
+}
+
+event = {
+	id = 8029609
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900646 } # Laurent Marcel Wiltord
+		command = { type = headofgovernment which = 900647 } # Laurent Marcel Wiltord
+	}
+}
+
+event = {
+	id = 8029610
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900648 } # Camille Victor Bailly
+		command = { type = headofgovernment which = 900649 } # Camille Victor Bailly
+	}
+}
+
+event = {
+	id = 8029611
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900650 } # Lucien Eugene Geay
+		command = { type = headofgovernment which = 900651 } # Lucien Eugene Geay
+	}
+}
+
+event = {
+	id = 8029612
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900652 } # Maxime Jourdain
+		command = { type = headofgovernment which = 900653 } # Maxime Jourdain
+	}
+}
+
+event = {
+	id = 8029613
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900654 } # Jean Colombani
+		command = { type = headofgovernment which = 900655 } # Jean Colombani
+	}
+}
+
+event = {
+	id = 8029614
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900656 } # Pierre Lami
+		command = { type = headofgovernment which = 900657 } # Pierre Lami
+	}
+}
+
+event = {
+	id = 8029615
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 900600 } # L?opold S?dar Senghor
+	}
+}
+
+event = {
+	id = 8029616
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 900603 } # Mamadou Dia
+	}
+}
+
+event = {
+	id = 8029617
+	country = U96
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 900606 } # L?opold S?dar Senghor
+	}
+}
+

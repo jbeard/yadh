@@ -1,0 +1,368 @@
+# Greece 1919 AI File by Burning, based on GRE_1914 by Jaegerfeld	
+###################################
+# Spying
+###################################
+spyprefs =
+{
+	percentage_on_spies 		= 0.2
+	percentage_foreign_mission 	= 0.6
+
+	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
+	spyprefsdata = 
+	{
+		NumberOfSpies = 10
+		min_number_of_spies = 3
+		steal_blueprint = 10
+		minister_assassination = 5
+		smear_campaign 	= 10
+		coup = 3
+		sabotage_industry = 10
+		nuclear_sabotage = 5
+		found_partisans	= 10
+		massmedia = 10
+		disrupt_techteam = 10
+		country = GRE
+	}
+	spyprefsdata = {
+		country_priorities	= 6
+		steal_blueprint 	= 10
+		minister_assassination          = 1
+		smear_campaign 		= 3
+		coup 				= 1
+		sabotage_industry 	= 5
+		nuclear_sabotage 	= 0
+		found_partisans 	= 1
+		massmedia 			= 1
+		disrupt_techteam	= 5
+		country 			= OTT
+	}
+	spyprefsdata = {
+		country_priorities	= 2
+		steal_blueprint 	= 10
+		minister_assassination          = 1
+		smear_campaign 		= 3
+		coup 				= 1
+		sabotage_industry 	= 5
+		nuclear_sabotage 	= 0
+		found_partisans 	= 1
+		massmedia 			= 1
+		disrupt_techteam	= 5
+		country 			= BUL
+	}
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 0.75
+	overseas_multiplier 	= 0.5
+	home_peace_cap 		= 20
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 10	# Beach level 2
+	capital			= 20	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 70	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		TUR = 200
+		OTT = 200
+		BUL = 10
+	}
+	province_priorities = {
+	1077 = 25
+  1076 = 25
+	1078 = 25
+  409 = 75
+  385 = 10
+  384 = 20
+	370 = 20
+  363 = 20
+	364 = 10
+	382 = 5
+  383 = 25
+  }
+	area_multiplier = { }
+}
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	invasion	= yes
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 20.0	#higher = avoid long distance.
+	pocket		= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+      	naval_base 	= 0.1 
+      	air_support 	= 3.0 
+      	redirect 	= nearest
+	ignore		= no
+      
+	target = { 
+  1068 = 1000
+  1076 = 1000
+  1078 = 1000
+  1054 = 1000
+  384 = 20
+  370 = 10
+  
+  } 
+} 
+admiral = { 
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	ignore = {
+		#Baltic Area
+		"Northern Baltic"
+		"Southern Baltic" 
+		"Bothnian Bay"
+		
+		#Murmansk/Archangel
+		"Barents Sea"
+		"Arctic Ocean"
+		
+		#Norway Coast (Denmark Coast)
+		"Norwegian Sea"
+		"East North Sea"
+		"Kattegat"
+		
+		#North Sea, East Coast of England
+		"Central Northsea"
+		"West Northsea"
+		"Southeast Northsea"
+		
+		#England/France border Sea Areas
+		"English Channel"
+		"Bay of Biscay"
+		"Cape Finisterre"
+		
+		#Spanish Coast (Atlantic Side)
+		"Portugese Coast"
+		"Cap St Vincent"
+		
+		#Iceland
+		"Faroes Gap"
+		"Denmark Strait"
+		
+		#Ireland/West Coast of England
+		"Irish Sea"
+		"The Hebreides"
+		"Irish West Coast"
+		
+		#Greenland
+		"Greenland Coast"
+		"Northern Sea of Labrador" 
+		"Southern Sea of Labrador"
+		
+		#Canada East Coast
+		"Hudson Bay"
+		"Grand Banks"
+		"Canadian Maritimes"
+		
+		#Western Mediterranean
+		"Costa del Sol"
+		"Gulf of Lyon"
+		"Algerian Coast"
+		
+		#Eastern Mediterranean
+		"Black Sea"
+		
+		#North Atlantic
+		"North Atlantic"
+		"Western Approaches"
+		"The Seamounts"
+		"Azores"
+		
+		#Central Atlantic
+		"Central Atlantic"
+		"Central Mid-Atlantic Ridge"
+		"Bermuda Triangle"
+		"Guiana Basin"
+		"South-Central Mid-Atlantic Ridge"
+		"Cap Verde"
+		
+		#South Atlantic
+		"Pernambuco Plain"
+		"Ascension Fracture Zone"
+		"Argentine Plain"
+		"Angola Plain"
+		
+		#Caribbean Sea and Guilf of Mexico
+		"West Gulf of Mexico"
+		"East Gulf of Mexico" 
+		"Florida Strait"
+		"Yucatan Strait"
+		"Windward Islands"
+		"Central Carribean"
+		
+		#Brazil and Argentina Coast
+		"Coast of Guyana"
+		"Coast of Recife" 
+		"Coast of Uruguay"
+		"Coast of Brazil"
+		"Coast of Argentina"
+		
+		# West Africa
+		"Coast of Africa"
+		"Coast of Bissao" 
+		
+		#Equitorial Africa
+		"Gulf of Guinea"
+		"Coast of Angola-Namibia"
+		
+		#South Africa
+		"Coast of South Africa"
+		"Atlantic-Indian Ridge"
+		
+		#East Africa
+		"Red Sea"
+		"Horn of Africa"
+		
+		#Madagascar Coast
+		"South Mozambique Channel"
+		"North Mozambique Channel" 
+		"Northeast Coast of Madagascar"
+		"Southeast Coast of Madagascar" 
+		
+		#North Indian Ocean (Persian Gulf)
+		"Persian Gulf"
+		"North Arabian Sea"
+		"South Arabian Sea" 
+		"Coast of Ceylon"
+		
+		#Central/South Indian Ocean
+		"Mascarene Plateau"
+		"Mid-Indian Ridge" 
+		"Ninetyeast Ridge" 
+		"Southeast Indian Ocean"
+		"Southwest Indian Ocean" 
+		
+		#Bay of Bengal & West Indonesia
+		"East Bay of Bengal"
+		"West Bay of Bengal"
+		"Malacca Strait"
+		"Java Ridge"
+		"Java Trench"
+		
+		#Indo-China, Borneo, Phillipenes
+		"Gulf of Siam"
+		"Coast of Indochina"
+		"Spratly Sea"
+		"Coast of Brunei"
+		"Flores Sea"
+		"Sulu Sea"
+		"Celebes Sea"
+		"Luzon Strait"
+		
+		#China Coast
+		"Taiwan Strait"
+		"Yellow Sea"
+		
+		#Japanese Coast
+		"Sea of Japan"
+		"Ryukyus"
+		"Coast of Japan"
+		"South Sea of Okhotsk"
+		"West Sea of Okhotsk" 
+		"East Sea of Okhotsk" 
+		
+		#Mariana Basin, Phillipenes
+		"Philipine Trench"
+		"Central Philippine Sea"
+		"Mariana Trench"
+		"East Mariana Basin"
+		"Mid-Pacific Mountains"
+		"North Bismarck Sea"
+		
+		#New Guinea, East/North Australia and New Zealan
+		"Coast of New Guinea"
+		"Molucca Sea"
+		"Banda Sea"
+		"Arafura Sea"
+		"South Bismarck Sea"
+		"Solomon Sea"
+		"West Coral Sea"
+		"East Coral Sea" 
+		"North Tasman Sea"
+		"South Tasman Sea" 
+		"East Cost of New Zealand"
+		
+		# South and West Australia
+		"Timor Sea"
+		"West Coast of Australia"
+		"East Great Australian Bight"
+		"West Great Australian Bight" 
+		
+		#North Pacific
+		"Coast of Kamchatka"
+		"East Bering Sea"
+		"West Bering Sea" 
+		"Aleutians"
+		"Northwest Pacific Basin"
+		"North Northeast Pacific Basin"
+		
+		#Central Pacific
+		"Hawaiian Rise"
+		"North East Pacific Ocean"
+		"Marshalls Sea"
+		"South East Pacific Ocean"
+		"Marianas"
+		"Western Solomons"
+		"Eastern Solomons"
+		"US Maritimes"
+		"Carolines"
+		
+		#South Pacific
+		"Gilberts"
+		"Line Islands"
+		"Fiji Basin"
+		"Southwest Pacific Basin"
+		
+		# South American West Coast
+		"Southeast Pacific Basin"
+		"West Coast of Chile"
+		"West Coast of Peru"
+		"South Southeast Pacific Ocean"
+		"North Southeast Pacific Ocean"
+		
+		# USA West Coast
+		"Gulf of Alaska"
+		"West Coast of the United States"
+		
+		#West Coast of Mexico
+		"West Coast of Mexico"
+		"West Coast of Central America"
+	}
+	target = {
+     	397 = 500
+      2741 = 200
+      2729 = 100
+	} 
+	core = {
+     	2742  
+     	2743 
+	}
+  base = {
+    377
+  } 
+}

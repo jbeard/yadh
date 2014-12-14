@@ -1,0 +1,190 @@
+event = {
+	id = 8015401
+	country = TUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 535012 } # Muhammad VII al-Munsif
+	}
+}
+
+event = {
+	id = 8015403
+	country = TUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 535013 } # Muhammad VIII al-Amin
+		command = { type = headofgovernment which = 535017 } # Slaheddine Bekkouche
+	}
+}
+
+event = {
+	id = 8015404
+	country = TUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 535013 } # Muhammad VIII al-Amin
+		command = { type = headofgovernment which = 535018 } # Mustapha Kaak
+	}
+}
+
+event = {
+	id = 8015405
+	country = TUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 535013 } # Muhammad VIII al-Amin
+		command = { type = headofgovernment which = 535016 } # M'Hamed Chenik
+	}
+}
+
+event = {
+	id = 8015406
+	country = TUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 535013 } # Muhammad VIII al-Amin
+		command = { type = headofgovernment which = 535017 } # Slaheddine Bekkouche
+	}
+}
+
+event = {
+	id = 8015407
+	country = TUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 535013 } # Muhammad VIII al-Amin
+		command = { type = headofgovernment which = 535100 } # Shaykh Tahar ben Ammar
+	}
+}
+
+event = {
+	id = 8015408
+	country = TUN
+
+	name = EVT_8015408_NAME
+	desc = EVT_8015408_DESC
+	picture = "nwo\habib_bourguiba"
+	style = 1
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8015408_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 535101 } # Habib Bourguiba
+		command = { type = headofgovernment which = 535015 } # Habib Bourguiba
+	}
+}
+

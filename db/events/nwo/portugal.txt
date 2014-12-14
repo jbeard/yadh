@@ -1,0 +1,119 @@
+event = {
+	id = 8011701
+	country = POR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 20057 } # Bento Gon?alves
+		command = { type = headofgovernment which = 20051 } # Jaime Cortes?o
+		command = { type = foreignminister which = 20059 } # H. Barrilao Ruas
+		command = { type = armamentminister which = 20029 } # F.Salgado Zenha
+		command = { type = ministerofsecurity which = 20060 } # ?lvaro Cunhal
+		command = { type = ministerofintelligence which = 20061 } # Antonio Sergo
+		command = { type = chiefofstaff which = 20062 } # Jose A.P. Rebelo
+		command = { type = chiefofarmy which = 20063 } # Jose A.P. Rebelo
+		command = { type = chiefofnavy which = 20064 } # Bento Gon?alves
+		command = { type = chiefofair which = 20065 } # Antonio Sergo
+	}
+}
+
+event = {
+	id = 8011702
+	country = POR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 20066 } # Francisco Craveiro Lopes
+	}
+}
+
+event = {
+	id = 8011703
+	country = POR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 20200 } # Am?rico Tomas
+	}
+}
+
+### Our stance on Goa issue
+
+event = {
+	id = 8011704
+	country = POR
+
+	name = EVT_8011704_NAME
+	desc = EVT_8011704_DESC
+	picture = "nwo\portuguese_goa"
+	style = 1
+	
+	trigger = {
+		exists = IND
+		control = { province = 1513 data = -1 }
+	}
+
+	date = { day = 1 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8011704_A #"Hang on this piece of land!"
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = relation which = IND value = -100 }
+	}
+	
+	action = {
+		name = EVT_8011704_B #"Negotiate the transfer of Goa"
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+		command = { type = relation which = IND value = 100 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = secedeprovince which = IND value = 1513 when = 1 }
+	}
+
+}

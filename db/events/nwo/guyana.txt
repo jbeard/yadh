@@ -1,0 +1,502 @@
+event = {
+	id = 8006501
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670100 } # Sir Geoffrey Stanfford Northcote
+		command = { type = headofgovernment which = 670101 } # Sir Geoffrey Stanfford Northcote
+	}
+}
+
+event = {
+	id = 8006502
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670102 } # Sir Francis Stanley Jackson
+		command = { type = headofgovernment which = 670002 } # Sir Francis Stanley Jackson
+	}
+}
+
+event = {
+	id = 8006503
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670001 } # Sir Gordon J. Lethem
+		command = { type = headofgovernment which = 670103 } # Sir Gordon J. Lethem
+	}
+}
+
+event = {
+	id = 8006504
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670104 } # Charles Campbell Woolley
+		command = { type = headofgovernment which = 670105 } # Charles Campbell Woolley
+	}
+}
+
+event = {
+	id = 8006505
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 670106 } # Alfred William Lungley Savage
+		command = { type = headofgovernment which = 670107 } # Cheddi Jagan
+	}
+}
+
+event = {
+	id = 8006506
+	country = GUY
+
+	name = EVT_8006506_NAME
+	desc = EVT_8006506_DESC
+	picture = "nwo\cheddi_jagan"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = EVT_8006506_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 670106 } # Alfred William Lungley Savage
+		command = { type = headofgovernment which = 670108 } # Alfred William Lungley Savage
+	}
+}
+
+event = {
+	id = 8006507
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670109 } # Patrick Muir Renison
+		command = { type = headofgovernment which = 670110 } # Patrick Muir Renison
+	}
+}
+
+event = {
+	id = 8006508
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670111 } # Ralph Francis Alnwick Grey
+		command = { type = headofgovernment which = 670112 } # Ralph Francis Alnwick Grey
+	}
+}
+
+event = {
+	id = 8006509
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 670111 } # Ralph Francis Alnwick Grey
+		command = { type = headofgovernment which = 670113 } # Cheddi Jagan
+	}
+}
+
+event = {
+	id = 8006510
+	country = GUY
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 670114 } # Richard Edmonds Luyt
+	}
+}
+
+event = {
+	id = 8006511
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 670115 } # Forbes Burnham
+	}
+}
+
+event = {
+	id = 8006512
+	country = GUY
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670116 } # David Rose
+	}
+}
+
+event = {
+	id = 8006513
+	country = GUY
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = nwo\governor_general
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670117 } # Edward Luckhoo
+	}
+}
+
+event = {
+	id = 8006514
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670118 } # Arthur Chung
+	}
+}
+
+event = {
+	id = 8006515
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670119 } # Forbes Burnham
+		command = { type = headofgovernment which = 670120 } # Ptolemy Reid
+	}
+}
+
+event = {
+	id = 8006516
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 670121 } # Desmond Hoyte
+	}
+}
+
+event = {
+	id = 8006517
+	country = GUY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 670122 } # Desmond Hoyte
+		command = { type = headofgovernment which = 670123 } # Hamilton Green
+	}
+}
+
+event = {
+	id = 8006518
+	country = GUY
+
+	name = EVT_8006518_NAME
+	desc = EVT_8006518_DESC
+	picture = nwo\peoples_temple
+	style = 1
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_8006518_A
+		command = { type = dissent value = 1 }
+	}
+}

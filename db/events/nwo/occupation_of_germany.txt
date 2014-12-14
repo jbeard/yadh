@@ -1,0 +1,1654 @@
+# Germany is occupied by a single country
+
+event = {
+	id = 8204000
+	tag = { USA ENG FRA CAN U01 U02 AST NZL }
+
+	name = "EVT_8204000_NAME"
+	desc = "EVT_8204000_DESC"
+	picture = "nwo\allied_occupation_of_germany"
+	style = 1
+
+	trigger = {
+		# We own whole Germany
+		area = { area = "Westphalen" country = -1 data = 1 value = 100 }
+		area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 100 }
+		area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 100 }
+		area = { area = "Hessen" country = -1 data = 1 value = 100 }
+		area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 100 }
+		area = { area = "Bavaria" country = -1 data = 1 value = 100 }
+		area = { area = "Sachsen" country = -1 data = 1 value = 100 }
+		area = { area = "Rhineland" country = -1 data = 1 value = 100 }
+		control = { province = 156 data = -1 }
+		control = { province = 157 data = -1 }
+		control = { province = 160 data = -1 }
+		control = { province = 162 data = -1 }
+		control = { province = 163 data = -1 }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204000_A"
+		ai_chance = 100
+		command = { type = independence which = DFR value = 1 when = 0 }
+	}
+	
+	action = {
+		name = "EVT_8204000_B"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 25 }
+	}
+
+}
+
+event = {
+	id = 8204001
+	tag = { SOV }
+
+	name = "EVT_8204001_NAME"
+	desc = "EVT_8204001_DESC"
+	picture = "nwo\soviet_occupation_of_germany"
+	style = 1
+
+	trigger = {
+		# We own whole Germany
+		area = { area = "Westphalen" country = -1 data = 1 value = 100 }
+		area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 100 }
+		area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 100 }
+		area = { area = "Hessen" country = -1 data = 1 value = 100 }
+		area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 100 }
+		area = { area = "Bavaria" country = -1 data = 1 value = 100 }
+		area = { area = "Sachsen" country = -1 data = 1 value = 100 }
+		area = { area = "Rhineland" country = -1 data = 1 value = 100 }
+		control = { province = 156 data = -1 }
+		control = { province = 157 data = -1 }
+		control = { province = 160 data = -1 }
+		control = { province = 162 data = -1 }
+		control = { province = 163 data = -1 }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204001_A"
+		ai_chance = 100
+		command = { type = independence which = DDR value = 1 when = 0 }
+		command = { type = make_puppet which = DDR }
+		command = { type = secedearea which = DDR value = "Silesia" when = 1 }
+		command = { type = secedeprovince which = DDR value = 155 when = 1 }
+		command = { type = secedeprovince which = DDR value = 161 when = 1 }
+		command = { type = secedeprovince which = DDR value = 158 when = 1 }
+		command = { type = secedeprovince which = DDR value = 159 when = 1 }
+	}
+	
+	action = {
+		name = "EVT_8204001_B"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 25 }
+	}
+
+}
+
+# Germany is divided (historical), occupation zones are released
+
+event = {
+	id = 8204002
+	tag = { USA ENG FRA CAN U01 U02 AST NZL }
+
+	name = "EVT_8204002_NAME"
+	desc = "EVT_8204002_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+
+	trigger = {
+		NOT = { exists = U24 }
+		# We control some of Germany
+		OR = {
+			area = { area = "Westphalen" country = -1 data = 1 value = 0 }
+			area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 0 }
+			area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 0 }
+			area = { area = "Hessen" country = -1 data = 1 value = 0 }
+			area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 0 }
+			area = { area = "Bavaria" country = -1 data = 1 value = 0 }
+			area = { area = "Sachsen" country = -1 data = 1 value = 0 }
+			area = { area = "Rhineland" country = -1 data = 1 value = 0 }
+			control = { province = 156 data = -1 }
+			control = { province = 157 data = -1 }
+			control = { province = 160 data = -1 }
+			control = { province = 162 data = -1 }
+			control = { province = 163 data = -1 }
+		}
+		# but not its whole
+		NOT = {
+			AND = {
+				area = { area = "Westphalen" country = -1 data = 1 value = 100 }
+				area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 100 }
+				area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 100 }
+				area = { area = "Hessen" country = -1 data = 1 value = 100 }
+				area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 100 }
+				area = { area = "Bavaria" country = -1 data = 1 value = 100 }
+				area = { area = "Sachsen" country = -1 data = 1 value = 100 }
+				area = { area = "Rhineland" country = -1 data = 1 value = 100 }
+				control = { province = 156 data = -1 }
+				control = { province = 157 data = -1 }
+				control = { province = 160 data = -1 }
+				control = { province = 162 data = -1 }
+				control = { province = 163 data = -1 }
+			}
+		}
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204002_A"
+		command = { type = independence which = U24 value = 1 when = 0 }
+		command = { trigger = { country = USA } type = make_puppet which = U24 }
+		command = { trigger = { NOT = { country = USA } } type = trigger which = 8204014 }
+		command = { type = trigger which = 8204006 }
+		command = { type = guarantee which = USA where = U24 }
+		command = { type = guarantee which = ENG where = U24 }
+		command = { type = guarantee which = FRA where = U24 }
+		command = { type = guarantee which = SOV where = U24 }
+	}
+
+}
+
+event = {
+	id = 8204014
+	country = USA
+
+	name = "EVT_8204002_NAME"
+	desc = "EVT_8204002_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+
+	action = {
+		name = "EVT_8204002_A"
+		command = { type = make_puppet which = U24 }
+	}
+
+}
+
+event = {
+	id = 8204003
+	tag = { SOV }
+
+	name = "EVT_8204003_NAME"
+	desc = "EVT_8204003_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+
+	trigger = {
+		NOT = { exists = U25 }
+		# We control some of Germany
+		OR = {
+			area = { area = "Westphalen" country = -1 data = 1 value = 0 }
+			area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 0 }
+			area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 0 }
+			area = { area = "Hessen" country = -1 data = 1 value = 0 }
+			area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 0 }
+			area = { area = "Bavaria" country = -1 data = 1 value = 0 }
+			area = { area = "Sachsen" country = -1 data = 1 value = 0 }
+			area = { area = "Rhineland" country = -1 data = 1 value = 0 }
+			control = { province = 156 data = -1 }
+			control = { province = 157 data = -1 }
+			control = { province = 160 data = -1 }
+			control = { province = 162 data = -1 }
+			control = { province = 163 data = -1 }
+		}
+		# but not its whole
+		NOT = {
+			AND = {
+				area = { area = "Westphalen" country = -1 data = 1 value = 100 }
+				area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 100 }
+				area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 100 }
+				area = { area = "Hessen" country = -1 data = 1 value = 100 }
+				area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 100 }
+				area = { area = "Bavaria" country = -1 data = 1 value = 100 }
+				area = { area = "Sachsen" country = -1 data = 1 value = 100 }
+				area = { area = "Rhineland" country = -1 data = 1 value = 100 }
+				control = { province = 156 data = -1 }
+				control = { province = 157 data = -1 }
+				control = { province = 160 data = -1 }
+				control = { province = 162 data = -1 }
+				control = { province = 163 data = -1 }
+			}
+		}
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204003_A"
+		command = { type = independence which = U25 value = 1 when = 0 }
+		command = { type = make_puppet which = U25 }
+		command = { type = trigger which = 8204007 }
+		command = { type = secedearea which = U25 value = "Silesia" when = 1 }
+		command = { type = secedeprovince which = U25 value = 155 when = 1 }
+		command = { type = secedeprovince which = U25 value = 161 when = 1 }
+		command = { type = secedeprovince which = U25 value = 158 when = 1 }
+		command = { type = secedeprovince which = U25 value = 159 when = 1 }
+		command = { type = guarantee which = USA where = U25 }
+		command = { type = guarantee which = ENG where = U25 }
+		command = { type = guarantee which = FRA where = U25 }
+		command = { type = guarantee which = SOV where = U25 }
+	}
+
+}
+
+event = {
+	id = 8204004
+	country = U24
+
+	name = "EVT_8204004_NAME"
+	desc = "EVT_8204004_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+
+	trigger = {
+		NOT = { exists = U25 } # as a precaution
+		# We control whole Germany
+		area = { area = "Westphalen" country = -1 data = 1 value = 100 }
+		area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 100 }
+		area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 100 }
+		area = { area = "Hessen" country = -1 data = 1 value = 100 }
+		area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 100 }
+		area = { area = "Bavaria" country = -1 data = 1 value = 100 }
+		area = { area = "Sachsen" country = -1 data = 1 value = 100 }
+		area = { area = "Rhineland" country = -1 data = 1 value = 100 }
+		control = { province = 156 data = -1 }
+		control = { province = 157 data = -1 }
+		control = { province = 160 data = -1 }
+		control = { province = 162 data = -1 }
+		control = { province = 163 data = -1 }
+	}
+
+	date = { day = 1 month = january year = 1947 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204004_A"
+		command = { type = country which = DFR }
+		command = { type = end_puppet }
+	}
+
+}
+
+event = {
+	id = 8204005
+	country = U25
+
+	name = "EVT_8204005_NAME"
+	desc = "EVT_8204005_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+
+	trigger = {
+		NOT = { exists = U25 } # as a precaution
+		# We control whole Germany
+		area = { area = "Westphalen" country = -1 data = 1 value = 100 }
+		area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 100 }
+		area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 100 }
+		area = { area = "Hessen" country = -1 data = 1 value = 100 }
+		area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 100 }
+		area = { area = "Bavaria" country = -1 data = 1 value = 100 }
+		area = { area = "Sachsen" country = -1 data = 1 value = 100 }
+		area = { area = "Rhineland" country = -1 data = 1 value = 100 }
+		control = { province = 156 data = -1 }
+		control = { province = 157 data = -1 }
+		control = { province = 160 data = -1 }
+		control = { province = 162 data = -1 }
+		control = { province = 163 data = -1 }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1947 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204005_A"
+		command = { type = country which = DDR }
+	}
+
+}
+
+event = {
+	id = 8204006
+	country = U24
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action = {
+		name = "OK"
+		command = { type = access which = USA }
+		command = { type = access which = ENG }
+		command = { type = access which = FRA }
+	}
+
+}
+
+event = {
+	id = 8204007
+	country = U25
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action = {
+		name = "OK"
+		command = { type = access which = SOV }
+	}
+
+}
+
+# Occupational policy
+
+event = {
+	id = 8204010
+	country = USA
+	
+	name = EVT_8204010_NAME
+	desc = EVT_8204010_DESC
+	picture = "nwo\allied_occupation_of_germany"
+	style = 1
+
+	trigger = {
+		exists = U24 # Allied Zone
+		region = { region = "Germany" country = U24 data = 1 value = 20 } # Allied Zone embraces considerable part of Germany
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204010_A
+		ai_chance = 70
+		command = { type = industrial_modifier which = total value = 4 }
+		command = { type = setflag which = allied_occupation_of_germany_medium }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = EVT_8204010_B
+		ai_chance = 20
+		command = { type = industrial_modifier which = total value = 8 }
+		command = { type = setflag which = allied_occupation_of_germany_hard }
+		command = { type = dissent value = 15 }
+	}
+
+	action = {
+		name = EVT_8204010_C
+		ai_chance = 10
+		command = { type = setflag which = allied_occupation_of_germany_light }
+		command = { type = money value = 1000 }
+	}
+
+}
+
+event = {
+	id = 8204011
+	country = ENG
+	
+	name = EVT_8204011_NAME
+	desc = EVT_8204011_DESC
+	picture = "nwo\allied_occupation_of_germany"
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = allied_occupation_of_germany_light
+			flag = allied_occupation_of_germany_medium
+			flag = allied_occupation_of_germany_hard
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Hard terms
+	action = {
+		name = "EVT_8204011_A"
+		trigger = { flag = allied_occupation_of_germany_hard }
+		command = { type = industrial_modifier which = total value = 6 }
+		command = { type = dissent value = 15 }
+	}
+	
+	# Medium terms
+	action = {
+		name = "EVT_8204011_B"
+		trigger = { flag = allied_occupation_of_germany_medium }
+		command = { type = industrial_modifier which = total value = 3 }
+		command = { type = dissent value = 5 }
+	}
+	
+	# Light terms
+	action = {
+		name = "EVT_8204011_C"
+		trigger = { flag = allied_occupation_of_germany_light }
+		command = { type = money value = 500 }
+	}
+}
+
+event = {
+	id = 8204012
+	country = FRA
+	
+	name = EVT_8204012_NAME
+	desc = EVT_8204012_DESC
+	picture = "nwo\allied_occupation_of_germany"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = allied_occupation_of_germany_light
+			flag = allied_occupation_of_germany_medium
+			flag = allied_occupation_of_germany_hard
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Hard terms
+	action = {
+		name = "EVT_8204012_A"
+		trigger = { flag = allied_occupation_of_germany_hard }
+		command = { type = industrial_modifier which = total value = 4 }
+		command = { type = dissent value = 10 }
+	}
+	
+	# Medium terms
+	action = {
+		name = "EVT_8204012_B"
+		trigger = { flag = allied_occupation_of_germany_medium }
+		command = { type = industrial_modifier which = total value = 2 }
+		command = { type = dissent value = 4 }
+	}
+	
+	# Light terms
+	action = {
+		name = "EVT_8204012_C"
+		trigger = { flag = allied_occupation_of_germany_light }
+		command = { type = money value = 400 }
+	}
+}
+
+event = {
+	id = 8204013
+	country = U24
+	
+	name = EVT_8204013_NAME
+	desc = EVT_8204013_DESC
+	picture = "nwo\allied_occupation_of_germany"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = allied_occupation_of_germany_light
+			flag = allied_occupation_of_germany_medium
+			flag = allied_occupation_of_germany_hard
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Hard terms
+	action = {
+		name = "EVT_8204013_A"
+		trigger = { flag = allied_occupation_of_germany_hard }
+		command = { type = industrial_modifier which = total value = -14 }
+		command = { type = dissent value = 10 }
+	}
+	
+	# Medium terms
+	action = {
+		name = "EVT_8204013_B"
+		trigger = { flag = allied_occupation_of_germany_medium }
+		command = { type = industrial_modifier which = total value = -8 }
+		command = { type = dissent value = 4 }
+	}
+	
+	# Light terms
+	action = {
+		name = "EVT_8204013_C"
+		trigger = { flag = allied_occupation_of_germany_light }
+		command = { type = money value = 400 }
+	}
+}
+
+# Soviet occupation of Germany
+
+event = {
+	id = 8204020
+	country = SOV
+	
+	name = EVT_8204020_NAME
+	desc = EVT_8204020_DESC
+	picture = "nwo\soviet_occupation_of_germany"
+	style = 1
+
+	trigger = {
+		exists = U25 # Soviet Zone
+		region = { region = "Germany" country = U25 data = 1 value = 20 } # Soviet Zone embraces considerable part of Germany
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204020_A
+		ai_chance = 60
+		command = { type = industrial_modifier which = total value = 8 }
+		command = { type = setflag which = soviet_occupation_of_germany_hard }
+		command = { type = dissent value = 10 }
+	}
+	
+	action = {
+		name = EVT_8204020_B
+		ai_chance = 30
+		command = { type = industrial_modifier which = total value = 4 }
+		command = { type = setflag which = soviet_occupation_of_germany_medium }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = EVT_8204020_C
+		ai_chance = 10
+		command = { type = setflag which = soviet_occupation_of_germany_light }
+		command = { type = money value = 1000 }
+	}
+
+}
+
+event = {
+	id = 8204021
+	country = U25
+	
+	name = EVT_8204021_NAME
+	desc = EVT_8204021_DESC
+	picture = "nwo\soviet_occupation_of_germany"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			flag = soviet_occupation_of_germany_light
+			flag = soviet_occupation_of_germany_medium
+			flag = soviet_occupation_of_germany_hard
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1955 }
+
+	# Hard terms
+	action = {
+		name = EVT_8204021_A
+		trigger = { flag = soviet_occupation_of_germany_hard }
+		command = { type = industrial_modifier which = total value = -6 }
+		command = { type = dissent value = 10 }
+	}
+	
+	# Medium terms
+	action = {
+		name = EVT_8204021_B
+		trigger = { flag = soviet_occupation_of_germany_medium }
+		command = { type = industrial_modifier which = total value = -3 }
+		command = { type = dissent value = 4 }
+	}
+	
+	# Light terms
+	action = {
+		name = EVT_8204021_C
+		trigger = { flag = soviet_occupation_of_germany_light }
+		command = { type = money value = 400 }
+	}
+}
+
+### Allied countries commit their lands to Allied Zone
+
+event = {
+	id = 8204030
+	tag = { USA ENG FRA CAN U01 U02 AST NZL }
+	persistent = yes
+	
+	name = "EVT_8204030_NAME"
+	desc = "EVT_8204030_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = U24 # Allied Zone
+		OR = {
+			area = { area = "Westphalen" country = -1 data = 1 value = 0 }
+			area = { area = "Hannover_Magdeburg" country = -1 data = 1 value = 0 }
+			area = { area = "Holstein_Mecklemburg" country = -1 data = 1 value = 0 }
+			area = { area = "Hessen" country = -1 data = 1 value = 0 }
+			area = { area = "Baden_Wurttemberg" country = -1 data = 1 value = 0 }
+			area = { area = "Bavaria" country = -1 data = 1 value = 0 }
+			area = { area = "Sachsen" country = -1 data = 1 value = 0 }
+			area = { area = "Rhineland" country = -1 data = 1 value = 0 }
+			control = { province = 156 data = -1 }
+			control = { province = 157 data = -1 }
+			control = { province = 160 data = -1 }
+			control = { province = 162 data = -1 }
+			control = { province = 163 data = -1 }
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = "EVT_8204030_A"
+		command = { type = secedearea which = U24 value = "Westphalen" when = 1 }
+		command = { type = secedearea which = U24 value = "Hannover_Magdeburg" when = 1 }
+		command = { type = secedearea which = U24 value = "Holstein_Mecklemburg" when = 1 }
+		command = { type = secedearea which = U24 value = "Hessen" when = 1 }
+		command = { type = secedearea which = U24 value = "Baden_Wurttemberg" when = 1 }
+		command = { type = secedearea which = U24 value = "Bavaria" when = 1 }
+		command = { type = secedearea which = U24 value = "Sachsen" when = 1 }
+		command = { type = secedearea which = U24 value = "Rhineland" when = 1 }
+		command = { type = secedeprovince which = U24 value = 156 when = 1 }
+		command = { type = secedeprovince which = U24 value = 157 when = 1 }
+		command = { type = secedeprovince which = U24 value = 160 when = 1 }
+		command = { type = secedeprovince which = U24 value = 162 when = 1 }
+		command = { type = secedeprovince which = U24 value = 163 when = 1 }
+	}
+
+}
+
+### German states claim their pre-war borders
+
+event = {
+	id = 8204031
+	country = U24 # Allied Zone
+	
+	name = "EVT_8204031_NAME"
+	desc = "EVT_8204031_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204031_A"
+		# We fear USSR too much to claim Koenigsberg and Tilsit
+		command = { type = addclaim which = 185 }
+		command = { type = addclaim which = 183 }
+		command = { type = addclaim which = 181 }
+		command = { type = addclaim which = 155 }
+		command = { type = addclaim which = 161 }
+		command = { type = addclaim which = 158 }
+		command = { type = addclaim which = 159 }
+		command = { type = addclaim which = 165 }
+		command = { type = addclaim which = 164 }
+		command = { type = addclaim which = 167 }
+		command = { type = addclaim which = 166 }
+		command = { type = addclaim which = 168 }
+	}
+}
+
+event = {
+	id = 8204032
+	country = U25 # Soviet Zone
+	
+	name = "EVT_8204032_NAME"
+	desc = "EVT_8204032_DESC"
+	picture = "nwo\occupation_zones_in_germany"
+	style = 1
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204032_A"
+		command = { type = addclaim which = 185 }
+		command = { type = addclaim which = 183 }
+		command = { type = addclaim which = 181 }
+		command = { type = addclaim which = 155 }
+		command = { type = addclaim which = 161 }
+		command = { type = addclaim which = 158 }
+		command = { type = addclaim which = 159 }
+		command = { type = addclaim which = 165 }
+		command = { type = addclaim which = 164 }
+		command = { type = addclaim which = 167 }
+		command = { type = addclaim which = 166 }
+		command = { type = addclaim which = 168 }
+	}
+}
+
+### Creation of Saar Protectorate
+
+event = {
+	id = 8204035
+	country = U24 # Allied Zone
+	
+	name = "EVT_8204035_NAME"
+	desc = "EVT_8204035_DESC"
+	picture = "nwo\saar_protectorate"
+	style = 1
+	
+	trigger = {
+		NOT = { exists = U23 }
+		owned = { province = 127 data = -1 } # Saarbruecken
+	}
+	
+	date = { day = 16 month = february year = 1946 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = "EVT_8204035_A"
+		command = { type = independence which = U23 value = 0 when = 1 }
+	}
+}
+
+### Saar Protectorate is formed
+event = {
+	id = 8204036
+	country = FRA
+	
+	name = "EVT_8204036_NAME"
+	desc = "EVT_8204036_DESC"
+	picture = "nwo\saar_protectorate"
+	style = 1
+	
+	trigger = {
+		exists = U23
+	}
+	
+	date = { day = 16 month = february year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = "EVT_8204036_A"
+		command = { type = make_puppet which = U23 }
+	}
+}
+
+event = {
+	id = 8204037
+	country = U23 # Saar Protectorate
+	
+	name = "EVT_8204037_NAME"
+	desc = "EVT_8204037_DESC"
+	picture = "nwo\saar_protectorate"
+	style = 1
+	
+	date = { day = 1 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204037_A"
+		ai_chance = 95
+		trigger = { exists = DFR }
+		command = { type = relation which = DFR value = 200 }
+	}
+	
+	action = {
+		name = "EVT_8204037_B"
+		ai_chance = 5
+		command = { type = end_puppet }
+		command = { type = sleepevent which = 8204038 }
+	}
+	
+}
+
+event = {
+	id = 8204038
+	country = DFR
+	
+	name = "EVT_8204038_NAME"
+	desc = "EVT_8204038_DESC"
+	picture = "nwo\saar_protectorate"
+	style = 1
+	
+	trigger = {
+		event = 8204037
+		exists = U23
+	}
+	
+	date = { day = 1 month = january year = 1956 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8204038_A"
+		command = { type = inherit which = U23 }
+		command = { type = dissent value = -3 }
+	}
+}
+
+# Full unification obstacles
+
+# USA proposes currency reform for Germany
+event = {
+	id = 8204040
+	country = USA
+
+	name = EVT_8204040_NAME
+	desc = EVT_8204040_DESC
+	picture = "nwo\deutsche_mark"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = U24
+		exists = U25
+	}
+
+	date = { day = 1 month = may year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# Propose the reform (unification and Berlin blockade possible)
+	action = {
+		name = EVT_8204040_A
+		ai_chance = 90
+		command = { type = trigger which = 8204041 }
+
+	}
+	
+	# Don't carry our the reform (unification possible)
+	action = {
+		name = EVT_8204040_B
+		ai_chance = 10
+		command = { type = money value = -2000 }
+		# No more currency reform events
+		command = { type = sleepevent which = 8204041 }
+		command = { type = sleepevent which = 8204042 }
+	}
+
+}
+
+### West Germany receives the reform
+event = {
+	id = 8204041
+	country = U24
+
+	name = EVT_8204041_NAME
+	desc = EVT_8204041_DESC
+	picture = "nwo\deutsche_mark"
+	style = 1
+
+	action = {
+		name = "EVT_8204041_A"
+		command = { type = money value = 2500 }
+		command = { type = industrial_modifier which = total value = 2 }
+	}
+
+}
+
+### Soviet reaction to the reform
+event = {
+	id = 8204042
+	country = SOV
+
+	name = EVT_8204042_NAME
+	desc = EVT_8204042_DESC
+	picture = "nwo\deutsche_mark"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8204040
+	}
+
+	date = { day = 1 month = may year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# Oppose the reform
+	action = {
+		name = EVT_8204042_A
+		ai_chance = 90
+		
+		command = { type = relation which = USA value = -50 } 
+		command = { type = relation which = ENG value = -50 } 
+		command = { type = relation which = FRA value = -50 } 
+		
+		# No Soviet acceptance
+		command = { type = sleepevent which = 8204060 }
+	}
+	
+	# Agree to the reform
+	action = {
+		name = EVT_8204042_B
+		ai_chance = 10
+		command = { type = money value = -2000 }
+		# No Soviet acceptance
+		command = { type = trigger which = 8204043 }
+		# No Berlin airlift
+		command = { type = sleepevent which = 8204044 }
+	}
+
+}
+
+### Soviets accept the currency reform
+event = {
+	id = 8204043
+	country = U25
+
+	name = EVT_8204043_NAME
+	desc = EVT_8204043_DESC
+	picture = "nwo\deutsche_mark"
+
+	action = {
+		name = "EVT_8204043_A"
+		command = { type = money value = 2500 }
+		command = { type = industrial_modifier which = total value = 3 }
+	}
+}
+
+### Soviets organize the Berlin Blockade
+event = {
+	id = 8204044
+	country = SOV
+
+	name = EVT_8204044_NAME
+	desc = EVT_8204044_DESC
+	picture = "nwo\germany_flight_routes"
+	
+	trigger = {
+		flag = cold_war
+		flag = divided_berlin
+		event = 8204042
+	}
+
+	date = { day = 19 month = june year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	# Organize it, no chance for united Germany
+	action = {
+		name = EVT_8204044_A
+		ai_chance = 80
+		command = { type = money value = 5000 }
+		# Chance for united Germany lost
+		command = { type = sleepevent which = 8204060 }
+	}
+	
+	# Don't organize it, chance for united Germany retained
+	action = {
+		name = EVT_8204044_B
+		ai_chance = 20
+		command = { type = relation which = USA value = 50 } 
+		command = { type = relation which = ENG value = 50 } 
+		command = { type = relation which = FRA value = 50 } 
+		# Sleep Berlin Blockade
+		command = { type = sleepevent which = 8500601 }
+	}
+
+}
+
+# Full Unification
+
+event = {
+	id = 8204060
+	country = USA
+	
+	name = EVT_8204060_NAME
+	desc = EVT_8204060_DESC
+	picture = "nwo\united_germany"
+	decision_picture = "nwo\d_united_germany"
+	style = 1
+	
+	decision = {
+		flag = cold_war
+		exists = U24
+		exists = U25
+	}
+	
+	trigger = {
+		flag = cold_war
+		exists = U24
+		exists = U25
+	}
+
+	date = { day = 1 month = march year = 1949 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action  = {
+		name = EVT_8204060_A
+		ai_chance = 50
+		command = { type = trigger which = 8204061 }
+	}
+	
+	action = {
+		name = EVT_8204060_B
+		trigger = { ai = yes }
+		ai_chance = 50
+		command = { type = money value = 1 }
+	}
+}
+
+event = {
+	id = 8204061
+	country = SOV	
+
+	name = EVT_8204061_NAME
+	desc = EVT_8204061_DESC
+	picture = "nwo\united_germany"
+	style = 1
+
+	action = {
+		name = EVT_8204061_A
+		ai_chance = 90
+		command = { type = relation which = USA value = -50 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = FRA value = -50 }
+	}
+	
+	action = {
+		name = EVT_8204061_B
+		ai_chance = 10
+		command = { type = trigger which = 8204070 }
+	}
+
+}
+
+# United Germany is formed
+
+event = {
+	id = 8204070
+	random = no
+	country = U24
+	
+	name = EVT_8204070_NAME
+	desc = EVT_8204070_DESC
+	picture = "nwo\united_germany"
+	style = 1
+
+	action = {
+		name = EVT_8204070_A
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = country which = DFR }
+		command = { type = inherit which = U25 value = 1 }
+		command = { type = setflag which = neutral_germany }
+		command = { type = set_domestic which = interventionism value = 1 }
+		# relations set to neutrality
+		command = { type = set_relation which = USA value = 0 }
+		command = { type = set_relation which = ENG value = 0 }
+		command = { type = set_relation which = FRA value = 0 }
+		command = { type = set_relation which = SOV value = 0 }
+	}
+}
+
+# Historical outcome, two states formed
+
+event = {
+	id = 8204100
+	country = U24
+	
+	name = EVT_8204100_NAME
+	desc = EVT_8204100_DESC
+	picture = "nwo\bonn_rathaus"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { exists = DFR }
+	}
+
+	date = { day = 1 month = september year = 1949 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204100_A
+		command = { type = end_puppet }
+		command = { type = country which = DFR }
+	}
+}
+
+event = {
+	id = 8204101
+	country = U25
+
+	name = EVT_8204101_NAME
+	desc = EVT_8204101_DESC
+	picture = "nwo\berlin_palace_of_the_republic"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { exists = DDR }
+	}
+
+	date = { day = 15 month = september year = 1949 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204101_A
+		command = { type = country which = DDR }
+	}
+}
+
+### Wirtshaftswunder - reversal of occupation effects
+
+event = {
+	id = 8204200
+	country = DFR
+
+	name = "EVT_8204200_NAME"
+	desc = "EVT_8204200_DESC"
+	picture = "nwo\wirtschaftswunder"
+	style = 1
+	
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204200_A
+		command = { trigger = { flag = allied_occupation_of_germany_hard } type = industrial_modifier which = total value = 14 }
+		command = { trigger = { flag = allied_occupation_of_germany_medium } type = industrial_modifier which = total value = 8 }
+	}
+
+}
+
+### Divided Berlin
+
+event = {
+	id = 8204301
+	tag = { U25 DDR }
+
+	name = "EVT_8204301_NAME"
+	desc = "EVT_8204301_DESC"
+	picture = "nwo\berlin_wall"
+	style = 1
+	
+	trigger = {
+		control = { province = 163 data = -1 }
+		OR = {
+			region = { region = "Germany" country = U24 data = 1 value = 25 }
+			region = { region = "Germany" country = DFR data = 1 value = 25 }
+		}
+		NOT = { flag = divided_berlin }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204301_A
+		command = { type = setflag which = divided_berlin }
+	}
+
+}
+
+event = {
+	id = 8204302
+	tag = { U25 DDR U24 DFR }
+
+	name = "EVT_8204302_NAME"
+	desc = "EVT_8204302_DESC"
+	picture = "nwo\berlin_wall"
+	style = 1
+	
+	trigger = {
+		control = { province = 163 data = -1 }
+		OR = {
+			AND = {
+				OR = {
+					country = U25
+					country = DDR
+				}
+				NOT = { exists = U24 }
+				NOT = { exists = DFR }
+			}
+			AND = {
+				OR = {
+					country = U24
+					country = DFR
+				}
+				NOT = { exists = U25 }
+				NOT = { exists = DDR }
+			}
+		}
+		flag = divided_berlin
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204302_A
+		command = { type = clrflag which = divided_berlin }
+	}
+
+}
+
+event = {
+	id = 8204303
+	tag = { U25 DDR U24 DFR }
+
+	name = "EVT_8204303_NAME"
+	desc = "EVT_8204303_DESC"
+	picture = "nwo\berlin_wall"
+	style = 1
+	
+	trigger = {
+		control = { province = 163 data = -1 }
+		flag = divided_berlin
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204303_A
+		command = { type = construct which = ic where = 163 value = -2 }
+	}
+
+}
+
+event = {
+	id = 8204304
+	tag = { U25 DDR U24 DFR }
+
+	name = "EVT_8204304_NAME"
+	desc = "EVT_8204304_DESC"
+	picture = "nwo\berlin_wall"
+	style = 1
+	
+	trigger = {
+		control = { province = 163 data = -1 }
+		NOT = { flag = divided_berlin }
+		event = 8204303
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8204304_A
+		command = { type = construct which = ic where = 163 value = 12 }
+	}
+
+}
+
+### Stalin's Note
+
+event = {
+	id = 8204400
+	country = SOV
+
+	name = EVT_8204400_NAME
+	desc = EVT_8204400_DESC
+	picture = nwo\stalin_note
+	decision_picture = nwo\d_stalin_note
+	style = 1
+	
+	trigger = {
+		exists = DFR
+		exists = DDR
+		flag = cold_war
+		ai = DDR
+	}
+	
+	decision = {
+		exists = DFR
+		exists = DDR
+		flag = cold_war
+		ai = DDR
+	}
+	
+	date = { day = 10 month = march year = 1952 }
+	offset = 7
+	deathdate = { day = 29 month = march year = 1952 }
+
+	action = {
+		name = EVT_8204400_A
+		ai_chance = 70
+		command = { type = relation which = DFR value = 30 }
+		command = { type = belligerence value = -5 }
+	}
+	
+	action = {
+		name = EVT_8204400_B
+		trigger = { ai = yes }
+		ai_chance = 30
+		command = { type = money value = 1 }
+		command = { type = sleepevent which = 8204401 }
+		command = { type = sleepevent which = 8204402 }
+		command = { type = sleepevent which = 8204403 }
+	}
+
+}
+
+event = {
+	id = 8204401
+	country = USA
+
+	name = EVT_8204401_NAME
+	desc = EVT_8204401_DESC
+	picture = nwo\stalin_note
+	style = 1
+	
+	trigger = {
+		event = 8204400
+		flag = cold_war
+	}
+	
+	date = { day = 10 month = march year = 1952 }
+	offset = 7
+	deathdate = { day = 29 month = march year = 1952 }
+
+	# Accept only non-neutral Germany
+	action = {
+		name = EVT_8204401_A
+		ai_chance = 50
+		command = { type = relation which = SOV value = -25 }
+		command = { type = relation which = DDR value = -25 }
+		command = { type = relation which = DFR value = 30 }
+		command = { type = belligerence value = -5 }
+		command = { type = sleepevent value = 8204405 }
+	}
+	
+	# It's crazy idea
+	action = {
+		name = EVT_8204401_B
+		ai_chance = 40
+		command = { type = relation which = SOV value = -75 }
+		command = { type = relation which = DDR value = -75 }
+		command = { type = sleepevent value = 8204404 }
+		command = { type = sleepevent value = 8204405 }
+		
+		command = { type = sleepevent value = 8204402 }
+		command = { type = sleepevent value = 8204403 }
+	}
+	
+	# Accept with no strings attached
+	action = {
+		name = EVT_8204401_C
+		ai_chance = 10
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = DDR value = 50 }
+		command = { type = relation which = DFR value = -50 }
+	}
+
+}
+
+event = {
+	id = 8204402
+	country = ENG
+
+	name = EVT_8204402_NAME
+	desc = EVT_8204402_DESC
+	picture = nwo\stalin_note
+	style = 1
+	
+	trigger = {
+		event = 8204400
+		flag = cold_war
+	}
+	
+	date = { day = 10 month = march year = 1952 }
+	offset = 7
+	deathdate = { day = 29 month = march year = 1952 }
+
+	# Accept only non-neutral Germany
+	action = {
+		name = EVT_8204402_A
+		ai_chance = 50
+		command = { type = relation which = SOV value = -25 }
+		command = { type = relation which = DDR value = -25 }
+		command = { type = relation which = DFR value = 30 }
+		command = { type = belligerence value = -5 }
+		command = { type = sleepevent value = 8204405 }
+	}
+	
+	# It's crazy idea
+	action = {
+		name = EVT_8204402_B
+		ai_chance = 40
+		command = { type = relation which = SOV value = -75 }
+		command = { type = relation which = DDR value = -75 }
+		command = { type = sleepevent value = 8204404 }
+		command = { type = sleepevent value = 8204405 }
+		
+		command = { type = sleepevent value = 8204402 }
+		command = { type = sleepevent value = 8204403 }
+	}
+	
+	# Accept with no strings attached
+	action = {
+		name = EVT_8204402_C
+		ai_chance = 10
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = DDR value = 50 }
+		command = { type = relation which = DFR value = -50 }
+	}
+
+}
+
+event = {
+	id = 8204403
+	country = FRA
+
+	name = EVT_8204403_NAME
+	desc = EVT_8204403_DESC
+	picture = nwo\stalin_note
+	style = 1
+	
+	trigger = {
+		event = 8204400
+		flag = cold_war
+	}
+	
+	date = { day = 10 month = march year = 1952 }
+	offset = 7
+	deathdate = { day = 29 month = march year = 1952 }
+
+	# Accept only non-neutral Germany
+	action = {
+		name = EVT_8204403_A
+		ai_chance = 50
+		command = { type = relation which = SOV value = -25 }
+		command = { type = relation which = DDR value = -25 }
+		command = { type = relation which = DFR value = 30 }
+		command = { type = belligerence value = -5 }
+		command = { type = sleepevent value = 8204405 }
+	}
+	
+	# It's crazy idea
+	action = {
+		name = EVT_8204403_B
+		ai_chance = 40
+		command = { type = relation which = SOV value = -75 }
+		command = { type = relation which = DDR value = -75 }
+		command = { type = sleepevent value = 8204404 }
+		command = { type = sleepevent value = 8204405 }
+		
+		command = { type = sleepevent value = 8204402 }
+		command = { type = sleepevent value = 8204403 }
+	}
+	
+	# Accept with no strings attached
+	action = {
+		name = EVT_8204403_C
+		ai_chance = 10
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = DDR value = 50 }
+		command = { type = relation which = DFR value = -50 }
+	}
+
+}
+
+# Western Allies accept the principle of united Germany but not a neutral one
+
+event = {
+	id = 8204404
+	country = FRA
+
+	name = EVT_8204404_NAME
+	desc = EVT_8204404_DESC
+	picture = nwo\stalin_note
+	style = 1
+	
+	trigger = {
+		event = 8204400
+		flag = cold_war
+	}
+	
+	date = { day = 1 month = may year = 1952 }
+	offset = 30
+	deathdate = { day = 29 month = may year = 1952 }
+
+	# No
+	action = {
+		name = EVT_8204404_B
+		ai_chance = 99
+		command = { type = relation which = DFR value = -25 }
+	}
+
+	# Yes
+	action = {
+		name = EVT_8204404_A
+		ai_chance = 1
+		command = { type = relation which = USA value = 100 }
+		command = { type = relation which = ENG value = 100 }
+		command = { type = relation which = FRA value = 100 }
+		command = { type = relation which = DFR value = 150 }
+		command = { type = belligerence value = -35 }
+		command = { type = trigger value = 8204406 }
+	}
+}
+
+# Western Allies accept the principle of united neutral Germany
+
+event = {
+	id = 8204405
+	country = SOV
+
+	name = EVT_8204405_NAME
+	desc = EVT_8204405_DESC
+	picture = nwo\stalin_note
+	style = 1
+	
+	trigger = {
+		event = 8204400
+		flag = cold_war
+	}
+	
+	date = { day = 1 month = april year = 1952 }
+	offset = 30
+	deathdate = { day = 29 month = april year = 1952 }
+
+	# Yes
+	action = {
+		name = EVT_8204405_A
+		ai_chance = 75
+		command = { type = relation which = USA value = 50 }
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = DFR value = 100 }
+		command = { type = belligerence value = -25 }
+		command = { type = trigger value = 8204407 }
+		command = { type = sleepevent value = 8204404 }
+	}
+	
+	# No
+	action = {
+		name = EVT_8204405_B
+		ai_chance = 25
+		command = { type = relation which = DFR value = -50 }
+		command = { type = sleepevent value = 8204404 }
+	}
+}
+
+# United West-aligned Germany
+
+event = {
+	id = 8204406
+	random = no
+	country = DFR
+	
+	name = EVT_8204406_NAME
+	desc = EVT_8204406_DESC
+	picture = "nwo\united_germany"
+	style = 1
+
+	action = {
+		name = EVT_8204406_A
+		command = { type = inherit which = DDR }
+		command = { type = end_puppet }
+		command = { type = set_relation which = USA value = 100 }
+		command = { type = set_relation which = ENG value = 100 }
+		command = { type = set_relation which = FRA value = 100 }
+		command = { type = set_relation which = SOV value = 25 }
+	}
+}
+
+# United neutral Germany
+
+event = {
+	id = 8204407
+	random = no
+	country = DFR
+	
+	name = EVT_8204407_NAME
+	desc = EVT_8204407_DESC
+	picture = "nwo\united_germany"
+	style = 1
+
+	action = {
+		name = EVT_8204407_A
+		command = { type = inherit which = DDR }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = setflag which = neutral_germany }
+		command = { type = set_domestic which = interventionism value = 1 }
+		# relations set to neutrality
+		command = { type = set_relation which = USA value = 0 }
+		command = { type = set_relation which = ENG value = 0 }
+		command = { type = set_relation which = FRA value = 0 }
+		command = { type = set_relation which = SOV value = 0 }
+	}
+}

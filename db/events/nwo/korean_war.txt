@@ -1,0 +1,1132 @@
+event = {
+	id = 8500800
+	country = PRK
+
+	name = EVT_8500800_NAME
+	desc = EVT_8500800_DESC
+	picture = "nwo\kim_il_sung_speaking"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		exists = KOR
+		NOT = { war = { country = PRK country = KOR } }
+	}
+
+	date = { day = 1 month = may year = 1950 }
+	offset = 30
+	deathdate = { day = 30 month = may year = 1950 }
+
+	action = {
+		name = EVT_8500800_A #Prepare for war, we can count on Chinese and Soviet support
+		ai_chance = 98
+		trigger = {
+			exists = SOV
+			exists = CHC
+			flag = CHC_won_civil_war
+		}
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = dissent value = -5 }
+		command = { type = supplies value = 10000 }
+		
+		command = { type = add_division value = interceptor when = 13 }
+		command = { type = add_division value = cas when = 5 }
+		
+		command = { type = manpowerpool value = 250 when = 0 }
+	}
+	
+	action = {
+		name = EVT_8500800_A #Prepare for war, we can count on Chinese
+		ai_chance = 90
+		trigger = {
+			NOT = { exists = SOV }
+			exists = CHC
+			flag = CHC_won_civil_war
+		}
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = dissent value = -5 }
+		command = { type = supplies value = 10000 }
+		
+		# New divisions
+		command = { type = add_division value = interceptor when = 13 }
+		command = { type = add_division value = cas when = 5 }
+		
+		command = { type = manpowerpool value = 250 when = 0 }
+	}
+	
+	action = {
+		name = EVT_8500800_A #Prepare for war, we cannot count on support
+		ai_chance = 60
+		trigger = {
+			OR = {
+				NOT = { exists = CHC }
+				NOT = { flag = CHC_won_civil_war }
+			}
+		}
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = dissent value = -5 }
+		command = { type = supplies value = 10000 }
+		
+		# New divisions
+		command = { type = add_division value = interceptor when = 13 }
+		command = { type = add_division value = cas when = 5 }
+		
+		command = { type = manpowerpool value = 250 when = 0 }
+	}
+	
+	action = {
+		name = EVT_8500800_B #Peninsula will remain divided
+		ai_chance = 2
+		command = { type = leave_alliance }
+		command = { type = dissent value = 20 }
+		command = { type = sleepevent which = 8500801 }
+	}
+
+}
+
+event = {
+	id = 8500801
+	random = no
+	country = KOR
+	
+	name = EVT_8500801_NAME
+	desc = EVT_8500801_DESC
+	picture = "nwo\syngman_rhee_sitting"
+	style = 1
+
+	trigger = {
+		exists = PRK
+		NOT = { war = { country = PRK country = KOR } }
+		event = 8500800
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 5
+	deathdate = { day = 20 month = june year = 1950 }
+
+	action = {
+		name = EVT_8500801_A
+	
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		
+		command = { type = manpowerpool value = 150 when = 0 }
+	}
+
+}
+
+event = {
+	id = 8500802
+	country = PRK
+
+	name = EVT_8500802_NAME
+	desc = EVT_8500802_DESC
+	picture = "nwo\korean_war"
+	style = 1
+
+	trigger = {
+		event = 8500801
+		exists = KOR
+		NOT = { war = { country = PRK country = KOR } }
+	}
+
+	date = { day = 25 month = june year = 1950 }
+	offset = 1
+	deathdate = { day = 30 month = june year = 1950 }
+
+	action = {
+		name = EVT_8500802_A
+		command = { type = end_non_aggression which = PRK where = KOR }
+		command = { type = war which = KOR }
+	}
+
+}
+
+### Historical: shortly after UN resolution concerning military assistance, Korea receives help
+
+# First wave
+event = {
+	id = 8500840
+	country = KOR
+	save_date = yes
+
+	name = EVT_8500840_NAME
+	desc = EVT_8500840_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+	
+	trigger = {
+		event = 8510706
+		war = { country = KOR country = PRK }
+	}
+	
+	date = { day = 1 month = august year = 1950 }
+	offset = 3
+	deathdate = { day = 30 month = august year = 1950 }
+
+	action = {
+		name = EVT_8500840_A
+		command = { type = add_division which = "UN Reinforcements" value = multi_role when = 10 }
+		command = { type = add_division which = "UN Reinforcements" value = multi_role when = 10 }
+		command = { type = add_division which = "UN Reinforcements" value = multi_role when = 10 }
+		command = { type = add_division which = "UN Reinforcements" value = tactical_bomber when = 10 }
+		command = { type = add_division which = "UN Reinforcements" value = tactical_bomber when = 10 }
+		command = { type = add_division which = "UN Reinforcements" value = tactical_bomber when = 10 }
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division which = "UN Reinforcements" value = mechanized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+	}
+}
+
+# Second wave
+event = {
+	id = 8500841
+	country = KOR
+	save_date = yes
+
+	name = EVT_8500841_NAME
+	desc = EVT_8500841_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+	
+	trigger = {
+		event = { id = 8500840 days = 7 }
+		war = { country = KOR country = PRK }
+	}
+	
+	date = { day = 1 month = july year = 1950 }
+	offset = 7
+	deathdate = { day = 30 month = august year = 1950 }
+
+	action = {
+		name = EVT_8500841_A
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division which = "UN Reinforcements" value = armor when = 4 }
+		command = { type = add_division which = "UN Reinforcements" value = armor when = 4 }
+		command = { type = add_division which = "UN Reinforcements" value = mechanized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = mechanized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+	}
+}
+
+# Third wave
+event = {
+	id = 8500842
+	country = KOR
+
+	name = EVT_8500842_NAME
+	desc = EVT_8500842_DESC
+	picture = "nwo\united_nations_intervention"
+	style = 1
+	
+	trigger = {
+		event = { id = 8500841 days = 7 }
+		war = { country = KOR country = PRK }
+	}
+	
+	date = { day = 1 month = july year = 1950 }
+	offset = 3
+	deathdate = { day = 30 month = august year = 1950 }
+
+	action = {
+		name = EVT_8500842_A
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division which = "UN Reinforcements" value = armor when = 4 }
+		command = { type = add_division which = "UN Reinforcements" value = armor when = 4 }
+		command = { type = add_division which = "UN Reinforcements" value = mechanized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "UN Reinforcements" value = motorized when = 5 }
+	}
+}
+
+### American assistance outside of scope of UN's help
+event = {
+	id = 8500803
+	country = USA
+
+	name = EVT_8500803_NAME
+	desc = EVT_8500803_DESC
+	picture = "nwo\american_intervention_in_korea"
+	style = 1
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+		# United Nations had its meeting and made a decision
+		OR = {
+			flag = un_korea_totalveto
+			event = 8510706
+			event = 8510707
+		}
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 30 month = august year = 1950 }
+
+	# Give supplies and advisors
+	action = {
+		name = EVT_8500803_A
+		ai_chance = 83
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8500804 }
+		command = { type = supplies value = -3000 }
+		command = { type = money value = -3000 }
+	}
+	
+	# Full intervention!! - UN agreed to help
+	action = {
+		name = EVT_8500803_B
+		ai_chance = 10
+		trigger = {
+			NOT = {
+				flag = un_korea_totalveto
+				flag = un_korea_interventionveto
+			}
+		}
+		command = { type = dissent value = 1 }
+		command = { type = supplies value = -3000 }
+		command = { type = money value = -3000 }
+	}
+	
+	# Full intervention!! - UN disagreed to help
+	action = {
+		name = EVT_8500803_B
+		ai_chance = 80
+		trigger = {
+			OR = {
+				flag = un_korea_totalveto
+				flag = un_korea_interventionveto
+			}
+		}
+		command = { type = dissent value = 1 }
+		command = { type = supplies value = -3000 }
+		command = { type = money value = -3000 }
+	}
+	
+	# Completely ignore the conflict
+	action = {
+		name = EVT_8500803_C
+		ai_chance = 7
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8500805 }
+	}
+
+}
+
+# American limited assistance to Korea
+event = {
+	id = 8500804
+	country = KOR
+
+	name = EVT_8500804_NAME
+	desc = EVT_8500804_DESC
+	picture = "nwo\american_intervention_in_korea"
+	style = 1
+
+	action = {
+		name = EVT_8500804_A
+		command = { type = dissent value = -3 }
+		
+		command = { type = add_division which = "American Reinforcements" value = interceptor when = 13 }
+		command = { type = add_division which = "American Reinforcements" value = cas when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		command = { type = supplies value = 3000 }
+	}
+}
+
+## Soviet reaction to American full assistance
+
+event = {
+	id = 8500805
+	country = SOV
+
+	name = EVT_8500805_NAME
+	desc = EVT_8500805_DESC
+	picture = "nwo\american_intervention_in_korea"
+	style = 1
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+		event = 8500803
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 3
+	deathdate = { day = 30 month = august year = 1950 }
+
+	# Issue ultimatum! (only if it is full intervention)
+	action = {
+		name = EVT_8500805_A
+		ai_chance = 95
+		trigger = { NOT = { event = 8500804 } } # Full American intervention in place
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 8500806 } # Ultimatum
+	}
+	
+	# Let them but intervene ourselves
+	action = {
+		name = EVT_8500805_B
+		ai_chance = 95
+		command = { type = dissent value = -5 }
+		command = { trigger = { NOT = { event = 8500804 } } type = trigger which = 8500808 } # American-Korean alliance
+		command = { type = event which = 8500809 where = PRK when = 180 } # Soviet intervention
+		command = { type = supplies value = -3000 }
+		command = { type = money value = -3000 }
+	}
+	
+	# Let them
+	action = {
+		name = EVT_8500805_C
+		ai_chance = 5
+		command = { type = dissent value = 6 }
+		command = { trigger = { NOT = { event = 8500804 } } type = trigger which = 8500808 } # American-Korean alliance
+		command = { type = domestic which = interventionism value = -1 }
+	}
+	
+	
+}
+
+# Soviet ultimatum for American full intervention
+event = {
+	id = 8500806
+	country = USA
+
+	name = EVT_8500806_NAME
+	desc = EVT_8500806_DESC
+	picture = "nwo\american_intervention_in_korea"
+	style = 1
+
+	# Withdraw
+	action = {
+		name = EVT_8500806_A
+		ai_chance = 50
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8500804 } # American intervention
+		command = { type = event which = 8500809 where = PRK when = 180 } # Soviet intervention
+	}
+	
+	# Fight! (Possible WW3)
+	action = {
+		name = EVT_8500806_B
+		ai_chance = 50
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8500807 }
+		command = { type = trigger which = 8500808 } # American-Korean alliance
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+# Americans ignore ultimatum
+event = {
+	id = 8500807
+	country = SOV
+
+	name = EVT_8500807_NAME
+	desc = EVT_8500807_DESC
+	picture = "nwo\american_intervention_in_korea"
+	style = 1
+
+	# Carry out ultimatum
+	action = {
+		name = EVT_8500807_A
+		ai_chance = 68
+		command = { type = alliance which = PRK }
+		command = { type = war which = USA }
+		command = { type = trigger which = 8500809 } # Soviet intervention
+	}
+	
+	# Withdraw
+	action = {
+		name = EVT_8500807_B
+		ai_chance = 32
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Americans offer alliance to Korea
+event = {
+	id = 8500808
+	country = KOR
+
+	name = EVT_8500808_NAME
+	desc = EVT_8500808_DESC
+	picture = "nwo\american_intervention_in_korea"
+	style = 1
+
+	# Agree
+	action = {
+		name = EVT_8500808_A
+		ai_chance = 100
+		command = { type = dissent value = -25 }
+		command = { type = alliance which = USA }
+		command = { type = trigger which = 8500804 }
+		
+		command = { type = add_division which = "American Reinforcements" value = multi_role when = 10 }
+		command = { type = add_division which = "American Reinforcements" value = multi_role when = 10 }
+		command = { type = add_division which = "American Reinforcements" value = tactical_bomber when = 10 }
+		command = { type = add_division which = "American Reinforcements" value = tactical_bomber when = 10 }
+		
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division which = "American Reinforcements" value = armor when = 4 }
+		command = { type = add_division which = "American Reinforcements" value = mechanized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division which = "American Reinforcements" value = armor when = 4 }
+		command = { type = add_division which = "American Reinforcements" value = mechanized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division which = "American Reinforcements" value = armor when = 4 }
+		command = { type = add_division which = "American Reinforcements" value = mechanized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "American Reinforcements" value = motorized when = 5 }
+	}
+	
+	# Disagree
+	action = {
+		name = EVT_8500808_B
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+# Soviet limited assistance to Korea
+
+event = {
+	id = 8500809
+	country = PRK
+
+	name = EVT_8500809_NAME
+	desc = EVT_8500809_DESC
+	picture = "nwo\soviet_intervention_in_korea"
+	style = 1
+
+	action = {
+		name = EVT_8500809_A
+		command = { type = dissent value = -3 }	
+		
+		command = { type = add_division which = "Soviet Reinforcements" value = interceptor when = 13 }
+		command = { type = add_division which = "Soviet Reinforcements" value = cas when = 5 }
+		
+		command = { type = add_division which = "Soviet Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "Soviet Reinforcements" value = infantry when = 12 }
+		command = { type = supplies value = 10000 }
+	}
+
+}
+
+### Historical: Chinese reaction to Korean War
+event = {
+	id = 8500810
+	country = CHC
+
+	name = EVT_8500810_NAME
+	desc = EVT_8500810_DESC
+	picture = "nwo\chinese_intervention_in_korea"
+	decision_picture = "nwo\d_chinese_intervention_in_korea"
+	style = 1
+
+	decision = {
+		war = { country = PRK country = KOR }
+		flag = CHC_won_civil_war
+	}
+	
+	decision_trigger = {
+		war = { country = PRK country = KOR }
+		flag = CHC_won_civil_war
+		# Either Americans or UN help Koreans
+		OR = {
+			event = 8500804
+			event = 8500806
+			event = 8500807
+		}
+	}
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+		flag = CHC_won_civil_war
+		# Either Americans or UN help Koreans
+		OR = {
+			event = 8500804
+			event = 8500806
+			event = 8500807
+		}
+	}
+
+	date = { day = 1 month = october year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8500810_A
+		ai_chance = 98
+		command = { type = trigger which = 8500811 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = access which = PRK }
+	}
+	
+	action = {
+		name = EVT_8500810_B
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = dissent value = 1 }
+	}
+
+}
+
+event = {
+	id = 8500811
+	country = PRK
+
+	name = EVT_8500811_NAME
+	desc = EVT_8500811_DESC
+	picture = "nwo\chinese_intervention_in_korea"
+	style = 1
+
+	action = {
+		name = EVT_8500811_A
+		command = { type = dissent value = -40 }	
+		command = { type = add_division which = "Chinese Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "Chinese Reinforcements" value = motorized when = 5 }
+		command = { type = add_division which = "Chinese Reinforcements" value = motorized when = 5 }
+		
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = add_division which = "Chinese Reinforcements" value = infantry when = 12 }
+		command = { type = supplies value = 10000 }
+	}
+
+}
+
+#### Resolution of the Korean War
+
+event = {
+	id = 8500820
+	country = PRK
+
+	name = EVT_8500820_NAME
+	desc = EVT_8500820_DESC
+	picture = "nwo\kim_il_sung_triumphant"
+	style = 1
+	
+	trigger = {
+		event = 8500802
+		NOT = { exists = KOR }
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8500820_A
+		command = { type = dissent value = -10 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+}
+
+event = {
+	id = 8500821
+	country = KOR
+
+	name = EVT_8500821_NAME
+	desc = EVT_8500821_DESC
+	picture = "nwo\syngman_rhee_triumphant"
+	style = 1
+	
+	trigger = {
+		event = 8500802
+		NOT = { exists = PRK }
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8500821_A
+		command = { type = dissent value = -10 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+
+}
+
+# Stalemate
+event = {
+	id = 8500822
+	country = KOR
+
+	name = EVT_8500822_NAME
+	desc = EVT_8500822_DESC
+	picture = "nwo\end_of_korean_war"
+	style = 1
+	
+	trigger = {
+		flag = cold_war_pacific
+		event = 8500802
+		war = { country = PRK country = KOR }
+	}
+
+	date = { day = 1 month = july year = 1953 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8500822_A
+		ai_chance = 100
+		command = { type = trigger which = 8500823 }
+	}
+
+	action = {
+		name = EVT_8500822_B
+		ai_chance = 0
+		command = { type = dissent value = 25 }
+	}
+	
+}
+
+event = {
+	id = 8500823
+	country = PRK
+
+	name = EVT_8500823_NAME
+	desc = EVT_8500823_DESC
+	picture = "nwo\end_of_korean_war"
+	style = 1
+
+	action = {
+		name = EVT_8500823_A
+		ai_chance = 100
+		command = { type = peace which = KOR value = 1 }
+	}
+
+	action = {
+		name = EVT_8500823_B
+		ai_chance = 0
+		command = { type = dissent value = 25 }
+	}
+	
+}
+
+### Korean oversized forces are trimmed down
+
+event = {
+	id = 8500825
+	country = PRK
+
+	name = EVT_8500825_NAME
+	desc = EVT_8500825_DESC
+	picture = "nwo\end_of_korean_war"
+	style = 1
+	
+	trigger = {
+		NOT = { war = { country = PRK country = KOR } }
+		OR = {
+			event = 8500820
+			event = 8500821
+			event = 8500823
+		}
+		NOT = {
+			atwar = PRK
+			atwar = KOR
+		}
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8500825_A
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = demobilize which = land when = 0 where = 1 value = 20 }
+	}
+	
+}
+
+event = {
+	id = 8500826
+	country = KOR
+
+	name = EVT_8500826_NAME
+	desc = EVT_8500826_DESC
+	picture = "nwo\end_of_korean_war"
+	style = 1
+	
+	trigger = {
+		NOT = { war = { country = PRK country = KOR } }
+		OR = {
+			event = 8500820
+			event = 8500821
+			event = 8500823
+		}
+		NOT = {
+			atwar = PRK
+			atwar = KOR
+		}
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8500826_A
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = demobilize which = land when = 0 where = 1 value = 18 }
+	}
+	
+}
+
+### Offensive events
+
+# Initial North Korea's offensive
+event = {
+	id = 8500830
+	country = PRK
+	save_date = yes
+
+	name = EVT_8500830_NAME
+	desc = EVT_8500830_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500830_A
+		# Simulate initial fervor
+		command = { type = dissent value = -25 }
+		command = { type = max_organization which = infantry value = 30 }
+		command = { type = max_organization which = motorized value = 30 }
+		command = { type = max_organization which = mechanized value = 30 }
+		command = { type = max_organization which = armor value = 30 }
+		command = { type = max_organization which = hq value = 30 }
+		command = { type = morale which = infantry value = 60 }
+		command = { type = morale which = motorized value = 60 }
+		command = { type = morale which = mechanized value = 60 }
+		command = { type = morale which = armor value = 60 }
+		command = { type = morale which = hq value = 60 }
+	}
+	
+}
+
+# Initial South Korea's unpreparedness
+event = {
+	id = 8500831
+	country = KOR
+	save_date = yes
+
+	name = EVT_8500831_NAME
+	desc = EVT_8500831_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500831_A
+		# Simulate unpreparedness
+		command = { type = dissent value = 50 }
+		command = { type = max_organization which = infantry value = -50 }
+		command = { type = max_organization which = motorized value = -50 }
+		command = { type = max_organization which = mechanized value = -50 }
+		command = { type = max_organization which = armor value = -50 }
+		command = { type = max_organization which = hq value = -50 }
+		command = { type = morale which = infantry value = -60 }
+		command = { type = morale which = motorized value = -60 }
+		command = { type = morale which = mechanized value = -60 }
+		command = { type = morale which = armor value = -60 }
+		command = { type = morale which = hq value = -60 }
+	}
+	
+}
+
+### Initial North Korea's offensive dies out
+event = {
+	id = 8500832
+	country = PRK
+
+	name = EVT_8500832_NAME
+	desc = EVT_8500832_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		event = { id = 8500830 days = 30 }
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500832_A
+		# Recovery to initial values
+		command = { type = max_organization which = infantry value = -30 }
+		command = { type = max_organization which = motorized value = -30 }
+		command = { type = max_organization which = mechanized value = -30 }
+		command = { type = max_organization which = armor value = -30 }
+		command = { type = max_organization which = hq value = -30 }
+		command = { type = morale which = infantry value = -60 }
+		command = { type = morale which = motorized value = -60 }
+		command = { type = morale which = mechanized value = -60 }
+		command = { type = morale which = armor value = -60 }
+		command = { type = morale which = hq value = -60 }
+	}
+	
+}
+
+# South Korea recovers
+event = {
+	id = 8500833
+	country = KOR
+
+	name = EVT_8500833_NAME
+	desc = EVT_8500833_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		event = { id = 8500831 days = 30 }
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500833_A
+		# Recovery to initial values
+		command = { type = dissent value = -50 }
+		command = { type = max_organization which = infantry value = 50 }
+		command = { type = max_organization which = motorized value = 50 }
+		command = { type = max_organization which = mechanized value = 50 }
+		command = { type = max_organization which = armor value = 50 }
+		command = { type = max_organization which = hq value = 50 }
+		command = { type = morale which = infantry value = 60 }
+		command = { type = morale which = motorized value = 60 }
+		command = { type = morale which = mechanized value = 60 }
+		command = { type = morale which = armor value = 60 }
+		command = { type = morale which = hq value = 60 }
+		
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }         
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_corps where = 1232 } # Busan
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }         
+		command = { type = add_division value = infantry when = 12 }
+	}
+	
+}
+
+### South Korea gets boost from foreign assistance
+
+event = {
+	id = 8500834
+	country = PRK
+	save_date = yes
+
+	name = EVT_8500834_NAME
+	desc = EVT_8500834_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+		OR = {
+			event = 8500840
+			alliance = { country = USA country = KOR }
+		}
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 14
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500834_A
+		# Panic!
+		command = { type = dissent value = 80 }
+		command = { type = max_organization which = infantry value = -70 }
+		command = { type = max_organization which = motorized value = -70 }
+		command = { type = max_organization which = mechanized value = -70 }
+		command = { type = max_organization which = armor value = -70 }
+		command = { type = max_organization which = hq value = -70 }
+		command = { type = morale which = infantry value = -80 }
+		command = { type = morale which = motorized value = -80 }
+		command = { type = morale which = mechanized value = -80 }
+		command = { type = morale which = armor value = -80 }
+		command = { type = morale which = hq value = -80 }
+	}
+	
+}
+
+event = {
+	id = 8500835
+	country = KOR
+
+	name = EVT_8500835_NAME
+	desc = EVT_8500835_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+		OR = {
+			event = 8500840
+			alliance = { country = USA country = KOR }
+		}
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 14
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500835_A
+		# Strong we stand!
+		command = { type = dissent value = -30 }
+		command = { type = max_organization which = infantry value = 20 }
+		command = { type = max_organization which = motorized value = 20 }
+		command = { type = max_organization which = mechanized value = 20 }
+		command = { type = max_organization which = armor value = 20 }
+		command = { type = max_organization which = hq value = 20 }
+		command = { type = morale which = infantry value = 50 }
+		command = { type = morale which = motorized value = 50 }
+		command = { type = morale which = mechanized value = 50 }
+		command = { type = morale which = armor value = 50 }
+		command = { type = morale which = hq value = 50 }
+	}
+	
+}
+
+### Situation normalizes
+
+event = {
+	id = 8500836
+	country = PRK
+	save_date = yes
+
+	name = EVT_8500836_NAME
+	desc = EVT_8500836_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		event = { id = 8500834 days = 60 }
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 14
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500836_A
+		# War comes to stalemate
+		command = { type = dissent value = -25 } # Futher -40 comes from Chinese assistance
+		command = { type = max_organization which = infantry value = 70 }
+		command = { type = max_organization which = motorized value = 70 }
+		command = { type = max_organization which = mechanized value = 70 }
+		command = { type = max_organization which = armor value = 70 }
+		command = { type = max_organization which = hq value = 70 }
+		command = { type = morale which = infantry value = 80 }
+		command = { type = morale which = motorized value = 80 }
+		command = { type = morale which = mechanized value = 80 }
+		command = { type = morale which = armor value = 80 }
+		command = { type = morale which = hq value = 80 }
+	}
+	
+}
+
+event = {
+	id = 8500837
+	country = KOR
+
+	name = EVT_8500837_NAME
+	desc = EVT_8500837_DESC
+	picture = nwo\korean_war
+	style = 1
+	
+	trigger = {
+		event = { id = 8500835 days = 60 }
+	}
+
+	date = { day = 1 month = june year = 1950 }
+	offset = 14
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8500837_A
+		# War comes to stalemate
+		command = { type = max_organization which = infantry value = -20 }
+		command = { type = max_organization which = motorized value = -20 }
+		command = { type = max_organization which = mechanized value = -20 }
+		command = { type = max_organization which = armor value = -20 }
+		command = { type = max_organization which = hq value = -20 }
+		command = { type = morale which = infantry value = -50 }
+		command = { type = morale which = motorized value = -50 }
+		command = { type = morale which = mechanized value = -50 }
+		command = { type = morale which = armor value = -50 }
+		command = { type = morale which = hq value = -50 }
+	}
+	
+}

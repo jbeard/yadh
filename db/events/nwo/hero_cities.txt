@@ -1,0 +1,925 @@
+### Events turning on hero cities flags
+
+# Brest Fortress
+event = { 
+	id = 8226000
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		control = { province = 247 data = -2 }
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Leningrad
+event = { 
+	id = 8226001
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 553 data = -2 }
+			control = { province = 551 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Stalingrad
+event = { 
+	id = 8226002
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 663 data = -2 }
+			control = { province = 659 data = -2 }
+			control = { province = 662 data = -2 }
+			control = { province = 660 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Odessa
+event = { 
+	id = 8226003
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 626 data = -2 }
+			control = { province = 621 data = -2 }
+			control = { province = 304 data = -2 }
+			control = { province = 306 data = -2 }
+			control = { province = 620 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Sevastopol
+event = { 
+	id = 8226004
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 641 data = -2 }
+			control = { province = 637 data = -2 }
+			control = { province = 638 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Moscow
+event = { 
+	id = 8226005
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 572 data = -2 }
+			control = { province = 570 data = -2 }
+			control = { province = 568 data = -2 }
+			control = { province = 567 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Kiev
+event = { 
+	id = 8226006
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 617 data = -2 }
+			control = { province = 609 data = -2 }
+			control = { province = 611 data = -2 }
+			control = { province = 613 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Novorossiysk
+event = { 
+	id = 8226007
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 694 data = -2 }
+			control = { province = 640 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Kerch
+event = { 
+	id = 8226008
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 640 data = -2 }
+			control = { province = 638 data = -2 }
+			control = { province = 639 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Minsk
+event = { 
+	id = 8226009
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 599 data = -2 }
+			control = { province = 256 data = -2 }
+			control = { province = 596 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Tula
+event = { 
+	id = 8226010
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 584 data = -2 }
+			control = { province = 579 data = -2 }
+			control = { province = 585 data = -2 }
+			control = { province = 583 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Murmansk
+event = { 
+	id = 8226011
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 535 data = -2 }
+			war = { country = FIN country = SOV }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Smolensk
+event = { 
+	id = 8226012
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 589 data = -2 }
+			control = { province = 573 data = -2 }
+			control = { province = 593 data = -2 }
+			control = { province = 590 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Kuybyshev
+event = { 
+	id = 8226013
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 668 data = -2 }
+			control = { province = 656 data = -2 }
+			control = { province = 665 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+# Vladivostok
+event = { 
+	id = 8226014
+	country = REB
+
+	name = AI_EVENT
+	desc = AI_EVENT
+
+	trigger = {
+		war = { country = GER country = SOV }
+		OR = {
+			control = { province = 1191 data = -2 }
+			control = { province = 1193 data = -2 }
+		}
+	}
+
+	date = { day = 10 month = february year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = OK
+		command = { type = money value = 1 }
+	}	
+}
+
+### Supreme Commander Order #20
+
+event = { 
+	id = 8226020
+	country = SOV
+	save_date = yes
+
+	name = EVT_8226020_NAME
+	desc = EVT_8226020_DESC
+	picture = nwo\hero_cities
+	decision_picture = nwo\d_hero_cities
+	style = 1	
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			event = 8226000
+			event = 8226001
+			event = 8226002
+			event = 8226003
+			event = 8226004
+			event = 8226005
+			event = 8226006
+			event = 8226007
+			event = 8226008
+			event = 8226009
+			event = 8226010
+			event = 8226011
+			event = 8226012
+			event = 8226013
+			event = 8226014
+		}
+	}
+	
+	decision = {
+		flag = cold_war
+		OR = {
+			event = 8226000
+			event = 8226001
+			event = 8226002
+			event = 8226003
+			event = 8226004
+			event = 8226005
+			event = 8226006
+			event = 8226007
+			event = 8226008
+			event = 8226009
+			event = 8226010
+			event = 8226011
+			event = 8226012
+			event = 8226013
+			event = 8226014
+		}
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226020_A
+		command = { type = money value = -100 }
+		command = { type = dissent value = -3 }
+	}	
+
+}
+
+### Hero Cities are honored
+
+event = { 
+	id = 8226030
+	country = SOV
+
+	name = EVT_8226030_NAME
+	desc = EVT_8226030_DESC
+	picture = nwo\hero_fortress_brest
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 247 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226030_A
+		command = { type = construct which = ic where = 247 value = 1 }
+		command = { type = construct which = infrastructure where = 247 value = 10 }
+		command = { type = province_keypoints which = 247 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226031
+	country = SOV
+
+	name = EVT_8226031_NAME
+	desc = EVT_8226031_DESC
+	picture = nwo\hero_city_leningrad
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 553 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226031_A
+		command = { type = construct which = ic where = 553 value = 2 }
+		command = { type = construct which = infrastructure where = 553 value = 10 }
+		command = { type = province_keypoints which = 553 value = 2 }
+	}	
+
+}
+
+event = { 
+	id = 8226032
+	country = SOV
+
+	name = EVT_8226032_NAME
+	desc = EVT_8226032_DESC
+	picture = nwo\hero_city_stalingrad
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 663 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226032_A
+		command = { type = construct which = ic where = 663 value = 2 }
+		command = { type = construct which = infrastructure where = 663 value = 10 }
+		command = { type = province_keypoints which = 663 value = 2 }
+	}	
+
+}
+
+event = { 
+	id = 8226033
+	country = SOV
+
+	name = EVT_8226033_NAME
+	desc = EVT_8226033_DESC
+	picture = nwo\hero_city_odessa
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 626 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226033_A
+		command = { type = construct which = ic where = 626 value = 1 }
+		command = { type = construct which = infrastructure where = 626 value = 10 }
+		command = { type = province_keypoints which = 626 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226034
+	country = SOV
+
+	name = EVT_8226034_NAME
+	desc = EVT_8226034_DESC
+	picture = nwo\hero_city_sevastopol
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 641 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226034_A
+		command = { type = construct which = ic where = 641 value = 1 }
+		command = { type = construct which = infrastructure where = 641 value = 10 }
+		command = { type = province_keypoints which = 641 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226035
+	country = SOV
+
+	name = EVT_8226035_NAME
+	desc = EVT_8226035_DESC
+	picture = nwo\hero_city_moscow
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 572 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226035_A
+		command = { type = construct which = ic where = 572 value = 3 }
+		command = { type = construct which = infrastructure where = 572 value = 10 }
+		command = { type = province_keypoints which = 572 value = 3 }
+	}	
+
+}
+
+event = { 
+	id = 8226036
+	country = SOV
+
+	name = EVT_8226036_NAME
+	desc = EVT_8226036_DESC
+	picture = nwo\hero_city_kiev
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 617 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226036_A
+		command = { type = construct which = ic where = 617 value = 1 }
+		command = { type = construct which = infrastructure where = 617 value = 10 }
+		command = { type = province_keypoints which = 617 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226037
+	country = SOV
+
+	name = EVT_8226037_NAME
+	desc = EVT_8226037_DESC
+	picture = nwo\hero_city_novorossiysk
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 694 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226037_A
+		command = { type = construct which = ic where = 694 value = 1 }
+		command = { type = construct which = infrastructure where = 694 value = 10 }
+		command = { type = province_keypoints which = 694 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226038
+	country = SOV
+
+	name = EVT_8226038_NAME
+	desc = EVT_8226038_DESC
+	picture = nwo\hero_city_kerch
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 640 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226038_A
+		command = { type = construct which = ic where = 640 value = 1 }
+		command = { type = construct which = infrastructure where = 640 value = 10 }
+		command = { type = province_keypoints which = 640 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226039
+	country = SOV
+
+	name = EVT_8226039_NAME
+	desc = EVT_8226039_DESC
+	picture = nwo\hero_city_minsk
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 599 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226039_A
+		command = { type = construct which = ic where = 599 value = 1 }
+		command = { type = construct which = infrastructure where = 599 value = 10 }
+		command = { type = province_keypoints which = 599 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226040
+	country = SOV
+
+	name = EVT_8226040_NAME
+	desc = EVT_8226040_DESC
+	picture = nwo\hero_city_tula
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 584 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226040_A
+		command = { type = construct which = ic where = 584 value = 1 }
+		command = { type = construct which = infrastructure where = 584 value = 10 }
+		command = { type = province_keypoints which = 584 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226041
+	country = SOV
+
+	name = EVT_8226041_NAME
+	desc = EVT_8226041_DESC
+	picture = nwo\hero_city_murmansk
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 535 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226041_A
+		command = { type = construct which = ic where = 535 value = 1 }
+		command = { type = construct which = infrastructure where = 535 value = 10 }
+		command = { type = province_keypoints which = 535 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226042
+	country = SOV
+
+	name = EVT_8226042_NAME
+	desc = EVT_8226042_DESC
+	picture = nwo\hero_city_smolensk
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 589 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226042_A
+		command = { type = construct which = ic where = 589 value = 1 }
+		command = { type = construct which = infrastructure where = 589 value = 10 }
+		command = { type = province_keypoints which = 589 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226043
+	country = SOV
+
+	name = EVT_8226043_NAME
+	desc = EVT_8226043_DESC
+	picture = nwo\hero_city_kuybyshev
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 668 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226043_A
+		command = { type = construct which = ic where = 668 value = 1 }
+		command = { type = construct which = infrastructure where = 668 value = 10 }
+		command = { type = province_keypoints which = 668 value = 1 }
+	}	
+
+}
+
+event = { 
+	id = 8226044
+	country = SOV
+
+	name = EVT_8226044_NAME
+	desc = EVT_8226044_DESC
+	picture = nwo\hero_city_vladivostok
+	style = 1
+	
+	trigger = {
+		event = 8226000
+		control = { province = 1191 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226044_A
+		command = { type = construct which = ic where = 1191 value = 1 }
+		command = { type = construct which = infrastructure where = 1191 value = 10 }
+		command = { type = province_keypoints which = 1191 value = 1 }
+	}	
+
+}
+
+### A world superpower event for USSR
+
+event = { 
+	id = 8226050
+	country = SOV
+
+	name = EVT_8226050_NAME
+	desc = EVT_8226050_DESC
+	picture = nwo\ussr_superpower
+	style = 1
+	
+	trigger = {
+		event = { id = 8226020 days = 180 }
+		flag = cold_war
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8226050_A
+		
+		command = { trigger = { NOT = { event = 8226030 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226031 } } type = province_keypoints which = 572 value = 2 }
+		command = { trigger = { NOT = { event = 8226032 } } type = province_keypoints which = 572 value = 2 }
+		command = { trigger = { NOT = { event = 8226033 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226034 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226035 } } type = province_keypoints which = 572 value = 3 }
+		command = { trigger = { NOT = { event = 8226036 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226037 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226038 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226039 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226040 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226041 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226042 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226043 } } type = province_keypoints which = 572 value = 1 }
+		command = { trigger = { NOT = { event = 8226044 } } type = province_keypoints which = 572 value = 1 }
+		
+		command = { type = dissent value = -1 }
+		
+		command = { type = alliance_leader where = 3 }
+	}	
+
+}

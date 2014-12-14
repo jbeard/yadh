@@ -1,0 +1,832 @@
+
+#############################################
+######  Join the Allies
+#############################################
+event = {
+         id = 13301600
+         random = no
+         country = nzl
+         trigger = {
+		war = { country =eng  country = ger }
+		NOT = { war = { country = nzl country = eng }  }
+		NOT = { alliance = { country = nzl country = eng }  }
+		NOT = { event = 13301600 }
+
+         }
+ 
+         name = "Join the Allies"
+         desc = "The countries that formed the British Commonwealth had been given powers to bring his own foreign policy. This enabled him to not be bound or obligated to participate in wars involving the United Kingdom. Although many of these countries, ensured the integrity of the UK and some of them had in its constitution the obligation to defend against aggression. Most of these countries joined the bloc ally"
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1947 }
+ 
+                
+                picture = "commonwealth"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  ai_chance = 100
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = domestic which = interventionism value = 1 }
+                  command = { type = sleepevent which = 13301550 }
+                  command = { type = set_relation which = ENG value = 200 }
+                  command = { type = alliance which = ENG }
+                  command = { type = dissent value = -50 }
+           }
+           action_b = {
+                  name = "It is not our war"
+                  command = { type = dissent value = 25 }
+                  command = { type = domestic which = interventionism value = -2 }
+                  command = { type = domestic which = defense_lobby value = -2 }
+                  command = { type = relation which = eng value = -150 }
+                  command = { type = relation which = ger value = 50 }
+                  ai_chance = 0
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 13301532
+         random = no
+         country = nzl
+         trigger = {
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+ 
+                
+                picture = "NZL01"
+                
+           action_a = {
+                  name = "OK"
+                  command = {  }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 13301537
+         random = no
+         country = nzl
+         trigger = {
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+          persistent = yes
+ 
+ 
+                
+                picture = "NZL01"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+           }
+
+}
+#############################################
+######  General Elections
+#############################################
+event = {
+         id = 13301601
+         random = no
+         country = nzl
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "New Zealand general election, 1935"
+         desc = "The 1935 New Zealand general election was a nationwide vote to determine the shape of the Parliament of New Zealand's 25th term. It resulted in the Labour Party's first electoral victory, with Michael Joseph Savage becoming the first Labour Prime Minister. The governing coalition, consisting of the United Party and the Reform Party, suffered a major defeat, attributed by many to their handling of the Great Depression."
+         style = 2
+ 
+         date = { day = 27 month = november year = 1935 }
+ 
+                
+                picture = "NZL02"
+                
+           action_a = {
+                  name = "It is time for change"
+                  ai_chance = 95
+                  command = { type = dissent value = -3 }
+                  command = { type = domestic which = political_left value = 7 }
+                  command = { type = headofgovernment which = 215002 }
+                  command = { type = foreignminister which = 215003 }
+                  command = { type = armamentminister which = 215004 }
+                  command = { type = ministerofsecurity which = 215005 }
+                  command = { type = ministerofintelligence which = 215006 }
+           }
+           action_b = {
+                  name = "Keep current government"
+                  ai_chance = 5
+                  command = { type = dissent value = 3 }
+           }
+
+}
+#############################################
+######  The 40-hour work week
+#############################################
+event = {
+         id = 13301602
+         random = no
+         country = nzl
+         trigger = {
+                   headofgovernment = 215002
+
+         }
+  
+         name = "The 40-hour work week"
+         desc = "Seen at the time as a spokesman of hope,Michael Joseph Savage  was a parliamentarian and moderate social reformer who believed in democratic leadership.The new Prime minister initiated a series of changes in the national production system, one of them was the introduction of 40-hour work week reduced from 44."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1937 }
+         offset = 12
+         deathdate = { day = 31 month = december year = 1938 }
+ 
+                
+                picture = "public_jobs"
+                
+           action_a = {
+                  name = "reduced from 44 to 40 hours"
+                  ai_chance = 90
+                  command = { type = dissent value = -1 }
+                  command = { type = money value = -10 }
+                  command = { type = manpowerpool value = 5 }
+                  command = { type = domestic which = free_market value = 1 }
+                  command = { type = industrial_modifier which = total value = -1 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+                  command = { type = money value = 10 }
+           }
+
+}
+#############################################
+######  Reserve Bank of New Zealand
+#############################################
+event = {
+         id = 13301603
+         random = no
+         country = nzl
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "Reserve Bank of New Zealand"
+         desc = "The Reserve Bank of New Zealand is the central bank of New Zealand. It was established in 1934 and is constituted under the Reserve Bank of New Zealand Act 1933.The Governor of the Reserve Bank is responsible for New Zealand's currency and operating monetary policy."
+         style = 2
+ 
+         date = { day = 1 month = august year = 1934 }
+ 
+                
+                picture = "NZL03"
+                
+           action_a = {
+                  name = "Sign it"
+                  ai_chance = 90
+                  command = { type = dissent value = -1 }
+                  command = { type = peacetime_ic_mod value = 1 }
+                  command = { type = money value = 250 }
+                  command = { type = domestic which = free_market value = -1 }
+           }
+           action_b = {
+                  name = "Reject it"
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  Pahiatua earthquake
+#############################################
+event = {
+         id = 13301604
+         random = no
+         country = nzl
+         trigger = {
+
+         }
+ 
+         name = "Pahiatua earthquake"
+         desc = "This earthquake has historically been referred to as the Pahiatua Earthquake, but recent reviews of its epicentre place it closer to the locality of Horoeka. It struck the lower North Island on March 5 1934 and was felt as far north as Auckland. The shaking was also felt in the mainland of the northern South Island, and along the east coast as far as Dunedin. "
+         style = 2
+ 
+         date = { day = 5 month = march year = 1934 }
+ 
+                
+                picture = "NZL04"
+                
+           action_a = {
+                  name = "Bad news"
+                  command = { type = construct which = infrastructure where = 1721 value = -10 }
+           }
+
+}
+#############################################
+######  First trans-Tasman airmail.
+#############################################
+event = {
+         id = 13301605
+         random = no
+         country = nzl
+         trigger = {
+                   exists = ast
+
+         }
+ 
+         name = "First trans-Tasman airmail."
+         desc = "The first official airmail between New Zealand and Australia took place on 17 February, 1934.The Avro 10, Faith in Australia, left Muriwai Beach, Auckland at 6 am and arrived in Sydney 14 hours 10 minutes later.Charles Ulm was the pilot, Scotty Allan the navigator-co-pilot and R.T. Boulton was the engineer. "
+         style = 2
+ 
+         date = { day = 17 month = february year = 1934 }
+ 
+                
+                picture = "NZL05"
+                
+           action_a = {
+                  name = "ok"
+                  command = { type = dissent value = -1 }
+                  command = { type = industrial_modifier which = supplies value = 1.5 }
+                  command = { type = tc_mod value = 10 }
+                  command = { type = relation which = ast value = 10 }
+           }
+
+}
+#############################################
+######  Union Airways of N.Z.
+#############################################
+event = {
+         id = 13301606
+         random = no
+         country = nzl
+         trigger = {
+                   exists = nzl
+
+         }
+ 
+         name = "Union Airways of N.Z."
+         desc = "The Union Steamship Company took shares in East Coast Airways in 1934 and in Cook Strait Airways in 1935, and later that year amalgamated these into a new national airway, on 5 January 1936, opening services between Palmerston North and Dunedin via Blenheim and Christchurch."
+         style = 2
+ 
+         date = { day = 10 month = february year = 1935 }
+ 
+                
+                picture = "NZL06"
+                
+           action_a = {
+                  name = "ok"
+                  command = { type = dissent value = -1 }
+                  command = { type = industrial_modifier which = supplies value = 2 }
+                  command = { type = tc_mod value = 10 }
+           }
+
+}
+#############################################
+######  State housing programme
+#############################################
+event = {
+         id = 13301607
+         random = no
+         country = nzl
+         trigger = {
+                   headofgovernment = 215002
+
+         }
+ 
+         name = "State housing programme"
+         desc = "the Finance Minister Walter Nash announced in the 1936 Budget that 5000 state houses would be built.The government intended not only to provide housing, but to stimulate jobs and manufacturing with the construction of the houses, which were to be built from New Zealand materials as far as possible."
+         style = 2
+ 
+         date = { day = 10 month = june year = 1936 }
+ 
+                
+                picture = "NZL07"
+                
+           action_a = {
+                  name = "Begin construction"
+                  ai_chance = 95
+                  command = { type = money value = -150 }
+                  command = { type = supplies value = -400 }
+                  command = { type = manpowerpool value = -10 }
+                  command = { type = construct which = ic where = -4 value = -1 }
+                  command = { type = local_setflag which = stahou }
+           }
+           action_b = {
+                  name = "Reject it"
+                  ai_chance = 5
+                  command = { type = money value = 150 }
+                  command = { type = supplies value = 400 }
+                  command = { type = manpowerpool value = 10 }
+           }
+
+}
+#############################################
+######  State housing programme
+#############################################
+event = {
+         id = 13301608
+         random = no
+         country = nzl
+         trigger = {
+                   local_flag = stahou
+
+         }
+ 
+         name = "State housing programme"
+         desc = "The first of the new state houses was completed at 12 Fife Lane in Miramar, Wellington, in 1937. The Prime Minister Michael Joseph Savage and several cabinet ministers carried furniture into the house and handed the keys to the tenants. For the opening of the first state house in each major city, a group of cabinet ministers repeated this ceremony.The first tenant, David and Mary McGregor, paid £1 10s 3d  rent for 12 Fife Lane, about one-third of their £4 7s 9d weekly income."
+         style = 2
+ 
+         date = { day = 10 month = june year = 1937 }
+ 
+                
+                picture = "NZL08"
+                
+           action_a = {
+                  name = "OK"
+                  ai_chance = 95
+                  command = { type = construct which = infrastructure where = 1721 value = 20 }
+                  command = { type = construct which = infrastructure where = 1722 value = 20 }
+                  command = { type = construct which = infrastructure where = 1719 value = 20 }
+                  command = { type = construct which = ic where = 1721 value = 2 }
+                  command = { type = local_clrflag which = stahou }
+           }
+
+}
+#############################################
+######  New Zealand National Party
+#############################################
+event = {
+         id = 13301609
+         random = no
+         country = nl
+         trigger = {
+                   headofgovernment = 215002
+                   government = democratic
+
+         }
+ 
+         name = "New Zealand National Party"
+         desc = "A new party, called the New Zealand National Party, formed at a meeting held in Wellington on 13 and 14 May 1936. Erstwhile members of the United and Reform parties made up the bulk of the new party. George Forbes, Prime Minister from 1930 until 1935 and United Party Leader, opened the conference, he served as Leader of the Opposition from May until November, when the Reform MP Adam Hamilton was elected the first leader."
+         style = 2
+ 
+         date = { day = 14 month = may year = 1936 }
+ 
+                
+                picture = "NZL09"
+                
+           action_a = {
+                  name = "Things will get better."
+                  command = { type = dissent value = -1 }
+           }
+
+}
+#############################################
+######  Jean Batten's record flight from England
+#############################################
+event = {
+         id = 133016100
+         random = no
+         country = nl
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "Jean Batten's record flight from England."
+         desc = "In May 1936, Batten successfully flew solo from England to New Zealand in the Gipsy Moth. Her trip of 14,224 miles in 11 days 45 minutes total elapsed time was a World record for any type. For this achievement and for subsequent record-breaking flights, she was created Commander of the British Empire in 1936, and she was also given the Cross of Chevalier of the French Legion of Honour."
+         style = 2
+ 
+         date = { day = 26 month = october year = 1936 }
+ 
+                
+                picture = "NZL10"
+                
+           action_a = {
+                  name = "Another model citizen"
+                  command = { type = dissent value = -1 }
+                  command = { type = morale which = air value = 2 }
+           }
+
+}
+#############################################
+######  Free Milk in Schools Programme
+#############################################
+event = {
+         id = 133016110
+         random = no
+         country = nzl
+         trigger = {
+                   headofgovernment = 215002
+
+         }
+ 
+         name = "Free Milk in Schools Programme"
+         desc = "New Zealand's First Labour Government introduced free milk for children at school in 1937 to improve the health and welfare of young Kiwis. In the midst of the Great Depression, it didn't hurt to find a steady demand for surplus milk either. For a time during the Second War War, school children even received an apple a day."
+         style = 2
+ 
+         date = { day = 10 month = march year = 1938 }
+ 
+                
+                picture = "NZL11"
+                
+           action_a = {
+                  name = "We are a growing New Zealand power."
+                  ai_chance = 95
+                  command = { type = money value = -50 }
+                  command = { type = supplies value = -100 }
+                  command = { type = relative_manpower value = 5 }
+                  command = { type = province_manpower which = 1721 value = 1 }
+                  command = { type = province_manpower which = 1722 value = 1 }
+           }
+           action_b = {
+                  name = "Reject it"
+                  ai_chance = 5
+                  command = { type = money value = 50 }
+                  command = { type = supplies value = 100 }
+           }
+
+}
+#############################################
+######  Social Security Act 1938
+#############################################
+event = {
+         id = 133016120
+         random = no
+         country = nzl
+         trigger = {
+                   headofgovernment = 215002
+
+         }
+  
+         name = "Social Security Act 1938"
+         desc = "After the 1935 election Michael Joseph Savage issued a Christmas bonus to the unemployed. However, a regular unemployment benefit was not introduced until the passing of the Social Security Act in 1938 that benefit was 'payable to a person 16 years of age and over who has been in New Zealand for at least 12 months and is unemployed, is capable of and willing to undertake suitable work, and has taken reasonable steps to secure employment'."
+         style = 2
+ 
+         date = { day = 1 month = august year = 1938 }
+ 
+                
+                picture = "NZL12"
+                
+           action_a = {
+                  name = "To approve the measures"
+                  ai_chance = 90
+                  command = { type = dissent value = -1 }
+                  command = { type = money value = -20 }
+                  command = { type = supplies value = -50 }
+                  command = { type = manpowerpool value = 10 }
+                  command = { type = relative_manpower value = 5 }
+                  command = { type = industrial_modifier which = total value = 1 }
+                  command = { type = peacetime_ic_mod value = 1 }
+                  command = { type = construct which = ic where = 1722 value = 1 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+                  command = { type = money value = 20 }
+                  command = { type = supplies value = 50 }
+                  command = { type = manpowerpool value = -10 }
+           }
+
+}
+#############################################
+######  2nd New Zealand Expeditionary Force
+#############################################
+event = {
+         id = 133016130
+         random = no
+         country = nzl
+         trigger = {
+                   alliance = { country = nzl country = eng }
+                   event = 13301600
+
+         }
+ 
+         name = "2nd New Zealand Expeditionary Force"
+         desc = "At the outbreak of war in 1939, it was decided that New Zealand should provide an Expeditionary Force of one division, under then Major General Bernard Freyberg. This force became known as the 2nd New Zealand Expeditionary Force (2NZEF) and the division as 2nd New Zealand Division."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 30
+         deathdate = { day = 31 month = december year = 1947 }
+ 
+                
+                picture = "NZL13"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  command = { type = add_division which = "2nd New Zealand Div." value = infantry when = 0 }
+                  command = { type = manpowerpool value = -5 }
+           }
+
+}
+#############################################
+######  3nd New Zealand Division
+#############################################
+event = {
+         id = 133016140
+         random = no
+         country = nzl
+         trigger = {
+                   alliance = { country = nzl country = eng }
+                   event = 13301600
+
+         }
+ 
+         name = "3nd New Zealand Division"
+         desc = "The 3rd New Zealand Division was a division of the New Zealand Army. Formed in 1942, it saw action against the Japanese in the Pacific Ocean Areas during the Second World War. The division saw action in the Solomon Islands campaign during 1943–44, but was later disbanded in October 1944."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1942 }
+         offset = 30
+         deathdate = { day = 31 month = december year = 1944 }
+ 
+                
+                picture = "NZL14"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  command = { type = add_division which = "3nd New Zealand Div." value = infantry when = 0 }
+                  command = { type = manpowerpool value = -5 }
+           }
+
+}
+#############################################
+######  The 28th Maori Battalion
+#############################################
+event = {
+         id = 133016150
+         random = no
+         country = nzl
+         trigger = {
+                   alliance = { country = nzl country = eng }
+                   event = 13301600
+
+         }
+ 
+         name = "The 28th Maori Battalion"
+         desc = "The Maori Battalion followed in the footsteps of the Maori Pioneer Battalion that served during the First World War with success, and was wanted by Maori to raise their profile, and to serve alongside their Pakeha compatriots as citizens of the British Empire. It also gave a generation of people with a well-noted military ancestry a chance to test their own warrior skills."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1940 }
+         offset = 30
+         deathdate = { day = 31 month = december year = 1942 }
+ 
+                
+                picture = "NZL15"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  command = { type = add_division which = "28th Maori Battalion" value = militia when = 0 }
+                  command = { type = manpowerpool value = -2 }
+           }
+
+}
+#############################################
+######  Establishment of the (RNZN)
+#############################################
+event = {
+         id = 133016160
+         random = no
+         country = nzl
+         trigger = {
+                   alliance = { country = nzl country = eng }
+                   event = 13301600
+
+         }
+ 
+         name = "Establishment of the (RNZN)"
+         desc = "When Britain went to war against Germany in 1939, New Zealand immediately also declared war. In  recognition of the fact that the naval force was now largely self-sufficient and independent of the Royal Navy, the New Zealand Division of the Royal Navy became the Royal New Zealand Navy (RNZN), the prefix 'royal' being granted by King George VI on 1 October 1941. Ships thereafter were prefixed with HMNZS."
+         style = 2
+ 
+         date = { day = 1 month = october year = 1941 }
+         offset = 1
+         deathdate = { day = 31 month = december year = 1942 }
+ 
+                
+                picture = "NZL16"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  command = { type = add_division which = "HMNZS Leander" value = light_cruiser when = 4 }
+                  command = { type = add_division which = "1st Destroyer Flotilla" value = destroyer when = 4 }
+                  command = { type = add_division which = "1st Transport Flotilla" value = transport when = 2 }
+                  command = { type = manpowerpool value = -10 }
+           }
+
+}
+#############################################
+######  General Elections
+#############################################
+event = {
+         id = 133016170
+         random = no
+         country = nzl
+         trigger = {
+                   government = democratic
+                   headofgovernment = 215002
+
+         }
+ 
+         name = "New Zealand general election, 1938"
+         desc = "The 1938 New Zealand general election was a nationwide vote to determine the shape of the Parliament of New Zealand's 26th term. It resulted in the governing Labour Party being re-elected, although the newly founded National Party gained a certain amount of ground."
+         style = 2
+ 
+         date = { day = 27 month = november year = 1938 }
+ 
+                
+                picture = "NZL17"
+                
+           action_a = {
+                  name = "Labour Party"
+                  ai_chance = 95
+                  command = { type = dissent value = -3 }
+                  command = { type = domestic which = political_left value = 7 }
+                  command = { type = headofgovernment which = 215002 }
+           }
+           action_b = {
+                  name = "National Party"
+                  ai_chance = 5
+                  command = { type = dissent value = 3 }
+           }
+
+}
+#############################################
+######  General Elections
+#############################################
+event = {
+         id = 133016180
+         random = no
+         country = nzl
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "New Zealand general election, 1943"
+         desc = "The 1943 New Zealand general election was a nationwide vote to determine the shape of the Parliament of New Zealand's 27th term. With the onset of World War II, elections were initially postponed, but it was eventually decided to hold a general election in September 1943, around two years after it would normally have occurred. The election saw the governing Labour Party re-elected by a comfortable margin, although the party nevertheless lost considerable ground to the expanding National Party."
+         style = 2
+ 
+         date = { day = 27 month = november year = 1943 }
+ 
+                
+                picture = "NZL18"
+                
+           action_a = {
+                  name = "Labour Party"
+                  ai_chance = 95
+                  command = { type = dissent value = -3 }
+                  command = { type = domestic which = political_left value = 7 }
+                  command = { type = headofgovernment which = 215017 }
+           }
+           action_b = {
+                  name = "National Party"
+                  ai_chance = 5
+                  command = { type = dissent value = 3 }
+           }
+
+}
+#############################################
+######  General Elections
+#############################################
+event = {
+         id = 133016190
+         random = no
+         country = nzl
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "New Zealand general election, 1946"
+         desc = "The 1946 New Zealand general election was a nationwide vote to determine the shape of the Parliament of New Zealand's 28th term. It saw the governing Labour Party re-elected, but by a substantially narrower margin than in the three previous elections. The National Party continued its gradual rise."
+         style = 2
+ 
+         date = { day = 27 month = november year = 1946 }
+ 
+                
+                picture = "NZL19"
+                
+           action_a = {
+                  name = "Labour Party"
+                  ai_chance = 95
+                  command = { type = dissent value = -3 }
+                  command = { type = domestic which = political_left value = 7 }
+                  command = { type = headofgovernment which = 215017 }
+           }
+           action_b = {
+                  name = "National Party"
+                  ai_chance = 5
+                  command = { type = dissent value = 3 }
+           }
+
+}
+#############################################
+######  The death of Michael Joseph Savage
+#############################################
+event = {
+         id = 133016200
+         random = no
+         country = nzl
+         trigger = {
+                   exists = nzl
+
+         }
+ 
+         name = "The death of Michael Joseph Savage"
+         desc = "A week after the Social Security Bill was introduced to Parliament on 12 August 1938, Savage collapsed in Auckland. The diagnosis was cancer of the colon necessitating immediate surgery.He died on 27 March 1940.There was a massive public display of grief at Savage's passing. The train that carried his body to Auckland made 20 stops along the way to allow people to pay their respects. He was buried at Bastion Point, overlooking the Waitemata Harbour."
+         style = 2
+ 
+         date = { day = 27 month = march year = 1940 }
+ 
+                
+                picture = "NZL20"
+                
+           action_a = {
+                  name = "EVT_362_ACTC"
+                  command = { type = dissent value = 2 }
+                  command = { trigger = { headofgovernment = 215002 } type = domestic which = political_left value = 7 }
+                  command = { trigger = { headofgovernment = 215002 } type = headofgovernment which = 215017 }
+                  command = { type = sleepminister which = 215002 }
+                  command = { type = sleepminister which = 215003 }
+           }
+
+}
+#############################################
+######  New Governor-General
+#############################################
+event = {
+	id = 133016210
+	random = no
+	country = NZL
+	style = 2
+	
+	trigger = {
+		OR = {
+			headofstate =  215001
+			headofstate =  215011
+		}
+	}
+
+	date = { day = 11 month = February year = 1941 }
+
+	name = "New Governor-General"
+	desc = "In February 1941 Norton Louis Baron Newall was appointed Governor-General of New Zealand, a post he would hold for the remainder of the war. His time there was mostly quiet described by one biographer as 'a nice long rest' and he toured the country extensively, referring to the war 'in every public address'.Newall and his wife, who also carried out an extensive program of engagements, were broadly popular, but there were occasional tensions."
+	picture = "NZL21"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { trigger = { headofstate = 215001 } type = headofstate which = 215012 }
+		command = { trigger = { headofstate = 215011 } type = headofstate which = 215013 }
+		command = { type = sleepminister which = 215001 }
+		command = { type = sleepminister which = 215011 }
+	}
+}
+#############################################
+######  New Governor-General
+#############################################
+event = {
+	id = 133016220
+	random = no
+	country = NZL
+	style = 2
+	
+	trigger = {
+		OR = {
+			headofstate =  215012
+			headofstate =  215013
+		}
+	}
+
+	date = { day = 3 month = may year = 1946 }
+
+	name = "New Governor-General"
+	desc = "Bernhard Baron Freyberg accepted an invitation to become Governor-General of New Zealand. He left London for his new post on 3 May 1946, after being made a Knight Grand Cross of the Order of St Michael and St George.Freyberg served as Governor-General of New Zealand from 1946 until 1952. In this post he played a very active role, visiting all parts of New Zealand and its dependencies."
+	picture = "NZL22"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { trigger = { headofstate = 215012 } type = headofstate which = 215014 }
+		command = { trigger = { headofstate = 215013 } type = headofstate which = 215015 }
+		command = { type = sleepminister which = 215012 }
+		command = { type = sleepminister which = 215013 }
+	}
+}

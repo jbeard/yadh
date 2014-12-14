@@ -1,0 +1,37 @@
+U86;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+800600;Head of State;Dawda Jawara;1945;1964;1964;SL;Pig-headed Isolationist;Very High;gambia1;x
+800601;Head of State;Edward Francis Small;1944;1964;1964;SD;Pig-headed Isolationist;Very High;unknown;x
+800602;Head of State;Thomas Southorn;1936;1964;1964;ML;Die-hard Reformer;Very High;M800602;x
+800603;Head of State;Farimang Mamadi Singateh;1942;1964;1964;SC;Benevolent Gentleman;Very High;unknown;x
+800604;Head of Government;Dawda Jawara;1945;1964;1964;SL;Naive Optimist;Very High;gambia1;x
+800605;Head of Government;Edward Francis Small;1944;1964;1964;SD;Silent Workhorse;Very High;unknown;x
+800606;Head of Government;Pierre Sarr N’Jie;1944;1964;1964;SC;Corporate Suit;Very High;unknown;x
+800607;Foreign Minister;Pierre Sarr N’Jie;1944;1964;1964;SC;Ideological Crusader;Very High;unknown;x
+800608;Foreign Minister;John Warburton Paul;1944;1964;1964;ML;Biased Intellectual;Very High;unknown;x
+800609;Minister of Armament;Edward Small;1936;1964;1964;SD;Administrative Genius;Very High;unknown;x
+800610;Minister of Armament;Ibrahima Momodou Garba-Jahumpa;1944;1964;1964;SC;Corrupt Kleptocrat;Very High;unknown;x
+800611;Minister of Armament;Thomas Southorn;1936;1964;1964;ML;Administrative Genius;Very High;unknown;x
+800612;Minister of Security;Dawda Jawara;1945;1964;1964;SL;Back Stabber;Very High;gambia1;x
+800613;Minister of Security;John Colley Faye;1945;1964;1964;ML;Crime Fighter;Very High;unknown;x
+800614;Minister of Security;Alex Haley;1944;1964;1964;SD;Man of the People;Very High;unknown;x
+800615;Head of Military Intelligence;Herbert R. Palmer;1936;1964;1964;ML;Naval Intelligence Specialist;Very High;unknown;x
+800616;Chief of Staff;George Giffard;1939;1964;1964;ML;School of Fire Support;Very High;unknown;x
+800617;Chief of Staff;Cherno Bande;1936;1964;1964;PA;School of Fire Support;Very High;unknown;x
+800618;Chief of Army;George Giffard;1939;1964;1964;ML;Static Defence Doctrine;Very High;unknown;x
+800619;Chief of Army;Cherno Bande;1936;1964;1964;PA;Guns and Butter Doctrine;Very High;unknown;x
+800620;Chief of Navy;Alex Haley;1945;1964;1964;SD;Open Seas Doctrine;Very High;unknown;x
+800621;Chief of Navy;Herbert R. Palmer;1936;1964;1964;ML;Open Seas Doctrine;Very High;unknown;x
+800622;Chief of Air Force;Herbert R. Palmer;1936;1964;1964;ML;Air Superiority Doctrine;Very High;unknown;x
+800623;Head of State;Arthur Frederick Richards;1936;1964;1964;ML;Weary Stiffneck;Very High;M800623;x
+800624;Head of Government;Arthur Frederick Richards;1936;1964;1964;ML;Naive Optimist;Very High;M800623;x
+800625;Head of Government;Thomas Southorn;1937;1964;1964;ML;Happy Amateur;Very High;M800625;x
+800626;Head of State;Hilary Blood;1942;1964;1964;ML;Insignificant Layman;Very High;M800626;x
+800627;Head of Government;Hilary Blood;1942;1964;1964;ML;Ambitious Union Boss;Very High;M800626;x
+800628;Head of State;Andrew Barkworth Wright;1947;1964;1964;ML;Pig-Headed Isolationist;Very High;M800628;x
+800629;Head of Government;Andrew Barkworth Wright;1947;1964;1964;ML;Flamboyant Tough Guy;Very High;M800628;x
+800630;Head of State;Percy Wyn-Harris;1950;1964;1964;ML;Stern Imperialist;Very High;M800630;x
+800631;Head of Government;Percy Wyn-Harris;1950;1964;1964;ML;Silent Workhorse;Very High;M800630;x
+800632;Head of State;Edward Henry Windley;1958;1964;1964;ML;Weary Stiffneck;Very High;M800632;x
+800633;Head of Government;Edward Henry Windley;1958;1964;1964;ML;Naive Optimist;Very High;M800632;x
+800634;Head of State;John Warburton Paul;1962;2005;2005;ML;Weary Stiffneck;Very High;unknown;x
+800635;Head of Government;Dawda Jawara;1962;2020;2020;SL;Old Airmarshal;Very High;gambia1;x

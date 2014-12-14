@@ -1,0 +1,1076 @@
+###########################################################################################
+#	New World Order 2 by Bizon
+#	Peacetime modifiers
+#	IDs: 89300**
+#
+#	These are events designed to enable and disable a peacetime mode that gives 
+#	all the nations a peacetime modifier that ensures that behemoth armies do not appear 
+#	and simulates a general non-willingness to engage in big military buildup by 
+#	most countries post-WW2.
+#
+#############################################################################################
+
+### These countries are too small to receive modifiers
+
+# U28	ALB	ANG	BEN	BHU	BRU	BUR	CAM	COS	CYP	DOM	GAB	GUI	GUY	HAI	LAO	LEB	LIB	MAD	MAL	MON	MOZ	NEP	PAN	RHO	SAR	SIE	SOM	SUD	SYR	TIB	TUN	U70	U81	U82	U84	U85	U86	U88	U89	U92	U93	U94	U95	U96	U98	U99	YEM
+
+### 90% IC cap during peacetime
+
+event = {
+	id = 8930000
+	persistent = yes
+	
+	tag = { AFG	ALG	BOL	CMB	COL	CON	CUB	ECU	ETH	GLD	GUA	HON	ICL	JOR	LBY	LUX	MOR	NIC	NIG	NZL	OMN	PAR	PHI	PRU	SAL	U72	U75	U83	U90	U91	U97	URU	VIE }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -10 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+		}	
+}
+
+event = {
+	id = 8930001
+	random = no
+	persistent = yes
+	
+	tag = { AFG	ALG	BOL	CMB	COL	CON	CUB	ECU	ETH	GLD	GUA	HON	ICL	JOR	LBY	LUX	MOR	NIC	NIG	NZL	OMN	PAR	PHI	PRU	SAL	U72	U75	U83	U90	U91	U97	URU	VIE }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 10 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 85% IC cap during peacetime
+
+event = {
+	id = 8930002
+	random = no
+	persistent = yes
+	
+	tag = { CHI	CHL	DEN	EGY	FIN	GRE	IRE	IRQ	ISR	MLY	NOR	POR	SAU	SCH	SIA	VEN }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+		OR = {
+			NOT = { country = CHI }
+			AND = { 
+				country = CHI
+				flag = CHC_won_civil_war
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -15 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930003
+	random = no
+	persistent = yes
+	
+	tag = { CHI	CHL	DEN	EGY	FIN	GRE	IRE	IRQ	ISR	MLY	NOR	POR	SAU	SCH	SIA	VEN }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+		OR = {
+			NOT = { country = CHI }
+			AND = { 
+				country = CHI
+				flag = CHC_won_civil_war
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 15 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 80% IC cap during peacetime
+
+event = {
+	id = 8930004
+	random = no
+	persistent = yes
+	
+	tag = { U27	U29	ARG	AUS	BEL	BUL	INO	KOR	MEX	PAK	PER	PRK	SAF	SWE	TUR	YUG }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -20 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930005
+	random = no
+	persistent = yes
+	
+	tag = { U27	U29	ARG	AUS	BEL	BUL	INO	KOR	MEX	PAK	PER	PRK	SAF	SWE	TUR	YUG }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 20 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 75% IC cap during peacetime
+
+event = {
+	id = 8930006
+	random = no
+	persistent = yes
+	
+	tag = { U24 U13	U30	U31	AST	CZE	DDR	HOL	HUN	ROM }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -25 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930007
+	random = no
+	persistent = yes
+	
+	tag = { U24 U13	U30	U31	AST	CZE	DDR	HOL	HUN	ROM }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 25 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 70% IC cap during peacetime
+
+event = {
+	id = 8930008
+	random = no
+	persistent = yes
+	
+	tag = { U32	BRA	CAN	POL	SPA }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -30 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930009
+	random = no
+	persistent = yes
+	
+	tag = { U32	BRA	CAN	POL	SPA }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 30 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 65% IC cap during peacetime
+
+event = {
+	id = 8930010
+	persistent = yes
+	
+	country = ITA
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -35 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930011
+	persistent = yes
+	
+	country = ITA
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 35 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 60% IC cap during peacetime
+
+event = {
+	id = 8930012
+	random = no
+	persistent = yes
+	
+	tag = { U02	IND }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -40 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930013
+	random = no
+	persistent = yes
+	
+	tag = { U02	IND }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 40 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 55% IC cap during peacetime
+
+# There are no countries getting 55% IC cap (100-120 average IC)
+# Event IDs 8930014 and 8930015 reserved
+
+### 50% IC cap during peacetime
+
+event = {
+	id = 8930016
+	random = no
+	persistent = yes
+	
+	tag = { ENG	FRA }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -50 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930017
+	random = no
+	persistent = yes
+	
+	tag = { ENG	FRA }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 50 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 45% IC cap during peacetime
+
+event = {
+	id = 8930018
+	persistent = yes
+	
+	tag = { U25 DFR	SOV	USA }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -55 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930019
+	persistent = yes
+	
+	tag = { U25 DFR	SOV	USA }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 55 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 40% IC cap during peacetime
+
+event = {
+	id = 8930020
+	persistent = yes
+	
+	country = JAP
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -55 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930021
+	random = no
+	persistent = yes
+	
+	country = JAP
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 55 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### 50% IC cap during peacetime - Communist China (they don't get their cap until 1950)
+
+event = {
+	id = 8930022
+	random = no
+	persistent = yes
+	
+	tag = { CHC CHI }
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+		OR = {
+			country = CHC
+			AND = { 
+				country = CHI
+				flag = CHI_won_civil_war
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = peacetime_ic_mod value = -50 }
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930023
+	random = no
+	persistent = yes
+	
+	tag = { CHC CHI }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+		OR = {
+			country = CHC
+			AND = { 
+				country = CHI
+				flag = CHI_won_civil_war
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = peacetime_ic_mod value = 50 }
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### All remaining countries
+
+event = {
+	id = 8930024
+	persistent = yes
+	
+	tag = { U28	ALB	ANG	BEN	BHU	BRU	BUR	CAM	COS	CYP	DOM	GAB	GUI	GUY	HAI	LAO	LEB	LIB	MAD	MAL	MON	MOZ	NEP	PAN	RHO	SAR	SIE	SOM	SUD	SYR	TIB	TUN	U70	U81	U82	U84	U85	U86	U88	U89	U92	U93	U94	U95	U96	U98	U99	YEM	}
+
+	name = "EVT_PEACETIME_NAME"
+	desc = "EVT_PEACETIME_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = time_of_peace }
+		NOT = { flag = ww3 }
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_PEACETIME_A"
+		command = { type = local_setflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = infrastructure value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = anti_air value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = coastal_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = land_fort value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = air_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = naval_base value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = radar_station value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = nuclear_reactor value = -100 } #regular build-time +100%
+		command = { type = building_prod_mod which = rocket_test value = -100 } #regular build-time +100%
+	}	
+}
+
+event = {
+	id = 8930025
+	persistent = yes
+	
+	tag = { U28	ALB	ANG	BEN	BHU	BRU	BUR	CAM	COS	CYP	DOM	GAB	GUI	GUY	HAI	LAO	LEB	LIB	MAD	MAL	MON	MOZ	NEP	PAN	RHO	SAR	SIE	SOM	SUD	SYR	TIB	TUN	U70	U81	U82	U84	U85	U86	U88	U89	U92	U93	U94	U95	U96	U98	U99	YEM }
+
+	name = "EVT_WARTIME_NAME"
+	desc = "EVT_WARTIME_DESC"
+	picture = "nwo\wartime"
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = ww3
+			atwar = yes
+		}
+		local_flag = time_of_peace
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_WARTIME_A"
+		command = { type = local_clrflag which = time_of_peace }
+		command = { type = building_prod_mod which = ic value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = infrastructure value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = anti_air value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = coastal_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = land_fort value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = air_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = naval_base value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = radar_station value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = nuclear_reactor value = 100 } #regular build-time -100%
+		command = { type = building_prod_mod which = rocket_test value = 100 } #regular build-time -100%
+		}	
+}
+
+### All countries get negative modifiers to building IC, dynamic economic development already takes care of IC development
+
+event = {
+	id = 8930099
+	persistent = yes
+	
+	tag = { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BHU BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR DOM EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HAI HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIB LIT LUX MAD MAL MAN MEN MEX MIN MLY MON MOR MOZ MTN NAM NEP NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TIB TRA TRK TUN TUR UKR URU USA UZB VEN VIC VIE WLL YEM YUG U00 U01 U02 U03 U04 U05 U06 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U36 U38 U39 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U60 U61 U62 U63 U64 U65 U66 U67 U68 U69 U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 UAP UAU UBO UCH UCS UER UES UGS UIC UIR UPE UPR UPS URO USN UTC UTL UTO }
+
+	name = "EVT_8930099_NAME"
+	desc = "EVT_8930099_DESC"
+	picture = "nwo\peacetime"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { local_flag = event_8930099 }
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 9999 }
+
+	action = {
+		name = "EVT_8930099_A"
+		command = { type = local_setflag which = event_8930099 }
+		command = { type = building_prod_mod which = ic value = -50 } #regular build-time +50%
+		}	
+}

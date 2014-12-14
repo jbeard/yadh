@@ -1,0 +1,44 @@
+U85;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+800500;Head of State;Edgard de Larminat;1936;1964;1964;SC;Weary Stiffneck;Very High;chad3;x
+800501;Head of State;André Matsoua;1936;1964;1964;LWR;Die-hard Reformer;Very High;brazaville4;x
+800502;Head of State;Alphonse Massemba-Débat;1945;1964;1964;LE;Autocratic Charmer;Very High;brazaville5;x
+800503;Head of State;Pierre Diagne;1934;1964;1964;FA;Autocratic Charmer;Very High;unknown;x
+800504;Head of State;Fulbert Youlou;1945;1964;1964;PA;Pig-headed Isolationist;Very High;brazaville2;x
+800505;Head of Government;Alphonse Massemba-Débat;1945;1964;1964;LE;Corporate Suit;Very High;brazaville5;x
+800506;Head of Government;André Matsoua;1936;1964;1964;LWR;Silent Workhorse;Very High;brazaville4;x
+800507;Head of Government;Gabriel Fortune;1936;1964;1964;ML;Silent Workhorse;Very High;brazaville1;x
+800508;Head of Government;Jacques Opangault ;1944;1964;1964;SC;Naive Optimist;Very High;brazaville3;x
+800509;Foreign Minister;Gabriel Fortune;1936;1964;1964;ML;Great Compromiser;Very High;brazaville1;x
+800510;Foreign Minister;Stéphane Tchitchelle;1945;1964;1964;LWR;Ideological Crusader;Very High;brazaville6;x
+800511;Minister of Armament;David Moussaka;1944;1964;1964;LE;Military Entrepreneur;Very High;unknown;x
+800512;Minister of Armament;Edgard de Larminat;1936;1964;1964;SC;Military Entrepreneur;Very High;chad3;x
+800513;Minister of Security;Fulbert Youlou;1945;1964;1964;PA;Crime Fighter;Very High;brazaville2;x
+800514;Minister of Security;André Matsoua;1936;1964;1964;LWR;Man of the People;Very High;brazaville4;x
+800515;Head of Military Intelligence;Jacques Opangault ;1944;1964;1964;SC;Political Specialist;Very High;brazaville3;x
+800516;Head of Military Intelligence;Félix Mouzabakani;1944;1964;1964;LE;Technical Specialist;Very High;unknown;x
+800517;Chief of Staff;David Moussaka;1944;1964;1964;LE;School of Psychology;Very High;unknown;x
+800518;Chief of Staff;Edgard de Larminat;1936;1964;1964;SC;School of Mass Combat;Very High;chad3;x
+800519;Chief of Army;Félix Mouzabakani;1944;1964;1964;LE;Decisive Battle Doctrine;Very High;unknown;x
+800520;Chief of Army;Edgard de Larminat;1936;1964;1964;SC;Decisive Battle Doctrine;Very High;chad3;x
+800521;Chief of Navy;David Moussaka;1944;1964;1964;LE;Open Seas Doctrine;Very High;unknown;x
+800522;Chief of Air Force;Jean Chambon;1936;1964;1964;SL;Army Aviation Doctrine;Very High;unknown;x
+800523;Head of State;Dieudonné Reste;1936;1964;1964;SC;Popular Figurehead;Very High;M800523;x
+800524;Head of Government;Dieudonné Reste;1936;1964;1964;SC;Old Admiral;Very High;M800523;x
+800525;Head of State;Léon Solomiac;1939;1964;1964;SC;Die-Hard Reformer;Very High;M800525;x
+800526;Head of Government;Léon Solomiac;1939;1964;1964;SC;Old Admiral;Very High;M800525;x
+800527;Head of State;Pierre Francois Boisson;1940;1964;1964;SC;Die-Hard Reformer;Very High;M800527;x
+800528;Head of Government;Pierre Francois Boisson;1940;1964;1964;SC;Silent Workhorse;Very High;M800527;x
+800529;Head of Government;Edgard de Larminat;1941;1964;1964;SC;Smiling Oilman;Very High;chad3;x
+800530;Head of State;Adolphe Éboué;1942;1964;1964;SC;Barking Buffoon;Very High;M800530;x
+800531;Head of Government;Adolphe Éboué;1942;1964;1964;SC;Political Protege;Very High;M800530;x
+800532;Head of State;Ange Bayardelle;1944;1964;1964;SC;Stern Imperialist;Very High;M800532;x
+800533;Head of Government;Ange Bayardelle;1944;1964;1964;SC;Naive Optimist;Very High;M800532;x
+800534;Head of State;Jean Soucadaux;1946;1964;1964;SC;Die-Hard Reformer;Very High;M800534;x
+800535;Head of Government;Jean Soucadaux;1946;1964;1964;SC;Old General;Very High;M800534;x
+800536;Head of State;Bernard Cornut-Gentille;1948;1964;1964;SC;Insignificant Layman;Very High;M800536;x
+800537;Head of Government;Bernard Cornut-Gentille;1948;1964;1964;SC;Ambitious Union Boss;Very High;M800536;x
+800538;Head of State;Paul Louis Gabriel Chauvet;1951;1964;1964;SC;Autocratic Charmer;Very High;M800538;x
+800539;Head of Government;Paul Louis Gabriel Chauvet;1951;1964;1964;SC;Backroom Backstabber;Very High;M800538;x
+800540;Head of State;Pierre Messmer;1958;1964;1964;SC;Benevolent Gentleman;Very High;M800540;x
+800541;Head of State;Yvon Bourges;1959;1965;1971;SC;Insignificant Layman;Very High;M800541;x
+800542;Head of Government;Fulbert Youlou;1959;1973;1973;PA;Political Protege;Very High;brazaville2;x

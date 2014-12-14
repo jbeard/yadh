@@ -1,0 +1,31 @@
+################################################## #########
+# SPY
+################################################## #########
+
+spyprefs =
+{
+percentage_on_spies = 0.3
+#percentage_on_spies: the amount of the income a country will spend on intelligence.
+
+percentage_foreign_mission = 0.6
+#The amount of the income a country will spend on intelligence.
+
+spyprefsdata = 
+	{
+  NumberOfSpies = 10
+  min_number_of_spies = 3
+  
+	steal_blueprint = 40
+	minister_assassination = 0
+	smear_campaign = 0
+	coup = 5
+	sabotage_industry = 0
+	nuclear_sabotage = 0
+	found_partisans = 0
+	massmedia = 20
+	counter_espionage = 10
+	disrupt_techteam = 10
+  
+  home_defence  = yes
+  }
+}

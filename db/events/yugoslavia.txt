@@ -1,0 +1,1571 @@
+#  Balkan Pact
+#  The Little Entente System
+#  Yugoslavian parliamentary election 1935
+#  Milan Stojadinovic
+#  JRZ
+#  Build the Rupnik Line 
+#  ZBOR
+#  Failed assassination attempt on Stojadinovic!
+#  First state visit to Paris
+#  Italo-Yugoslav treaty of friendship and trade agreement
+#  National Bureau created by the League of Communists of Yugoslavia
+#  Create the Nikola Tesla Institute 
+#  Six Year plan 
+#  The concordate crisis
+#  King Edward VIII visits Yugoslavia
+#  Yugoslavian parliamentary election 1938
+#  Yugoslav-Bulgarian pact of eternal friendship
+#  New parliament building
+#  Monument to the Unknown Hero
+#  The Seventeen Principles
+#  Failed assassination attempt on King Aleksandar
+#  Meeting with Hitler
+#  130th anniversary of the First Serbian Uprising
+#  Offer Shkoder to Yugoslavia
+#  Build the Pec-Boka Kotorska rail line
+#  Establish relations with the USSR
+
+
+#########################################################################
+#  Balkan Pact
+#########################################################################
+event = {
+	id = 2400040
+	random = no
+	country = YUG
+
+	decision = {
+		exists = ROM
+                exists = TUR
+                exists = GRE
+		year = 1934
+                   NOT = {
+			OR = {
+				ispuppet = YUG			
+				ispuppet = ROM
+				ispuppet = GRE		
+                                ispuppet = GRE
+				war = { country = YUG country = ROM }
+				war = { country = YUG country = TUR }
+                                war = { country = YUG country = GRE }
+			}
+		}
+
+
+
+
+	}
+
+	decision_trigger = {
+		AND = {
+			headofstate = 100086
+                        year = 1934
+                        month = february
+		}
+	}
+
+	trigger = {
+		AND = {
+			headofstate = 100086
+                        year = 1934
+                        month = february
+                  NOT = {
+			OR = {
+				ispuppet = YUG			
+				ispuppet = ROM
+				ispuppet = GRE		
+                                ispuppet = GRE
+				war = { country = YUG country = ROM }
+				war = { country = YUG country = TUR }
+                                war = { country = YUG country = GRE }
+			}
+		}
+
+
+
+
+		}
+		
+	}
+   
+	name = "The Balkan Pact"
+	desc = "The Balkan Pact was a treaty signed by Greece, Turkey, Romania and Yugoslavia on February 9, 1934 in Athens, aimed at maintaining the geopolitical status quo in the region following World War I. The signatories agreed to suspend all disputed territorial claims against each other and their immediate neighbors following the aftermath of the war and a rise in various regional ethnic minority tensions.The pact became effective on the day it was signed."
+	style = 2
+	picture = "balkan_pact"
+	decision_picture = "decision_balkan_pact"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1934 }
+
+	action = {
+		name = "EVT_2400040_ACTA"
+		command = { type = relation which = ROM value = 25 }
+		command = { type = relation which = GRE value = 25 }
+		command = { type = relation which = TUR value = 25 }
+		command = { type = relation which = ALB value = -25 }
+		command = { type = relation which = ITA value = -25 }
+                command = { type = relation which = BUL value = -25 }
+                command = { type = relation which = HUN value = -25 }
+                command = { type = relation which = SOV value = -25 }
+                command = { type = dissent value = -2 }
+		command = { type = trigger which = 2400031 }
+                command = { type = trigger which = 2400032 }
+                command = { type = trigger which = 2400037 }
+                command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+#########################################################################
+#  Balkan Pact-Romanian response
+#########################################################################
+event = {
+	id = 2400031
+	random = no
+	country = ROM
+
+
+
+	name = "Signing the Balkan Pact"
+	desc = "The Balkan Pact was a treaty signed by Greece, Turkey, Romania and Yugoslavia on February 9, 1934 in Athens,aimed at maintaining the geopolitical status quo in the region following World War I.King Aleksandar was the main driving force behind it.The signatories agreed to suspend all disputed territorial claims against each other and their immediate neighbors.Other nations in the region refused to sign the document, including Italy, Albania, Bulgaria, Hungary, and the Soviet Union." 
+	style = 2
+	picture = "balkan_pact"
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 95
+                command = { type = relation which = YUG value = 25 }
+		command = { type = relation which = GRE value = 25 }
+		command = { type = relation which = TUR value = 25 }
+		command = { type = relation which = ALB value = -25 }
+		command = { type = relation which = ITA value = -25 }
+                command = { type = relation which = BUL value = -25 }
+                command = { type = relation which = HUN value = -25 }
+                command = { type = relation which = SOV value = -25 }
+                command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 5
+		command = { type = relation which = YUG value = -50 }
+		command = { type = relation which = GRE value = -50 }
+		command = { type = relation which = TUR value = -50 }
+		command = { type = relation which = ALB value = 25 }
+		command = { type = relation which = ITA value = 25 }
+                command = { type = relation which = BUL value = 25 }
+                command = { type = relation which = HUN value = 25 }
+                command = { type = relation which = SOV value = 25 }
+                command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+#########################################################################
+#  Balkan Pact-Greek response
+#########################################################################
+event = {
+	id = 2400032
+	random = no
+	country = GRE
+
+
+
+	name = "Signing the Balkan Pact"
+	desc = "The Balkan Pact was a treaty signed by Greece, Turkey, Romania and Yugoslavia on February 9, 1934 in Athens,aimed at maintaining the geopolitical status quo in the region following World War I.King Aleksandar was the main driving force behind it.The signatories agreed to suspend all disputed territorial claims against each other and their immediate neighbors.Other nations in the region refused to sign the document, including Italy, Albania, Bulgaria, Hungary, and the Soviet Union." 
+	style = 2
+	picture = "balkan_pact"
+
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 95
+                command = { type = relation which = ROM value = 25 }
+		command = { type = relation which = YUG value = 25 }
+		command = { type = relation which = TUR value = 25 }
+		command = { type = relation which = ALB value = -25 }
+		command = { type = relation which = ITA value = -25 }
+                command = { type = relation which = BUL value = -25 }
+                command = { type = relation which = HUN value = -25 }
+                command = { type = relation which = SOV value = -25 }
+                command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 5
+		command = { type = relation which = ROM value = -50 }
+		command = { type = relation which = YUG value = -50 }
+		command = { type = relation which = TUR value = -50 }
+		command = { type = relation which = ALB value = 25 }
+		command = { type = relation which = ITA value = 25 }
+                command = { type = relation which = BUL value = 25 }
+                command = { type = relation which = HUN value = 25 }
+                command = { type = relation which = SOV value = 25 }
+                command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+#########################################################################
+#  Balkan Pact-Turkish response
+#########################################################################
+event = {
+	id = 2400037
+	random = no
+	country = TUR
+
+
+
+	name = "Signing the Balkan Pact"
+	desc = "The Balkan Pact was a treaty signed by Greece, Turkey, Romania and Yugoslavia on February 9, 1934 in Athens,aimed at maintaining the geopolitical status quo in the region following World War I.King Aleksandar was the main driving force behind it.The signatories agreed to suspend all disputed territorial claims against each other and their immediate neighbors.Other nations in the region refused to sign the document, including Italy, Albania, Bulgaria, Hungary, and the Soviet Union."  
+	style = 2
+	picture = "balkan_pact"
+
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 95
+                command = { type = relation which = ROM value = 25 }
+		command = { type = relation which = YUG value = 25 }
+		command = { type = relation which = GRE value = 25 }
+		command = { type = relation which = ALB value = -25 }
+		command = { type = relation which = ITA value = -25 }
+                command = { type = relation which = BUL value = -25 }
+                command = { type = relation which = HUN value = -25 }
+                command = { type = relation which = SOV value = -25 }
+                command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 5
+		command = { type = relation which = ROM value = -50 }
+		command = { type = relation which = YUG value = -50 }
+		command = { type = relation which = GRE value = -50 }
+		command = { type = relation which = ALB value = 25 }
+		command = { type = relation which = ITA value = 25 }
+                command = { type = relation which = BUL value = 25 }
+                command = { type = relation which = HUN value = 25 }
+                command = { type = relation which = SOV value = 25 }
+                command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+#########################################################################
+#  The Little Entente System
+#########################################################################
+event = {
+	id = 2400033
+	random = no
+	country = YUG
+
+	decision = {
+		
+		year = 1933
+                exists = ROM
+                exists = CZE
+                exists = HUN
+
+
+	}
+
+	decision_trigger = {
+		AND = {
+			headofstate = 100086
+                        year = 1933
+                        exists = HUN
+		}
+	}
+
+	trigger = {
+		AND = {
+			headofstate = 100086
+                        year = 1933
+		}
+		
+	}
+   
+	name = "The Little Entente"
+	desc = "The Little Entente was an alliance formed in 1920 and 1921 by Czechoslovakia,Romania and Yugoslavia,with the purpose of common defense against Hungarian revision.The Pact of Organisation,also called The Little Entente System or The Reorganisation Pact,was signed in Geneva on February 16th 1933,providing a legal framework for a permanent collaboration among the member states."
+	style = 2
+	picture = "little_entente"		
+	decision_picture = "decision_little_entente"
+
+	date = { day = 0 month = february year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "Call for a meeting in Geneva"
+		command = { type = relation which = ROM value = 25 }
+		command = { type = relation which = FRA value = 25 }
+                command = { type = relation which = CZE value = 25 }
+		command = { type = relation which = ITA value = -25 }
+                command = { type = relation which = HUN value = -25 }
+                command = { type = dissent value = -3 }
+		command = { type = trigger which = 2400034 }
+                command = { type = trigger which = 2400035 }
+                command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+#########################################################################
+#  The Little Entente System-Czech response
+#########################################################################
+event = {
+	id = 2400034
+	random = no
+	country = CZE
+
+
+
+	name = "The Little Entente"
+	desc = "The Little Entente was an alliance formed in 1920 and 1921 by Czechoslovakia,Romania and Yugoslavia,with the purpose of common defense against Hungarian revision.The Pact of Organisation,also called The Little Entente System or The Reorganisation Pact,was signed in Geneva on February 16th 1933,providing a legal framework for a permanent collaboration among the member states."
+	style = 2
+	picture = "little_entente"
+
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 97
+                command = { type = relation which = ROM value = 25 }
+		command = { type = relation which = YUG value = 25 }
+                command = { type = relation which = FRA value = 25 }
+                command = { type = relation which = HUN value = -25 }
+                command = { type = alliance which = YUG }
+                command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 3
+		command = { type = relation which = ROM value = -50 }
+		command = { type = relation which = YUG value = -50 }
+		command = { type = sleepevent which = 2400039 }
+                command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+#########################################################################
+#  The Little Entente System-Romanian response
+#########################################################################
+event = {
+	id = 2400035
+	random = no
+	country = ROM
+
+
+
+	name = "The Little Entente"
+	desc = "The Little Entente was an alliance formed in 1920 and 1921 by Czechoslovakia,Romania and Yugoslavia,with the purpose of common defense against Hungarian revision.The Pact of Organisation,also called The Little Entente System or The Reorganisation Pact,was signed in Geneva on February 16th 1933,providing a legal framework for a permanent collaboration among the member states."
+	style = 2
+	picture = "little_entente"
+
+
+	action_a = {
+		name = "Sign the pact"
+		ai_chance = 97
+                command = { type = relation which = CZE value = 25 }
+		command = { type = relation which = FRA value = 25 }
+                command = { type = relation which = YUG value = 25 }
+                command = { type = relation which = HUN value = -25 }
+                command = { type = alliance which = YUG }
+                command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+        }
+        action_b = {
+		name = "We don't want any cooperation"
+		ai_chance = 3
+		command = { type = relation which = CZE value = -50 }
+		command = { type = relation which = YUG value = -50 }
+		command = { type = sleepevent which = 2400038 }
+                command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+#########################################################################
+#  The Little Entente System-The end
+#########################################################################
+event = {
+	id = 2400036
+	random = no
+	country = YUG
+
+	
+
+	trigger = {
+              
+                    OR = {
+			flag = Munich
+                        year = 1938
+                        alliance = { country = GER country = YUG }
+		}
+		
+	}
+   
+	name = "The end of the Little Entente"
+	desc = "The resurgence of German power after 1933 had gradually undermined French influence in the Little Entente countries.Clear differences started to appear between Yugoslavia on one side,and Romania and Czechoslovakia on the other.While the two wanted an ever increasing integration between the member countries,together with a friendlier stance towards the USSR.The Little Entente began to break down in 1936 and disbanded completely in 1938."
+	style = 2
+	picture = "little_entente_end"		
+	decision_picture = "decision_little_entente"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1938 }
+
+	action = {
+		name = "We must adapt to the new political reality in Europe"
+		command = { type = relation which = ROM value = -15 }
+		command = { type = relation which = CZE value = -15 }
+		command = { type = relation which = ITA value = 15 }
+                command = { type = relation which = GER value = 15 }
+                command = { type = dissent value = 1 }
+		command = { type = trigger which = 2400038 }
+                command = { type = trigger which = 2400039 }
+                command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+#########################################################################
+#  The Little Entente System-Romanian response
+#########################################################################
+event = {
+	id = 2400038
+	random = no
+	country = ROM
+
+
+
+	name = "The end of the Little Entente"
+	desc = "The resurgence of German power after 1933 had gradually undermined French influence in the Little Entente countries.Clear differences started to appear between Yugoslavia on one side,and Romania and Czechoslovakia on the other.While the two wanted an ever increasing integration between the member countries,together with a friendlier stance towards the USSR.The Little Entente began to break down in 1936 and disbanded completely in 1938."
+	style = 2
+	picture = "little_entente_end"
+
+
+	action_a = {
+		name = "Leave it"
+		ai_chance = 97
+                command = { type = relation which = CZE value = -15 }
+		command = { type = relation which = YUG value = -15 }
+                command = { type = leave_alliance }
+                command = { type = dissent value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+        }
+        action_b = {
+		name = "We must maintain it and hope for the best!"
+		ai_chance = 3
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = HUN value = -50 }
+		
+                command = { type = domestic which = defense_lobby value = -1 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+#########################################################################
+#  The Little Entente System-Czech response
+#########################################################################
+event = {
+	id = 2400039
+	random = no
+	country = CZE
+
+
+
+	name = "The end of the Little Entente"
+	desc = "The resurgence of German power after 1933 had gradually undermined French influence in the Little Entente countries.Clear differences started to appear between Yugoslavia on one side,and Romania and Czechoslovakia on the other.While the two wanted an ever increasing integration between the member countries,together with a friendlier stance towards the USSR.The Little Entente began to break down in 1936 and disbanded completely in 1938."
+	style = 2
+	picture = "little_entente_end"
+
+
+	action_a = {
+		name = "Leave it"
+		ai_chance = 97
+                command = { type = relation which = ROM value = -15 }
+		command = { type = relation which = YUG value = -15 }
+                command = { type = leave_alliance }
+                command = { type = dissent value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+        }
+        action_b = {
+		name = "We must maintain it and hope for the best!"
+		ai_chance = 3
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = HUN value = -50 }
+                command = { type = domestic which = defense_lobby value = -1 }
+                command = { type = dissent value = 2 }
+	
+
+
+	}
+}
+#########################################################################
+#  Yugoslavian parliamentary election 1935
+#########################################################################
+event = {
+	id = 2400030
+	save_date = yes
+        random = no
+	country = YUG
+
+	trigger = {
+			headofstate = 100001
+		}
+		
+   
+	name = "The Yugoslav parliamentary election-1935"
+	desc = "Elections were held for the National Assembly of the Kingdom of Yugoslavia on May 5, 1935. Rioting among Croats and Slovenes prior to the election resulted in the death of 16 people during February 19 and 20. Prior to the elections the government obstructed the Socialist Party of Yugoslavia from fielding candidates.Jevtic's government managed to retain the majority but he was rapidly losing influence both within the people and the court."
+	style = 2
+	picture = "elections1935"
+
+	date = { day = 5 month = may year = 1935 }
+
+	action = {
+		name = "Let's hope next time it's less violent"
+		
+                command = { type = dissent value = 5 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+}
+#########################################################################
+#  Milan Stojadinovic
+#########################################################################
+event = {
+	id = 2400029
+	save_date = yes
+        random = no
+	country = YUG
+
+	decision = {
+		
+		year = 1935
+                event = 2400030
+	}
+
+	decision_trigger = {
+		       event = { id = 2400030 days = 40 }
+                       AND = {
+			headofstate = 100001
+                        year = 1935
+		}
+	}
+
+	trigger = {
+	     event = { id = 2400030 days = 40 }	
+             AND = {
+			headofstate = 100001
+                        year = 1935
+		}
+		
+	}
+   
+	name = "Appoint Milan Stojadinovic"
+	desc = "Stojadinovic was born in Cacak in central Serbia.In 1910 he graduated from the University of Belgrade's Law School, and gained a Ph.D. in economics in 1911.He would rise to the position of Minister of Finance of the Kingdom of Yugoslavia in 1922–1924, 1924–1926, 1934–1935. As a member of the People's Radical Party, he was also elected to the Parliament in 1923, 1925, 1927.On June 24, 1935,Stojadinovic was chosen to form a new government,replacing the unpopular Jevtic."
+	style = 2
+	picture = "stojadinovic"
+	decision_picture = "decision_stojadinovic"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "Let's see what he can do..."
+                command = { type = dissent value = -10 }
+		command = { type = headofgovernment which = 100002 } #Stojadinovic
+                command = { type = foreignminister which = 100003 } #Stojadinovic 
+                command = { type = chiefofarmy which = 100097 } #Zivkovic 
+                command = { type = chiefofnavy which = 100098 } #Zivkovic
+                command = { type = ministerofsecurity which = 100096 } #Korosec
+	}
+}
+#########################################################################
+#  JRZ
+#########################################################################
+event = {
+	id = 2400028
+	random = no
+	country = YUG
+
+	decision = {
+		
+		year = 1935
+                event = 2400029
+	}
+
+	decision_trigger = {
+		       event = { id = 2400029 days = 40 }
+                       AND = {
+			headofgovernment = 100002
+                        
+		}
+	}
+
+	trigger = {
+	     event = { id = 2400029 days = 40 }	
+             AND = {
+			headofgovernment = 100002
+                        year = 1935
+		}
+		
+	}
+   
+	name = "Yugoslav Radical Union"
+	desc = "The Yugoslav Radical Union was a political party founded by Yugoslav Prime Minister Milan Stojadinovic in 1935 as the ruling party of Yugoslavia that sponsored authoritarian mass mobilization and its agenda was based upon fascism,where Party members wore green shirt uniforms and addressed Stojadinovic as Vodja. The union consisted of People's Radical Party ,Slovene National Party,and Yugoslav Muslim Organization.The Croatian parties decided to stay out of it,and instead formed the opposition."
+	style = 2
+	picture = "jrz"
+	decision_picture = "decision_jrz"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "Let's form it"
+                command = { type = dissent value = -5 }
+		command = { type = domestic which = political_left value = -1 }
+                command = { type = money value = -50 }
+	}
+}
+#################################
+# Build the Rupnik Line         
+#################################
+event = {
+	id = 2400027
+	random = no
+	country = YUG
+
+	decision = { year = 1935	} 
+
+	decision_trigger = {
+		money = 200
+		metal = 5000
+	}
+
+	trigger = { year = 1935 random = 40 }
+   
+	name = "The Rupnik Line"
+	desc = "Situation in Europe persuaded Yugoslavia to start building modern fortifications and most of this activity was carried on between 1937 and 1939.The line was following sectors of the Yugoslav defences called initially by Yugoslav military -The Western Front-The pace of construction quickened as war broke out in other parts of Europe and by early 1941 over 60,000 men (both soldiers and civilians) were working on the project." 
+	style = 2
+	picture = "rupnik"
+	decision_picture = "decision_rupnik"
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 60
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = building_prod_mod which = land_fort value = 15 }
+		command = { trigger = { ai = no } type = money value = -200 }
+		command = { type = construct which = land_fort where = 347 value = 1 }
+                command = { type = construct which = land_fort where = 346 value = 1 }
+                command = { type = construct which = land_fort where = 349 value = 1 }
+                command = { trigger = { ai = no } type = metalpool value = -4000 }
+	}
+}
+#########################################################################
+#  ZBOR
+#########################################################################
+event = {
+	id = 2400026
+        random = no
+	country = YUG
+
+	trigger = {
+			headofstate = 100001
+		}
+		
+   
+	name = "ZBOR"
+	desc = "The Yugoslav National Movement, commonly known simply as ZBOR, was a Yugoslav fascist and conservative nationalist movement formed in 1935 by Dimitrije Ljotic. Ljotic was the president of the party, alongside the vice president, Juraj Korenic. ZBOR's ideology was a blend of Italian Fascism, Nazism, and Serbian Orthodox Christian fundamentalism."
+	style = 2
+	picture = "zbor"
+
+	date = { day = 6 month = january year = 1935 }
+
+	action = {
+		name = "We should keep an eye on them"
+		
+                command = { type = dissent value = 1 }
+	}
+}
+#########################################################################
+#  Failed assassination attempt on Stojadinovic!
+#########################################################################
+event = {
+	id = 2400025
+        random = no
+	country = YUG
+
+	trigger = {
+			headofgovernment = 100002
+		}
+		
+   
+	name = "Failed assassination attempt on Stojadinovic!"
+	desc = "While delivering a speech about his foreign policy,Stojadinovic was assaulted by Damjan Arnautovic,a fellow parliament member from the Vardar banovina who shot and missed him 5 times before being overcomed by others.Soon afterwards it was discovered that general Petar Zivkovic was behind all this.He was instantly removed from office and replaced with general Ljubomir Maric."
+	style = 2
+	picture = "petarzivkovic"
+
+	date = { day = 6 month = march year = 1936 }
+
+	action = {
+		name = "We were lucky this time..."
+		
+                command = { type = chiefofarmy which = 100100 } #Maric
+                command = { type = chiefofnavy which = 100101 } #Maric
+                command = { type = dissent value = 1 }
+	}
+}
+#########################################################################
+#  First state visit to Paris
+#########################################################################
+event = {
+	id = 2400024
+        random = no
+	country = YUG
+
+	trigger = {
+		  event = { id = 2400029 days = 40 }	
+                  headofgovernment = 100002
+		}
+		
+   
+	name = "Stojadinovic's state visit to France"
+	desc = "As his first international move,Stojadinovic went on a state visit to France,meeting with Pierre Laval and Albert Lebrun.It was a clear move to show the continuity of the policy in which France had a central place for Belgrade's interests.Stojadinovic realized the French were unwilling to spoil relations with Italy by backing up Yugoslavia in the Marseilles assassination enquiry,but at the same time they gave full support to the Little Entente."
+	style = 2
+	picture = "stojadinovicparis"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+
+	action = {
+		name = "Good"
+		
+                command = { type = relation which = FRA value = 15 }
+
+	}
+}
+#########################################################################
+#  Italo-Yugoslav treaty of friendship and trade agreement
+#########################################################################
+event = {
+	id = 2400023
+	random = no
+	country = ITA
+
+	decision = {
+		exists = YUG
+		year = 1937
+
+	}
+
+	decision_trigger = {
+                        event = 2400029
+		}
+
+	trigger = {
+                exists = YUG
+		NOT = {
+			OR = {
+				ispuppet = ITA				
+				ispuppet = YUG		
+				war = { country = ITA country = YUG }
+				
+			}
+		}		
+                        AND = {   
+				year = 1937			
+				month = march 
+				random = 75 
+			}                         
+
+   }
+		
+   
+	name = "Italo-Yugoslav treaty of friendship and trade agreement"
+	desc = "After a decade of strained relations caused by border disputes and political intrigues,the Italian leadership thought of changing the course in Italo-Yugoslav relations,in view of controlling the growing German influence in the region. A trade agreement was proposed in 1936,followed by a treaty of friendship the next year.An agreement was also signed settling all border issues."
+	style = 2
+	picture = "italoyugoslav"
+	decision_picture = "decision_italoyugoslav"
+
+	date = { day = 1 month = february year = 1937 }
+	offset = 5
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "Let us approach Yugoslavia"
+                command = { type = dissent value = -1 }
+		command = { type = trigger which = 2400022 }
+
+	}
+}
+#########################################################################
+#  Italo-Yugoslav treaty of friendship -Yugoslav response
+#########################################################################
+event = {
+	id = 2400022
+	random = no
+	country = YUG
+        save_date = yes
+	
+   
+	name = "Italo-Yugoslav treaty of friendship and trade agreement"
+	desc = "After a decade of strained relations caused by border disputes and political intrigues,the Italian leadership thought of changing the course in Italo-Yugoslav relations,in view of controlling the growing German influence in the region. A trade agreement was proposed in 1936,followed by a treaty of friendship the next year.An agreement was also signed settling all border issues."
+	style = 2
+	picture = "italoyugoslav"
+	decision_picture = "decision_italoyugoslav"
+
+	
+
+	action_a = {
+		name = "We must secure our left flank"
+		ai_chance = 50
+                command = { type = dissent value = -1 }
+                command = { type = trade which = YUG where = ITA  supplies = 4 value = 1 }
+	        command = { type = trade which = ITA where = YUG  rare_materials = 2 value = 1 }
+                command = { type = relation which = ITA value = 35 }
+        }
+        action_b = {
+		name = "A friendship with those murderers?Never!"
+		ai_chance = 50
+                command = { type = dissent value = 1 }
+                command = { type = relation which = ITA value = -35 }
+	}
+}
+#########################################################################
+#  National Bureau created by the League of Communists of Yugoslavia
+#########################################################################
+event = {
+	id = 2400021
+        random = no
+	country = YUG
+
+	trigger = {
+			headofstate = 100001
+                  not = { government = communist 
+
+            }
+		}
+		
+   
+	name = "National Bureau created"
+	desc = "The National Bureau created by the League of Communists of Yugoslavia to lead the Party from within the country.The party's increased activity provoked the authorities to sharp measures and during 1936 about two thousand members were arrested, including most of the members of the National Bureau.The leadership was installed with Milan Gorkic as general secretary and Josip Broz as organizational secretary and they pursued an anti-fascist policy."
+	style = 2
+	picture = "kpj"
+
+	date = { day = 1 month = march year = 1935 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "They must be stopped"
+		
+                command = { type = dissent value = 2 }
+	}
+}
+#################################
+# Create the Nikola Tesla Institute       
+#################################
+event = {
+	id = 2400020
+	random = no
+	country = YUG
+
+	decision = { year = 1936	} 
+
+	decision_trigger = {
+		money = 400
+
+	}
+
+	trigger = { year = 1936 random = 40 }
+   
+	name = "Create the Nikola Tesla Institute"
+	desc = "The institute was founded on 28th of May 1936,Nikola Tesla's 70th birthday, by a group of Belgrade academics and scientists.The famous scientist gave his support to the move in a series of telegrams.The Yugoslav government financed the institute from 1939,in order to support research in the field of electronics." 
+	style = 2
+	picture = "institut"
+	decision_picture = "decision_institut"
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 60
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { trigger = { ai = no } type = money value = -400 }
+                command = { type = research_mod value = 1 }
+                command = { type = waketeam which = 100024 }
+	}
+}
+#####################################
+# Six Year plan     
+######################################
+event = {
+	id = 2400019
+	random = no
+	country = YUG
+
+	decision = { year = 1938 
+                     headofgovernment = 100002
+                   
+} 
+
+	decision_trigger = {
+		money = 500
+                headofgovernment = 100002
+                supplies = 1000
+	}
+
+	trigger = { year = 1938 random = 40 
+                    headofgovernment = 100002
+                    supplies = 1000
+                    money = 500
+    }
+   
+	name = "The six year plan"
+	desc = "The this was the first of its sort in the history of Yugoslavia,and was drawn for the 1938-1944 period.It was put forward by Milan Stojadinovic and his government.During their mandate,more than 100 new factories were opened.He was the first Yugoslav politician to recognize the importance of heavy industry,by expanding mints and ironworks.He also used a policy of public works,mostly in infrastructure,in which he employed more than 150.000 citizens." 
+	style = 2
+	picture = "6yearplan"
+        decision_picture =  "decision_6yearplan"
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 60
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = building_prod_mod which = ic value = 10 }
+                command = { type = construct which = ic where = 339 value = 1 }
+		command = { type = construct which = ic where = 329 value = 1 }
+                command = { type = construct which = ic where = 355 value = 1 }
+                command = { type = dissent value = -3 }
+                command = { trigger = { ai = no } type = metalpool value = -500 }
+                command = { trigger = { ai = no } type = money value = -500 }
+	}
+}
+#########################################################################
+#  The concordate crisis
+#########################################################################
+event = {
+	id = 2400018
+	random = no
+	country = YUG
+
+	
+	trigger = {
+		AND = {
+			headofgovernment = 100002
+                        year = 1937
+		}
+		
+	}
+   
+	name = "The Concordate crisis"
+	desc = "In 1935, Yugoslav minister Ljudevit Auer signed the Concordate with the Holy Seat.This brought tensions almost instantly between the new government and the Orthodox church which felt threatened by such act.These tensions culminated in 1937,when the Concordate was to be ratified in the Yugoslav parliament and senate.After a series of violent clashes the Serbian Orthodox Church threatened drastic measures,such as excomunication of those who voted in favor of the ratification."
+	style = 2
+	picture = "concordate"
+
+	date = { day = 0 month = may year = 1937 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action_a = {
+		name = "Don't ratify the concordate"
+		ai_chance = 95
+                
+		command = { type = relation which = ITA value = -5 }           
+                command = { type = dissent value = 5 }
+        }
+        action_b = {
+		name = "Ratify the paper,we're not afraid of the consequences"
+		ai_chance = 5
+
+		command = { type = relation which = ITA value = 5 }                
+                command = { type = dissent value = 10 }
+	}
+}
+#########################################################################
+#  King Edward VIII visits Yugoslavia
+#########################################################################
+event = {
+	id = 2400017
+        random = no
+	country = YUG
+
+	trigger = {
+		  year = 1936	
+                  headofgovernment = 100002
+		}
+		
+   
+	name = "King Edward VIII visits Yugoslavia"
+	desc = "During the summer of 1936,King Edward VIII and his future wife Wallis Simpson had a private trip to Yugoslavia.They arrived by train in Sibenik,where they started their cruise of the Dalmatian coast on a ship called Nahlin.This visit was used by the Stojadinovic government as great propaganda material,in order to promote Yugoslavia abroad,and to strenghten relations with Great Britain."
+	style = 2
+	picture = "edvard"
+
+	date = { day = 0 month = june year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+
+	action = {
+		name = "Welcome"
+		
+                command = { type = relation which = ENG value = 15 }
+                command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+#  Yugoslavian parliamentary election 1938
+#########################################################################
+event = {
+	id = 2400016
+	save_date = yes
+        random = no
+	country = YUG
+
+	trigger = {
+			headofstate = 100001
+		}
+		
+   
+	name = "The Yugoslav parliamentary election-1938"
+	desc = "These elections were very different from those in 1935,firstly because of the lack of any major violence,and secondly because the Yugoslav Radical Union,using its government powers,raised propaganda to a whole new level.Stojadinovic's persona was the main focus of the campaign.Some of the slogans used were 'Peace on our borders','Good finance,good politics','Our mines to our people' etc.Stojadinovic's list managed to win with 1,643,783 votes,while the opposition Bloc of Popular accord gained 1,364,527."
+	style = 2
+	picture = "elections1938"
+
+	date = { day = 11 month = december year = 1938 }
+
+	action = {
+		name = "The government is stable,for now"
+		
+                command = { type = dissent value = 2 }
+	}
+}
+#########################################################################
+#  Yugoslav-Bulgarian pact of eternal friendship
+#########################################################################
+event = {
+	id = 2400015
+	random = no
+	country = YUG
+
+	decision = {
+		
+		year = 1937
+                exists = BUL
+
+	}
+
+	decision_trigger = {
+		AND = {
+			headofgovernment = 100002
+                        year = 1937
+		}
+	}
+
+	trigger = {
+		AND = {
+			headofgovernment = 100002
+                        year = 1937
+		}
+		NOT = {
+			OR = {
+				ispuppet = YUG			
+				ispuppet = BUL				
+                                war = { country = YUG country = BUL }
+			}
+		}
+               
+
+
+	}
+   
+	name = "Yugoslav-Bulgarian pact of eternal friendship"
+	desc = "Already in 1936 there was an improvement in relations between the two countries. During Stojadinovic's visit to Sofia, first proposals were made of a treaty that would end the tensions between the two kingdoms. Since Bulgaria was reluctant to join the Balkan pact, but still wanted to improve relations with its strongest member, Yugoslavia, a Yugoslav-Bulgarian treaty of eternal friendship was designed."
+	style = 2
+	picture = "borismilan"
+	decision_picture = "decision_borismilan"
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "EVT_2400040_ACTA"
+		command = { type = relation which = ROM value = -15 }
+		command = { type = relation which = GRE value = -15 }
+		command = { type = relation which = TUR value = -15 }
+                command = { type = relation which = CZE value = -15 }
+                command = { type = dissent value = -2 }
+		command = { type = trigger which = 2400014 }           
+	}
+}
+#########################################################################
+#  Yugoslav-Bulgarian pact of eternal friendship-Bulgarian response
+#########################################################################
+event = {
+	id = 2400014
+	random = no
+	country = BUL
+
+	
+   
+	name = "Yugoslav-Bulgarian pact of eternal friendship"
+	desc = "Already in 1936 there was an improvement in relations between the two countries. During Stojadinovic's visit to Sofia, first proposals were made of a treaty that would end the tensions between the two kingdoms. Since Bulgaria was reluctant to join the Balkan pact, but still wanted to improve relations with its strongest member, Yugoslavia, a Yugoslav-Bulgarian treaty of eternal friendship was designed."
+	style = 2
+	picture = "borismilan"
+
+	
+
+        action_a = {
+		name = "Sign the pact"
+		ai_chance = 97
+                command = { type = relation which = YUG value = 25 }
+                command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+                command = { type = non_aggression which = YUG where = BUL }
+
+        }
+        action_b = {
+		name = "We're not interested"
+		ai_chance = 3
+		command = { type = relation which = YUG value = -50 }
+                command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = dissent value = 2 }           
+	}
+}
+#########################################################################
+#  New parliament building
+#########################################################################
+event = {
+	id = 2400013
+        random = no
+	country = YUG
+
+	trigger = {
+		  year = 1936	
+                 
+		}
+		
+   
+	name = "The oppening of the new parliament building"
+	desc = "Construction on the building started in 1907, with the cornerstone being laid by King Peter I. The building was based on a design made by Konstantin Jovanovic in 1891,a variant of that design made by Jovan Ilkic, which won a competition in 1901.The construction of the building was completed in 1936 and the first session in the new edifice was held on October 20 of the same year."
+	style = 2
+	picture = "dom"
+
+	date = { day = 19 month = october year = 1936 }
+	
+
+	action = {
+		name = "Welcome"
+		command = { trigger = { ai = no } type = money value = -50 }
+                command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+#  Monument to the Unknown Hero
+#########################################################################
+event = {
+	id = 2400012
+        random = no
+	country = YUG
+
+	trigger = {
+		  year = 1938	
+                 
+		}
+		
+   
+	name = "Monument to the Unknown Hero"
+	desc = "Zrnov or Zrnovan was a Serbian medieval fortress located on the highest top of Avala, at 511 metres , near Belgrade.On this place, the construction of the monument to the Unknown Hero was ordered by King Alexander I of Yugoslavia, to commemorate the victims of World War I.The construction started in 1934 when the remains of the fortifications was demolished by dynamite.The monument was designed by the sculptor Ivan Mestrovic,and it was opened on 28th of June 1938."
+	style = 2
+	picture = "avala"
+
+	date = { day = 28 month = june year = 1938 }
+	
+
+	action = {
+		name = "Welcome"
+		command = { trigger = { ai = no } type = money value = -50 }
+                command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+#  The Seventeen Principles
+#########################################################################
+event = {
+	id = 2400011
+        random = no
+	country = YUG
+
+	trigger = {
+		  year = 1933	
+                 
+		}
+		
+   
+	name = "The Seventeen Principles"
+	desc = "The Ustase was a nationalist organization that sought to create an independent Croatian state.In 1933, the Ustase presented 'The Seventeen Principles' that formed the official ideology of the movement. The Principles stated the uniqueness of the Croatian nation, promoted collective rights over individual rights, and declared that people who were not Croat by 'blood' would be excluded from political life."
+	style = 2
+	picture = "pavelic"
+
+	date = { day = 0 month = april year = 1933 }
+	offset = 5
+	deathdate = { day = 30 month = december year = 1963 }
+
+	
+
+	action = {
+		name = "We must fight these extremists"
+                command = { type = relation which = ITA value = -15 }
+                command = { type = dissent value = 2 }
+	}
+}
+#########################################################################
+#  Failed assassination attempt on King Aleksandar
+#########################################################################
+event = {
+	id = 2400010
+        random = no
+	country = YUG
+
+	trigger = {
+		  year = 1933	
+                 
+		}
+		
+   
+	name = "Failed assassination attempt on King Aleksandar in Zagreb"
+	desc = "Two Ustase terorists, Petar Oreb and Ivan Hernicic were sent from Italy to assassinate King Aleksandar during his birthday visit to Zagreb.The plot failed when police found out about it and arrested the two terrorists."
+	style = 2
+	picture = "ustase"
+
+	date = { day = 17 month = december year = 1933 }
+
+
+	
+
+	action = {
+		name = "Good job to our gendarms"
+                command = { type = relation which = ITA value = -15 }
+                command = { type = dissent value = 2 }
+	}
+}
+#########################################################################
+#  Meeting with Hitler
+#########################################################################
+event = {
+	id = 240009
+        random = no
+	country = YUG
+
+	trigger = {
+		   AND = { event = { id = 2400022 days = 330 }	
+                 headofgovernment = 100002
+                 year = 1938
+                  }
+
+		}
+		
+   
+	name = "The meeting with Hitler"
+	desc = "Stojadinovic visited Germany in January 1938.There he met Goering,von Neureath,von Heeren and finaly Hitler himself.They discussed about the political situation in South-Central Europe.Stojadinovic promissed Yugoslav neutrality in case of Anschluss,while Hitler denied any support to Hungarian claims on Yugoslavia.They both agreed to act against any attempt of Habsburg restoration.Trade cooperation was also agreed,and both parties agreed to continue improving their relations."
+	style = 2
+	picture = "stojadinovicberlin"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+
+	action = {
+		name = "Good"
+		
+                command = { type = relation which = GER value = 25 }
+                command = { type = dissent value = -1 }
+                command = { type = trade which = YUG where = GER  supplies = 5 value = 1 }
+	        command = { type = trade which = GER where = YUG  rare_materials = 3 value = 1 }
+                command = { type = gain_tech which = 4030 }
+	}
+}
+#########################################################################
+#  130th anniversary of the First Serbian Uprising
+#########################################################################
+event = {
+	id = 240008
+        random = no
+	country = YUG
+
+	trigger = {
+			atwar = no
+		}
+		
+   
+	name = "130 years since the First Serbian Uprising"
+	desc = "The First Serbian Uprising , was the first stage of the Serbian Revolution , the successful wars of independence that lasted for 9 years and approximately 9 months (1804–1813), during which Serbia perceived itself as an independent state for the first time after more than three centuries of Ottoman rule and short-lasting Austrian occupations.The 130th anniversary of this important event is celebrated by state officials and Serbs throughout the Kingdom."
+	style = 2
+	picture = "1804"
+
+	date = { day = 14 month = february year = 1934 }
+
+	action = {
+		name = "We need to learn from our forefathers"
+		
+                command = { type = dissent value = -2 }
+	}
+}
+#########################################################################
+#  Offer Shkoder to Yugoslavia
+#########################################################################
+event = {
+	id = 240007
+	random = no
+	country = ITA
+
+       decision = {
+		NOT = { war = { country = YUG country = ITA } }
+		NOT = { exists = ALB }
+                   
+} 
+
+	decision_trigger = {
+		relation = { which = YUG value = 50 }
+		NOT = { war = { country = YUG country = ITA } }
+		NOT = { exists = ALB }
+	}
+
+	trigger = {
+		relation = { which = YUG value = 50 }
+		NOT = { war = { country = YUG country = ITA } }
+		NOT = { exists = ALB }
+    }
+   
+	name = "Offer Shkoder to Yugoslavia"
+	desc = "During his visit to Yugoslavia in january 1939, count Ciano discussed with Milan Stojadinovic the possibility of partition of Albania. The Yugoslav side was against any Italian expansion in the Balkans,but if such thing was bound to happen,they decided to ask for a certain compensation,that is the area around Shkoder which was gained by Montenegro during the First Balkan war,but then lost on the diplomatic table."
+	style = 2
+	picture = "cianobelgrade"
+	decision_picture = "decision_shkoder"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "Make the offer"
+		command = { type = trigger which = 240006 }           
+	}
+}
+#########################################################################
+#  Itallians offer us Skadar
+#########################################################################
+event = {
+	id = 240006
+	random = no
+	country = YUG
+
+	
+   
+	name = "Itallians offer us Shkoder"
+	desc = "During his visit to Yugoslavia in january 1939, count Ciano discussed with Milan Stojadinovic the possibility of partition of Albania. The Yugoslav side was against any Italian expansion in the Balkans,but if such thing was bound to happen,they decided to ask for a certain compensation,that is the area around Shkoder which was gained by Montenegro during the First Balkan war,but then lost on the diplomatic table."
+	style = 2
+	picture = "cianobelgrade"
+
+	
+
+        action_a = {
+		name = "Accept the offer"
+		ai_chance = 97
+                command = { type = relation which = ITA value = 25 }
+                command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = trigger which = 240005 }
+                command = { type = addclaim which = 361 }
+        }
+        action_b = {
+		name = "We're not interested"
+		ai_chance = 3
+		command = { type = relation which = ITA value = -50 }
+                command = { type = domestic which = defense_lobby value = 1 }
+                command = { type = dissent value = 2 }           
+                command = { type = end_trades which = YUG where = ITA }
+	}
+}
+#########################################################################
+#  The Yugoslav accept
+#########################################################################
+event = {
+	id = 240005
+	random = no
+	country = ITA
+        save_date = yes
+	
+   
+	name = "The Yugoslav accept"
+	desc = "During his visit to Yugoslavia in january 1939, count Ciano discussed with Milan Stojadinovic the possibility of partition of Albania. The Yugoslav side was against any Italian expansion in the Balkans,but if such thing was bound to happen,they decided to ask for a certain compensation,that is the area around Shkoder which was gained by Montenegro during the First Balkan war,but then lost on the diplomatic table."
+	style = 2
+	picture = "cianobelgrade"
+
+	
+
+        action = {
+		name = "Good"		
+                command = { type = relation which = YUG value = 25 }
+                command = { type = secedeprovince which = YUG value = 361 when = 2 }
+        }
+        
+}
+#########################################################################
+#  Build the Pec-Boka Kotorska rail line
+#########################################################################
+event = {
+	id = 240004
+	random = no
+	country = YUG
+
+        decision = {
+		event = 240005
+
+	}
+
+	decision_trigger = {
+		
+			
+                        event = { id = 240005 days = 340 }
+               
+	}
+	
+
+	trigger = {
+		
+                        event = { id = 240005 days = 340 }                     
+
+
+	}
+   
+	name = "Pec-Boka Kotorska rail line"
+	desc = "Now that Skadar is in our firm hands,we can finally build the rail line connecting our Montenegrin ports with the rest of the country,bypassing the inaccessible mountains in that area."
+	style = 2
+	picture = "skadar"
+	decision_picture = "decision_shkoder"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "Start the construction"
+		command = { trigger = { ai = no } type = money value = -200 }           
+                command = { trigger = { ai = no } type = metalpool value = -1000 }
+                command = { type = construct which = infrastructure where = 361 value = 10 }
+                command = { type = construct which = infrastructure where = 329 value = 10 }
+                command = { type = construct which = infrastructure where = 332 value = 10 }
+                command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+#  Establish relations with the USSR
+#########################################################################
+event = {
+	id = 240003
+	random = no
+	country = YUG
+
+        decision = {
+		year = 1940
+
+	}
+
+	decision_trigger = {
+		
+			event = 2002007
+                        control = { province = 55 data = GER }
+               
+                    NOT = {
+			OR = {
+			        ispuppet = SOV							
+                                war = { country = YUG country = SOV }
+                                
+			}
+		}
+
+
+
+
+	}
+	
+
+	trigger = {
+		        event = 2002007
+                        control = { province = 55 data = GER }
+               
+                    NOT = {
+			OR = {
+			        ispuppet = SOV							
+                                war = { country = YUG country = SOV }
+                                
+			}
+		}                    
+
+
+	}
+   
+	name = "Establish relations with the Soviets"
+	desc = "After the fall of France in 1940,Yugoslavia lost its main protector in Europe.This event made the Yugoslav leadership reconsider some of their foreign policy.One of the efects was to forget ideological differences and earlier disputes with the Soviet Union,and establish diplomatic relations between the two countries,making Yugoslavia one of the last European states to do that."
+	style = 2
+	picture = "news_paper"
+        decision_picture = "decision_anticominternpact"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = "Establish relations with the Soviets"
+		command = { trigger = { ai = no } type = money value = -50 }           
+                command = { type = trigger which = 240002 }
+                command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+#  The Soviet accept
+#########################################################################
+event = {
+	id = 240002
+	random = no
+	country = SOV
+
+	
+   
+	name = "Establish relations with the Soviets"
+	desc = "After the fall of France in 1940,Yugoslavia lost its main protector in Europe.This event made the Yugoslav leadership reconsider some of their foreign policy.One of the efects was to forget ideological differences and earlier disputes with the Soviet Union,and establish diplomatic relations between the two countries,making Yugoslavia one of the last European states to do that."
+	style = 2
+	picture = "news_paper"
+
+	
+
+        action = {
+		name = "Good"		
+                command = { type = relation which = YUG value = 25 }
+                command = { type = dissent value = -1 }
+        }
+        
+}

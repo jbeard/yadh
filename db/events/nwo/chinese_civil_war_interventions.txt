@@ -1,0 +1,328 @@
+### Civil War in China: Soviet intervention
+### 
+### Soviet aim: Take part in alliance with Communist China to help them win the Chinese Civil War
+### American aim: Prevent Soviets from entering alliance with Communist China
+### Soviet withdrawal: Communist China does not enter alliance with USSR
+### American withdrawal: Communist China enters alliance with USSR
+### Chance of WW3: 0,5%
+
+### First, Americans react to the Soviet proposal of alliance
+event = {
+	id = 8500101
+	country = USA
+	
+	name = EVT_8500101_NAME
+	desc = EVT_8500101_DESC
+	picture = "nwo\mao_with_stalin_poster"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		NOT = {
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	# Let's leave this, let them forge alliance
+	action = {
+		name = EVT_8500101_A
+		ai_chance = 55
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = CHC value = 50 }
+		command = { type = relation which = CHI value = -200 }
+		# Sleep alliance proposal for NatChi
+		command = { type = setflag which = ccw_american_nonintervention }
+		# Trigger Chinese-Soviet alliance
+		command = { type = end_guarantee which = CHI }
+		command = { type = trigger which = 8500104 }
+	}
+	
+	# Send ultimatum
+	action = {
+		name = EVT_8500101_B
+		ai_chance = 45
+		command = { type = relation which = SOV value = -100 }
+		command = { type = relation which = CHC value = -100 }
+		command = { type = relation which = CHI value = 50 }
+		# Trigger Soviet reaction
+		command = { type = trigger which = 8500102 }
+	}
+}
+
+### Soviets answer the ultimatum
+event = {
+	id = 8500102
+	country = SOV
+	
+	name = EVT_8500102_NAME
+	desc = EVT_8500102_DESC
+	picture = "nwo\mao_with_stalin_poster"
+	style = 1
+
+	# Leave the matter
+	action = {
+		name = EVT_8500102_A
+		ai_chance = 60
+		command = { type = relation which = USA value = 50 }
+		# Sleep alliance proposal for ComChi
+		command = { type = setflag which = ccw_soviet_nonintervention }
+	}
+	
+	# Risk war!
+	action = {
+		name = EVT_8500102_B
+		ai_chance = 40
+		command = { type = relation which = USA value = -50 }
+		command = { type = trigger which = 8500103 }
+		command = { type = trigger which = 8500104 }
+	}
+}
+
+### Americans carry out ultimatum
+event = {
+	id = 8500103
+	country = USA
+	
+	name = EVT_8500103_NAME
+	desc = EVT_8500103_DESC
+	picture = "nwo\mao_with_stalin_poster"
+	style = 1
+
+	# WW3
+	action = {
+		name = EVT_8500103_A
+		ai_chance = 60
+		command = { type = war which = SOV }
+		command = { type = alliance which = CHI }
+	}
+	
+	# Rethink
+	action = {
+		name = EVT_8500103_B
+		ai_chance = 40
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 25 }
+		command = { type = setflag which = ccw_american_nonintervention }
+		# Trigger Chinese-Soviet alliance
+		command = { type = end_guarantee which = CHI }
+	}
+}
+
+### Soviet-Chinese alliance
+event = {
+	id = 8500104
+	country = CHC
+	
+	name = EVT_8500104_NAME
+	desc = EVT_8500104_DESC
+	picture = "nwo\mao_with_stalin_poster"
+	style = 1
+
+	action = {
+		name = EVT_8500104_A
+		command = { type = leave_alliance }
+		command = { type = alliance which = SOV }
+	}
+}
+
+### Civil War in China: American intervention
+### 
+### Soviet aim: Prevent Americans from entering alliance with Nationalist China
+### American aim: Take part in alliance with Nationalist China to help them win the Chinese Civil War
+### Soviet withdrawal: Nationalist China enters alliance with USA
+### American withdrawal: Nationalist China does not enter alliance with USA
+### Chance of WW3: 0,5%
+
+### First, Soviets react to the American proposal of alliance
+event = {
+	id = 8500111
+	country = SOV
+	
+	name = EVT_8500111_NAME
+	desc = EVT_8500111_DESC
+	picture = "nwo\kmt_troops_in_shermans"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		NOT = {
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	# Let's leave this, let them forge alliance
+	action = {
+		name = EVT_8500111_A
+		ai_chance = 55
+		command = { type = relation which = USA value = 50 }
+		command = { type = relation which = CHI value = 50 }
+		command = { type = relation which = CHC value = -200 }
+		# Sleep alliance proposal for ComChi
+		command = { type = setflag which = ccw_soviet_nonintervention }
+		# Trigger Chinese-American alliance
+		command = { type = end_guarantee which = CHC }
+		command = { type = trigger which = 8500114 }
+	}
+	
+	# Send ultimatum
+	action = {
+		name = EVT_8500111_B
+		ai_chance = 45
+		command = { type = relation which = USA value = -100 }
+		command = { type = relation which = CHI value = -100 }
+		command = { type = relation which = CHC value = 50 }
+		# Trigger Soviet reaction
+		command = { type = trigger which = 8500112 }
+	}
+}
+
+### Americans answer the ultimatum
+event = {
+	id = 8500112
+	country = USA
+	
+	name = EVT_8500112_NAME
+	desc = EVT_8500112_DESC
+	picture = "nwo\kmt_troops_in_shermans"
+	style = 1
+
+	# Leave the matter
+	action = {
+		name = EVT_8500102_A
+		ai_chance = 60
+		command = { type = relation which = SOV value = 50 }
+		# Sleep alliance proposal for NatChi
+		command = { type = setflag which = ccw_american_nonintervention }
+	}
+	
+	# Risk war!
+	action = {
+		name = EVT_8500102_B
+		ai_chance = 40
+		command = { type = relation which = SOV value = -50 }
+		command = { type = trigger which = 8500113 }
+		command = { type = trigger which = 8500114 }
+	}
+}
+
+### Soviets carry out ultimatum
+event = {
+	id = 8500113
+	country = SOV
+	
+	name = EVT_8500113_NAME
+	desc = EVT_8500113_DESC
+	picture = "nwo\kmt_troops_in_shermans"
+	style = 1
+
+	# WW3
+	action = {
+		name = EVT_8500113_A
+		ai_chance = 60
+		command = { type = war which = USA }
+		command = { type = alliance which = CHC }
+	}
+	
+	# Rethink
+	action = {
+		name = EVT_8500113_B
+		ai_chance = 40
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 25 }
+		command = { type = setflag which = ccw_soviet_nonintervention }
+		# Trigger Chinese-American alliance
+		command = { type = end_guarantee which = CHC }
+	}
+}
+
+### American-Chinese alliance
+event = {
+	id = 8500114
+	country = CHI
+	
+	name = EVT_8500114_NAME
+	desc = EVT_8500114_DESC
+	picture = "nwo\kmt_troops_in_shermans"
+	style = 1
+
+	action = {
+		name = EVT_8500104_A
+		command = { type = leave_alliance }
+		command = { type = alliance which = USA }
+	}
+}
+
+### END OR FOREIGN INTERVENTIONS
+############################################
+
+# Americans end their intervention
+event = { 
+	id = 8200120
+	random = no
+	country = USA
+
+	name = "EVT_8200120_NAME"
+	desc = "EVT_8200120_DESC"
+	picture = "nwo\failed_intervention"
+	style = 1
+
+	decision = {
+		flag = CHC_won_civil_war
+		war = { country = CHC }
+		NOT = { war = { country = SOV } }
+		event = 8200047
+	}
+
+	trigger = {
+		flag = CHC_won_civil_war
+		war = { country = CHC }
+		NOT = { war = { country = SOV } }
+		event = 8200047
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200120_A" #"Let's finish this pointless intervention"
+		command = { type = peace which = CHC value = 1 }
+	}	
+}
+
+# Soviets end their intervention
+event = { 
+	id = 8200121
+	random = no
+	country = SOV
+
+	name = "EVT_8200121_NAME"
+	desc = "EVT_8200121_DESC"
+	picture = "nwo\failed_intervention"
+	style = 1
+
+	decision = {
+		flag = CHI_won_civil_war
+		war = { country = CHI }
+		NOT = { war = { country = USA } }
+		event = 8200009
+	}
+
+	trigger = {
+		flag = CHI_won_civil_war
+		war = { country = CHI }
+		NOT = { war = { country = USA } }
+		event = 8200009
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_8200121_A" #"Let's finish this pointless intervention"
+		command = { type = peace which = CHI value = 1 }
+	}	
+}

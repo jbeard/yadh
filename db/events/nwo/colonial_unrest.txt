@@ -1,0 +1,67 @@
+# Madagascar
+event = {
+	id = 8210001
+	tag = { ENG FRA ITA GER SPR SPA BEL HOL U05 U02 }
+
+	name = EVT_COLONIALUNREST_NAME
+	desc = EVT_COLONIALUNREST_DESC
+	picture = "nwo\colonial_unrest"
+	style = 1
+
+	trigger = {
+		control = { province = 1001 data = -1 }
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 1080
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		command = { type = dissent value = 3 }
+		command = { type = province_revoltrisk which = 1001 value = 10 }
+		command = { type = province_revoltrisk which = 1002 value = 10 }
+		command = { type = province_revoltrisk which = 1003 value = 10 }
+		
+	}
+}
+
+# Morocco
+event = {
+	id = 8210002
+	tag = { ENG FRA ITA GER SPR SPA BEL HOL U05 U02 }
+
+	name = EVT_COLONIALUNREST_NAME
+	desc = EVT_COLONIALUNREST_DESC
+	picture = "nwo\colonial_unrest"
+	style = 1
+
+	trigger = {
+		OR = {
+			control = { province = 717 data = -1 }
+			control = { province = 718 data = -1 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 1080
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		command = { type = dissent value = 3 }
+		command = { type = province_revoltrisk which = 715 value = 10 }
+		command = { type = province_revoltrisk which = 716 value = 10 }
+		command = { type = province_revoltrisk which = 717 value = 10 }
+		command = { type = province_revoltrisk which = 718 value = 10 }
+		command = { type = province_revoltrisk which = 719 value = 10 }
+		command = { type = province_revoltrisk which = 715 value = 10 }
+		command = { type = province_revoltrisk which = 720 value = 10 }
+		command = { type = province_revoltrisk which = 721 value = 10 }
+		command = { type = province_revoltrisk which = 722 value = 10 }
+		command = { type = province_revoltrisk which = 723 value = 10 }
+		command = { type = province_revoltrisk which = 724 value = 10 }
+		command = { type = province_revoltrisk which = 725 value = 10 }
+		command = { type = province_revoltrisk which = 726 value = 10 }
+	}
+}

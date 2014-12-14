@@ -1,0 +1,809 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# Event list
+#U08	13300221 1925 Presidential Elections
+#U08	13300222 Gustav Bauer becomes the new chancellor
+#U08	13300223 Hermann Müller becomes the new Chancellor
+#U08	13300224 1920 Federal Elections
+#U08	13300225 Joseph Wirth becomes the new Chancellor
+#U08	13300226 Wilhelm Cuno becomes the new Chancellor
+#U08	13300227 Gustav Stresemann becomes the new Chancellor
+#U08	13300228 1924 Federal Elections
+#U08	13300229 Wilhelm Marx becomes Chancellor for a second term
+#U08	13300230 1928 Federal Elections
+#U08	13300231 1930 Federal Elections
+#U08	13300232 1932 Presidential Elections
+#U08	13300233 July 1932 Federal Elections
+#U08	13300234 November 1932 Federal Elections
+#U08	13300235 Rise of Hitler
+#U08	13300236 March 1933 Federal Elections
+#GER	13300239 Death of Hindenburg
+#U08	13300244 Hans Luther becomes the new Chancellor
+
+#########################################################################
+#1925 Presidential elections
+#########################################################################
+
+event = {
+
+	id = 13300221
+	random = no
+	country = U08
+	save_date = yes
+
+	date = { day = 29 month = 2 year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = 3 year = 1930 }
+
+	trigger = {
+		event = 2191900 # Ebert dies of septic shock
+		government = democratic
+		not = { ispuppet = U08 }
+		#not = { minister = 855202 } # Ebert is dead, valid for 1.03
+	}
+
+	name = "1925 Presidential Elections"
+	Desc = "EVT_13300221_DESC"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Paul von Hindenburg (Independent)"
+		ai_chance = 100
+		command = { type = domestic which = political_left value = -1 }
+		command = { trigger = { minister = 855202 } type = sleepminister which = 855202 } #sleep ebert
+		command = { trigger = { minister = 855203 } type = sleepminister which = 855203 } #sleep ebert
+		command = { trigger = { minister = 855241 } type = sleepminister which = 855241 } #sleep ebert
+		command = { trigger = { minister = 855074 } type = sleepminister which = 855074 } #sleep general hindenburgs
+		command = { trigger = { minister = 855082 } type = sleepminister which = 855082 }
+		command = { trigger = { minister = 855055 } type = sleepminister which = 855255 }
+		command = { trigger = { minister = 855042 } type = sleepminister which = 855342 }
+		command = { trigger = { not = { minister = 855301 } } type = wakeminister which = 855301 }
+		command = { type = headofstate which = 855301 } # Paul von hindenburg
+	}
+
+	action = { 
+		name = "Wilhelm Marx (Centre)"
+		ai_chance = 0
+		command = { type = domestic which = democratic value = 1 }
+		command = { trigger = { minister = 855202 } type = sleepminister which = 855202 } #sleep ebert
+		command = { trigger = { minister = 855203 } type = sleepminister which = 855203 } #sleep ebert
+		command = { trigger = { minister = 855241 } type = sleepminister which = 855241 } #sleep ebert
+		command = { trigger = { minister = 855211 } type = sleepminister which = 855211 } #sleep HoG Marx
+		command = { trigger = { not = { minister = 855356 } } type = wakeminister which = 855356 }
+		command = { type = headofstate which = 855356 } # Wilhelm Marx
+	}
+
+
+	action = { 
+		name = "Ernst Thälmann (Communist)"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 30 }
+		command = { trigger = { minister = 855202 } type = sleepminister which = 855202 } #sleep ebert
+		command = { trigger = { minister = 855203 } type = sleepminister which = 855203 } #sleep ebert
+		command = { trigger = { minister = 855241 } type = sleepminister which = 855241 } #sleep ebert
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { trigger = { not = { minister = 855357 } } type = wakeminister which = 855357 }
+		command = { type = headofstate which = 855357 } # Ernst Thalmann
+	}
+
+
+}
+
+#########################################################################
+#1932 Presidential elections
+#########################################################################
+
+
+event = {
+
+	id = 13300232
+	random = no
+	country = U08
+	save_date = yes
+
+	date = { day = 13 month = 2 year = 1932 }
+	offset = 1
+	deathdate = { day = 13 month = 3 year = 1932 }
+
+	trigger = {
+		atwar = no
+	}
+	name = "1932 Presidential Elections"
+	Desc = "EVT_13300232_DESC"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Von Hindenburg"
+		ai_chance = 100
+		command = { type = wakeminister which = 855301 }
+		command = { type = headofstate which = 855301 }
+		command = { type = domestic which = political_left value = -1 } #Hindenburg favoring more and more righ-wing politicians
+
+	}
+
+	action = { 
+		trigger = { flag = hitler_free } # if hitler is not free, this shouldn fire!
+		name = "Adolf Hitler"
+		ai_chance = 0
+		command = { type = wakeminister which = 855302 }
+		command = { type = headofstate which = 855302 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -2 }
+
+
+	}
+
+	action = { 
+		name = "Ernst Thälmann"
+		ai_chance = 0
+		command = { type = wakeminister which = 855357 }
+		command = { type = headofstate which = 855357 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = relation which = SOV value = 50 }
+
+	}
+
+}
+
+#########################################################################
+#Weimar Elections- Cabinet Changes ( 1919 - 1933 )
+#########################################################################
+
+# Gustav Bauer chancellor
+event = {
+
+	id = 13300222
+	random = no
+	country = U08
+
+	date = { day = 21 month = 5 year = 1919 }
+	offset = 1
+	deathdate = { day = 21 month = 6 year = 1919 }
+
+	trigger = {
+
+		atwar = no
+		headofgovernment = 855204 # Scheidamann
+	}
+
+	name = "New Chancellor"
+	Desc = "Gustav Bauer becomes the new Chancellor"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855205 }# Gustav Bauer
+		command = { type = wakeminister which = 855214 } # Hermann Müller
+		command = { type = wakeminister which = 855243 } # Eduard David
+		command = { type = wakeminister which = 855231 } # Wissell
+		command = { type = wakeminister which = 855075 } # Von Seeckt
+		command = { type = headofgovernment which = 855205 }# Gustav Bauer
+		command = { type = foreignminister which = 855214 } # Hermann Müller
+		command = { type = ministerofsecurity which = 855243 } # Eduard David
+		command = { type = armamentminister which = 855231 } # Wissell
+		command = { type = chiefofstaff which = 855075 } # Von Seeckt
+	}
+}
+
+# Hermann Müller chancellor
+event = {
+
+	id = 13300223
+	random = no
+	country = U08
+
+	date = { day = 27 month = 2 year = 1920 }
+	offset = 1
+	deathdate = { day = 27 month = 3 year = 1920 }
+	trigger = {
+
+		atwar = no
+		headofgovernment = 855205 # Bauer
+	}
+
+	name = "New Chancellor"
+	Desc = "Hermann Müller becomes the new Chancellor"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855206 }# Hermann Müller
+		command = { type = wakeminister which = 855214 } # Hermann Müller
+		command = { type = wakeminister which = 855244 } # Erik Koch-Weser
+		command = { type = wakeminister which = 855226 } # Joseph Wirth
+		command = { type = headofgovernment which = 855206 }# Hermann Müller
+		command = { type = foreignminister which = 855214 } # Hermann Müller
+		command = { type = ministerofsecurity which = 855244 } # Erik Koch-Weser
+		command = { type = armamentminister which = 855226 } # Joseph Wirth
+
+	}
+
+
+}
+
+
+# 1920 elections
+event = {
+
+	id = 13300224
+	random = no
+	country = U08
+
+	date = { day = 6 month = 5 year = 1920 }
+	offset = 1
+	deathdate = { day = 6 month = 6 year = 1920 }
+
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+
+	name = "1920 Federal Elections"
+	Desc = "In 1920 Federal Elections, SDP in spite of being the largest party, lost many seats and new cabinet war formed by Centre Party's Fehrenbach"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855207 }# Constantin Fehrenbach
+		command = { type = wakeminister which = 855216 } # Walter Simons
+		command = { type = wakeminister which = 855244 } # Erik Koch-Weser
+		command = { type = wakeminister which = 855226 } # Joseph Wirth
+		command = { type = headofgovernment which = 855207 }# Constantin Fehrenbach
+		command = { type = foreignminister which = 855216 } # Walter Simons
+		command = { type = ministerofsecurity which = 855244 } # Erik Koch-Weser
+		command = { type = armamentminister which = 855226 } # Joseph Wirth
+	}
+}
+
+# Joseph Wirth chancellor
+event = {
+
+	id = 13300225
+	random = no
+	country = U08
+
+	date = { day = 10 month = 4 year = 1921 }
+	offset = 1
+	deathdate = { day = 10 month = 5 year = 1921 }
+
+	trigger = {
+		atwar = no
+		headofgovernment = 855207
+	}
+
+	name = "New Chancellor"
+	Desc = "Joseph Wirth becomes the new Chancellor"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855208 }# Joseph Wirth
+		command = { type = wakeminister which = 855217 } # Friedrich Rosen
+		command = { type = wakeminister which = 855245 } # Georg Gradnauer
+		command = { type = wakeminister which = 855226 } # Joseph Wirth
+		command = { type = headofgovernment which = 855208 }# Joseph Wirth
+		command = { type = foreignminister which = 855217 } # Friedrich Rosen
+		command = { type = ministerofsecurity which = 855245 } # Georg Gradnauer
+		command = { type = armamentminister which = 855226 } # Joseph Wirth
+	}
+}
+
+
+
+# Wilhelm Cuno chancellor
+event = {
+
+	id = 13300226
+	random = no
+	country = U08
+
+	date = { day = 22 month = 10 year = 1922 }
+	offset = 1
+	deathdate = { day = 22 month = 11 year = 1922 }
+
+	trigger = {
+
+		atwar = no
+		headofgovernment = 855208
+	}
+
+	name = "New Chancellor"
+	Desc = "Wilhelm Cuno becomes the new Chancellor"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855209 }# Wilhelm Cuno
+		command = { type = wakeminister which = 855220 } # Von Rosenberg
+		command = { type = wakeminister which = 855247 } # Rudolf Oeser
+		command = { type = wakeminister which = 855234 } # Johann Becker
+		command = { type = headofgovernment which = 855209 }# Wilhelm Cuno
+		command = { type = foreignminister which = 855220 } # Von Rosenberg
+		command = { type = ministerofsecurity which = 855247 } # Rudolf Oeser
+		command = { type = armamentminister which = 855234 } # Johann Becker
+
+	}
+
+
+}
+
+# Gustav Stresemann chancellor
+event = {
+
+	id = 13300227
+	random = no
+	country = U08
+
+	date = { day = 13 month = 7 year = 1923 }
+	offset = 1
+	deathdate = { day = 13 month = 8 year = 1923 }
+
+	trigger = {
+		atwar = no
+		headofgovernment = 855209
+	}
+
+	name = "New Chancellor"
+	Desc = "Gustav Stresemann becomes the new Chancellor"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855210 }# Gustav Stresemann
+		command = { type = wakeminister which = 855221 } # Gustav Stresemann
+		command = { type = wakeminister which = 855248 } # Wilhelm Sollmann
+		command = { type = wakeminister which = 855228 } # Rudolf Hilferding
+		command = { type = headofgovernment which = 855210 }# Gustav Stresemann
+		command = { type = foreignminister which = 855221 } # Gustav Stresemann
+		command = { type = ministerofsecurity which = 855248 } # Wilhelm Sollmann
+		command = { type = armamentminister which = 855228 } # Rudolf Hilferding
+	}
+}
+
+
+
+# 1924 elections
+event = {
+
+	id = 13300228
+	random = no
+	country = U08
+
+	date = { day = 30 month = 10 year = 1924 }
+	offset = 1
+	deathdate = { day = 30 month = 11 year = 1924 }
+
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+
+	name = "1924 Federal Elections"
+	Desc = "After the failure of Gustav Stresemann's cabinet, new federal elections were held and Wilhelm Marx became the new German Chancellor."
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855211 }# Wilhelm Marx
+		command = { type = wakeminister which = 855221 } # Gustav Stresemann
+		command = { type = wakeminister which = 855249 } # Karl Jarres
+		command = { type = wakeminister which = 855229 } # Hans Luther
+		command = { type = headofgovernment which = 855211 }# Wilhelm Marx
+		command = { type = foreignminister which = 855221 } # Gustav Stresemann
+		command = { type = ministerofsecurity which = 855249 } # Karl Jarres
+		command = { type = armamentminister which = 855229 } # Hans Luther
+	}
+}
+
+# Hans Luther chancellor
+event = {
+
+	id = 13300244
+	random = no
+	country = U08
+
+	date = { day = 15 month = 0 year = 1925 }
+	offset = 1
+	deathdate = { day = 15 month = 2 year = 1925 }
+
+	trigger = {
+		atwar = no
+		headofgovernment = 855211# Wilhelm Marx
+
+	}
+
+	name = "New Chancellor"
+	Desc = "Hans Luther becomes the new Chancellor"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855358 }# Hans Luther
+		command = { type = wakeminister which = 855221 } # Gustav Stresemann
+		command = { type = wakeminister which = 855250 } # Martin Schiele
+		command = { type = wakeminister which = 855362 } # Julius Curtius
+		command = { type = headofgovernment which = 855358 }# Hans Luther
+		command = { type = foreignminister which = 855221 } # Gustav Stresemann
+		command = { type = ministerofsecurity which = 855250 } # Martin Schiele
+		command = { type = armamentminister which = 855362 } # Julius Curtius
+	}
+}
+
+
+# Wilhelm Marx chancellor
+event = {
+
+	id = 13300229
+	random = no
+	country = U08
+
+	date = { day = 17 month = 4 year = 1926 }
+	offset = 1
+	deathdate = { day = 17 month = 5 year = 1926 }
+
+	trigger = {
+		atwar = no
+		NOT = { headofstate =855356 } # he was not elected president in 1925 elections
+		headofgovernment = 855358# Hans Luther
+	}
+
+	name = "New Chancellor"
+	Desc = "Wilhelm Marx becomes Chancellor for a second term."
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855211 }# Wilhelm Marx
+		command = { type = wakeminister which = 855221 } # Gustav Stresemann
+		command = { type = wakeminister which = 855363 } # Wilhelm Külz
+		command = { type = wakeminister which = 855362 } # Julius Curtius
+		command = { type = headofgovernment which = 855211 }# Wilhelm Marx
+		command = { type = foreignminister which = 855221 } # Gustav Stresemann
+		command = { type = ministerofsecurity which = 855363 } # Wilhelm Külz
+		command = { type = armamentminister which = 855362 } # Julius Curtius
+	}
+}
+
+
+
+# 1928 elections
+event = {
+
+	id = 13300230
+	random = no
+	country = U08
+
+	date = { day = 28 month = 5 year = 1928 }
+	offset = 1
+	deathdate = { day = 28 month = 6 year = 1928 }
+
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+
+	name = "1928 Federal Elections"
+	Desc = "EVT_13300230_DESC"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855206 }# Hermann Müller
+		command = { type = wakeminister which = 855221 } # Gustav Stresemann
+		command = { type = wakeminister which = 855364 } # Carl Severing
+		command = { type = wakeminister which = 855228 } # Rudolf Hilferding
+		command = { type = headofgovernment which = 855206 }# Hermann Müller
+		command = { type = foreignminister which = 855221 } # Gustav Stresemann
+		command = { type = ministerofsecurity which = 855364 } # Carl Severing
+		command = { type = armamentminister which = 855228 } # Rudolf Hilferding
+	}
+}
+
+
+# 1930 elections
+event = {
+
+	id = 13300231
+	random = no
+	country = U08
+
+	date = { day = 30 month = 2 year = 1930 }
+	offset = 1
+	deathdate = { day = 30 month = 3 year = 1930 }
+
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+
+	name = "1930 Federal Elections"
+	Desc = "EVT_13300230_DESC"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = wakeminister which = 855359 }# Heinrich Brüning
+		command = { type = wakeminister which = 855365 } # Julius Curtius
+		command = { type = wakeminister which = 855366 } # Joseph Wirth
+		command = { type = wakeminister which = 855319 } # Hermann Dietrich
+		command = { type = headofgovernment which = 855359 }# Heinrich Brüning
+		command = { type = foreignminister which = 855365 } # Julius Curtius
+		command = { type = ministerofsecurity which = 855366 } # Joseph Wirth
+		command = { type = armamentminister which = 855319 } # Hermann Dietrich
+	}
+}
+
+
+
+# July 1932 elections
+event = {
+
+	id = 13300233
+	random = no
+	country = U08
+
+	date = { day = 31 month = 6 year = 1932 }
+	offset = 1
+	deathdate = { day = 31 month = 7 year = 1932 }
+
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+
+	name = "July 1932 Federal Elections"
+	Desc = "EVT_13300233_DESC"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = domestic which = political_left value = -1 } # right-wing gaining power after the Great Depression
+		command = { type = wakeminister which = 855360 }# Franz Von Papen
+		command = { type = wakeminister which = 855030 } # Von Neurath
+		command = { type = wakeminister which = 855367 } # Wilhelm Von Gayl
+		command = { type = wakeminister which = 855368 } # Von Krosigk
+		command = { type = headofgovernment which = 855360 }# Franz Von Papen
+		command = { type = foreignminister which = 855030 } # Von Neurath
+		command = { type = ministerofsecurity which = 855367 } # Wilhelm Von Gayl
+		command = { type = armamentminister which = 855368 } # Von Krosigk
+	}
+}
+
+
+
+# November 1932 elections
+event = {
+
+	id = 13300234
+	random = no
+	country = U08
+
+	date = { day = 6 month = 10 year = 1932 }
+	deathdate = { day = 6 month = 11 year = 1932 }
+	offset = 1
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+
+	name = "November 1932 Federal Elections"
+	Desc = "EVT_13300234_DESC"
+	style = 2
+	picture = "Reichstag"
+
+	action = { 
+		name = "Ok"
+		ai_chance = 100
+		command = { type = domestic which = political_left value = -1 } # Hitler is now very powerful
+		command = { type = wakeminister which = 855361 }# Kurt von Schleicher
+		command = { type = wakeminister which = 855030 } # Von Neurath
+		command = { type = wakeminister which = 855369 } # Franz Bracht
+		command = { type = wakeminister which = 855368 } # Von Krosigk
+		command = { type = headofgovernment which = 855361 }# Kurt von Schleicher
+		command = { type = foreignminister which = 855030 } # Von Neurath
+		command = { type = ministerofsecurity which = 855369 } # Franz Bracht
+		command = { type = armamentminister which = 855368 } # Von Krosigk
+	}
+}
+
+# Rise of Hitler
+event = {
+
+	id = 13300235
+	random = no
+	country = U08
+
+	date = { day = 30 month = 0 year = 1933 }
+	deathdate = { day = 30 month = 2 year = 1933 }
+	offset = 1
+
+	trigger = {
+		flag = hitler_free
+		event = 13300234# November 1932 elections
+	}
+
+	name = "Rise of Hitler"
+	Desc = "EVT_13300235_DESC"
+	style = 2
+	picture = "Reichstag"
+
+	action = {
+		name = "Appoint Hitler"
+		ai_chance = 100
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = wakeminister which = 855308 } # Hitler
+		command = { type = wakeminister which = 855030 } # Von Neurath
+		command = { type = wakeminister which = 855326 } # Frick
+		command = { type = wakeminister which = 855316 } # Hugenberg
+		command = { type = headofgovernment which = 855308 } # Hitler
+		command = { type = foreignminister which = 855030 } # Von Neurath
+		command = { type = ministerofsecurity which = 855326 } # Frick
+		command = { type = armamentminister which = 855316 } # Hugenberg
+	}
+
+	action = {
+		name = "Keep Schleicher"
+		ai_chance = 0
+		command = { type = sleepevent which = 13300236 }
+		command = { type = dissent value = 15 }# nazi revolts
+	}
+}
+
+# Hindenburg Death
+event = {
+	id = 13300239
+	random = no
+	country = GER
+
+	date = { day = 1 month = august year = 1934 }
+	deathdate = { day = 1 month = september year = 1934 }
+	offset = 1
+
+	trigger = {
+		headofstate = 268 # Hindenburg
+		headofgovernment = 22 # Hitler is chancellor
+	}
+
+	name = "Death of Hindenburg"
+	desc = "EVT_13300239_DESC"
+	style = 2
+	picture = "hindenburg_death"
+	action_a = {
+		name = "Ok"
+		command = { type = sleepminister which = 268 } # Hindenburg
+		command = { type = wakeminister which = 1 } # Hitler
+		command = { type = wakeminister which = 2 } # Hess
+		command = { type = headofstate which = 1 } # Hitler
+		command = { type = headofgovernment which = 2 } # Hess
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+# General Elections
+event = {
+	id = 13300236
+	random = no
+	country = U08
+
+	trigger = {
+		event = 13300243 # reichstag fire
+	}
+
+
+	date = { day = 4 month = march year = 1933 }
+	deathdate = { day = 4 month = april year = 1933 }
+	offset = 1
+
+	name = "March 1933 Federal Elections"
+	desc = "EVT_13300236_DESC"
+	style = 2
+	picture = "Reichstag"
+
+
+	action = {
+		ai_chance = 100
+		name = "NSDAP"
+		command = { type = country which = GER }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = headofstate which = 268 } # Hindenburg
+		command = { type = headofgovernment which = 22 } # Hitler
+		command = { type = foreignminister which = 3 } # Von Neurath
+		command = { type = ministerofsecurity which = 5 } # Frick
+		command = { type = ministerofintelligence which = 6 } # Canaris
+		command = { type = armamentminister which = 4 } # Von Blomberg
+		command = { type = chiefofstaff which = 7 } # Beck
+		command = { type = chiefofarmy which = 8 } # fritsch
+		command = { type = chiefofnavy which = 9 }# raeder
+		command = { type = chiefofair which = 10 } # göring
+		command = { trigger = { not = { dissent = 10 } } type = dissent value = 10 }
+		command = { trigger = { not = { dissent = 20 } } type = dissent value = 10 }
+		command = { trigger = { not = { dissent = 30 } } type = dissent value = 10 }
+		command = { trigger = { not = { dissent = 35 } } type = dissent value = 5 }
+		command = { trigger = { not = { dissent = 40 } } type = dissent value = 5 }
+	}
+	action = {
+		ai_chance = 0
+		name = "KPD"
+		command = { type = country which = DDR }
+		command = { type = domestic which = political_left value = 6 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = dissent value = 40 }
+		command = { type = waketeam which = 625013 } #AEG
+		command = { type = waketeam which = 625014 } #Krupp
+		command = { type = waketeam which = 625015 } #I.G. Farben
+		command = { type = waketeam which = 625016 } #Siemens & Halske
+		command = { type = waketeam which = 625017 } #Werner Heisenberg
+		command = { type = waketeam which = 625018 } #Konrad Zuse
+		command = { type = waketeam which = 625019 } #Mauser Werke
+		command = { type = waketeam which = 625020 } #MAN
+		command = { type = waketeam which = 625021 } #Opel
+		command = { type = waketeam which = 625022 } #Rheinmetall
+		command = { type = waketeam which = 625023 } #Volkswagen
+		command = { type = waketeam which = 625024 } #Volksmarinewerft
+		command = { type = waketeam which = 625025 } #Blohm & Voss
+		command = { type = waketeam which = 625026 } #Luftschiffbau Zeppelin
+		command = { type = waketeam which = 625027 } #Gothaer Waggonfabrik
+		command = { type = waketeam which = 625028 } #Messerschmitt
+		command = { type = waketeam which = 625029 } #Focke-Wulf
+		command = { type = waketeam which = 625030 } #Arado
+		command = { type = waketeam which = 625031 } #Adolf Galland
+		command = { type = waketeam which = 625032 } #Jäger Kampfschule
+#Cores on eastern provinces of Germany
+		command = { type = addcore which = 158 } #Stettin
+		command = { type = addcore which = 155 } #Stolp
+		command = { type = addcore which = 161 } #Deutsch Krone
+		command = { type = addcore which = 159 } #Meseritz
+		command = { type = addcore which = 165 } #Liegnitz
+		command = { type = addcore which = 167 } #Breslau
+		command = { type = addcore which = 164 } #Oppeln
+		command = { type = addcore which = 166 } #Waldenburg
+		command = { type = addcore which = 168 } #Gleiwitz
+		command = { type = addcore which = 183 } #Elbing
+		command = { type = addcore which = 184 } #Konigsberg
+		command = { type = addcore which = 182 } #Tilsit
+		command = { type = addcore which = 185 } #Allenstein
+#cores on Poland and Lithuania
+		command = { type = addcore which = 221 } #Katowice
+		command = { type = addcore which = 224 } #Poznan
+		command = { type = addcore which = 225 } #Bygoszcz
+		command = { type = addcore which = 181 } #Danzig
+		command = { type = addcore which = 261 } #Klaipeda
+	}
+}

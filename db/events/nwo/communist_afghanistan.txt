@@ -1,0 +1,442 @@
+event = {
+	id = 8017601
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 658001 } # Hafizullah Amin
+		command = { type = headofgovernment which = 658002 } # Hafizullah Amin
+	}
+}
+
+event = {
+	id = 8017602
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 658003 } # Babrak Karmal
+		command = { type = headofgovernment which = 658004 } # Babrak Karmal
+	}
+}
+
+event = {
+	id = 8017603
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1981 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 658005 } # Sultan Ali Keshtmand
+	}
+}
+
+event = {
+	id = 8017604
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 658006 } # Haji Mohammad Chamkani
+	}
+}
+
+event = {
+	id = 8017605
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 658007 } # Mohammad Najibullah
+	}
+}
+
+event = {
+	id = 8017606
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 658008 } # Mohammad Hasan Sharq
+	}
+}
+
+event = {
+	id = 8017607
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 658005 } # Sultan Ali Keshtmand
+	}
+}
+
+event = {
+	id = 8017608
+	country = UPS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 658009 } # Fazal Haq Khaliqyar
+	}
+}
+
+event = {
+	id = 8176109
+	country = UPS
+
+	name = EVT_8176109_NAME
+	desc = EVT_8176109_DESC
+	picture = nwo\dem_rep_afghanistan
+	style = 1
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8176109_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = relation which = SOV value = 200 }
+		command = { type = access which = SOV }
+		
+		command = { type = leave_alliance }
+		command = { type = war which = AFG }
+		
+		# Own forces
+		command = { type = add_division value = infantry when = 14 }
+		command = { type = add_division value = infantry when = 14 }
+		command = { type = add_division value = infantry when = 14 }
+		command = { type = add_division value = infantry when = 14 }
+		
+		# Soviet help
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+		command = { type = add_division which = "Soviet invasion force" value = armor when = 10 }
+
+	}
+}
+
+### Soviet support for Afghanistan
+
+event = {
+	id = 8176110
+	country = SOV
+
+	name = EVT_8176110_NAME
+	desc = EVT_8176110_DESC
+	picture = nwo\soviet_intervention_in_afghanistan
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		event = 8000109
+		exists = AFG
+		NOT = { puppet = { country = AFG country = USA } }
+		NOT = { puppet = { country = AFG country = ENG } }
+		NOT = { exists = UPS }
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_8176110_A
+		ai_chance = 98
+		command = { type = relation which = AFG value = -150 }
+		command = { type = dissent value = -7 }
+		command = { type = belligerence value = 15 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8176110_B
+		ai_chance = 2
+		command = { type = dissent value = 7 }
+		command = { type = sleepevent which = 8000110 }
+
+	}
+}
+
+event = {
+	id = 8176111
+	country = UPS
+	persistent = yes
+
+	name = EVT_8176111_NAME
+	desc = EVT_8176111_DESC
+	picture = nwo\soviet_intervention_in_afghanistan
+	style = 1
+	
+	trigger = {
+		war = { country = UPS country = AFG }
+		event = 8176110
+		NOT = { event = 8176114 }
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = EVT_8176111_A
+		ai_chance = 100
+		command = { type = dissent value = 10 }
+		# Soviet help
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+		command = { type = add_division which = "Soviet invasion force" value = motorized when = 10 }
+	}
+}
+
+event = {
+	id = 8176112
+	country = SOV
+	persistent = yes
+
+	name = EVT_8176112_NAME
+	desc = EVT_8176112_DESC
+	picture = nwo\soviet_intervention_in_afghanistan
+	style = 1
+	
+	trigger = {
+		war = { country = UPS country = AFG }
+		event = 8176110
+		NOT = { event = 8176114 }
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = EVT_8176112_A
+		ai_chance = 98
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 5 }
+	}
+	
+	action = {
+		name = EVT_8176112_B
+		ai_chance = 2
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = -10 }
+		command = { type = trigger which = 8176113 } # Soviets pull out
+	}
+}
+
+event = {
+	id = 8176113
+	country = SOV
+
+	name = EVT_8176113_NAME
+	desc = EVT_8176113_DESC
+	picture = nwo\soviet_withdrawal_from_afghanistan
+	style = 1
+	
+	trigger = {
+		war = { country = UPS country = AFG }
+		event = 8176110
+		NOT = { event = 8176113 }
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = EVT_8176113_A
+		ai_chance = 60
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = -10 }
+		command = { type = trigger which = 8176113 } # Soviets pull out
+	}
+	
+	action = {
+		name = EVT_8176113_B
+		ai_chance = 40
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 5 }
+		
+	}
+}
+
+# Soviets pull out
+event = {
+	id = 8176114
+	country = UPS
+
+	name = EVT_8176114_NAME
+	desc = EVT_8176114_DESC
+	picture = nwo\soviet_withdrawal_from_afghanistan
+	style = 1
+
+	action = {
+		name = EVT_8176114_A
+		command = { type = dissent value = 25 }
+		command = { type = demobilize which = land when = 1 where = 1 value = 10 } # Soviets pull out
+	}
+}
+
+# Soviet victory in Afghanistan
+
+event = {
+	id = 8176115
+	country = SOV
+
+	name = EVT_8176115_NAME
+	desc = EVT_8176115_DESC
+	picture = nwo\dem_rep_afghanistan
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		exists = UPS
+		NOT = { exists = AFG }
+		event = 8176110
+		NOT = { event = 8176114 }
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8176115_A
+		command = { type = dissent value = -10 }
+		command = { type = alliance which = UPS }
+	}
+}

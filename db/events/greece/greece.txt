@@ -1,0 +1,1628 @@
+####################################
+# GREEK MOD EVENTS
+####################################
+# This file contains events for GRE,GER,ITA,BUL
+# Event List:
+#GRE	14000000	The Ellections of 1933
+#GRE	14000001	The military coup from general Plastiras
+#GRE	14000002	The military coup from generals Papoulas and Koimisis
+#GRE	14000003	The Purge of the Army by Panagis Tsaldaris
+#GRE	14000004	The Ellections of 1935
+#GRE	14000005	The military coup from Georgios Kondylis
+#GRE	14000006	The Restoration of Monarchy
+#GRE	14000007	The Plastiras Regime
+#GRE	14000008	The 4 august Regime
+#GRE	14000009	The Metaxas Line
+#GRE	14000010	The creation of National Youth Organisation
+#GRE	14000011	Plastira's White Terror Purges
+#GRE	14000012	Antivenizelism coup d'etat attempt
+#GRE	14000013	Union of Royalists demand to be allowed to enter the Parthenon area
+#GRE	14000014	The Parthenon hill coup d'etat attempt
+#GRE	14000015	An assassination attempt...
+#GRE	14000016	The Restoration of Monarchy
+#GRE	14000017	Greece at 1933
+#ITA	14000018	Rise claims on Greece
+#ITA	14000019	Italy prepares for Greece invasion
+#ITA	14000020	The Italian ultimatum
+#GRE	14000021	The Italian ultimatum
+#ITA	14000022	Metaxas refuses
+#ITA	14000023	Establishment of The Hellenic State
+#GRE	14000024	Establishment of The Hellenic State
+#GER	14000025	Establishment of The Hellenic State
+#BUL	14000026	Establishment of The Hellenic State
+#GRE	14000027	The General Tsolakoglou signed a surrender protocol with Germans
+#GRE	14000028	The creation of resistance groups at Greece (EEAM,EDES,EAM,EKKA,ELAS...)
+#ITA	14000029	The creation of resistance groups at Greece (EEAM,EDES,EAM,EKKA,ELAS...)
+#GER	14000030	Partitioning of Greece
+#ITA	14000031	Partitioning of Greece
+#BUL	14000032	Partitioning of Greece
+#GRE	14000033	The sink of the Elli I
+#GRE	14000034	The Greek government in exile
+#GRE	14000035	A new government more loyal to British
+#GRE	14000036	The evacuating of Hellenic Royal Navy at Middle East
+#GRE	14000037	The reorganisation of Hellenic royal navy by Allies
+#GRE	14000038	The forming of Royal Hellenic Army in the Middle East(VESMA)
+#GRE	14000039	Rise claims on Greece
+#ENG	14000040	Greco-Italian War
+#ITA	14000052	Greco-Italian War(AI)
+#ITA	14000053	Greco-Italian War(AI)
+
+event = {
+	id = 14000000	# The Ellections of 1933
+	random = no
+	country = GRE
+	style = 2
+	picture = "greekellections"
+	one_action = yes
+
+	trigger = {
+		headofstate = 90235 # Alexandros Zaimis in office
+		}
+
+	name = "The Ellections of 1933" # needs text
+	desc = "The pro-monarchist People's Party emerged as the largest party, winning 118 of the 248 seats in Parliament, ending the predominance of Eleftherios Venizelos Liberal Party.The results triggered an attempted coup by Venizelist officers. A military emergency government under Alexandros Othonaios was instituted which suppressed the revolt, and was succeeded by a People's Party cabinet under Panagis Tsaldaris on 10 March."
+
+	date = { day = 11 month = march year = 1933 } #
+
+	action_a = {
+		name = "Elect Panagis Tsaldaris (People's Party)."
+		ai_chance = 95
+		command = { type = headofstate which = 90235 }
+		command = { type = headofgovernment which = 90034 }
+		command = { type = foreignminister which = 90249 }
+		command = { type = ministerofsecurity which = 90245 } # Rallis
+		command = { type = trigger which = 14000001 }
+	}
+	action_b = {
+		name = "Elect Eleftherios Venizelos (Liberal Party)."
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = headofgovernment which = 90195 }
+		command = { type = event which = 14000012 where = GRE when = 60 }
+		}
+	}
+
+
+event = {
+	id = 14000001	# The military coup from general Plastiras
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The 1933 military coup from general Plastiras."
+	desc = "General Nikolaos Plastiras,attempted to lead a coup in March 1933, after the anti-Venizelists won the elections, but facing universal reaction (even from Venizelos himself), he was forced to flee abroad."
+	Picture = "plastirascoupa"
+
+	action_a = {
+		name = "Crushing the coup...!"
+		ai_chance = 100
+		command = { type = sleepleader which = 90014 }
+		command = { type = sleepteam which = 90017 }
+		command = { type = event which = 14000002 where = GRE when = 750 }
+		command = { type = dissent value = 1 }
+	}
+	action_b = {
+		name = "Too late...!"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 14000007 }
+		}
+	}
+
+
+event = {
+	id = 14000002	# The military coup from generals Papoulas and Koimisis
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The military coup from generals Papoulas and Koimisis."
+	desc = "The coup was headed by Nikolaos Plastiras, but failed to establish itself in Athens and most of mainland Greece a military tribunal was set up, which purged the Armed Forces of Venizelist and Republican officers, and ordered the execution of two prominent Venizelist generals, Anastasios Papoulas and Miltiadis Koimisis, and major Stamatis Volanis."
+	Picture = "plastirascoupb"
+
+	action_a = {
+		name = "Crushing the coup...!"
+		ai_chance = 100
+		command = { type = sleepleader which = 90041 }
+		command = { type = sleepleader which = 90036 }
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 14000003 }
+		command = { type = event which = 14000004 where = GRE when = 750 }
+	}
+	action_b = {
+		name = "Too late...!"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 14000007 }
+		}
+	}
+
+
+event = {
+	id = 14000003	# The Purge of the Army by Panagis Tsaldaris
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Purge of the Army by Panagis Tsaldaris."
+	desc = "After two military coups attempts Panagis Tsaldaris began to prosecute anyone who could possibly challenge his authority he had purged and eliminated politicians and over 1800 Venizelism officers from the Army."
+	Picture = "PurgeGreekArmya"
+
+	action_a = {
+		name = "Purge the traitors!"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = sleepminister which = 90039 }
+		command = { type = sleepminister which = 90187 }
+		command = { type = sleepminister which = 90195 }
+		command = { type = sleepminister which = 90275 }
+		command = { type = sleepminister which = 90310 }
+		command = { type = sleepleader which = 90020 }
+		command = { type = sleepleader which = 90034 }
+		command = { type = sleepleader which = 90012 }
+		command = { type = sleepleader which = 90040 }
+		command = { type = sleepleader which = 90023 }
+		command = { type = sleepleader which = 90086 }
+		command = { type = sleepleader which = 90073 }
+		command = { type = sleepleader which = 90074 }
+		command = { type = sleepleader which = 90077 }
+		command = { type = sleepleader which = 90019 }
+		command = { type = sleepleader which = 90075 }
+		command = { type = sleepteam which = 90017 }
+		}
+	}
+
+event = {
+	id = 14000004	# The Ellections of 1935
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Ellections of 1935"
+	desc = "The elections were held in a climate of tension between the Venizelist parties, and the pro-royalist People's Party.In protest at the execution of two prominent Venizelist generals,and the failed Venizelist coup attempt, all venizelist parties decided not to participate. Without opponents, the right-wing parties had no problem in dominating the Parliament and decide about the restoration of monarchy."
+	Picture = "greekellections"
+
+	action_a = {
+		name = "Elect Panagis Tsaldaris (People's Party)."
+		ai_chance = 95
+		command = { type = headofstate which = 90235 }
+		command = { type = headofgovernment which = 90034 }
+		command = { type = foreignminister which = 90249 }
+		command = { type = ministerofsecurity which = 90245 } # Rallis
+		command = { type = event which = 14000005 where = GRE when = 180 }
+	}
+	action_b = {
+		name = "Elect Ioannis Metaxas (Union of Royalists)."
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = headofgovernment which = 90028 }
+		command = { type = event which = 14000016 where = GRE when = 210 }
+		}
+	}
+
+
+event = {
+	id = 14000005	# The military coup from Georgios Kondylis
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The military coup from general Kondylis." # needs text
+	desc = "On October 1935, General Georgios Kondylis and the commanders of the Armed Forces (Alexandros Papagos was among them) called on Tsaldaris and demanded his resignation. With no other choice, Tsaldaris complied. Kondylis took over the premiership, and later that day forced President Alexandros Zaimis to resign. Kondylis abolished the republic, declared himself Regent and staged a plebiscite on November 11 for the return of the monarchy."
+	Picture = "KondylisCoup"
+
+	action_a = {
+		name = "End of Second Hellenic Republic."
+		ai_chance = 100
+		command = { type = headofstate which = 90274 }
+		command = { type = headofgovernment which = 90237 }
+		command = { type = sleepminister which = 90235 }
+		command = { type = sleepminister which = 90034 }
+		command = { type = event which = 14000006 where = GRE when = 30 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14000006	# The Restoration of Monarchy
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Restoration of Monarchy" # needs text
+	desc = "On October 1935, a few months after he suppressed the second attempt in March 1935, Georgios Kondylis, the former Venizelist stalwart, abolished the Republic in another coup, and declared the monarchy restored. A rigged plebiscite confirmed the regime change with an unsurprising 97.88% of votes and King George II returned."
+	Picture = "Monarchy_gr"
+
+	action_a = {
+		ai_chance = 100
+		name = "Long live the king!!!"
+		command = { type = songs which = KingGeorgeofGreece.txt }
+		command = { type = flag_ext where = gre which = "" }
+		command = { type = name where = GRE which = "" }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -5 }
+		command = { type = headofstate which = 90001 }
+		command = { type = headofgovernment which = 90002 }
+		command = { type = foreignminister which = 90003 }
+		command = { type = armamentminister which = 90004 }
+		command = { type = ministerofsecurity which = 90005 }
+		command = { type = ministerofintelligence which = 90241 }
+		command = { type = chiefofstaff which = 90123 }
+		command = { type = chiefofarmy which = 90008 }
+		command = { type = chiefofnavy which = 90009 }
+		command = { type = chiefofair which = 90242 }
+		}
+	}
+
+
+event = {
+	id = 14000007	# The Plastiras Regime
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Plastiras Regime."
+	desc = "Officers loyal to Plastiras, fearing that the political instability was putting the country at risk, overthrew the government in a coup. Plastiras immediately abolished the republic and began to prosecute anyone who could possibly challenge his authority.Freedom of the press was abolished, and a number of repressive laws were enacted.Plastiras declared himself Prime Minister and head of state Eleftherios Venizelos."
+	Picture = "plastirascoup"
+
+	action_a = {
+		name = "Start the purge now!!!"
+		ai_chance = 100
+		command = { type = flag_ext where = gre which = _pla }
+		command = { type = name where = GRE which = "GRE40" }
+		command = { type = headofstate which = 90275 }
+		command = { type = headofgovernment which = 90039 }
+		command = { type = sleepminister which = 90235 }
+		command = { type = sleepminister which = 90034 }
+		command = { type = sleepminister which = 90274 }
+		command = { type = wakeleader which = 90014 }
+		command = { type = waketeam which = 90017 }
+		command = { type = dissent value = -5 }
+		command = { type = event which = 14000011 where = GRE when = 30 }
+		}
+	}
+
+
+event = {
+	id = 14000008
+	random = no
+	country = GRE
+	style = 2
+	picture = "greekaugast"
+	one_action = yes
+
+	trigger = {
+		OR = {
+			event = 14000006
+			event = 14000016
+			}
+		}
+
+	name = "The 4 august regime"
+	desc = "The 4th of August Regime commonly also known as the Metaxas Regime was an authoritarian regime under the leadership of General Ioannis Metaxas that ruled Greece from 1936 to 1941. It took its name from a self-coup carried out by Metaxas, with royal support, on August 4, 1936."
+
+	date = { day = 4 month = August year = 1936 }
+
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { type = songs which = MetaxasRegime.txt }
+		command = { type = flag_ext where = gre which = _mex }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = free_ic value = 4 }
+		command = { type = free_money value = 2 }
+		command = { type = free_metal value = 5 }
+		command = { type = free_energy value = 6 }
+		command = { type = headofstate which = 90001 }
+		command = { type = headofgovernment which = 90028 }
+		command = { type = foreignminister which = 90049 }
+		command = { type = armamentminister which = 90259 }
+		command = { type = ministerofsecurity which = 90239 }
+		command = { type = ministerofintelligence which = 90240 }
+		command = { type = chiefofstaff which = 90238 }
+		command = { type = chiefofarmy which = 90008 }
+		command = { type = chiefofnavy which = 90252 }
+		command = { type = chiefofair which = 90253 }
+		command = { type = dissent value = -5 }
+		}
+	}
+
+
+event = {
+	id = 14000009
+	random = no
+	persistent = yes
+	TAG =  { GRE }
+	decision = {
+		money = 100
+		event = 14000008
+		NOT = { policy = { type = free_market value = 8 } }
+	}
+
+	decision_trigger = { 
+		money = 700 
+		metal = 200 
+		supplies = 100
+	}
+
+	trigger = {
+		random = 100
+		money = 700 
+		metal = 200 
+		supplies = 100
+		#NOT = { policy = { type = free_market value = 8 } }
+	}
+   
+	name = "The Metaxas Line"
+	desc = "The Metaxas Line was a chain of fortifications constructed along the line of the Greco-Bulgarian border, designed to protect Greece in case of a Bulgarian invasion after the rearmament of Bulgaria.The Metaxas Line consists of 21 independent fortification complexes,the largest of which is Fort Roupel as it covers 6.1 out of the 155 km of the full line and had been constructed at a height of 322 m.The fortification works lasted four years and their cost at the time reached 100,400,000 drachmas." 
+	style = 2
+	picture = "MetaxasLine"
+	decision_picture = "decision_MetaxasLine"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {  trigger = { money = 500 }
+		ai_chance = 100
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -1 }
+		command = { type = money value = -700 }
+		command = { type = metalpool value = -200 }
+		command = { type = supplies value = -100 }
+		command = { type = construct which = land_fort where = 363 value = 1 }
+		command = { type = construct which = land_fort where = 364 value = 1 }
+		command = { type = construct which = land_fort where = 365 value = 1 }
+		command = { type = construct which = land_fort where = 370 value = 1 }
+	}
+}
+
+
+event = {
+	id = 14000010	# The creation of National Youth Organisation
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		event = 14000008 #The Metaxas Regime  
+		}
+
+	date = { day = 9 month = february year = 1937 }
+
+	name = "The creation of National Youth Organisation."
+	desc = "The National Youth Organisation was a fascist youth organization in the Kingdom of Greece during the years of the Metaxas Regime. It was established some time in 1937 and was disbanded with the start of the German occupation of Greece. It differed from its Nazi and Fascist Italian counterparts in that it never managed to turn its members into blind followers of the regime."
+	picture = "metaxaseon"
+
+	action_a = {
+		name = "create them now!!!"
+		ai_chance = 100
+		command = { type = manpowerpool value = 40 }
+		command = { type = supplies value = -200 }
+		command = { type = money value = -50 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Waste of time..."
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14000011	# White Terror Purges
+	random = no
+	country = GRE
+	style = 2
+
+	name = "White Terror Purges."
+	desc = "The White Terror Purges was a campaign of political repression in Greece orchestrated by Nikolaos Plastiras.It involved a large-scale purge of Royalists, Communists, government officials and repression of the Army leadership.At least 5000 people were killed and more than 20,000 were arrested during the purge."
+	Picture = "PurgeGreekArmyb"
+
+	action_a = {
+		name = "Purge the traitors!"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = free_ic value = 4 }
+		command = { type = free_money value = 2 }
+		command = { type = free_metal value = 5 }
+		command = { type = free_energy value = 6 }
+		command = { type = dissent value = -2 }
+		command = { type = sleepminister which = 90001 }
+		command = { type = sleepminister which = 90002 }
+		command = { type = sleepminister which = 90011 }
+		command = { type = sleepminister which = 90014 }
+		command = { type = sleepminister which = 90017 }
+		command = { type = sleepminister which = 90018 }
+		command = { type = sleepminister which = 90019 }
+		command = { type = sleepminister which = 90020 }
+		command = { type = sleepminister which = 90021 }
+		command = { type = sleepminister which = 90023 }
+		command = { type = sleepminister which = 90025 }
+		command = { type = sleepminister which = 90029 }
+		command = { type = sleepminister which = 90030 }
+		command = { type = sleepminister which = 90042 }
+		command = { type = sleepminister which = 90043 }
+		command = { type = sleepminister which = 90212 }
+		command = { type = sleepminister which = 90273 }
+		command = { type = sleepleader which = 90020 }
+		command = { type = sleepleader which = 90034 }
+		command = { type = sleepleader which = 90012 }
+		command = { type = sleepleader which = 90040 }
+		command = { type = sleepleader which = 90023 }
+		command = { type = sleepleader which = 90086 }
+		command = { type = sleepleader which = 90073 }
+		command = { type = sleepleader which = 90074 }
+		command = { type = sleepleader which = 90077 }
+		command = { type = sleepleader which = 90019 }
+		command = { type = sleepleader which = 90075 }
+		}
+	}
+
+
+event = {
+	id = 14000012	# Antivenizelism coup d'etat attempt
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Antivenizelism coup d'etat attempt."
+	desc = "The Venizelos' Liberal's Party emerged as the largest party, winning 118 of the 248 seats in Parliament, ending the predominance of Panagis Tsaldaris' People's Party. The results triggered an attempted coup by pro-monarchist officers.The coup was headed by Georgios Kondylis.The government quickly reacted, and loyal forces under the leadership of Nikolaos Plastiras put the revolt down."
+	Picture = "KondylisCoup"
+
+	action_a = {
+		name = "Send the Army to pasify them."
+		ai_chance = 100
+		command = { type = dissent value = 2 }
+		command = { type = event which = 14000013 where = GRE when = 30 }
+		}
+	}
+
+
+event = {
+	id = 14000013	# Union of Royalists demand to be allowed to enter the Parthenon area
+	random = no
+	country = GRE
+	style = 2
+
+	name = "Union of Royalists demand to be allowed to enter the Parthenon area."
+	desc = "Union of Royalists representatives have came to our goverment offices demanding for their member to be allowed to hold events on the hill of Parthenon like traditional Greek dances, speeches from their leader and presentation of their political opinions."
+	Picture = "Parthenon"
+
+	action_a = {
+		name = "This is outrageous, the Parthenon isn't their property!!!"
+		ai_chance = 80
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 14000014 }
+	}
+	action_b = {
+		name = "As long as they keep the place clean..."
+		ai_chance = 20
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 14000014 }
+		}
+	}
+
+
+event = {
+	id = 14000014	# The Parthenon hill coup d'etat attempt
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Parthenon hill coup d'etat attempt."
+	desc = "Outrageous events took place in the Parthenon hill even if the Union of Royalists was refused to make their demostrations there they instead gathered there and most of the police oppened the road for them!Alongside with them, many members from pro-monarchist parties."
+	Picture = "Parthenon"
+
+	action_a = {
+		name = "Enact millitary law!!!"
+		ai_chance = 100
+		command = { type = dissent value = 2 }
+		command = { type = event which = 14000007 where = GRE when = 30 }
+		}
+	}
+
+
+event = {
+	id = 14000015	# An assassination attempt...
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 6 month = June year = 1933 }
+
+	name = "An assassination attempt..." # needs text
+	desc = "Eleftherios Venizelos becomes the target of an assassination attempt for the second time in his life. His car is riddled with bullets but the Cretan politician escapes unhurt."
+	Picture = "asassvenizelos"
+
+	action_a = {
+		name = "Curses...!"
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+event = {
+	id = 14000016	# The Restoration of Monarchy
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Restoration of Monarchy" # needs text
+	desc = "In Greece between 1924 and 1935 there were 23 changes of government, a dictatorship and 13 coups. Ioannis Metaxas, a Pro-monarchist,had won The Ellections of 1935. He then arranged a plebiscite both to approve his government and to bring an end to the Republic. On 3 November 1935, almost 98% of the reported votes supported restoration of the monarchy..."
+	Picture = "Monarchy_gr"
+
+	action_a = {
+		ai_chance = 100
+		name = "Long live the king!!!"
+		command = { type = songs which = KingGeorgeofGreece.txt }
+		command = { type = flag_ext where = gre which = "" }
+		command = { type = name where = GRE which = "" }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -5 }
+		command = { type = headofstate which = 90001 }
+		command = { type = headofgovernment which = 90028 }
+		command = { type = foreignminister which = 90003 }
+		command = { type = armamentminister which = 90004 }
+		command = { type = ministerofsecurity which = 90005 }
+		command = { type = ministerofintelligence which = 90241 }
+		command = { type = chiefofstaff which = 90123 }
+		command = { type = chiefofarmy which = 90008 }
+		command = { type = chiefofnavy which = 90009 }
+		command = { type = chiefofair which = 90242 }
+		}
+	}
+
+
+event = {
+	id = 14000017	# Case Greece 1933
+	random = no
+	country = GRE
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1934 }
+
+	name = "Greece at 1933."
+	desc = " In a 1924 plebiscite, Greeks voted to create a republic.The 'Second Hellenic Republic' was declared on 25 March 1924, after the defeat of Greece by Turkey in the Asia Minor Disaster of 1922, between 1924 and 1935 there were 23 changes of government,a dictatorship and 13 coups the Second Republic proved unstable. Greek society continued to be divided, as it was since the National Schism, between the pro-Republican Venizelists and the monarchists." 
+	style = 2
+	picture = "athens"
+
+	action_a = {
+		name = "EVT1914_2019500_ACTIONA"
+		command = { type = sleepevent which = 2500026 }
+		command = { type = sleepevent which = 2500027 }
+		command = { type = sleepevent which = 2500028 }
+		command = { type = sleepevent which = 2500029 }
+		command = { type = sleepevent which = 2019004 }
+		command = { type = sleepevent which = 2022023 }
+		command = { type = sleepevent which = 2022024 }
+		command = { type = sleepevent which = 2022025 }
+		command = { type = sleepevent which = 3006002 }
+		command = { type = sleepevent which = 3006003 }
+		command = { type = sleepevent which = 2006025 }
+		command = { type = sleepevent which = 2019003 }
+		command = { type = sleepminister which = 90270 }
+		command = { type = sleepminister which = 90213 }
+		command = { type = sleepminister which = 90261 }
+		command = { type = sleepminister which = 90232 }
+		command = { type = sleepminister which = 90178 }
+		command = { type = sleepminister which = 90197 }
+		command = { type = sleepminister which = 90227 }
+		command = { type = sleepminister which = 90181 }
+		command = { type = sleepminister which = 90202 }
+		command = { type = sleepminister which = 90204 }
+		command = { type = sleepminister which = 90220 }
+		command = { type = sleepminister which = 90225 }
+		command = { type = sleepminister which = 90163 }
+		command = { type = sleepminister which = 90243 }
+		command = { type = sleepminister which = 90250 }
+		command = { type = sleepminister which = 90260 }
+		command = { type = sleepminister which = 90211 }
+		command = { type = sleepminister which = 90174 }
+		command = { type = sleepminister which = 90200 }
+		command = { type = sleepminister which = 90222 }
+		command = { type = sleepminister which = 90223 }
+		command = { type = sleepminister which = 90228 }
+		command = { type = sleepminister which = 90189 }
+		command = { type = sleepminister which = 90173 }
+		command = { type = sleepminister which = 90224 }
+		command = { type = sleepminister which = 90192 }
+		command = { type = sleepminister which = 90198 }
+		command = { type = sleepminister which = 90217 }
+		command = { type = sleepminister which = 90180 }
+		command = { type = sleepminister which = 90168 }
+		command = { type = sleepminister which = 90205 }
+		command = { type = sleepminister which = 90199 }
+		command = { type = sleepminister which = 90215 }
+		command = { type = sleepminister which = 90179 }
+		command = { type = sleepleader which = 90058 }
+		command = { type = sleepleader which = 90055 }
+		command = { type = sleepleader which = 90104 }
+		command = { type = sleepleader which = 90056 }
+		command = { type = sleepleader which = 90015 }
+		command = { type = sleepleader which = 90058 }
+		command = { type = sleepleader which = 90053 }
+		command = { type = sleepleader which = 90057 }
+		command = { type = sleepleader which = 90082 }
+		command = { type = sleepleader which = 90084 }
+		command = { type = sleepleader which = 90088 }
+		command = { type = sleepleader which = 90050 }
+		command = { type = sleepleader which = 90016 }
+		command = { type = sleepleader which = 90017 }
+		command = { type = sleepleader which = 90044 }
+		command = { type = sleepleader which = 90045 }
+		command = { type = sleepleader which = 90054 }
+		command = { type = sleepleader which = 90059 }
+		command = { type = sleepleader which = 90062 }
+		command = { type = sleepleader which = 90068 }
+		command = { type = sleepleader which = 90018 }
+		command = { type = sleepleader which = 90024 }
+		command = { type = sleepleader which = 90025 }
+		command = { type = sleepleader which = 90051 }
+		command = { type = sleepleader which = 90052 }
+		command = { type = sleepleader which = 90057 }
+		command = { type = sleepleader which = 90087 }
+		command = { type = sleepleader which = 90013 }
+		command = { type = sleepleader which = 90035 }
+		command = { type = sleepleader which = 90028 }
+		command = { type = sleepleader which = 90046 }
+		command = { type = sleepleader which = 90085 }
+		command = { type = sleepleader which = 90103 }
+		command = { type = sleepleader which = 90106 }
+		command = { type = sleepleader which = 90027 }
+		command = { type = sleepleader which = 90014 }
+		command = { type = flag_ext where = gre which = _dem }
+		command = { type = name where = GRE which = "GRE24" }
+	}
+}
+
+event = {
+	id = 14000018
+	random = no
+	country = ITA
+
+	trigger = {
+		exists = GRE 
+		government = fascist
+		control = { province = 359 data = ITA }
+		control = { province = 360 data = ITA } # Albania
+		control = { province = 361 data = ITA }
+		control = { province = 362 data = ITA }
+		NOT = { alliance = { country = GER country = GRE } }
+		NOT = { alliance = { country = SOV country = GRE } }
+		NOT = { alliance = { country = GRE } }
+	}
+	
+	name = "Rise claims on Greece." #Rise claims on Greece
+	desc = "Ever since Italian unification, Italy had aspired to Great Power status and Mediterranean hegemony. Under the Fascist regime, the establishment of a new Roman Empire, including Greece, was often proclaimed by Mussolini." 
+	style = 2
+	Picture = "Mussolini"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "ACTION_NAME_EXCELLENT" #Excellent
+		command = { type = addclaim which = 367 } #Ioannina
+		command = { type = addclaim which = 368 } #Larissa
+		command = { type = addclaim which = 369 } #Metsovo
+		command = { type = addclaim which = 376 } #Agrinion
+		command = { type = addclaim which = 375 } #Levadhia
+		command = { type = addclaim which = 372 } #Patra
+		command = { type = addclaim which = 373 } #Corinth
+		command = { type = addclaim which = 380 } #Sitia
+		command = { type = addclaim which = 374 } #Halkyda
+		command = { type = addclaim which = 381 } #Ermoupoli
+		command = { type = trigger which = 14000019 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "ACTINUTILE" #No need
+		command = { }
+	}
+}
+
+
+event = {
+	id = 14000019
+	random = no 
+	country = ITA
+	
+	# Triggered by GRE 14000018
+
+	name = "Italy prepares for Greece invasion."
+	desc = "A propaganda campaign against Greece was launched in Italy and repeated acts of provocation were carried out, such as overflights of Greek territory and attacks by aircraft on Greek naval vessels. These reached their peak with the torpedoing and sinking of the Greek light cruiser Elli by the submarine Delfino in Tinos harbor on 15 August 1940, a national religious holiday."
+	style = 2
+	picture = "Mussolini"
+	
+	action_a = {
+		command = { type = local_setflag which = ITAInvadeGreece }
+		command = { type = local_clrflag which = ITAInvadeRussia }
+		command = { type = ai which = "switch/ITA_Greece_Buildup.ai" }
+	}
+}
+
+
+event = {
+	id = 14000020
+	random = no 
+	country = ITA
+
+	trigger = {
+		event = 14000019
+		NOT = { alliance = { country = GER country = GRE } }
+		NOT = { alliance = { country = SOV country = GRE } }
+		NOT = { alliance = { country = GRE } }
+		}
+
+	name = "The Italian ultimatum."
+	desc = "On the eve of 28 October 1940, Italy's ambassador in Athens, Emanuele Grazzi, handed an ultimatum from Mussolini to Metaxas. In it, the Duce demanded free passage for his troops to occupy unspecified strategic points inside Greek territory. Greece had been friendly towards National Socialist Germany, especially profiting from mutual trade relations, but now Germany's ally Italy was to invade Greece."
+	style = 2
+	picture = "Mussolini"	
+	
+	date = { day = 27 month = October year = 1940 }
+
+	action_a = {
+		command = { type = sleepevent which = 14000019 }
+		command = { type = trigger which = 14000021 }
+	}
+}
+
+
+event = {
+	id = 14000021	# The Italian ultimatum
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The Italian ultimatum."
+	desc = "On the eve of 28 October 1940, Italy's ambassador in Athens, Emanuele Grazzi, handed an ultimatum from Mussolini to Metaxas. In it, the Duce demanded free passage for his troops to occupy unspecified strategic points inside Greek territory. Greece had been friendly towards National Socialist Germany, especially profiting from mutual trade relations, but now Germany's ally Italy was to invade Greece."
+	picture = "greekaugast"
+
+	action_a = {
+		name = "Alors, c'est la guerre..."
+		ai_chance = 100
+		command = { type = addcore which = 852 }
+		command = { type = addclaim which = 852 }
+		command = { type = trigger which = 14000022 }
+		command = { type = trigger which = 14000040 }
+		command = { type = sleepminister which = 90273 }
+	}
+	action_b = {
+		name = "Very well."
+		ai_chance = 0
+		command = { type = sleepevent which = 14000027 }
+		command = { type = sleepevent which = 14000028 }
+		command = { type = sleepevent which = 14000030 }
+		command = { type = sleepevent which = 14000031 }
+		command = { type = sleepevent which = 14000032 }
+		command = { type = trigger which = 14000023 }
+		command = { type = trigger which = 14000025 }
+		command = { type = trigger which = 14000026 }
+		command = { type = removecore which = 370 }
+		command = { type = removecore which = 363 }
+		command = { type = removecore which = 364 }
+		command = { type = removecore which = 365 }
+		command = { type = removecore which = 371 }
+		command = { type = removecore which = 383 }
+		command = { type = removecore which = 381 }
+		command = { type = removecore which = 382 }
+		command = { type = removecore which = 380 }
+		command = { type = removecore which = 360 }
+		command = { type = removecore which = 378 }
+		command = { type = removecore which = 379 }
+		command = { type = removeclaim which = 370 }
+		command = { type = removeclaim which = 363 }
+		command = { type = removeclaim which = 364 }
+		command = { type = removeclaim which = 365 }
+		command = { type = removeclaim which = 371 }
+		command = { type = removeclaim which = 383 }
+		command = { type = removeclaim which = 381 }
+		command = { type = removeclaim which = 382 }
+		command = { type = removeclaim which = 380 }
+		command = { type = removeclaim which = 360 }
+		command = { type = removeclaim which = 378 }
+		command = { type = removeclaim which = 379 }
+		command = { type = flag_ext where = gre which = _fas }
+	}
+}
+
+
+event = { 
+	id = 14000022
+	random = no
+	country = ITA
+	
+	# Triggered by GRE 14000021
+
+	name = "Metaxas refuses"
+	desc = "On the eve of 28 October 1940, Italy's ambassador in Athens, Emanuele Grazzi, handed an ultimatum from Mussolini to Metaxas. In it, the Duce demanded free passage for his troops to occupy unspecified strategic points inside Greek territory. Greece had been friendly towards National Socialist Germany, especially profiting from mutual trade relations, but now Germany's ally Italy was to invade Greece.Metaxas rejected the ultimatum with the words Alors, c'est la guerre... French for Then it's war."
+	style = 2
+	picture = "greekaugast"
+	
+	action_a = {
+		name = "ACTIONNAME2903A" # Declare War
+		ai_chance = 100
+		command = { type = war which = GRE }
+		command = { type = ai which = "switch/ITA_Greece_Attack.ai" }
+		command = { type = local_clrflag which = ITAInvadeGreece }
+	}
+	action_b = {
+		name = "ACTIONNAME2903B" # We do not dare follow through
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+		command = { type = relation which = GRE value = 20 }
+		command = { type = local_clrflag which = ITAInvadeGreece }		
+	}
+}
+
+
+event = { 
+	id = 14000023
+	random = no
+	country = ITA
+	
+	# Triggered by GRE 14000021
+
+	name = "Establishment of The Hellenic State."
+	desc = "The Hellenic State was the collaborationist government of Greece during the country's occupation by the Axis powers in the Second World War.General Georgios Tsolakoglou was appointed as Prime minister of the new Greek government. As King George II had left the country with the legitimate Greek government in exile, the new regime avoided all reference to the Greek monarchy and used Hellenic State as the country's official, generic, name."
+	style = 2
+	picture = "Mussolini"
+	
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { type = removeclaim which = 367 where = -1 }
+		command = { type = removeclaim which = 368 where = -1 }
+		command = { type = removeclaim which = 369 where = -1 }
+		command = { type = removeclaim which = 376 where = -1 }
+		command = { type = removeclaim which = 375 where = -1 }
+		command = { type = removeclaim which = 372 where = -1 }
+		command = { type = removeclaim which = 373 where = -1 }
+		command = { type = removeclaim which = 374 where = -1 }
+		command = { type = addclaim which = 382 }
+		command = { type = addclaim which = 383 }
+		command = { type = addclaim which = 371 }
+		command = { type = make_puppet which = GRE }
+		command = { type = trigger which = 14000024 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+
+event = {
+         id = 14000024
+         random = no
+         country = GRE
+	
+	# Triggered by GRE 14000023
+
+         name = "Establishment of The Hellenic State."
+         desc = "The Hellenic State was the collaborationist government of Greece during the country's occupation by the Axis powers in the Second World War.General Georgios Tsolakoglou was appointed as Prime minister of the new Greek government. As King George II had left the country with the legitimate Greek government in exile, the new regime avoided all reference to the Greek monarchy and used Hellenic State as the country's official, generic, name."
+         style = 2
+         picture = "tsolakoglou"
+ 
+           action_a = {
+                  name = ACTION_NAME_OK
+                  command = { type = relation which = ITA value = 200 }
+                  command = { type = set_domestic which = democratic value = 2 }
+                  command = { type = set_domestic which = political_left value = 3 }
+                  command = { type = set_domestic which = free_market value = 7 }
+                  command = { type = set_domestic which = freedom value = 3 }
+                  command = { type = sleepminister which = 90017 }
+                  command = { type = headofstate which = 90273 }
+                  command = { type = headofgovernment which = 90028 }
+                  command = { type = secedeprovince which = BUL value = 370 when = 2 }
+                  command = { type = secedeprovince which = BUL value = 363 when = 2 }
+                  command = { type = secedeprovince which = BUL value = 364 when = 2 }
+                  command = { type = secedeprovince which = BUL value = 365 when = 2 }
+                  command = { type = secedeprovince which = ITA value = 371 when = 2 }
+                  command = { type = secedeprovince which = ITA value = 383 when = 2 }
+                  command = { type = secedeprovince which = ITA value = 381 when = 2 }
+                  command = { type = secedeprovince which = ITA value = 382 when = 2 }
+                  command = { type = secedeprovince which = ITA value = 380 when = 2 }
+           }
+
+}
+
+
+event = { 
+	id = 14000025
+	random = no
+	country = GER
+	
+	# Triggered by GRE 14000021
+
+	name = "Establishment of The Hellenic State."
+	desc = "The Hellenic State was the collaborationist government of Greece during the country's occupation by the Axis powers in the Second World War.General Georgios Tsolakoglou was appointed as Prime minister of the new Greek government. As King George II had left the country with the legitimate Greek government in exile, the new regime avoided all reference to the Greek monarchy and used Hellenic State as the country's official, generic, name."
+	style = 2
+	picture = "Mussolini"
+	
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { type = relation which = GRE value = 200 }
+		command = { type = removeclaim which = 377 where = -1 }
+		command = { type = removeclaim which = 382 where = -1 }
+		command = { type = removeclaim which = 383 where = -1 }
+	}
+}
+
+
+event = { 
+	id = 14000026
+	random = no
+	country = BUL
+	
+	# Triggered by GRE 14000021
+
+	name = "Establishment of The Hellenic State."
+	desc = "The Hellenic State was the collaborationist government of Greece during the country's occupation by the Axis powers in the Second World War.General Georgios Tsolakoglou was appointed as Prime minister of the new Greek government. As King George II had left the country with the legitimate Greek government in exile, the new regime avoided all reference to the Greek monarchy and used Hellenic State as the country's official, generic, name."
+	style = 2
+	picture = "Mussolini"
+	
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { trigger = { NOT = { alliance = { country = BUL country = GER } } } type = alliance which = GER }
+		command = { type = relation which = GRE value = 200 }
+		command = { type = removecore which = 366 where = -1 }
+		command = { type = removeclaim which = 366 where = -1 }
+	}
+}
+
+
+event = {
+	id = 14000027	# The General Tsolakogou signed a surrender protocol with Germans
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		event = 14500010 #The suicide of Alexandros Korizis  
+		}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1945 }
+
+	name = "The General Tsolakoglou signed a surrender protocol with Germans."
+	desc = "When the hopelessness of resistance became apparent,General Tsolakoglou despited urgent orders by Greek Commander in chief Alexandros Papagos and along with several other senior generals began considering surrendering to the Germans.Thus,on 20 April,he relieved and replaced Lt.Gen. Ioanis Pitsikas,the commander of the Army of Epirus.He sent messengers to the Germans proposing surrender,and signed a surrender protocol with the commander of the Leibstandarte SS Adolf Hitler brigade,Sepp Dietrich."
+	picture = "tsolakoglou"
+
+	action_a = {
+		name = "Curses...!"
+		ai_chance = 100
+		command = { type = province_keypoints which = 852 value = 1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -2 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 } 
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 } 
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+		command = { type = delete_unit which = -3 }
+	}
+}
+
+
+event = {
+	id = 14000028	#The creation of resistance groups at Greece
+	random = no
+	country = GRE
+	
+	trigger = {
+		exists = GRE
+		event = 14000030 #Partitioning of Greece
+		event = 14000031 #Partitioning of Greece
+		war = { country = GRE  country = ITA }
+		war = { country = GRE  country = GER }
+		participant = { country = ITA value = 2 }
+		participant = { country = GER value = 2 }
+		}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	name = "The creation of resistance groups at Greece (EEAM,EDES,EAM,EKKA,ELAS...)."
+	desc = "After the fall of Greece many resistance groups are created by several thousand Greek officers and soldiers to liberate the mainland."
+	style = 2
+	picture = "revolte_grece"
+
+	action_a = {
+		ai_chance = 100
+		name = "Curses...!"
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 14000029 }
+		}
+	}
+
+
+event = {
+	id = 14000029	# The creation of resistance groups at Greece
+	random = no
+	TAG =  { GER ITA }
+
+	name = "The creation of resistance groups at Greece (EEAM,EDES,EAM,EKKA,ELAS...)."
+	desc = "After the fall of Greece many resistance groups are created by several thousand Greek officers and soldiers to liberate the mainland."
+	style = 2
+	picture = "revolte_grece"
+
+	action_a = {
+		name = ACTION_NAME_OK
+		ai_chance = 100
+		command = { type = dissent value = 3 }
+		}
+	}
+
+
+event = {
+	id = 14000030
+	random = no
+	country = GER
+	
+	name = "EVT_2022023_NAME" #Partitioning of Greece
+	desc = "EVT_2022023_DESC"
+	style = 2
+	picture = "Parthenon"
+
+	trigger = {
+		control = { province = 377 data = -3 } #Athens is allied-controlled
+		participant = { country = GER value = 2 } #is member of Axis
+		OR = {
+			alliance = { country = GER country = ITA }
+			alliance = { country = GER country = BUL }
+		}
+	}
+
+    date = { day = 1 month = january year = 1936 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_2022023_ACTIONA" #Divide the lands with our allies
+		command = { type = dissent value = -1 }
+		command = { trigger = { NOT = { claims = { province = 377 data = GER } } } type = addclaim which = 377 } #Athen
+		command = { trigger = { NOT = { claims = { province = 382 data = GER } } } type = addclaim which = 382 } #Irakleion
+		command = { trigger = { NOT = { claims = { province = 383 data = GER } } } type = addclaim which = 383 } #Mytilni
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 367 } #Ioannina
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 368 } #Larissa
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 369 } #Metsovo
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 371 } #Kerkyra
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 372 } #Patra
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 373 } #Corinth
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 374 } #Halkyda
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 375 } #Levadhia
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 376 } #Agrinion
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 380 } #Sitia
+		command = { trigger = { alliance = { country = GER country = ITA } } type = secedeprovince which = ITA value = 381 } #Ermoupoli				
+		command = { trigger = { alliance = { country = GER country = BUL } } type = secedeprovince which = BUL value = 363 } #Xanthi
+		command = { trigger = { alliance = { country = GER country = BUL } } type = secedeprovince which = BUL value = 364 } #Kavala
+		command = { trigger = { alliance = { country = GER country = BUL } } type = secedeprovince which = BUL value = 365 } #Thessaloniki
+		command = { trigger = { alliance = { country = GER country = BUL } } type = secedeprovince which = BUL value = 366 } #Kozani
+		command = { trigger = { alliance = { country = GER country = BUL } } type = secedeprovince which = BUL value = 370 } #Alexandroupoli
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_2022023_ACTIONB" #No, we deserve what we got 
+		command = { type = dissent value = 5 }
+		command = { trigger = { alliance = { country = GER country = ITA } } type = relation which = ITA value = -25 }
+		command = { trigger = { alliance = { country = GER country = BUL } } type = relation which = BUL value = -25 }		
+	}
+}
+event = {
+	id = 14000031
+	random = no
+	country = ITA
+	
+	name = "EVT_2022023_NAME" #Partitioning of Greece
+	desc = "EVT_2022023_DESC"
+	style = 2
+	picture = "Parthenon"
+
+	trigger = {
+		control = { province = 377 data = -3 } #Athens is allied-controlled
+		participant = { country = ITA value = 2 } #is member of Axis
+		OR = {
+			alliance = { country = ITA country = GER }
+			alliance = { country = ITA country = BUL }
+		}
+	}
+
+
+    date = { day = 1 month = january year = 1936 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_2022023_ACTIONA" #Divide the lands with our allies
+		command = { type = dissent value = -1 }
+		command = { trigger = { NOT = { claims = { province = 367 data = ITA } } } type = addclaim which = 367 } #Ioannina
+		command = { trigger = { NOT = { claims = { province = 368 data = ITA } } } type = addclaim which = 368 } #Larissa
+		command = { trigger = { NOT = { claims = { province = 368 data = ITA } } } type = addclaim which = 369 } #Metsovo
+		command = { trigger = { NOT = { claims = { province = 372 data = ITA } } } type = addclaim which = 372 } #Patra
+		command = { trigger = { NOT = { claims = { province = 373 data = ITA } } } type = addclaim which = 373 } #Corinth
+		command = { trigger = { NOT = { claims = { province = 374 data = ITA } } } type = addclaim which = 374 } #Halkyda
+		command = { trigger = { NOT = { claims = { province = 375 data = ITA } } } type = addclaim which = 375 } #Levadhia
+		command = { trigger = { NOT = { claims = { province = 376 data = ITA } } } type = addclaim which = 376 } #Agrinion
+		command = { trigger = { NOT = { claims = { province = 380 data = ITA } } } type = addclaim which = 380 } #Sitia
+		command = { trigger = { NOT = { claims = { province = 381 data = ITA } } } type = addclaim which = 381 } #Ermoupoli		
+		command = { trigger = { alliance = { country = ITA country = GER } } type = secedeprovince which = GER value = 377 } #Athen
+		command = { trigger = { alliance = { country = ITA country = GER } } type = secedeprovince which = GER value = 382 } #Irakleion
+		command = { trigger = { alliance = { country = ITA country = GER } } type = secedeprovince which = GER value = 383 } #Mytilni		
+		command = { trigger = { alliance = { country = ITA country = BUL } } type = secedeprovince which = BUL value = 363 } #Xanthi
+		command = { trigger = { alliance = { country = ITA country = BUL } } type = secedeprovince which = BUL value = 364 } #Kavala
+		command = { trigger = { alliance = { country = ITA country = BUL } } type = secedeprovince which = BUL value = 365 } #Thessaloniki
+		command = { trigger = { alliance = { country = ITA country = BUL } } type = secedeprovince which = BUL value = 366 } #Kozani
+		command = { trigger = { alliance = { country = ITA country = BUL } } type = secedeprovince which = BUL value = 370 } #Alexandroupoli
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_2022023_ACTIONB" #No, we deserve what we got 
+		command = { type = dissent value = 5 }
+		command = { trigger = { alliance = { country = ITA country = GER } } type = relation which = GER value = -25 }
+		command = { trigger = { alliance = { country = ITA country = BUL } } type = relation which = BUL value = -25 }	
+	}
+}
+event = {
+	id = 14000032
+	random = no
+	country = BUL
+	
+	name = "EVT_2022023_NAME" #Partitioning of Greece
+	desc = "EVT_2022023_DESC"
+	style = 2
+	picture = "Parthenon"
+
+	trigger = {
+		control = { province = 377 data = -3 } #Athens is allied-controlled
+		participant = { country = BUL value = 2 } #is member of Axis
+		OR = {
+			alliance = { country = BUL country = ITA }
+			alliance = { country = BUL country = GER }
+		}
+	}
+
+
+    date = { day = 1 month = january year = 1936 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_2022023_ACTIONA" #Divide the lands with our allies
+		command = { type = dissent value = -1 }
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 367 } #Ioannina
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 368 } #Larissa
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 369 } #Metsovo
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 371 } #Kerkyra
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 372 } #Patra
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 373 } #Corinth
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 374 } #Halkyda
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 375 } #Levadhia
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 376 } #Agrinion
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 380 } #Sitia
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = secedeprovince which = ITA value = 381 } #Ermoupoli				
+		command = { trigger = { alliance = { country = BUL country = GER } } type = secedeprovince which = GER value = 377 } #Athen
+		command = { trigger = { alliance = { country = BUL country = GER } } type = secedeprovince which = GER value = 382 } #Irakleion
+		command = { trigger = { alliance = { country = BUL country = GER } } type = secedeprovince which = GER value = 383 } #Mytilni		
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_2022023_ACTIONB" #No, we deserve what we got 
+		command = { type = dissent value = 5 }
+		command = { trigger = { alliance = { country = BUL country = ITA } } type = relation which = ITA value = -25 }
+		command = { trigger = { alliance = { country = BUL country = GER } } type = relation which = GER value = -25 }
+	}
+}
+
+
+event = {
+	id = 14000033	# The sink of the Elli I
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		event = 14000018 #Rise claims on Greece  
+		}
+
+	date = { day = 15 month = August year = 1940 }
+
+	name = "The sink of the Elli I."
+	desc = "The light cruiser Elli I was sunk during peacetime,on August 15,1940,while she rode at anchor,by the Italian submarine Delfino near the island of Tinos.The Elli was in Tinos participating in the celebrations of the Feast of the Dormition of the Theotokos.One of the three torpedoes fired hit the Elli under the one operating boiler and she caught fire and sunk.Nine petty officers and sailors were killed and 24 were wounded.Fragments of the torpedoes were recovered,and identified as Italian in origin..."
+	picture = "elli"
+
+	action_a = {
+		name = "Curses...!"
+		ai_chance = 100
+		command = { type = remove_division which = 15500 value = 41 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+event = {
+	id = 14000034	# The Greek government in exile
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		event = 14000027 #The General Tsolakogou signed a surrender protocol with Germans  
+		}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 30 month = december year = 1945 }
+
+	name = "The Greek government in exile."
+	desc = "The Greek government in exile was the official government of Greece,headed by King George II,which evacuated from Athens in April 1941,after the German invasion of the country,first to the island of Crete and then to Cairo in Egypt.Hence it is also referred to as the Cairo Government.It remained there until the German occupying forces withdrew from the country on 17 October 1944.Closely controlled by the British,it was the internationally recognized Greek government."
+	picture = "greekmiddleast"
+
+	action_a = {
+		name = "Run to the Middle East!"
+		ai_chance = 100
+		command = { type = secedeprovince which = ITA value = 370 when = 2 }
+		command = { type = secedeprovince which = ITA value = 363 when = 2 }
+		command = { type = secedeprovince which = ITA value = 365 when = 2 }
+		command = { type = secedeprovince which = ITA value = 364 when = 2 }
+		command = { type = secedeprovince which = ITA value = 366 when = 2 }
+		command = { type = secedeprovince which = ITA value = 368 when = 2 }
+		command = { type = secedeprovince which = ITA value = 369 when = 2 }
+		command = { type = secedeprovince which = ITA value = 376 when = 2 }
+		command = { type = secedeprovince which = ITA value = 367 when = 2 }
+		command = { type = secedeprovince which = ITA value = 371 when = 2 }
+		command = { type = secedeprovince which = ITA value = 375 when = 2 }
+		command = { type = secedeprovince which = ITA value = 377 when = 2 }
+		command = { type = secedeprovince which = ITA value = 374 when = 2 }
+		command = { type = secedeprovince which = ITA value = 383 when = 2 }
+		command = { type = secedeprovince which = ITA value = 381 when = 2 }
+		command = { type = secedeprovince which = ITA value = 372 when = 2 }
+		command = { type = secedeprovince which = ITA value = 373 when = 2 }
+		command = { type = secedeprovince which = ITA value = 380 when = 2 }
+		command = { type = secedeprovince which = ITA value = 382 when = 2 }
+		command = { type = event which = 14000035 where = GRE when = 30 }
+		}
+	}
+
+
+event = {
+	id = 14000035	#A new government more loyal to British
+	random = no
+	country = GRE
+	style = 2
+
+	name = "A new government more loyal to British."
+	desc = "King George II Closely controlled by the British installed a new government more loyal to them."
+	picture = "Monarchy_gr"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = foreignminister which = 90051 }
+		command = { type = armamentminister which = 90004 }
+		command = { type = chiefofstaff which = 90271 }
+		command = { type = chiefofnavy which = 90009 }
+		command = { type = sleepminister which = 90035 }
+		command = { type = sleepminister which = 90055 }
+		command = { type = sleepminister which = 90129 }
+		command = { type = sleepminister which = 90138 }
+		command = { type = sleepminister which = 90056 }
+		command = { type = sleepminister which = 90036 }
+		command = { type = sleepminister which = 90244 }
+		command = { type = sleepminister which = 90057 }
+		command = { type = sleepminister which = 90242 }
+		command = { type = sleepminister which = 90037 }
+		command = { type = sleepminister which = 90245 }
+		command = { type = sleepminister which = 90240 }
+		command = { type = sleepminister which = 90239 }
+		command = { type = free_ic value = 10 }
+		command = { type = free_money value = 4 }
+		command = { type = free_metal value = 7 }
+		command = { type = free_energy value = 9 }
+		command = { type = free_rare_materials value = 7 }
+		command = { type = free_oil value = 4 }
+		command = { type = relation which = ENG value = 200 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = event which = 14000036 where = GRE when = 30 }
+		}
+	}
+
+
+event = {
+	id = 14000036	#The evacuating of Hellenic Royal Navy at Middle East
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The evacuating of Hellenic Royal Navy at Middle East."
+	desc = "The Hellenic Royal Navy losing over 20 ships within a few days in April 1941.Its chief,Vice Admiral Alexandros Sakellariou,managed to save some of its ships,including the cruiser Averof,six destroyers,five submarines and several support ships,by evacuating them to Alexandria.The fleet was subsequently expanded by several ships handed over by the British Royal Navy,until it became, with 44 ships and over 8,500 men,the second-largest Allied Navy in the Mediterranean after the RN."
+	picture = "hellenicnavy"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = add_corps which = "Georgios Averoff" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "Georgios Averoff" value = heavy_cruiser when = 2 }
+		command = { type = add_corps which = "Wild Beast class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "Wild Beast class" value = destroyer when = 2 }
+		command = { type = add_corps which = "Wild Beast class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "Wild Beast class" value = destroyer when = 2 }
+		command = { type = add_corps which = "Glaykos class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "Glaykos class" value = submarine when = 1 }
+		command = { type = add_corps which = "Glaykos class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "Glaykos class" value = submarine when = 1 }
+		command = { type = add_corps which = "Transport Group" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "Transport Group" value = transport when = 0 }
+		command = { type = event which = 14000037 where = GRE when = 30 }
+		}
+	}
+
+
+event = {
+	id = 14000037	#The reorganisation of Hellenic royal navy by Allies
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The reorganisation of Hellenic royal navy by Allies."
+	desc = "The fleet was subsequently expanded by several destroyers,submarines,mine-sweepers and other vessels handed over by the Allies,until it became,with 44 ships and over 8,500 men,the second-largest Allied Navy in the Mediterranean after the RN.The Greek ships served in convoy escort duties in the Indian Ocean,the Mediterranean,the Atlantic and Arctic Oceans."
+	picture = "hellenicnavy1"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = add_corps which = "W-class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "W-class" value = destroyer when = 5 }
+		command = { type = add_corps which = "W-class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "W-class" value = destroyer when = 5 }
+		command = { type = add_corps which = "W-class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "W-class" value = destroyer when = 5 }
+		command = { type = add_corps which = "S-boat-class" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "S-boat-class" value = submarine when = 6 }
+		command = { type = add_corps which = "Transport Group" value = naval when = 90081 where = 852 }
+		command = { type = add_division which = "Transport Group" value = transport when = 2 }
+		command = { type = event which = 14000038 where = GRE when = 30 }
+		}
+	}
+
+
+event = {
+	id = 14000038	#The forming of Royal Hellenic Army in the Middle East(VESMA) 
+	random = no
+	country = GRE
+	style = 2
+
+	name = "The forming of Royal Hellenic Army in the Middle East(VESMA)."
+	desc = "In the face of the overwhelming German advance into Greece,several thousand Greek officers and soldiers were either evacuated,along with the Greek government,to Egypt,in April–May 1941, or managed to flee,mainly via neutral Turkey,to the British-controlled Middle East.There they were placed under British command and re-equipped with British arms,complemented by volunteers from the local Greek communities,forming the Royal Hellenic Army in the Middle East(VESMA)."
+	picture = "greekmiddleast"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = add_corps which = "1.Taxiarhia Pezikou" value = land when = 90005 where = 852 }
+		command = { type = add_division which = "1.Taxiarhia Pezikou" value = infantry when = 9 }
+		command = { type = add_corps which = "2.Taxiarhia Pezikou" value = land when = 90108 where = 852 }
+		command = { type = add_division which = "2.Taxiarhia Pezikou" value = infantry when = 9 }
+		command = { type = add_corps which = "3.Oreini Taxiarhia" value = land when = 90022 where = 852 }
+		command = { type = add_division which = "3.Oreini Taxiarhia" value = bergsjaeger when = 8 }
+		command = { type = add_corps which = "3.Taxiarhia Ieros Lohos" value = land when = 90010 where = 852 }
+		command = { type = add_division which = "3.Taxiarhia Ieros Lohos" value = marine when = 3 }
+		command = { type = add_corps which = "Arhigeio Stratou" value = land when = 90107 where = 852 }
+		command = { type = add_division which = "Arhigeio Stratou" value = hq when = 3 }
+		}
+	}
+
+
+event = { 
+	id = 14000040
+	random = no
+	country = ENG
+	
+	# Triggered by GRE 14000021
+
+	name = "Greco-Italian War."
+	desc = "The Greco-Italian War, also known as the Italo-Greek War', was a conflict between Italy and Greece, which lasted from 28 October 1940 to 23 April 1941. The conflict marked the beginning of the Balkan campaign of World War II and the initial Greek counter offensive, the first successful land campaign against the Axis in the war.The conflict known as the Battle of Greece began with the intervention of Nazi Germany on 6 April 1941.In Greece, it is known as the 'War of '40' and in Italy as the 'War of Greece'"
+	style = 2
+	picture = "Mussolini"
+	
+	action_a = {
+		name = ACTION_NAME_OK
+		command = { trigger = { NOT = { alliance = { country = ENG country = GRE } } } type = alliance which = GRE }
+		command = { type = relation which = GRE value = 200 }
+		command = { type = removecore which = 852 where = -1 }
+		command = { type = removeclaim which = 852 where = -1 }
+		command = { type = secedeprovince which = GRE value = 852 when = 2 }
+	}
+}
+
+################
+# Italy at war with greece   DB  just sets invasion on and a flag, incase ita DOW on gre on its on
+#############################################
+event = {
+	id = 14000052
+	random = no 
+	country = ITA
+
+	trigger = {
+		ai = yes
+		exists = GRE
+		war =  { country = GRE }    #  db
+		NOT = { war = { country = GER } }
+		NOT = { lost_national = { country = ITA value = 10 } }
+		NOT = { local_flag = ITADefendItaly }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 1 month = january year = 1938 }
+	offset = 1   #7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/ITA_invasion_On.ai" }
+		command = { type = local_setflag which = ITAWarGreece }
+	}
+}
+
+################
+# Turn invasion off Greece is no more   DB
+#############################################
+event = {
+	id = 14000053
+	random = no 
+	country = ITA
+
+	trigger = {
+		ai = yes
+		local_flag = ITAWarGreece
+		OR = {
+			event = 14000027 #The General Tsolakogou signed a surrender protocol with Germans
+			event = 14000024 #Establishment of The Hellenic State
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 1 month = january year = 1938 }
+	offset = 1   #7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/ITA_invasion_off.ai" }
+		command = { type = local_setflag which = ITANoGreece }
+		command = { type = local_clrflag which = ITAWarGreece }
+		
+	}
+}

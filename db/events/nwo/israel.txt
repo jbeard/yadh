@@ -1,0 +1,2647 @@
+event = {
+	id = 8007601
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 675001 } # Chaim Weizmann
+		command = { type = headofgovernment which = 675002 } # David Ben Gurion
+		command = { type = foreignminister which = 675003 } # Moshe Sharett
+		command = { type = armamentminister which = 675004 } # Levi Eshkol
+		command = { type = ministerofsecurity which = 675005 } # Golda Meir
+		command = { type = ministerofintelligence which = 675006 } # Yigal Allon
+		command = { type = chiefofstaff which = 675007 } # Yigael Yadin
+		command = { type = chiefofarmy which = 675008 } # Yigal Allon
+		command = { type = chiefofnavy which = 675009 } # Yedidia Ya'ari
+		command = { type = chiefofair which = 675010 } # Haim Laskov
+	}
+}
+
+event = {
+	id = 8007602
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 675001 } # Chaim Weizmann
+		command = { type = headofgovernment which = 675002 } # David Ben Gurion
+		command = { type = ministerofsecurity which = 675049 } # Yitzhak Gruenbaum
+		command = { type = ministerofintelligence which = 675050 } # Yosef Sprinzak
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 675001 } # Chaim Weizmann
+		command = { type = headofgovernment which = 675100 } # Ari Jabotinsky
+		command = { type = ministerofsecurity which = 675049 } # Yitzhak Gruenbaum
+		command = { type = ministerofintelligence which = 675050 } # Yosef Sprinzak
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007603
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 675001 } # Chaim Weizmann
+		command = { type = headofgovernment which = 675002 } # David Ben Gurion
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 675001 } # Chaim Weizmann
+		command = { type = headofgovernment which = 675101 } # Yitzhak Rafael
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007604
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+		NOT = {  headofstate = 675048 }
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+	}
+}
+
+event = {
+	id = 8007605
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		headofgovernment = 675002
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofgovernment which = 675102 } # Moshe Sharett
+	}
+}
+
+event = {
+	id = 8007606
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofgovernment which = 675002 } # David Ben Gurion
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofgovernment which = 675103 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007607
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofgovernment which = 675002 } # David Ben Gurion
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofgovernment which = 675103 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8007608
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofgovernment which = 675002 } # David Ben Gurion
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofgovernment which = 675103 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007609
+	country = ISR
+
+	name = EVT_8007609_NAME
+	desc = EVT_8007609_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 23 month = april year = 1963 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = EVT_DEATH
+		command = { type = sleepminister which = 675048 } # Yitzhak Ben Zvi
+		command = { type = headofstate which = 675104 } # Zalman Shazar
+	}
+}
+
+event = {
+	id = 8007610
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 675105 } # Levi Eshkol
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675106 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007611
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 675107 } # Golda Meir
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675106 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8007612
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 675108 } # Ephraim Katzir
+	}
+}
+
+event = {
+	id = 8007613
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 675109 } # Yitzhak Rabin
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675106 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007614
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675106 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 675113 } # Shimon Peres
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007615
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 675110 } # Yitzhak Navon
+	}
+}
+
+event = {
+	id = 8007616
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1981 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675106 } # Menachem Begin
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 675113 } # Shimon Peres
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007617
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 675111 } # Yitzhak Shamir
+	}
+}
+
+event = {
+	id = 8007618
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 675112 } # Chaim Herzog
+	}
+}
+
+event = {
+	id = 8007619
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 675113 } # Shimon Peres
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675111 } # Yitzhak Shamir
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007620
+	country = ISR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675111 } # Yitzhak Shamir
+	}
+}
+
+event = {
+	id = 8007621
+	country = ISR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 675111 } # Yitzhak Shamir
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 675113 } # Shimon Peres
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+### War of Independence
+
+# End of the British Mandate for Palestine: UK cedes Palestine to independent Jordan and Egypt
+event = {
+	id = 8007622
+	country = ENG
+
+	name = EVT_8007622_NAME
+	desc = EVT_8007622_DESC
+	picture = "nwo\british_mandate_for_palestine"
+	style = 1
+	
+	trigger = {
+		owned = { province = 1172 data = -1 } # Jerusalem
+		owned = { province = 1008 data = -1 } # Tel Aviv
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8007622_A
+		command = { trigger = { NOT = { exists = JOR } } type = independence which = JOR value = 0 }
+		
+		command = { type = secedeprovince which = EGY value = 1004 when = 1 } # El Arish
+		command = { type = secedeprovince which = EGY value = 1005 when = 1 } # Sharm El-Sheik
+		command = { type = secedeprovince which = EGY value = 1006 when = 1 } # Al Quantarah
+		command = { type = secedeprovince which = EGY value = 1007 when = 1 } # Bur Tawfiq
+		command = { type = secedearea which = JOR value = "Transjordan" when = 1 }
+		command = { type = secedeprovince which = LEB value = 1018 when = 1 } # Trablos
+		command = { type = secedeprovince which = LEB value = 1019 when = 1 } # Beirut
+		command = { type = secedearea which = SYR value = "Lebanon_Syria" when = 1 }
+		# Province revolt rises
+		command = { type = province_revoltrisk which = 1008 value = 20 }
+		command = { type = province_revoltrisk which = 1009 value = 20 }
+		command = { type = province_revoltrisk which = 1010 value = 20 }
+		command = { type = province_revoltrisk which = 1011 value = 20 }
+		command = { type = province_revoltrisk which = 1013 value = 20 }
+		command = { type = province_revoltrisk which = 1172 value = 20 }
+	}
+
+}
+
+# United Nations Partition Plan
+event = {
+	id = 8007623
+	country = ENG
+
+	name = EVT_8007623_NAME
+	desc = EVT_8007623_DESC
+	picture = "nwo\un_parition_of_palestine"
+	style = 1
+
+	trigger = {
+		owned = { province = 1172 data = -1 } # Jerusalem
+		owned = { province = 1008 data = -1 } # Tel Aviv
+		event = 8007610
+	}
+
+	date = { day = 1 month = march year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Agree to the partition as proposed by UN
+	action = {
+		name = EVT_8007623_A
+		ai_chance = 90
+		command = { type = independence which = ISR value = 0 }
+		command = { type = independence which = PAL value = 0 }
+		# Province revolt rises
+		command = { type = province_revoltrisk which = 1008 value = -20 }
+		command = { type = province_revoltrisk which = 1009 value = -20 }
+		command = { type = province_revoltrisk which = 1010 value = -20 }
+		command = { type = province_revoltrisk which = 1011 value = -20 }
+		command = { type = province_revoltrisk which = 1013 value = -20 }
+		command = { type = province_revoltrisk which = 1172 value = -20 }
+		# Independence to Israel and Palestine
+		command = { type = trigger which = 8007624 }
+		command = { type = trigger which = 8007622 }
+	}
+
+	# Set up a Jewish state (Arabs will rebel and declare war)
+	action = {
+		name = EVT_8007623_B
+		ai_chance = 8
+		command = { type = dissent value = 12 }
+		command = { type = belligerence value = 15 }
+		command = { type = independence which = ISR value = 0 }
+		command = { type = independence which = PAL value = 0 }
+		# Province revolt rises
+		command = { type = province_revoltrisk which = 1008 value = -10 }
+		command = { type = province_revoltrisk which = 1009 value = -10 }
+		command = { type = province_revoltrisk which = 1010 value = -10 }
+		command = { type = province_revoltrisk which = 1011 value = -10 }
+		command = { type = province_revoltrisk which = 1013 value = -10 }
+		command = { type = province_revoltrisk which = 1172 value = -10 }
+		# Independence to Israel, Palestinian revolt
+		command = { type = trigger which = 8007624 }
+		command = { type = trigger which = 8007627 }
+	}
+
+	# Set up an Arab Palestinian state (Jews will rebel)
+	action = {
+		name = EVT_8007623_C
+		ai_chance = 2
+		command = { type = dissent value = 12 }
+		command = { type = belligerence value = 15 }
+		command = { type = independence which = ISR value = 0 }
+		command = { type = independence which = PAL value = 0 }
+		# Province revolt rises
+		command = { type = province_revoltrisk which = 1008 value = -10 }
+		command = { type = province_revoltrisk which = 1009 value = -10 }
+		command = { type = province_revoltrisk which = 1010 value = -10 }
+		command = { type = province_revoltrisk which = 1011 value = -10 }
+		command = { type = province_revoltrisk which = 1013 value = -10 }
+		command = { type = province_revoltrisk which = 1172 value = -10 }
+		# Independence to Palestine, Jewish revolt
+		command = { type = trigger which = 8007625 } 
+		command = { type = trigger which = 8007626 } 
+	}
+
+	# Stay there even without a mandate
+	action = {
+		name = EVT_8007623_D
+		ai_chance = 0
+		command = { type = dissent value = 24 }
+		command = { type = belligerence value = 30 }
+		# Province revolt rises even further
+		command = { type = province_revoltrisk which = 1008 value = 20 }
+		command = { type = province_revoltrisk which = 1009 value = 20 }
+		command = { type = province_revoltrisk which = 1010 value = 20 }
+		command = { type = province_revoltrisk which = 1011 value = 20 }
+		command = { type = province_revoltrisk which = 1013 value = 20 }
+		command = { type = province_revoltrisk which = 1172 value = 20 }
+	
+	}
+}
+
+# Israeli declaration of independence
+event = {
+	id = 8007624
+	country = ISR
+	save_date = yes
+
+	name = EVT_8007624_NAME
+	desc = EVT_8007624_DESC
+	picture = "nwo\independence_of_israel"
+	style = 1
+
+	action = {
+		name = "OK"
+		command = { type = leave_alliance }
+		command = { type = dissent value = -10 }
+		command = { type = trigger which = 8007601 } # Setting up the first government
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }
+		
+		command = { type = secedeprovince which = PAL value = 1013 when = 1 }
+		
+		# Adding claims
+		command = { type = addcore which = 1008 }
+		command = { type = addcore which = 1010 }
+		command = { type = addcore which = 1011 }
+		command = { type = addcore which = 1009 }
+		command = { type = addcore which = 1013 }
+		command = { type = addcore which = 1172 } # Jerusalem
+	}
+
+}
+
+# Israeli revolt
+event = {
+	id = 8007625
+	country = ISR
+	save_date = yes
+
+	name = EVT_8007625_NAME
+	desc = EVT_8007625_DESC
+	picture = "nwo\independence_of_israel"
+	style = 1
+
+	action = {
+		name = "OK"
+		command = { type = leave_alliance }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 8007601 } # Setting up the first government
+		command = { type = add_division value = militia when = 5 }
+		command = { type = add_division value = militia when = 5 }
+		command = { type = add_division value = militia when = 5 }
+		
+		# Adding claims
+		command = { type = addcore which = 1008 }
+		command = { type = addcore which = 1010 }
+		command = { type = addcore which = 1011 }
+		command = { type = addcore which = 1009 }
+		command = { type = addcore which = 1013 }
+		command = { type = addcore which = 1172 }
+	}
+
+}
+
+# Palestinian declaration of independence
+event = {
+	id = 8007626
+	country = PAL
+	save_date = yes
+
+	name = EVT_8007626_NAME
+	desc = EVT_8007626_DESC
+	picture = "nwo\independence_of_palestine"
+	style = 1
+
+	action = {
+		name = "OK"
+		command = { type = leave_alliance }
+		command = { type = dissent value = -3 }
+		#command = { type = trigger which = 8007601 } # Setting up the first government
+		command = { type = add_division value = infantry when = 13 }	
+		command = { type = add_division value = militia when = 5 }
+		command = { type = add_division value = militia when = 5 }
+		command = { type = add_division value = militia when = 5 }
+		
+		# Adding claims
+		command = { type = addcore which = 1008 }
+		command = { type = addcore which = 1010 }
+		command = { type = addcore which = 1011 }
+		command = { type = addcore which = 1009 }
+		command = { type = addcore which = 1013 }
+		command = { type = addcore which = 1172 }
+	}
+}
+
+# Palestinian revolt
+event = {
+	id = 8007627
+	country = PAL
+	save_date = yes
+
+	name = EVT_8007627_NAME
+	desc = EVT_8007627_DESC
+	picture = "nwo\independence_of_palestine"
+	style = 1
+
+	action = {
+		name = "OK"
+		command = { type = leave_alliance }
+		command = { type = dissent value = 20 }
+		#command = { type = trigger which = 8007601 } # Setting up the first government
+		command = { type = add_division value = militia when = 5 }
+		command = { type = add_division value = militia when = 5 }
+		# Adding claims
+		command = { type = addcore which = 1008 }
+		command = { type = addcore which = 1010 }
+		command = { type = addcore which = 1011 }
+		command = { type = addcore which = 1009 }
+		command = { type = addcore which = 1013 }
+		command = { type = addcore which = 1172 }
+	}
+
+}
+
+### Civil War of 1948
+event = {
+	id = 8007640
+	country = ISR
+	picture = "nwo\palestine_civil_war_1948"
+	decision_picture = "nwo\d_palestine_civil_war_1948"
+	style = 1
+
+	decision = {
+		exists = PAL
+	}
+
+	decision_trigger = {
+		exists = PAL
+		OR = {
+			event = { id = 8007624 days = 50 }
+			event = { id = 8007625 days = 50 }
+		}
+		OR = {
+			event = { id = 8007626 days = 50 }
+			event = { id = 8007627 days = 50 }
+		}
+	}
+	
+	trigger = {
+		exists = PAL
+		OR = {
+			event = { id = 8007624 days = 50 }
+			event = { id = 8007625 days = 50 }
+		}
+		OR = {
+			event = { id = 8007626 days = 50 }
+			event = { id = 8007627 days = 50 }
+		}
+	}
+
+	name = EVT_8007640_NAME
+	desc = EVT_8007640_DESC
+
+	date = { day = 1 month = may year = 1948 }
+	offset = 150
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8007640_A
+		ai_chance = 99
+		command = { type = war which = PAL }
+		command = { type = sleepevent which = 8007641 }
+	}
+
+	action = {
+		name = EVT_8007640_B
+		trigger = { ai = yes }
+		ai_chance = 1
+		command = { type = dissent value = 25 }
+		command = { type = domestic which = interventionism value = -4 }
+	}
+}
+
+event = {
+	id = 8007641
+	country = PAL
+	picture = "nwo\palestine_civil_war_1948"
+	decision_picture = "nwo\d_palestine_civil_war_1948"
+	style = 1
+
+	decision = {
+		exists = ISR
+	}
+
+	decision_trigger = {
+		exists = ISR
+		OR = {
+			event = { id = 8007624 days = 50 }
+			event = { id = 8007625 days = 50 }
+		}
+		OR = {
+			event = { id = 8007626 days = 50 }
+			event = { id = 8007627 days = 50 }
+		}
+	}
+
+	
+	trigger = {
+		exists = ISR
+		OR = {
+			event = { id = 8007624 days = 50 }
+			event = { id = 8007625 days = 50 }
+		}
+		OR = {
+			event = { id = 8007626 days = 50 }
+			event = { id = 8007627 days = 50 }
+		}
+	}
+
+	name = EVT_8007641_NAME
+	desc = EVT_8007641_DESC
+
+	date = { day = 1 month = may year = 1948 }
+	offset = 150
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8007641_A
+		ai_chance = 99
+		command = { type = war which = ISR }
+		command = { type = sleepevent which = 8007640 }
+	}
+
+	action = {
+		name = EVT_8007641_B
+		trigger = { ai = yes }
+		ai_chance = 1
+		command = { type = dissent value = 25 }
+		command = { type = domestic which = interventionism value = -4 }
+	}
+}
+
+### Israeli-Arab War of 1948
+
+# Army of Israel
+event = {
+	id = 8007649
+	country = ISR
+
+	name = EVT_8007649_NAME
+	desc = EVT_8007649_DESC
+	picture = "nwo\independence_of_israel"
+	style = 1
+
+	date = { day = 28 month = april year = 1948 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8007649_A
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = garrison when = 5 }
+		
+		command = { type = add_corps where = 1010 }
+		command = { type = add_division value = garrison when = 5 }
+		command = { type = add_division value = garrison when = 5 }
+		command = { type = add_corps where = 1008 }
+		command = { type = add_division value = garrison when = 5 }
+		command = { type = add_division value = garrison when = 5 }
+		command = { type = add_corps where = 1011 }
+		command = { type = add_division value = garrison when = 5 }
+		command = { type = add_division value = garrison when = 5 }
+		
+		command = { type = morale which = infantry value = 10 }
+		command = { type = morale which = militia value = 10 }
+		command = { type = morale which = motorized value = 10 }
+	}
+
+}
+
+# Egypt proclaims the war
+
+event = {
+	id = 8007650
+	country = EGY
+	save_date = yes
+
+	decision = {
+		OR = {
+			event = 8007640
+			event = 8007641
+		}
+		exists = ISR
+	}
+
+	trigger = {
+		OR = {
+			event = 8007640
+			event = 8007641
+		}
+		exists = ISR
+	}
+
+	name = EVT_8007650_NAME
+	desc = EVT_8007650_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = may year = 1948 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Declare war
+	action = {
+		name = EVT_8007650_A
+		ai_chance = 97
+		command = { type = leave_alliance }
+		command = { type = end_puppet }
+		command = { type = war which = ISR }
+		command = { type = setflag which = arab_israeli_war_1948 }
+		command = { type = add_corps where = 789 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }
+	}
+	
+	# Stay out of war
+	action = {
+		name = EVT_8007650_B
+		trigger = { ai = yes }
+		ai_chance = 3
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+# Transjordan joins the war
+event = {
+	id = 8007651
+	country = JOR
+
+	decision = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	trigger = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	name = EVT_8007651_NAME
+	desc = EVT_8007651_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Declare war
+	action = {
+		name = EVT_8007651_A
+		ai_chance = 97
+		command = { type = leave_alliance }
+		command = { type = alliance which = EGY }
+		command = { type = add_corps where = 1023 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_corps where = 1026 }
+		command = { type = add_division value = infantry when = 13 }
+	}
+	
+	# Stay out of war
+	action = {
+		name = EVT_8007651_B
+		trigger = { ai = yes }
+		ai_chance = 3
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+# Syria joins the war
+event = {
+	id = 8007652
+	country = SYR
+
+	decision = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	trigger = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	name = EVT_8007651_NAME
+	desc = EVT_8007651_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Declare war
+	action = {
+		name = EVT_8007651_A
+		ai_chance = 95
+		command = { type = leave_alliance }
+		command = { type = alliance which = EGY }
+		command = { type = add_corps where = 1020 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_corps where = 1025 }
+		command = { type = add_division value = infantry when = 13 }
+	}
+	
+	# Stay out of war
+	action = {
+		name = EVT_8007651_B
+		trigger = { ai = yes }
+		ai_chance = 5
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+# Lebanon joins the war
+event = {
+	id = 8007653
+	country = LEB
+
+	decision = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	trigger = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	name = EVT_8007651_NAME
+	desc = EVT_8007651_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Declare war
+	action = {
+		name = EVT_8007651_A
+		ai_chance = 95
+		command = { type = leave_alliance }
+		command = { type = alliance which = EGY }
+		command = { type = add_corps where = 1019 }
+		command = { type = add_division value = infantry when = 13 }
+	}
+	
+	# Stay out of war
+	action = {
+		name = EVT_8007651_B
+		trigger = { ai = yes }
+		ai_chance = 5
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+# Iraq joins the war
+event = {
+	id = 8007654
+	country = IRQ
+
+	decision = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	trigger = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	name = EVT_8007651_NAME
+	desc = EVT_8007651_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Declare war
+	action = {
+		name = EVT_8007651_A
+		ai_chance = 92
+		command = { type = leave_alliance }
+		command = { type = alliance which = EGY }
+		command = { type = add_corps where = 1030 }
+		command = { type = add_division value = infantry when = 13 }
+	}
+	
+	# Stay out of war
+	action = {
+		name = EVT_8007651_B
+		trigger = { ai = yes }
+		ai_chance = 8
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}
+
+# Arabia joins the war /ahistorical/
+event = {
+	id = 8007657
+	country = IRQ
+
+	decision = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	trigger = {
+		event = 8007650
+		war = { country = EGY country = ISR }
+	}
+
+	name = EVT_8007651_NAME
+	desc = EVT_8007651_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Declare war
+	action = {
+		name = EVT_8007651_A
+		ai_chance = 3
+		command = { type = leave_alliance }
+		command = { type = alliance which = EGY }
+	}
+	
+	# Stay out of war
+	action = {
+		name = EVT_8007651_B
+		trigger = { ai = yes }
+		ai_chance = 97
+		command = { type = money value = 1 }
+	}
+
+}
+
+# Union of Transjordan and Palestine
+event = {
+	id = 8007655
+	country = JOR
+
+	decision = {
+		OR = {
+			exists = PAL
+			war = { country = JOR country = ISR }
+		}
+		ai = PAL
+		war = { country = ISR country = PAL }
+		NOT = { event = 8007656 }
+	}
+
+	trigger = {
+		OR = {
+			exists = PAL
+			war = { country = JOR country = ISR }
+		}
+		ai = PAL
+		war = { country = ISR country = PAL }
+		NOT = { event = 8007656 }
+	}
+
+	name = EVT_8007655_NAME
+	desc = EVT_8007655_DESC
+	picture = "nwo\king_abdullah"
+	style = 1
+
+	date = { day = 1 month = november year = 1948 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1950 }
+
+	# Unite
+	action = {
+		name = EVT_8007655_A
+		command = { type = inherit which = PAL value = 1 } # with troops
+		command = { type = addclaim which = 1172 }
+		command = { type = addclaim which = 1013 }
+		command = { type = name where = JOR which = "JOR49" }
+	}
+}
+
+# Union of Transjordan and Palestine - second event
+event = {
+	id = 8007656
+	country = JOR
+
+	decision = {
+		NOT = { exists = PAL }
+		OR = {
+			event = 8007661
+			event = 8007662
+		}
+		NOT = { event = 8007655 }
+	}
+
+	trigger = {
+		NOT = { exists = PAL }
+		OR = {
+			event = 8007661
+			event = 8007662
+		}
+		NOT = { event = 8007655 }
+	}
+
+	name = EVT_8007655_NAME
+	desc = EVT_8007655_DESC
+	picture = "nwo\king_abdullah"
+	style = 1
+
+	date = { day = 1 month = november year = 1948 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1950 }
+
+	# Unite
+	action = {
+		name = EVT_8007655_A
+		command = { type = inherit which = PAL value = 1 } # with troops
+		command = { type = addclaim which = 1172 }
+		command = { type = addclaim which = 1013 }
+		command = { type = name where = JOR which = "JOR49" }
+	}
+}
+
+### Conclusion of Arab-Israeli War of 1948
+
+# Total victory of Arabs
+event = {
+	id = 8007660
+	tag = { EGY JOR LEB SYR IRQ }
+
+	trigger = {
+		NOT = { exists = ISR }
+		flag = arab_israeli_war_1948
+		control = { province = 1172 data = -1 } # Jerusalem
+	}
+
+	name = EVT_8007660_NAME
+	desc = EVT_8007660_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Set up Palestinian government
+	action = {
+		name = EVT_8007660_A
+		command = { type = independence which = PAL value = 0 }
+		command = { type = clrflag which = arab_israeli_war_1948 }
+		
+		command = { type = secedeprovince which = PAL value = 1172 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1009 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1013 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1011 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1008 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1010 when = 2 }
+	}
+
+	# Stay
+	action = {
+		name = EVT_8007660_B
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 20 }
+		command = { type = clrflag which = arab_israeli_war_1948 }
+	}
+}
+
+
+# Stalemate
+event = {
+	id = 8007661
+	country = ISR
+
+	trigger = {
+		flag = arab_israeli_war_1948
+		OR = {
+			NOT = { control = { province = 1008 data = -1 } } # Tel Aviv
+			NOT = { control = { province = 1013 data = -1 } } # Haifa
+		}
+		event = { id = 8007650 days = 50 }
+	}
+
+	name = EVT_8007661_NAME
+	desc = EVT_8007661_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = december year = 1948 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8007661_A
+		command = { type = dissent value = 10 }
+		# Make peace with belligerents
+		command = { type = peace which = EGY value = 0 }
+		command = { type = peace which = JOR value = 0 }
+		command = { type = peace which = SYR value = 0 }
+		command = { type = peace which = LEB value = 0 }
+		command = { type = peace which = IRQ value = 0 }
+		# Give independence in case we annexed anyone
+		command = { type = independence which = EGY value = 0 }
+		command = { type = independence which = JOR value = 0 }
+		command = { type = independence which = SYR value = 0 }
+		command = { type = independence which = LEB value = 0 }
+		command = { type = independence which = IRQ value = 0 }
+		# Give Palestine to Jordan
+		command = { type = secedeprovince which = JOR value = 1172 when = 2 }
+		command = { type = secedeprovince which = JOR value = 1013 when = 2 }
+		command = { type = secedeprovince which = EGY value = 1009 when = 2 }
+		command = { type = clrflag which = arab_israeli_war_1948 }
+		# Reverse the morale boost
+		command = { type = morale which = infantry value = -10 }
+		command = { type = morale which = militia value = -10 }
+		command = { type = morale which = motorized value = -10 }
+	}
+}
+
+# Historical, tactical victory of Israel
+event = {
+	id = 8007662
+	country = ISR
+
+	trigger = {
+		flag = arab_israeli_war_1948
+		control = { province = 1008 data = -1 } # Tel Aviv
+		NOT = {
+			control = { province = 1769 data = -1 } # Amman
+		}
+		event = { id = 8007650 days = 50 }
+	}
+
+	name = EVT_8007662_NAME
+	desc = EVT_8007662_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = december year = 1948 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8007662_A
+		# Make peace with belligerents
+		command = { type = peace which = EGY value = 0 }
+		command = { type = peace which = JOR value = 0 }
+		command = { type = peace which = SYR value = 0 }
+		command = { type = peace which = LEB value = 0 }
+		command = { type = peace which = IRQ value = 0 }
+		# Give independence in case we annexed anyone
+		command = { type = independence which = EGY value = 0 }
+		command = { type = independence which = JOR value = 0 }
+		command = { type = independence which = SYR value = 0 }
+		command = { type = independence which = LEB value = 0 }
+		command = { type = independence which = IRQ value = 0 }
+		command = { type = secedeprovince which = JOR value = 1172 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1013 when = 2 }
+		command = { type = secedeprovince which = EGY value = 1009 when = 2 }
+		# Our country is stronger
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = clrflag which = arab_israeli_war_1948 }
+		# Reverse the morale boost
+		command = { type = morale which = infantry value = -10 }
+		command = { type = morale which = militia value = -10 }
+		command = { type = morale which = motorized value = -10 }
+	}
+}
+
+
+# Total victory of Israel
+event = {
+	id = 8007663
+	country = ISR
+
+	trigger = {
+		flag = arab_israeli_war_1948
+		control = { province = 1008 data = -1 } # Tel Aviv
+		# All of Palestine
+		area = { area = "Palestine" country = -1 data = 1 value = 100 }
+		control = { province = 1769 data = -1 } # Amman
+	}
+
+	name = EVT_8007663_NAME
+	desc = EVT_8007663_DESC
+	picture = "nwo\arab_israeli_war_1948"
+	style = 1
+
+	date = { day = 1 month = june year = 1948 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	# Settle for our demands
+	action = {
+		name = EVT_8007663_A
+		ai_chance = 75
+		# Make peace with belligerents
+		command = { type = peace which = EGY value = 0 }
+		command = { type = peace which = JOR value = 0 }
+		command = { type = peace which = SYR value = 0 }
+		command = { type = peace which = LEB value = 0 }
+		command = { type = peace which = IRQ value = 0 }
+		# Give independence in case we annexed anyone
+		command = { type = independence which = EGY value = 0 }
+		command = { type = independence which = JOR value = 0 }
+		command = { type = independence which = SYR value = 0 }
+		command = { type = independence which = LEB value = 0 }
+		command = { type = independence which = IRQ value = 0 }
+		# Secede provinces
+		command = { type = secedeprovince which = ISR value = 1172 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1013 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1009 when = 2 }
+		# Our country is stronger
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = clrflag which = arab_israeli_war_1948 }
+		# Reverse the morale boost
+		command = { type = morale which = infantry value = -10 }
+		command = { type = morale which = militia value = -10 }
+		command = { type = morale which = motorized value = -10 }
+	}
+
+	# Strive for Greater Israel!
+	action = {
+		name = EVT_8007663_B
+		ai_chance = 25
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 20 }
+		# Make peace with belligerents
+		command = { type = peace which = EGY value = 0 }
+		command = { type = peace which = JOR value = 0 }
+		command = { type = peace which = IRQ value = 0 }
+		# Give independence in case we annexed anyone
+		command = { type = independence which = EGY value = 0 }
+		command = { type = independence which = JOR value = 0 }
+		command = { type = independence which = SYR value = 0 }
+		command = { type = independence which = LEB value = 0 }
+		command = { type = independence which = IRQ value = 0 }
+		# Secede provinces
+		command = { type = secedeprovince which = ISR value = 1172 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1013 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1009 when = 2 }
+		# Our country is stronger
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = clrflag which = arab_israeli_war_1948 }
+		# Add further claims
+		command = { type = addclaim which = 1026 }
+		command = { type = addclaim which = 1023 }
+		command = { type = addclaim which = 1020 }
+		command = { type = addclaim which = 1019 } # Beirut
+		command = { type = addclaim which = 1018 } # Trablos
+		command = { type = addclaim which = 1016 } # Damascus
+		command = { type = addclaim which = 1004 } # Sinai
+		command = { type = addclaim which = 1005 } # Sinai
+		command = { type = addclaim which = 1006 } # Sinai
+		command = { type = addclaim which = 1007 } # Sinai
+		# Reverse the morale boost
+		command = { type = morale which = infantry value = -10 }
+		command = { type = morale which = militia value = -10 }
+		command = { type = morale which = motorized value = -10 }
+	}
+}
+
+# Law of Return
+event = {
+	id = 8007670
+	country = ISR
+	
+	name = EVT_8007670_NAME
+	desc = EVT_8007670_DESC
+	picture = "nwo\law_of_return"
+	decision_picture = "nwo\d_law_of_return"
+	style = 1
+
+	trigger = {
+		atwar = no
+	}
+	
+	decision = {
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8007670_A
+		command = { type = province_manpower which = -1 value = 8 }
+		command = { type = province_manpower which = -1 value = 8 }
+		command = { type = province_manpower which = -1 value = 8 }
+		command = { type = industrial_modifier which = total value = 2 }
+	}
+}
+
+### Six-Day War
+
+event = {
+	id = 8007671
+	country = EGY
+	
+	name = EVT_8007671_NAME
+	desc = EVT_8007671_DESC
+	picture = nwo\six_day_war
+	decision_picture = nwo\d_six_day_war
+	style = 1
+
+	trigger = {
+		atwar = no
+		exists = ISR
+	}
+	
+	decision = {
+		atwar = no
+		exists = ISR
+	}
+
+	date = { day = 1 month = may year = 1967 }
+	offset = 30
+	deathdate = { day = 30 month = may year = 1967 }
+
+	action = {
+		name = EVT_8007671_A
+		ai_chance = 90
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = 10 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = trigger which = 8007672 }
+	}
+	
+	action = {
+		name = EVT_8007671_B
+		trigger = { ai = yes }
+		ai_chance = 10
+		command = { type = money value = 1 }
+	}
+}
+
+event = {
+	id = 8007672
+	country = ISR
+	
+	name = EVT_8007672_NAME
+	desc = EVT_8007672_DESC
+	picture = nwo\six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007672_A
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = war which = EGY }
+		command = { type = war which = SYR }
+		command = { type = war which = JOR }
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		
+		# Balancing
+		command = { type = add_corps where = 1010 }
+		command = { type = add_division value = mechanized when = 6 }
+		command = { type = add_division value = mechanized when = 6 }
+		command = { type = add_corps where = 1011 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1008 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1013 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1010 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+	}
+	
+	action = {
+		name = EVT_8007672_B
+		ai_chance = 10
+		command = { type = dissent value = 15 }
+		command = { type = trigger which = 8007673 }
+	}
+}
+
+event = {
+	id = 8007673
+	country = EGY
+
+	name = EVT_8007673_NAME
+	desc = EVT_8007673_DESC
+	picture = nwo\six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007673_A
+		ai_chance = 75
+		command = { type = leave_alliance }
+		command = { type = war which = ISR }
+		command = { type = alliance which = EGY }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = 15 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = trigger which = 8007674 }
+		command = { type = trigger which = 8007675 }
+	}
+	
+	action = {
+		name = EVT_8007673_B
+		ai_chance = 25
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 8007674
+	country = SYR
+
+	name = EVT_8007674_NAME
+	desc = EVT_8007674_DESC
+	picture = nwo\six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007674_A
+		ai_chance = 95
+		command = { type = leave_alliance }
+		command = { type = war which = ISR }
+		command = { type = alliance which = EGY }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = 15 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8007674_B
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 8007675
+	country = JOR
+
+	name = EVT_8007675_NAME
+	desc = EVT_8007675_DESC
+	picture = nwo\six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007675_A
+		ai_chance = 95
+		command = { type = leave_alliance }
+		command = { type = war which = ISR }
+		command = { type = alliance which = EGY }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = 15 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8007675_B
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Outcome of the war - Israeli victory /historical/
+
+event = {
+	id = 8007676
+	country = ISR
+	
+	name = EVT_8007676_NAME
+	desc = EVT_8007676_DESC
+	picture = nwo\six_day_war
+	decision_picture = nwo\d_six_day_war
+	style = 1
+
+	trigger = {
+		event = 8007671
+		war = { country = ISR country = EGY }
+		control = { province = 1006 data = ISR }
+		control = { province = 1007 data = ISR }
+		OR = {
+			NOT = { war = { country = JOR } }
+			control = { province = 1172 data = ISR }
+		}
+	}
+	date = { day = 1 month = june year = 1967 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = EVT_8007676_A
+		command = { type = dissent value = -25 }
+		
+		command = { type = trigger which = 8007677 }
+		command = { trigger = { war = { country = SYR } } type = trigger which = 8007678 }
+		command = { trigger = { war = { country = JOR } } type = trigger which = 8007679 }
+		
+		command = { type = peace which = EGY }
+		command = { type = peace which = SYR }
+		command = { type = peace which = JOR }
+		
+		command = { type = independence which = EGY value = 0 }
+		command = { type = independence which = SYR value = 0 }
+		command = { type = independence which = JOR value = 0 }
+		
+		command = { type = addcore which = 1020 }
+		command = { type = addcore which = 1172 }
+		command = { type = addcore which = 1009 }
+		command = { type = addclaim which = 1004 }
+		command = { type = addclaim which = 1005 }
+		command = { type = addclaim which = 1006 }
+		command = { type = addclaim which = 1007 }
+	}
+}
+
+event = {
+	id = 8007677
+	country = EGY
+	
+	name = EVT_8007677_NAME
+	desc = EVT_8007677_DESC
+	picture = nwo\six_day_war
+	decision_picture = nwo\d_six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007677_A
+		command = { type = dissent value = 15 }
+	
+		command = { type = secedeprovince which = ISR value = 1009 when = 1 }
+		command = { type = secedeprovince which = ISR value = 1004 when = 1 }
+		command = { type = secedeprovince which = ISR value = 1005 when = 1 }
+		command = { type = secedeprovince which = ISR value = 1006 when = 1 }
+		command = { type = secedeprovince which = ISR value = 1007 when = 1 }
+	}
+}
+
+event = {
+	id = 8007678
+	country = SYR
+	
+	name = EVT_8007678_NAME
+	desc = EVT_8007678_DESC
+	picture = nwo\six_day_war
+	decision_picture = nwo\d_six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007678_A
+		command = { type = dissent value = 10 }
+	
+		command = { type = secedeprovince which = ISR value = 1020 when = 1 }
+	}
+}
+
+event = {
+	id = 8007679
+	country = JOR
+	
+	name = EVT_8007679_NAME
+	desc = EVT_8007679_DESC
+	picture = nwo\six_day_war
+	decision_picture = nwo\d_six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007679_A
+		command = { type = dissent value = 15 }
+	
+		command = { type = secedeprovince which = ISR value = 1172 when = 1 }
+	}
+}
+
+# Outcome of the war - Arab victory
+
+event = {
+	id = 8007680
+	tag = { EGY SYR JOR }
+	
+	name = EVT_8007680_NAME
+	desc = EVT_8007680_DESC
+	picture = nwo\six_day_war
+	style = 1
+
+	trigger = {
+		event = 8007671
+		OR = {
+			AND = {
+				control = { province = 1008 data = ISR }
+				country = EGY
+			}
+			AND = {
+				control = { province = 1008 data = EGY }
+				country = EGY
+			}
+			AND = {
+				control = { province = 1008 data = JOR }
+				country = JOR
+			}
+			AND = {
+				control = { province = 1008 data = SYR }
+				country = SYR
+			}
+		}
+			
+		OR = {
+			war = { country = ISR country = EGY }
+			NOT = { exists = ISR }
+		}
+		NOT = { 
+			control = { province = 1008 data = ISR } 
+			control = { province = 1004 data = ISR } 
+			control = { province = 1020 data = ISR } 
+		}
+	}
+	
+	date = { day = 1 month = june year = 1967 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = EVT_8007680_A
+		ai_chance = 100	
+		command = { type = dissent value = -15 }		
+		command = { type = peace which = ISR }
+		command = { trigger = { NOT = { exists = PAL } NOT = { exists = ISR } } type = independence which = PAL value = 0 }
+		command = { trigger = { exists = ISR } type = trigger which = 8007681 }
+	}
+}
+
+event = {
+	id = 8007681
+	country = ISR
+	
+	name = EVT_8007681_NAME
+	desc = EVT_8007681_DESC
+	picture = nwo\six_day_war
+	style = 1
+
+	action = {
+		name = EVT_8007680_A
+		command = { type = dissent value = 50 }
+		command = { type = independence which = PAL value = 0 }		
+		
+		command = { type = secedeprovince which = ISR value = 1011 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1008 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1172 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1013 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1010 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1009 when = 2 }
+		command = { type = secedeprovince which = SYR value = 1020 when = 2 }
+		command = { type = secedeprovince which = EGY value = 1004 when = 2 }
+		command = { type = secedeprovince which = EGY value = 1005 when = 2 }
+		command = { type = secedeprovince which = EGY value = 1006 when = 2 }
+		command = { type = secedeprovince which = EGY value = 1007 when = 2 }
+	}
+}
+
+### Inflow of immigrants 1968 
+
+event = {
+	id = 8007682
+	country = ISR
+	
+	name = EVT_8007682_NAME
+	desc = EVT_8007682_DESC
+	picture = nwo\jewish_immigrants
+	style = 1
+
+	trigger = {
+		atwar = no
+		event = 8007676
+		exists = U32
+	}
+
+	date = { day = 1 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = EVT_8007682_A
+		command = { type = manpowerpool value = 300 }
+	}
+}
+
+### Yom Kippur War
+
+event = {
+	id = 8007683
+	country = EGY
+	
+	name = EVT_8007683_NAME
+	desc = EVT_8007683_DESC
+	picture = nwo\yom_kippur_war
+	decision_picture = nwo\d_yom_kippur_war
+	style = 1
+
+	trigger = {
+		atwar = no
+		exists = ISR
+	}
+	
+	decision = {
+		atwar = no
+		exists = ISR
+	}
+
+	date = { day = 1 month = october year = 1973 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = EVT_8007683_A
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = war which = ISR }
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 8007684 }
+		command = { type = trigger which = 8007685 }
+	}
+	
+	action = {
+		name = EVT_8007683_B
+		trigger = { ai = yes }
+		ai_chance = 10
+		command = { type = money value = 1 }
+	}
+}
+
+event = {
+	id = 8007684
+	country = ISR
+	
+	name = EVT_8007684_NAME
+	desc = EVT_8007684_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+
+	action = {
+		name = EVT_8007684_A
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = dissent value = 50 }
+		command = { type = event which = 8007686 when = 14 }
+		
+		# Balancing
+		command = { type = add_corps where = 1011 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1008 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1013 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1010 }
+		command = { type = add_division value = garrison when = 10 }
+	}
+}
+
+event = {
+	id = 8007685
+	country = SYR
+	
+	name = EVT_8007685_NAME
+	desc = EVT_8007685_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+
+	action = {
+		name = EVT_8007685_A
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = war which = ISR }
+		command = { type = alliance which = EGY }
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8007685_B
+		trigger = { ai = yes }
+		ai_chance = 10
+		command = { type = relation which = EGY value = -100 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 8007686
+	country = ISR
+	
+	name = EVT_8007686_NAME
+	desc = EVT_8007686_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+
+	action = {
+		name = EVT_8007686_A
+		ai_chance = 90
+		command = { type = dissent value = -40 }
+	}
+}
+
+# Outcome of the war - ahistorical /Jewish victory/
+
+event = {
+	id = 8007687
+	country = ISR
+	
+	name = EVT_8007687_NAME
+	desc = EVT_8007687_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+
+	trigger = {
+		event = 8007683
+		war = { country = ISR country = EGY }
+		control = { province = 791 data = ISR } 
+		control = { province = 900 data = ISR } 
+		control = { province = 1008 data = ISR } 
+	}
+	
+	date = { day = 1 month = november year = 1973 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = EVT_8007687_A
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = dissent value = -15 }
+		command = { type = trigger which = 8007689 }
+		
+		command = { type = addcore which = 1004 }
+		command = { type = addcore which = 1005 }
+		command = { type = addcore which = 1006 }
+		command = { type = addcore which = 1007 }
+		
+		command = { type = addclaim which = 900 }
+	}
+}
+
+event = {
+	id = 8007689
+	country = EGY
+	
+	name = EVT_8007689_NAME
+	desc = EVT_8007689_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+	
+	action = {
+		name = EVT_8007689_A
+		command = { type = dissent value = 25 }
+		
+		command = { type = removecore which = 1004 }
+		command = { type = removecore which = 1005 }
+		command = { type = removecore which = 1006 }
+		command = { type = removecore which = 1007 }
+		
+		command = { type = secedeprovince which = ISR value = 900 when = 1 }
+	}
+}
+
+event = {
+	id = 8007690
+	tag = { EGY SYR JOR }
+	
+	name = EVT_8007690_NAME
+	desc = EVT_8007690_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+
+	trigger = {
+		event = 8007683
+		OR = {
+			AND = {
+				control = { province = 1008 data = ISR }
+				country = EGY
+			}
+			AND = {
+				control = { province = 1008 data = EGY }
+				country = EGY
+			}
+			AND = {
+				control = { province = 1008 data = JOR }
+				country = JOR
+			}
+			AND = {
+				control = { province = 1008 data = SYR }
+				country = SYR
+			}
+		}
+		OR = {
+			war = { country = ISR country = EGY }
+			NOT = { exists = ISR }
+		}
+		NOT = { 
+			control = { province = 1013 data = ISR } 
+			control = { province = 1010 data = ISR } 
+			control = { province = 1172 data = ISR } 
+		}
+	}
+	
+	date = { day = 1 month = november year = 1973 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = EVT_8007690_A
+		command = { type = dissent value = -25 }
+		command = { trigger = { NOT = { exists = PAL } NOT = { exists = ISR } } type = independence which = PAL value = 0 }
+		command = { trigger = { exists = PAL } type = trigger which = 8007691 }
+		
+		command = { type = addcore which = 1004 }
+		command = { type = addcore which = 1005 }
+		command = { type = addcore which = 1006 }
+		command = { type = addcore which = 1007 }
+		command = { type = addcore which = 1009 }
+	}
+}
+
+event = {
+	id = 8007691
+	country = ISR
+	
+	name = EVT_8007691_NAME
+	desc = EVT_8007691_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+	
+	action = {
+		name = EVT_8007691_A
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = dissent value = 25 }
+		
+		command = { type = removecore which = 1004 }
+		command = { type = removecore which = 1005 }
+		command = { type = removecore which = 1006 }
+		command = { type = removecore which = 1007 }
+		
+		command = { type = secedeprovince which = EGY value = 1004 when = 1 }
+		command = { type = secedeprovince which = EGY value = 1005 when = 1 }
+		command = { type = secedeprovince which = EGY value = 1006 when = 1 }
+		command = { type = secedeprovince which = EGY value = 1007 when = 1 }
+		command = { type = secedeprovince which = EGY value = 1009 when = 1 }
+		command = { type = secedeprovince which = SYR value = 1020 when = 1 }
+		
+		command = { type = independence which = PAL value = 0 }
+		
+		### Reorganize the borders
+		command = { type = secedeprovince which = PAL value = 1172 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1009 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1013 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1011 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1008 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1010 when = 2 }
+	}
+}
+
+### Historical outcome leading to Camp David accords
+
+event = {
+	id = 8007692
+	country = ISR
+	
+	name = EVT_8007692_NAME
+	desc = EVT_8007692_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+
+	trigger = {
+		event = 8007683
+		war = { country = ISR country = EGY }
+		NOT = { 
+			event = 8007687
+			event = 8007690
+		}
+	}
+	
+	date = { day = 1 month = november year = 1973 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = EVT_8007692_A
+		ai_chance = 99
+		command = { type = trigger which = 8007693 }
+	}
+	
+	action = {
+		name = EVT_8007692_B
+		ai_chance = 1
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8007695 }
+	}
+}
+
+event = {
+	id = 8007693
+	country = EGY
+	
+	name = EVT_8007693_NAME
+	desc = EVT_8007693_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+	
+	action = {
+		name = EVT_8007693_A
+		ai_chance = 99
+		command = { type = peace which = ISR }
+		command = { type = trigger which = 8007694 }
+	}
+	
+	action = {
+		name = EVT_8007693_B
+		ai_chance = 1
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8007695 }
+	}
+}
+
+event = {
+	id = 8007694
+	country = SYR
+	
+	name = EVT_8007694_NAME
+	desc = EVT_8007694_DESC
+	picture = nwo\yom_kippur_war
+	style = 1
+	
+	action = {
+		name = EVT_8007694_A
+		ai_chance = 100
+		command = { type = peace which = ISR }
+	}
+	
+	action = {
+		name = EVT_8007694_B
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+### Camp David Accords
+
+event = {
+	id = 8007695
+	country = ISR
+	
+	name = EVT_8007695_NAME
+	desc = EVT_8007695_DESC
+	picture = nwo\camp_david_accords
+	style = 1
+
+	trigger = {
+		atwar = no
+		event = 8007692
+		exists = EGY
+	}
+	
+	date = { day = 11 month = september year = 1978 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_8007695_A
+		command = { type = trigger which = 8007696 }
+	}
+}
+
+event = {
+	id = 8007696
+	country = EGY
+	
+	name = EVT_8007696_NAME
+	desc = EVT_8007696_DESC
+	picture = nwo\camp_david_accords
+	style = 1
+
+	action = {
+		name = EVT_8007696_A
+		command = { type = trigger which = 8007693 }
+	}
+}
+
+### First intifada
+
+event = {
+	id = 8007697
+	country = ISR
+	
+	name = EVT_8007697_NAME
+	desc = EVT_8007697_DESC
+	picture = nwo\camp_david_accords
+	style = 1
+
+	trigger = {
+		atwar = no
+		event = 8007695
+		NOT = { exists = PAL }
+	}
+	
+	date = { day = 11 month = september year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1991 }
+
+	action = {
+		name = EVT_8007697_A
+		ai_chance = 99
+		command = { type = dissent value = 20 }
+	}
+	
+	action = {
+		name = EVT_8007697_A
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = independence which = PAL value = 0 }
+		
+		### Reorganize the borders
+		command = { type = secedeprovince which = PAL value = 1172 when = 2 }
+		command = { type = secedeprovince which = PAL value = 1009 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1013 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1011 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1008 when = 2 }
+		command = { type = secedeprovince which = ISR value = 1010 when = 2 }
+	}
+}
+
+event = {
+	id = 8007699
+	tag = { JOR SYR LEB IRQ }
+	persistent = yes
+	
+	name = AI_EVENT
+	desc = AI_EVENT
+	
+	trigger = {
+		ai = yes
+		alliance = { country = EGY }
+		NOT = { war = { country = ISR } }
+	}
+
+	action = {
+		name = OK
+		command = { type = leave_alliance }
+	}
+}

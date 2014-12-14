@@ -1,0 +1,339 @@
+#########################################################################
+# Soviet Union base treaty ultimatum decision for Estonia
+#########################################################################
+event = {
+	id = 1330252001
+	random = no
+	country = SOV
+
+	decision = {
+		event = 2007020  # Eastern Poland has been given to the USSR
+		exists = EST
+		NOT = {
+			war = { country = EST country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = SOV country = EST }
+		}
+		NOT = {
+			control = { province = 270 }
+			control = { province = 271 }
+			control = { province = 272 }
+			control = { province = 273 }
+			control = { province = 274 }
+			control = { province = 275 }
+		}
+	}
+	
+	trigger = {
+		exists = EST	
+		event = 2007020  # Eastern Poland has been given to the USSR
+		NOT = {
+			OR = {
+				war = { country = EST country = SOV }
+				war = { country = GER country = SOV }
+				alliance = { country = SOV country = EST }				
+			}
+		}
+		NOT = {
+			control = { province = 270 }
+			control = { province = 271 }
+			control = { province = 272 }
+			control = { province = 273 }
+			control = { province = 274 }
+			control = { province = 275 }
+		}
+	}
+
+	name = "Soviet Union imposes Estonia to sign a treaty of mutual assistance"
+	desc = "After Molotov-Ribentrop pact Estonia was in the sphere of Soviet influence. Soon after Soviet leaders started to plan ocupation of Estonia."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 27 month = september year = 1939  }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1940 }
+		
+	action = {
+		name = "Demand base treaty of mutual assistance" # Demand Estonia
+		ai_chance = 100
+		command = { type = relation which = EST value = -10 }
+		command = { type = trigger which = 1330252002 } # Estonia
+	}
+}
+#########################################################################
+# Base treaty ultimatum
+#########################################################################
+event = {
+	id = 1330252002
+	random = no
+	country = EST
+
+	name = "Soviet Union is demanding base agreement."
+	desc = "On 24th September the Estonian foreign minister Karl Selter was given an ultimatum in Moscow. It required full military access to Estonia territory."
+	style = 2
+	picture = "minister_resign"
+
+
+	action_a = {
+		name = "We have no choice but to agree!"
+		ai_chance = 100
+		command = { type = trigger which = 1330252003}
+	}
+	action_b = {
+		name = "We cannot accept this!"
+		ai_chance = 0
+		command = { type = war which = SOV }
+	}
+}
+
+#########################################################################
+# Soviet Union bases in Estonia
+#########################################################################
+event = {
+	id = 1330252003
+	random = no
+	country = EST
+	
+	name = "Base treaties"
+	desc = "On 28th of September Estonia signed the so called base agreement. It was ultimatum presented by SU under threats of invasion. Under terms of this agreement SU had rights to have millitary bases and station permanent garrison of 25 000 men in the territory of Estonia. Formally it guarenteed indenpendence of Estonia."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		name = "Borders are open."
+		command = { type = dissent value = 2 }
+		command = { type = access which = SOV }
+		command = { type = guarantee which = SOV where = EST}
+		command = { type = relation which = SOV value = -20 }
+	}
+}
+
+#########################################################################
+# Soviet Union decision for Estonia new friendly goverment
+#########################################################################
+event = {
+	id = 1330252004
+	random = no
+	country = SOV
+
+	decision = {
+		event = 1330252003  # Base treaties has been accepted
+		exists = EST
+		NOT = {
+			war = { country = EST country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = SOV country = EST }
+		}
+		NOT = {
+			control = { province = 270 }
+			control = { province = 271 }
+			control = { province = 272 }
+			control = { province = 273 }
+			control = { province = 274 }
+			control = { province = 275 }
+		}
+	}
+	
+	trigger = {
+		exists = EST	
+		event = 1330252003  # Eastern Poland has been given to the USSR
+		NOT = {
+			OR = {
+				war = { country = EST country = SOV }
+				war = { country = GER country = SOV }
+				alliance = { country = SOV country = EST }				
+			}
+		}
+		NOT = {
+			control = { province = 270 }
+			control = { province = 271 }
+			control = { province = 272 }
+			control = { province = 273 }
+			control = { province = 274 }
+			control = { province = 275 }
+		}
+	}
+
+	name = "Soviet Union pressures for a SU-friendly goverment"
+	desc = "After base treaty with Estonia Soviet Union moved about 50 000 troops in Estonia. In 16th of June V.Molotov presented ultimatum to Estonia goverment. SU demanded to form Soviet-friendly minister cabinet and let unlimited number of SU troops enter Estonia!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 13 month = june year = 1940  }
+	offset = 1
+	deathdate = { day = 1 month = december year = 1940 }
+		
+	action = {
+		name = "Demand SU-friendly government!" # Demand Estonia
+		ai_chance = 100
+		command = { type = relation which = EST value = -50 }
+		command = { type = trigger which = 1330252005 } # Estonia
+	}
+}
+
+#########################################################################
+# Ocupation of Estonia
+#########################################################################
+event = {
+	id = 1330252005
+	random = no
+	country = EST
+
+	name = "Soviet Union demanding friendly government."
+	desc = "Estonia has no choice but to accept. About 20 000 SU troops had already entered country and about 200 000 troops were stationed at the border. At this point Estonia had only 30 000 men in active service!"
+	style = 2
+	picture = "minister_resign"
+
+	action_a = {
+		name = "We have no choice but to agree!"
+		ai_chance = 80
+		command = { type = trigger which = 1330252006}
+	}
+	action_b = {
+		name = "We cannot accept this!"
+		ai_chance = 20
+		command = { type = war which = SOV }
+	}
+}
+
+#########################################################################
+# Soviet Union ocupation of Estonia for Estonia
+#########################################################################
+event = {
+	id = 1330252007
+	random = no
+	country = EST
+	
+	name = "Soviet Union ocupation of Estonia"
+	desc = "On 17th of June Red army ocupied Estonia. President of Estonia was forced to accept gevernment formed by the Soviet Union."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		name = "Estonia is no more independent."
+		ai_chance = 100
+		command = { type = dissent value = 10 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = relation which = SOV value = 200 }
+	}
+}
+
+#########################################################################
+# Soviet Union ocupation of Estonia for Soviet Union
+#########################################################################
+event = {
+	id = 1330252006
+	random = no
+	country = SOV
+	
+	name = "Soviet Union ocupation of Estonia"
+	desc = "On 18th of June Red army ocupied Estonia. President of Estonia Konstantin Päts was forced to accept gevernment formed by the Soviet Union."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		ai_chance = 100
+		name = "Estonia is no more independent."
+		command = { type = relation which = EST value = 200 }
+		command = { type = make_puppet which = EST }
+		command = { type = trigger which = 1330252007}
+	}
+}
+
+#########################################################################
+# Soviet Union annexion of Estonia for Soviet Union
+#########################################################################
+event = {
+	id = 1330252008
+	random = no
+	country = SOV
+
+	decision = {
+		event = 1330252006  # Estonia is made puppet
+		exists = EST
+		NOT = {
+			war = { country = EST country = SOV }
+			war = { country = GER country = SOV }
+		}
+		NOT = {
+			control = { province = 270 }
+			control = { province = 271 }
+			control = { province = 272 }
+			control = { province = 273 }
+			control = { province = 274 }
+			control = { province = 275 }
+		}
+	}
+	
+	trigger = {
+		exists = EST	
+		event = 1330252006  # Estonia is made puppet
+		NOT = {
+			OR = {
+				war = { country = EST country = SOV }
+				war = { country = GER country = SOV }			
+			}
+		}
+		NOT = {
+			control = { province = 270 }
+			control = { province = 271 }
+			control = { province = 272 }
+			control = { province = 273 }
+			control = { province = 274 }
+			control = { province = 275 }
+		}
+	}
+
+	name = "Soviet Union annex Estonia"
+	desc = "After 23st of July new parliament appealed Estonia to be included in Soviet Union as ESSR, Soviet Union formally annexed Estonia at 5th of August"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 5 month = august year = 1940  }
+	offset = 1
+	deathdate = { day = 1 month = december year = 1940 }
+		
+	action = {
+		name = "Plea must be respected!" # Annex Estonia
+		ai_chance = 100
+		command = { type = addcore which = 270 }
+		command = { type = addcore which = 271 }
+		command = { type = addcore which = 272 }
+		command = { type = addcore which = 273 }
+		command = { type = addcore which = 274 }
+		command = { type = addcore which = 275 }
+		command = { type = inherit which = EST }
+
+	}
+}
+
+
+#########################################################################
+# Soviet ocupation in Estonia
+#########################################################################
+
+event = {
+	id = 1330252009
+	random = no
+	country = SOV
+
+	trigger = { event = 133025019 }	
+	
+	name = "Estonian army reorganized"
+	desc = "After ocupation Estonian army was included in red army as 22th Territorial Rifle Corps!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 10 month = august year = 1940 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = "They will be good adition to our army!"
+		ai_chance = 100
+		command = { type = add_division which = "22-i Strelkovyi Korpus" value = infantry when = 7 }
+		command = { type = manpowerpool value = 1 }
+		command = { type = money value = 60 } #free equipement
+	}
+}

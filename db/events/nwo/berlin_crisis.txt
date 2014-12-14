@@ -1,0 +1,369 @@
+event = {
+	id = 8500701
+	country = SOV
+
+	name = EVT_8500701_NAME
+	desc = EVT_8500701_DESC
+	picture = "nwo\khrushchev_ulbricht"
+	decision_picture = "nwo\d_checkpoint_charlie"
+	style = 1
+
+	decision = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		control = { province = 163 data = DDR } # Berlin
+		flag = divided_berlin
+	}
+	
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		control = { province = 163 data = DDR } # Berlin
+		flag = divided_berlin
+	}
+
+	date = { day = 4 month = june year = 1961 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# "Send an ultimatum to demilitarize Berlin"
+	action = {
+		name = EVT_8500701_A
+		ai_chance = 85
+		command = { type = belligerence value = 5 }
+	}
+	
+	# "Let the case rest"
+	action = {
+		name = EVT_8500701_B
+		trigger = { ai = no }
+		ai_chance = 15
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = DDR value = -50 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8500702 }
+	}
+
+}
+
+event = {
+	id = 8500702
+	country = USA
+
+	name = EVT_8500702_NAME
+	desc = EVT_8500702_DESC
+	picture = "nwo\khrushchev_ulbricht"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		event = 8500701
+		flag = divided_berlin
+	}
+
+	date = { day = 25 month = july year = 1961 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# "We shall not surrender"
+	action = {
+		name = EVT_8500702_A
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = relation which = DDR value = -25 }
+		command = { type = relation which = DFR value = 75 }
+	}
+	
+	# "We'll sacrifice Berlin for guaranteed peace"
+	action = {
+		name = EVT_8500702_B
+		ai_chance = 14
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = DFR value = -150 }
+		command = { type = relation which = DDR value = 150 }
+		command = { type = dissent value = 10 }
+		command = { type = clrflag which = divided_berlin }
+		command = { type = sleepevent which = 8500703 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+	
+	# We won't be threatened! (WW3)"
+	action = {
+		name = EVT_8500702_C
+		ai_chance = 1
+		command = { type = war which = SOV }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 25 }
+		command = { type = sleepevent which = 8500703 }
+	}
+
+}
+
+event = {
+	id = 8500703
+	country = SOV
+
+	name = EVT_8500703_NAME
+	desc = EVT_8500703_DESC
+	picture = "nwo\berlin_wall"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		event = 8500702
+		flag = divided_berlin
+	}
+
+	date = { day = 13 month = august year = 1961 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# "Build the wall!"
+	action = {
+		name = EVT_8500703_A
+		ai_chance = 90
+		command = { type = dissent value = -3 }
+		command = { type = relation which = DDR value = 50 }
+		command = { type = relation which = DFR value = -100 }
+		command = { type = trigger which = 8004307 } # DDR event for building the wall
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+	
+	# "Berlin will remain open"
+	action = {
+		name = EVT_8500703_B
+		ai_chance = 10
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = DDR value = 25 }
+		command = { type = dissent value = 8 }
+		command = { type = sleepevent which = 8500704 }
+	}
+
+}
+
+event = {
+	id = 8500704
+	country = USA
+
+	name = EVT_8500704_NAME
+	desc = EVT_8500704_DESC
+	picture = "nwo\berlin_crisis_1961"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		event = 8004307 # Berlin Wall is built
+	}
+
+	date = { day = 22 month = october year = 1961 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# "Try to access it anyway"
+	action = {
+		name = EVT_8500704_A
+		ai_chance = 80
+		command = { type = dissent value = -1 }
+		command = { type = relation which = DDR value = 25 }
+		command = { type = relation which = DFR value = -25 }
+	}
+	
+	# "Withdraw"
+	action = {
+		name = EVT_8500704_B
+		ai_chance = 20
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = DDR value = 25 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8500705 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+
+}
+
+event = {
+	id = 8500705
+	country = SOV
+
+	name = EVT_8500705_NAME
+	desc = EVT_8500705_DESC
+	picture = "nwo\berlin_crisis_1961"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		event = 8500704
+	}
+
+	date = { day = 27 month = october year = 1961 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# "Send the tanks to the border! (Possible WW3)"
+	action = {
+		name = EVT_8500705_A
+		ai_chance = 55
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	# "Do not react"
+	action = {
+		name = EVT_8500705_B
+		ai_chance = 43
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = DDR value = 25 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 8500706 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+	
+	# "Send the tanks beyond the border! (WW3)"
+	action = {
+		name = EVT_8500705_C
+		ai_chance = 2
+		command = { type = dissent value = 20 }
+		command = { type = war which = USA }
+		command = { type = belligerence value = 20 }
+		command = { type = sleepevent which = 8500706 }
+	}
+
+}
+
+event = {
+	id = 8500706
+	country = USA
+
+	name = EVT_8500706_NAME
+	desc = EVT_8500706_DESC
+	picture = "nwo\berlin_crisis_1961"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		event = 8500705
+	}
+
+	date = { day = 27 month = october year = 1961 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# "Do not retreat but propose peaceful resolution"
+	action = {
+		name = EVT_8500706_A
+		ai_chance = 73
+		command = { type = dissent value = -3 }
+	}
+	
+	# "Withdraw"
+	action = {
+		name = EVT_8500706_B
+		ai_chance = 25
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = DDR value = 25 }
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 8500707 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+	}
+	
+	# "Fire at will! (WW3)"
+	action = {
+		name = EVT_8500706_C
+		ai_chance = 2
+		command = { type = dissent value = 15 }
+		command = { type = war which = SOV }
+		command = { type = belligerence value = 20 }
+		command = { type = sleepevent which = 8500707 }
+	}
+
+}
+
+event = {
+	id = 8500707
+	country = SOV
+
+	name = EVT_8500707_NAME
+	desc = EVT_8500707_DESC
+	picture = "nwo\berlin_crisis_1961"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		event = 8500706
+	}
+
+	date = { day = 27 month = october year = 1961 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	# "Accept peaceful resolution"
+	action = {
+		name = EVT_8500707_A
+		ai_chance = 98
+		command = { type = dissent value = -3 }
+	}
+	
+	# "Fire at will! (WW3)"
+	action = {
+		name = EVT_8500707_B
+		ai_chance = 2
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = DDR value = 25 }
+		command = { type = dissent value = 15 }
+		command = { type = war which = USA }
+		command = { type = sleepevent which = 8500708 }
+	}
+
+}
+
+# End of the Berlin Crisis
+event = {
+	id = 8500708
+	country = USA
+
+	name = EVT_8500708_NAME
+	desc = EVT_8500708_DESC
+	picture = "nwo\berlin_crisis_1961"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		exists = DDR
+		exists = DFR
+		event = 8500707
+	}
+
+	date = { day = 1 month = november year = 1961 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8500708_A
+		command = { type = dissent value = -3 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+
+}

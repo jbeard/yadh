@@ -1,0 +1,35 @@
+U90;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+901000;Head of State;Sir Henry Monck-Mason Moore;1936;1965;2000;SL;Stern Imperialist;Very High;kenia1;x
+901001;Head of Government;Sir Henry Monck-Mason Moore;1936;1965;2000;SL;Naive Optimist;Very High;kenia1;x
+901002;Foreign Minister;Sir Henry Monck-Mason Moore;1936;1965;2000;SL;The Cloak N Dagger Schemer;Very High;kenia1;x
+901003;Minister of Armament;Robert Brooke-Popham;1936;1965;2000;ML;Air to Ground Proponent;Very High;L1420;x
+901004;Minister of Security;Horace Hearne;1944;1965;2000;ML;Silent Lawyer;Very High;unknown;x
+901005;Head of Military Intelligence;Charles Christopher Fowkes;1943;1965;2000;ML;Logistics Specialist;Very High;unknown;x
+901006;Chief of Staff;Sir Alfred Reade Godwin-Austen;1936;1965;2000;SL;School of Manoeuvre;Very High;kenia12;x
+901007;Chief of Army;H. E. de R. Wetherall;1936;1965;2000;ML;Decisive Battle Doctrine;Very High;kenia2;x
+901009;Chief of Air Force;Robert Brooke-Popham;1936;1965;2000;ML;Army Aviation Doctrine;High;L1420;x
+901010;Head of State;Philip Euen Mitchell;1936;1965;2000;SC;Barking Buffoon;Very High;unknown;x
+901011;Head of Government;Robert Brooke-Popham;1936;1965;2000;ML;Old Airmarshal;High;L1420;x
+901013;Minister of Armament;Oscar Ferris Watkins;1936;1965;2000;ML;Administrative Genius;Very High;kenia3;x
+901014;Minister of Security;John Arthur;1936;1965;2000;SL;Man of the People;Very High;kenia4;x
+901016;Chief of Staff;Charles Christopher Fowkes;1936;1965;2000;ML;School of Fire Support;Very High;unknown;x
+901017;Chief of Army;Sir Alfred Reade Godwin-Austen;1936;1965;2000;SL;Elastic Defence Doctrine;Very High;L1136;x
+901018;Chief of Navy;EMC Walker;1942;1965;2000;SL;Decisive Naval Battle Doctrine;Very High;kenia5;x
+901019;Chief of Air Force;Ian Sargenson;1944;1965;2000;SL;Air Superiority Doctrine;Very High;unknown;x
+901020;Head of State;Harry Thuku;1936;1965;2000;SD;Die-hard Reformer;Very High;kenia6;x
+901021;Head of Government;Harry Thuku;1936;1965;2000;SD;Ambitious Union Boss;Very High;kenia6;x
+901022;Foreign Minister;James Beauttah;1936;1965;2000;LWR;Apologetic Clerk;Very High;kenia7;x
+901023;Minister of Armament;Dedan Kimathi;1942;1965;2000;LWR;Administrative Genius;Very High;kenia8;x
+901024;Minister of Security;Harry Thuku;1936;1965;2000;LE;Man of the People;Very High;kenia6;x
+901025;Head of Military Intelligence;Bruce Mackenzie;1936;1965;2000;SD;Industrial Specialist;Very High;kenia9;x
+901026;Chief of Staff;Dedan Kimathi;1942;1965;2000;LWR;School of Psychology;Very High;kenia8;x
+901027;Chief of Army;Waruhiu Itote;1943;1965;2000;LWR;Guns and Butter Doctrine;Very High;kenia11;x
+901028;Chief of Navy;JCJ Kimaro;1944;1965;2000;SD;Open Seas Doctrine;Very High;kenia10;x
+901029;Head of State;Joseph Aloysius Byrne;1936;1965;2000;ML;Powerhungry Demagogue;Very High;M901029;x
+901030;Head of Government;Joseph Aloysius Byrne;1936;1965;2000;ML;Naive Optimist;Very High;M901029;x
+901031;Head of State;Robert Brooke-Popham;1937;1965;2000;ML;Barking Buffoon;Very High;L1420;x
+901032;Head of Government;Philip Euen Mitchell;1945;1965;2000;SC;Happy Amateur;Very High;unknown;x
+901033;Head of State;Evelyn Baring;1953;1965;2000;SC;Popular Figurehead;Very High;M901033;x
+901034;Head of Government;Evelyn Baring;1953;1965;2000;SC;Old Airmarshal;Very High;M901033;x
+901035;Head of State;Patrick Muir Renison;1960;1965;1971;SC;Resigned Generalissimo;Very High;M901035;x
+901036;Head of Government;Patrick Muir Renison;1960;1965;1971;SC;Smiling Oilman;Very High;M901035;x

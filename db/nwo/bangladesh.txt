@@ -1,0 +1,255 @@
+### Liberation of Bangladesh
+
+event = {
+	id = 8017040
+	country = PAK
+	one_action = yes
+
+	name = EVT_8017040_NAME
+	desc = EVT_8017040_DESC
+	picture = nwo\independence_of_pakistan
+	style = 1
+	
+	trigger = {
+		atwar = no
+		NOT = { # No earlier decisive victory
+			event = 8007263
+			event = 8007240
+		}
+		NOT = { exists = UIR }
+	}
+	
+	date = { day = 1 month = december year = 1971 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1972 }
+	
+	# Conflict gets out of hand
+	action = {
+		name = EVT_8017040_A
+		ai_chance = 98
+		command = { type = dissent value = 25 }
+		
+		# Balancing
+		command = { type = add_corps where = 1532 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1536 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1530 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1449 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1439 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1444 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1445 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_corps where = 1450 }
+		command = { type = add_division value = garrison when = 10 }
+		command = { type = add_division value = garrison when = 10 }
+	}
+	
+	# We are in control
+	action = {
+		name = EVT_8017040_B
+		ai_chance = 2
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 8017050 }
+	}
+}
+
+
+### Indo-Pakistani War of 1971
+
+event = {
+	id = 8017050
+	country = IND
+
+	name = EVT_8017050_NAME
+	desc = EVT_8017050_DESC
+	picture = nwo\indo_pakistani_war_1971
+	decision_picture = nwo\d_indo_pakistani_war_1971
+	style = 1
+	
+	decision = {
+		atwar = no
+		event = 8017040 # Bangladesh liberation war
+		NOT = { exists = UIR }
+	}
+	
+	trigger = {
+		atwar = no
+		event = 8017040 # Bangladesh liberation war
+		NOT = { exists = UIR }
+	}
+	
+	date = { day = 1 month = december year = 1971 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1972 }
+	
+	# Support the rebels
+	action = {
+		name = EVT_8017050_A
+		ai_chance = 95
+		command = { type = war which = PAK }
+		command = { type = dissent value = -10 }
+	}
+	
+	# Better not
+	action = {
+		name = EVT_8017050_B
+		trigger = { ai = yes }
+		ai_chance = 5
+		command = { type = money value = 1 }
+	}
+}
+
+# Pakistani victory
+
+event = {
+	id = 8017051
+	country = PAK
+
+	name = EVT_8017051_NAME
+	desc = EVT_8017051_DESC
+	picture = nwo\indo_pakistani_war_1971
+	style = 1
+	
+	trigger = {
+		event = 8017050
+		war = { country = IND }
+		OR = {
+			OR = {	
+				area = { area = "Eastern Ghat" country = PAK data = 1 value = 50 }
+				area = { area = "Rajastan" country = PAK data = 1 value = 50 }
+				area = { area = "Delhi" country = PAK data = 1 value = 50 }
+				control = { province = 1459 data = PAK } # Delhi
+			}
+			NOT = { exists = IND }
+		}
+	}
+
+	date = { day = 15 month = december year = 1971 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1972 }
+	
+	action = {
+		name = EVT_8017051_A
+		command = { type = dissent value = -15 }
+		command = { type = peace which = IND value = 1 }
+		command = { trigger = { NOT = { exists = IND } } type = independence which = IND value = 0 }
+		command = { type = inherit which = UIR }
+		command = { type = trigger which = 8017052 }
+		# Sleep other peace events
+		command = { type = sleepevent which = 8017053 }
+		command = { type = sleepevent which = 8017054 }
+	}
+}
+
+event = {
+	id = 8017052
+	country = IND
+
+	name = EVT_8017052_NAME
+	desc = EVT_8017052_DESC
+	picture = nwo\indo_pakistani_war_1971
+	style = 1
+	
+	action = {
+		name = EVT_8017052_A
+		command = { type = dissent value = 15 }
+		# Gains in Bangladesh
+		command = { type = secedeprovince which = PAK value = 1447 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1440 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1448 when = 1 }
+	}
+}
+
+# Stalemate
+
+event = {
+	id = 8017053
+	country = PAK
+
+	name = EVT_8017053_NAME
+	desc = EVT_8017053_DESC
+	picture = nwo\indo_pakistani_war_1971
+	style = 1
+	
+	trigger = {
+		event = 8017050
+		war = { country = IND }
+	}
+
+	date = { day = 1 month = february year = 1972 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1972 }
+	
+	action = {
+		name = EVT_8017053_A
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = UIR value = 1 }
+		command = { type = sleepevent which = 8017051 }
+		command = { type = sleepevent which = 8017054 }
+	}
+}
+
+# Indian victory
+
+event = {
+	id = 8017054
+	country = IND
+
+	name = EVT_8017054_NAME
+	desc = EVT_8017054_DESC
+	picture = nwo\indo_pakistani_war_1971
+	style = 1
+	
+	trigger = {
+		event = 8017050
+		war = { country = PAK }
+		OR = {
+			control = { province = 1539 data = IND } # Muzaffarabad
+			control = { province = 1445 data = IND } # Dhaka
+			control = { province = 1534 data = IND } # Islamabad
+			control = { province = 1533 data = IND } # Karachi
+		}
+	}
+
+	date = { day = 15 month = december year = 1971 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1972 }
+	
+	action = {
+		name = EVT_8017054_A
+		command = { type = peace which = PAK value = 1 }
+		command = { type = trigger which = 8017055 }
+		command = { type = sleepevent which = 8017051 }
+		command = { type = sleepevent which = 8017053 }
+		command = { trigger = { NOT = { exists = PAK } } type = independence which = PAK value = 0 }
+	}
+}
+
+event = {
+	id = 8017055
+	country = PAK
+
+	name = EVT_8017055_NAME
+	desc = EVT_8017055_DESC
+	picture = nwo\indo_pakistani_war_1971
+	style = 1
+	
+	action = {
+		name = EVT_8017055_A
+		command = { type = dissent value = 15 }
+		command = { type = independence which = UIR value = 0 }
+		command = { type = peace which = UIR value = 1 }
+	}
+}

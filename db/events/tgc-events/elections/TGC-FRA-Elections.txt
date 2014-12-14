@@ -1,0 +1,1545 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions - Elections
+#################################
+# by Nymet260
+# fixup by burning
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# Event List:
+#FRA 133210000 French Post-war Election
+#FRA 133210001 - 133210002 Emergency Election (1920)
+#FRA 133210003 1924 General Election
+#FRA 133210004 1928 General Election
+#FRA 133210005 1932 General Election
+#FRA 133210006 - 133210007 Emergency Election (1932)
+#FRA 133210008 1928 General Election (Communist government)
+#FRA 133210009 1932 General Election (Communist government)
+#FRA 133210010 1932 General Election (Fascist government)
+#FRA 133210011 French Post-war Election (Denschell dead)
+#FRA 133210012 1928 General Election (Fascist government)
+#FRA 133210013 Our King has fallen (monarchic France)
+#FRA 133210014 Joffre retires
+#FRA 133210015 Edmond Buat dies
+#FRA 133210016 Paul Painlevé returns
+#FRA 133210017 Ferdinand Foch dies
+#FRA 133210018 Louis Pivet retires
+#FRA 133210019 Pierre Ronarc'h retires
+#FRA 133210020 Henri Salaun Fell Out Of Favor
+#FRA 133210021 Henri Salaun Returns
+#FRA 133210022 Henri Salaun Retires
+#FRA 133210023 François Darlan Shall lead the way for our navy!
+#FRA 133210024 *Appointment of Foch if he wasn't during the war*
+#FRA 133210025 New Chief of Air - Laurent Eynac
+#FRA 133210026 Laurent Eynac Fell out of Favor
+#FRA 133210027 Paul Painlevé replaced
+#FRA 133210028 - 133210032 - 133210036 Armed Forces Officer Reorganization
+#FRA 133210029 - 133210033 - 133210037 Leading the Army?
+#FRA 133210030 - 133210034 - 133210038 Leading the Navy?
+#FRA 133210031 - 133210035 - 133210039 Leading the Airforce?
+#FRA 133210040 Maurice Sarrail died
+
+########################################
+## French Elections
+########################################
+
+# French Post-war Election
+event = {
+	id = 133210000
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = { government = democratic	
+		event = 2002534 #Versailles Treaty Signed
+	}			
+	
+	name = "French Post-war Election"
+	desc = "This is the first election to have taken place with the Great war finally at an end. The National bloc of the right wing and centre factions united under a single banner that they are the only ones to retain the peace while the the leftist parties, primarly the Radical socialist and the SFIO (Section française de l'Internationale ouvrière) parties were divided but still tried to push for total control of the seats in government. The Combined alliance of the right wing parties however would win."
+	
+	offset = 180
+	date = { day = 1 month = January year = 1917 }
+	##date = { day = 30 month = November year = 1919 } ##Historical date
+	deathdate = { day = 22 month = January year = 1920 }
+	
+	
+	action_a = {
+		ai_chance = 98
+		name = "National Bloc wins!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5313 } #Paul Deschanel
+		command = { type = headofgovernment which = 5295} #Alexandre Millerand
+		command = { type = foreignminister which = 5278 } #Alexandre Millerand
+		command = { type = armamentminister which = 5332 } #Frédéric François-Marsal
+		command = { type = ministerofsecurity which = 5347 } #Théodore Steeg
+		command = { type = ministerofintelligence which = 5299 } #Georges Ladoux
+		command = { type = local_setflag which = FRA1-1}
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "SFIO managed to pull ahead!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 5313 } #Paul Deschanel
+		command = { type = headofgovernment which = 5294 } #Paul Painlevé
+		command = { type = foreignminister which = 5274 } #Aristide Briand
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5338 } #Ernest Monis
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+		command = { type = local_setflag which = FRA1-2}
+	}
+	action_c = {
+		ai_chance = 1
+		name = "The Radical Socialist Party Makes a Surprise Win!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 5311 } #Georges Clemenceau
+		command = { type = headofgovernment which = 5286 } #Gaston Doumergue
+		command = { type = foreignminister which = 5272 } #Stéphen Pichon
+		command = { type = armamentminister which = 5323 } #Louis-Lucien Klotz
+		command = { type = ministerofsecurity which = 5342 } #Louis Barthou
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}		
+}
+
+# French Post-war Election (Denschell dead)	
+event = {
+	id = 133210011
+	random = no
+	country = FRA
+	picture = "news_paper"
+	#This event will fire if Denschell is dead already due to prolong war
+	trigger = {
+		government = democratic
+		AND = { event = 2002534 #Versailles Treaty Signed	
+			NOT = { event = 133210000 }	#Original election event	
+		}
+	}
+	
+	name = "French Post-war Election"
+	desc = "This is the first election to have taken place with the Great war finally at an end. The National bloc of the right wing and centre factions united under a single banner that they are the only ones to retain the peace while the the leftist parties, primarly the Radical socialist and the SFIO (Section française de l'Internationale ouvrière) parties were divided but still tried to push for total control of the seats in government. The Combined alliance of the right wing parties however would win."
+	
+	offset = 90
+	date = { day = 22 month = July year = 1920 }
+	##date = { day = 22 month = July year = 1920 }
+	deathdate = { day = 29 month = November year = 1924 }
+	
+	action_a = {
+		ai_chance = 98
+		name = "National Bloc wins!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5309 } #Alexandre Millerand
+		command = { type = headofgovernment which = 5296} #Georges Leygues
+		command = { type = foreignminister which = 5279 } #Georges Leygues 
+		command = { type = armamentminister which = 5332 } #Frédéric François-Marsal
+		command = { type = ministerofsecurity which = 5347 } #Théodore Steeg
+		command = { type = ministerofintelligence which = 5299 } #Georges Ladoux
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "SFIO managed to pull ahead!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 5309 } #Alexandre Millerand
+		command = { type = headofgovernment which = 5294 } #Paul Painlevé
+		command = { type = foreignminister which = 5274 } #Aristide Briand
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5338 } #Ernest Monis
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}
+	action_c = {
+		ai_chance = 1
+		name = "The Radical Socialist Party Makes a Surprise Win!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 5311 } #Georges Clemenceau
+		command = { type = headofgovernment which = 5286 } #Gaston Doumergue
+		command = { type = foreignminister which = 5272 } #Stéphen Pichon
+		command = { type = armamentminister which = 5323 } #Louis-Lucien Klotz
+		command = { type = ministerofsecurity which = 5342 } #Louis Barthou
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}		
+}	
+
+# Emergency Election (1920)
+event = {
+	id = 133210001
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		local_flag = FRA1-1
+		headofstate = 5313
+	}
+	
+	offset = 2	
+	name = "Emergency Elections"
+	desc = " With the health of French president Paul Deschanel rapidly faltering, the government setup immediate emergency elections to replace him. The SFIO attempted to put Gustave Delory on the presidental ticket however the conservative wave and combined alliance of the right wing faction helped Alexandre Millerand to achieve victory"
+	
+	date = { day = 23 month = July year = 1920 }
+	deathdate = { day = 23 month = July year = 1921 }
+	
+	#Event Checks which HoG you have so it can retain it in the event it some how dissappears
+	
+	action_a = {
+		ai_chance = 99
+		name = "Alexandre Millerand (Ind.)"
+		command = { type = dissent value = -3 }
+		command = { type = headofstate which = 5309 }
+		command = { type = headofgovernment which = 5296 }
+		command = { type = foreignminister which = 5279 } #Georges Leygues
+		command = { type = sleepminister which = 5313 }
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Gustave Delory (SFIO)"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = headofstate which = 5312 }
+		command = { type = headofgovernment which = 5296}
+		command = { type = sleepminister which = 5313 }
+	}				
+}	
+
+# Emergency Election (1920)
+event = {
+	id = 133210002
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	offset = 2
+	trigger = {
+		government = democratic
+		local_flag = FRA1-2
+		headofstate = 5313
+	}
+	
+	name = "Emergency Elections"
+	desc = " With the health of French president Paul Deschanel rapidly faltering, the government setup immediate emergency elections to replace him. The SFIO attempted to put Gustave Delory on the presidental ticket however the conservative wave and combined alliance of the right wing faction helped Alexandre Millerand to achieve victory"
+	
+	date = { day = 23 month = July year = 1920 }
+	deathdate = { day = 23 month = July year = 1921 }
+	#Event Checks which HoG you have so it can retain it in the event it some how dissappears
+	
+	action_a = {
+		ai_chance = 99
+		name = "Alexandre Millerand (Ind.)"
+		command = { type = dissent value = -3 }
+		command = { type = headofstate which = 5309 }
+		command = { type = headofgovernment which = 5294}
+		command = { type = sleepminister which = 5313 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Gustave Delory (SFIO)"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = headofstate which = 5312 }
+		command = { type = headofgovernment which = 5294}
+		command = { type = sleepminister which = 5313 }
+	}				
+}	
+
+# 1924 Election
+event = {
+	id = 133210003
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "EVT_133210003_DESC"
+	
+	date = { day = 30 month = November year = 1924 }
+	deathdate = { day = 23 month = July year = 1925 }
+	
+	action_a = {
+		ai_chance = 97
+		name = "Left-Wing Coliation Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 5314 } #Gaston Doumergue
+		command = { type = headofgovernment which = 5297} #Édouard Herriot
+		command = { type = foreignminister which = 5281 } #Édouard Herriot
+		command = { type = armamentminister which = 5320 } #Étienne Clémentel
+		command = { type = ministerofsecurity which = 5346 } #René Renoult
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Republican Federation Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5314 } #Gaston Doumergue
+		command = { type = headofgovernment which = 5298 } #Frédéric François-Marsal
+		command = { type = foreignminister which = 5270 } #Raymond Poincaré
+		command = { type = armamentminister which = 5055 } #Louis Loucheur
+		command = { type = ministerofsecurity which = 5347 } #Théodore Steeg
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}	
+	action_c = {
+		ai_chance = 1
+		name = "Mon Dieu! The Communist Won!"
+		command = { type = dissent value = 25 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 5316 } #Zéphyrin Camelinat
+		command = { type = headofgovernment which = 5290 } #Marcel Cachin
+		command = { type = foreignminister which = 5266 } #Justin de Selves
+		command = { type = armamentminister which = 5324 } #Marcel Cachin
+		command = { type = ministerofsecurity which = 5335 } #Alfred Rosmer
+		command = { type = ministerofintelligence which = 5300 } #S. Mineff
+		command = { type = local_setflag which = FRAC3}
+	}			
+	action_d = {
+		ai_chance = 1
+		name = "The Monarchists Have Returned!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 5306 } #Philippe VIII
+		command = { type = headofgovernment which = 2403009 } #Eugène Deloncle
+		command = { type = foreignminister which = 5190 } #Paul Baudouin
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5192 } #Joseph Barthélemy
+		command = { type = ministerofintelligence which = 5193 } #Rene Bousquet
+		command = { type = local_setflag which = FRAM3}
+	}		
+}	
+
+# 1928 General Election
+event = {
+	id = 133210004
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	#HoS is here to make sure that it keeps the previous one, this isnt a presidental election year
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The French general election of 1928 was a tight race. The right wing factions put up a tough fight to reclaim many lost seats due to last elections. However the better established left wing factions managed to hold a barely achieve majority."
+	
+	date = { day = 29 month = April year = 1928 }
+	deathdate = { day = 23 month = July year = 1928 }
+	
+	action_a = {
+		ai_chance = 97
+		name = "The Alliance Démocratique Takes the Lead"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 5314 } #Gaston Doumergue
+		command = { type = headofgovernment which = 5291} #Raymond Poincaré
+		command = { type = foreignminister which = 5274 } #Aristide Briand
+		command = { type = armamentminister which = 5056 } #Albert Sarraut
+		command = { type = ministerofsecurity which = 5342 } #Louis Barthou
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "The SFIO Pulls Ahead"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 5314 } #Gaston Doumergue
+		command = { type = headofgovernment which = 5283 } #Aristide Briand #Leon Blum could also work here
+		command = { type = foreignminister which = 5274 } #Aristide Briand
+		command = { type = armamentminister which = 5321 } #Joseph Caillaux
+		command = { type = ministerofsecurity which = 5338 } #Ernest Monis
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}	
+	action_c = {
+		ai_chance = 1
+		name = "The Communists Win A Majority!"
+		command = { type = dissent value = 20 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 5314 } #Gaston Doumergue
+		command = { type = headofgovernment which = 5290 } #Marcel Cachin
+		command = { type = foreignminister which = 5265 } #Jean Cruppi
+		command = { type = armamentminister which = 5324 } #Marcel Cachin
+		command = { type = ministerofsecurity which = 5335 } #Alfred Rosmer
+		command = { type = ministerofintelligence which = 5300 } #S. Mineff
+		command = { type = local_setflag which = FRAC1}
+		command = { type = local_setflag which = FRAC3}
+	}
+	action_d = {
+		ai_chance = 1
+		name = "The Monarchist Win A Surprise Victory!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 24030011 } #Jean III
+		command = { type = headofgovernment which = 2403009 } #Eugène Deloncle
+		command = { type = foreignminister which = 5190 } #Paul Baudouin
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5192 } #Joseph Barthélemy
+		command = { type = ministerofintelligence which = 5193 } #Rene Bousquet
+		command = { type = local_setflag which = FRAM1}
+		command = { type = local_setflag which = FRAM3}
+	}		
+}
+
+# 1932 General Election
+event = {
+	id = 133210005
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2
+	name = "ELECTION_TITLE"
+	desc = "EVT_133210005_DESC"
+	
+	date = { day = 1 month = May year = 1932 }
+	deathdate = { day = 23 month = July year = 1932 }
+	
+	action_a = {
+		ai_chance = 98
+		name = "The Cartel des Gauches Bloc Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 5305 } #Paul Doumer
+		command = { type = headofgovernment which = 5025} #Edouard Herriot
+		command = { type = foreignminister which = 5281 } #Édouard Herriot
+		command = { type = armamentminister which = 24030010 } #Louis Germain-Martin
+		command = { type = ministerofsecurity which = 5095 } #Camille Chautemps
+		command = { type = ministerofintelligence which = 5108 } #Pierre Etienne Flandin
+		command = { type = local_setflag which = FRA2-1}
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "The Right-Centre Alliance Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 5305 } #Paul Doumer
+		command = { type = headofgovernment which = 5023 } #Pierre Laval
+		command = { type = foreignminister which = 5270 } #Raymond Poincaré
+		command = { type = armamentminister which = 5327 } #René Renoult
+		command = { type = ministerofsecurity which = 5342 } #Louis Barthou
+		command = { type = ministerofintelligence which = 5108 } #Pierre Etienne Flandin
+		command = { type = local_setflag which = FRA2-2}
+	}	
+	action_c = {
+		ai_chance = 1
+		name = "The Communist Makes a Land Slide Victory!"
+		command = { type = dissent value = 20 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 5013 } #Maurice Thorez
+		command = { type = headofgovernment which = 5290 } #Marcel Cachin
+		command = { type = foreignminister which = 5265 } #Jean Cruppi
+		command = { type = armamentminister which = 5324 } #Marcel Cachin
+		command = { type = ministerofsecurity which = 5335 } #Alfred Rosmer
+		command = { type = ministerofintelligence which = 5300 } #S. Mineff
+		command = { type = local_setflag which = FRAC2}
+		command = { type = local_setflag which = FRAC3}
+	}					
+	action_d = {
+		ai_chance = 1
+		name = "The Monarchist shall restore France!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 24030011 } #Jean III
+		command = { type = headofgovernment which = 2403009 } #Eugène Deloncle
+		command = { type = foreignminister which = 5190 } #Paul Baudouin
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5192 } #Joseph Barthélemy
+		command = { type = ministerofintelligence which = 5193 } #Rene Bousquet
+		command = { type = local_setflag which = FRAM2}
+		command = { type = local_setflag which = FRAM3}
+	}		
+}		
+
+# Emergency Election (1932)				
+event = {
+	id = 133210006
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		local_flag = FRA2-1
+		headofstate = 5305
+	}
+	
+	offset = 2	
+	name = "Emergency Elections"
+	desc = "While attenting a local event president Paul Doumer was shot dead by a mentally unstable russian. With the President now dead an emergency election was called to bring in a new president. the SFIO put foward Paul Painleve while the right-wing factions put foward Albert Lebrun, who surprisingly managed to take the victory"
+	
+	date = { day = 7 month = May year = 1932 }
+	deathdate = { day = 7 month = May year = 1933 }
+	
+	action_a = {
+		ai_chance = 99
+		name = "Albert Lebrun (AD)"
+		command = { type = dissent value = -3 }
+		command = { type = headofstate which = 5158 }
+		command = { type = headofgovernment which = 5025}
+		command = { type = sleepminister which = 5305 }
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Paul Painlevé (PRS)"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = headofstate which = 5294 }
+		command = { type = headofgovernment which = 5025}
+		command = { type = sleepminister which = 5305 }
+	}				
+}	
+
+# Emergency Election (1932)
+event = {
+	id = 133210007
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		local_flag = FRA2-2
+		headofstate = 5305
+	}
+	
+	offset = 2	
+	name = "Emergency Elections"
+	desc = "While attenting a local event president Paul Doumer was shot dead by a mentally unstable Russian. With the President now dead an emergency election was called to bring in a new president. the SFIO put foward Paul Painleve while the right-wing factions put foward Albert Lebrun, who surprisingly managed to take the victory"
+	
+	date = { day = 7 month = May year = 1932 }
+	deathdate = { day = 7 month = May year = 1933 }
+	
+	action_a = {
+		ai_chance = 99
+		name = "Albert Lebrun (AD)"
+		command = { type = dissent value = -3 }
+		command = { type = headofstate which = 5158 }
+		command = { type = headofgovernment which = 5023 }
+		command = { type = sleepminister which = 5305 }
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Paul Painlevé (PRS)"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = headofstate which = 5294 }
+		command = { type = headofgovernment which = 5023 }
+		command = { type = sleepminister which = 5305 }
+	}				
+}	
+####################################
+##Alternative French Dictatotorial outcomes
+####################################
+
+# 1928 General Election (Communist government)
+event = {
+	id = 133210008
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = FRAC1} ##prevents a double election 1 from democratic and 1 Commie
+	}
+	
+	name = "ELECTION_TITLE"
+	desc = "In the 1928 general elections the entire political polarization has changed. With the conservative forces mostly being isolated out they banded together to form the Alliance Democratique, while the more conservative left wing factions formed the Radical-left alliance. The remaining hard liner left wingers took up refuge with the French Communist party. With these strong alliances opposing the French Communist party will they be able to hold out and achieve majority?"
+	
+	offset = 2
+	date = { day = 29 month = April year = 1928 }
+	deathdate = { day = 29 month = April year = 1929 }
+	
+	#Not a presidential year, This event really can only happen if you go commie in 1924
+	
+	action_a = {
+		ai_chance = 5
+		name = "The Alliance Démocratique Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 5316 } #Zéphyrin Camelinat
+		command = { type = headofgovernment which = 5291} #Raymond Poincaré
+		command = { type = foreignminister which = 5278 } #Alexandre Millerand
+		command = { type = armamentminister which = 5332 } #Frédéric François-Marsal
+		command = { type = ministerofsecurity which = 5347 } #Théodore Steeg
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+		
+	}
+	action_b = {
+		ai_chance = 20
+		name = "The Radical-Left Front Claims Victory"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 5316 } #Zéphyrin Camelinat
+		command = { type = headofgovernment which = 5283 } #Aristide Briand
+		command = { type = foreignminister which = 5281 } #Édouard Herriot
+		command = { type = armamentminister which = 5321 } #Joseph Caillaux
+		command = { type = ministerofsecurity which = 5348 } #Joseph Caillaux
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}	
+	action_c = {
+		ai_chance = 75
+		name = "The Communist Win Once More"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 5316 } #Zéphyrin Camelinat
+		command = { type = headofgovernment which = 5290 } #Marcel Cachin
+		command = { type = foreignminister which = 5265 } #Jean Cruppi
+		command = { type = armamentminister which = 5324 } #Marcel Cachin
+		command = { type = ministerofsecurity which = 5335 } #Alfred Rosmer
+		command = { type = ministerofintelligence which = 5300 } #S. Mineff
+	}			
+}
+
+# 1932 General Election (Communist government)
+event = {
+	id = 133210009
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = FRAC2} ##prevents a double election 1 from democratic and 1 Commie
+	}
+	
+	name = "ELECTION_TITLE"
+	desc = "Once again as in the 1928 election, the 1932 election was a battle between alliances and the Communist party. With the advent of the depression many are questioning the lefts ability to handle the situation. Will The French communist stay on top? Or will the left or right alliances take back government?"
+	
+	offset = 2
+	date = { day = 1 month = May year = 1932 }
+	deathdate = { day = 1 month = May year = 1933 }
+	
+	
+	action_a = {
+		ai_chance = 75
+		name = "The Commune Will Rise!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 5013 } #Maurice Thorez
+		command = { type = headofgovernment which = 5290 } #Marcel Cachin
+		command = { type = foreignminister which = 5046 } #Laurent Casenove
+		command = { type = armamentminister which = 5324 } #Marcel Cachin
+		command = { type = ministerofsecurity which = 5102 } #Maurice Thorez
+		command = { type = ministerofintelligence which = 5300 } #S. Mineff
+		
+	}
+	action_b = {
+		ai_chance = 20
+		name = "The Popular Socialst Front Will Achieve Majority!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 5315 } #Paul Painlevé
+		command = { type = headofgovernment which = 5283 } #Aristide Briand
+		command = { type = foreignminister which = 5031 } #Joseph Paul Boncour
+		command = { type = armamentminister which = 5049 } #Edouard Daladier
+		command = { type = ministerofsecurity which = 5081 } #Adrien Tixier
+		command = { type = ministerofintelligence which = 5108 } #Pierre Etienne Flandin
+	}	
+	action_c = {
+		ai_chance = 5
+		name = "The Right-Centre Bloc Shall Win!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 5158 } #Albert Lebrun
+		command = { type = headofgovernment which = 5291 } #Raymond Poincaré
+		command = { type = foreignminister which = 5039 } #Pierre Laval
+		command = { type = armamentminister which = 5054 } #Raoul Dautry
+		command = { type = ministerofsecurity which = 5339 } #Eugène Étienne
+		command = { type = ministerofintelligence which = 5108 } #Pierre Etienne Flandin
+	}			
+}
+
+# Our King has fallen (monarchic France)
+event = {
+	id = 133210013
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		headofstate = 5306	#Philippe VIII
+	}
+	
+	name = "Our King has Fallen"
+	desc = "While traveling in Sicly Italy, the King caught pneumonia and several days later died. With the King dead, his cousin Jean III will take the throne."
+	
+	offset = 2
+	date = { day = 28 month = March year = 1926 }
+	deathdate = { day = 28 month = March year = 1927 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "All of France shall mourn"
+		command = { type = headofstate which = 24030011 }
+		command = { type = sleepminister which = 5306 }
+	}				
+}	
+
+# 1928 General Election (Fascist government)
+event = {
+	id = 133210012
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = fascist
+		NOT = {local_flag = FRAM1} ##prevents a double election 1 from democratic and 1 facists
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The French election of 1928 was rather dull. The Monarchist had control of most of government as was highly popular. The centrist and right wing factions had little to offer to dethrone the king and thus was almost easy victory for the Monarchist if it wasnt however for the blunders several of the Monarchist politicans giving their faction a poor name giving the other factions a slight chance at majority."
+	
+	date = { day = 29 month = April year = 1928 }
+	deathdate = { day = 29 month = April year = 1929 }
+	
+	action_a = {
+		ai_chance = 10
+		name = "Republican Federation Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 5158 } #Albert Lebrun
+		command = { type = headofgovernment which = 5291} #Raymond Poincaré
+		command = { type = foreignminister which = 5278 } #Alexandre Millerand 
+		command = { type = armamentminister which = 5332 } #Frédéric François-Marsal
+		command = { type = ministerofsecurity which = 5347 } #Théodore Steeg
+		command = { type = ministerofintelligence which = 5299 } #Georges Ladoux
+		
+	}
+	action_b = {
+		ai_chance = 5
+		name = "The Radical-Right Party Claims Victory"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 5315 } #Paul Painlevé
+		command = { type = headofgovernment which = 5297 } #Édouard Herriot
+		command = { type = foreignminister which = 5272 } #Stéphen Pichon
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5342 } #Louis Barthou
+		command = { type = ministerofintelligence which = 5354 } #Charles Joseph Dupont
+	}	
+	action_d = {
+		ai_chance = 85
+		name = "The Monarchists Shall Have Majority"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 24030011 } #Jean III
+		command = { type = headofgovernment which = 5197 } #Pierre Laval
+		command = { type = foreignminister which = 5190 } #Paul Baudouin
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5192 } #Joseph Barthélemy
+		command = { type = ministerofintelligence which = 5193 } #Rene Bousquet
+	}			
+}	
+
+# 1932 General Election (Fascist government)
+event = {
+	id = 133210010
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = fascist
+		NOT = {local_flag = FRAM2} ##prevents a double election 1 from democratic and 1 facists
+	}
+	
+	name = "ELECTION_TITLE"
+	desc = "With the 1932 general election fast approching with the Great depression on everyones mind. Without a common consesus the right and centrist factions were unable to form an alliance against the dominating Monarchist party. However many people are upset with how the king is approching a fix for the economic disparity. As such many voters fled towards voting for the centrist and right wing groups."
+	
+	offset = 2
+	date = { day = 1 month = May year = 1932 }
+	deathdate = { day = 1 month = May year = 1933 }
+	
+	action_a = {
+		ai_chance = 5
+		name = "Republican Federation Party Wins"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 5158 } #Albert Lebrun
+		command = { type = headofgovernment which = 5291} #Raymond Poincaré
+		command = { type = foreignminister which = 5278 } #Alexandre Millerand 
+		command = { type = armamentminister which = 5332 } #Frédéric François-Marsal
+		command = { type = ministerofsecurity which = 5347 } #Théodore Steeg
+		command = { type = ministerofintelligence which = 5108 } #Pierre Etienne Flandin
+		
+	}
+	action_b = {
+		ai_chance = 5
+		name = "The Radical-Right Achieve Victory"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 5315 } #Paul Painlevé
+		command = { type = headofgovernment which = 5297 } #Édouard Herriot
+		command = { type = foreignminister which = 5272 } #Stéphen Pichon
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5342 } #Louis Barthou
+		command = { type = ministerofintelligence which = 5108 } #Pierre Etienne Flandin
+	}	
+	action_d = {
+		ai_chance = 90
+		name = "A Monarchy Is Clearly Superior!"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 24030011 } #Jean III
+		command = { type = headofgovernment which = 5197 } #Pierre Laval
+		command = { type = foreignminister which = 5190 } #Paul Baudouin
+		command = { type = armamentminister which = 5331 } #Joseph Thierry
+		command = { type = ministerofsecurity which = 5192 } #Joseph Barthélemy
+		command = { type = ministerofintelligence which = 5193 } #Rene Bousquet
+	}			
+}	
+
+####################################
+##Historical French Military head's Change events
+####################################	
+
+# Joffre retires
+event = {
+	id = 133210014
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Joffre Retires"
+	desc = "Edmond Buat is in, Joffre retired "
+	
+	offset = 2
+	date = { day = 5 month = December year = 1919 }
+	deathdate = { day = 5 month = December year = 1920 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Edmond Buat"
+		command = { type = chiefofarmy which = 24030012 }
+		command = { type = sleepminister which = 5235 }
+	}				
+}	
+
+# Edmond Buat dies
+event = {
+	id = 133210015
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Edmond Buat Dies"
+	desc = "Ferdinand Foch is in, Buat died"
+	
+	offset = 2
+	date = { day = 30 month = December year = 1923 }
+	deathdate = { day = 30 month = December year = 1924 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Ferdinand Foch"
+		command = { type = chiefofarmy which = 5240 }
+		command = { type = sleepminister which = 24030012 }
+	}				
+}	
+
+# *Appointment of Foch if he wasn't during the war*
+event = {
+	id = 133210024
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		NOT = {event = 2002554} #Appoint Foch as Supreme Commander from DH full 1914 event for FRA
+	}
+	
+	name = "New Chief of Staff" ##If Foch wasnt appointed during the war, he is now
+	desc = "Ferdinand Foch is in"
+	
+	offset = 2
+	date = { day = 1 month = November year = 1919 }
+	deathdate = { day = 1 month = November year = 1920 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Ferdinand Foch"
+		command = { type = chiefofstaff which = 5256 }
+	}				
+}	
+
+# Ferdinand Foch dies	
+event = {
+	id = 133210017
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 5240
+	}
+	
+	name = "Ferdinand Foch Dies"
+	desc = "Maxime Weygand is in, Poor poor Fochy died"
+	
+	offset = 2
+	date = { day = 20 month = March year = 1929 }
+	deathdate = { day = 20 month = March year = 1930 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Maxime Weygand"
+		command = { type = chiefofstaff which = 5124 }
+		command = { type = chiefofarmy which = 5136 }
+		command = { type = sleepminister which = 5256 }
+		command = { type = sleepminister which = 5240 }
+	}				
+}	
+
+# Louis Pivet retires
+event = {
+	id = 133210018
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 5373
+	}
+	
+	name = "Louis Pivet Retires"
+	desc = "Pierre Ronarc'h is in, last guy retired"
+	
+	offset = 2
+	date = { day = 17 month = May year = 1919 }
+	deathdate = { day = 17 month = May year = 1920 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Pierre Ronarc'h"
+		command = { type = chiefofnavy which = 24030013 }
+		command = { type = sleepminister which = 5373 }
+	}				
+}	
+
+# Pierre Ronarc'h retires
+event = {
+	id = 133210019
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030013
+	}
+	
+	name = "Pierre Ronarc'h Retires"
+	desc = "Henri Salaun is in, this guy is actually famous for trying to build a French atlantic wall, too bad André Maginot and his defensive line the Maginot line got more popularity and funding."
+	
+	offset = 2
+	date = { day = 1 month = February year = 1920 }
+	deathdate = { day = 1 month = February year = 1921 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Henri Salaun will build an Atlantic Wall!"
+		command = { type = chiefofnavy which = 24030014 }
+		command = { type = sleepminister which = 24030013 }
+	}				
+}		
+
+# Henri Salaun Fell Out Of Favor
+event = {
+	id = 133210020
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030014
+	}
+	
+	name = "Henri Salaun Fell Out Of Favor"
+	desc = "Maurice Grasset is in, Henri lost favour end of story"
+	
+	offset = 2
+	date = { day = 1 month = February year = 1921 }
+	deathdate = { day = 1 month = February year = 1922 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Maurice Grasset"
+		command = { type = chiefofnavy which = 24030015 }
+	}				
+}
+
+# Henri Salaun Returns
+event = {
+	id = 133210021
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030015
+	}
+	
+	name = "Henri Salaun Returns"
+	desc = "Henri Salaun is in, last guy also lost favour"
+	
+	offset = 2
+	date = { day = 22 month = July year = 1924 }
+	deathdate = { day = 22 month = July year = 1925 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "He will build the wall this time I swear!"
+		command = { type = chiefofnavy which = 24030014 }
+	}				
+}	
+
+# Henri Salaun Retires
+event = {
+	id = 133210022
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030014
+	}
+	
+	name = "Henri Salaun Retires"
+	desc = "Louis Violette is in, Henri retired"
+	
+	offset = 2
+	date = { day = 1 month = January year = 1928 }
+	deathdate = { day = 1 month = January year = 1929 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "He never built my wall!"
+		command = { type = chiefofnavy which = 24030016 }
+		command = { type = sleepminister which = 24030014 }
+	}				
+}		
+
+# François Darlan Shall lead the way for our navy!
+event = {
+	id = 133210023
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030016
+	}
+	
+	name = "François Darlan Shall lead the way for our navy!"
+	desc = "François Darlan is in"
+	
+	offset = 2
+	date = { day = 24 month = June year = 1931 }
+	deathdate = { day = 24 month = June year = 1932 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint François Darlan"
+		command = { type = chiefofnavy which = 5009 }
+	}				
+}	
+
+# New Chief of Air - Laurent Eynac	
+event = {
+	id = 133210025
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030017
+	}
+	
+	name = "New Chief of Air"
+	desc = "Laurent Eynac is in"
+	
+	offset = 2
+	date = { day = 14 month = September year = 1928 }
+	deathdate = { day = 14 month = September year = 1929 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Laurent Eynac"
+		command = { type = chiefofair which = 24030017 }
+	}				
+}	
+
+# Laurent Eynac Fell out of Favor
+event = {
+	id = 133210026
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030018
+	}
+	
+	name = "Laurent Eynac Fell Out Of Favor"
+	desc = "Paul Painlevé is in"
+	
+	offset = 2
+	date = { day = 13 month = December year = 1930 }
+	deathdate = { day = 13 month = December year = 1931 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Paul Painlevé"
+		command = { type = chiefofair which = 24030018 }
+	}				
+}	
+
+# Paul Painlevé replaced
+event = {
+	id = 133210027
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030019
+	}
+	
+	name = "Paul Painlevé Replaced"
+	desc = "Jacques-Louis Dumesnil is in"
+	
+	offset = 2
+	date = { day = 27 month = January year = 1931 }
+	deathdate = { day = 27 month = January year = 1932 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Jacques-Louis Dumesnil"
+		command = { type = chiefofair which = 24030019 }
+	}				
+}	
+
+# Paul Painlevé returns
+event = {
+	id = 133210016
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		minister = 24030018
+	}
+	
+	name = "Paul Painlevé Returns"
+	desc = "Paul Painlevé is in"
+	
+	offset = 2
+	date = { day = 20 month = February year = 1932 }
+	deathdate = { day = 20 month = February year = 1933 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Paul Painlevé"
+		command = { type = chiefofair which = 24030018 }
+	}				
+}	
+####################################
+##Monarchist French Military head's Change events
+####################################	
+
+event = {
+	id = 133210028
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = FRAM3
+	}
+	
+	date = { day = 1 month = January year = 1914 }
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "The King Demands a change of leadership within the armed forces that are more loyal to the king. The king appoints Charles Huntziger to spearhead the effort to do so"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Charles Huntziger will fix everything"
+		command = { type = chiefofstaff which = 5194 }
+		command = { type = trigger which = 133210029 }
+		command = { type = trigger which = 133210030 }
+		command = { type = trigger which = 133210031 }
+		command = { type = local_clrflag which = FRAM3 }
+	}				
+}
+event = {
+	id = 133210029
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210028
+	
+	name = "Leading The Army?" 
+	desc = "Philippe Pétain is the more popular figure, but his idea on a static defense might not be, Franchet on the other hand believes in a more elastic defense"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Philippe Pétain"
+		command = { type = chiefofarmy which = 5239 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Louis Franchet d'Espèrey"
+		command = { type = chiefofarmy which = 24030020 }
+	}		
+}	
+event = {
+	id = 133210030
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210028
+	
+	name = "Leading the Navy?"
+	desc = "Both believe in decisive naval combat, however Darlan was more popular"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint François Darlan"
+		command = { type = chiefofnavy which = 5009 }
+	}			
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Jean-Marie Charles"
+		command = { type = chiefofnavy which = 5375 }
+	}		
+}	
+event = {
+	id = 133210031
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210028
+	
+	name = "Leading the Airforce?"
+	desc = "Jannekeyn was a strong proponet of strategic bombardment while Bergeret was more about linking the air force with the army"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Jean Marie Bergeret"
+		command = { type = chiefofair which = 5196 }
+	}			
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Maurice Jannekeyn"
+		command = { type = chiefofair which = 5224 }
+	}		
+}	
+####################################
+##Communist French Military head's Change events
+####################################	
+
+event = {
+	id = 133210032
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = FRAC3
+	}
+	
+	date = { day = 1 month = January year = 1914 }
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "The Assembly wishes to oust the bourgeoisie generals within our military and bring in officers who truely represent the people!"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Comrade Maurice Sarrail will purge the enemies of the people!"
+		command = { type = chiefofstaff which = 5251 }
+		command = { type = trigger which = 133210033 }
+		command = { type = trigger which = 133210034 }
+		command = { type = trigger which = 133210035 }
+		command = { type = local_clrflag which = FRAC3 }
+	}				
+}
+event = {
+	id = 133210033
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210032
+	
+	name = "Leading The Army?" 
+	desc = "Andre Marty was a huge proponet of supply the troops over winning battles while Fabien always sought to win the war with one decisive battle"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint André Marty"
+		command = { type = chiefofarmy which = 5134 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Pierre Fabien"
+		command = { type = chiefofarmy which = 5135 }
+	}		
+}	
+event = {
+	id = 133210034
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210032
+	
+	name = "Leading the Navy?"
+	desc = "Tillon focused more on naval base controlling while Andre Marty prefered a more indirect submarine warfare approch"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Charles Tillon"
+		command = { type = chiefofnavy which = 5143 }
+	}			
+	action_b = {
+		ai_chance = 30
+		name = "Appoint André Marty"
+		command = { type = chiefofnavy which = 5142 }
+	}		
+}	
+event = {
+	id = 133210035
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210032
+	
+	name = "Leading the Airforce?"
+	desc = "Gitton believe in air superiority while Tillon wanted to link the air force to the army"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Marcel Gitton"
+		command = { type = chiefofair which = 5152 }
+	}			
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Charles Tillon"
+		command = { type = chiefofair which = 5153 }
+	}		
+}		
+event = {
+	id = 133210036 ##Maurice Sarrial is dead, this one appoints Marcel instead
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = FRAC3
+	}
+	
+	date = { day = 24 month = March year = 1929 }
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "The Assembly wishes to oust the bourgeoisie generals within our military and bring in officers who truely represent the people!"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Comrade Marcel Cachin will purge the enemies of the people!"
+		command = { type = chiefofstaff which = 5129 }
+		command = { type = trigger which = 133210033 }
+		command = { type = trigger which = 133210034 }
+		command = { type = trigger which = 133210035 }
+		command = { type = local_clrflag which = FRAC3 }
+	}				
+}
+event = {
+	id = 133210037
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210036
+	
+	name = "Leading The Army?" 
+	desc = "Andre Marty was a huge proponet of supply the troops over winning battles while Fabien always sought to win the war with one decisive battle"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint André Marty"
+		command = { type = chiefofarmy which = 5134 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Pierre Fabien"
+		command = { type = chiefofarmy which = 5135 }
+	}		
+}	
+event = {
+	id = 133210038
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210036
+	
+	name = "Leading the Navy?"
+	desc = "Tillon focused more on naval base controlling while Andre Marty prefered a more indirect submarine warfare approch"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Charles Tillon"
+		command = { type = chiefofnavy which = 5143 }
+	}			
+	action_b = {
+		ai_chance = 30
+		name = "Appoint André Marty"
+		command = { type = chiefofnavy which = 5142 }
+	}		
+}	
+event = {
+	id = 133210039
+	random = no
+	country = FRA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133210036
+	
+	name = "Leading the Airforce?"
+	desc = "Gitton believe in air superiority while Tillon wanted to link the air force to the army"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Marcel Gitton"
+		command = { type = chiefofair which = 5152 }
+	}			
+	action_b = {
+		ai_chance = 30
+		name = "Appoint Charles Tillon"
+		command = { type = chiefofair which = 5153 }
+	}		
+}
+
+# Maurice Sarrail died
+event = {
+	id = 133210040
+	random = no
+	country = FRA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		minister = 5251
+	}
+	
+	name = "Maurice Sarrail Died"
+	desc = "Marcel Cachin is in"
+	
+	offset = 2
+	date = { day = 23 month = March year = 1929 }
+	deathdate = { day = 23 month = March year = 1930 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Marcel Cachin"
+		command = { type = chiefofarmy which = 5129 }
+		command = { type = sleepminister which = 5251 }
+	}				
+}	

@@ -1,0 +1,33 @@
+event = {
+	id = 8021701
+	country = U17
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 900002 } # Joseph Jacquemotte
+		command = { type = headofgovernment which = 900017 } # Julien Lahaut
+		command = { type = foreignminister which = 900018 } # Paul-Henri Spaak
+		command = { type = armamentminister which = 900027 } # Edgar Lalmand
+		command = { type = ministerofsecurity which = 900031 } # Julien Lahaut
+		command = { type = ministerofintelligence which = 900033 } # Jules Pire
+		command = { type = chiefofstaff which = 900008 } # Georges Vereecken
+		command = { type = chiefofarmy which = 900037 } # Jules Pire
+		command = { type = chiefofnavy which = 900010 } # Georges Vereecken
+		command = { type = chiefofair which = 900011 } # Georges Vereecken
+	}
+}
+

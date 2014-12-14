@@ -1,0 +1,33 @@
+event = {
+	id = 8021401
+	country = U14
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 885001 } # Palmiro Togliatti
+		command = { type = headofgovernment which = 885004 } # Luigi Longo
+		command = { type = foreignminister which = 885009 } # Amadeo Bordiga
+		command = { type = armamentminister which = 885014 } # Antonio Pesenti
+		command = { type = ministerofsecurity which = 885018 } # Ruggiero Grieco
+		command = { type = ministerofintelligence which = 885021 } # Antonio Pesenti
+		command = { type = chiefofstaff which = 885023 } # Luigi Longo
+		command = { type = chiefofarmy which = 885026 } # Giancarlo Pajetta
+		command = { type = chiefofnavy which = 885030 } # Ruggiero Grieco
+		command = { type = chiefofair which = 885033 } # Giorgio Amendola
+	}
+}
+

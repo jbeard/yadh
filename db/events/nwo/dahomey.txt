@@ -1,0 +1,450 @@
+event = {
+	id = 8001501
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565001 } # Maurice Bourgine
+		command = { type = headofgovernment which = 565002 } # Maurice Bourgine
+	}
+}
+
+event = {
+	id = 8001502
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565003 } # Ernest Gayon
+		command = { type = headofgovernment which = 565004 } # Ernest Gayon
+	}
+}
+
+event = {
+	id = 8001503
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565005 } # Armand Annet
+		command = { type = headofgovernment which = 565006 } # Armand Annet
+	}
+}
+
+event = {
+	id = 8001504
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565007 } # Leon Truitard
+		command = { type = headofgovernment which = 565008 } # Leon Truitard
+	}
+}
+
+event = {
+	id = 8001505
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565009 } # Charles Assier de Pompignan
+		command = { type = headofgovernment which = 565010 } # Charles Assier de Pompignan
+	}
+}
+
+event = {
+	id = 8001506
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565011 } # Robert Legendre
+		command = { type = headofgovernment which = 565012 } # Robert Legendre
+	}
+}
+
+event = {
+	id = 8001507
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565013 } # Jean-Georges Chambon
+		command = { type = headofgovernment which = 565014 } # Jean-Georges Chambon
+	}
+}
+
+event = {
+	id = 8001508
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565015 } # Claude Valluy
+		command = { type = headofgovernment which = 565016 } # Claude Valluy
+	}
+}
+
+event = {
+	id = 8001509
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565017 } # Charles-Henri Bonfils
+		command = { type = headofgovernment which = 565018 } # Charles-Henri Bonfils
+	}
+}
+
+event = {
+	id = 8001510
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565019 } # Marc-Casimir Biros
+		command = { type = headofgovernment which = 565020 } # Marc-Casimir Biros
+	}
+}
+
+event = {
+	id = 8001511
+	country = BEN
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 565021 } # Rene Tirant
+		command = { type = headofgovernment which = 565022 } # Rene Tirant
+	}
+}
+
+event = {
+	id = 8001512
+	country = BEN
+
+	name = "EVT_8001512_NAME"
+	desc = "EVT_8001512_DESC"
+	picture = "nwo\dahomey_independence"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "EVT_8001512_A"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 565200 } # Hubert Maga
+		command = { type = headofgovernment which = 565201 } # Hubert Maga
+		command = { type = foreignminister which = 565030 } # Mathieu Kerekou
+		command = { type = armamentminister which = 565028 } # Christophe Bokhiri
+		command = { type = ministerofsecurity which = 565031 } # Emile Zinsou
+		command = { type = ministerofintelligence which = 565032 } # Tahirou Congacou
+		command = { type = chiefofstaff which = 565033 } # Christophe Soglo
+		command = { type = chiefofarmy which = 565039 } # Alphonse Alley
+		command = { type = chiefofnavy which = 565041 } # Jean-Baptiste Hacheme
+		command = { type = chiefofair which = 565042 } # Iropa Kouandete
+	}
+}
+
+event = {
+	id = 8001513
+	country = BEN
+
+	name = EVT_8001513_NAME
+	desc = EVT_8001513_DESC
+	picture = nwo\christophe_soglo
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1963 }
+
+	action = {
+		name = EVT_8001513_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 565143 } # Christophe Soglo
+		command = { type = headofgovernment which = 565144 } # Christophe Soglo
+	}
+}
+
+event = {
+	id = 8001514
+	country = BEN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 565220 } # Sourou-Migan Apithy
+		command = { type = headofgovernment which = 565221 } # Justin Ahomadegbé-Tometin
+	}
+}
+
+event = {
+	id = 8001515
+	country = BEN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 565222 } # Christophe Soglo
+		command = { type = headofgovernment which = 565203 } # Christophe Soglo
+	}
+}
+
+event = {
+	id = 8001516
+	country = BEN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 565204 } # Alphonse Amadou Alley
+		command = { type = headofgovernment which = 565205 } # Iropa Maurice Kouandété
+	}
+}
+
+event = {
+	id = 8001517
+	country = BEN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 565206 } # Émile Zinsou
+		command = { type = headofgovernment which = 565207 } # Émile Zinsou
+	}
+}
+
+event = {
+	id = 8001518
+	country = BEN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 565208 } # Hubert Maga
+		command = { type = headofgovernment which = 565209 } # Hubert Maga
+	}
+}
+
+event = {
+	id = 8001519
+	country = BEN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 565210 } # Mathieu Kérékou
+		command = { type = headofgovernment which = 565211 } # Mathieu Kérékou
+	}
+}  
+
+event = {
+	id = 8001520
+	country = BEN
+
+	name = EVT_8001520_NAME
+	desc = EVT_8001520_DESC
+	picture = nwo\peoples_republic_of_benin
+	style = 1
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8001520_A
+		ai_chance = 100
+		command = { type = name where = BEN which = "BEN75" }
+		command = { type = flag_ext where = BEN which = _1975 }
+	}
+	
+	action = {
+		name = EVT_8001520_B
+		ai_chance = 0
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = money value = 10 }
+	}
+}

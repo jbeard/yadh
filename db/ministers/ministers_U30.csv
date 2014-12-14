@@ -1,0 +1,23 @@
+U30;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+965001;Head of State;Mihai I;1939;2020;2020;ST;Insignificant Layman;High;M22011;X
+965002;Head of State;Constantin I. Parhon;1933;1970;1970;ST;Powerhungry Demagogue;High;M22038;X
+965003;Head of Government;Petru Groza;1945;1958;1958;ST;Backroom Backstabber;High;M22022;X
+965004;Head of Government;Gheorghe Gheorghiu-Dej;1952;1966;1966;ST;Political Protege;High;M22052;X
+965005;Head of Government;Iuliu Maniu;1933;1964;1964;SD;Naive Optimist;High;M22055;X
+965006;Foreign Minister;Gheorghe Tatarescu;1945;1964;1964;LE;Iron Fisted Brute;Medium;M22002;X
+965007;Foreign Minister;Ana Pauker;1947;1964;1964;ST;Ideological Crusader;Very High;M22023;X
+965008;Foreign Minister;Constantin I. Parhon;1933;1964;1964;ST;Great Compromiser;Low;M22038;X
+965009;Minister of Armament;Vasile Luca;1933;1964;1964;ST;Administrative Genius;High;M22024;X
+965010;Minister of Security;Teohari Georgescu;1933;1964;1964;ST;Back Stabber;High;M22025;X
+965011;Head of Military Intelligence;Demetre Jancovici;1933;1964;1964;ST;Political Specialist;Medium;M22026;X
+965012;Head of Military Intelligence;Serghei Nicolau;1946;1964;1964;ST;Technical Specialist;High;M22122;X
+965013;Chief of Staff;Mihail Lascar;1933;1964;1964;ST;School of Mass Combat;Very High;M22027;X
+965014;Chief of Army;Damian Rascu;1933;1964;1964;ST;Armoured Spearhead Doctrine;Medium;M22028;X
+965015;Chief of Navy;Gheorghe Iliesca;1933;1964;1964;ST;Power Projection Doctrine;Medium;M22029;X
+965016;Chief of Air Force;Emanoil Ionescu;1933;1964;1964;ST;Army Aviation Doctrine;High;M22030;X
+965017;Head of State;Petru Groza;1933;1958;1958;ST;Powerhungry Demagogue;High;M22022;X
+965018;Foreign Minister;Simon Bughici;1952;1964;1964;ST;Apologetic Clerk;Very High;M22163;X
+965100;Head of State;Gheorghe Gheorghiu-Dej;1947;1966;1966;ST;Benevolent Gentleman;High;M22052;X
+965101;Head of State;Gheorghe Apostol;1954;2011;2011;ST;Benevolent Gentleman;High;M965101;X
+965102;Head of Government;Chivu Stoica;1955;1976;1976;ST;Ambitious Union Boss;High;M965102;X
+965103;Head of Government;Ion Gheorghe Maurer;1961;2001;2001;LE;Old Admiral;High;M965103;X

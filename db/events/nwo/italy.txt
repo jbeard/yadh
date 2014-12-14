@@ -1,0 +1,1869 @@
+event = {
+	id = 8007701
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 25019 } # Umberto II
+		command = { type = headofgovernment which = 25029 } # Ivanoe Bonomi
+		command = { type = foreignminister which = 25041 } # Ivanoe Bonomi
+		command = { type = armamentminister which = 25059 } # Alessandro Casati
+		command = { type = ministerofsecurity which = 25079 } # Salvatore Aldisio
+		command = { type = ministerofintelligence which = 25092 } # Emilio Pagliano
+		command = { type = chiefofstaff which = 25105 } # Alessandro Casati
+		command = { type = chiefofarmy which = 25115 } # A. de Marinis de Ricia
+		command = { type = chiefofnavy which = 25121 } # Raffaele de Courten
+		command = { type = chiefofair which = 25129 } # Pietro Piacentini
+	}
+}
+
+event = {
+	id = 8007702
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 25019 } # Umberto II
+		command = { type = headofgovernment which = 25030 } # Ferruccio Parri
+		command = { type = foreignminister which = 25039 } # Alcide de Gasperi
+		command = { type = armamentminister which = 25058 } # Taddeo Orlando
+		command = { type = ministerofsecurity which = 25077 } # Vito Reale
+		command = { type = ministerofintelligence which = 25090 } # Giuseppe Pella
+		command = { type = chiefofstaff which = 25309 } # Claudio Trezzani
+		command = { type = chiefofarmy which = 25313 } # Raffaele Cadorna Jr.
+		command = { type = chiefofnavy which = 25121 } # Raffaele de Courten
+		command = { type = chiefofair which = 25130 } # Aldo Urbani
+	}
+}
+
+event = {
+	id = 8007703
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25028 } # Alcide de Gasperi
+		command = { type = foreignminister which = 25039 } # Alcide de Gasperi
+		command = { type = armamentminister which = 25060 } # Manlio Brosio
+		command = { type = ministerofsecurity which = 25077 } # Vito Reale
+		command = { type = ministerofintelligence which = 25091 } # Ezio Vanoni
+		command = { type = chiefofarmy which = 25314 } # Louis Efisio Marras
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 25308 } # Pietro Nenni
+		command = { type = foreignminister which = 25042 } # Pietro Nenni
+		command = { type = armamentminister which = 25063 } # Luigi Einaudi
+		command = { type = ministerofsecurity which = 25080 } # Ivanoe Bonomi
+		command = { type = ministerofintelligence which = 25093 } # A. de Marinis de Ricia
+		command = { type = chiefofarmy which = 25314 } # Louis Efisio Marras
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+# Constitutional referendum
+event = {
+	id = 8007704
+	country = ITA
+
+	name = EVT_8007704_NAME
+	desc = EVT_8007704_DESC
+	picture = "nwo\italian_constitutional_referendum"
+	style = 1
+	
+	trigger = {	
+		government = democratic
+		atwar = no
+		flag = cold_war
+	}
+	
+	date = { day = 2 month = june year = 1946 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1946 }
+
+	# Replace monarchy with republican rule
+	action_a = {
+		name = EVT_8007704_A
+		ai_chance = 85
+		command = { type = headofstate which = 25021 } # Enrico de Nicola
+		command = { type = dissent value = 5 }
+		# Sleep Umberto II
+		command = { type = sleepminister which = 25018 }
+		command = { type = sleepminister which = 25019 }
+	}
+	
+	# Remain loyal to the House of Savoy
+	action_b = {
+		name = EVT_8007704_B
+		ai_chance = 15
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = headofstate which = 25018 } # Umberto II
+		command = { type = dissent value = 5 }
+		# Events for presidential nominations
+		command = { type = sleepevent which = 8007706 }
+		command = { type = sleepevent which = 8007709 }
+		command = { type = sleepevent which = 8007715 }
+	}
+}
+
+event = {
+	id = 8007705
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 75
+		command = { type = dissent value = -6 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25028 } # Alcide de Gasperi
+		command = { type = foreignminister which = 25040 } # Carlo Sforza
+		command = { type = armamentminister which = 25061 } # Cipriano Facchinetti
+		command = { type = ministerofsecurity which = 25078 } # Mario Scelba
+		command = { type = ministerofintelligence which = 25091 } # Ezio Vanoni
+		command = { type = chiefofstaff which = 25310 } # Claudio Trezzani
+		command = { type = chiefofarmy which = 25315 } # Ernesto Cappa
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 25
+		trigger = { NOT = { event = 8007730 event = 8007731 } } # Historical ICP
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 25030 } # Ferruccio Parri
+		command = { type = foreignminister which = 25042 } # Pietro Nenni
+		command = { type = armamentminister which = 25064 } # G. Barone Paulucci di Calboli
+		command = { type = ministerofsecurity which = 25081 } # Ferruccio Parri
+		command = { type = ministerofintelligence which = 25093 } # A. de Marinis de Ricia
+		command = { type = chiefofstaff which = 25310 } # Claudio Trezzani
+		command = { type = chiefofarmy which = 25315 } # Ernesto Cappa
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		trigger = { event = 8007730 } # ICP is radicalized
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { trigger = { NOT = { event = 8007720 } } type = headofgovernment which = 25300 } # Palmiro Togliatti
+		command = { trigger = { event = 8007720 } type = headofgovernment which = 25031 } # Luigi Longo
+		command = { type = foreignminister which = 25042 } # Pietro Nenni
+		command = { type = armamentminister which = 25064 } # G. Barone Paulucci di Calboli
+		command = { type = ministerofsecurity which = 25081 } # Ferruccio Parri
+		command = { type = ministerofintelligence which = 25093 } # A. de Marinis de Ricia
+		command = { type = chiefofstaff which = 25310 } # Claudio Trezzani
+		command = { type = chiefofarmy which = 25315 } # Ernesto Cappa
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 10
+		trigger = { event = 8007731 } # ICP is dispersed
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 25030 } # Ferruccio Parri
+		command = { type = foreignminister which = 25042 } # Pietro Nenni
+		command = { type = armamentminister which = 25064 } # G. Barone Paulucci di Calboli
+		command = { type = ministerofsecurity which = 25081 } # Ferruccio Parri
+		command = { type = ministerofintelligence which = 25093 } # A. de Marinis de Ricia
+		command = { type = chiefofstaff which = 25310 } # Claudio Trezzani
+		command = { type = chiefofarmy which = 25315 } # Ernesto Cappa
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007706
+	country = ITA
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = "nwo\death"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = sleepminister which = 25021 } # Enrico de Nicola
+		command = { type = headofstate which = 25132 } # Luigi Einaudi
+	}
+}
+
+event = {
+	id = 8007707
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25134 } # Giuseppe Pella
+		command = { type = foreignminister which = 25135 } # Giuseppe Pella
+		command = { type = armamentminister which = 25137 } # Emilio Paolo Taviani
+		command = { type = ministerofsecurity which = 25138 } # Amintore Fanfani
+		command = { type = ministerofintelligence which = 25091 } # Ezio Vanoni
+		command = { type = chiefofstaff which = 25311 } # Giuseppe Mancinelli
+		command = { type = chiefofarmy which = 25317 } # Giorgio Liuzzi
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		trigger = { NOT = { event = 8007730 event = 8007731 } } # Historical ICP
+		command = { type = dissent value = -6 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { trigger = { NOT = { event = 8007720 } } type = headofgovernment which = 25300 } # Palmiro Togliatti
+		command = { trigger = { event = 8007720 } type = headofgovernment which = 25031 } # Luigi Longo
+		command = { type = foreignminister which = 25042 } # Pietro Nenni
+		command = { type = armamentminister which = 25064 } # G. Barone Paulucci di Calboli
+		command = { type = ministerofsecurity which = 25081 } # Ferruccio Parri
+		command = { type = ministerofintelligence which = 25093 } # A. de Marinis de Ricia
+		command = { type = chiefofstaff which = 25311 } # Giuseppe Mancinelli
+		command = { type = chiefofarmy which = 25317 } # Giorgio Liuzzi
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 10
+		trigger = { event = 8007730 } # ICP is radicalized
+		command = { type = dissent value = -6 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { trigger = { NOT = { event = 8007720 } } type = headofgovernment which = 25300 } # Palmiro Togliatti
+		command = { trigger = { event = 8007720 } type = headofgovernment which = 25031 } # Luigi Longo
+		command = { type = foreignminister which = 25042 } # Pietro Nenni
+		command = { type = armamentminister which = 25064 } # G. Barone Paulucci di Calboli
+		command = { type = ministerofsecurity which = 25081 } # Ferruccio Parri
+		command = { type = ministerofintelligence which = 25093 } # A. de Marinis de Ricia
+		command = { type = chiefofstaff which = 25311 } # Giuseppe Mancinelli
+		command = { type = chiefofarmy which = 25317 } # Giorgio Liuzzi
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 10
+		trigger = { event = 8007731 } # ICP is dispersed
+		command = { type = dissent value = -6 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 25030 } # Ferruccio Parri
+		command = { type = foreignminister which = 25042 } # Pietro Nenni
+		command = { type = armamentminister which = 25064 } # G. Barone Paulucci di Calboli
+		command = { type = ministerofsecurity which = 25081 } # Ferruccio Parri
+		command = { type = ministerofintelligence which = 25093 } # A. de Marinis de Ricia
+		command = { type = chiefofstaff which = 25311 } # Giuseppe Mancinelli
+		command = { type = chiefofarmy which = 25317 } # Giorgio Liuzzi
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8007708
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+		headofgovernment = 25134
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25301 } # Mario Scelba
+	}
+}
+
+event = {
+	id = 8007709
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 25302 } # Giovanni Gronchi
+	}
+}
+
+event = {
+	id = 8007710
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+		headofgovernment = 25301
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25303 } # Antonio Segni
+	}
+}
+
+event = {
+	id = 8007711
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+		headofgovernment = 25303
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25304 } # Adone Zoli
+	}
+}
+
+event = {
+	id = 8007712
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		command = { type = headofgovernment which = 25305 } # Amintore Fanfani
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		trigger = { NOT = { event = 8007730 event = 8007731 } } # Historical ICP
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { trigger = { NOT = { event = 8007720 } } type = headofgovernment which = 25300 } # Palmiro Togliatti
+		command = { trigger = { event = 8007720 } type = headofgovernment which = 25031 } # Luigi Longo
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 10
+		trigger = { event = 8007730 } # ICP is radicalized
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { trigger = { NOT = { event = 8007720 } } type = headofgovernment which = 25300 } # Palmiro Togliatti
+		command = { trigger = { event = 8007720 } type = headofgovernment which = 25031 } # Luigi Longo
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 10
+		trigger = { event = 8007731 } # ICP is dispersed
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 25030 } # Ferruccio Parri
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007713
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+		headofgovernment = 25305
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25303 } # Antonio Segni
+		command = { type = chiefofstaff which = 25312 } # Aldo Rossi
+		command = { type = chiefofarmy which = 25318 } # Bruno Lucini
+	}
+}
+
+event = {
+	id = 8007714
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+		headofgovernment = 25303
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25305 } # Amintore Fanfani
+		command = { type = chiefofarmy which = 25319 } # Antonio Gualano
+	}
+}
+
+event = {
+	id = 8007715
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 25306 } # Antonio Segni
+		command = { type = chiefofarmy which = 25320 } # Giuseppe Aloia
+	}
+}
+
+event = {
+	id = 8007716
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		command = { type = headofgovernment which = 25307 } # Aldo Moro
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		trigger = { NOT = { event = 8007730 event = 8007731 } } # Historical ICP
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { trigger = { NOT = { event = 8007720 } } type = headofgovernment which = 25300 } # Palmiro Togliatti
+		command = { trigger = { event = 8007720 } type = headofgovernment which = 25321 } # Enrico Berlinguer
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 10
+		trigger = { event = 8007730 } # ICP is radicalized
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { trigger = { NOT = { event = 8007720 } } type = headofgovernment which = 25300 } # Palmiro Togliatti
+		command = { trigger = { event = 8007720 } type = headofgovernment which = 25031 } # Luigi Longo
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 10
+		trigger = { event = 8007731 } # ICP is dispersed
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = block_ideology_switch }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 25030 } # Ferruccio Parri
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007717
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 25322 } # Giuseppe Saragat
+	}
+}
+
+event = {
+	id = 8007718
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25324 } # Mariano Rumor
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofgovernment which = 25323 } # Luigi Longo
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8007719
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25325 } # Emilio Colombo
+	}
+}
+
+event = {
+	id = 8007720
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 25326 } # Giovanni Leone
+	}
+}
+
+event = {
+	id = 8007721
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25327 } # Giulio Andreotti
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofgovernment which = 25321 } # Enrico Berlinguer
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007722
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25324 } # Mariano Rumor
+	}
+}
+
+event = {
+	id = 8007723
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25328 } # Aldo Moro
+	}
+}
+
+event = {
+	id = 8007724
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25327 } # Giulio Andreotti
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofgovernment which = 25321 } # Enrico Berlinguer
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007725
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 25335 } # Sandro Pertini
+	}
+}
+
+event = {
+	id = 8007726
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25329 } # Francesco Cossiga
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofgovernment which = 25321 } # Enrico Berlinguer
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007727
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25330 } # Arnaldo Forlani
+	}
+}
+
+event = {
+	id = 8007728
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1981 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofgovernment which = 25331 } # Giovanni Spadolini
+	}
+}
+
+event = {
+	id = 8007729
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 25336 } # Bettino Craxi
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25332 } # Ciriaco De Mita
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007730
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 25333 } # Francesco Cossiga
+	}
+}
+
+event = {
+	id = 8007731
+	country = ITA
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 25336 } # Bettino Craxi
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 25334 } # Giovanni Goria
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8007732
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25332 } # Ciriaco De Mita
+	}
+}
+
+event = {
+	id = 8007733
+	country = ITA
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 25327 } # Giulio Andreotti
+	}
+}
+
+### Alternative history: Palmiro Togliatti comes to power
+
+# Events:
+# Salerno Turn
+# Popular Democratic Front in 1948 elections
+# 1948 assassination attempt
+# Communists gain support in late 1940s
+# Communists gain support in late 1950s
+
+# Communists are more powerful than ever - reaction
+# American support
+
+# Peaceful communist option gains power:
+#		The movement radicalizes
+#		Americans react
+#		The movement stays peaceful or goes East
+
+# Radical communist option gains power:
+#		Americans react
+#		The movement goes peaceful or not
+
+# Salerno Turn
+event = {
+	id = 8007734
+	country = ITA
+
+	name = EVT_8007734_NAME
+	desc = EVT_8007734_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = EVT_8007734_A # Cooperate with the king
+		ai_chance = 70
+		command = { type = dissent value = -3 }
+		command = { type = local_setflag which = moderate_ICP }
+	}
+	action = {
+		name = EVT_8007734_B # No dealings with reactionaries!
+		ai_chance = 30
+		command = { type = dissent value = 10 }
+		command = { type = local_setflag which = radical_ICP }
+	}
+}
+
+# Popular Democratic Front
+event = {
+	id = 8007735
+	country = ITA
+
+	name = EVT_8007735_NAME
+	desc = EVT_8007735_DESC
+	picture = nwo\italian_popular_front
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = EVT_8007735_A # Form the front
+		ai_chance = 70
+		command = { type = dissent value = -3 }
+		command = { trigger = { local_flag = moderate_ICP } type = local_setflag which = very_moderate_ICP }
+		command = { trigger = { local_flag = radical_ICP } type = local_setflag which = moderate_ICP }
+	}
+	action = {
+		name = EVT_8007735_B # No dealings with reactionaries!
+		ai_chance = 30
+		command = { type = dissent value = 5 }
+		command = { trigger = { local_flag = moderate_ICP } type = local_setflag which = radical_ICP }
+		command = { trigger = { local_flag = radical_ICP } type = local_setflag which = very_radical_ICP }
+	}
+}
+
+# Togliatti assassination
+event = {
+	id = 8007736
+	country = ITA
+	one_action = yes
+
+	name = EVT_8007736_NAME
+	desc = EVT_8007736_DESC
+	picture = nwo\palmiro_togliatti
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = EVT_8007736_A # The attempt fails
+		ai_chance = 80
+		command = { type = dissent value = -1 }
+		
+	}
+	action = {
+		name = EVT_8007736_B # The attempt succeeds and ICP is dispersed
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 8007742 } # ICP is dispersed
+		command = { type = trigger which = 8007737 }
+	}
+	action = {
+		name = EVT_8007736_C # The attempt succeeds but ICP carries on
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007737}
+		
+	}
+}
+
+# Togliatti dies
+event = {
+	id = 8007737
+	country = ITA
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = nwo\death
+	style = 1
+
+	action = {
+		name = EVT_DEATH
+		command = { type = sleepminister which = 25023 }
+		command = { type = sleepminister which = 25043 }
+		command = { type = sleepminister which = 25083 }
+		command = { type = sleepminister which = 25095 }
+		command = { type = sleepminister which = 25300 }
+	}
+}
+
+### ICP 1950
+event = {
+	id = 8007738
+	country = ITA
+	one_action = yes
+
+	name = EVT_8007738_NAME
+	desc = EVT_8007738_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	# Very moderate ICP
+	action = {
+		name = EVT_8007738_A # ICP stays the same
+		ai_chance = 94
+		trigger = { local_flag = very_moderate_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007738_B # ICP radicalizes
+		ai_chance = 1
+		trigger = { local_flag = very_moderate_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007738_C # ICP is dispersed
+		ai_chance = 5
+		trigger = { local_flag = very_moderate_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+	
+	# Moderate ICP
+	action = {
+		name = EVT_8007738_A # ICP stays the same
+		ai_chance = 85
+		trigger = { local_flag = moderate_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007738_B # ICP radicalizes
+		ai_chance = 5
+		trigger = { local_flag = moderate_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007738_C # ICP is dispersed
+		ai_chance = 10
+		trigger = { local_flag = moderate_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+	
+	# Radical ICP
+	action = {
+		name = EVT_8007738_A # ICP stays the same
+		ai_chance = 70
+		trigger = { local_flag = radical_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007738_B # ICP radicalizes
+		ai_chance = 10
+		trigger = { local_flag = radical_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007738_C # ICP is dispersed
+		ai_chance = 20
+		trigger = { local_flag = radical_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+	
+	# Very radical ICP
+	action = {
+		name = EVT_8007738_A # ICP stays the same
+		ai_chance = 30
+		trigger = { local_flag = very_radical_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007738_B # ICP radicalizes
+		ai_chance = 50
+		trigger = { local_flag = very_radical_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007738_C # ICP is dispersed
+		ai_chance = 20
+		trigger = { local_flag = very_radical_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+}
+
+### ICP 1960
+event = {
+	id = 8007739
+	country = ITA
+	one_action = yes
+
+	name = EVT_8007739_NAME
+	desc = EVT_8007739_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = communist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	# Very moderate ICP
+	action = {
+		name = EVT_8007739_A # ICP stays the same
+		ai_chance = 90
+		trigger = { local_flag = very_moderate_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007739_B # ICP radicalizes
+		ai_chance = 1
+		trigger = { local_flag = very_moderate_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007739_C # ICP is dispersed
+		ai_chance = 9
+		trigger = { local_flag = very_moderate_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+	
+	# Moderate ICP
+	action = {
+		name = EVT_8007739_A # ICP stays the same
+		ai_chance = 80
+		trigger = { local_flag = moderate_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007739_B # ICP radicalizes
+		ai_chance = 5
+		trigger = { local_flag = moderate_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007739_C # ICP is dispersed
+		ai_chance = 15
+		trigger = { local_flag = moderate_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+	
+	# Radical ICP
+	action = {
+		name = EVT_8007739_A # ICP stays the same
+		ai_chance = 60
+		trigger = { local_flag = radical_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007739_B # ICP radicalizes
+		ai_chance = 10
+		trigger = { local_flag = radical_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007739_C # ICP is dispersed
+		ai_chance = 30
+		trigger = { local_flag = radical_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+	
+	# Very radical ICP
+	action = {
+		name = EVT_8007739_A # ICP stays the same
+		ai_chance = 10
+		trigger = { local_flag = very_radical_ICP }
+		command = { type = dissent value = -3 }
+	}
+	action = {
+		name = EVT_8007739_B # ICP radicalizes
+		ai_chance = 50
+		trigger = { local_flag = very_radical_ICP }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8007741 }
+	}
+	action = {
+		name = EVT_8007739_C # ICP is dispersed
+		ai_chance = 40
+		trigger = { local_flag = very_radical_ICP }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 8007742 }
+	}
+}
+
+### ICP is delegalized
+event = {
+	id = 8007740
+	country = ITA
+
+	name = EVT_8007740_NAME
+	desc = EVT_8007740_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	trigger = {
+		NOT = { government = communist } 
+		event = 8007730
+		random = 10
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 720
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = EVT_8007740_A
+		command = { type = dissent value = 20 }
+		command = { type = relation which = USA value = 100 }
+		command = { type = trigger which = 8007742 } # ICP is dispersed
+	}
+}
+
+### ICP radicalizes
+event = {
+	id = 8007741
+	country = ITA
+
+	name = EVT_8007741_NAME
+	desc = EVT_8007741_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	action = {
+		name = EVT_8007741_A
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+### ICP is dispersed
+event = {
+	id = 8007742
+	country = ITA
+
+	name = EVT_8007742_NAME
+	desc = EVT_8007742_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	action = {
+		name = EVT_8007742_A
+		command = { type = domestic which = political_left value = -2 }
+	}
+}
+
+### Radical Italian Communist Party takes power in Italy
+event = {
+	id = 8007743
+	country = ITA
+
+	name = EVT_8007743_NAME
+	desc = EVT_8007743_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	trigger = {
+		government = communist
+		event = 8007741
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8007743_A
+		command = { type = trigger which = 8007744 }
+	}
+}
+
+event = {
+	id = 8007744
+	country = USA
+
+	name = EVT_8007744_NAME
+	desc = EVT_8007744_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	action = {
+		name = EVT_8007744_A # Sponsor the coup
+		ai_chance = 90
+		command = { type = trigger which = 8007745 }
+	}
+	
+	action = {
+		name = EVT_8007744_B # Let Italians have their way
+		ai_chance = 10
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = trigger which = 8007747 } # Italian People's Republic is founded
+	}
+}
+
+event = {
+	id = 8007745
+	country = SOV
+
+	name = EVT_8007745_NAME
+	desc = EVT_8007745_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	action = {
+		name = EVT_8007745_A # Send ultimatum
+		ai_chance = 90
+		command = { type = trigger which = 8007746 }
+		command = { type = trigger which = 8007747 } # Italian People's Republic is founded
+	}
+	
+	action = {
+		name = EVT_8007734_B # Italy is lost to us
+		ai_chance = 10
+		command = { type = dissent value = 7 }
+		command = { type = trigger which = 8007748 } # Reactionist coup succeeds in Italy
+	}
+}
+
+event = {
+	id = 8007746
+	country = USA
+
+	name = EVT_8007746_NAME
+	desc = EVT_8007746_DESC
+	picture = nwo\italian_communist_party
+	style = 1
+
+	action = {
+		name = EVT_8007746_A # It's WW3 then
+		ai_chance = 20
+		command = { type = war which = SOV }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = EVT_8007746_B # Italy is lost to us
+		ai_chance = 80
+		command = { type = dissent value = 7 }
+	}
+}
+
+event = {
+	id = 8007747
+	country = ITA
+
+	name = EVT_8007747_NAME
+	desc = EVT_8007747_DESC
+	picture = nwo\italian_union
+	style = 1
+
+	action = {
+		name = EVT_8007747_A
+		command = { type = dissent value = 10 }
+		command = { type = leave_alliance }
+		command = { type = country which = U14 }
+		command = { type = alliance which = SOV }
+		command = { type = access which = SOV }
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		
+		command = { type = event which = 8225000 where = SOV when = 2 } ## CEE influence +1
+	}
+}
+
+event = {
+	id = 8007748
+	country = ITA
+
+	name = EVT_8007748_NAME
+	desc = EVT_8007748_DESC
+	picture = nwo\italian_christian_democracy
+	style = 1
+
+	action = {
+		name = EVT_8007748_A
+		command = { type = dissent value = 25 }
+		command = { type = leave_alliance }
+		command = { type = alliance which = USA }
+		command = { type = access which = USA }
+		command = { type = domestic which = political_left value = -6 }
+		command = { type = local_clrflag which = block_ideology_switch }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+}
+
+### Killing of Aldo Moro
+
+event = {
+	id = 8007750
+	country = ITA
+
+	name = EVT_8007750_NAME
+	desc = EVT_8007750_DESC
+	picture = nwo\aldo_moro
+	style = 1
+
+	trigger = {
+		random = 50
+	}
+
+	date = { day = 9 month = may year = 1978 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_8007750_A
+		command = { type = dissent value = 5 }
+		command = { type = sleepminister which = 25307 }
+	}
+}

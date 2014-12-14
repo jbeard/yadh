@@ -1,0 +1,4702 @@
+##############################################################
+# The Netherlands
+##############################################################
+
+event = {
+   id = 8208101
+   country = HOL
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U10
+            NOT = { ai = HOL }
+            NOT = { ai = U10 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U10
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U10 } }  # Communist regime doesn't exist
+      command = { type = country which = U10 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U10   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = HOL } # We are the player
+               control = { province = 122 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208103 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U10 } # They are the player
+               NOT = { control = { province = 122 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208104 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U10 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208102
+   country = U10
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = HOL
+            NOT = { ai = HOL }
+            NOT = { ai = U10 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = HOL
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = HOL } }  # Non-communist regime doesn't exist
+      command = { type = country which = HOL }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = HOL # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U10 } # We are the player
+               control = { province = 122 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208104 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = HOL } # They are the player
+               NOT = { control = { province = 122 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208103 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = HOL # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208103
+   country = HOL
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U10 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208104
+   country = U10
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = HOL value = 1 }
+   }
+
+}
+
+##############################################################
+# France
+##############################################################
+
+event = {
+   id = 8208111
+   country = FRA
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U11
+            NOT = { ai = FRA }
+            NOT = { ai = U11 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U11
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U11 } }  # Communist regime doesn't exist
+      command = { type = country which = U11 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U11   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = FRA } # We are the player
+               control = { province = 55 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208113 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U11 } # They are the player
+               NOT = { control = { province = 55 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208114 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U11 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208112
+   country = U11
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = FRA
+            NOT = { ai = FRA }
+            NOT = { ai = U11 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = FRA
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = FRA } }  # Non-communist regime doesn't exist
+      command = { type = country which = FRA }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = FRA # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U11 } # We are the player
+               control = { province = 55 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208114 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = FRA } # They are the player
+               NOT = { control = { province = 55 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208113 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = FRA # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208113
+   country = FRA
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U11 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208114
+   country = U11
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = FRA value = 1 }
+   }
+
+}
+
+
+##############################################################
+# United Kingdom
+##############################################################
+
+event = {
+   id = 8208121
+   country = ENG
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U12
+            NOT = { ai = ENG }
+            NOT = { ai = U12 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U12
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U12 } }  # Communist regime doesn't exist
+      command = { type = country which = U12 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U12   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ENG } # We are the player
+               control = { province = 29 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208123 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U12 } # They are the player
+               NOT = { control = { province = 29 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208124 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U12 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208122
+   country = U12
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = ENG
+            NOT = { ai = ENG }
+            NOT = { ai = U12 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = ENG
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = ENG } }  # Non-communist regime doesn't exist
+      command = { type = country which = ENG }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = ENG # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U12 } # We are the player
+               control = { province = 29 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208124 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ENG } # They are the player
+               NOT = { control = { province = 29 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208123 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = ENG # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208123
+   country = ENG
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U12 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208124
+   country = U12
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = ENG value = 1 }
+   }
+
+}
+
+##############################################################
+# Hungary
+##############################################################
+
+event = {
+   id = 8208131
+   country = HUN
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U13
+            NOT = { ai = HUN }
+            NOT = { ai = U13 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U13
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U13 } }  # Communist regime doesn't exist
+      command = { type = country which = U13 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U13   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = HUN } # We are the player
+               control = { province = 284 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208133 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U13 } # They are the player
+               NOT = { control = { province = 284 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208134 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U13 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208132
+   country = U13
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = HUN
+            NOT = { ai = HUN }
+            NOT = { ai = U13 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = HUN
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = HUN } }  # Non-communist regime doesn't exist
+      command = { type = country which = HUN }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = HUN # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U13 } # We are the player
+               control = { province = 284 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208134 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = HUN } # They are the player
+               NOT = { control = { province = 284 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208133 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = HUN # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208133
+   country = HUN
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U13 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208134
+   country = U13
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = HUN value = 1 }
+   }
+
+}
+
+##############################################################
+# Italy
+##############################################################
+
+event = {
+   id = 8208141
+   country = ITA
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U14
+            NOT = { ai = ITA }
+            NOT = { ai = U14 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U14
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U14 } }  # Communist regime doesn't exist
+      command = { type = country which = U14 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U14   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ITA } # We are the player
+               control = { province = 419 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208143 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U14 } # They are the player
+               NOT = { control = { province = 419 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208144 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U14 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208142
+   country = U14
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = ITA
+            NOT = { ai = ITA }
+            NOT = { ai = U14 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = ITA
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = ITA } }  # Non-communist regime doesn't exist
+      command = { type = country which = ITA }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = ITA # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U14 } # We are the player
+               control = { province = 419 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208144 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ITA } # They are the player
+               NOT = { control = { province = 419 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208143 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = ITA # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208143
+   country = ITA
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U14 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208144
+   country = U14
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = ITA value = 1 }
+   }
+
+}
+
+##############################################################
+# Portugal
+##############################################################
+
+event = {
+   id = 8208151
+   country = POR
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U15
+            NOT = { ai = POR }
+            NOT = { ai = U15 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U15
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U15 } }  # Communist regime doesn't exist
+      command = { type = country which = U15 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U15   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = POR } # We are the player
+               control = { province = 481 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208153 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U15 } # They are the player
+               NOT = { control = { province = 481 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208154 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U15 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208152
+   country = U15
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = POR
+            NOT = { ai = POR }
+            NOT = { ai = U15 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = POR
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = POR } }  # Non-communist regime doesn't exist
+      command = { type = country which = POR }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = POR # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U15 } # We are the player
+               control = { province = 481 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208154 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = POR } # They are the player
+               NOT = { control = { province = 481 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208153 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = POR # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208153
+   country = POR
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U15 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208154
+   country = U15
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = POR value = 1 }
+   }
+
+}
+
+##############################################################
+# Austria
+##############################################################
+
+event = {
+   id = 8208161
+   country = AUS
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U16
+            NOT = { ai = AUS }
+            NOT = { ai = U16 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U16
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U16 } }  # Communist regime doesn't exist
+      command = { type = country which = U16 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U16   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = AUS } # We are the player
+               control = { province = 195 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208163 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U16 } # They are the player
+               NOT = { control = { province = 195 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208164 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U16 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208162
+   country = U16
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = AUS
+            NOT = { ai = AUS }
+            NOT = { ai = U16 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = AUS
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = AUS } }  # Non-communist regime doesn't exist
+      command = { type = country which = AUS }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = AUS # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U16 } # We are the player
+               control = { province = 195 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208164 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = AUS } # They are the player
+               NOT = { control = { province = 195 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208163 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = AUS # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208163
+   country = AUS
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U16 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208164
+   country = U16
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = AUS value = 1 }
+   }
+
+}
+
+##############################################################
+# Belgium
+##############################################################
+
+event = {
+   id = 8208171
+   country = BEL
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U17
+            NOT = { ai = BEL }
+            NOT = { ai = U17 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U17
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U17 } }  # Communist regime doesn't exist
+      command = { type = country which = U17 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U17   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = BEL } # We are the player
+               control = { province = 116 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208173 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U17 } # They are the player
+               NOT = { control = { province = 116 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208174 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U17 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208172
+   country = U17
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = BEL
+            NOT = { ai = BEL }
+            NOT = { ai = U17 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = BEL
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = BEL } }  # Non-communist regime doesn't exist
+      command = { type = country which = BEL }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = BEL # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U17 } # We are the player
+               control = { province = 116 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208174 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = BEL } # They are the player
+               NOT = { control = { province = 116 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208173 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = BEL # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208173
+   country = BEL
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U17 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208174
+   country = U17
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = BEL value = 1 }
+   }
+
+}
+
+##############################################################
+# Luxembourg
+##############################################################
+
+event = {
+   id = 8208181
+   country = LUX
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U18
+            NOT = { ai = LUX }
+            NOT = { ai = U18 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U18
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U18 } }  # Communist regime doesn't exist
+      command = { type = country which = U18 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U18   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = LUX } # We are the player
+               control = { province = 109 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208183 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U18 } # They are the player
+               NOT = { control = { province = 109 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208184 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U18 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208182
+   country = U18
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = LUX
+            NOT = { ai = LUX }
+            NOT = { ai = U18 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = LUX
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = LUX } }  # Non-communist regime doesn't exist
+      command = { type = country which = LUX }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = LUX # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U18 } # We are the player
+               control = { province = 109 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208184 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = LUX } # They are the player
+               NOT = { control = { province = 109 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208183 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = LUX # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208183
+   country = LUX
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U18 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208184
+   country = U18
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = LUX value = 1 }
+   }
+
+}
+
+##############################################################
+# Norway
+##############################################################
+
+event = {
+   id = 8208191
+   country = NOR
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U19
+            NOT = { ai = NOR }
+            NOT = { ai = U19 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U19
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U19 } }  # Communist regime doesn't exist
+      command = { type = country which = U19 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U19   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = NOR } # We are the player
+               control = { province = 483 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208193 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U19 } # They are the player
+               NOT = { control = { province = 483 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208194 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U19 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208192
+   country = U19
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = NOR
+            NOT = { ai = NOR }
+            NOT = { ai = U19 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = NOR
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = NOR } }  # Non-communist regime doesn't exist
+      command = { type = country which = NOR }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = NOR # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U19 } # We are the player
+               control = { province = 483 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208194 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = NOR } # They are the player
+               NOT = { control = { province = 483 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208193 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = NOR # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208193
+   country = NOR
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U19 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208194
+   country = U19
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = NOR value = 1 }
+   }
+
+}
+
+##############################################################
+# Finland
+##############################################################
+
+event = {
+   id = 8208201
+   country = FIN
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U20
+            NOT = { ai = FIN }
+            NOT = { ai = U20 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U20
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U20 } }  # Communist regime doesn't exist
+      command = { type = country which = U20 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U20   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = FIN } # We are the player
+               control = { province = 525 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208203 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U20 } # They are the player
+               NOT = { control = { province = 525 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208204 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U20 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208202
+   country = U20
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = FIN
+            NOT = { ai = FIN }
+            NOT = { ai = U20 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = FIN
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = FIN } }  # Non-communist regime doesn't exist
+      command = { type = country which = FIN }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = FIN # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U20 } # We are the player
+               control = { province = 525 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208204 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = FIN } # They are the player
+               NOT = { control = { province = 525 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208203 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = FIN # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208203
+   country = FIN
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U20 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208204
+   country = U20
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = FIN value = 1 }
+   }
+
+}
+
+##############################################################
+# Sweden
+##############################################################
+
+event = {
+   id = 8208211
+   country = SWE
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U21
+            NOT = { ai = SWE }
+            NOT = { ai = U21 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U21
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U21 } }  # Communist regime doesn't exist
+      command = { type = country which = U21 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U21   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = SWE } # We are the player
+               control = { province = 2159 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208213 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U21 } # They are the player
+               NOT = { control = { province = 2159 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208214 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U21 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208212
+   country = U21
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = SWE
+            NOT = { ai = SWE }
+            NOT = { ai = U21 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = SWE
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = SWE } }  # Non-communist regime doesn't exist
+      command = { type = country which = SWE }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = SWE # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U21 } # We are the player
+               control = { province = 2159 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208214 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = SWE } # They are the player
+               NOT = { control = { province = 2159 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208213 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = SWE # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208213
+   country = SWE
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U21 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208214
+   country = U21
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = SWE value = 1 }
+   }
+
+}
+
+##############################################################
+# Denmark
+##############################################################
+
+event = {
+   id = 8208221
+   country = DEN
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U22
+            NOT = { ai = DEN }
+            NOT = { ai = U22 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U22
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U22 } }  # Communist regime doesn't exist
+      command = { type = country which = U22 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U22   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = DEN } # We are the player
+               control = { province = 294 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208223 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U22 } # They are the player
+               NOT = { control = { province = 294 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208224 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U22 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208222
+   country = U22
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = DEN
+            NOT = { ai = DEN }
+            NOT = { ai = U22 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = DEN
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = DEN } }  # Non-communist regime doesn't exist
+      command = { type = country which = DEN }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = DEN # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U22 } # We are the player
+               control = { province = 294 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208224 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = DEN } # They are the player
+               NOT = { control = { province = 294 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208223 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = DEN # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208223
+   country = DEN
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U22 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208224
+   country = U22
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = DEN value = 1 }
+   }
+
+}
+
+##############################################################
+# Switzerland
+##############################################################
+
+event = {
+   id = 8208261
+   country = SCH
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U26
+            NOT = { ai = SCH }
+            NOT = { ai = U26 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U26
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U26 } }  # Communist regime doesn't exist
+      command = { type = country which = U26 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U26   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = SCH } # We are the player
+               control = { province = 392 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208263 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U26 } # They are the player
+               NOT = { control = { province = 392 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208264 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U26 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208262
+   country = U26
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = SCH
+            NOT = { ai = SCH }
+            NOT = { ai = U26 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = SCH
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = SCH } }  # Non-communist regime doesn't exist
+      command = { type = country which = SCH }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = SCH # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U26 } # We are the player
+               control = { province = 392 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208264 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = SCH } # They are the player
+               NOT = { control = { province = 392 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208263 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = SCH # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208263
+   country = SCH
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U26 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208264
+   country = U26
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = SCH value = 1 }
+   }
+
+}
+
+##############################################################
+# Yugoslavia
+##############################################################
+
+event = {
+   id = 8208271
+   country = YUG
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U27
+            NOT = { ai = YUG }
+            NOT = { ai = U27 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U27
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U27 } }  # Communist regime doesn't exist
+      command = { type = country which = U27 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U27   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = YUG } # We are the player
+               control = { province = 338 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208273 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U27 } # They are the player
+               NOT = { control = { province = 338 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208274 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U27 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208272
+   country = U27
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = YUG
+            NOT = { ai = YUG }
+            NOT = { ai = U27 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = YUG
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = YUG } }  # Non-communist regime doesn't exist
+      command = { type = country which = YUG }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = YUG # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U27 } # We are the player
+               control = { province = 338 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208274 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = YUG } # They are the player
+               NOT = { control = { province = 338 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208273 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = YUG # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208273
+   country = YUG
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U27 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208274
+   country = U27
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = YUG value = 1 }
+   }
+
+}
+
+##############################################################
+# Albania
+##############################################################
+
+event = {
+   id = 8208281
+   country = ALB
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U28
+            NOT = { ai = ALB }
+            NOT = { ai = U28 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U28
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U28 } }  # Communist regime doesn't exist
+      command = { type = country which = U28 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U28   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ALB } # We are the player
+               control = { province = 359 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208283 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U28 } # They are the player
+               NOT = { control = { province = 359 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208284 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U28 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208282
+   country = U28
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = ALB
+            NOT = { ai = ALB }
+            NOT = { ai = U28 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = ALB
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = ALB } }  # Non-communist regime doesn't exist
+      command = { type = country which = ALB }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = ALB # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U28 } # We are the player
+               control = { province = 359 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208284 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ALB } # They are the player
+               NOT = { control = { province = 359 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208283 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = ALB # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208283
+   country = ALB
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U28 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208284
+   country = U28
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = ALB value = 1 }
+   }
+
+}
+
+##############################################################
+# Bulgaria
+##############################################################
+
+event = {
+   id = 8208291
+   country = BUL
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U29
+            NOT = { ai = BUL }
+            NOT = { ai = U29 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U29
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U29 } }  # Communist regime doesn't exist
+      command = { type = country which = U29 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U29   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = BUL } # We are the player
+               control = { province = 321 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208293 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U29 } # They are the player
+               NOT = { control = { province = 321 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208294 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U29 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208292
+   country = U29
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = BUL
+            NOT = { ai = BUL }
+            NOT = { ai = U29 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = BUL
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = BUL } }  # Non-communist regime doesn't exist
+      command = { type = country which = BUL }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = BUL # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U29 } # We are the player
+               control = { province = 321 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208294 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = BUL } # They are the player
+               NOT = { control = { province = 321 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208293 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = BUL # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208293
+   country = BUL
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U29 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208294
+   country = U29
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = BUL value = 1 }
+   }
+
+}
+
+##############################################################
+# Romania
+##############################################################
+
+event = {
+   id = 8208301
+   country = ROM
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U30
+            NOT = { ai = ROM }
+            NOT = { ai = U30 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U30
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U30 } }  # Communist regime doesn't exist
+      command = { type = country which = U30 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U30   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ROM } # We are the player
+               control = { province = 316 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208303 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U30 } # They are the player
+               NOT = { control = { province = 316 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208304 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U30 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208302
+   country = U30
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = ROM
+            NOT = { ai = ROM }
+            NOT = { ai = U30 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = ROM
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = ROM } }  # Non-communist regime doesn't exist
+      command = { type = country which = ROM }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = ROM # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U30 } # We are the player
+               control = { province = 316 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208304 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = ROM } # They are the player
+               NOT = { control = { province = 316 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208303 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = ROM # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208303
+   country = ROM
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U30 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208304
+   country = U30
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = ROM value = 1 }
+   }
+
+}
+
+##############################################################
+# Czechoslovakia
+##############################################################
+
+event = {
+   id = 8208311
+   country = CZE
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U31
+            NOT = { ai = CZE }
+            NOT = { ai = U31 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U31
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U31 } }  # Communist regime doesn't exist
+      command = { type = country which = U31 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U31   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = CZE } # We are the player
+               control = { province = 207 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208313 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U31 } # They are the player
+               NOT = { control = { province = 207 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208314 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U31 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208312
+   country = U31
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = CZE
+            NOT = { ai = CZE }
+            NOT = { ai = U31 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = CZE
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = CZE } }  # Non-communist regime doesn't exist
+      command = { type = country which = CZE }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = CZE # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U31 } # We are the player
+               control = { province = 207 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208314 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = CZE } # They are the player
+               NOT = { control = { province = 207 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208313 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = CZE # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208313
+   country = CZE
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U31 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208314
+   country = U31
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = CZE value = 1 }
+   }
+
+}
+
+##############################################################
+# Poland
+##############################################################
+
+event = {
+   id = 8208321
+   country = POL
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U32
+            NOT = { ai = POL }
+            NOT = { ai = U32 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U32
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U32 } }  # Communist regime doesn't exist
+      command = { type = country which = U32 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U32   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = POL } # We are the player
+               control = { province = 232 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208323 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U32 } # They are the player
+               NOT = { control = { province = 232 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208324 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U32 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208322
+   country = U32
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = POL
+            NOT = { ai = POL }
+            NOT = { ai = U32 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = POL
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = POL } }  # Non-communist regime doesn't exist
+      command = { type = country which = POL }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = POL # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U32 } # We are the player
+               control = { province = 232 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208324 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = POL } # They are the player
+               NOT = { control = { province = 232 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208323 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = POL # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208323
+   country = POL
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U32 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208324
+   country = U32
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = POL value = 1 }
+   }
+
+}
+
+##############################################################
+# Greece
+##############################################################
+
+event = {
+   id = 8208331
+   country = GRE
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U33
+            NOT = { ai = GRE }
+            NOT = { ai = U33 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U33
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U33 } }  # Communist regime doesn't exist
+      command = { type = country which = U33 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U33   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = GRE } # We are the player
+               control = { province = 377 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208333 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U33 } # They are the player
+               NOT = { control = { province = 377 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208334 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U33 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208332
+   country = U33
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = GRE
+            NOT = { ai = GRE }
+            NOT = { ai = U33 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = GRE
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = GRE } }  # Non-communist regime doesn't exist
+      command = { type = country which = GRE }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = GRE # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U33 } # We are the player
+               control = { province = 377 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208334 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = GRE } # They are the player
+               NOT = { control = { province = 377 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208333 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = GRE # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208333
+   country = GRE
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U33 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208334
+   country = U33
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = GRE value = 1 }
+   }
+
+}
+
+##############################################################
+# Turkey
+##############################################################
+
+event = {
+   id = 8208341
+   country = TUR
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U34
+            NOT = { ai = TUR }
+            NOT = { ai = U34 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U34
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U34 } }  # Communist regime doesn't exist
+      command = { type = country which = U34 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U34   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = TUR } # We are the player
+               control = { province = 1075 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208343 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U34 } # They are the player
+               NOT = { control = { province = 1075 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208344 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U34 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208342
+   country = U34
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = TUR
+            NOT = { ai = TUR }
+            NOT = { ai = U34 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = TUR
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = TUR } }  # Non-communist regime doesn't exist
+      command = { type = country which = TUR }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = TUR # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U34 } # We are the player
+               control = { province = 1075 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208344 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = TUR } # They are the player
+               NOT = { control = { province = 1075 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208343 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = TUR # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208343
+   country = TUR
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U34 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208344
+   country = U34
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = TUR value = 1 }
+   }
+
+}
+
+##############################################################
+# Spain
+##############################################################
+
+event = {
+   id = 8208351
+   tag = { SPR SPA }
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If all regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = U35
+            ai = no
+            NOT = { ai = U35 }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = U35
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1940 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = U35 } }  # Communist regime doesn't exist
+      command = { type = country which = U35 }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = U35   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               ai = no # We are the player
+               control = { province = 460 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208353 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = U35 } # They are the player
+               NOT = { control = { province = 460 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208354 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = U35 # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208352
+   country = U35
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+			OR = {
+				exists = SPR
+				exists = SPA
+			}
+			OR = {
+				NOT = { ai = SPR }
+				NOT = { ai = SPA }
+			}
+            NOT = { ai = U35 }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            OR = {
+				exists = SPR
+				exists = SPA
+			}
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1940 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = SPR exists = SPA } }  # Non-communist regime doesn't exist
+      command = { type = country which = SPR }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+			OR = {
+				exists = SPR
+				exists = SPA
+			}# Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+				exists = SPR
+               NOT = { ai = U35 } # We are the player
+               control = { province = 460 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208354 # We inherit them (SPR)
+      }
+	  command = { 
+         trigger = { 
+            OR = {
+				AND = {
+					NOT = { exists = SPR }
+					exists = SPA
+				}
+               NOT = { ai = U35 } # We are the player
+               control = { province = 460 data = -1 } # We control the capital
+            }
+         } 
+         type = trigger which = 8208355 # We inherit them (SPA)
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = SPR } # They are the player
+               NOT = { control = { province = 460 data = -1 } } # We don't control the capital
+            }
+         } 
+         type = trigger which = 8208353 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = SPR # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208353
+   tag = { SPR SPA }
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = U35 value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208354
+   country = U35
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = SPR value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208355
+   country = U35
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = SPA value = 1 }
+   }
+
+}
+
+##############################################################
+# Germany
+##############################################################
+
+event = {
+   id = 8208361
+   country = DFR
+   persistent = yes
+
+   trigger = {
+      government = communist # Non-communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = DDR
+            NOT = { ai = DFR }
+            NOT = { ai = DDR }
+         }
+      }
+      NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = DDR
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+	  
+	  NOT = { event = 8004309 } # Special block for impending unification process!
+   }
+
+   name = EVT_COMMIESWITCH_NAME
+   desc = EVT_COMMIESWITCH_DESC
+   picture = "nwo\commie_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_COMMIESWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = DDR } }  # Communist regime doesn't exist
+      command = { type = country which = DDR }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = DDR   # Communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = DFR } # We are the player
+               control = { province = 131 data = -1 } # We control Bonn
+            }
+         } 
+         type = trigger which = 8208363 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = DDR } # They are the player
+               NOT = { control = { province = 131 data = -1 } } # We don't control Bonn
+            }
+         } 
+         type = trigger which = 8208364 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_COMMIESWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = DDR # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208362
+   country = DDR
+   persistent = yes
+
+   trigger = {
+      NOT = { government = communist } # Communist regime changes ideology
+      NOT = { # If both regimes exist, they cannot be both player-controlled
+         AND = {
+            exists = DFR
+            NOT = { ai = DFR }
+            NOT = { ai = DDR }
+         }
+      }
+	  NOT = { # If both regimes exist, and unification was rejected, this event doesn't fire
+         AND = {
+            exists = DFR
+            local_flag = reject_unification
+         }
+      }
+	  NOT = { local_flag = block_ideology_switch }
+	  
+	  NOT = { event = 8004309 } # Special block for impending unification process!
+   }
+
+   name = EVT_DEMOSWITCH_NAME
+   desc = EVT_DEMOSWITCH_DESC
+   picture = "nwo\demo_switch"
+   style = 1
+
+   date = { day = 1 month = january year = 1936 }
+   offset = 30
+   deathdate = { day = 29 month = december year = 1963 }
+
+   action = {
+      name = EVT_DEMOSWITCH_SWITCH
+      ai_chance = 100
+      trigger = { NOT = { exists = DFR } }  # Non-communist regime doesn't exist
+      command = { type = country which = DFR }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY
+      ai_chance = 100
+      
+      trigger = { 
+         exists = DFR # Non-communist regime exists already
+      }
+      
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = DDR } # We are the player
+               control = { province = 131 data = -1 } # We control Bonn
+            }
+         } 
+         type = trigger which = 8208364 # We inherit them
+      }
+      command = { 
+         trigger = { 
+            OR = {
+               NOT = { ai = DFR } # They are the player
+               NOT = { control = { province = 131 data = -1 } } # We don't control Bonn
+            }
+         } 
+         type = trigger which = 8208363 # They inherit us
+      }
+   }
+   
+   action = {
+      name = EVT_DEMOSWITCH_REJECT
+      ai_chance = 0
+      
+      trigger = { 
+         exists = DFR # Rejection is possible only in case of unification
+      }
+      
+      command = { type = local_setflag which = reject_unification }
+   }
+}
+
+event = {
+   id = 8208363
+   country = DFR
+
+   name = EVT_DEMOUNITE_NAME
+   desc = EVT_DEMOUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_DEMOSWITCH_UNIFY # Unite with communists
+      command = { type = inherit which = DDR value = 1 }
+   }
+
+}
+
+event = {
+   id = 8208364
+   country = DDR
+
+   name = EVT_COMMIEUNITE_NAME
+   desc = EVT_COMMIEUNITE_DESC
+   picture = "nwo\reunification"
+   style = 1
+
+   action = {
+      name = EVT_COMMIESWITCH_UNIFY # Unite with non-communists
+      command = { type = inherit which = DFR value = 1 }
+   }
+
+}

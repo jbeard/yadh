@@ -1,0 +1,287 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http:#aarmod.cfuchs.net.
+############################################
+# This file contains events for the League of Nations
+# Event List:
+# 13300000	AAR-Limit Status monitor
+
+event = { 
+	id = 13300000 #AAR-Force-Limit Status
+	random = no
+	persistent = yes
+	
+	decision = {
+		ai = no
+	}
+	
+	decision_trigger = {
+		ai = no
+		ai = yes
+	}
+	
+	trigger = {
+		ai = no
+		ai = yes
+	}
+	
+	date = { day = 1 month = january year = 1915 }
+	offset = 100000
+	deathdate = { day = 30 month = december year = 1936 }
+	
+	name = "Our Nations Industrial and Force Limits"
+	desc = "Here our nation's current industrial and armed forces capacity is shown. If we go beyond one of the limits, our national economy may struggle, forcing the politicans to gear down. Limits are as follows:" 
+	style = 2
+	picture = "Wehrmacht"
+	decision_picture = "decision_purge_army"
+	#Industry
+	action = { 
+		name = "5 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer5 }
+		command = {  }
+	}
+	action = { 
+		name = "10 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer10 }
+		command = {  }
+	}
+	action = { 
+		name = "15 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer15 }
+		command = {  }
+	}
+	action = { 
+		name = "25 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer25 }
+		command = {  }
+	}
+	action = { 
+		name = "35 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer35 }
+		command = {  }
+	}
+	action = { 
+		name = "50 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer50 }
+		command = {  }
+	}
+	action = { 
+		name = "65 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer65 }
+		command = {  }
+	}
+	action = { 
+		name = "80 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer80 }
+		command = {  }
+	}
+	action = { 
+		name = "100 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer100 }
+		command = {  }
+	}
+	action = { 
+		name = "120 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer120 }
+		command = {  }
+	}
+	action = { 
+		name = "150 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer150 }
+		command = {  }
+	}
+	action = { 
+		name = "175 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer175 }
+		command = {  }
+	}
+	action = { 
+		name = "200 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer200 }
+		command = {  }
+	}
+	action = { 
+		name = "250 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer250 }
+		command = {  }
+	}
+	action = { 
+		name = "300 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer300 }
+		command = {  }
+	}
+	action = { 
+		name = "350 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer350 }
+		command = {  }
+	}
+	action = { 
+		name = "400 major arms manufacturers (industrial capacity)"
+		trigger = { local_flag = ic_sanitizer400 }
+		command = {  }
+	}
+	action = { 
+		name = "No Limit on industrial capacity"
+		trigger = { not = { or = {
+			local_flag = ic_sanitizer5
+			local_flag = ic_sanitizer10
+			local_flag = ic_sanitizer15
+			local_flag = ic_sanitizer25
+			local_flag = ic_sanitizer35
+			local_flag = ic_sanitizer50
+			local_flag = ic_sanitizer65
+			local_flag = ic_sanitizer80
+			local_flag = ic_sanitizer100
+			local_flag = ic_sanitizer120
+			local_flag = ic_sanitizer150
+			local_flag = ic_sanitizer175
+			local_flag = ic_sanitizer200
+			local_flag = ic_sanitizer250
+			local_flag = ic_sanitizer300
+			local_flag = ic_sanitizer350
+			local_flag = ic_sanitizer400
+		} } }
+		command = {  }
+	}
+	#Land
+	action = { 
+		name = "10 land divisions"
+		trigger = { local_flag = disarm_army_10 }
+		command = {  }
+	}
+	action = { 
+		name = "25 land divisions"
+		trigger = { local_flag = disarm_army_25 }
+		command = {  }
+	}
+	action = { 
+		name = "50 land divisions"
+		trigger = { local_flag = disarm_army_50 }
+		command = {  }
+	}
+	action = { 
+		name = "75 land divisions"
+		trigger = { local_flag = disarm_army_75 }
+		command = {  }
+	}
+	action = { 
+		name = "No land force limit"
+		trigger = { not = { or = {
+			local_flag = disarm_army_10
+			local_flag = disarm_army_25
+			local_flag = disarm_army_50
+			local_flag = disarm_army_75 
+		} } }
+		command = {  }
+	}
+	#Airforce
+	action = { 
+		name = "We are FORBIDDEN to have a traditional, armed airforce (excludes rockets and transport planes)"
+		trigger = { local_flag = disarm_air_0 }
+		command = {  }
+	}
+	action = { 
+		name = "1 Air Squadrons of each type, except rockets and transport planes"
+		trigger = { local_flag = disarm_air_1 }
+		command = {  }
+	}
+	action = { 
+		name = "3 Air Squadrons of each type, except rockets and transport planes"
+		trigger = { local_flag = disarm_air_3 }
+		command = {  }
+	}
+	action = { 
+		name = "5 Air Squadrons of each type, except rockets and transport planes"
+		trigger = { local_flag = disarm_air_5 }
+		command = {  }
+	}
+	action = { 
+		name = "No airforce limit"
+		trigger = { not = { or = {
+			local_flag = disarm_air_0
+			local_flag = disarm_air_1
+			local_flag = disarm_air_3
+			local_flag = disarm_air_5
+		} } }
+		command = {  }
+	}
+	# Navy
+	action = { 
+		name = "10 ships in total, modified by naval treaties we sign."
+		trigger = { local_flag = disarm_naval_10 }
+		command = {  }
+	}
+	action = { 
+		name = "25 ships in total, modified by naval treaties we sign."
+		trigger = { local_flag = disarm_naval_25 }
+		command = {  }
+	}
+	action = { 
+		name = "50 ships in total, modified by naval treaties we sign."
+		trigger = { local_flag = disarm_naval_50 }
+		command = {  }
+	}
+	action = { 
+		name = "100 ships in total, modified by naval treaties we sign."
+		trigger = { local_flag = disarm_naval_100 }
+		command = {  }
+	}
+	action = { 
+		name = "150 ships in total, modified by naval treaties we sign."
+		trigger = { local_flag = disarm_naval_150 }
+		command = {  }
+	}
+	action = { 
+		name = "200 ships in total, modified by naval treaties we sign."
+		trigger = { local_flag = disarm_naval_200 }
+		command = {  }
+	}
+	action = { 
+		name = "No naval limit, except for treaties we sign."
+		trigger = { not = { or = {
+			local_flag = disarm_naval_10
+			local_flag = disarm_naval_25
+			local_flag = disarm_naval_50
+			local_flag = disarm_naval_100
+			local_flag = disarm_naval_150
+			local_flag = disarm_naval_200
+		} } }
+		command = {  }
+	}			
+	# destroyers
+	# action = { 
+		# name = "thereof, 15 destroyer squadrons and 2 transports. (overall limit still applies)."
+		# trigger = { not = { ic = 50 } }
+		# command = {  }
+	# }
+	# action = { 
+		# name = "thereof, 25 destroyer squadrons and 5 transports. (overall limit still applies)"
+		# trigger = { ic = 50 not = { ic = 75 } }
+		# command = {  }
+	# }
+	# action = { 
+		# name = "thereof, 50 destroyer squadrons and 10 transports. (overall limit still applies)"
+		# trigger = { IC = 75 not = { IC = 100 } }
+		# command = {  }
+	# }
+	# action = { 
+		# name = "75 destroyer squadrons and 15 transports. (overall limit still applies)"
+		# trigger = { IC = 100 not = { IC = 150 } }
+		# command = {  }
+	# }
+	# action = { 
+		# name = "thereof, 100 destroyer squadrons and 20 transports. (overall limit still applies)"
+		# trigger = { IC = 150 not = { IC = 200 } }
+		# command = {  }
+	# }
+	# action = { 
+		# name = "thereof, 150 destroyer squadrons and 25 transports. (overall limit still applies)"
+		# trigger = { IC = 200 }
+		# command = {  }
+	# }
+}

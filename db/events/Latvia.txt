@@ -1,0 +1,1071 @@
+ # Created by Sephy email: valters.logins@gmail.com #
+
+#########################################################################
+# Ulmana regime															#
+#########################################################################
+event = {
+	id = 133025000
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofstate = 135001 
+		}
+	
+	name = "Coup d'etat Karlis Ulmanis"
+	desc = "On May 15, 1934, ostensibly to protect the country from a coup by right-wing extremists known as the Legion, led by Lt. Col. Voldemars Ozols, Ulmanis as Prime Minister dissolved the Saeima (Parliament) and established executive non-parliamentary authoritarian rule. Several officers from the Army and units of the national guard (Latvian Aizsargi) loyal to Ulmanis moved against key government offices, communications and transportation facilities."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 14 month = may year = 1934 }
+	offset = 1
+	deathdate = { day = 30 month = may year = 1934 }
+
+	action_a = {
+		name = "Ulmanis coup is succsesfull!"
+		command = { type = headofgovernment which = 135002 }
+		command = { type = foreignminister which = 135003 }
+		command = { type = armamentminister which = 135217 }
+		command = { type = ministerofsecurity which = 135005 }
+		command = { type = ministerofintelligence which = 135006 }
+		command = { type = chiefofstaff which = 135007 }
+		command = { type = chiefofarmy which = 135218 }
+		command = { type = chiefofnavy which = 135009 }
+		command = { type = chiefofair which = 135219 }
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = democratic value = -3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = -2 }
+	}
+}
+
+#########################################################################
+# Latvia minister changes in Ulmanis authoratian cabinet
+#########################################################################
+event = {
+	id = 133025001
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		minister = 135005
+		}
+	
+	name = "Minister of security change"
+	desc = "Historicaly minister of security Vilis Gulis was replaced by Kornelijs Veitmanis on January 18th, 1939 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 17 month = january year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = january year = 1939 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = ministerofsecurity which = 135220 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Vilis Gulbis stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 133025002
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		minister = 135217
+		}
+	
+	name = "Minister of armament change"
+	desc = "Historicaly minister of armament Ludvigs Ekis was replaced by Alfreds Valdmanis on June 16th, 1938"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 15 month = june year = 1938 }
+	offset = 1
+	deathdate = { day = 30 month = june year = 1938 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = armamentminister which = 135045 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Ludvigs Ekis stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 133025003
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		minister = 135218
+		}
+	
+	name = "Chief of army change"
+	desc = "Historicaly chief of army Martins Penikis was replaced by Krisjanis Berkis on November 11th, 1934"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 10 month = november year = 1934 }
+	offset = 1
+	deathdate = { day = 30 month = november year = 1934 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = chiefofarmy which = 135221 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Martins Penikis stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 133025004
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		minister = 135219
+		}
+	
+	name = "Chief of air force change"
+	desc = "Historicaly chief of air force Arvids Skurbe was replaced by Janis Indans on 9th of August, 1935"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 8 month = august year = 1935 }
+	offset = 1
+	deathdate = { day = 30 month = august year = 1935 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = chiefofair which = 135222 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Arvids Skurbe stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 133025005
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		minister = 135222
+		}
+	
+	name = "Chief of air force change"
+	desc = "Historicaly chief of air force Janis Indans was replaced by Rudolfs Kandis on 10th of February, 1937"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 9 month = february year = 1937 }
+	offset = 1
+	deathdate = { day = 30 month = february year = 1937 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = chiefofair which = 135223 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Janis Indans stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 133025006
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		minister = 135003
+		}
+	
+	name = "Foreign minister change"
+	desc = "Historicaly foreign minister Karlis Ulmanis was replaced by Ludvigs Ekis on 18th of April, 1936"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 17 month = april year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = april year = 1936 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = foreignminister which = 135224 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Karlis Ulmanis stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 133025007
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		minister = 135224
+		}
+	
+	name = "Foreign minister change"
+	desc = "Historicaly foreign minister Ludvigs Ekis was replaced by Vilhelms Munters on 13th of July, 1936"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 12 month = july year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = july year = 1936 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = foreignminister which = 135030 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Ludvigs Ekis stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+#########################################################################
+# Ulmana forth
+#########################################################################
+event = {
+	id = 133025008
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofstate = 135001
+		headofgovernment = 135225
+		}
+	
+	name = "Karla Ulmana forth cabinet"
+	desc = "A crisis arouse after resignation of foreign minister Voldemars Salnais from Blodnieks cabinet. Saeima (Latvian parliament) voted for confidence of Blodnieks cabinet and only 9 deputies voted for keeping his goverment. President asigned new cabinet formation for Ulmanis."
+        style = 2
+	picture = "minister_resign"
+
+	date = { day = 16 month = march year = 1934 }
+	offset = 1
+	deathdate = { day = 30 month = march year = 1934 }
+
+	action_a = {
+		name = "Ulmanis will be the new prime minister!"
+		ai_chance = 100
+		command = { type = headofgovernment which = 135002 }
+		command = { type = foreignminister which = 135003 }
+		command = { type = armamentminister which = 135226 }
+		command = { type = ministerofsecurity which = 135005 }
+		command = { type = ministerofintelligence which = 135227 }
+		command = { type = chiefofstaff which = 135007 }
+		command = { type = chiefofarmy which = 135218 }
+		command = { type = chiefofnavy which = 135009 }
+		command = { type = chiefofair which = 135219 }
+		command = { type = dissent value = -1 }	}
+	action_b = {
+		name = "Keep the current cabinet"
+		ai_chance = 0
+		command = { type = dissent value = 10}
+	}
+}
+
+#########################################################################
+# Blodnieka cabinet
+#########################################################################
+event = {
+	id = 133025009
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofstate = 135001
+		headofgovernment = 135228
+		}
+	
+	name = "Adolfa Blodnieka cabinet"
+	desc = "After Saeima (Latvian parliament) refused to accept two laws proposed by Skujenieks cabinet, prime minister Skujenieks resigned few days later."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 23 month = march year = 1933 }
+	offset = 1
+	deathdate = { day = 30 month = march year = 1933 }
+
+	action_a = {
+		name = "Blodnieks will be the new prime minister!"
+		ai_chance = 100
+		command = { type = headofgovernment which = 135225 }
+		command = { type = foreignminister which = 135229 }
+		command = { type = armamentminister which = 135230 }
+		command = { type = ministerofsecurity which = 135231 }
+		command = { type = ministerofintelligence which = 135227 }
+		command = { type = chiefofstaff which = 135007 }
+		command = { type = chiefofarmy which = 135218 }
+		command = { type = chiefofnavy which = 135009 }
+		command = { type = chiefofair which = 135219 }
+		command = { type = dissent value = -1 }	}
+	action_b = {
+		name = "Keep the current cabinet"
+		ai_chance = 0
+		command = { type = dissent value = 10}
+	}
+}
+
+#########################################################################
+# Soviet Union base treaty ultimatum decision for Latvia
+#########################################################################
+event = {
+	id = 133025010
+	random = no
+	country = SOV
+
+	decision = {
+		event = 2007020  # Eastern Poland has been given to the USSR
+		exists = LAT
+		NOT = {
+			war = { country = LAT country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = SOV country = LAT }
+		}
+		NOT = {
+			control = { province = 264 }
+			control = { province = 265 }
+			control = { province = 266 }
+			control = { province = 267 }
+			control = { province = 268 }
+			control = { province = 269 }
+		}
+	}
+	
+	trigger = {
+		exists = LAT	
+		event = 2007020  # Eastern Poland has been given to the USSR
+		NOT = {
+			OR = {
+				war = { country = LAT country = SOV }
+				war = { country = GER country = SOV }
+				alliance = { country = SOV country = LAT }				
+			}
+		}
+		NOT = {
+			control = { province = 264 }
+			control = { province = 265 }
+			control = { province = 266 }
+			control = { province = 267 }
+			control = { province = 268 }
+			control = { province = 269 }
+		}
+	}
+
+	name = "Soviet Union imposes Latvia to sign treaty of mutual assistance "
+	desc = "After Molotov-Ribentrop pact Latvia was in the sphere of Soviet influence. Soon after Soviet leaders started to plan ocupation of Latvia."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = october year = 1939  }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1940 }
+		
+	action = {
+		name = "Demand base treaty of mutual assistance" 
+		ai_chance = 100
+		command = { type = relation which = LAT value = -10 }
+		command = { type = trigger which = 133025011 } # Demand Latvia
+	}
+}
+#########################################################################
+# Base treaty ultimatum
+#########################################################################
+event = {
+	id = 133025011
+	random = no
+	country = LAT
+	
+	name = "Soviet Union is demanding base agreement."
+	desc = "Soviet Union invited foreign minister of Latvia to negotiate in Moscow on 2nd of October. An ultimatum wich requires full military access to Latvia territory was presented."
+	style = 2
+	picture = "minister_resign"
+
+	action_a = {
+		name = "We have no choice but to agree!"
+		ai_chance = 100
+		command = { type = trigger which = 133025012}
+	}
+	action_b = {
+		name = "We cannot accept this!"
+		ai_chance = 0
+		command = { type = war which = SOV }
+	}
+}
+
+#########################################################################
+# Soviet Union bases in Latvia
+#########################################################################
+event = {
+	id = 133025012
+	random = no
+	country = LAT
+	
+	name = "Base treaties"
+	desc = "On 5th of October Latvia signed the so called base agreement. It was ultimatum presented by SU under threats of invasion. Under terms of this agreement SU had rights to have military bases and station permanent garrison of 30 000 men in the territory of Latvia. Formally it guarenteed indenpendence of Latvia."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		name = "Borders are open."
+		command = { type = dissent value = 2 }
+		command = { type = access which = SOV }
+		command = { type = guarantee which = SOV where = LAT}
+		command = { type = relation which = SOV value = -20 }
+	}
+}
+
+
+#########################################################################
+# Baltic Germans for Latvia
+#########################################################################
+event = {
+	id = 133025013
+	random = no
+	country = LAT
+
+	trigger = {	event = 133025012	}
+
+	name = "Baltic Germans"
+	desc = "An important condition that was incorportated into  the secret Molotov-Ribbentrop Pact that was signed between Nazi Germany and the Soviet Union was that SU was allowed to occupy Latvia. Soviet Union should also allow all ethnic Germans living in Latvia to emigrate to Germany."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 30 month = October year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "After 700 years they return to the fatherland"
+		command = { type = manpowerpool value = -3 }
+
+	}
+}
+
+#########################################################################
+# Baltic Germans for Germany
+#########################################################################
+event = {
+	id = 133025014
+	random = no
+	country = GER
+
+	trigger = {	event = 133025012 }
+
+	name = "Baltic Germans"
+	desc = "Welcome home our brothers from Latvia!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 30 month = october year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "As a result of secret MR pact volksdeutsche from Latvia return to us!"
+		command = { type = manpowerpool value = 3 }
+
+	}
+}
+
+#########################################################################
+# Soviet Union decision for Latvia new friendly goverment
+#########################################################################
+event = {
+	id = 133025015
+	random = no
+	country = SOV
+
+	decision = {
+		event = 133025012  # Base treaties has been accepted
+		exists = LAT
+		NOT = {
+			war = { country = LAT country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = SOV country = LAT }
+		}
+		NOT = {
+			control = { province = 264 }
+			control = { province = 265 }
+			control = { province = 266 }
+			control = { province = 267 }
+			control = { province = 268 }
+			control = { province = 269 }
+		}
+	}
+	
+	trigger = {
+		exists = LAT
+		event = 133025012  # Base treaties has been accepted
+		NOT = {
+			OR = {
+				war = { country = LAT country = SOV }
+				war = { country = GER country = SOV }
+				alliance = { country = SOV country = LAT }
+			}
+		}
+		NOT = {
+			control = { province = 264 }
+			control = { province = 265 }
+			control = { province = 266 }
+			control = { province = 267 }
+			control = { province = 268 }
+			control = { province = 269 }
+		}
+	}
+
+	name = "Soviet Union pressures for a SU-friendly goverment"
+	desc = "After base treaty with Latvia Soviet Union moved about 50 000 troops in Latvia. In 16th of June V.Molotov presented ultimatum to ambassador of Latvia in SU F. Kocins. SU demanded to form Soviet-friendly minister cabinet and let unlimited number of SU troops enter Latvia!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 16 month = june year = 1940  }
+	offset = 1
+	deathdate = { day = 1 month = december year = 1940 }
+		
+	action = {
+		name = "Demand SU-friendly government!" # Demand Latvia
+		ai_chance = 100
+		command = { type = relation which = LAT value = -50 }
+		command = { type = trigger which = 1330250016 } # Latvia
+	}
+}
+
+#########################################################################
+# Ocupation of Latvia
+#########################################################################
+event = {
+	id = 1330250016
+	random = no
+	country = LAT
+	
+	name = "Soviet Union demanding friendly government."
+	desc = "Latvia has no choice but to accept. About 50 000 SU troops had already entered country and about 200 000 troops were stationed at the border. At this point Latvia had only 30 000 men in active service!"
+	style = 2
+	picture = "minister_resign"
+
+	action_a = {
+		name = "We have no choice but to agree!"
+		ai_chance = 100
+		command = { type = trigger which = 133025018}
+	}
+	action_b = {
+		name = "We cannot accept this!"
+		ai_chance = 0
+		command = { type = war which = SOV }
+	}
+}
+
+#########################################################################
+# Soviet Union ocupation of Latvia for Latvia
+#########################################################################
+event = {
+	id = 133025017
+	random = no
+	country = LAT
+		
+	name = "Soviet Union ocupation of Latvia"
+	desc = "On 17th of June Red army ocupied Latvia. President of Latvia Karlis Ulamanis was forced to accept gevernment formed by the Soviet Union."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		name = "Latvia is no more independent."
+		ai_chance = 100
+		command = { type = dissent value = 10 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = relation which = SOV value = 200 }
+		command = { type = headofstate which = 135012 }
+		command = { type = headofgovernment which = 135024 }
+		command = { type = foreignminister which = 135028 }
+		command = { type = armamentminister which = 135035 }
+		command = { type = ministerofsecurity which = 135061 }
+		command = { type = ministerofintelligence which = 135232 }
+		command = { type = chiefofstaff which = 135079 }
+		command = { type = chiefofarmy which = 135221 }
+		command = { type = chiefofnavy which = 135009 }
+		command = { type = chiefofair which = 135223 }
+	}
+}
+
+#########################################################################
+# Soviet Union ocupation of Latvia for Soviet Union
+#########################################################################
+event = {
+	id = 133025018
+	random = no
+	country = SOV
+		
+	name = "Soviet Union ocupation of Latvia"
+	desc = "On 17th of June Red army ocupied Latvia. President of Latvia Karlis Ulamanis was forced to accept gevernment formed by the Soviet Union."
+	style = 2
+	picture = "minister_resign"
+
+	action = {
+		ai_chance = 100
+		name = "Latvia is no more independent."
+		command = { type = relation which = LAT value = 200 }
+		command = { type = make_puppet which = LAT }
+		command = { type = trigger which = 133025017}
+	}
+}
+
+#########################################################################
+# Soviet Union annexion of Latvia for Soviet Union
+#########################################################################
+event = {
+	id = 133025019
+	random = no
+	country = SOV
+
+	decision = {
+		event = 133025018  # Latvia is made puppet
+		exists = LAT
+		NOT = {
+			war = { country = LAT country = SOV }
+			war = { country = GER country = SOV }
+		}
+		NOT = {
+			control = { province = 264 }
+			control = { province = 265 }
+			control = { province = 266 }
+			control = { province = 267 }
+			control = { province = 268 }
+			control = { province = 269 }
+		}
+	}
+	
+	trigger = {
+		exists = LAT	
+		event = 133025018  # Latvia is made puppet
+		NOT = {
+			OR = {
+				war = { country = LAT country = SOV }
+				war = { country = GER country = SOV }			
+			}
+		}
+		NOT = {
+			control = { province = 264 }
+			control = { province = 265 }
+			control = { province = 266 }
+			control = { province = 267 }
+			control = { province = 268 }
+			control = { province = 269 }
+		}
+	}
+
+	name = "Soviet Union annex Latvia"
+	desc = "After 21st of July so called 'Tautas Saeima' appealed Latvia to be included in Soviet Union as LSSR, Soviet Union formally annexed Latvia at 5th of August"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 4 month = august year = 1940  }
+	offset = 1
+	deathdate = { day = 1 month = december year = 1940 }
+		
+	action = {
+		name = "'Tautas Saeimas plea must be respected!" # Annex Latvia
+		ai_chance = 100
+		command = { type = addcore which = 264 } #
+		command = { type = addcore which = 265 } # 
+		command = { type = addcore which = 266 } # 
+		command = { type = addcore which = 267 } # 
+		command = { type = addcore which = 268 } # 
+		command = { type = addcore which = 269 } #
+		command = { type = inherit which = LAT }
+
+	}
+}
+
+#########################################################################
+# Karlis Ulmanis Latvia president
+#########################################################################
+event = {
+	id = 133025020
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135002
+		headofstate = 135001
+		}
+	
+	name = "Karlis Ulmanis becomes president of Latvia"
+	desc = "After Alberts Kviesis term was up, Latvias dictator Karlis Ulamanis proclamed himself to be president."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 10 month = april year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action_a = {
+		name = "Hurray for new president"
+		ai_chance = 100
+		command = { type = headofstate which = 135012 }
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "Let Alberts Kviesis stay"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+
+#########################################################################
+# Karlis Ulmanis deposed and deported Soviet Union
+#########################################################################
+event = {
+	id = 133025021
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135024
+		headofstate = 135001
+		}
+	
+	name = "Replace president of Latvia Karlis Ulmanis whith Kirhensteins"
+	desc = "After rigged election of Tautas saeima Karlis Ulmanis was deposed and deported to Voroshilovsk."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 20 month = july year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action_a = {
+		name = "Augusts Kirhensteins becomes acting president of Latvia"
+		ai_chance = 100
+		command = { type = headofstate which = 135016 }
+	}
+	action_b = {
+		name = "Let Karlis Ulmanis stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+#########################################################################
+# Latvia minister changes in Ulmanis authoratian cabinet
+#########################################################################
+
+event = {
+	id = 133025022
+	random = no
+	country = LAT
+	
+	trigger = {
+		headofgovernment = 135026
+		minister = 135045
+		}
+	
+	name = "Minister of armament change"
+	desc = "Historicaly minister of armament Alfreds Valdmanis was replaced by Janis Kaminskis on October 26th, 1939"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 25 month = october year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = april year = 1940 }
+
+	action_a = {
+		name = "Fine"
+		ai_chance = 100
+		command = { type = armamentminister which = 135044 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "Let Alfreds Valdmanis stay"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+#########################################################################
+# Latvia economical events
+#########################################################################
+
+event = {
+	id = 133025023
+	random = no
+	country = LAT
+	
+	trigger = { headofstate = 135012 }
+	
+	name = "Construction of Kegums Hydro Power Plant"
+	desc = "Country fast growing economy was in great need of energy. Should we build hydro power plant in Kegums to support growing demand?"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 8 month = september year = 1936 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action_a = {
+		name = "Lets build this!"
+		ai_chance = 100
+        command = { type = money value = -85 }
+        command = { type = supplies value = -255 }
+		command = { type = rarematerialspool value = -55 }
+		command = { type = metalpool value = -75 }
+		command = { type = energypool value = -155 }
+	}
+	action_b = {
+		name = "We dont need it"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+
+event = {
+	id = 133025024
+	random = no
+	country = LAT
+	
+	trigger = {
+	event = 133025023
+	}
+	
+	name = "Construction of Kegums Hydro Power Plant have been completed"
+	desc = "Largest industrial project in Latvia has been completed! Now we can enjoy more power."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 9 month = november year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = november year = 1939 }
+
+	action = {
+		name = "Lets celebrate this event"
+		ai_chance = 100
+		command = { type = energypool value = 20 }
+		command = { type = add_prov_resource which = 265 value = 50 where = energy }
+		command = { type = construct which = ic where = 265 value = 1 }
+		command = { type = construct which = infrastructure where = 265 value = 10 }
+	}
+}
+
+event = {
+	id = 133025025
+	random = no
+	country = LAT
+
+	trigger = { headofgovernment = 135018 }
+	
+	name = "Karlis Ulmanis golden age in Latvia economics"
+	desc = "In 1935 Karlis Ulmanis goverment passed similar law to Italian corporate system. In Latvia this economic policies was named cameras, where each camera was responsible for all situation in their field."
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1935 }
+
+	action = {
+		name = "Good for us"
+		ai_chance = 100
+		command = { type = peacetime_ic_mod value = 10 }
+	}
+}
+
+event = {
+	id = 133025026
+	random = no
+	country = LAT
+
+	trigger = { headofstate = 135012 }
+	
+	name = "Karlis Ulmanis golden age in Latvia economics"
+	desc = "We have great economic growth!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = january year = 1937 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = "Good for us"
+		ai_chance = 100
+		command = { type = peacetime_ic_mod value = 10 }
+	}
+}
+
+event = {
+	id = 133025027
+	random = no
+	country = LAT
+
+	trigger = { headofstate = 135012 }	
+	
+	name = "Karlis Ulmanis golden age in Latvia economics"
+	desc = "We have great economic growth!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "Good for us"
+		ai_chance = 100
+		command = { type = peacetime_ic_mod value = 100 }
+	}
+}
+
+#########################################################################
+# Latvia flavour events
+#########################################################################
+
+event = {
+	id = 133025028
+	country = LAT
+	persistent = yes
+	picture = "minister_resign"
+
+	trigger = {
+		day = 17
+		month = 10
+		NOT = {
+		day = 18
+		}
+		NOT = {
+		month = 11
+		}
+	}
+
+date = { day = 1 month = january year = 1919 }
+style = 2
+offset = 1
+deathdate = { day = 29 month = december year = 1964 }
+
+name = "The day of Latvia independence"
+desc = "Latvia proclaimed independence shortly after the end of World War I – on November 18, 1918 which is now the Independence Day in Latvia."
+
+action = {
+name = "Lets celebrate!"
+command = { type = dissent value = -0.1 }
+}
+}
+
+event = {
+	id = 133025029
+	country = LAT
+	picture = "minister_resign"
+
+	trigger = {
+		day = 16
+		month = august
+		year = 1936
+	}
+
+style = 2
+offset = 1
+
+name = "Latvia in 1936 summer olympics games"
+desc = "From sixteen sportsmen two latvian sportsmen got medals. Edvins Bietags won silver medal in the Greco-Roman Light Heavyweight match and Adalberts Bubenko won bronze medal in the 50 kilometre walk."
+
+action = {
+name = "Latvia can be proud with our sportsmen!"
+command = { type = dissent value = -2 }
+}
+}
+
+event = {
+	id = 133025030
+	country = LAT
+	picture = "minister_resign"
+
+	trigger = {
+		day = 15
+		month = february
+		year = 1936
+	}
+
+style = 2
+offset = 1
+
+name = "Latvia in 1936 winter olympics games"
+desc = "Latvia sent twentysix sportsmen, but didn't recieve any medals."
+
+action = {
+name = "Still its good to participate!"
+}
+}
+
+#########################################################################
+# Soviet ocupation in Latvia
+#########################################################################
+
+event = {
+	id = 133025031
+	random = no
+	country = SOV
+
+	trigger = { event = 133025019 }	
+	
+	name = "Latvia army reorganized"
+	desc = "After ocupation Latvian army was included in red army as 24th Territorial Rifle Corps!"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 10 month = august year = 1940 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = "They will be good adition to our army!"
+		ai_chance = 100
+		command = { type = add_division which = "24-i Strelkovyi Korpus" value = infantry when = 8 }
+		command = { type = manpowerpool value = 1 }
+		command = { type = money value = 100 } #free equipement
+	}
+}

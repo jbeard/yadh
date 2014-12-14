@@ -1,0 +1,578 @@
+event = {
+	id = 8005201
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130012 } # Jueri Uluots
+		command = { type = headofgovernment which = 130016 } # Jueri Uluots
+	}
+}
+
+event = {
+	id = 8005202
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130011 } # August Rei
+		command = { type = headofgovernment which = 130017 } # Otto Tief
+		command = { type = foreignminister which = 130027 } # Kaarel Liidak
+		command = { type = armamentminister which = 130035 } # Hugo Paertelpoeg
+		command = { type = ministerofsecurity which = 130044 } # Johannes Klesment
+		command = { type = ministerofintelligence which = 130053 } # August Rei
+		command = { type = chiefofstaff which = 130059 } # Johan Holberg
+		command = { type = chiefofarmy which = 130062 } # Richard Veermaa
+		command = { type = chiefofnavy which = 130066 } # Alex Nirk
+		command = { type = chiefofair which = 130069 } # Leo Sepp
+	}
+}
+
+event = {
+	id = 8005203
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130011 } # August Rei
+		command = { type = headofgovernment which = 130100 } # Johannes Sikkar
+	}
+}
+
+event = {
+	id = 8005204
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130011 } # August Rei
+		command = { type = headofgovernment which = 130101 } # Tonis Kint
+	}
+}
+
+event = {
+	id = 8005205
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130011 } # August Rei
+		command = { type = headofgovernment which = 130102 } # Aleksander Warma
+	}
+}
+
+event = {
+	id = 8005206
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130103 } # Aleksander Warma
+		command = { type = headofgovernment which = 130101 } # Tonis Kint
+	}
+}
+
+event = {
+	id = 8005207
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130105 } # August Kr?ndel
+		command = { type = headofgovernment which = 130106 } # August Kr?ndel
+		command = { type = foreignminister which = 130033 } # Hans Kruus
+		command = { type = armamentminister which = 130041 } # Nikolaus Pilankor
+		command = { type = ministerofsecurity which = 130051 } # Aleksander Rusev
+		command = { type = ministerofintelligence which = 130057 } # Arnold Veimer
+		command = { type = chiefofstaff which = 130061 } # Nikolay G. Karotamm
+		command = { type = chiefofarmy which = 130065 } # Nikolay G. Karotamm
+		command = { type = chiefofnavy which = 130068 } # Johannes Vares-Barbaruse
+		command = { type = chiefofair which = 130071 } # Oskar Eiriksson
+	}
+}
+
+event = {
+	id = 8005208
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130107 } # Otto Merimaa
+		command = { type = headofgovernment which = 130108 } # Otto Merimaa
+	}
+}
+
+event = {
+	id = 8005209
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130109 } # Joosep Saat
+		command = { type = headofgovernment which = 130110 } # Joosep Saat
+	}
+}
+
+event = {
+	id = 8005210
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130111 } # Harald Ilves
+		command = { type = headofgovernment which = 130112 } # Harald Ilves
+	}
+}
+
+event = {
+	id = 8005211
+	country = EST
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 130113 } # Vaino V?ljas
+		command = { type = headofgovernment which = 130114 } # Vaino V?ljas
+	}
+}
+
+event = {
+	id = 8005212
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 130115 } # Tonis Kint
+		command = { type = headofgovernment which = 130116 } # Heinrich Mark
+	}
+}
+
+event = {
+	id = 8005213
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 130117 } # Alexei Müürisepp
+		command = { type = headofgovernment which = 130118 } # Arnold Koop
+	}
+}
+
+event = {
+	id = 8005214
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1968 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 130119 } # Ilmar Vahe
+	}
+}
+
+event = {
+	id = 8005215
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 130120 } # Artur Vader
+	}
+}
+
+event = {
+	id = 8005216
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 130121 } # Johannes Lott
+	}
+}
+
+event = {
+	id = 8005217
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 130122 } # Johannes Käbin
+		command = { type = headofgovernment which = 130123 } # Jüri Suurhans
+	}
+}
+
+event = {
+	id = 8005218
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 130124 } # Matti Pedak
+	}
+}
+
+event = {
+	id = 8005219
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1984 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 130125 } # Arnold Rüütel
+	}
+}
+
+event = {
+	id = 8005220
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1985 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 130126 } # Valde Roosmaa
+	}
+}
+
+event = {
+	id = 8005221
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 130127 } # Enn-Arno Sillari
+	}
+}
+
+event = {
+	id = 8005222
+	country = EST
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 130125 } # Arnold Rüütel
+		command = { type = headofgovernment which = 130129 } # Edgar Savisaar
+	}
+}
+

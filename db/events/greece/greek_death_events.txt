@@ -1,0 +1,1535 @@
+###########################################
+### GREEK MOD EVENTS 
+###########################################
+
+### The death of Eleutherios Venizelos
+
+event = {
+	id = 14500004
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = march year = 1936 }
+
+	name = "The death of Eleutherios Venizelos"
+	desc = "Eleftherios Venizelos was an eminent Greek revolutionary, a prominent and illustrious statesman, and a charismatic leader of the early 20th century.Elected several times as Prime Minister of Greece, Venizelos had such profound influence on the internal and external affairs of Greece that he is credited with being 'the maker of modern Greece', and is still widely known as the 'Ethnarch'. leaves his last breathed in Paris buried in Akrotiri in an atmosphere of Panhellenic emotion."
+	picture = "venizelos_dead"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = dissent value = 2 }
+		command = { trigger = { headofstate = 90275 } type = headofstate which = 90310 }
+		command = { type = sleepminister which = 90187 }
+		command = { type = sleepminister which = 90195 }
+		command = { type = sleepminister which = 90275 }
+		}
+	}
+
+
+### The death of Giorgios Kondylis
+
+event = {
+	id = 14500005
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 30 month = january year = 1936 }
+
+	name = "The death of Giorgios Kondylis"
+	desc = "was a general of the Greek army and Prime Minister of Greece. He was nicknamed Thunder he died of a heart attack on 1936, in Athens."
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90237 }
+		command = { type = sleepminister which = 90128 }
+		command = { type = sleepminister which = 90274 }
+		command = { type = sleepleader which = 90001 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+### The death of Constantinos Demertzis
+
+event = {
+	id = 14500006
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 14 month = february year = 1936 }
+
+	name = "The death of Constantinos Demertzis"
+	desc = "He was a Prime Minister of Greece from November 1935 to April 1936. Demertzis died during his mandate, of a heart attack, on April 13, 1936."
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { trigger = { headofgovernment = 90002 } type = headofgovernment which = 90028 }
+		command = { type = sleepminister which = 90003 }
+		command = { type = sleepminister which = 90002 }
+		command = { type = dissent value = 1 }
+		}
+	}
+
+
+### The death of Panagis Tsaldaris
+
+event = {
+	id = 14500007
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1936 }
+
+	name = "The death of Panagis Tsaldaris"
+	desc = "Was a revered conservative politician and leader for many years of the conservative People's Party He died in Athens on 17 May 1936"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90247 }
+		command = { type = sleepminister which = 90251 }
+		command = { type = sleepminister which = 90246 }
+		command = { type = sleepminister which = 90034 }
+		command = { type = sleepminister which = 90080 }
+		}
+	}
+
+
+### The death of Ioannis Metaxas
+
+event = {
+	id = 14500008
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		OR = {
+			headofstate =  90001
+			headofstate =  90014
+			headofstate =  90017
+			headofstate =  90011
+		}
+	}
+
+	date = { day = 30 month = january year = 1941 }
+
+	name = "The death of Ioannis Metaxas"
+	desc = "was a Greek general, politician, and dictator, serving as Prime Minister of Greece from 1936 until his death in 1941."
+	picture = "paulos_dead"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { trigger = { headofgovernment = 90028 } type = flag_ext where = gre which = "" }
+		command = { trigger = { headofgovernment = 90028 } type = free_ic value = -4 }
+		command = { trigger = { headofgovernment = 90028 } type = free_money value = -2 }
+		command = { trigger = { headofgovernment = 90028 } type = free_metal value = -5 }
+		command = { trigger = { headofgovernment = 90028 } type = free_energy value = -6 }
+		command = { trigger = { headofgovernment = 90028 } type = set_domestic which = democratic value = 5 }
+		command = { trigger = { headofgovernment = 90028 } type = set_domestic which = political_left value = 3 }
+		command = { trigger = { headofgovernment = 90028 } type = headofgovernment which = 90029 }
+		command = { type = sleepminister which = 90028 }
+		command = { type = sleepminister which = 90049 }
+		command = { type = sleepminister which = 90238 }
+		command = { type = sleepminister which = 90252 }
+		command = { type = sleepminister which = 90253 }
+		command = { type = sleepteam which = 90028 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+### The death of King George II
+
+event = {
+	id = 14500009
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 1 month = april year = 1947 }
+
+	name = "The death of King George II"
+	desc = "Reigned as King of Greece from 1922 to 1924 and from 1935 to 1947 He died of arteriosclerosis on 1 April 1947, after he was discovered unconscious in his room at the Royal Palace in Athens."
+	picture = "paulos_dead"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { trigger = { headofstate = 90156 } type = headofstate which = 90013 }
+		command = { trigger = { headofstate = 90157 } type = headofstate which = 90013 }
+		command = { trigger = { headofstate = 90212 } type = headofstate which = 90016 }
+		command = { trigger = { headofstate = 90001 } type = headofstate which = 90022 }
+		command = { trigger = { headofstate = 90014 } type = headofstate which = 90016 }
+		command = { trigger = { headofstate = 90017 } type = headofstate which = 90022 }
+		command = { trigger = { headofstate = 90011 } type = headofstate which = 90013 }
+		command = { type = sleepminister which = 90001 }
+		command = { type = sleepminister which = 90011 }
+		command = { type = sleepminister which = 90014 }
+		command = { type = sleepminister which = 90017 }
+		command = { type = sleepminister which = 90156 }
+		command = { type = sleepminister which = 90157 }
+		command = { type = sleepminister which = 90212 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+#####################################
+
+### The suicide of Alexandros Korizis
+
+event = {
+	id = 14500010
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		headofgovernment = 90029
+		event = 14000022 #Metaxas refuses
+		war = { country = GRE  country = ITA }
+		lost_national = { country = GRE value = 20 }
+		}
+
+	date = { day = 10 month = february year = 1940 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1945 }
+
+	name = "The suicide of Alexandros Korizis"
+	desc = "Was the Prime Minister of Greece briefly in 1941 as German troops marched towards Athens and the city was placed under martial law, he committed suicide by shooting himself..."
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = headofgovernment which = 90030 }
+		command = { type = sleepminister which = 90029 }
+		command = { type = sleepminister which = 90050 }
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 14500077 }
+		}
+	}
+
+
+### The death of Alexandros Diomidis
+
+event = {
+	id = 14500012
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1950 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90162 }
+		command = { type = sleepminister which = 90190 }
+		command = { type = sleepminister which = 90214 }
+		}
+	}
+
+
+### The death of Alexandros Hatzikiriakos
+
+event = {
+	id = 14500013
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1958 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90170 }
+		}
+	}
+
+
+### The death of Alexandros Karapanos
+
+event = {
+	id = 14500014
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1946 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90175 }
+		}
+	}
+
+
+### The death of Alexandros Papagos
+
+event = {
+	id = 14500015
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1955 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90008 }
+		command = { type = sleepminister which = 90123 }
+		command = { type = sleepminister which = 90165 }
+		command = { type = sleepleader which = 90105 }
+		command = { type = sleepteam which = 90005 }
+		}
+	}
+
+
+### The death of Alexandros Papanastasiou
+
+event = {
+	id = 14500016
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1936 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90184 }
+		command = { type = sleepminister which = 90207 }
+		}
+	}
+
+
+### The death of Alexandros Svolos
+
+event = {
+	id = 14500017
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1956 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90068 }
+		}
+	}
+
+
+### The death of Alexandros Zaimis
+
+event = {
+	id = 14500018
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1936 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90177 }
+		command = { type = sleepminister which = 90196 }
+		command = { type = sleepminister which = 90235 }
+		}
+	}
+
+
+### The death of Anastasios Charalambis
+
+event = {
+	id = 14500019
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1949 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90201 }
+		command = { type = sleepminister which = 90226 }
+		command = { type = sleepleader which = 90050 }
+		}
+	}
+
+
+### The death of Andreas Michalakopoulos
+
+event = {
+	id = 14500020
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1938 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90185 }
+		command = { type = sleepminister which = 90208 }
+		command = { type = sleepminister which = 90266 }
+		}
+	}
+
+
+### The death of Archbishop Damaskinos
+
+event = {
+	id = 14500021
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1950 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90012 }
+		command = { type = sleepminister which = 90015 }
+		command = { type = sleepminister which = 90018 }
+		command = { type = sleepminister which = 90038 }
+		command = { type = sleepminister which = 90103 }
+		command = { type = sleepminister which = 90154 }
+		command = { type = sleepminister which = 90155 }
+		}
+	}
+
+
+### The death of Constantin Moschopoulos
+
+event = {
+	id = 14500022
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1942 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90172 }
+		command = { type = sleepleader which = 90017 }
+		}
+	}
+
+
+### The death of Constantinos Rentis
+
+event = {
+	id = 14500023
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1958 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90048 }
+		}
+	}
+
+
+### The death of Dimitrios Kamberos
+
+event = {
+	id = 14500024
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1942 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90263 }
+		command = { type = sleepleader which = 90087 }
+		}
+	}
+
+
+### The death of Dimitrios Maximos
+
+event = {
+	id = 14500025
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1955 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90033 }
+		command = { type = sleepminister which = 90094 }
+		command = { type = sleepminister which = 90249 }
+		}
+	}
+
+
+### The death of Eksadaktilos Athanasios
+
+event = {
+	id = 14500027
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1936 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90262 }
+		}
+	}
+
+
+### The death of Emmanouel Tsouderos
+
+event = {
+	id = 14500028
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1956 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90030 }
+		command = { type = sleepminister which = 90051 }
+		}
+	}
+
+
+### The death of Euthumios Kanellopoulos
+
+event = {
+	id = 14500031
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1933 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90193 }
+		}
+	}
+
+
+### The death of Georgios Tsolakoglou
+
+event = {
+	id = 14500032
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1948 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90035 }
+		command = { type = sleepminister which = 90055 }
+		command = { type = sleepminister which = 90129 }
+		command = { type = sleepminister which = 90138 }
+		command = { type = sleepleader which = 90011 }
+		}
+	}
+
+
+### The death of Georgios Kafantaris
+
+event = {
+	id = 14500033
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1946 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90194 }
+		command = { type = sleepminister which = 90233 }
+		command = { type = sleepminister which = 90209 }
+		}
+	}
+
+
+### The death of Georgios Kartalis
+
+event = {
+	id = 14500034
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1957 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90255 }
+		}
+	}
+
+
+### The death of Georgios Streit
+
+event = {
+	id = 14500035
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1948 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90113 }
+		command = { type = sleepminister which = 90135 }
+		command = { type = sleepminister which = 90188 }
+		}
+	}
+
+
+### The death of Paulos Kountouriotis
+
+event = {
+	id = 14500037
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1935 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90169 }
+		command = { type = sleepminister which = 90265 }
+		command = { type = sleepleader which = 90078 }
+		command = { type = sleepteam which = 90027 }
+		}
+	}
+
+
+### The death of Ioannis Drosopoulos
+
+event = {
+	id = 14500038
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1939 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90218 }
+		command = { type = sleepminister which = 90221 }
+		}
+	}
+
+
+### The death of Ioannis Rallis
+
+event = {
+	id = 14500039
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1946 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90037 }
+		command = { type = sleepminister which = 90057 }
+		command = { type = sleepminister which = 90242 }
+		command = { type = sleepminister which = 90244 }
+		command = { type = sleepminister which = 90245 }
+		}
+	}
+
+
+### The death of Konstantinos Raktivan
+
+event = {
+	id = 14500040
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1935 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90230 }
+		}
+	}
+
+
+### The death of Leonidas Paraskevopoulos
+
+event = {
+	id = 14500041
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1936 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90131 }
+		command = { type = sleepminister which = 90171 }
+		command = { type = sleepleader which = 90059 }
+		}
+	}
+
+
+### The death of Loukas Roufos
+
+event = {
+	id = 14500042
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1949 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90229 }
+		}
+	}
+
+
+### The death of M.Momferatos
+
+event = {
+	id = 14500043
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1933 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90216 }
+		}
+	}
+
+
+### The death of Miltiades Negropontis
+
+event = {
+	id = 14500044
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1951 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90191 }
+		command = { type = sleepminister which = 90219 }
+		}
+	}
+
+
+### The death of Nikolaos Kanelopoulos
+
+event = {
+	id = 14500047
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1936 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90254 }
+		}
+	}
+
+
+### The death of Nikolaos Plastiras
+
+event = {
+	id = 14500048
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1953 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90039 }
+		command = { type = sleepminister which = 90085 }
+		command = { type = sleepminister which = 90130 }
+		command = { type = sleepminister which = 90139 }
+		command = { type = sleepminister which = 90310 }
+		command = { type = sleepleader which = 90014 }
+		command = { type = sleepteam which = 90017 }
+		}
+	}
+
+
+### The death of Nikolaos Triantaphilakos
+
+event = {
+	id = 14500050
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1939 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90234 }
+		command = { type = sleepminister which = 90203 }
+		}
+	}
+
+
+### The death of Nikolaos Votsis
+
+event = {
+	id = 14500051
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1934 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90141 }
+		command = { type = sleepleader which = 90068 }
+		}
+	}
+
+
+### The death of Panagiotios Demestichas
+
+event = {
+	id = 14500052
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1960 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90061 }
+		command = { type = sleepleader which = 90037 }
+		}
+	}
+
+
+### The death of Themistocles Sophoulis
+
+event = {
+	id = 14500058
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1949 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90025 }
+		command = { type = sleepminister which = 90067 }
+		command = { type = sleepminister which = 90153 }
+		command = { type = sleepminister which = 90158 }
+		command = { type = sleepminister which = 90210 }
+		command = { type = sleepminister which = 90267 }
+		}
+	}
+
+
+### The death of Theodoros Pangalos
+
+event = {
+	id = 14500059
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1952 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90007 }
+		command = { type = sleepminister which = 90137 }
+		command = { type = sleepminister which = 90268 }
+		command = { type = sleepminister which = 90269 }
+		command = { type = sleepleader which = 90103 }
+		command = { type = sleepteam which = 90032 }
+		}
+	}
+
+
+### The death of Viktor Dousmanis
+
+event = {
+	id = 14500060
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1949 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90236 }
+		}
+	}
+
+
+### The death of Xristos Adamidis
+
+event = {
+	id = 14500061
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1949 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90264 }
+		}
+	}
+
+
+### The death of King Paulos I
+
+event = {
+	id = 14500069
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 6 month = april year = 1964 }
+
+	name = "The death of King Paulos I"
+	desc = "Reigned as King of Greece from 1947 to 1964.In 1959, he had an operation for a cataract, and in 1963 an emergency operation for appendicitis. In late February 1964, he underwent a further operation for stomach cancer, and died about a week later in Athens."
+	picture = "paulos_dead"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { trigger = { headofstate = 90013 } type = headofstate which = 90277 }
+		command = { trigger = { headofstate = 90016 } type = headofstate which = 90277 }
+		command = { trigger = { headofstate = 90022 } type = headofstate which = 90277 }
+		command = { type = sleepminister which = 90013 }
+		command = { type = sleepminister which = 90016 }
+		command = { type = sleepminister which = 90022 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+
+### The death of Georgios Papandreou
+
+event = {
+	id = 14500070
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1968 }
+
+	name = "The death of Georgios Papandreou"
+	desc = "He was a Greek politician, the founder of the Papandreou political dynasty.After the April 1967 military coup by the Colonels junta led by George Papadopoulos, Papandreou was arrested. Papandreou died under house arrest in November 1968. His funeral became the occasion for a massive anti-dictatorship demonstration."
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90046 }
+		command = { type = sleepminister which = 90058 }
+		command = { type = sleepminister which = 90026 }
+		command = { type = sleepminister which = 90109 }
+		command = { type = sleepminister which = 90087 }
+		}
+	}
+
+
+### The death of Konstantinos Logothetopoulos
+
+event = {
+	id = 14500071
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1961 }
+
+	name = "The death of Konstantinos Logothetopoulos"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90056 }
+		command = { type = sleepminister which = 90036 }
+		}
+	}
+
+
+### The death of Konstantinos Tsaldaris
+
+event = {
+	id = 14500072
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1970 }
+
+	name = "The death of Konstantinos Tsaldaris"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90053 }
+		command = { type = sleepminister which = 90032 }
+		command = { type = sleepminister which = 90159 }
+		command = { type = sleepminister which = 90095 }
+		}
+	}
+
+
+### The death of Panagiolis Poulitsas
+
+event = {
+	id = 14500073
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1968 }
+
+	name = "The death of Panagiolis Poulitsas"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90027 }
+		command = { type = sleepminister which = 90091 }
+		}
+	}
+
+
+### The death of Petros Voulgaris
+
+event = {
+	id = 14500074
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1957 }
+
+	name = "The death of Petros Voulgaris"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90144 }
+		command = { type = sleepminister which = 90161 }
+		command = { type = sleepminister which = 90040 }
+		command = { type = sleepleader which = 90061 }
+		}
+	}
+
+
+### The death of Sophocles Venizelos
+
+event = {
+	id = 14500075
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1964 }
+
+	name = "The death of Sophocles Venizelos"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90052 }
+		command = { type = sleepminister which = 90031 }
+		command = { type = sleepminister which = 90241 }
+		}
+	}
+
+
+### The death of Stylianos Gonatas
+
+event = {
+	id = 14500076
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 18 month = may year = 1966 }
+
+	name = "The death of Stylianos Gonatas"
+	desc = "EVT_103_DESC"
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90183 }
+		command = { type = sleepminister which = 90206 }
+		command = { type = sleepleader which = 90028 }
+		}
+	}
+
+#####################################
+
+### The death of Alexandros Korizis
+
+event = {
+	id = 14500077
+	random = no
+	country = GRE
+	style = 2
+
+	trigger = {
+		exists = GRE
+		}
+
+	date = { day = 1 month = april year = 1947 }
+
+	name = "The death of Alexandros Korizis"
+	desc = "Alexandros Korizis was a Greek politician he was born on the island of Poros in 1885. He studied law and was appointed Director of the National Bank.He founded the Agrarian Bank of Greece and served as its first president."
+	picture = "minister_died3"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { type = sleepminister which = 90029 }
+		command = { type = sleepminister which = 90050 }
+		}
+	}
+
+
+### The death of Ioannis Metaxas
+
+event = {
+	id = 14500078
+	random = no
+	country = GRE
+	style = 2
+	
+	trigger = {
+		OR = {
+			headofstate =  90273
+		}
+	}
+
+	date = { day = 30 month = january year = 1941 }
+
+	name = "The death of Ioannis Metaxas"
+	desc = "was a Greek general, politician, and dictator, serving as Prime Minister of Greece from 1936 until his death in 1941."
+	picture = "paulos_dead"
+
+	action_a = {
+		name = "EVT_362_ACTC"
+		command = { trigger = { headofgovernment = 90028 } type = free_ic value = -4 }
+		command = { trigger = { headofgovernment = 90028 } type = free_money value = -2 }
+		command = { trigger = { headofgovernment = 90028 } type = free_metal value = -5 }
+		command = { trigger = { headofgovernment = 90028 } type = free_energy value = -6 }
+		command = { trigger = { headofgovernment = 90028 } type = headofgovernment which = 90129 }
+		command = { type = sleepminister which = 90028 }
+		command = { type = sleepminister which = 90049 }
+		command = { type = sleepminister which = 90238 }
+		command = { type = sleepminister which = 90252 }
+		command = { type = sleepminister which = 90253 }
+		command = { type = sleepteam which = 90028 }
+		command = { type = dissent value = 2 }
+		}
+	}
+	

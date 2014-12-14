@@ -1,0 +1,1124 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Austria (ex-KUK)
+# Event List:
+#AUS	13300100	The Outcome of the Great War (historical)
+#AUS	13300110	German Austria
+#AUS	13300111	The Serbs claim Carinthia
+#AUS	13300112	The Treaty of Brno
+#AUS	13300113	Austrian parliamentary elections of 1920
+#AUS	13300114	New President of the Republic
+#AUS	13300115	Michael Mayr resigns
+#AUS	13300116	Formation of the Heimwehr
+#AUS	13300117	Formation of the Republikanischer Schutzbund
+#AUS	13300118	Johann Schober retires from his party's leadership
+#AUS	13300119	Protocol for the reconstruction of Austria
+#AUS	13300120	Austrian parliamentary elections of 1923
+#AUS	13300121	Assassination attempt on the Chancellor
+#AUS	13300122	Austrian parliamentary elections of 1927
+#AUS	13300123	The July Revolt
+#AUS	13300124	New President of Austria	
+#AUS	13300125	Ignaz Seipel resigns
+#AUS	13300126	Austrian parliamentary elections of 1930
+#AUS	13300127	The collapse of the Creditanstalt
+#AUS	13300128	Austrian parliamentary elections of 1932
+#AUS	13300129	Engelbert Dollfuss nominated Chancellor
+#AUS	13300130	The president of the National Council resigns
+#AUS	13300131	The birth of Austrofascism
+#AUS	13300132	The DNSAP and Social Democrats matter
+#AUS	13300133	Aligning with Italian fascism
+#AUS	13300134	Assassination attempt on Dollfuss
+#AUS	13300135	Austrian Civil War
+
+
+# The Outcome of the Great War (historical)
+event = {
+	id = 13300100
+	country = AUS
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		or = {
+			event = 2002534 #Versailes
+			event = 2191514 #Mil. defeat
+			event = 2191520 #Abdication + Armistice
+			event = 2191532 #Early defeat
+		}
+		event = 2192507# st. germain
+		atwar = no
+	}
+
+	name = "EVT_13300100_NAME"							
+	Desc = "EVT_13300100_DESC"
+	Picture = "surrender"
+	
+	action = { 	
+		name = "Damn the Kaiser! But, well... there is still Germany, maybe we can unify sometime..."
+		command = { type = local_setflag which = loser }
+		command = { type = dissent value = 10 }
+		command = { type = local_setflag which = disarm_10 }
+		command = { type = local_clrflag which = disarm_25 }
+		command = { type = local_clrflag which = disarm_50 }
+		command = { type = local_clrflag which = disarm_75 }
+		#navy
+		command = { type = strength which = naval when = 0 where = 0 value = 0.0 }
+		command = { type = local_setflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_clrflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+		#airforce - none allowed
+		command = { type = strength which = air when = 0 where = 0 value = 0.0 }
+		command = { type = local_setflag which = disarm_air_0 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_clrflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+		command = { type = secedearea which = ROM value = "Bessarabia" when = 1 }
+		command = { type = secedearea which = SOV value = "Odessa" when = 1 }
+		command = { type = secedeprovince which = SOV value = 618 when = 2 }
+		#from dh-full treaty of saint-germain-en-laye
+		command = { type = set_domestic which = democratic value = 7 } #democracy
+		command = { type = set_domestic which = political_left value = 8 } #7 social liberal	
+		command = { trigger = { not = { minister = 115130 } } type = wakeminister which = 115130 }
+		command = { trigger = { not = { minister = 115123 } } type = wakeminister which = 115123 }
+		command = { trigger = { not = { minister = 115114 } } type = wakeminister which = 115114 }
+		command = { trigger = { not = { minister = 115132 } } type = wakeminister which = 115132 }
+		command = { trigger = { not = { minister = 115144 } } type = wakeminister which = 115144 }
+		command = { type = headofstate which = 115130 } #Karl Seitz
+		command = { type = headofgovernment which = 115123 } #Karl Renner
+		command = { type = foreignminister which = 115114 } #Viktor Adler
+		command = { type = armamentminister which = 115132 } #Otto Steinwender
+		command = { type = ministerofsecurity which = 115144 } #Walter Breisky	
+		#reparations are already handled by dh-full peace-event 2024501
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	} 			
+}
+
+# German Austria
+event = { # Before Saint-Germain-en-Laye
+	id = 13300110
+	country = AUS
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 5
+	
+	trigger = {
+		event = 13300100
+		exists = U08
+	}
+	
+	name = "EVT_13300110_NAME"
+	desc = "EVT_13300110_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "We and our german brothers should help each other"
+		ai_chance = 100
+		command = { type = relation which = U08 value = 40 }
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = FRA value = -20 }
+		command = { type = relation which = ITA value = -20 }
+		command = { type = relation which = SER value = -20 }
+		command = { type = relation which = CZE value = -20 }
+		command = { type = relation which = ROM value = -20 }
+		command = { type = name where = AUS which = "German Austria" }
+	}
+	
+	action = {
+		name = "We have already seen what a friendship with Germany means"
+		ai_chance = 0
+		command = { type = relation which = U08 value = -40 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = FRA value = 20 }
+		command = { type = relation which = ITA value = 20 }
+		command = { type = relation which = SER value = 20 }
+		command = { type = relation which = CZE value = 20 }
+		command = { type = relation which = ROM value = 20 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+# The Serbs claim Carinthia
+event = {
+	id = 13300111
+	country = AUS
+	
+	# Triggered by SER 13301316
+	
+	name = "EVT_13300111_NAME"
+	desc = "EVT_13300111_DESC"
+	picture = "congress"
+	style = 2
+	
+	action = {
+		name = "The people have decided to remain Austrians" # (Kärnten)
+		ai_chance = 100
+		command = { type = relation which = SER value = -20 }
+		command = { type = trigger which = 13301317 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+	
+	action = {
+		name = "They voted for secession"
+		ai_chance = 0
+		command = { type = secedeprovince which = SER value = 191 when = 2 }
+		command = { type = dissent value = 10 }
+		command = { type = relation which = SER value = 20 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+}
+
+# The Treaty of Brno
+event = {
+	id = 13300112
+	country = AUS
+	
+	# triggered by CZE 13302218
+	
+	name = "EVT_13300112_NAME"
+	desc = "EVT_13300112_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "Sign it"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+	}
+	
+	action = {
+		name = "Don't sign"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+# Austrian parliamentary elections of 1920
+event = {
+	id = 13300113
+	country = AUS
+	save_date = yes
+	date = { day = 17 month = october year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 20
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = AUS }
+	}
+	
+	name = "EVT_13300113_NAME"
+	desc = "EVT_13300113_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "The Christian Social Party wins"
+		ai_chance = 100
+		command = { trigger = { not = { minister = 115124 } } type = wakeminister which = 115124 }
+		command = { trigger = { ai = yes not = { minister = 115117 } } type = wakeminister which = 115117 }
+		command = { trigger = { ai = yes not = { minister = 115135 } } type = wakeminister which = 115135 }
+		command = { trigger = { ai = yes not = { minister = 115145 } } type = wakeminister which = 115145 }
+		command = { type = headofgovernment which = 115124 } # Michael Mayr
+		command = { trigger = { ai = yes } type = foreignminister which = 115117 } # Michael Mayr
+		command = { trigger = { ai = yes } type = armamentminister which = 115135 } # Ferdinand Grimm
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 115145 } # Egon Glanz
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+	
+	action = {
+		name = "The Social Democratic Party wins"
+		ai_chance = 3
+		command = { trigger = { not = { minister = 115123 } } type = wakeminister which = 115123 }
+		command = { trigger = { ai = yes not = { minister = 115116 } } type = wakeminister which = 115116 }
+		command = { trigger = { ai = yes not = { minister = 115134 } } type = wakeminister which = 115134 }
+		command = { trigger = { ai = yes not = { minister = 115144 } } type = wakeminister which = 115144 }
+		command = { type = headofgovernment which = 115123 } # Renner
+		command = { trigger = { ai = yes } type = foreignminister which = 115116 } # Renner
+		command = { trigger = { ai = yes } type = armamentminister which = 115134 } # Richard Reisch
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 115144 } # Walter Breisky
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+# New President of the Republic
+event = {
+	id = 13300114
+	country = AUS
+	save_date = yes
+	
+	date = { day = 9 month = december year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		government = democratic
+		NOT = { incabinet = 115131 }
+		event = { id = 13300113 days = 60 }
+	}
+	
+	name = "EVT_13300114_NAME"
+	desc = "EVT_13300114_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { not = { minister = 115131 } } type = wakeminister which = 115131 }
+		command = { type = headofstate which = 115131 } # Michael hainisch
+	}
+}
+
+# Michael Mayr Resigns
+event = {
+	id = 13300115
+	country = AUS
+	
+	date = { day = 21 month = june year = 1921 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 5
+	
+	trigger = {
+		event = { id = 13300113 days = 120 }
+		incabinet = 115124
+	}
+	
+	name = "EVT_13300115_NAME"
+	desc = "EVT_13300115_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 115125 } } type = wakeminister which = 115125 }
+		command = { type = headofgovernment which = 115125 } # Johann Schober
+		command = { type = sleepminister which = 115124 } # MM HoG.
+		command = { type = sleepminister which = 115117 } # MM Foreign Minister.
+	}
+}
+
+# Formation of the Heimwehr
+event = {
+	id = 13300116
+	country = AUS
+	date = { day = 1 month = january year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 90
+	
+	trigger = {
+		NOT = {
+			OR = {
+				government = fascist
+				government = communist
+			}
+		}
+		local_flag = loser
+		dissent = 5
+		NOT = { ispuppet = AUS }
+	}
+	
+	name = "EVT_13300116_NAME"
+	desc = "EVT_13300116_DESC"
+	picture = "german_marginal_victory2"
+	
+	action = {
+		name = "They will help us defend our new borders"
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		name = "Dissuade them"
+		ai_chance = 0
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = sleepevent which = 13300114 }
+	}
+}
+
+# Formation of the Schutzbund
+event = {
+	id = 13300117
+	country = AUS
+	date = { day = 1 month = january year = 1920 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		event = 13300116
+		NOT = { government = communist }
+	}
+	
+	name = "EVT_13300117_NAME"
+	desc = "EVT_13300117_DESC"
+	picture = "15th_army"
+	
+	action = {
+		name = "It will strengthen austrian socialism!"
+		ai_chance = 99
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+	
+	action = {
+		name = "We don't need it"
+		ai_chance = 1
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+}
+
+# Johann Schober retires from his party's leadership
+event = {
+	id = 13300118
+	country = AUS
+	
+	date = { day = 31 month = may year = 1922 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		incabinet = 115125
+		event = { id = 13300113 days = 500 }
+	}
+	
+	name = "EVT_13300118_NAME"
+	desc = "EVT_13300118_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 115127 } } type = wakeminister which = 115127 }
+		command = { type = headofgovernment which = 115127 } # Ignaz Seipel
+	}
+}
+
+# Protocol for the reconstruction of Austria
+event = {
+	id = 13300119
+	country = AUS
+	
+	# Triggered
+	
+	name = "EVT_13300119_NAME"
+	desc = "EVT_13300119_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "Thank you for your kindness"
+		command = { type = dissent value = -3 }
+	}
+}
+
+# Austrian parliamentary elections of 1923
+event = {
+	id = 13300120
+	country = AUS
+	save_date = yes
+	
+	date = { day = 21 month = october year = 1923 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 10
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = AUS }
+		event = { id = 13300113 days = 1080 }
+	}
+	
+	name = "EVT_13300120_NAME"
+	desc = "EVT_13300120_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 115127
+					}
+				}
+			}
+		}
+		name = "The Christian Social Party wins"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115123 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115127 } } type = wakeminister which = 115127 }
+		command = { trigger = { ai = yes not = { minister = 115121 } } type = wakeminister which = 115121 }
+		command = { trigger = { ai = yes not = { minister = 115139 } } type = wakeminister which = 115139 }
+		command = { trigger = { ai = yes not = { minister = 115166 } } type = wakeminister which = 115166 }
+		command = { type = headofgovernment which = 115127 } # Seipel
+		command = { trigger = { ai = yes } type = foreignminister which = 115121 } # Alfred Grunberger
+		command = { trigger = { ai = yes } type = armamentminister which = 115139 } # Viktor Kienböck
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 115166 } # Seipel
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 115123
+					}
+				}
+			}
+		}
+		name = "The Social Democrat Party wins"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115127 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115123 } } type = wakeminister which = 115123 }
+		command = { trigger = { ai = yes not = { minister = 115114 } } type = wakeminister which = 115114 }
+		command = { trigger = { ai = yes not = { minister = 115132 } } type = wakeminister which = 115132 }
+		command = { trigger = { ai = yes not = { minister = 115142 } } type = wakeminister which = 115142 }
+		command = { type = headofgovernment which = 115123 } #Karl Renner
+		command = { trigger = { ai = yes } type = foreignminister which = 115114 } # Viktor Adler
+		command = { trigger = { ai = yes } type = armamentminister which = 115132 } # Steinwender
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 115142 } # Renner
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+# Assassination attempt on the Chancellor
+event = {
+	id = 13300121
+	country = AUS
+	
+	date = { day = 1 month = june year = 1924 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 7
+	
+	trigger = {
+		incabinet = 115127
+	}
+	
+	name = "EVT_13300121_NAME"
+	desc = "EVT_13300121_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "He's safe"
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+# Austrian parlimentary elections of 1927
+event = {
+	id = 13300122
+	country = AUS
+	save_date = yes
+	
+	date = { day = 24 month = april year = 1927 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 10
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = AUS }
+		event = { id = 13300120 days = 1440 }
+	}						
+	
+	name = "EVT_13300122_NAME"
+	desc = "EVT_13300122_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 115127
+					}
+				}
+			}
+		}
+		name = "The Unity List wins"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115123 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115127 } } type = wakeminister which = 115127 }
+		command = { trigger = { ai = yes not = { minister = 115157 } } type = wakeminister which = 115157 }
+		command = { trigger = { ai = yes not = { minister = 115139 } } type = wakeminister which = 115139 }
+		command = { trigger = { ai = yes not = { minister = 115166 } } type = wakeminister which = 115166 }
+		command = { type = headofgovernment which = 115127 } #Seipel
+		command = { trigger = { ai = yes } type = foreignminister which = 115157 } # Seipel
+		command = { trigger = { ai = yes } type = armamentminister which = 115139 } # Kienböck
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 115166 } # Seipel
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 115123
+					}
+				}
+			}
+		}
+		name = "The Social Democrat Party wins"
+		ai_chance = 5
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115127 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115123 } } type = wakeminister which = 115123 }
+		command = { trigger = { ai = yes not = { minister = 115114 } } type = wakeminister which = 115114 }
+		command = { type = headofgovernment which = 115123 } #Karl Renner
+		command = { trigger = { ai = yes } type = foreignminister which = 115114 } #Viktor Adler
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+# The July Revolt
+event = {
+	id = 13300123
+	country = AUS
+	
+	date = { day = 0 month = july year = 1927 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 7
+	
+	trigger = {
+		event = 13300116
+		event = 13300117
+		NOT = {
+			OR = {
+				government = communist
+				ideology = social_democrat
+			}
+		}
+	}
+	
+	name = "EVT_13300119_NAME"
+	desc = "EVT_13300119_DESC"
+	picture = "major_worker_strike"
+	
+	action = {
+		name = "Repress those criminals!"
+		ai_chance = 100
+		command = { type = revolt which = 195 }
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+	
+	action = {
+		name = "We failed. It's time to move on"
+		ai_chance = 0
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+# New President of Austria
+event = {
+	id = 13300124
+	country = AUS
+	save_date = yes
+	
+	date = { day = 0 month = january year = 1928 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 1
+	
+	trigger = {
+		event = { id = 13300114 days = 2880 }
+		minister = 115001
+		incabinet = 115131
+	}
+	
+	name = "EVT_13300124_NAME"
+	desc = "EVT_13300124_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 115001 } } type = wakeminister which = 115001 }
+		command = { type = headofstate which = 115001 } # Wilhelm Miklas
+	}
+}
+
+# Ignaz Seipel resigns
+event = {
+	id = 13300125
+	country = AUS
+	
+	date = { day = 4 month = may year = 1929 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 7
+	
+	trigger = {
+		incabinet = 115127
+		event = { id = 13300122 days = 680 }
+	}
+	
+	name = "EVT_13300125_NAME"
+	desc = "EVT_13300125_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { not = { minister = 115151 } } type = wakeminister which = 115151 }
+		command = { type = headofgovernment which = 115151 } # Ernst Streeruwitz
+	}
+}
+
+# Austrian parliamentary elections of 1930
+event = {
+	id = 13300126
+	country = AUS
+	save_date = yes
+	
+	date = { day = 9 month = november year = 1930 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 20
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = AUS }
+		or = {
+			not = { event = 13300125 }
+			event = { id = 13300125 days = 270 }
+		}
+		event = { id = 13300122 days = 1080 }
+	}
+	
+	name = "EVT_13300126_NAME"
+	desc = "EVT_13300126_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = {
+						dissent = 30
+						incabinet = 115151
+					}
+				}
+			}
+		}
+		name = "The Unity List wins"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115123 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115152 } } type = wakeminister which = 115152 }
+		command = { trigger = { ai = yes not = { minister = 115157 } } type = wakeminister which = 115157 }
+		command = { trigger = { ai = yes not = { minister = 115163 } } type = wakeminister which = 115163 }
+		command = { trigger = { ai = yes not = { minister = 115170 } } type = wakeminister which = 115170 }
+		command = { type = headofgovernment which = 115152 } # Carl Vaugoin
+		command = { trigger = { ai = yes } type = foreignminister which = 115157 } # Seipel
+		command = { trigger = { ai = yes } type = armamentminister which = 115163 } # Otto Juch
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 115170 } # Ernst Rüdiger Starhemberg
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = {
+						dissent = 30
+						incabinet = 115123
+					}
+				}
+			}
+		}
+		name = "The Social Democrat Party wins"
+		ai_chance = 10
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115151 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115123 } } type = wakeminister which = 115123 }
+		command = { trigger = { ai = yes not = { minister = 115114 } } type = wakeminister which = 115114 }
+		command = { type = headofgovernment which = 115123 } #Karl Renner
+		command = { trigger = { ai = yes } type = foreignminister which = 115114 } #Viktor Adler
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+# The collapse of the Creditanstalt
+event = {
+	id = 13300127
+	country = AUS
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 100
+	
+	trigger = {
+		year = 1931
+		local_flag = depression
+	}
+	
+	name = "EVT_13300127_NAME"
+	desc = "EVT_13300127_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "A really horrible day this is"
+		command = { type = dissent value = 10 }
+		command = { trigger = { money = 300 } type = money value = -280 }
+		command = { trigger = { money = 200 } type = money value = -180 }
+		command = { trigger = { money = 100 } type = money value = -80 }
+	}
+}
+
+# Austrian parliamentary elections of 1932
+event = {
+	id = 13300128
+	country = AUS
+	save_date = yes
+	
+	date = { day = 9 month = may year = 1932 }
+	deathdate = { day = 1 month = january year = 1937 }
+	offset = 10
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = AUS }
+		event = { id = 13300126 days = 720 }
+	}
+	
+	name = "EVT_13300128_NAME"
+	desc = "EVT_13300128_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = { 
+						dissent = 30
+						incabinet = 115152
+					}
+				}
+			}
+		}
+		name = "The Vaterländische Front wins"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115123 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115154 } } type = wakeminister which = 115154 }
+		command = { trigger = { ai = yes not = { minister = 115159 } } type = wakeminister which = 115159 }
+		command = { trigger = { ai = yes not = { minister = 115165 } } type = wakeminister which = 115165 }
+		command = { trigger = { ai = yes not = { minister = 115173 } } type = wakeminister which = 115173 }
+		command = { type = headofgovernment which = 115154 } # Karl Buresch
+		command = { trigger = { ai = yes } type = foreignminister which = 115159 } # Buresch
+		command = { trigger = { ai = yes } type = armamentminister which = 115165 } # Emanuel Weidenhoffer
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 115173 } # Franz Winkler
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					and = {
+						dissent = 30
+						incabinet = 115123
+					}
+				}
+			}
+		}
+		name = "The Social Democrat Party wins"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 115152 } } type = dissent value = -20 }
+		command = { trigger = { not = { minister = 115123 } } type = wakeminister which = 115123 }
+		command = { trigger = { not = { minister = 115114 } } type = wakeminister which = 115114 }
+		command = { type = headofgovernment which = 115123 } #Karl Renner
+		command = { type = foreignminister which = 115114 } #Viktor Adler
+		command = { type = domestic which = democratic value = 1 }
+	}
+}
+
+# Engelbert Dollfuss nominated Chancellor
+event = {
+	id = 13300129
+	country = AUS
+	
+	date = { day = 20 month = may year = 1932 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 10
+	
+	trigger = {
+		minister = 115150
+		NOT = { incabinet = 115150 }
+		incabinet = 115001
+		or = {
+			event = 13300128
+			not = { government = democratic }
+			year = 1934
+		}
+	}
+	
+	name = "EVT_13300129_NAME"
+	desc = "EVT_13300129_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 115150 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = event which = 13300130 when = 14 }
+	}
+}
+
+# The president of the National Council resigns
+event = {
+	id = 13300130
+	country = AUS
+	
+	# Triggered by the previous
+	
+	name = "EVT_13300130_NAME"
+	desc = "EVT_13300130_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		#command = { type = event which = 13300131 when = 5 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+# The birth of Austrofascism
+event = {
+	id = 13300131
+	country = AUS
+	
+	date = { day = 21 month = may year = 1932 }
+	deathdate = { day = 1 month = january year = 1937 }
+	offset = 10
+	
+	trigger = {
+		or = {
+			and = {
+				government = democratic
+				NOT = { ispuppet = AUS }
+				or = {
+					event = { id = 13300128 days = 15 }
+					year = 1935
+				}
+			}
+			and = {
+				not = { 
+					government = democratic
+					ispuppet = AUS
+				}
+			}
+		}
+		random = 30
+	}
+	
+	name = "EVT_13300131_NAME"
+	desc = "EVT_13300131_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Abolish Parliament"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = event which = 13300133 when = 7 }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = "Let the National Council speak"
+		ai_chance = 0
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = dissent value = 20 }
+		command = { type = sleepevent which = 13300132 } # The DNSAP & Social Democrats matter
+	}
+}	
+
+# The DNSAP and Social Democrats matter
+event = {
+	id = 13300132
+	country = AUS
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1938}
+	offset = 90
+	
+	trigger = {
+		or = {
+			incabinet = 115150
+			and = {
+				not = { minister = 115150 }
+				dissent = 5
+			}
+		}
+		event = 13300131
+		government = fascist
+		exists = GER
+		event = 13300217 # Third Reich
+	}
+	
+	name = "EVT_13300132_NAME"
+	desc = "EVT_13300132_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Ban the DNSAP and the Social Democrats parties"	
+		ai_chance = 100
+		command = { type = relation which = GER value = -50 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = dissent value = 2 }
+		command = { type = event which = 13300135 when = 180 } # Austrian Civil War
+		command = { type = event which = 13300134 when = 90 } # Attempt on Dollfuss
+	}
+	
+	action = {
+		name = "Ban the DNSAP"
+		ai_chance = 0
+		command = { type = relation which = GER value = -50 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = event which = 13300134 when = 90 } # Attempt on Dollfuss
+	}
+	
+	action = {
+		name = "Ban the Social Democrat Party"
+		ai_chance = 0
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = event which = 13300135 when = 30 } # Austrian Civil War
+	}
+	
+	action = {
+		name = "Let them go on"
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = dissent value = 12 }
+	}
+}
+
+# Aligning with Italian fascism
+event = {
+	id = 13300133
+	country = AUS
+	
+	# triggered by 13300131
+	
+	name = "EVT_13300133_NAME"
+	desc = "EVT_13300133_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Let's create a united front with Italy"
+		ai_chance = 100
+		command = { type = trigger which = 13300670 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = democratic value = 3 }
+	}
+	
+	action = {
+		name = "We can't trust an old enemy"
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+	}
+}
+
+# Assassination attempt on Dollfuss
+event = {
+	id = 13300134
+	country = AUS
+	
+	# Triggered by the former
+	
+	name = "EVT_13300134_NAME"
+	desc = "EVT_13300134_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "He's safe"
+		command = { type = dissent value = 1 }
+	}
+}
+
+# Austrian Civil War
+event = {
+	id = 13300135
+	country = AUS
+	
+	#Triggered by 13300132
+	
+	name = "EVT_13300135_NAME"
+	desc = "EVT_13300135_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Destroy the rebels!"
+		command = { type = dissent value = 15 }
+		command = { type = revolt which = 190 } # Graz
+		command = { type = revolt which = 195 } # Vienna
+	}
+}
+

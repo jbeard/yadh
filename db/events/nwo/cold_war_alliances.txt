@@ -1,0 +1,1078 @@
+### Dissolution of Western Allies after the war (only USA, UK and France remain)
+
+event = {
+	id = 8215000
+	tag = { ECU PER COS CAN SAF NZL AST EGY ITA BEL HOL NEP IRQ BHU U02 OMN NOR LUX U05 PAN DOM SAL HAI HON NIC GUA CUB MEX BRA GRE }
+	persistent = yes
+
+	name = EVT_8215000_NAME
+	desc = EVT_8215000_DESC
+	picture = nwo\western_allies
+	style = 1
+
+	trigger = {
+		NOT = { local_flag = event_8215000 }
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { flag = ww3 }
+		atwar = no
+		alliance = { country = USA }
+		# Deactivate after NATO is formed
+		NOT = { event = 8215020 }
+	}
+	
+    date = { day = 0 month = january year = 1939 }
+   	offset = 90
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215000_A
+		command = { type = local_setflag which = event_8215000 }
+		command = { type = leave_alliance }
+		command = { trigger = { country = CAN } type = guarantee which = USA where = CAN }
+		command = { trigger = { country = SAF } type = guarantee which = ENG where = SAF }
+		command = { trigger = { country = NZL } type = guarantee which = USA where = NZL }
+		command = { trigger = { country = AST } type = guarantee which = USA where = AST }
+		command = { trigger = { country = ITA } type = guarantee which = USA where = ITA }
+		command = { trigger = { country = BEL } type = guarantee which = USA where = BEL }
+		command = { trigger = { country = HOL } type = guarantee which = USA where = HOL }
+		command = { trigger = { country = NEP } type = guarantee which = ENG where = NEP }
+		command = { trigger = { country = IRQ } type = guarantee which = ENG where = IRQ }
+		command = { trigger = { country = BHU } type = guarantee which = ENG where = BHU }
+		command = { trigger = { country = U02 } type = guarantee which = ENG where = U02 }
+		command = { trigger = { country = OMN } type = guarantee which = ENG where = OMN }
+		command = { trigger = { country = NOR } type = guarantee which = USA where = NOR }
+		command = { trigger = { country = LUX } type = guarantee which = USA where = LUX }
+		command = { trigger = { country = U05 } type = guarantee which = USA where = U05 }
+		command = { trigger = { country = PAN } type = guarantee which = USA where = PAN }
+		command = { trigger = { country = DOM } type = guarantee which = USA where = DOM }
+		command = { trigger = { country = SAL } type = guarantee which = USA where = SAL }
+		command = { trigger = { country = HAI } type = guarantee which = USA where = HAI }
+		command = { trigger = { country = HON } type = guarantee which = USA where = HON }
+		command = { trigger = { country = NIC } type = guarantee which = USA where = NIC }
+		command = { trigger = { country = GUA } type = guarantee which = USA where = GUA }
+		command = { trigger = { country = CUB } type = guarantee which = USA where = CUB }
+		command = { trigger = { country = MEX } type = guarantee which = USA where = MEX }
+		command = { trigger = { country = BRA } type = guarantee which = USA where = BRA }
+		command = { trigger = { NOT = { exists = U33 } country = GRE } type = guarantee which = USA where = GRE }
+	}
+}
+
+### Dissolution of Eastern Allies after the war
+
+event = {
+	id = 8215001
+	tag = { U10 U11 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 }
+
+	name = EVT_8215001_NAME
+	desc = EVT_8215001_DESC
+	picture = nwo\eastern_allies
+	style = 1
+
+	trigger = {
+		NOT = { local_flag = event_8215001 }
+		flag = cold_war
+		flag = cold_war_pacific
+		NOT = { flag = ww3 }
+		atwar = no
+		alliance = { country = SOV }
+		# Deactivate after Warsaw Pact is formed
+		NOT = { event = 8215030 }
+	}
+	
+    date = { day = 0 month = january year = 1939 }
+   	offset = 90
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215000_A
+		command = { type = local_setflag which = event_8215001 }
+		command = { type = leave_alliance }
+		command = { type = access which = SOV }
+		command = { trigger = { country = U10 } type = guarantee which = SOV where = U10 }
+		command = { trigger = { country = U11 } type = guarantee which = SOV where = U11 }
+		command = { trigger = { country = U13 } type = guarantee which = SOV where = U13 }
+		command = { trigger = { country = U14 } type = guarantee which = SOV where = U14 }
+		command = { trigger = { country = U15 } type = guarantee which = SOV where = U15 }
+		command = { trigger = { country = U16 } type = guarantee which = SOV where = U16 }
+		command = { trigger = { country = U17 } type = guarantee which = SOV where = U17 }
+		command = { trigger = { country = U18 } type = guarantee which = SOV where = U18 }
+		command = { trigger = { country = U19 } type = guarantee which = SOV where = U19 }
+		command = { trigger = { country = U20 } type = guarantee which = SOV where = U20 }
+		command = { trigger = { country = U21 } type = guarantee which = SOV where = U21 }
+		command = { trigger = { country = U22 } type = guarantee which = SOV where = U22 }
+		command = { trigger = { country = U26 } type = guarantee which = SOV where = U26 }
+		command = { trigger = { country = U27 } type = guarantee which = SOV where = U27 }
+		command = { trigger = { country = U28 } type = guarantee which = SOV where = U28 }
+		command = { trigger = { country = U29 } type = guarantee which = SOV where = U29 }
+		command = { trigger = { country = U30 } type = guarantee which = SOV where = U30 }
+		command = { trigger = { country = U31 } type = guarantee which = SOV where = U31 }
+		command = { trigger = { country = U32 } type = guarantee which = SOV where = U32 }
+		command = { trigger = { NOT = { exists = GRE } country = U33 } type = guarantee which = SOV where = U33 }
+		command = { trigger = { country = U34 } type = guarantee which = SOV where = U34 }
+		command = { trigger = { country = U35 } type = guarantee which = SOV where = U35 }
+	}
+}
+
+### United States becomes the leader of the Allies
+
+event = {
+	id = 8215002
+	country = USA	
+
+	name = EVT_8215002_NAME
+	desc = EVT_8215002_DESC
+	picture = nwo\usa_superpower
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { ispuppet = yes }
+		OR = {
+			alliance = { country = ENG }
+			NOT = { exists = ENG }
+		}
+	}
+	
+    date = { day = 0 month = january year = 1939 }
+   	offset = 90
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215002_A
+		command = { type = alliance_leader where = 2 }
+	}
+
+}
+
+### Major alliances get their new names
+
+event = {
+	id = 8215003
+	country = USA
+
+	name = EVT_8215003_NAME
+	desc = EVT_8215003_DESC
+	picture = nwo\allies_in_ww2
+	style = 1
+	
+	trigger = {
+		OR = {
+			war = { country = GER country = SOV }
+			NOT = { exists = GER }
+		}
+	}
+	
+    date = { day = 0 month = january year = 1943 }
+    offset = 360
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action = {
+		name = EVT_8215003_A
+		command = { type = alliance_name which = "WESTERNBLOC_1945" where = 2 }
+		command = { trigger = { NOT = { event = 8215004 } } type = trigger which = 8215004 }
+	}
+	
+}
+
+event = {
+	id = 8215004
+	country = SOV
+
+	name = EVT_8215004_NAME
+	desc = EVT_8215004_DESC
+	picture = nwo\allies_in_ww2
+	style = 1
+	
+	trigger = {
+		OR = {
+			war = { country = GER country = SOV }
+			NOT = { exists = GER }
+		}
+	}
+	
+    date = { day = 0 month = january year = 1943 }
+    offset = 360
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action = {
+		name = EVT_8215004_A
+		command = { type = alliance_name which = "EASTERNBLOC_1945" where = 3 }
+		command = { trigger = { NOT = { event = 8215003 } } type = trigger which = 8215003 }
+	}
+	
+}
+
+### Postwar collective collective security
+
+event = {
+	id = 8215010
+	country = USA
+	persistent = yes
+
+	name = EVT_8215010_NAME
+	desc = EVT_8215010_DESC
+	picture = nwo\western_allies
+	style = 1
+
+	trigger = {
+		OR = {
+			AND = {
+				atwar = CAN
+				NOT = { alliance = { country = CAN } }
+				guarantee = { country = USA country = CAN }
+			}
+			AND = {
+				atwar = SAF
+				NOT = { alliance = { country = SAF } }
+				guarantee = { country = ENG country = SAF }
+			} 
+			AND = {
+				atwar = NZL
+				NOT = { alliance = { country = NZL } }
+				guarantee = { country = USA country = NZL }
+			}
+			AND = {
+				atwar = AST
+				NOT = { alliance = { country = AST } }
+				guarantee = { country = USA country = AST }
+			}
+			AND = {
+				atwar = ITA
+				NOT = { alliance = { country = ITA } }
+				guarantee = { country = USA country = ITA }
+			}
+			AND = {
+				atwar = BEL 
+				NOT = { alliance = { country = BEL } }
+				guarantee = { country = USA country = BEL }
+			}
+			AND = {
+				atwar = HOL
+				NOT = { alliance = { country = HOL } }
+				guarantee = { country = USA country = HOL }
+			}
+			AND = {
+				atwar = NEP
+				NOT = { alliance = { country = NEP } }
+				guarantee = { country = ENG country = NEP }
+			}
+			AND = {
+				atwar = IRQ
+				NOT = { alliance = { country = IRQ } }
+				guarantee = { country = ENG country = IRQ }
+			}
+			AND = {
+				atwar = BHU
+				NOT = { alliance = { country = BHU } }
+				guarantee = { country = ENG country = BHU }
+			}
+			AND = {
+				atwar = U02
+				NOT = { alliance = { country = U02 } }
+				guarantee = { country = ENG country = U02 }
+			}
+			AND = {
+				atwar = OMN
+				NOT = { alliance = { country = OMN } }
+				guarantee = { country = ENG country = OMN }
+			}
+			AND = {
+				atwar = NOR
+				NOT = { alliance = { country = NOR } }
+				guarantee = { country = USA country = NOR }
+			}
+			AND = {
+				atwar = LUX
+				NOT = { alliance = { country = LUX } }
+				guarantee = { country = USA country = LUX }
+			}
+			AND = {
+				atwar = U05 
+				NOT = { war = { country = U05 country = INO } }
+				NOT = { alliance = { country = U05 } }
+				guarantee = { country = USA country = U05 }
+			}
+			AND = {
+				atwar = PAN
+				NOT = { alliance = { country = PAN } }
+				guarantee = { country = USA country = PAN }
+			}
+			AND = {
+				atwar = DOM
+				NOT = { alliance = { country = DOM } }
+				guarantee = { country = USA country = DOM }
+			}
+			AND = {
+				atwar = SAL
+				NOT = { alliance = { country = SAL } }
+				guarantee = { country = USA country = SAL }
+			}
+			AND = {
+				atwar = HAI
+				NOT = { alliance = { country = HAI } }
+				guarantee = { country = USA country = HAI }
+			}
+			AND = {
+				atwar = HON
+				NOT = { alliance = { country = HON } }
+				guarantee = { country = USA country = HON }
+			}
+			AND = {
+				atwar = NIC
+				NOT = { alliance = { country = NIC } }
+				guarantee = { country = USA country = NIC }
+			}
+			AND = {
+				atwar = GUA
+				NOT = { alliance = { country = GUA } }
+				guarantee = { country = USA country = GUA }
+			}
+			AND = {
+				atwar = CUB
+				NOT = { alliance = { country = CUB } }
+				guarantee = { country = USA country = CUB }
+			}
+			AND = {
+				atwar = MEX 
+				NOT = { alliance = { country = MEX } }
+				guarantee = { country = USA country = MEX }
+			}
+			AND = {
+				atwar = BRA
+				NOT = { alliance = { country = BRA } }
+				guarantee = { country = USA country = BRA }
+			}
+			
+			AND = {
+				atwar = U24
+				NOT = { alliance = { country = U24 } }
+				guarantee = { country = USA country = U24 }
+			}
+			AND = {
+				atwar = GRE
+				NOT = { alliance = { country = GRE } }
+				guarantee = { country = USA country = GRE }
+			}
+			AND = {
+				atwar = DFR
+				NOT = { alliance = { country = DFR } }
+				guarantee = { country = USA country = DFR }
+			}
+			AND = {
+				atwar = JAP
+				NOT = { alliance = { country = JAP } }
+				guarantee = { country = USA country = JAP }
+			}
+			AND = {
+				atwar = KOR
+				NOT = { war = { country = PRK country = KOR } }
+				NOT = { alliance = { country = KOR } }
+				guarantee = { country = USA country = KOR }
+			}
+		}
+		domestic = { type = interventionism value = 2 }
+		flag = cold_war
+		flag = cold_war_pacific
+	}
+	
+    date = { day = 0 month = january year = 1939 }
+   	offset = 7
+	deathdate = { day = 29 month = december year = 1991 }
+
+	action = {
+		name = EVT_8215010_A
+		ai_chance = 100
+		command = { trigger = { atwar = CAN NOT = { alliance = { country = CAN } } guarantee = { country = USA country = CAN } } type = alliance which = CAN }
+		command = { trigger = { atwar = SAF NOT = { alliance = { country = SAF } } guarantee = { country = ENG country = SAF } } type = alliance which = SAF }
+		command = { trigger = { atwar = NZL NOT = { alliance = { country = NZL } } guarantee = { country = USA country = NZL } } type = alliance which = NZL }
+		command = { trigger = { atwar = ITA NOT = { alliance = { country = ITA } } guarantee = { country = USA country = ITA } } type = alliance which = ITA }
+		command = { trigger = { atwar = BEL NOT = { alliance = { country = BEL } } guarantee = { country = USA country = BEL } } type = alliance which = BEL }
+		command = { trigger = { atwar = HOL NOT = { alliance = { country = HOL } } guarantee = { country = USA country = HOL } } type = alliance which = HOL }
+		command = { trigger = { atwar = NEP NOT = { alliance = { country = NEP } } guarantee = { country = ENG country = NEP } } type = alliance which = NEP }
+		command = { trigger = { atwar = IRQ NOT = { alliance = { country = IRQ } } guarantee = { country = ENG country = IRQ } } type = alliance which = IRQ }
+		command = { trigger = { atwar = BHU NOT = { alliance = { country = BHU } } guarantee = { country = ENG country = BHU } } type = alliance which = BHU }
+		command = { trigger = { atwar = U02 NOT = { alliance = { country = U02 } } guarantee = { country = ENG country = U02 } } type = alliance which = U02 }
+		command = { trigger = { atwar = OMN NOT = { alliance = { country = OMN } } guarantee = { country = ENG country = OMN } } type = alliance which = OMN }
+		command = { trigger = { atwar = NOR NOT = { alliance = { country = NOR } } guarantee = { country = USA country = NOR } } type = alliance which = NOR }
+		command = { trigger = { atwar = LUX NOT = { alliance = { country = LUX } } guarantee = { country = USA country = LUX } } type = alliance which = LUX }
+		command = { trigger = { atwar = U05 NOT = { war = { country = U05 country = INO } } NOT = { alliance = { country = U05 } } guarantee = { country = USA country = HOL } } type = alliance which = U05 }
+		command = { trigger = { atwar = PAN NOT = { alliance = { country = PAN } } guarantee = { country = USA country = PAN } } type = alliance which = PAN }
+		command = { trigger = { atwar = DOM NOT = { alliance = { country = DOM } } guarantee = { country = USA country = DOM } } type = alliance which = DOM }
+		command = { trigger = { atwar = SAL NOT = { alliance = { country = SAL } } guarantee = { country = USA country = SAL } } type = alliance which = SAL }
+		command = { trigger = { atwar = HAI NOT = { alliance = { country = HAI } } guarantee = { country = USA country = HAI } } type = alliance which = HAI }
+		command = { trigger = { atwar = HON NOT = { alliance = { country = HON } } guarantee = { country = USA country = HON } } type = alliance which = HON }
+		command = { trigger = { atwar = NIC NOT = { alliance = { country = NIC } } guarantee = { country = USA country = NIC } } type = alliance which = NIC }
+		command = { trigger = { atwar = GUA NOT = { alliance = { country = GUA } } guarantee = { country = USA country = GUA } } type = alliance which = GUA }
+		command = { trigger = { atwar = CUB NOT = { alliance = { country = CUB } } guarantee = { country = USA country = CUB } } type = alliance which = CUB }
+		command = { trigger = { atwar = MEX NOT = { alliance = { country = MEX } } guarantee = { country = USA country = MEX } } type = alliance which = MEX }
+		command = { trigger = { atwar = BRA NOT = { alliance = { country = BRA } } guarantee = { country = USA country = BRA } } type = alliance which = BRA }
+		
+		command = { trigger = { atwar = GRE NOT = { alliance = { country = GRE } } guarantee = { country = USA country = GRE } } type = alliance which = GRE }
+		
+		command = { trigger = { atwar = U24 NOT = { alliance = { country = U24 } } guarantee = { country = USA country = U24 } } type = alliance which = U24 }
+		command = { trigger = { atwar = DFR NOT = { alliance = { country = DFR } } guarantee = { country = USA country = DFR } } type = alliance which = DFR }		
+		command = { trigger = { atwar = DDR NOT = { alliance = { country = DDR } } guarantee = { country = USA country = DDR } } type = alliance which = DDR }
+		command = { trigger = { atwar = AUS NOT = { alliance = { country = AUS } } guarantee = { country = USA country = AUS } } type = alliance which = AUS }
+		command = { trigger = { atwar = JAP NOT = { alliance = { country = JAP } } guarantee = { country = USA country = JAP } } type = alliance which = JAP }
+		command = { trigger = { atwar = KOR NOT = { war = { country = PRK country = KOR } } NOT = { alliance = { country = KOR } } guarantee = { country = USA country = KOR } } type = alliance which = KOR }
+	}                                                          
+                                                               
+	action = {
+		name = EVT_8215010_B
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -2 }
+		command = { trigger = { atwar = CAN NOT = { alliance = { country = CAN } } guarantee = { country = USA country = CAN } } type = end_guarantee which = USA where = CAN }
+		command = { trigger = { atwar = SAF NOT = { alliance = { country = SAF } } guarantee = { country = ENG country = SAF } } type = end_guarantee which = ENG where = SAF }
+		command = { trigger = { atwar = NZL NOT = { alliance = { country = NZL } } guarantee = { country = USA country = NZL } } type = end_guarantee which = USA where = NZL }
+		command = { trigger = { atwar = ITA NOT = { alliance = { country = ITA } } guarantee = { country = USA country = ITA } } type = end_guarantee which = USA where = ITA }
+		command = { trigger = { atwar = BEL NOT = { alliance = { country = BEL } } guarantee = { country = USA country = BEL } } type = end_guarantee which = USA where = BEL }
+		command = { trigger = { atwar = HOL NOT = { alliance = { country = HOL } } guarantee = { country = USA country = HOL } } type = end_guarantee which = USA where = HOL }
+		command = { trigger = { atwar = NEP NOT = { alliance = { country = NEP } } guarantee = { country = ENG country = CAN } } type = end_guarantee which = ENG where = NEP }
+		command = { trigger = { atwar = IRQ NOT = { alliance = { country = IRQ } } guarantee = { country = ENG country = SAF } } type = end_guarantee which = ENG where = IRQ }
+		command = { trigger = { atwar = BHU NOT = { alliance = { country = BHU } } guarantee = { country = ENG country = PER } } type = end_guarantee which = ENG where = BHU }
+		command = { trigger = { atwar = U02 NOT = { alliance = { country = U02 } } guarantee = { country = ENG country = NZL } } type = end_guarantee which = ENG where = U02 }
+		command = { trigger = { atwar = OMN NOT = { alliance = { country = OMN } } guarantee = { country = ENG country = EGY } } type = end_guarantee which = ENG where = OMN }
+		command = { trigger = { atwar = NOR NOT = { alliance = { country = NOR } } guarantee = { country = USA country = ITA } } type = end_guarantee which = USA where = NOR }
+		command = { trigger = { atwar = LUX NOT = { alliance = { country = LUX } } guarantee = { country = USA country = BEL } } type = end_guarantee which = USA where = LUX }
+		command = { trigger = { atwar = U05 NOT = { war = { country = U05 country = INO } } NOT = { alliance = { country = U05 } } guarantee = { country = USA country = HOL } } type = end_guarantee which = USA where = U05 }
+		command = { trigger = { atwar = PAN NOT = { alliance = { country = PAN } } guarantee = { country = USA country = CAN } } type = end_guarantee which = USA where = PAN }
+		command = { trigger = { atwar = DOM NOT = { alliance = { country = DOM } } guarantee = { country = USA country = SAF } } type = end_guarantee which = USA where = DOM }
+		command = { trigger = { atwar = SAL NOT = { alliance = { country = SAL } } guarantee = { country = USA country = PER } } type = end_guarantee which = USA where = SAL }
+		command = { trigger = { atwar = HAI NOT = { alliance = { country = HAI } } guarantee = { country = USA country = NZL } } type = end_guarantee which = USA where = HAI }
+		command = { trigger = { atwar = HON NOT = { alliance = { country = HON } } guarantee = { country = USA country = EGY } } type = end_guarantee which = USA where = HON }
+		command = { trigger = { atwar = NIC NOT = { alliance = { country = NIC } } guarantee = { country = USA country = ITA } } type = end_guarantee which = USA where = NIC }
+		command = { trigger = { atwar = GUA NOT = { alliance = { country = GUA } } guarantee = { country = USA country = BEL } } type = end_guarantee which = USA where = GUA }
+		command = { trigger = { atwar = CUB NOT = { alliance = { country = CUB } } guarantee = { country = USA country = HOL } } type = end_guarantee which = USA where = CUB }
+		command = { trigger = { atwar = MEX NOT = { alliance = { country = MEX } } guarantee = { country = USA country = BEL } } type = end_guarantee which = USA where = MEX }
+		command = { trigger = { atwar = BRA NOT = { alliance = { country = BRA } } guarantee = { country = USA country = HOL } } type = end_guarantee which = USA where = BRA }
+		
+		command = { trigger = { atwar = GRE NOT = { alliance = { country = GRE } } guarantee = { country = USA country = GRE } } type = end_guarantee which = USA where = GRE }
+		
+		command = { trigger = { atwar = U24 NOT = { alliance = { country = U24 } } guarantee = { country = USA country = U24 } } type = end_guarantee which = USA where = U24 }
+		command = { trigger = { atwar = DFR NOT = { alliance = { country = DFR } } guarantee = { country = USA country = DFR } } type = end_guarantee which = USA where = DFR }
+		command = { trigger = { atwar = DDR NOT = { alliance = { country = DDR } } guarantee = { country = USA country = DDR } } type = end_guarantee which = USA where = DDR }
+		command = { trigger = { atwar = AUS NOT = { alliance = { country = AUS } } guarantee = { country = USA country = AUS } } type = end_guarantee which = USA where = AUS }
+		command = { trigger = { atwar = JAP NOT = { alliance = { country = JAP } } guarantee = { country = USA country = JAP } } type = end_guarantee which = USA where = JAP }
+		command = { trigger = { atwar = KOR NOT = { war = { country = PRK country = KOR } } NOT = { alliance = { country = KOR } } guarantee = { country = USA country = KOR } } type = end_guarantee which = USA where = KOR }
+	}                                                                                                                                  
+                                                                                                                                       
+}                                                                                                                                      
+                                                                                                                                       
+event = {                                                                                                                              
+	id = 8215011
+	country = SOV
+	persistent = yes
+
+	name = EVT_8215011_NAME
+	desc = EVT_8215011_DESC
+	picture = nwo\eastern_allies
+	style = 1
+
+	trigger = {
+    	OR = {
+        	flag = soviet_control_cee_0
+            flag = soviet_control_cee_1
+            flag = soviet_control_cee_2
+            flag = soviet_control_cee_3
+            flag = soviet_control_cee_4
+            flag = soviet_control_cee_5
+        }
+		OR = {
+			AND = {
+				atwar = U10
+				NOT = { alliance = { country = U10 } }
+				guarantee = { country = SOV country = U10 }
+			}
+			AND = {
+				atwar = U11
+				NOT = { alliance = { country = U11 } }
+				guarantee = { country = SOV country = U11 }
+			}
+			AND = {
+				atwar = U13
+				NOT = { alliance = { country = U13 } }
+				guarantee = { country = SOV country = U13 }
+			}
+			AND = {
+				atwar = U14
+				NOT = { alliance = { country = U14 } }
+				guarantee = { country = SOV country = U14 }
+			}
+			AND = {
+				atwar = U15
+				NOT = { alliance = { country = U15 } }
+				guarantee = { country = SOV country = U15 }
+			}
+			AND = {
+				atwar = U16
+				NOT = { alliance = { country = U16 } }
+				guarantee = { country = SOV country = U16 }
+			}
+			AND = {
+				atwar = U17
+				NOT = { alliance = { country = U17 } }
+				guarantee = { country = SOV country = U17 }
+			}
+			AND = {
+				atwar = U18
+				NOT = { alliance = { country = U18 } }
+				guarantee = { country = SOV country = U18 }
+			}
+			AND = {
+				atwar = U19
+				NOT = { alliance = { country = U19 } }
+				guarantee = { country = SOV country = U19 }
+			}
+			AND = {
+				atwar = U20
+				NOT = { alliance = { country = U20 } }
+				guarantee = { country = SOV country = U20 }
+			}
+			AND = {
+				atwar = U21
+				NOT = { alliance = { country = U21 } }
+				guarantee = { country = SOV country = U21 }
+			}
+			AND = {
+				atwar = U22
+				NOT = { alliance = { country = U22 } }
+				guarantee = { country = SOV country = U22 }
+			}
+			AND = {
+				atwar = U26
+				NOT = { alliance = { country = U26 } }
+				guarantee = { country = SOV country = U26 }
+			}
+			AND = {
+				atwar = U27
+				NOT = { alliance = { country = U27 } }
+				NOT = { flag = tito_soviet_split }
+				guarantee = { country = SOV country = U27 }
+			}
+			AND = {
+				atwar = U28
+				NOT = { alliance = { country = U28 } }
+				guarantee = { country = SOV country = U28 }
+			}
+			AND = {
+				atwar = U29
+				NOT = { alliance = { country = U29 } }
+				guarantee = { country = SOV country = U29 }
+			}
+			AND = {
+				atwar = U30
+				NOT = { alliance = { country = U30 } }
+				guarantee = { country = SOV country = U30 }
+			}
+			AND = {
+				atwar = U31
+				NOT = { alliance = { country = U31 } }
+				guarantee = { country = SOV country = U31 }
+			}
+			AND = {
+				atwar = U32
+				NOT = { alliance = { country = U32 } }
+				guarantee = { country = SOV country = U32 }
+			}
+			AND = {
+				atwar = U33
+				NOT = { alliance = { country = U33 } }
+				guarantee = { country = SOV country = U33 }
+			}
+			AND = {
+				atwar = U34
+				NOT = { alliance = { country = U34 } }
+				guarantee = { country = SOV country = U34 }
+			}
+			AND = {
+				atwar = U35
+				NOT = { alliance = { country = U35 } }
+				guarantee = { country = SOV country = U35 }
+			}
+			
+			AND = {
+				atwar = PRK
+				NOT = { war = { country = PRK country = KOR } }
+				NOT = { alliance = { country = PRK } }
+				guarantee = { country = SOV country = PRK }
+			}
+			AND = {
+				atwar = U25
+				NOT = { alliance = { country = U25 } }
+				guarantee = { country = SOV country = U25 }
+			}
+			AND = {
+				atwar = DDR
+				NOT = { alliance = { country = DDR } }
+				guarantee = { country = SOV country = DDR }
+			}
+		}
+		domestic = { type = interventionism value = 2 }
+		flag = cold_war
+		flag = cold_war_pacific
+	}
+	
+    date = { day = 0 month = january year = 1939 }
+   	offset = 7
+	deathdate = { day = 29 month = december year = 1991 }
+
+	action = {
+		name = EVT_8215011_A
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { trigger = { atwar = U10 NOT = { alliance = { country = U10 } } guarantee = { country = SOV country = U10 } } type = alliance which = U10 }
+		command = { trigger = { atwar = U11 NOT = { alliance = { country = U11 } } guarantee = { country = SOV country = U11 } } type = alliance which = U11 }
+		command = { trigger = { atwar = U13 NOT = { alliance = { country = U13 } } guarantee = { country = SOV country = U13 } } type = alliance which = U13 }
+		command = { trigger = { atwar = U14 NOT = { alliance = { country = U14 } } guarantee = { country = SOV country = U14 } } type = alliance which = U14 }
+		command = { trigger = { atwar = U15 NOT = { alliance = { country = U15 } } guarantee = { country = SOV country = U15 } } type = alliance which = U15 }
+		command = { trigger = { atwar = U16 NOT = { alliance = { country = U16 } } guarantee = { country = SOV country = U16 } } type = alliance which = U16 }
+		command = { trigger = { atwar = U17 NOT = { alliance = { country = U17 } } guarantee = { country = SOV country = U17 } } type = alliance which = U17 }
+		command = { trigger = { atwar = U18 NOT = { alliance = { country = U18 } } guarantee = { country = SOV country = U18 } } type = alliance which = U18 }
+		command = { trigger = { atwar = U19 NOT = { alliance = { country = U19 } } guarantee = { country = SOV country = U19 } } type = alliance which = U19 }
+		command = { trigger = { atwar = U20 NOT = { alliance = { country = U20 } } guarantee = { country = SOV country = U20 } } type = alliance which = U20 }
+		command = { trigger = { atwar = U21 NOT = { alliance = { country = U21 } } guarantee = { country = SOV country = U21 } } type = alliance which = U21 }
+		command = { trigger = { atwar = U22 NOT = { alliance = { country = U22 } } guarantee = { country = SOV country = U22 } } type = alliance which = U22 }
+		command = { trigger = { atwar = U26 NOT = { alliance = { country = U26 } } guarantee = { country = SOV country = U26 } } type = alliance which = U26 }
+		command = { trigger = { atwar = U27 NOT = { alliance = { country = U27 } flag = tito_soviet_split } guarantee = { country = SOV country = U27 } } type = alliance which = U27 }
+		command = { trigger = { atwar = U28 NOT = { alliance = { country = U28 } } guarantee = { country = SOV country = U28 } } type = alliance which = U28 }
+		command = { trigger = { atwar = U29 NOT = { alliance = { country = U29 } } guarantee = { country = SOV country = U29 } } type = alliance which = U29 }
+		command = { trigger = { atwar = U30 NOT = { alliance = { country = U30 } } guarantee = { country = SOV country = U30 } } type = alliance which = U30 }
+		command = { trigger = { atwar = U31 NOT = { alliance = { country = U31 } } guarantee = { country = SOV country = U31 } } type = alliance which = U31 }
+		command = { trigger = { atwar = U32 NOT = { alliance = { country = U32 } } guarantee = { country = SOV country = U32 } } type = alliance which = U32 }
+		command = { trigger = { atwar = U33 NOT = { alliance = { country = U33 } } guarantee = { country = SOV country = U33 } } type = alliance which = U33 }
+		command = { trigger = { atwar = U34 NOT = { alliance = { country = U34 } } guarantee = { country = SOV country = U34 } } type = alliance which = U34 }
+		command = { trigger = { atwar = U35 NOT = { alliance = { country = U35 } } guarantee = { country = SOV country = U35 } } type = alliance which = U35 }
+		
+		command = { trigger = { atwar = PRK NOT = { war = { country = PRK country = KOR } } NOT = { alliance = { country = PRK } } guarantee = { country = SOV country = PRK } } type = alliance which = PRK }
+		command = { trigger = { atwar = U25 NOT = { alliance = { country = U25 } } guarantee = { country = SOV country = U25 } } type = alliance which = U25 }
+		command = { trigger = { atwar = DFR NOT = { alliance = { country = DFR } } guarantee = { country = SOV country = DFR } } type = alliance which = SOV where = DFR }
+		command = { trigger = { atwar = DDR NOT = { alliance = { country = DDR } } guarantee = { country = SOV country = DDR } } type = alliance which = DDR }
+		command = { trigger = { atwar = AUS NOT = { alliance = { country = AUS } } guarantee = { country = SOV country = AUS } } type = alliance which = AUS }
+	}
+
+	action = {
+		name = EVT_8215011_B
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -2 }
+		command = { trigger = { atwar = U10 NOT = { alliance = { country = U10 } } guarantee = { country = SOV country = U10 } } type = end_guarantee which = SOV where = U10 }
+		command = { trigger = { atwar = U11 NOT = { alliance = { country = U11 } } guarantee = { country = SOV country = U11 } } type = end_guarantee which = SOV where = U11 }
+		command = { trigger = { atwar = U13 NOT = { alliance = { country = U13 } } guarantee = { country = SOV country = U13 } } type = end_guarantee which = SOV where = U13 }
+		command = { trigger = { atwar = U14 NOT = { alliance = { country = U14 } } guarantee = { country = SOV country = U14 } } type = end_guarantee which = SOV where = U14 }
+		command = { trigger = { atwar = U15 NOT = { alliance = { country = U15 } } guarantee = { country = SOV country = U15 } } type = end_guarantee which = SOV where = U15 }
+		command = { trigger = { atwar = U16 NOT = { alliance = { country = U16 } } guarantee = { country = SOV country = U16 } } type = end_guarantee which = SOV where = U16 }
+		command = { trigger = { atwar = U17 NOT = { alliance = { country = U17 } } guarantee = { country = SOV country = U17 } } type = end_guarantee which = SOV where = U17 }
+		command = { trigger = { atwar = U18 NOT = { alliance = { country = U18 } } guarantee = { country = SOV country = U18 } } type = end_guarantee which = SOV where = U18 }
+		command = { trigger = { atwar = U19 NOT = { alliance = { country = U19 } } guarantee = { country = SOV country = U19 } } type = end_guarantee which = SOV where = U19 }
+		command = { trigger = { atwar = U20 NOT = { alliance = { country = U20 } } guarantee = { country = SOV country = U20 } } type = end_guarantee which = SOV where = U20 }
+		command = { trigger = { atwar = U21 NOT = { alliance = { country = U21 } } guarantee = { country = SOV country = U21 } } type = end_guarantee which = SOV where = U21 }
+		command = { trigger = { atwar = U22 NOT = { alliance = { country = U22 } } guarantee = { country = SOV country = U22 } } type = end_guarantee which = SOV where = U22 }
+		command = { trigger = { atwar = U26 NOT = { alliance = { country = U26 } } guarantee = { country = SOV country = U26 } } type = end_guarantee which = SOV where = U26 }
+		command = { trigger = { atwar = U27 NOT = { alliance = { country = U27 } } guarantee = { country = SOV country = U27 } } type = end_guarantee which = SOV where = U27 }
+		command = { trigger = { atwar = U28 NOT = { alliance = { country = U28 } } guarantee = { country = SOV country = U28 } } type = end_guarantee which = SOV where = U28 }
+		command = { trigger = { atwar = U29 NOT = { alliance = { country = U29 } } guarantee = { country = SOV country = U29 } } type = end_guarantee which = SOV where = U29 }
+		command = { trigger = { atwar = U30 NOT = { alliance = { country = U30 } } guarantee = { country = SOV country = U30 } } type = end_guarantee which = SOV where = U30 }
+		command = { trigger = { atwar = U31 NOT = { alliance = { country = U31 } } guarantee = { country = SOV country = U31 } } type = end_guarantee which = SOV where = U31 }
+		command = { trigger = { atwar = U32 NOT = { alliance = { country = U32 } } guarantee = { country = SOV country = U32 } } type = end_guarantee which = SOV where = U32 }
+		command = { trigger = { atwar = U33 NOT = { alliance = { country = U33 } } guarantee = { country = SOV country = U33 } } type = end_guarantee which = SOV where = U33 }
+		command = { trigger = { atwar = U34 NOT = { alliance = { country = U34 } } guarantee = { country = SOV country = U34 } } type = end_guarantee which = SOV where = U34 }
+		command = { trigger = { atwar = U35 NOT = { alliance = { country = U35 } } guarantee = { country = SOV country = U35 } } type = end_guarantee which = SOV where = U35 }
+		
+		command = { trigger = { atwar = PRK NOT = { war = { country = PRK country = KOR } } NOT = { alliance = { country = PRK } } guarantee = { country = SOV country = PRK } } type = end_guarantee which = SOV where = PRK }
+		command = { trigger = { atwar = U25 NOT = { alliance = { country = U25 } } guarantee = { country = SOV country = U25 } } type = end_guarantee which = SOV where = U25 }
+		command = { trigger = { atwar = DDR NOT = { alliance = { country = DDR } } guarantee = { country = SOV country = DDR } } type = end_guarantee which = SOV where = DDR }
+		command = { trigger = { atwar = DFR NOT = { alliance = { country = DFR } } guarantee = { country = SOV country = DFR } } type = end_guarantee which = SOV where = DFR }
+		command = { trigger = { atwar = AUS NOT = { alliance = { country = AUS } } guarantee = { country = SOV country = AUS } } type = end_guarantee which = SOV where = AUS }
+	}
+
+}
+
+### Recreation of major alliances in case of WW3
+
+event = {
+	id = 8215012
+	tag = { ENG FRA CAN ICL NOR DEN BEL HOL LUX ITA POR GRE TUR DFR AUS }
+	persistent = yes
+
+	name = EVT_8215012_NAME
+	desc = EVT_8215012_DESC
+	picture = nwo\western_allies
+	style = 1
+
+	trigger = {
+		war = { country = USA country = SOV }
+		flag = ww3
+		NOT = { alliance = { country = -1 country = USA } }
+		NOT = { local_flag = event_8215012 }
+	}
+	
+    date = { day = 0 month = january year = 1939 }
+   	offset = 3
+	deathdate = { day = 29 month = december year = 1991 }
+
+	action = {
+		name = EVT_8215012_A
+		ai_chance = 99
+		command = { type = alliance which = USA }
+		command = { type = local_setflag which = event_8215012 }
+	}                  
+                                                               
+	action = {
+		name = EVT_8215012_B
+		ai_chance = 1
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = USA value = -150 }
+		command = { type = domestic which = interventionism value = -3 }
+		command = { type = dissent value = 15 }
+		command = { type = local_setflag which = event_8215012 }
+	}                                                                                                                                  
+                                                                                                                                       
+}                                                                                                                                      
+                                                                                                                                       
+event = {
+	id = 8215013
+	tag = { U10 U11 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 DDR }
+	persistent = yes
+
+	name = EVT_8215013_NAME
+	desc = EVT_8215013_DESC
+	picture = nwo\eastern_allies
+	style = 1
+
+	trigger = {
+		war = { country = USA country = SOV }
+		flag = ww3
+		NOT = { alliance = { country = -1 country = SOV } }
+		NOT = { local_flag = event_8215013 }
+	}
+	
+    date = { day = 0 month = january year = 1939 }
+   	offset = 3
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215013_A
+		ai_chance = 50
+		command = { type = alliance which = SOV }
+		command = { type = local_setflag which = event_8215013 }
+	}                  
+                                                               
+	action = {
+		name = EVT_8215013_B
+		ai_chance = 50
+		trigger = { NOT = { puppet = { country = -1 country = SOV } } }
+		command = { type = relation which = USA value = 50 }
+		command = { type = relation which = SOV value = -150 }
+		command = { type = domestic which = interventionism value = -3 }
+		command = { type = dissent value = 5 }
+		command = { type = local_setflag which = event_8215013 }
+	}                                                                                                                                  
+                                                                                                                                       
+}   
+
+
+### Foundation of NATO
+
+event = {
+	id = 8215020
+	country = USA
+
+	name = EVT_8215020_NAME
+	desc = EVT_8215020_DESC
+	picture = nwo\nato
+	style = 1
+
+	trigger = {
+		NOT = { ispuppet = yes }
+	}
+	
+    date = { day = 0 month = january year = 1949 }
+    offset = 180
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215020_A
+		ai_chance = 98
+		command = { type = alliance_name which = "WESTERNBLOC_1949" where = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = money value = -3000 }
+	}
+	
+	action = {
+		name = EVT_8215020_B
+		ai_chance = 2
+		trigger = { NOT = { flag = ww3 } }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = setflag which = isolationist_usa }
+	}
+	
+	action = {
+		name = EVT_8215020_C
+		ai_chance = 0
+		trigger = { NOT = { flag = ww3 } }
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = leave_alliance }
+		command = { type = setflag which = isolationist_usa }
+	}
+}
+
+# Joining NATO
+
+event = {
+	id = 8215021
+	persistent = yes
+	tag = { ENG FRA CAN ICL NOR DEN BEL HOL LUX ITA POR GRE TUR }
+	# Greece and Turkey in 1952; West Germany in 1955
+
+	name = EVT_8215021_NAME
+	desc = EVT_8215021_DESC
+	picture = nwo\nato
+
+	trigger = {
+		NOT = { local_flag = event_8215021 }
+		NOT = { flag = isolationist_usa }
+		NOT = { alliance = { country = -1 country = USA } }
+		OR = {
+			flag = cold_war
+			flag = ww3
+		}
+		OR = {
+			AND = {
+				NOT = { country = GRE }
+				NOT = { country = TUR }
+			}
+			AND = {
+				OR = {
+					country = GRE
+					country = TUR
+				}
+				year = 1952
+			}
+		}
+	}
+	
+    date = { day = 0 month = july year = 1949 }
+    offset = 14
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215021_A
+		ai_chance = 98
+		command = { type = set_domestic which = interventionism value = 6 }
+		command = { type = alliance which = USA }
+		command = { type = local_setflag which = event_8215021  }
+	}
+	
+	action = {
+		name = EVT_8215021_B
+		ai_chance = 2
+		command = { type = local_setflag which = event_8215021  }
+		command = { type = domestic which = interventionism value = -4 }
+	}
+	
+}
+
+event = {
+	id = 8215022
+	country = AUS
+
+	name = EVT_8215022_NAME
+	desc = EVT_8215022_DESC
+	picture = nwo\nato
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = cold_war
+			flag = ww3
+		}
+		NOT = { flag = isolationist_usa }
+		NOT = { alliance = { country = -1 country = USA } }
+		NOT = { alliance = { country = -1 country = SOV } }
+		NOT = { flag = neutral_austria }
+		event = 8215020
+	}
+	
+    date = { day = 0 month = january year = 1949 }
+    offset = 90
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215022_A
+		ai_chance = 98
+		command = { type = alliance which = USA }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8215022_B
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -4 }
+	}
+	
+}
+
+# FRG joins
+event = {
+	id = 8215023
+	country = USA
+
+	name = EVT_8215023_NAME
+	desc = EVT_8215023_DESC
+	picture = nwo\nato
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = cold_war
+			flag = ww3
+		}
+		NOT = { flag = isolationist_usa }
+		NOT = { alliance = { country = -1 country = USA } }
+		exists = DFR
+		NOT = { flag = neutral_germany }
+		event = 8215020
+	}
+	
+    date = { day = 0 month = january year = 1955 }
+    offset = 90
+	deathdate = { day = 29 month = december year = 1960 }
+	
+	action = {
+		name = EVT_8215023_A
+		ai_chance = 98
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8215023_B
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8215024 }
+	}
+	
+}
+
+event = {
+	id = 8215024
+	country = DFR
+
+	name = EVT_8215024_NAME
+	desc = EVT_8215024_DESC
+	picture = nwo\nato
+	style = 1
+
+	trigger = {
+		OR = {
+			flag = cold_war
+			flag = ww3
+		}
+		NOT = { flag = neutral_germany }
+		event = 8215023
+	}
+	
+    date = { day = 0 month = january year = 1955 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1960 }
+	
+	action = {
+		name = EVT_8215024_A
+		ai_chance = 98
+		command = { type = alliance which = USA }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8215024_B
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = sleepevent which = 8215030 }
+	}
+	
+}
+
+### Warsaw Pact
+
+event = {
+	id = 8215030
+	country = SOV
+
+	name = EVT_8215030_NAME
+	desc = EVT_8215030_DESC
+	picture = nwo\warsaw_pact
+	style = 1
+
+	trigger = {
+		event = 8215023
+	}
+	
+    date = { day = 0 month = january year = 1955 }
+    offset = 180
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215030_A
+		ai_chance = 99
+		command = { type = alliance_name which = "EASTERNBLOC_1955" where = 3 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8215030_B
+		ai_chance = 1
+		trigger = { NOT = { flag = ww3 } }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = setflag which = isolationist_ussr }
+	}
+	
+}
+
+# Joining Warsaw Pact
+
+event = {
+	id = 8215031
+	persistent = yes
+	tag = { U10 U11 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 }
+
+	name = EVT_8215031_NAME
+	desc = EVT_8215031_DESC
+	picture = nwo\warsaw_pact
+	style = 1
+
+	trigger = {
+		NOT = { local_flag = event_8215031 }
+		OR = {
+			flag = cold_war
+			flag = ww3
+		}
+		NOT = { flag = isolationist_ussr }
+		OR = {
+			NOT = { country = U27 }
+			AND = {
+				country = U27
+				NOT = { flag = tito_soviet_split }
+			}
+		}
+		NOT = { alliance = { country = -1 country = SOV } }
+	}
+	
+    date = { day = 0 month = july year = 1955 }
+    offset = 14
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = EVT_8215031_A
+		ai_chance = 100
+		command = { type = alliance which = SOV }
+		command = { type = local_setflag which = event_8215031  }
+	}
+	
+	action = {
+		name = EVT_8215031_B
+		trigger = { NOT = { ispuppet = yes } }
+		ai_chance = 0
+		command = { type = local_setflag which = event_8215031  }
+		command = { type = domestic which = interventionism value = -4 }
+	}
+	
+}

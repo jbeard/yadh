@@ -1,0 +1,588 @@
+event = {
+	id = 8234000
+	country = ARG
+
+	name = EVT_8234000_NAME
+	desc = EVT_8234000_DESC
+	picture = nwo\falklands
+	style = 1
+
+	trigger = {
+		government = fascist
+		owned = { province = 2045 data = ENG }
+		flag = cold_war
+	}
+
+	date = { day = 20 month = march year = 1982 }
+	offset = 14
+	deathdate = { day = 10 month = april year = 1982 }
+
+	action = {
+		name = EVT_8234000_A # Move on to capture the islands!
+		ai_chance = 90
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = 15 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = secedeprovince which = ARG value = 2045 when = 2 }
+		command = { type = relation which = ENG value = -200 }
+	}
+	action = {
+		name = EVT_8234000_B # This will lead to nothing good
+		ai_chance = 10
+		command = { type = dissent value = 3 }
+		command = { type = belligerence value = -5 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8234001 }
+	}
+}
+
+event = {
+	id = 8234001
+	country = ENG
+
+	name = EVT_8234001_NAME
+	desc = EVT_8234001_DESC
+	picture = nwo\falklands_war
+	style = 1
+
+	trigger = {
+		event = 8234000
+	}
+
+	date = { day = 0 month = april year = 1982 }
+	offset = 7
+	deathdate = { day = 14 month = april year = 1982 }
+
+	action = {
+		name = EVT_8234001_A # Assemble a task force
+		ai_chance = 97
+		#trigger = { headofgovernment =  } # Margaret Thatcher
+		command = { type = dissent value = -3 }
+		command = { type = money value = -5000 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = ARG value = -100 }
+		command = { type = sleepevent which = 8510901 }
+	}
+	action = {
+		name = EVT_8234001_B # Appeal to U.N.
+		ai_chance = 2
+		command = { type = dissent value = 1 }
+		command = { type = relation which = ARG value = 50 }
+	}
+	action = {
+		name = EVT_8234001_C # Limit ourselves to diplomatic maneouvers
+		ai_chance = 1
+		command = { type = dissent value = 8 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ARG value = 100 }
+		command = { type = sleepevent which = 8510901 }
+	}
+}
+
+### Hostile actions path
+
+event = {
+	id = 8234002
+	country = ENG
+	one_action = yes
+
+	name = EVT_8234002_NAME
+	desc = EVT_8234002_DESC
+	picture = nwo\falklands_war_airforce
+	style = 1
+
+	date = { day = 14 month = april year = 1982 }
+	offset = 7
+	deathdate = { day = 21 month = april year = 1982 }
+
+	action = {
+		name = EVT_8234002_A # British airforce performs competently
+		ai_chance = 90
+		command = { type = dissent value = -3 } 
+		command = { type = trigger which = 8234003 } # +10 to chance of winning
+	}
+	
+	action = {
+		name = EVT_8234002_B # We lose a lot of aircrafts
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 8234004 }
+	}	
+}
+
+event = {
+	id = 8234003
+	country = ARG
+
+	name = EVT_8234003_NAME
+	desc = EVT_8234003_DESC
+	picture = nwo\falklands_war_airforce
+	style = 1
+
+	action = {
+		name = EVT_8234003_A
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 8234004
+	country = ARG
+
+	name = EVT_8234004_NAME
+	desc = EVT_8234004_DESC
+	picture = nwo\falklands_war_airforce
+	style = 1
+
+	action = {
+		name = EVT_8234004_B
+		command = { type = dissent value = -2 }
+	}
+}
+
+event = {
+	id = 8234005
+	country = ENG
+	one_action = yes
+
+	name = EVT_8234005_NAME
+	desc = EVT_8234005_DESC
+	picture = nwo\falklands_war_belgrano
+	style = 1
+
+	date = { day = 1 month = may year = 1982 }
+	offset = 7
+	deathdate = { day = 7 month = may year = 1982 }
+
+	action = {
+		name = EVT_8234005_A # We sink Belgrano but lose Sheffield
+		ai_chance = 80
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 8234006 } # +10 to chance of winning
+	}
+	
+	action = {
+		name = EVT_8234005_B # We sink Belgrano
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = trigger which = 8234007 } # +20 chance of winning
+	}
+	
+	action = {
+		name = EVT_8234005_C # We lose Sheffield
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 8234008 }
+	}	
+}
+
+event = {
+	id = 8234006
+	country = ARG
+
+	name = EVT_8234006_NAME
+	desc = EVT_8234006_DESC
+	picture = nwo\falklands_war_belgrano
+	style = 1
+
+	action = {
+		name = EVT_8234006_A
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8234007
+	country = ARG
+
+	name = EVT_8234007_NAME
+	desc = EVT_8234007_DESC
+	picture = nwo\falklands_war_belgrano
+	style = 1
+
+	action = {
+		name = EVT_8234007_A
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 8234008
+	country = ARG
+
+	name = EVT_8234008_NAME
+	desc = EVT_8234008_DESC
+	picture = nwo\falklands_war_belgrano
+	style = 1
+
+	action = {
+		name = EVT_8234008_A
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 8234009 # SAS operations: Operation Mikado
+	country = ENG
+	one_action = yes
+                     
+	name = EVT_8234009_NAME
+	desc = EVT_8234009_DESC
+	picture = nwo\falklands_war_sas
+	style = 1
+
+	date = { day = 17 month = may year = 1982 }
+	offset = 7
+	deathdate = { day = 25 month = may year = 1982 }
+
+	action = {
+		name = EVT_8234009_A # We drop SAS troops but they are unable to act
+		ai_chance = 80
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 8234010 } # +10 to chance of winning
+	}
+	
+	action = {
+		name = EVT_8234009_B # We drop SAS troops and they destroy Exocets
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = trigger which = 8234011 } # +20 chance of winning
+	}
+	
+	action = {
+		name = EVT_8234009_C # We drop SAS troops and they are apprehended
+		ai_chance = 5
+		command = { type = trigger which = 8234012 }
+	}	
+}
+
+event = {
+	id = 8234010
+	country = ARG
+
+	name = EVT_8234010_NAME
+	desc = EVT_8234010_DESC
+	picture = nwo\falklands_war_sas
+	style = 1
+
+	action = {
+		name = EVT_8234010_A
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 8234011
+	country = ARG
+
+	name = EVT_8234011_NAME
+	desc = EVT_8234011_DESC
+	picture = nwo\falklands_war_sas
+	style = 1
+
+	action = {
+		name = EVT_8234011_A
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8234012
+	country = ARG
+
+	name = EVT_8234012_NAME
+	desc = EVT_8234012_DESC
+	picture = nwo\falklands_war_sas
+	style = 1
+
+	action = {
+		name = EVT_8234012_A
+		command = { type = dissent value = -5 }
+	}
+}
+
+### British invasion: outcome
+
+event = {
+	id = 8234020
+	country = ENG
+	one_action = yes
+
+	name = EVT_8234020_NAME
+	desc = EVT_8234020_DESC
+	picture = nwo\invasion_of_falklands
+	style = 1
+
+	trigger = {
+		event = 8234002
+		event = 8234005
+		event = 8234009
+		flag = cold_war
+		NOT = { war = { country = ARG country = ENG } }
+	}
+
+	date = { day = 21 month = may year = 1982 }
+	offset = 7
+	deathdate = { day = 28 month = may year = 1982 }
+
+	action = {
+		name = EVT_8234020_A
+		ai_chance = 70
+		trigger = {
+			event = 8234003
+			event = 8234007
+			event = 8234011
+		}
+		command = { type = dissent value = -10 }
+		command = { type = secedeprovince which = ENG value = 2045 when = 2 }
+		command = { type = sleepevent which = 8234022 }
+	}
+	
+	action = {
+		name = EVT_8234020_A
+		ai_chance = 60
+		trigger = {
+			OR = {
+				AND = {
+					event = 8234004
+					event = 8234007
+					event = 8234011
+				}
+				AND = {
+					event = 8234003
+					event = 8234006
+					event = 8234011
+				}
+				AND = {
+					event = 8234003
+					event = 8234007
+					event = 8234010
+				}
+			}
+		}
+		command = { type = dissent value = -10 }
+		command = { type = secedeprovince which = ENG value = 2045 when = 2 }
+		command = { type = sleepevent which = 8234022 }
+	}
+	
+	action = {
+		name = EVT_8234020_A
+		ai_chance = 50
+		trigger = {
+			OR = {
+				AND = {
+					event = 8234003
+					event = 8234007
+					event = 8234012
+				}
+				AND = {
+					event = 8234003
+					event = 8234008
+					event = 8234011
+				}
+				AND = {
+					event = 8234004
+					event = 8234007
+					event = 8234010
+				}
+				AND = {
+					event = 8234004
+					event = 8234006
+					event = 8234012
+				}
+				AND = {
+					event = 8234004
+					event = 8234008
+					event = 8234011
+				}
+				AND = {
+					event = 8234003
+					event = 8234006
+					event = 8234010
+				}
+			}
+		}
+		command = { type = dissent value = -10 }
+		command = { type = secedeprovince which = ENG value = 2045 when = 2 }
+		command = { type = sleepevent which = 8234022 }
+	}
+	
+	action = {
+		name = EVT_8234020_A
+		ai_chance = 40
+		trigger = {
+			OR = {
+				AND = {
+					event = 8234003
+					event = 8234006
+					event = 8234012
+				}
+				AND = {
+					event = 8234003
+					event = 8234008
+					event = 8234012
+				}
+				AND = {
+					event = 8234004
+					event = 8234006
+					event = 8234012
+				}
+				AND = {
+					event = 8234004
+					event = 8234007
+					event = 8234012
+				}
+				AND = {
+					event = 8234004
+					event = 8234008
+					event = 8234009
+				}
+			}
+		}
+		command = { type = dissent value = -10 }
+		command = { type = secedeprovince which = ENG value = 2045 when = 2 }
+		command = { type = sleepevent which = 8234022 }
+	}
+	
+	action = {
+		name = EVT_8234020_A
+		ai_chance = 30
+		trigger = {
+			OR = {
+				AND = {
+					event = 8234003
+					event = 8234008
+					event = 8234012
+				}
+				AND = {
+					event = 8234004
+					event = 8234006
+					event = 8234012
+				}
+				AND = {
+					event = 8234004
+					event = 8234008
+					event = 8234010
+				}
+			}
+		}
+		command = { type = dissent value = -10 }
+		command = { type = secedeprovince which = ENG value = 2045 when = 2 }
+		command = { type = sleepevent which = 8234022 }
+	}
+	
+	action = {
+		name = EVT_8234020_A
+		ai_chance = 20
+		trigger = {
+			event = 8234004
+			event = 8234008
+			event = 8234012
+		}
+		command = { type = dissent value = -10 }
+		command = { type = secedeprovince which = ENG value = 2045 when = 2 }
+		command = { type = sleepevent which = 8234022 }
+	}
+	
+	action = {
+		name = EVT_8234020_B
+		ai_chance = 10
+		command = { type = dissent value = 20 }
+		command = { type = sleepevent which = 8234021 }
+	}
+}
+
+event = {
+	id = 8234021
+	country = ARG
+
+	name = EVT_8234021_NAME
+	desc = EVT_8234021_DESC
+	picture = nwo\falklands_argentine_defeat
+	style = 1
+	
+	trigger = {
+		event = 8234020
+	}
+
+	date = { day = 0 month = june year = 1982 }
+	offset = 30
+	deathdate = { day = 30 month = june year = 1982 }
+
+	action = {
+		name = EVT_8234021_A
+		ai_chance = 100
+		command = { type = dissent value = 25 }
+	}
+	
+	action = {
+		name = EVT_8234021_B
+		ai_chance = 0
+		command = { type = dissent value = 40 }
+		command = { type = leave_alliance }
+		command = { type = war which = ENG }
+	}
+}
+
+event = {
+	id = 8234022
+	country = ENG
+
+	name = EVT_8234022_NAME
+	desc = EVT_8234022_DESC
+	picture = nwo\falklands_british_defeat
+	style = 1
+
+	trigger = {
+		event = 8234020
+	}
+	
+	date = { day = 0 month = june year = 1982 }
+	offset = 30
+	deathdate = { day = 30 month = june year = 1982 }
+
+	action = {
+		name = EVT_8234022_A
+		ai_chance = 100
+		command = { type = dissent value = 2 }
+	}
+	
+	action = {
+		name = EVT_8234022_B
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = relation which = USA value = -200 } # Trying to prevent reformation of NATO
+		command = { type = relation which = FRA value = -150 }
+		command = { type = relation which = DFR value = -150 }
+		command = { type = leave_alliance }
+		command = { type = war which = ARG }
+	}
+}
+
+### Peaceful alternative
+
+event = {
+	id = 8234030
+	country = ARG
+
+	name = EVT_8234030_NAME
+	desc = EVT_8234030_DESC
+	picture = nwo\united_nations_intervention
+	style = 1
+
+	action = {
+		name = EVT_8234030_A
+		ai_chance = 100
+		command = { type = dissent value = 15 }
+		command = { type = secedeprovince which = ENG value = 2045 when = 2 }
+	}
+	
+	action = {
+		name = EVT_8234030_B
+		ai_chance = 0
+		command = { type = dissent value = 40 }
+		command = { type = leave_alliance }
+		command = { type = war which = USA }
+		command = { type = war which = ENG }
+	}
+}

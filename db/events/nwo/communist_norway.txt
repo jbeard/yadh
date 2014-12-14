@@ -1,0 +1,67 @@
+event = {
+	id = 8021901
+	country = U19
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 910011 } # Adam Egede Nissen
+		command = { type = headofgovernment which = 910012 } # Emil L?vlien
+		command = { type = foreignminister which = 910013 } # Peder Furubotn
+		command = { type = armamentminister which = 910033 } # Erik Brofoss
+		command = { type = ministerofsecurity which = 910015 } # Samuel Titlestad
+		command = { type = ministerofintelligence which = 910045 } # Gunnar Jahn
+		command = { type = chiefofstaff which = 910047 } # Birger Frederik Motzfeldt
+		command = { type = chiefofarmy which = 910018 } # Arne Gausl?
+		command = { type = chiefofnavy which = 910019 } # Skule Storheil
+		command = { type = chiefofair which = 910020 } # Henrik Norby
+	}
+}
+
+
+event = {
+	id = 8021902
+	country = U19
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 910011 } # Adam Egede Nissen
+		command = { type = headofgovernment which = 910058 } # Oscar F. Torp
+		command = { type = foreignminister which = 910013 } # Peder Furubotn
+		command = { type = armamentminister which = 910059 } # Nils Langhelle
+		command = { type = ministerofsecurity which = 910060 } # Oscar C. Gundersen
+		command = { type = ministerofintelligence which = 910045 } # Gunnar Jahn
+		command = { type = chiefofstaff which = 910047 } # Birger Frederik Motzfeldt
+		command = { type = chiefofarmy which = 910018 } # Arne Gausl?
+		command = { type = chiefofnavy which = 910019 } # Skule Storheil
+		command = { type = chiefofair which = 910020 } # Henrik Norby
+	}
+}
+

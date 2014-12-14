@@ -1,0 +1,350 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for France
+# Event List:
+# FRA	13301000	The Outcome of the Great War (historical)
+# FRA	13301001	Madagascar Troubles #Smoggy's Madagascar suppression event
+# FRA	13301010	Occupation of the Ruhrgebiet
+# FRA	13301011	Return of the Ruhrgebiet
+# FRA	13301012	The Locarno Treaties
+# FRA	 13301013		Lausanne Conference of 1932
+# FRA	13301020	A call for help by Yugoslavia
+
+#Outcome of the great war
+event = {
+	id = 13301000
+	country = FRA
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 30
+	
+	trigger = {
+		OR = {
+			event = 2002534 #versailles
+		}
+		atwar = no
+	}
+	
+	name = "EVT_13301000_NAME"							
+	desc = "EVT_13301000_DESC"
+	picture = "aar_versailles"
+	style = 2
+	
+	action = { 	
+		name = "This is not Peace. It is an Armistice for twenty years."
+		command = { type = alliance which = ENG }
+		command = { type = removeclaim which = 126 } #Saarbrücken
+		command = { type = removeclaim which = 127 } #Trier
+		command = { type = removeclaim which = 128 } #Koblenz
+		command = { type = removeclaim which = 129 } #Mainz
+		command = { type = removeclaim which = 130 }
+		command = { type = removeclaim which = 131 }
+		command = { type = local_setflag which = winner }
+		command = { type = independence which = U23 value = 1 when = 1 }
+		command = { type = secedearea which = U23 value = "Rhineland" when = 2 }
+		command = { type = make_puppet which = U23 }
+		command = { type = secedeprovince which = U08 value = 126 when = 2 }
+		command = { type = secedeprovince which = U08 value = 131 when = 2 }
+		#army
+		command = { type = demobilize which = land when = 0 where = 0 value = 50 }
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_clrflag which = disarm_army_75 }
+		command = { type = local_setflag which = disarm_army_50 }
+		#navy
+		command = { type = demobilize which = naval when = 0 where = 0 value = 100 }
+		command = { type = local_clrflag which = disarm_naval_10 }
+		command = { type = local_clrflag which = disarm_naval_25 }
+		command = { type = local_clrflag which = disarm_naval_50 }
+		command = { type = local_setflag which = disarm_naval_100 }
+		command = { type = local_clrflag which = disarm_naval_150 }
+		command = { type = local_clrflag which = disarm_naval_200 }
+		#airforce
+		command = { type = demobilize which = air when = 0 where = 0 value = 10 }
+		command = { type = local_clrflag which = disarm_air_0 }
+		command = { type = local_clrflag which = disarm_air_1 }
+		command = { type = local_setflag which = disarm_air_3 }
+		command = { type = local_clrflag which = disarm_air_5 }
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+		command = { type = ai which = "aar/national_behavior/fra_bahavior.ai" }
+	} 			
+}
+
+################################################################################
+# FRA	13301001	Madagascar Troubles/'Troubles in Madagascar.'
+# - by Smoggy: created to hold off Madagascar from being able to revolt and declare independence triggering 'continuous' war for the Entente since it cannot be completely conquered by AI easily. This is 1 of 2 events where the 2nd is only required if this is not enough. I am using the first avaialbe event number not used in this document. These events may need a event number change in the future.
+################################################################################
+event = { #Madagascar Troubles
+	id = 13301001
+	random = no
+	persistent = no
+	country = FRA
+	
+	date = { day = 1 month = december year = 1916 }
+	offset = 7
+	deathdate = { day = 1 month = december year = 1926 }
+	
+	trigger = {
+		or = {
+			and = { 
+				province_revoltrisk = { province = 1001 value = 5 }
+				province_revoltrisk = { province = 1002 value = 5 } 	
+				province_revoltrisk = { province = 1003 value = 5 } 
+			}
+			and = { 
+				exists = MAD
+				war = { country = FRA country = MAD }
+				lost_national = { country = MAD value = 60 }
+				lost_VP = { country = MAD value = 90 }
+			}
+		}
+	}
+
+	name = "Troubles in Madagascar."
+	desc = "Madagascar is becoming a hot-spot for  us. Tension and discontent is spreading and things are escalating out of control to the point of revolt. We need to do something, and fast!"
+
+	picture = "news_paper"
+	style = 1
+	
+	action = { ai_chance = 100
+		trigger = {
+			exists = MAD 
+			war = { country = FRA country = MAD }
+			lost_national = { country = MAD value = 60 }
+			lost_VP = { country = MAD value = 90 }
+		}
+		name = "They had little chance against our might and influence!"
+		command = { type = peace which = MAD value = 0 }
+		command = { trigger = { not={money = 800} } type = supplies value = -1500 }
+		command = { trigger = { not={money = 800} } type = oilpool value = -250 }
+		command = { trigger = { not={money = 800} } type = metalpool value = -1120 }
+		command = { trigger = { not={money = 800} } type = energypool value = -2000 }
+		command = { trigger = { not={money = 800} } type = rarematerialspool value = -450 }
+		command = { trigger = {money = 800} type = money value = -800 }
+		command = { type =	inherit which = MAD value = 0 }
+		command = { type = add_corps which = "Madagascar City Garrison" value = land where = 1001 }
+		command = { type = add_division which = "French Madagascar Garrison Tana." value = garrison when = 2 where = police }
+		command = { type = belligerence which = FRA value = 2 }
+	}
+	action = { ai_chance = 100
+		trigger = { not = { exists = MAD } }
+		name = "Allocate resources and activate garrisons to calm the situation!"
+		#Pay around $900 worth in combination of resources if money is not enough; equate to selling for fast money; because resources cannot go below negative, this is best option if money is short but it does take from everything; however, industry will be effected until resources are at surplus.
+		command = { trigger = { not={money = 800} } type = supplies value = -1500 }
+		command = { trigger = { not={money = 800} } type = oilpool value = -250 }
+		command = { trigger = { not={money = 800} } type = metalpool value = -1120 }
+		command = { trigger = { not={money = 800} } type = energypool value = -2000 }
+		command = { trigger = { not={money = 800} } type = rarematerialspool value = -450 }
+		#Pay in money if money is enough; this is the expected scenario.
+		command = { trigger = {money = 800} type = money value = -800 }
+		command = { type = add_corps which = "Madagascar Group Tana." value = land where = 1001 }
+		command = { type = add_division which = "French Madagascar Garrison 1001" value = garrison when = 2 where = police }
+		command = { type = add_corps which = "Madagascar Group Tama." value = land where = 1002 }
+		command = { type = add_division which = "French Madagascar Garrison 1002" value = garrison when = 2 where = police }
+		command = { type = add_corps which = "Madagascar Group Ft.D." value = land where = 1003 }
+		command = { type = add_division which = "French Madagascar Garrison 1003" value = garrison when = 2 where = police }
+		command = { type = dissent value = 3 }
+	}
+	# Code for another event if required:
+	#action = { ai_chance = 0
+	#	name = "Spend the necessary resources to "
+	#	command = { 
+	#		trigger = { money = 1500}
+	#		type = money value = -1500
+	#		type = province_revoltrisk which = 1001 value = -5 
+	#		type = province_revoltrisk which = 1002 value = -5
+	#		type = province_revoltrisk which = 1003 value = -5
+	#	}
+	#}
+}
+
+# Occupation of the Ruhrgebiet
+event = {
+	id = 13301010
+	country = FRA
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1939 }
+	offset = 30
+	
+	trigger = {
+		flag = nogerrep2
+		not = { flag = ruhr_occupied }
+	}
+	
+	name = "EVT_13301010_NAME"							
+	Desc = "EVT_13301010_DESC"
+	Picture = "aar_ruhr"
+	
+	action = { 	
+		name = "If they don't pay, we will just have to get OUR money and OUR coal by OURSELF!"
+		ai_chance = 90
+		command = { type = removeclaim which = 126 } #Saarbrücken
+		command = { type = removeclaim which = 127 } #Trier
+		command = { type = removeclaim which = 128 } #Koblenz
+		command = { type = removeclaim which = 129 } #Mainz
+		command = { type = removeclaim which = 130 }
+		command = { type = removeclaim which = 131 }
+		command = { trigger = { exists = U23 } type = inherit which = U23 value = 0 }
+		command = { type = secedearea which = FRA value = "Rhineland" when = 2 }
+		command = { trigger = { exists = GER } type =	relation which =	GER value = -125 }
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = -125 }
+		command = { type = relation which =	ENG value = -50 }
+		command = { type = setflag which = ruhr_occupied }
+		command = { type = clrflag which = nogerrep2 }
+	}
+	action = { 	
+		name = "If they insist on not paying their bills, what can we do?"
+		ai_chance = 10
+		command = { type = relation which = GER value = 150 }
+		command = { type = relation which = ENG value = 50 }
+		command = { type = clrflag which = nogerrep2 }
+		command = { type = clrflag which = nogerrep }
+		command = { trigger = { exists = U08 } type = secedearea which = U08 value = "Rhineland"	when = 2 } #don't reinstate the saar-government, so we return to the 1936 historical setup.
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = 50 }
+		command = { trigger = { exists = GER } type = secedearea which = GER value = "Rhineland" when = 2	}
+		command = { trigger = { exists = GER } type =	relation which =	GER value = 50 }
+	} 			
+}
+
+# Return of the Ruhrgebiet
+event = {
+	id = 13301011
+	country = FRA
+	persistent = yes
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1939 }
+	offset = 60
+	
+	trigger = {
+		flag = ruhr_occupied
+		random = 20
+	}
+	
+	name = "EVT_13301011_NAME"							
+	Desc = "EVT_13301011_DESC"
+	Picture = "aar_ruhr"
+	
+	action = { 	
+		name = "We got what we came for."
+		ai_chance = 100
+		command = { trigger = { exists = U08 } type = secedearea which = U08 value = "Rhineland"	when = 2 } #don't reinstate the saar-government, so we return to the 1936 historical setup.
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = 50 }
+		command = { trigger = { exists = GER } type = secedearea which = GER value = "Rhineland" when = 2	}
+		command = { trigger = { exists = GER } type =	relation which =	GER value = 50 }
+		command = { type = relation which =	ENG value = 25 }
+		command = { type = setflag which = ruhr_return }
+		command = { type = clrflag which = ruhr_occupied }
+		command = { type = clrflag which = nogerrep2 }
+		command = { type = clrflag which = nogerrep }
+		command = { type = clrflag which = 13301011f }
+	}
+	action = {
+		trigger = {
+			not = { flag = 13301011f }
+		}
+		name = "I kind of like the place. I think we will keep it."
+		ai_chance = 0
+		command = { trigger = { exists = GER } type =	relation which =	GER value = -200 }
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = -200 }
+		command = { type =	relation which =	ENG value = -200 }
+		command = { type =	relation which =	USA value = -200 }
+		command = { type =	relation which =	ITA value = -200 }
+		command = { type = leave_alliance }
+		command = { type =	dissent value = 5 }
+	} 			
+}
+
+# The Locarno Treaties
+event = {
+	id = 13301012
+	country = FRA
+	persistent = yes
+	
+	#triggered by ENG event 13300914
+	
+	name = "EVT_13301012_NAME"							
+	Desc = "EVT_13301012_DESC"
+	Picture = "vasconia"
+	
+	action = { 	
+		name = "Please sign here, here, and ... there."
+		ai_chance = 100
+		command = { type = setflag which = germany_invited_to_lon }
+		command = { trigger = { exists = GER } type =	relation which = GER value = 100 }
+		command = { trigger = { exists = U08 } type =	relation which = U08 value = 100 }
+	}
+	action = { 	
+		name = "They can't be trusted!"
+		ai_chance = 0
+		command = { trigger = { exists = GER } type =	relation which =	GER value = -50 }
+		command = { trigger = { exists = U08 } type =	relation which =	U08 value = -50 }
+		command = { type =	relation which =	ENG value = -20 }
+		command = { type =	relation which =	USA value = -20 }
+		command = { type =	relation which =	ITA value = -20 }
+	}				
+}	
+
+# Lausanne Conference of 1932
+event = {
+	id = 13301013
+	country = FRA
+	
+	# Triggered
+	
+	name = "Lausanne Conference"
+	desc = "The Lausanne Conference was a meeting of representatives from Great Britain, Germany, and France that resulted in an agreement to suspend World War I reparations payments imposed on the defeated countries by the Treaty of Versailles as a result of the economic crisis."
+	style = 2
+	picture = "aar_lausanne"
+	
+	action = {
+		name = "Agree to a moratorium"
+		ai_chance = 99
+		command = { type = trigger which = 13300923 }
+		command = { type = relation which = U08 value = 20 }
+		command = { type = relation which = GER value = 20 }
+	}
+	
+	action = {
+		name = "Refuse to delay reparation repayment"
+		ai_chance = 1
+		command = { type = relation which = U08 value = -50 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = trigger which = 13300290 }
+	}
+}
+
+# A call for help by Yugoslavia
+event = {
+	id = 13301020
+	country = FRA
+	
+	#triggered by SER 13301325
+	
+	name = "A call for help by Yugoslavia"
+	desc = "EVT_13301020_DESC"
+	style = 2
+	
+	action = {
+		name = "Guarantee their independence"
+		ai_chance = 100
+		command = { type = guarantee which = FRA where = SER }
+		command = { type = trigger which = 13301327 }
+	}
+	
+	action = {
+		name = "None of our business"
+		ai_chance = 0
+		command = { type = relation which = SER value = -40 }
+	}
+}

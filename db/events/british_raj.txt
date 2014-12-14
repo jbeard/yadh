@@ -1,0 +1,649 @@
+##### India Raj - U02 ##### id 319500 - 319999
+
+
+###################################################################
+# Gandhi founds Harijan
+###################################################################
+event = {
+	id = 3440500
+	random = no
+	country = U02
+	date = { day = 16 month = february year = 1933 }
+	name = "Gandhi founds Harijan"
+	desc = "Harijans were several weekly newspapers published by Mahatma Gandhi. He created three publications, Harijan in English (from 1933 to 1948), Harijan Bandu in Gujarati, and Harijan Sevak in Hindi. These newspapers found the Mahatma concentrating on social and economic problems."
+	style = 0
+	picture = "IND01"
+	action_a = {
+		name = "Runaway success"
+		command = { type = revolt which = -2 }
+		command = { type = revolt which = -2 }
+		command = { type = revolt which = -2 }
+		command = { type = revolt which = -2 }
+		}
+	}
+#############################################
+######  Indian general election, 1934
+#############################################
+event = {
+         id = 3440501
+         random = no
+         country = u02
+         trigger = {
+                   puppet = { country = u02 country = eng }
+
+         }
+ 
+         name = "Indian general election, 1934"
+         desc = "General elections were held in British India in 1934. The Indian National Congress emerged as the largest party in the Central Legislative Assembly.The total electorate for the 1934 elections was 1,415,892, of which 1,135,899 were in contested constituencies. The total number of votes polled was 608,198. The election marked the first year in which Indian women were eligible to vote in any but a local election."
+         style = 2
+ 
+         date = { day = 9 month = february year = 1934 }
+ 
+                
+                picture = "IND02"
+                
+           action_a = {
+                  name = "Excellent news"
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = relation which = eng value = 5 }
+           }
+
+}
+#############################################
+######  Creation of Royal Indian Navy
+#############################################
+event = {
+         id = 3440502
+         random = no
+         country = ENG
+         trigger = {
+                   exists = u02
+                   NOT = { 
+                            war = { country = ENG country = u02 }
+                   }
+                   ispuppet = u02
+
+         }
+ 
+         name = "Creation of Royal Indian Navy"
+         desc = "In 1934 the Royal Indian Marine changed its name, with the enactment of the Indian Navy Act of 1934. The Royal Indian Navy was formally inaugurated on 2 October 1934, at Bombay.Its ships carried the prefix HMIS, for His Majesty's Indian Ship.At the start of the Second World War, the Royal Indian Navy was small, with only eight warships. The onset of the war led to an expansion in vessels and personnel described by one writer as 'phenomenal'."
+         style = 2
+
+         picture = "IND03"
+ 
+         date = { day = 2 month = may year = 1934 }
+ 
+           action_a = {
+                  name = "We need it"
+                  ai_chance = 85
+                  command = { type = money value = -50 }
+                  command = { type = manpowerpool value = -50 }
+                  command = { type = trigger which = 3190503 }
+           }
+           action_b = {
+                  name = "No, we need these resources"
+                  ai_chance = 15
+                  command = { type = money value = 75 }
+                  command = { type = manpowerpool value = 150 }
+                  command = { type = relation which = u02 value = -25 }
+           }
+
+}
+#############################################
+######  Creation of Royal Indian Navy
+#############################################
+event = {
+         id = 3190503
+         random = no
+         country = u02
+ 
+         name = "Creation of Royal Indian Navy"
+         desc = "In 1934 the Royal Indian Marine changed its name, with the enactment of the Indian Navy Act of 1934. The Royal Indian Navy was formally inaugurated on 2 October 1934, at Bombay.Its ships carried the prefix HMIS, for His Majesty's Indian Ship.At the start of the Second World War, the Royal Indian Navy was small, with only eight warships. The onset of the war led to an expansion in vessels and personnel described by one writer as 'phenomenal'."
+         style = 2
+ 
+ 
+                
+                picture = "IND03"
+                
+           action_a = {
+                  name = "We need it"
+                  command = { type = money value = -50 }
+                  command = { type = manpowerpool value = -50 }
+                  command = { type = add_division which = "1st Destroyer Division" value = destroyer when = 0   }
+                  command = { type = add_division which = "2st Destroyer Division" value = destroyer when = 0   }
+                  command = { type = add_division which = "1st Submarine Division" value = submarine when = 0   }
+                  command = { type = add_division which = "1st Transport Division" value = transport when = 0   }
+           }
+
+}
+#############################################
+######  Gandhi abandons the National Congress
+#############################################
+event = {
+         id = 3190504
+         random = no
+         country = u02
+         trigger = {
+                   puppet = { country = u02 country = ENG }
+                   atwar = NO
+
+         }
+ 
+         name = "Gandhi resigned from Congress"
+         desc = "In 1934 Gandhi resigned from Congress party membership. He did not disagree with the party's position but felt that if he resigned,his popularity with Indians would cease to stifle the party's membership,which actually varied,including communists,socialists,trade unionists,students,religious conservatives,and those with pro-business convictions.Gandhi also wanted to avoid being a target for Raj propaganda by leading a party that had temporarily accepted political accommodation with the Raj."
+         style = 2
+ 
+         date = { day = 24 month = october year = 1934 }
+ 
+                
+                picture = "IND04"
+                
+           action_a = {
+                  name = "We lose a great support"
+                  command = { type = dissent value = 1 }
+                  command = { type = relation which = ENG value = -15 }
+                  command = { type = domestic which = democratic value = -1 }
+           }
+
+}
+#############################################
+######  Government of India Act 1935
+#############################################
+event = {
+         id = 3190505
+         random = no
+         country = eng
+         trigger = {
+                   puppet = { country = u02 country = eng }
+
+         }
+ 
+         name = "Government of India Act 1935"
+         desc = "The British Parliament approved the Government of India Act, which included the recommendations of the Round Table conferences, and completely transformed the governmental system of India. The act separated the colonies of Burma and Aden from Indian administration and divided British India into eleven provinces. The goal of the legislation was to establish an All-India Federation which would include the native states as well as the British Indian provinces."
+         style = 2
+ 
+         date = { day = 13 month = february year = 1935 }
+ 
+                
+                picture = "IND05"
+                
+           action_a = {
+                  name = "Approve it"
+                  ai_chance = 100
+                  command = { type = relation which = u02 value = 20 }
+                  command = { type = dissent value = -2 }
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = trigger which = 3190506 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 0
+                  command = { type = dissent value = 5 }
+                  command = { type = relation which = u02 value = -40 }
+                  command = { type = domestic which = freedom value = -1 }
+           }
+
+}
+#############################################
+######  Government of India Act 1935
+#############################################
+event = {
+         id = 3190506
+         random = no
+         country = u02
+ 
+         name = "Government of India Act 1935"
+         desc = "The British Parliament approved the Government of India Act, which included the recommendations of the Round Table conferences, and completely transformed the governmental system of India. The act separated the colonies of Burma and Aden from Indian administration and divided British India into eleven provinces. The goal of the legislation was to establish an All-India Federation which would include the native states as well as the British Indian provinces."
+         style = 2
+ 
+ 
+                
+                picture = "IND05"
+                
+           action_a = {
+                  name = "OK"
+                  command = { type = relation which = eng value = 20 }
+                  command = { type = dissent value = -2 }
+                  command = { type = domestic which = freedom value = 1 }
+           }
+
+}
+#############################################
+######  Earthquake in India
+#############################################
+event = {
+         id = 3190507
+         random = no
+         country = u02
+         trigger = {
+
+         }
+ 
+         name = "The Balochistan earthquake"
+         desc = "The 1935 Balochistan earthquake occurred on 31 May 1935 at Quetta, Balochistan, British India. The earthquake had a magnitude of 7.7 Mw and anywhere between 30,000 and 60,000 people died from the impact. This ranks as one of the deadliest earthquakes that hit South Asia.The quake was centred 4.0 kilometres South West of Ali Jaan, Balochistan, British India."
+         style = 2
+ 
+         date = { day = 30 month = may year = 1935 }
+ 
+                
+                picture = "IND06"
+                
+           action_a = {
+                  name = "Start the works"
+                  command = { type = manpowerpool value = -40 }
+                  command = { type = construct which = infrastructure where = 1529 value = -20 }
+           }
+
+}
+#############################################
+######  Establishment of Reserve Bank of India
+#############################################
+event = {
+         id = 3190508
+         random = no
+         country = eng
+         trigger = {
+                   puppet = { country = u02 country = ENG }
+                   NOT = { 
+                            puppet = { country = ENG country = GER }
+                   }
+                   atwar = no
+
+         }
+ 
+         name = "Establishment of Reserve Bank of India"
+         desc = "The Reserve Bank of India was founded on 1 April 1935 to respond to economic troubles after the First World War.The bank was set up based on the recommendations of the 1926 Royal Commission on Indian Currency and Finance.The original choice for the seal of RBI was The East India Company Double Mohur, with the sketch of the Lion and Palm Tree. However it was decided to replace the lion with the tiger, the national animal of India."
+         style = 2
+         picture = "IND07"
+ 
+         date = { day = 1 month = april year = 1935 }
+ 
+           action_a = {
+                  name = "Create it"
+                  ai_chance = 100
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = u02 value = 40 }
+                  command = { type = domestic which = free_market value = 1 }
+                  command = { type = trigger which = 3190509 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 0
+                  command = { type = dissent value = 2 }
+                  command = { type = relation which = u02 value = -40 }
+                  command = { type = domestic which = democratic value = -1 }
+           }
+
+}
+#############################################
+######  Establishment of Reserve Bank of India
+#############################################
+event = {
+         id = 3190509
+         random = no
+         country = u02
+ 
+         name = "Establishment of Reserve Bank of India"
+         desc = "The Reserve Bank of India was founded on 1 April 1935 to respond to economic troubles after the First World War.The bank was set up based on the recommendations of the 1926 Royal Commission on Indian Currency and Finance.The original choice for the seal of RBI was The East India Company Double Mohur, with the sketch of the Lion and Palm Tree. However it was decided to replace the lion with the tiger, the national animal of India."
+         style = 2
+ 
+ 
+                
+                picture = "IND07"
+                
+           action_a = {
+                  name = "It is a great new."
+                  command = { type = peacetime_ic_mod value = 5 }
+                  command = { type = money value = 300 }
+                  command = { type = construct which = ic where = -4 value = 1 }
+                  command = { type = construct which = ic where = -4 value = 1 }
+                  command = { type = construct which = ic where = -4 value = 1 }
+                  command = { type = domestic which = free_market value = 1 }
+                  command = { type = dissent value = -3 }
+           }
+
+}
+#############################################
+######  Provincial Assembly Elections in India
+#############################################
+event = {
+         id = 3190510
+         random = no
+         country = u02
+         trigger = {
+                   event = 3190506
+                   puppet = { country = u02 country = eng }
+
+         }
+ 
+         name = "Provincial Assembly Elections in India"
+         desc = "In accordance with the Act of India Government Act of 1935, the government held provincial assembly elections across India. The All-India Congress, a party composed chiefly of Hindus and demanding complete independence from Britain, was the best-organized political machine and they won an absolute majority in six provinces and a plurality in three other provinces. The party sought the abrogation of the new constitution and the convocation of an Indian constituent assembly."
+         style = 2
+ 
+         date = { day = 9 month = february year = 1937 }
+ 
+                
+                picture = "IND08"
+                
+           action_a = {
+                  name = "Excellent news"
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = relation which = eng value = 5 }
+           }
+
+}
+#############################################
+######  World War II and Indian involvement
+#############################################
+event = {
+         id = 3190511
+         random = no
+         country = u02
+         trigger = {
+                   atwar = yes
+                   puppet = { country = u02 country = eng }
+
+         }
+ 
+         name = "World War II and Indian involvement"
+         desc = "When the Second World War started, Viceroy Linlithgow unilaterally declared India a belligerent on the side of Britain, without consulting the elected Indian representatives.Indian nationalists were angry that British Governor-General of India, had without consultation with them brought India into the war. In opposition to Linlithgow's action, the entire Congress leadership resigned from the local government councils."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1939 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1941 }
+ 
+                
+                picture = "IND09"
+                
+           action_a = {
+                  name = "In the worst moment"
+                  command = { type = relation which = eng value = -15 }
+                  command = { type = industrial_modifier which = total value = -35 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = trigger which = 3190512 }
+           }
+
+}
+#############################################
+######  World War II and Indian involvement
+#############################################
+event = {
+         id = 3190512
+         random = no
+         country = eng
+
+ 
+         name = "World War II and Indian involvement"
+         desc = "When the Second World War started, Viceroy Linlithgow unilaterally declared India a belligerent on the side of Britain, without consulting the elected Indian representatives.Indian nationalists were angry that British Governor-General of India, had without consultation with them brought India into the war. In opposition to Linlithgow's action, the entire Congress leadership resigned from the local government councils."
+         style = 2
+ 
+ 
+                
+                picture = "IND09"
+                
+           action_a = {
+                  name = "In the worst moment"
+                  command = { type = relation which = u02 value = -15 }
+           }
+
+}
+#############################################
+######  Resolution of Lahore
+#############################################
+event = {
+         id = 3190513
+         random = no
+         country = u02
+         trigger = {
+                   event = 3190511
+                   NOT = { 
+                            exists = pak
+                   }
+                   puppet = { country = u02 country = eng }
+
+         }
+ 
+         name = "Resolution of Lahore"
+         desc = "The Lahore Resolution was a formal political statement adopted by the All-India Muslim League on the occasion of its three-day general session in Lahore on March 22–24, 1940, which called for the creation of 'independent states' for Muslims in north-western and eastern British India.The resolution was presented by A. K. Fazlul Huq, the Premier of Bengal. It was later interpreted as a demand for a separate and single Muslim state, called Pakistan."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1940 }
+         offset = 20
+         deathdate = { day = 30 month = december year = 1940 }
+ 
+                
+                picture = "IND10"
+                
+           action_a = {
+                  name = "Separate can lead to problems."
+                  command = { type = dissent value = 3 }
+           }
+
+}
+#############################################
+######  Cripps' mission
+#############################################
+event = {
+         id = 3190514
+         random = no
+         country = eng
+         trigger = {
+                   event = 3190511
+                   atwar = yes
+                   puppet = { country = u02 country = eng }
+
+         }
+ 
+         name = "Cripps' mission"
+         desc = "The Cripps mission was an attempt in late March 1942 by the British government to secure full Indian cooperation and support for their efforts in World War II. The mission was headed by Sir Stafford Cripps, government minister in the War Cabinet of Prime Minister Winston Churchill.Cripps worked to keep India loyal to the British war effort in exchange for a promise of full self-government after the war.Indian leaders rejected his proposals and the mission proved a failure."
+         style = 2
+         picture = "IND11"
+ 
+         date = { day = 1 month = March year = 1942 }
+ 
+           action_a = {
+                  name = "Send Sir Stafford Cripps now!!!"
+                  ai_chance = 100
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = u02 value = 40 }
+                  command = { type = domestic which = free_market value = 1 }
+                  command = { type = trigger which = 3190515 }
+           }
+           action_b = {
+                  name = "It is not necessary..."
+                  ai_chance = 0
+                  command = { type = dissent value = 2 }
+                  command = { type = relation which = u02 value = -40 }
+                  command = { type = domestic which = democratic value = -1 }
+           }
+
+}
+#############################################
+######  Cripps' mission
+#############################################
+event = {
+         id = 3190515
+         random = no
+         country = u02
+ 
+         name = "Cripps' mission"
+         desc = "The Cripps mission was an attempt in late March 1942 by the British government to secure full Indian cooperation and support for their efforts in World War II. The mission was headed by Sir Stafford Cripps, government minister in the War Cabinet of Prime Minister Winston Churchill.Cripps worked to keep India loyal to the British war effort in exchange for a promise of full self-government after the war.Indian leaders rejected his proposals and the mission proved a failure."
+         style = 2
+ 
+ 
+                
+                picture = "IND11"
+                
+           action_a = {
+                  name = "A failure."
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  Quit India Movement
+#############################################
+event = {
+         id = 3190516
+         random = no
+         country = u02
+         trigger = {
+                   event = 3190511
+                   puppet = { country = u02 country = eng }
+                   exists = eng
+
+         }
+ 
+         name = "Quit India Movement"
+         desc = "The Quit India Act was a civil disobedience movement launched in India in August 1942 in response to Mohandas Gandhi's call 'an orderly British withdrawal' from India.The British were prepared to act. Almost the entire INC leadership, and not just at the national level, was imprisoned without trial within hours after Gandhi's speech—at least 60,000 people.The Quit India campaign was effectively crushed."
+         style = 2
+ 
+         date = { day = 30 month = august year = 1942 }
+ 
+                
+                picture = "IND12"
+                
+           action_a = {
+                  name = "It is a pity!"
+                  command = { type = dissent value = 1 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = delete_unit which = -1 }
+                  command = { type = trigger which = 3190517 }
+           }
+
+}
+#############################################
+######  Quit India Movement
+#############################################
+event = {
+         id = 3190517
+         random = no
+         country = eng
+ 
+         name = "Quit India Movement"
+         desc = "The Quit India Act was a civil disobedience movement launched in India in August 1942 in response to Mohandas Gandhi's call 'an orderly British withdrawal' from India.The British were prepared to act. Almost the entire INC leadership, and not just at the national level, was imprisoned without trial within hours after Gandhi's speech—at least 60,000 people.The Quit India campaign was effectively crushed."
+         style = 2
+ 
+ 
+                
+                picture = "IND12"
+                
+           action_a = {
+                  name = "It is a pity!"
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  Royal Indian Navy mutiny
+#############################################
+event = {
+         id = 3190518
+         random = no
+         country = u02
+         trigger = {
+                   event = 3190516
+                   NOT = { 
+                            exists = pak 
+                            exists = ind
+                   }
+                   puppet = { country = u02 country = eng }
+
+         }
+ 
+         name = "Royal Indian Navy mutiny"
+         desc = "The Royal Indian Navy mutiny encompasses a total strike and subsequent revolt by Indian sailors of the Royal Indian Navy.From the initial flashpoint in Bombay, the revolt spread and found support, ultimately came to involve 78 ships, 20 shore establishments and 20,000 sailors.The revolt was called off following a meeting between the President of the Naval Central Strike Committee, M. S. Khan, and Vallab Bhai Patel of the Congress, who had been sent to Bombay to settle the crisis."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1946 }
+         offset = 20
+         deathdate = { day = 30 month = december year = 1946 }
+ 
+                
+                picture = "IND13"
+                
+           action_a = {
+                  name = "Point of No Return."
+                  command = { type = dissent value = 1 }
+                  command = { type = trigger which = 3190519 }
+           }
+
+}
+#############################################
+######  Quit India Movement
+#############################################
+event = {
+         id = 3190519
+         random = no
+         country = eng
+ 
+         name = "Quit India Movement"
+         desc = "The Quit India Act was a civil disobedience movement launched in India in August 1942 in response to Mohandas Gandhi's call 'an orderly British withdrawal' from India.The British were prepared to act. Almost the entire INC leadership, and not just at the national level, was imprisoned without trial within hours after Gandhi's speech—at least 60,000 people.The Quit India campaign was effectively crushed."
+         style = 2
+ 
+ 
+                
+                picture = "IND13"
+                
+           action_a = {
+                  name = "Point of No Return."
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  Join the Allies
+#############################################
+event = {
+         id = 3190520
+         random = no
+         country = u02
+         trigger = {
+		war = { country =eng  country = ger }
+		NOT = { war = { country = u02 country = ENG }  }
+		NOT = { alliance = { country = u02 country = eng }  }
+
+         }
+ 
+         name = "Join the Allies"
+         desc = "The countries that formed the British Commonwealth had been given powers to bring his own foreign policy. This enabled him to not be bound or obligated to participate in wars involving the United Kingdom. Although many of these countries, ensured the integrity of the UK and some of them had in its constitution the obligation to defend against aggression. Most of these countries joined the bloc ally."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1941 }
+ 
+                
+                picture = "commonwealth"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  ai_chance = 100
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = domestic which = interventionism value = 1 }
+                  command = { type = sleepevent which = 13301550 }
+                  command = { type = set_relation which = ENG value = 200 }
+                  command = { type = alliance which = ENG }
+                  command = { type = dissent value = -50 }
+           }
+           action_b = {
+                  name = "It is not our war"
+                  command = { type = dissent value = 25 }
+                  command = { type = domestic which = interventionism value = -2 }
+                  command = { type = domestic which = defense_lobby value = -2 }
+                  command = { type = relation which = eng value = -150 }
+                  command = { type = relation which = ger value = 50 }
+                  ai_chance = 0
+           }
+
+}

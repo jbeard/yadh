@@ -1,0 +1,47 @@
+GUI;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+665001;Head of State;Louis P. Blacher;1933;1964;1964;SL;Powerhungry Demagogue;High;M537001;X
+665002;Head of Government;Louis P. Blacher;1933;1964;1964;SL;Political Protege;High;M537001;X
+665003;Foreign Minister;Eugene Claudius-Petit;1933;1964;1964;SL;Great Compromiser;High;M537003;X
+665004;Minister of Armament;Emilienne Moreau-Evrard;1933;1964;1964;SL;Infantry Proponent;Medium;M537004;X
+665005;Minister of Security;Antoine Giacobbi;1933;1964;1964;SL;Back Stabber;Medium;M537005;X
+665006;Head of Military Intelligence;Horace Crocicchia;1933;1964;1964;SL;Naval Intelligence Specialist;Medium;M533004;X
+665007;Chief of Staff;Edouard Terrac;1933;1964;1964;SL;School of Manoeuvre;Medium;M537007;X
+665008;Chief of Army;Jean Francois Guelard;1933;1964;1964;SL;Decisive Battle Doctrine;Medium;M537008;X
+665009;Chief of Navy;Jean Brasseur-Kermadec;1933;1964;1964;SL;Open Seas Doctrine;Medium;M537009;X
+665010;Chief of Air Force;Georges Bergé;1933;1964;1964;SL;Vertical Envelopment Doctrine;Medium;M537010;X
+665011;Head of State;Antoine Giacobbi;1940;1964;1964;SL;Popular Figurehead;High;M537005;X
+665012;Head of State;Horace Crocicchia;1942;1964;1964;SL;Weary Stiffneck;High;M533004;X
+665013;Head of State;Edouard Terrac;1946;1964;1964;SL;Resigned Generalissimo;High;M537007;X
+665014;Head of Government;Antoine Giacobbi;1940;1964;1964;SL;Happy Amateur;High;M537005;X
+665015;Head of Government;Horace Crocicchia;1942;1964;1964;SL;Naive Optimist;High;M533004;X
+665016;Head of Government;Edouard Terrac;1946;1964;1964;SL;Old General;High;M537007;X
+665017;Foreign Minister;Emmanuel Temple;1942;1964;1964;SL;Apologetic Clerk;High;M537017;X
+665018;Minister of Armament;René Bouissou;1941;1964;1964;SL;Submarine Proponent;Medium;M537018;X
+665019;Minister of Armament;Keita Fodiba;1943;1964;1964;SL;Air to Ground Proponent;Medium;M537019;X
+665020;Minister of Security;Ahmed Sékou Touré;1944;1985;1985;SL;Crime Fighter;Medium;M537020;X
+665021;Head of Military Intelligence;André Mazana;1939;1964;1964;SL;Logistics Specialist;Medium;M537021;X
+665022;Chief of Staff;Pierre Delsol;1942;1964;1964;SL;School of Fire Support;Medium;M537022;X
+665100;Head of State;Roland Pré;1948;1964;1964;SL;Popular Figurehead;Medium;M665100;X
+665101;Head of Government;Roland Pré;1948;1964;1964;SL;Political Protege;Medium;M665100;X
+665102;Head of State;Paul Henri Siriex;1951;1964;1964;SL;Stern Imperialist;Medium;M665102;X
+665103;Head of Government;Paul Henri Siriex;1951;1964;1964;SL;Old General;Medium;M665102;X
+665104;Head of State;Jean Paul Parisot;1953;1964;1964;SL;Benevolent Gentleman;Medium;M665104;X
+665105;Head of Government;Jean Paul Parisot;1953;1964;1964;SL;Old Admiral;Medium;M665104;X
+665106;Head of State;Charles-Henri Bonfils;1955;1964;1964;SL;Benevolent Gentleman;Medium;M665106;X
+665107;Head of Government;Charles-Henri Bonfils;1955;1964;1964;SL;Smiling Oilman;Medium;M665106;X
+665108;Head of State;Jean Ramadier;1956;1964;1964;SL;Autocratic Charmer;Medium;M665108;X
+665109;Head of Government;Jean Ramadier;1956;1964;1964;SL;Ambitious Union Boss;Medium;M665108;X
+665110;Head of State;Ahmed Sékou Touré;1958;1985;1985;LWR;Autocratic Charmer;Medium;M537020;X
+665111;Head of Government;Ahmed Sékou Touré;1958;1985;1985;LWR;Corporate Suit;Medium;M537020;X
+665112;Head of Government;Louis Lansana Beavogui;1972;1985;1985;LWR;Flamboyant Tough Guy;Medium;M665112;X
+665113;Head of Government;Diarra Traoré;1984;1985;2005;PA;Smiling Oilman;Medium;M665113;X
+665114;Head of State;Lansana Conté;1984;2012;2012;PA;Resigned Generalissimo;High;GUI1;X
+665115;Head of Government;Lansana Conté;1984;2012;2012;PA;Old General;High;GUI1;X
+665116;Foreign Minister;Lansana Conté;1984;2012;2012;PA;Great Compromiser;High;GUI1;X
+665117;Minister of Armament;Lansana Conté;1984;2012;2012;PA;Infantry Proponent;High;GUI1;X
+665118;Minister of Security;Lansana Conté;1984;2012;2012;PA;Back Stabber;High;GUI1;X
+665119;Head of Military Intelligence;Lansana Conté;1984;2012;2012;PA;Naval Intelligence Specialist;High;GUI1;X
+665120;Chief of Staff;Lansana Conté;1984;2012;2012;PA;School of Manoeuvre;High;GUI1;X
+665121;Chief of Army;Lansana Conté;1984;2012;2012;PA;Decisive Battle Doctrine;High;GUI1;X
+665122;Chief of Navy;Lansana Conté;1984;2012;2012;PA;Open Seas Doctrine;High;GUI1;X
+665123;Chief of Air Force;Lansana Conté;1984;2012;2012;PA;Vertical Envelopment Doctrine;High;GUI1;X

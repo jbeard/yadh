@@ -1,0 +1,33 @@
+event = {
+	id = 8022201
+	country = U22
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 925034 } # Aksel Larsen
+		command = { type = headofgovernment which = 925028 } # Hans Hedtoft
+		command = { type = foreignminister which = 925001 } # Albert Olsen
+		command = { type = armamentminister which = 925002 } # Niels Bohr
+		command = { type = ministerofsecurity which = 925003 } # B?rge Houmann
+		command = { type = ministerofintelligence which = 925004 } # Niels Bohr
+		command = { type = chiefofstaff which = 925005 } # Svend Wagner
+		command = { type = chiefofarmy which = 925006 } # B?rge Thing
+		command = { type = chiefofnavy which = 925040 } # Knud Jespersen
+		command = { type = chiefofair which = 925025 } # Jens Otto Krag
+	}
+}
+

@@ -1,0 +1,524 @@
+event = {
+	id = 8022701
+	country = U27
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 950100 } # Ivan Ribar
+		command = { type = headofgovernment which = 950003 } # Josip Broz Tito
+		command = { type = foreignminister which = 950101 } # Ivan Subasic
+		command = { type = armamentminister which = 950005 } # Milentije Popovic
+		command = { type = ministerofsecurity which = 950014 } # Koca Popovic
+		command = { type = ministerofintelligence which = 950006 } # Aleksandar Rankovic
+		command = { type = chiefofstaff which = 950009 } # Koca Popovic
+		command = { type = chiefofarmy which = 950010 } # Josip Broz Tito
+		command = { type = chiefofnavy which = 950011 } # Josip Broz Tito
+		command = { type = chiefofair which = 950008 } # Ivan Ribar
+	}
+}
+
+event = {
+	id = 8022702
+	country = U27
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { trigger = { puppet = { country = YUG country = SOV } } type = set_domestic which = democratic value = 2 }
+		command = { trigger = { puppet = { country = YUG country = SOV } } type = set_domestic which = political_left value = 7 }
+		command = { trigger = { NOT = { puppet = { country = YUG country = SOV } } } type = set_domestic which = democratic value = 3 }
+		command = { trigger = { NOT = { puppet = { country = YUG country = SOV } } } type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 950002 } # Josip Broz Tito
+		command = { type = foreignminister which = 950012 } # Koca Popovic
+		command = { type = armamentminister which = 100083 } # Ivan Gosnjak
+		command = { type = armamentminister which = 950013 } # Ivan Gosnjak
+		command = { type = ministerofsecurity which = 950014 } # Vladimir Simic
+	}
+}
+
+event = {
+	id = 8022703
+	country = U27
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 950102 } # Petar Stambolic
+	}
+}
+
+### Yugoslav-Soviet split
+
+event = {
+	id = 8022704
+	country = U27
+
+	name = EVT_8022704_NAME
+	desc = EVT_8022704_DESC
+	picture = nwo\josip_broz_tito
+	style = 1
+
+	trigger = {
+		NOT = { puppet = { country = U27 country = SOV } }
+		exists = SOV
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8022704_A #"Denounce Stalinism"
+		ai_chance = 80
+		command = { type = dissent value = 3 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = leave_alliance }
+	}
+	
+	action = {
+		name = EVT_8022704_B #"Let's not tease Stalin"
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+		command = { type = relation which = SOV value = 100 }
+		command = { type = trigger which = 8022705 }
+		command = { type = sleepevent which = 8022706 }
+		command = { trigger = { NOT = { alliance = { country = U27 country = SOV } } } type = leave_alliance }
+	}
+
+}
+
+event = {
+	id = 8022705
+	country = SOV
+
+	name = EVT_8022705_NAME #"Yugoslavia falls under Soviet dictate"
+	desc = EVT_8022705_DESC
+	picture = nwo\tito_stalin
+	style = 1
+
+	action = {
+		name = EVT_8022705_A
+		command = { type = make_puppet which = U27 }
+		command = { type = alliance which = U27 }
+	}
+
+}
+
+event = {
+	id = 8022706
+	country = SOV
+
+	name = EVT_8022706_NAME #"Resolution of Informbiro"
+	desc = EVT_8022706_DESC
+	picture = nwo\josip_broz_tito
+	style = 1
+
+	trigger = {
+		event = 8022704
+		exists = U27
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action = {
+		name = EVT_8022706_A #"Issue resolution"
+		ai_chance = 80
+		command = { type = dissent value = 3 }
+		command = { type = relation which = U27 value = -100 }
+		command = { type = setflag which = tito_stalin_split }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+	}
+	
+	action = {
+		name = EVT_8022706_B #"Be lenient"
+		ai_chance = 18
+		command = { type = dissent value = 15 }
+		command = { type = relation which = U27 value = 50 }
+	}
+	
+	action = {
+		name = EVT_8022706_C #"War upon Trotskyists!"
+		ai_chance = 2
+		command = { type = dissent value = 25 }
+		command = { type = belligerence value = 30 }
+		command = { type = trigger value = 8022707 }
+	}
+
+}
+
+event = {
+	id = 8022707
+	country = U27
+
+	name = EVT_8022707_NAME #"War with USSR"
+	desc = EVT_8022707_DESC #"Stalin adopted surprisingly hard stance towards our show of independence. We were brave enough to denounce his influence over Yugoslavia so now we will defend our position with tanks and rifles."
+	picture = nwo\tito_at_war
+	style = 1
+
+	action = {
+		name = EVT_8022707_A #"To arms, comrades!"
+		command = { type = dissent value = -5 }
+		command = { type = leave_alliance }
+		command = { type = trigger which = 8022708 }
+	}
+
+}
+
+event = {
+	id = 8022708
+	country = SOV
+	save_date = yes
+	
+	name = EVT_8022708_NAME #"War with Tito"
+	desc = EVT_8022708_DESC #"Tito risked openly standing against the world of communism so now he will have this world at the gates of Belgrade."
+	picture = nwo\tito_at_war
+	style = 1
+
+	action = {
+		name = EVT_8022708_A #"To arms, comrades!"
+		command = { type = dissent value = -2 }
+		command = { type = war which = U27 }
+		command = { trigger = { puppet = { country = U13 country = SOV } NOT = { alliance = { country = U13 country = SOV } } } type = alliance which = U13 }
+		command = { trigger = { puppet = { country = U29 country = SOV } NOT = { alliance = { country = U29 country = SOV } } } type = alliance which = U29 }
+		command = { trigger = { puppet = { country = U30 country = SOV } NOT = { alliance = { country = U30 country = SOV } } } type = alliance which = U30 }
+	}
+
+}
+
+event = {
+	id = 8022711
+	country = SOV
+	
+	name = EVT_8022711_NAME
+	desc = EVT_8022711_DESC
+	picture = nwo\tito_at_war
+	style = 1
+	
+	trigger = {
+		event = 8022708
+		NOT = { exists = U27 }
+		flag = cold_war
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8022711_A
+		command = { type = dissent value = -7 }
+		
+		command = { type = secedeprovince which = SOV value = 327 when = 2 }
+		command = { type = secedeprovince which = SOV value = 328 when = 2 }
+		command = { type = secedeprovince which = SOV value = 329 when = 2 }
+		command = { type = secedeprovince which = SOV value = 330 when = 2 }
+		command = { type = secedeprovince which = SOV value = 331 when = 2 }
+		command = { type = secedeprovince which = SOV value = 332 when = 2 }
+		command = { type = secedeprovince which = SOV value = 333 when = 2 }
+		command = { type = secedeprovince which = SOV value = 334 when = 2 }
+		command = { type = secedeprovince which = SOV value = 335 when = 2 }
+		command = { type = secedeprovince which = SOV value = 336 when = 2 }
+		command = { type = secedeprovince which = SOV value = 337 when = 2 }
+		command = { type = secedeprovince which = SOV value = 338 when = 2 }
+		command = { type = secedeprovince which = SOV value = 339 when = 2 }
+		command = { type = secedeprovince which = SOV value = 340 when = 2 }
+		command = { type = secedeprovince which = SOV value = 341 when = 2 }
+		command = { type = secedeprovince which = SOV value = 342 when = 2 }
+		command = { type = secedeprovince which = SOV value = 343 when = 2 }
+		command = { type = secedeprovince which = SOV value = 344 when = 2 }
+		command = { type = secedeprovince which = SOV value = 345 when = 2 }
+		command = { type = secedeprovince which = SOV value = 346 when = 2 }
+		command = { type = secedeprovince which = SOV value = 347 when = 2 }
+		command = { type = secedeprovince which = SOV value = 349 when = 2 }
+		command = { type = secedeprovince which = SOV value = 350 when = 2 }
+		command = { type = secedeprovince which = SOV value = 351 when = 2 }
+		command = { type = secedeprovince which = SOV value = 352 when = 2 }
+		command = { type = secedeprovince which = SOV value = 353 when = 2 }
+		command = { type = secedeprovince which = SOV value = 354 when = 2 }
+		command = { type = secedeprovince which = SOV value = 355 when = 2 }
+		command = { type = secedeprovince which = SOV value = 356 when = 2 }
+		command = { type = secedeprovince which = SOV value = 357 when = 2 }
+		command = { type = secedeprovince which = SOV value = 358 when = 2 }
+		command = { type = secedeprovince which = SOV value = 403 when = 2 }
+		command = { type = secedeprovince which = SOV value = 406 when = 2 }
+		
+		command = { type = independence which = U27 value = 1 }
+		command = { type = make_puppet which = U27 }
+		command = { type = alliance which = U27 }
+		
+		command = { type = independence which = U13 value = 1 }
+		command = { type = make_puppet which = U13 }
+		command = { type = alliance which = U13 }
+		
+		command = { type = independence which = U29 value = 1 }
+		command = { type = make_puppet which = U29 }
+		command = { type = alliance which = U29 }
+		
+		command = { type = independence which = U30 value = 1 }
+		command = { type = make_puppet which = U30 }
+		command = { type = alliance which = U30 }
+		
+		command = { type = independence which = U31 value = 1 }
+		command = { type = make_puppet which = U31 }
+		command = { type = alliance which = U31 }
+		
+		command = { type = independence which = U32 value = 1 }
+		command = { type = make_puppet which = U32 }
+		command = { type = alliance which = U32 }
+		
+		command = { type = independence which = U16 value = 1 }
+		command = { type = make_puppet which = U16 }
+		command = { type = alliance which = U16 }
+		
+		command = { type = independence which = U33 value = 1 }
+		command = { type = make_puppet which = U33 }
+		command = { type = alliance which = U33 }
+		
+		command = { type = event which = 8225000 where = SOV when = 1 } ## CEE influence +1
+		command = { type = event which = 8225000 where = SOV when = 2 } ## CEE influence +1
+	}
+
+}
+
+event = {
+	id = 8022712
+	country = U27
+	
+	name = EVT_8022712_NAME
+	desc = EVT_8022712_DESC
+	picture = nwo\tito_at_war
+	style = 1
+	
+	trigger = {
+		event = { id = 8022708 days = 90 }
+		exists = U27
+		OR = {
+			NOT = { exists = U13 }
+			NOT = { exists = U29 }
+			NOT = { exists = U30 }
+		}
+		war = { country = SOV country = U27 }
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8022712_A
+		command = { type = dissent value = -7 }
+		
+		command = { type = peace which = SOV }
+		
+		command = { type = independence which = U13 value = 1 }
+		command = { type = independence which = U29 value = 1 }
+		command = { type = independence which = U30 value = 1 }
+		
+		command = { type = independence which = U31 value = 1 }
+		command = { type = independence which = U32 value = 1 }
+		command = { type = independence which = U16 value = 1 }
+		command = { type = independence which = U33 value = 1 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 2 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 3 } ## CEE influence -1
+	}
+
+}
+
+event = {
+	id = 8022713
+	country = U27
+	
+	name = EVT_8022713_NAME
+	desc = EVT_8022713_DESC
+	picture = nwo\tito_at_war
+	style = 1
+	
+	trigger = {
+		event = { id = 8022708 days = 180 }
+		exists = U27
+		war = { country = SOV country = U27 }
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8022713_A
+		command = { type = dissent value = -7 }
+		
+		command = { type = peace which = SOV }
+		
+		command = { type = independence which = U13 value = 1 }
+		command = { type = independence which = U29 value = 1 }
+		command = { type = independence which = U30 value = 1 }
+		
+		command = { type = independence which = U31 value = 1 }
+		command = { type = independence which = U32 value = 1 }
+		command = { type = independence which = U16 value = 1 }
+		command = { type = independence which = U33 value = 1 }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 2 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 3 } ## CEE influence -1
+	}
+
+}
+
+event = {
+	id = 8022714
+	country = U27
+	
+	name = EVT_8022714_NAME
+	desc = EVT_8022714_DESC
+	picture = nwo\trial_of_tito
+	style = 1
+	
+	trigger = {
+		event = 8022711
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action = {
+		name = EVT_8022714_A
+		command = { type = dissent value = 5 }
+		
+		command = { type = sleepminister which = 950001 }
+		command = { type = sleepminister which = 950002 }
+		command = { type = sleepminister which = 950003 }
+		command = { type = sleepminister which = 950010 }
+		command = { type = sleepminister which = 950011 }
+		
+		command = { type = sleepteam which = 950011 }
+	}
+
+}
+
+### 
+
+event = {
+	id = 8022709
+	country = U27
+
+	name = EVT_8022709_NAME #"Titoism"
+	desc = EVT_8022709_DESC #"During the 1950s Yugoslavia began a number of fundamental reforms, bringing about change in three major directions: rapid liberalization and decentralization of the country's political system, the institution of new unique economic system, and a diplomatic policy of non-alignment. After the breakaway from the Soviet sphere, Yugoslavia formed its own variant of socialism, sometimes informally called 'Titoism'."
+	picture = nwo\tito_statue
+	style = 1
+
+	trigger = {
+		flag = tito_stalin_split
+		flag = cold_war
+	}
+	
+	date = { day = 1 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1958 }
+	
+	action = {
+		name = EVT_8022709_A #"Our path to Socialism"
+		ai_chance = 80
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = USA value = 50 }
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = SOV value = -100 }
+	}
+	
+	action = {
+		name = EVT_8022709_B #"Let's stick to the Soviet system"
+		ai_chance = 20
+		command = { type = relation which = SOV value = 50 }
+	}
+
+}
+
+event = {
+	id = 8022710
+	country = U27
+
+	name = EVT_8022710_NAME #"Non-Aligned Movement"
+	desc = EVT_8022710_DESC #"Yugoslavia refused to take part in the communist Warsaw Pact and instead took a neutral stance in the Cold War and became a founding member of the Non-Aligned Movement along with countries like India, Egypt and Indonesia, and pursued one of its central-left influences that promoted a non-confrontational policy towards the U.S."
+	picture = nwo\non_aligned_movement
+	style = 1
+	
+	trigger = {
+		flag = tito_stalin_split
+		flag = cold_war
+	}
+	
+	date = { day = 1 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8022710_A #"We are the third power"
+		ai_chance = 80
+		command = { type = domestic which = interventionism value = 4 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = IND value = 100 }
+		command = { type = relation which = EGY value = 100 }
+		command = { type = relation which = INO value = 100 }
+	}
+	
+	action = {
+		name = EVT_8022710_B #"Don't bother"
+		ai_chance = 20
+		command = { type = domestic which = interventionism value = -1 }
+	}
+
+}

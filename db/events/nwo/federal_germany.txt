@@ -1,0 +1,961 @@
+event = {
+	id = 8004501
+	country = DFR
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 630002 } # Konrad Adenauer
+		
+		command = { type = chiefofstaff which = 630074 } # Anton-Detlev von Plato
+		command = { type = chiefofarmy which = 630008 }  # Hans Speidel
+		command = { type = chiefofnavy which = 630078 }  # Friedrich Ruge
+		command = { type = chiefofair which = 630037 }   # Josef Kammhuber
+
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630011 } # Kurt Schumacher
+		
+		command = { type = chiefofstaff which = 630074 } # Anton-Detlev von Plato
+		command = { type = chiefofarmy which = 630008 }  # Hans Speidel
+		command = { type = chiefofnavy which = 630078 }  # Friedrich Ruge
+		command = { type = chiefofair which = 630037 }   # Josef Kammhuber
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8004502
+	country = DFR
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 630002 } # Konrad Adenauer
+		command = { type = foreignminister which = 630003 } # Konrad Adenauer
+		command = { type = armamentminister which = 630039 } # Theodor Blank
+		command = { type = ministerofsecurity which = 630040 } # Robert Lehr
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630043 } # Erich Ollenhauer
+		command = { type = foreignminister which = 630014 } # Erich Ollenhauer
+		command = { type = armamentminister which = 630018 } # Heinrich Wilhelm Kopf
+		command = { type = ministerofsecurity which = 630023 } # Georg August Zinn
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8004503
+	country = DFR
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 630002 } # Konrad Adenauer
+		command = { type = foreignminister which = 630013 } # Heinrich von Brentano
+		command = { type = armamentminister which = 630047 } # Franz Josef Strauss
+		command = { type = ministerofsecurity which = 630022 } # Gerhard Schroeder
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630043 } # Erich Ollenhauer
+		command = { type = foreignminister which = 630014 } # Erich Ollenhauer
+		command = { type = armamentminister which = 630018 } # Heinrich Wilhelm Kopf
+		command = { type = ministerofsecurity which = 630023 } # Georg August Zinn
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8004504
+	country = DFR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 630041 } # Karl Heinrich Luebke
+	}
+}
+
+event = {
+	id = 8004505
+	country = DFR
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 630002 } # Konrad Adenauer
+		command = { type = foreignminister which = 630045 } # Gerhard Schroeder
+		command = { type = armamentminister which = 630047 } # Franz Josef Strauss
+		command = { type = ministerofsecurity which = 630022 } # Gerhard Schroeder
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630044 } # Willy Brandt
+		command = { type = foreignminister which = 630046 } # Willy Brandt
+		command = { type = armamentminister which = 630018 } # Heinrich Wilhelm Kopf
+		command = { type = ministerofsecurity which = 630050 } # Ewald Bucher
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8004506
+	country = DFR
+
+	name = "EVT_8004506_NAME"
+	desc = "EVT_8004506_DESC"
+	picture = "nwo\old_adenauer"
+	style = 1
+
+	trigger = {
+		headofgovernment = 630002
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = "EVT_8004506_A"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = sleepminister which = 630002 } # Konrad Adenauer
+		command = { type = headofgovernment which = 630042 } # Ludwig Erhard
+		command = { type = foreignminister which = 630045 } # Gerhard Schroeder
+		command = { type = armamentminister which = 630048 } # Kai Uwe von Hassell
+		command = { type = ministerofsecurity which = 630049 } # Hermann Hoecherl
+	}
+}
+
+event = {
+	id = 8004507
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 630042 } # Ludwig Erhard
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630044 } # Willy Brandt
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8004508
+	country = DFR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 630042
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 630083 } # Kurt Georg Kiesinger
+	}
+}
+
+event = {
+	id = 8004509
+	country = DFR
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = nwo\death
+	style = 1
+
+	date = { day = 19 month = april year = 1967 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1967 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = sleepminister which = 630002 } # Konrad Adenauer
+		command = { type = sleepminister which = 630003 } # Konrad Adenauer
+	}
+}
+
+event = {
+	id = 8004510
+	country = DFR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 630084 } # Gustav Heinemann
+	}
+}
+
+event = {
+	id = 8004511
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 85
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630044 } # Willy Brandt
+	}
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 630083 } # Kurt Georg Kiesinger
+	}
+	
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8004512
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 85
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630044 } # Willy Brandt
+	}
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 2 }		
+		command = { type = headofgovernment which = 630085 } # Rainer Barzel
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8004513
+	country = DFR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 630086 } # Walter Scheel
+	}
+}
+
+event = {
+	id = 8004514
+	country = DFR
+
+	name = EVT_8004514_NAME
+	desc = EVT_8004514_DESC
+	picture = nwo\willy_brandt
+	style = 1
+
+	trigger = {
+		government = democratic
+		headofgovernment = 630044
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = EVT_8004514_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 630087 } # Helmut Schmidt
+	}
+}
+
+event = {
+	id = 8004515
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 85
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630087 } # Helmut Schmidt
+	}
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }		
+		command = { type = headofgovernment which = 630094 } # Helmut Kohl
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8004516
+	country = DFR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 630088 } # Karl Carstens
+	}
+}
+
+event = {
+	id = 8004517
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 85
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630087 } # Helmut Schmidt
+	}
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }	
+		command = { type = headofgovernment which = 630089 } # Franz-Josef Strauﬂ
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}	
+}
+
+event = {
+	id = 8004518
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }	
+		command = { type = headofgovernment which = 630094 } # Helmut Kohl
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630090 } # Hans-Jochen Vogel
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}	
+}
+
+event = {
+	id = 8004519
+	country = DFR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 630093 } # Richard von Weizs‰cker
+	}
+}
+
+event = {
+	id = 8004520
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+	
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }	
+		command = { type = headofgovernment which = 630094 } # Helmut Kohl
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630091 } # Johannes Rau
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8004521
+	country = DFR
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }	
+		command = { type = headofgovernment which = 630094 } # Helmut Kohl
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 630092 } # Oskar Lafontaine
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8004522
+	country = DFR
+
+	name = EVT_8004522_NAME
+	desc = EVT_8004522_DESC
+	picture = "nwo\spiegel_affair"
+	style = 1
+	
+	trigger = {
+		exists = DDR # We have someone to fear
+		flag = cold_war
+		atwar = no
+	}
+
+	date = { day = 8 month = october year = 1962 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8004522_A
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = freedom value = 2 }
+	}
+
+}
+
+#### 1961 F-84 Thunderstreak incident
+
+event = {
+	id = 8004523
+	country = DFR
+	one_action = yes
+
+	name = EVT_8004523_NAME
+	desc = EVT_8004523_DESC
+	picture = nwo\f_84_thunderstreak
+	style = 1
+	
+	trigger = {
+		exists = DDR
+		flag = cold_war
+		atwar = no
+		
+		random = 50 # There is only some probability of the incident happening at all
+	}
+
+	date = { day = 1 month = september year = 1961 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8004523_A # We are lucky
+		ai_chance = 95
+		command = { type = dissent value = -1 }
+	}
+	
+	action = {
+		name = EVT_8004523_B # We are unlucky
+		ai_chance = 5
+		command = { type = trigger which = 8004511 }
+	}
+
+}
+
+event = {
+	id = 8004524
+	country = SOV
+
+	name = EVT_8004524_NAME
+	desc = EVT_8004524_DESC
+	picture = nwo\f_84_thunderstreak
+	style = 1
+	
+	action = {
+		name = EVT_8004524_A # Shoot down the machines
+		ai_chance = 60
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 8004512 }
+	}
+	
+	action = {
+		name = EVT_8004524_B # Let them land
+		ai_chance = 40
+		command = { type = dissent value = 5 }
+	}
+
+}
+
+event = {
+	id = 8004525
+	country = USA
+
+	name = EVT_8004525_NAME
+	desc = EVT_8004525_DESC
+	picture = nwo\f_84_thunderstreak
+	style = 1
+	
+	action = {
+		name = EVT_8004525_A # Protest
+		ai_chance = 60
+		command = { type = dissent value = 3 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = DDR value = -50 }
+	}
+	
+	action = {
+		name = EVT_8004525_B # Apologize
+		ai_chance = 39
+		command = { type = dissent value = 5 }
+		command = { type = relation which = SOV value = 25 }
+		command = { type = relation which = DDR value = 25 }
+	}
+	
+	action = {
+		name = EVT_8004525_C # Escalate into WW3!
+		ai_chance = 1
+		command = { type = dissent value = 15 }
+		command = { type = war which = SOV }
+	}
+
+}
+
+### Ostpolitik
+
+event = {
+	id = 8004526
+	country = DFR
+
+	name = EVT_8004526_NAME
+	desc = EVT_8004526_DESC
+	picture = nwo\ostpolitik
+	decision_picture = nwo\d_ostpolitik
+	style = 1
+	
+	decision = {
+		flag = cold_war
+		exists = DDR
+	}
+	
+	trigger = {
+		flag = cold_war
+		exists = DDR
+	}
+	
+	date = { day = 1 month = january year = 1970 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1971 }
+
+	action = {
+		name = EVT_8004526_A
+		ai_chance = 80
+		command = { type = dissent value = -3 }
+		command = { type = relation which = DDR value = 100 }
+		command = { type = relation which = SOV value = 20 }
+	}
+	
+	action = {
+		name = EVT_8004526_B
+		trigger = { ai = yes }
+		ai_chance = 20
+		command = { type = relation which = DDR value = -5 }
+		command = { type = sleepevent which = 8004527 }
+	}
+
+}
+
+event = { # Treaty of Warsaw
+	id = 8004527
+	country = DFR
+
+	name = EVT_8004527_NAME
+	desc = EVT_8004527_DESC
+	picture = nwo\ostpolitik
+	decision_picture = nwo\d_ostpolitik
+	style = 1
+	
+	decision = {
+		flag = cold_war
+		exists = U32
+		event = 8004526
+	}
+	
+	trigger = {
+		flag = cold_war
+		exists = U32
+		event = 8004526
+	}
+	
+	date = { day = 1 month = january year = 1970 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1971 }
+	
+	action = {
+		name = EVT_8004527_A
+		ai_chance = 80
+		command = { type = dissent value = -3 }
+		command = { type = relation which = U32 value = 100 }
+		command = { type = relation which = SOV value = 20 }
+		command = { type = removeclaim which = 155 }
+		command = { type = removeclaim which = 158 }
+		command = { type = removeclaim which = 159 }
+		command = { type = removeclaim which = 161 }
+		command = { type = removeclaim which = 164 }
+		command = { type = removeclaim which = 165 }
+		command = { type = removeclaim which = 166 }
+		command = { type = removeclaim which = 167 }
+		command = { type = removeclaim which = 168 }
+		command = { type = removeclaim which = 181 }
+		command = { type = removeclaim which = 182 }
+		command = { type = removeclaim which = 183 }
+		command = { type = removeclaim which = 184 }
+		command = { type = removeclaim which = 185 }
+		
+		command = { type = belligerence value = -10 }
+	}
+	
+	action = {
+		name = EVT_8004527_B
+		trigger = { ai = yes }
+		ai_chance = 20
+		command = { type = relation which = DDR value = -5 }
+		command = { type = sleepevent which = 8004527 }
+	}
+
+}

@@ -1,0 +1,128 @@
+event = {
+	id = 8029001
+	country = U90
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 901029 } # Joseph Aloysius Byrne
+		command = { type = headofgovernment which = 901030 } # Joseph Aloysius Byrne
+	}
+}
+
+event = {
+	id = 8029002
+	country = U90
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 901031 } # Robert Brooke-Popham
+		command = { type = headofgovernment which = 901011 } # Robert Brooke-Popham
+	}
+}
+
+event = {
+	id = 8029003
+	country = U90
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 901000 } # Sir Henry Monck-Mason Moore
+		command = { type = headofgovernment which = 901001 } # Sir Henry Monck-Mason Moore
+	}
+}
+
+event = {
+	id = 8029004
+	country = U90
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 901010 } # Philip Euen Mitchell
+		command = { type = headofgovernment which = 901032 } # Philip Euen Mitchell
+	}
+}
+
+event = {
+	id = 8029005
+	country = U90
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 901033 } # Evelyn Baring
+		command = { type = headofgovernment which = 901034 } # Evelyn Baring
+	}
+}
+
+event = {
+	id = 8029006
+	country = U90
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 901035 } # Patrick Muir Renison
+		command = { type = headofgovernment which = 901036 } # Patrick Muir Renison
+	}
+}
+

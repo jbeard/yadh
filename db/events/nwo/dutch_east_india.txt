@@ -1,0 +1,283 @@
+event = {
+	id = 8020501
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840100 } # Alidius Tjarda van Starkenborgh-Stachouwer
+		command = { type = headofgovernment which = 840002 } # Alidius Tjarda van Starkenborgh-Stachouwer
+	}
+}
+
+event = {
+	id = 8020502
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840101 } # Hubertus Van Mook
+		command = { type = headofgovernment which = 840102 } # Hubertus Van Mook
+	}
+}
+
+event = {
+	id = 8020503
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840103 } # Louis Beel
+		command = { type = headofgovernment which = 840104 } # Louis Beel
+	}
+}
+
+event = {
+	id = 8020504
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840105 } # A.H.J. Lovink
+		command = { type = headofgovernment which = 840106 } # A.H.J. Lovink
+	}
+}
+
+event = {
+	id = 8020505
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840107 } # Simon Lodewijk Johan van Waardenburg
+		command = { type = headofgovernment which = 840108 } # Simon Lodewijk Johan van Waardenburg
+	}
+}
+
+event = {
+	id = 8020506
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840109 } # Jan van Baal
+		command = { type = headofgovernment which = 840110 } # Jan van Baal
+	}
+}
+
+event = {
+	id = 8020507
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840111 } # Pieter Johannes Platteel
+		command = { type = headofgovernment which = 840112 } # Pieter Johannes Platteel
+	}
+}
+
+event = {
+	id = 8020508
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840111 } # Pieter Johannes Platteel
+		command = { type = headofgovernment which = 840113 } # Nicolaas Jouwe
+	}
+}
+
+event = {
+	id = 8020509
+	country = U05
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 840111 } # Pieter Johannes Platteel
+		command = { type = headofgovernment which = 840114 } # Markus Wonggor Kaisiepo
+	}
+}
+
+### Change of a flag
+
+event = {
+	id = 8020510
+	country = U05
+
+	name = EVT_8020510_NAME
+	desc = EVT_8020510_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8206030
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8020510_A
+		ai_chance = 100
+		command = { type = flag_ext where = U05 which = _1962 }
+	}
+	
+	action = {
+		name = EVT_8020510_B
+		ai_chance = 100
+		command = { type = money value = 5 }
+	}
+}

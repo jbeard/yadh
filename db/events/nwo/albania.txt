@@ -1,0 +1,155 @@
+event = {
+	id = 8000201
+	country = ALB
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 285014 } # Theofan Noli
+		command = { type = headofgovernment which = 285026 } # Xhafer Ypi
+		command = { type = foreignminister which = 285040 } # Shefqet Shkupi
+		command = { type = armamentminister which = 285059 } # Xhelal Mitrovica
+		command = { type = ministerofsecurity which = 285078 } # Mustafa M?rlika
+		command = { type = ministerofintelligence which = 285095 } # Hajr? Dizdari
+		command = { type = chiefofstaff which = 285110 } # Sokrat Agolli
+		command = { type = chiefofarmy which = 285123 } # Mustafa M?rlika
+		command = { type = chiefofnavy which = 285135 } # Hajr? Dizdari
+		command = { type = chiefofair which = 285145 } # Sokrat Agolli
+	}
+}
+
+event = {
+	id = 8000202
+	country = ALB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 285300 } # Ramiz Alia
+	}
+}
+
+event = {
+	id = 8000203
+	country = ALB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 285301 } # Adil Carcani
+	}
+}
+
+event = {
+	id = 8000204
+	country = ALB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 285302 } # Fatos Nano
+	}
+}
+
+
+
+event = {
+	id = 8000205
+	country = ALB
+	
+	name = "EVT_8000202_NAME"
+	desc = "EVT_8000202_DESC"
+	picture = "nwo\kosovo_claims"
+	style = 1
+
+	trigger = {
+		NOT = { owned = { province = 329 data = -1 } }
+	}
+
+	date = { day = 1 month = january year = 1945 }
+	offset = 1000
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "EVT_8000202_A"
+		ai_chance = 60
+		command = { type = removecore which = 329 }
+		command = { type = relation which = YUG value = 100 }
+	}	
+	
+	action = {
+		name = "EVT_8000202_B"
+		ai_chance = 40
+		command = { type = relation which = YUG value = -100 }
+		command = { type = belligerence value = 10 }
+	}
+}

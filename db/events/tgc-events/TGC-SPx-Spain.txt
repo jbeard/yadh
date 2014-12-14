@@ -1,0 +1,345 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the Spanish Nations
+# Event List:
+# SPA 13301400 Aftereffects of the Spanish–American War
+# SPA 13301410 Miguel Primo de Rivera's military coup 
+# SPA 13301411 The Second Spanish Republic -> SPR
+# --------------------------------------------------------------------------------
+# SPR 13301412 Right-wing pull #1 (elections 1931); L=7, D=6 (arbitrary value by Smoggy)
+# SPR 13301413 Changes creates tension!
+# SPR 13301414 Right-wing pull #2 (start of Black 2 Years, 1933);  (arbitrary value by Smoggy)
+# SPR 13301415 Right-wing pull #3; CEDA comes to power! (end of 1934); (arbitrary value by Smoggy)
+# ----- *Smoggy's explanation of 'Right-wing pull': it was required to have events that pulled Spain to the right so the Spanish Union (Left wing radical and future communist block) did not occur before the historical elections by normal AI means. These events may not lead to accurate historical ministers, but is to lead to the  Confederation of the Autonomous Right coming to power. NOTE: There was no minister changes implemented; for historical accuracy, the events should have minister changes representing the resulting government if possible. Additional events may be needed for a better historical representation. Ahistorical options should also be developed in the future if possible or needed.
+
+# Aftereffects of the Spanish–American War
+event = { 
+	id = 13301400									 
+	country = SPA										 
+	
+	date = { day = 1 month = 1 year = 1914 }						
+	deathdate = { day = 1 month = january year = 1920 }
+	offset = 30					
+	
+	trigger = {					
+		atwar = no
+	}
+	name = "EVT_13301400_NAME"							
+	Desc = "EVT_13301400_DESC"
+	Picture = "surrender" 
+	
+	action = { 	
+		name = "El Desastre!"		
+		command = { type = dissent value = 20 }
+		command = { type = local_setflag which = loser }
+	} 			
+}
+
+# Miguel Primo de Rivera's military coup
+event = { 
+	id = 13301410									 
+	country = SPA										 
+	
+	date = { day = 1 month = 1 year = 1922 }						
+	deathdate = { day = 1 month = january year = 1924 }
+	offset = 365					
+	
+	trigger = {					
+		atwar = no
+		local_flag = loser
+	}
+	name = "EVT_13301410_NAME"							
+	Desc = "EVT_13301410_DESC"
+	Picture = "SCW" 
+	
+	action = { 	
+		name = "Fascism will stop the communist threat!"		
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 35296 } # Miguel Primo de Rivera
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = dissent value = 30 }
+	} 			
+}	
+
+# The Second Spanish Republic
+event = { 
+	id = 13301411									 
+	country = SPA										 
+	
+	date = { day = 1 month = 1 year = 1930 }						
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 365					
+	
+	trigger = {					
+		atwar = no
+		event = 13301410
+		or = {
+			flag = great_depression
+			local_flag = depression
+		}
+		local_flag = loser
+	}
+	name = "EVT_13301411_NAME"							
+	Desc = "EVT_13301411_DESC"
+	Picture = "SCW_soviet_intervention" 
+	
+	action = { 	
+		name = "Fascism didn't really work for us, we should try something new..."		
+		ai_chance = 100
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = local_clrflag which = loser }
+		command = { type = country which = SPR }
+		command = { type = dissent value = -5 } #The republic had 'broad support', so why add dissent? 'Honeymoon period' reward - by Smoggy
+		command = { type = headofstate which = 255001 }	 # Niceto Alcalá-Zamora
+		command = { type = headofgovernment which = 255001 } # Niceto Alcalá-Zamora
+		command = { type = ministerofsecurity which = 255150 } # Miguel Maura Gamazo
+		command = { type = foreignminister  which = 255040 } # Jesús Hernández y Tomás
+		command = { type = ministerofintelligence  which = 255154 } # Rafael Videlia Rubio
+		command = { type = chiefofstaff  which = 255183 } # Frank Ryan
+		command = { type = armamentminister  which = 255099 } # Manuel Azaña Díaz
+		command = { type = chiefofarmy  which = 255225 } # Manuel Azaña Díaz
+		command = { type = chiefofair  which = 255269 } # Alfredo Kindelán Duany
+		command = { type = chiefofnavy  which = 255250 } # Santiago Casares Quiroga
+	}
+	action = { 	
+		name = "We need to broaden our outlook and reconquer our old place under the sun"
+		ai_chance = 0		
+		command = { type = addcore which = 	717	}	#south america & the old colonies
+		command = { type = addcore which = 	718	}
+		command = { type = addcore which = 	721	}
+		command = { type = addcore which = 	722	}
+		command = { type = addcore which = 	723	}
+		command = { type = addcore which = 	724	}
+		command = { type = addcore which = 	725	}
+		command = { type = addcore which = 	726	}
+		command = { type = addcore which = 	889	}
+		command = { type = addcore which = 	1565	}
+		command = { type = addcore which = 	1566	}
+		command = { type = addcore which = 	1567	}
+		command = { type = addcore which = 	1568	}
+		command = { type = addcore which = 	1569	}
+		command = { type = addcore which = 	1570	}
+		command = { type = addcore which = 	1571	}
+		command = { type = addcore which = 	1572	}
+		command = { type = addcore which = 	1573	}
+		command = { type = addcore which = 	1574	}
+		command = { type = addcore which = 	1575	}
+		command = { type = addcore which = 	1576	}
+		command = { type = addcore which = 	1577	}
+		command = { type = addcore which = 	1578	}
+		command = { type = addcore which = 	1579	}
+		command = { type = addcore which = 	1580	}
+		command = { type = addcore which = 	1756	}
+		command = { type = addcore which = 	1765	}
+		command = { type = addcore which = 	1775	}
+		command = { type = addcore which = 	1776	}
+		command = { type = addcore which = 	1777	}
+		command = { type = addcore which = 	1778	}
+		command = { type = addcore which = 	1779	}
+		command = { type = addcore which = 	1780	}
+		command = { type = addcore which = 	1781	}
+		command = { type = addcore which = 	1985	}
+		command = { type = addcore which = 	1986	}
+		command = { type = addcore which = 	1987	}
+		command = { type = addcore which = 	1988	}
+		command = { type = addcore which = 	1989	}
+		command = { type = addcore which = 	1990	}
+		command = { type = addcore which = 	1991	}
+		command = { type = addcore which = 	1992	}
+		command = { type = addcore which = 	1993	}
+		command = { type = addcore which = 	1994	}
+		command = { type = addcore which = 	1995	}
+		command = { type = addcore which = 	1996	}
+		command = { type = addcore which = 	2007	}
+		command = { type = addcore which = 	2007	}
+		command = { type = addcore which = 	2008	}
+		command = { type = addcore which = 	2009	}
+		command = { type = addcore which = 	2010	}
+		command = { type = addcore which = 	2011	}
+		command = { type = addcore which = 	2012	}
+		command = { type = addcore which = 	2013	}
+		command = { type = addcore which = 	2014	}
+		command = { type = addcore which = 	2015	}
+		command = { type = addcore which = 	2016	}
+		command = { type = addcore which = 	2017	}
+		command = { type = addcore which = 	2018	}
+		command = { type = addcore which = 	2019	}
+		command = { type = addcore which = 	2020	}
+		command = { type = addcore which = 	2021	}
+		command = { type = addcore which = 	2022	}
+		command = { type = addcore which = 	2023	}
+		command = { type = addcore which = 	2024	}
+		command = { type = addcore which = 	2025	}
+		command = { type = addcore which = 	2026	}
+		command = { type = addcore which = 	2027	}
+		command = { type = addcore which = 	2028	}
+		command = { type = addcore which = 	2029	}
+		command = { type = addcore which = 	2030	}
+		command = { type = addcore which = 	2031	}
+		command = { type = addcore which = 	2032	}
+		command = { type = addcore which = 	2033	}
+		command = { type = addcore which = 	2034	}
+		command = { type = addcore which = 	2035	}
+		command = { type = addcore which = 	2036	}
+		command = { type = addcore which = 	2037	}
+		command = { type = addcore which = 	2038	}
+		command = { type = addcore which = 	2039	}
+		command = { type = addcore which = 	2040	}
+		command = { type = addcore which = 	2040	}
+		command = { type = addcore which = 	2041	}
+		command = { type = addcore which = 	2042	}
+		command = { type = addcore which = 	2042	}
+		command = { type = addcore which = 	2043	}
+		command = { type = addcore which = 	2043	}
+		command = { type = addcore which = 	2044	}
+		command = { type = addcore which = 	2045	}
+		command = { type = addcore which = 	2048	}
+		command = { type = addcore which = 	2049	}
+		command = { type = addcore which = 	2050	}
+		command = { type = addcore which = 	2053	}
+		command = { type = addcore which = 	2054	}
+		command = { type = addcore which = 	2055	}
+		command = { type = addcore which = 	2056	}
+		command = { type = addcore which = 	2063	}
+		command = { type = addcore which = 	2064	}
+		command = { type = addcore which = 	2077	}
+		command = { type = addcore which = 	2078	}
+		command = { type = addcore which = 	2080	}
+		command = { type = addcore which = 	2081	}
+		command = { type = addcore which = 	2082	}
+		command = { type = addcore which = 	2083	}
+		command = { type = addcore which = 	2084	}
+		command = { type = addcore which = 	2085	}
+		command = { type = addcore which = 	2085	}
+		command = { type = addcore which = 	2086	}
+		command = { type = addcore which = 	2087	}
+		command = { type = addcore which = 	2088	}
+		command = { type = local_clrflag which = loser }
+		command = { type = civil_war which = SPR }
+		command = { type = war which = PRU } # they simply won't accept that...
+		command = { type = war which = COL } # for some of them, USA might join in, if they have not jet given up hegemnony ...
+		command = { type = war which = VEN }
+		command = { type = war which = ECU }
+		command = { type = war which = CHL }
+		command = { type = war which = ARG }
+		command = { type = war which = BOL }
+		command = { type = war which = PAN }
+		command = { type = war which = COL }
+		command = { type = war which = NIC }
+		command = { type = war which = HON }
+		command = { type = war which = SAL }
+		command = { type = war which = GUA }
+	} 			
+}
+
+#SPR 13301412 Start of the Spanish Republic; Right-wing pull #1 (elections 1931)
+event = { 
+	id = 13301412								 
+	country = SPR										 
+	
+	date = { day = 1 month = october year = 1931 }						
+	deathdate = { day = 1 month = january year = 1932 }
+	offset = 28				
+	
+	trigger = {
+		event = 13301411
+	}
+	name = "The Second Spanish Republic's Aftermath: Return of Republican and Socialist to Power!"							
+	Desc = "Historically, the Second Spanish Republic started with broad support with Prime Minister Niceto Alcalá-Zamora. Elections of June 1931 had returned many Republicans and Socialists back to power. By October 1931, the Spanish Republic was ran by a minority government with Republican Manuel Azaña as prime minister."
+	Picture = "news_paper" 
+	
+	action = { 	
+		name = "Let us move foward."	
+		command = { type = set_domestic which = political_left value = 7 }	
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = dissent value = -5 } # help clear any past dissent;  assumed 'honeymoon' period	for the Second Republic of Spain
+		command = { type = headofgovernment which = 255030 } #Manuel Azaña [Diaz]; SD version
+		#more minister changes for historical accurancy may be needed for accuracy(?).
+		ai_chance = 100
+	}			
+}
+
+# SPR 13301413 Changes creates tension!
+event = { 
+	id = 13301413							 
+	country = SPR										 
+	
+	date = { day = 28 month = december year = 1931 }						
+	deathdate = { day = 1 month = february year = 1932 }
+	offset = 1				
+	
+	trigger = {
+		event = 13301412
+	}
+	name = "Changes Creates Tensions!"							
+	Desc = "Great Depression hits Spain, and the government tried to aid rural areas. Controversial military reforms occurred fanning tensions with Fascists. A constitution with strong secular provisions was declared at the end of the year which drew the ire of Catholic worshippers in the nation."
+	Picture = "news_paper" 
+	
+	action = { 	
+		name = "What we did was for the best!"	
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = dissent value = 15 }		
+		ai_chance = 100
+	}
+	action = { 	
+		name = "Perhaps it was too much too soon."	
+		command = { type = dissent value = 13 }		
+		ai_chance = 0
+	}	
+}
+
+# SPR 13301414 Right-wing pull #2 (start of Black 2 Years, 1933)
+event = { 
+	id = 13301414							 
+	country = SPR										 
+	
+	date = { day = 1 month = november year = 1933 }						
+	deathdate = { day = 1 month = february year = 1934 }
+	offset = 60			
+	
+	trigger = {
+		event = 13301413
+	}
+	name = "The Beginning of the Black Two Years."							
+	Desc = "Historically, the Radical Republican Party (RRP) formed a government with Alejandro Lerroux at the head, and they rolled back changes made under the previous administration. There were monarchists who joined forces with Fascist Falange Española to promote their goals. Open violence and militancy increased and pushed Spain towards radical upheaval instead of some peaceful democratic solution."
+	Picture = "news_paper" 
+	
+	action = { 	
+		name = "Things are not looking well.."	
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = dissent value = 15 }		
+		ai_chance = 100
+	}			
+}
+
+event = { 
+	id = 13301415						 
+	country = SPR										 
+	
+	date = { day = 1 month = september year = 1934 }						
+	deathdate = { day = 1 month = february year = 1935 }
+	offset = 120			
+	
+	trigger = {
+		event = 13301414
+	}
+	name = "The CEDA Comes to Power!"							
+	Desc = "Historically, after two government collapses the right-wing Confederación Española de Derechas Autónomas (CEDA) party came into power. Workers' wages were slashed and Republicans were purged from the Military."
+	Picture = "news_paper" 
+	
+	action = { 	
+		name = "This is getting out of hand!"	
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = dissent value = 20 }		
+		ai_chance = 100
+	}			
+}

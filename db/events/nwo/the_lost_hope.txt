@@ -1,0 +1,1037 @@
+#############################################################################################
+#
+#	New World Order 2 by Bizon
+#	The Lost Hope
+#	IDs: 835****
+#	
+#############################################################################################
+
+### PHASE ONE: SURRENDER OF UNITED STATES
+
+event = {
+	id = 8350000
+	country = USA
+	persistent = yes
+
+	name = EVT_8350000_NAME
+	desc = EVT_8350000_DESC
+	picture = nwo\pearl_harbor_american_flag
+	style = 1
+	
+	trigger = {
+		NOT = {
+			control = { province = 1809 data = -1 } # Washington DC
+			control = { province = 1795 data = -1 } # New York
+			control = { province = 1832 data = -1 } # Chicago
+			control = { province = 1887 data = -1 } # Los Angeles
+		}
+		OR = {
+			war = { country = USA country = GER }
+			war = { country = USA country = JAP }
+		}
+		OR = {
+			AND = {
+				lost_national = { country = USA value = 75 }
+				lost_IC = { country = USA value = 80 }		
+				war = { country = ENG country = GER }
+				war = { country = SOV country = GER }
+			}
+			AND = {
+				lost_national = { country = USA value = 65 }
+				lost_IC = { country = USA value = 70 }
+				war = { country = ENG country = GER }
+				NOT = {	war = { country = SOV country = GER } }
+			}
+			AND = {
+				lost_national = { country = USA value = 55 }
+				lost_IC = { country = USA value = 60 }
+				NOT = {	war = { country = ENG country = GER } }
+				war = { country = SOV country = GER }
+			}
+			AND = {
+				lost_national = { country = USA value = 45 }
+				lost_IC = { country = USA value = 50 }
+				NOT = {	war = { country = ENG country = GER } }
+				NOT = {	war = { country = SOV country = GER } }
+			}
+		}
+		NOT = { flag = the_lost_hope }
+		NOT = {
+			event = 8351003
+			event = 8351004
+		}
+	}
+
+    date = { day = 0 month = january year = 1936 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		ai_chance = 50
+		name = EVT_8350000_A 
+		command = { type = dissent value = -5 }
+		command = { type = setflag which = the_lost_hope }
+		command = { type = trigger which = 8351000 }
+	}
+	
+	action = {
+		ai_chance = 50
+		trigger = { NOT = { dissent = 30 } }
+		name = EVT_8350000_B
+		command = { type = dissent value = 3 }
+	}
+}
+
+### PHASE TWO: DECIDING THE MAJOR VICTOR AND OTHER COUNTRIES' TERRITORIAL GAINS
+
+# The main victor is decided
+event = {
+	id = 8351000
+	country = USA
+	save_date = yes
+	
+	name = EVT_8351000_NAME
+	desc = EVT_8351000_DESC
+	picture = nwo\liberty_statue_in_fog
+	style = 1
+
+	# Germans are victorious
+	action = {
+		name = EVT_8351000_A
+		trigger = {
+			war = { country = GER country = USA }
+			# And Japanese are not victorious
+			NOT = {
+				OR = {
+					# Japanese advanced further
+					AND = {
+						region = { region = "Northwest US" country = JAP value = 50 }
+						region = { region = "Southwest US" country = JAP value = 50 }
+						NOT = { region = { region = "Northeast US" country = GER value = 50 } }
+						NOT = { region = { region = "Southeast US" country = GER value = 50 } }
+					}
+					control = { province = 1809 data = JAP }
+					AND = {
+						nuked = { country = JAP country = USA data = 1 }
+						NOT = { nuked = { country = GER country = USA data = 1 } }
+					}
+					AND = {
+						war = { country = JAP country = USA }
+						NOT = { war = { country = GER country = USA } }
+					}
+				}
+			}
+		}
+		
+		# Set additional flag
+		command = { type = setflag which = german_victory_over_usa }
+		
+		# Ceding lands in Central America and Pacific
+		command = { type = secederegion which = JAP value = "Asian Pacific" when = 1 }
+		command = { type = secederegion which = JAP value = "American Pacific" when = 1 }
+		command = { type = secedearea which = JAP value = "Central Solomons" when = 1 }
+		command = { type = secedearea which = JAP value = "North New Hebrides" when = 1 }
+		command = { type = secedearea which = JAP value = "South New Hebrides" when = 1 }
+		command = { type = secederegion which = GER value = "Central America" when = 1 } # goes to the victor
+		command = { type = secederegion which = GER value = "New Guinea" when = 1 }
+		command = { type = secederegion which = GER value = "Caribbean" when = 1 }
+		command = { type = secederegion which = GER value = "Greenland" when = 1 }
+		command = { type = secederegion which = GER value = "Iceland" when = 1 }
+		# Breaking masteries
+		command = { type = end_mastery which = PHI }
+		command = { type = end_mastery which = CUB }
+		command = { type = end_mastery which = LIB }
+		# Mexican involvement
+		command = { trigger = { NOT = { war = { country = MEX country = USA } } } type = sleepevent which = 8352001 }
+		# Wartime spoils
+		command = { trigger = { war = { country = JAP country = USA } } type = trigger which = 8351001 }
+		command = { trigger = { war = { country = GER country = USA } } type = trigger which = 8351002 }
+		command = { trigger = { NOT = { war = { country = JAP country = USA } } } type = sleepevent which = 8352002 }
+		command = { trigger = { NOT = { war = { country = JAP country = USA } } } type = sleepevent which = 8352003 }
+		command = { trigger = { NOT = { war = { country = GER country = USA } } } type = sleepevent which = 8352004 }
+		command = { trigger = { NOT = { war = { country = GER country = USA } } } type = sleepevent which = 8352005 }
+		# Decision about occupation policy
+		command = { type = trigger which = 8351004 }
+		
+	}	
+	# Japanese are victorious
+	action = {
+		name = EVT_8351000_B
+		trigger = {
+			OR = {
+				# Japanese advanced further
+				AND = {
+					region = { region = "Northwest US" country = JAP value = 50 }
+					region = { region = "Southwest US" country = JAP value = 50 }
+					NOT = { region = { region = "Northeast US" country = GER value = 50 } }
+					NOT = { region = { region = "Southeast US" country = GER value = 50 } }
+				}
+				control = { province = 1809 data = JAP }
+				AND = {
+					nuked = { country = JAP country = USA data = 1 }
+					NOT = { nuked = { country = GER country = USA data = 1 } }
+				}
+				AND = {
+					war = { country = JAP country = USA }
+					NOT = { war = { country = GER country = USA } }
+				}
+			}
+		}
+		
+		# Set additional flag
+		command = { type = setflag which = japanese_victory_over_usa }
+		
+		# Ceding lands in Central America and Pacific
+		command = { type = secederegion which = JAP value = "Asian Pacific" when = 1 }
+		command = { type = secederegion which = JAP value = "American Pacific" when = 1 }
+		command = { type = secedearea which = JAP value = "Central Solomons" when = 1 }
+		command = { type = secedearea which = JAP value = "North New Hebrides" when = 1 }
+		command = { type = secedearea which = JAP value = "South New Hebrides" when = 1 }
+		command = { type = secederegion which = JAP value = "Central America" when = 1 } # goes to the victor
+		command = { type = secederegion which = GER value = "New Guinea" when = 1 }
+		command = { type = secederegion which = GER value = "Caribbean" when = 1 }
+		command = { type = secederegion which = GER value = "Greenland" when = 1 }
+		command = { type = secederegion which = GER value = "Iceland" when = 1 }
+		# Breaking masteries
+		command = { type = end_mastery which = PHI }
+		command = { type = end_mastery which = CUB }
+		# Mexican involvement
+		command = { trigger = { NOT = { war = { country = MEX country = USA } } } type = sleepevent which = 8352001 }
+		# Wartime spoils
+		command = { trigger = { war = { country = JAP country = USA } } type = trigger which = 8351001 }
+		command = { trigger = { war = { country = GER country = USA } } type = trigger which = 8351002 }
+		command = { trigger = { NOT = { war = { country = JAP country = USA } } } type = sleepevent which = 8352002 }
+		command = { trigger = { NOT = { war = { country = JAP country = USA } } } type = sleepevent which = 8352003 }
+		command = { trigger = { NOT = { war = { country = GER country = USA } } } type = sleepevent which = 8352004 }
+		command = { trigger = { NOT = { war = { country = GER country = USA } } } type = sleepevent which = 8352005 }
+		# Decision about occupation policy
+		command = { type = trigger which = 8351003 }
+	}
+}
+
+event = {
+	id = 8351001
+	country = JAP
+
+	name = EVT_8351001_NAME
+	desc = EVT_8351001_DESC
+	picture = nwo\pearl_harbor_american_flag
+	style = 1
+	
+	action = {
+		name = EVT_8351001_A
+		trigger = {
+			OR = {
+				region = { region = "Northwest US" country = JAP value = 50 }
+				region = { region = "Southwest US" country = JAP value = 50 }
+			}
+		}
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8352003 }
+	}
+	
+	action = {
+		name = EVT_8351001_B
+		trigger = {
+			NOT = {
+				OR = {
+					region = { region = "Northwest US" country = JAP value = 50 }
+					region = { region = "Southwest US" country = JAP value = 50 }
+				}
+			}
+		}
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8352002 }
+	}
+	
+}
+
+event = {
+	id = 8351002
+	country = GER
+
+	name = EVT_8351002_NAME
+	desc = EVT_8351002_DESC
+	picture = nwo\pearl_harbor_american_flag
+	style = 1
+	
+	action = {
+		name = EVT_8351002_A
+		trigger = {
+			OR = {
+				region = { region = "Northeast US" country = GER value = 50 }
+				region = { region = "Southeast US" country = GER value = 50 }
+			}
+		}
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 8352005 }
+	}
+	
+	action = {
+		name = EVT_8351002_B
+		trigger = {
+			NOT = {
+				OR = {
+					region = { region = "Northeast US" country = GER value = 50 }
+					region = { region = "Southeast US" country = GER value = 50 }
+				}
+			}
+		}
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 8352004 }
+	}
+	
+}
+
+# Japan answers the US call to surrender
+event = { 
+	id = 8351003
+	country = JAP
+
+	name = EVT_8351003_NAME
+	desc = EVT_8351003_DESC
+	picture = nwo\japanese_military_parade
+	style = 1
+
+	action = {
+		ai_chance = 25
+		name = EVT_8351003_A #"Press for territorial cessions only"
+		command = { type = dissent value = 5 }
+		command = { type = setflag which = isolation_of_usa }
+	}
+	
+	action = {
+		ai_chance = 60
+		name = EVT_8351003_B #"Divide states once united"
+		command = { type = dissent value = -3 }
+		command = { type = belligerence value = 5 }
+		command = { type = setflag which = dissolution_of_usa }
+	}
+	
+	action = {
+		ai_chance = 15
+		name = EVT_8351003_C #"Press for as much as possible"
+		command = { type = dissent value = 25 }
+		command = { type = belligerence value = 25 }
+		command = { type = setflag which = annexation_of_usa }
+	}
+	
+	action = {
+		ai_chance = 0
+		name = EVT_8351003_D
+		command = { type = dissent value = 25 }
+		command = { type = clrflag which = the_lost_hope }
+	}
+	
+}
+
+# Germany answers the US call to surrender
+event = { 
+	id = 8351004
+	country = GER
+
+	name = EVT_8351004_NAME
+	desc = EVT_8351004_DESC
+	picture = nwo\hitler_dows_usa
+	style = 1
+	
+	action = {
+		ai_chance = 25
+		name = EVT_8351004_A #"Press for territorial cessions only"
+		command = { type = dissent value = 5 }
+		command = { type = setflag which = isolation_of_usa }
+	}
+	
+	action = {
+		ai_chance = 60
+		name = EVT_8351004_B #"Divide states once united"
+		command = { type = dissent value = -3 }
+		command = { type = belligerence value = 5 }
+		command = { type = setflag which = dissolution_of_usa }
+	}
+	
+	action = {
+		ai_chance = 15
+		name = EVT_8351004_C #"Press for as much as possible"
+		command = { type = dissent value = 25 }
+		command = { type = belligerence value = 25 }
+		command = { type = setflag which = annexation_of_usa }
+	}
+	
+	action = {
+		ai_chance = 0
+		name = EVT_8351004_D
+		command = { type = dissent value = 25 }
+		command = { type = clrflag which = the_lost_hope }
+	}
+}
+
+# PHASE THREE: SURRENDER OF USA TAKES PLACE
+
+event = { # The surrender instrument is signed
+	id = 8352000
+	country = USA
+	save_date = yes
+
+	name = EVT_8352000_NAME
+	desc = EVT_8352000_DESC
+	picture = nwo\capitol_in_fog
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		event = { id = 8351000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8352000_A
+		
+		command = { type = capital which = 1832 } # Chicago
+		command = { type = peace which = GER value = 1 }			
+		command = { type = peace which = JAP value = 1 }
+		
+		command = { type = setflag which = the_lost_hope }
+		command = { type = leave_alliance }	
+		
+		# Delete all the remaining units
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+		
+		# Give a couple of divisions for self-defence
+		
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+		command = { type = add_division value = motorized when = 3 }
+	}
+	
+}
+
+# First: Mexican share is decided
+
+event = {
+	id = 8352001
+	country = USA
+
+	name = EVT_8352001_NAME
+	desc = EVT_8352001_DESC
+	picture = nwo\alta_california
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		event = { id = 8352000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8352001_A
+		command = { type = secedearea which = MEX value = "Arizona" when = 1 }
+		command = { type = secedearea which = MEX value = "New Mexico" when = 1 }
+		command = { type = secedeprovince which = MEX value = 1886 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1922 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1923 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1925 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1926 when = 1 }
+		command = { type = secedeprovince which = MEX value = 1927 when = 1 }
+	}
+
+}
+
+# Japanese major spoils
+event = {
+	id = 8352002
+	country = USA
+
+	name = EVT_8352002_NAME
+	desc = EVT_8352002_DESC
+	picture = nwo\japanese_victory
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		event = { id = 8352000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8352002_A
+		command = { type = secedearea which = JAP value = "Washington" when = 1 }
+		command = { type = secedearea which = JAP value = "Oregon" when = 1 }
+		command = { type = secedearea which = JAP value = "Idaho" when = 1 }
+		command = { type = secedearea which = JAP value = "Nevada" when = 1 }
+		command = { type = secedearea which = JAP value = "California" when = 1 }
+		command = { type = secederegion which = JAP value = "Alaska" when = 1 }
+	}
+}
+
+# Japanese minor spoils
+event = {
+	id = 8352003
+	country = USA
+
+	name = EVT_8352003_NAME
+	desc = EVT_8352003_DESC
+	picture = nwo\japanese_victory
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		event = { id = 8352000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8352003_A
+		command = { type = secedeprovince which = JAP value = 1887 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1891 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1883 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1888 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1889 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1884 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1885 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1890 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1879 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1878 when = 1 }
+		command = { type = secedeprovince which = JAP value = 1877 when = 1 }
+	}
+}
+
+# German major spoils
+event = {
+	id = 8352004
+	country = USA
+
+	name = EVT_8352004_NAME
+	desc = EVT_8352004_DESC
+	picture = nwo\nazi_victory_parade
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		event = { id = 8352000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8352004_A
+		command = { type = secedearea which = GER value = "Maine" when = 1 }
+		command = { type = secedearea which = GER value = "New Hampshire" when = 1 }
+		command = { type = secedearea which = GER value = "Massachussets" when = 1 }
+		command = { type = secedearea which = GER value = "Vermont" when = 1 }
+		command = { type = secedearea which = GER value = "Connecticut_Rhode Island" when = 1 }
+		command = { type = secedearea which = GER value = "New Jersey" when = 1 }
+		command = { type = secedearea which = GER value = "New York" when = 1 }
+		command = { type = secedearea which = GER value = "Pennsylvania" when = 1 }
+		command = { type = secedearea which = GER value = "Maryland_Delaware" when = 1 }
+		command = { type = secedearea which = GER value = "West Virginia" when = 1 }
+		command = { type = secedearea which = GER value = "Virginia" when = 1 }
+		command = { type = secedearea which = GER value = "North Carolina" when = 1 }
+		command = { type = secedearea which = GER value = "South Carolina" when = 1 }
+		command = { type = secedearea which = GER value = "Georgia" when = 1 }
+		command = { type = secedearea which = GER value = "Florida" when = 1 }
+	}
+}
+
+# German minor spoils
+event = {
+	id = 8352005
+	country = USA
+
+	name = EVT_8352005_NAME
+	desc = EVT_8352005_DESC
+	picture = nwo\nazi_victory_parade
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		event = { id = 8352000 days = 3 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8352005_A
+		command = { type = secedearea which = GER value = "Massachussets" when = 1 }
+		command = { type = secedearea which = GER value = "Connecticut_Rhode Island" when = 1 }
+		command = { type = secedearea which = GER value = "New Jersey" when = 1 }
+		command = { type = secedearea which = GER value = "Maryland_Delaware" when = 1 }
+		command = { type = secedeprovince which = GER value = 1799 when = 1 }
+		command = { type = secedeprovince which = GER value = 1795 when = 1 }
+		command = { type = secedeprovince which = GER value = 1804 when = 1 }
+		command = { type = secedeprovince which = GER value = 1801 when = 1 }
+		command = { type = secedeprovince which = GER value = 1805 when = 1 }
+		command = { type = secedeprovince which = GER value = 1812 when = 1 }
+		command = { type = secedeprovince which = GER value = 1813 when = 1 }
+		command = { type = secedeprovince which = GER value = 1814 when = 1 }
+		command = { type = secedeprovince which = GER value = 1961 when = 1 }
+		command = { type = secedeprovince which = GER value = 1963 when = 1 }
+	}
+}
+
+### PHASE FOUR: FATE OF UNITED STATES IS DECIDED
+
+event = {
+	id = 8353000
+	country = GER
+	save_date = yes
+
+	name = EVT_8353000_NAME
+	desc = EVT_8353000_DESC
+	picture = nwo\us_congress
+	style = 1
+
+	trigger = {
+		flag = the_lost_hope
+		flag = isolation_of_usa
+		flag = german_victory_over_usa
+		event = { id = 8352000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	#  "Invite America First to form government"
+	action = {
+		name = EVT_8353000_A
+		ai_chance = 60
+		command = { type = set_relation which = USA value = 50 }
+		command = { type = trigger which = 8353002 }
+	}
+	
+	# German American Bund
+	action = {
+		name = EVT_8353000_B
+		ai_chance = 20
+		command = { type = belligerence value = 25 }
+		command = { type = set_relation which = USA value = 100 }
+		command = { type = trigger which = 8353003 }
+	}
+	
+	# Republican isolationists
+	action = {
+		name = EVT_8353000_C
+		ai_chance = 20
+		command = { type = set_relation which = USA value = -100 }
+		command = { type = trigger which = 8353004 }
+	}
+}
+
+event = { 
+	id = 8353001
+	country = JAP
+	save_date = yes
+
+	name = EVT_8353001_NAME
+	desc = EVT_8353001_DESC
+	picture = nwo\us_congress
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		flag = isolation_of_usa
+		flag = japanese_victory_over_usa
+		event = { id = 8352000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8353000_A
+		ai_chance = 85
+		command = { type = set_relation which = USA value = 50 }
+		command = { type = trigger which = 8353002 }
+	}
+	
+	# Republican isolationists
+	action = {
+		name = EVT_8353000_C
+		ai_chance = 20
+		command = { type = set_relation which = USA value = -100 }
+		command = { type = trigger which = 8353004 }
+	}
+	
+}
+
+# America First
+event = { 
+	id = 8353002
+	country = USA
+
+	name = EVT_8353002_NAME
+	desc = EVT_8353002_DESC
+	picture = nwo\america_first
+	style = 1
+
+	action = {
+		name = EVT_8353002_A
+	
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 4 }
+		command = { type = set_domestic which = interventionism value = 0 }
+
+		command = { type = headofstate which = 240149 } # Charles Lindbergh
+		command = { type = headofgovernment which = 240150 } # Robert E. Wood
+		command = { type = foreignminister which = 240045 } # Charles Coughlin
+		command = { type = armamentminister which = 240070 } # Henry Ford
+		command = { type = ministerofsecurity which = 240148 } # Gerald K. Smith
+		command = { type = ministerofintelligence which = 240197 } # Charles Willoughby
+		command = { type = chiefofstaff which = 240152 } # Robert E. Wood
+		command = { type = chiefofarmy which = 240141 } # Douglas MacArthur
+		command = { type = chiefofnavy which = 240126 } # Ernest J. King
+		command = { type = chiefofair which = 240231 } # Curtis LeMay
+	}
+	
+}
+
+# German American Bund
+event = { 
+	id = 8353003
+	country = USA
+
+	name = EVT_8353003_NAME
+	desc = EVT_8353003_DESC
+	picture = nwo\german_american_bund
+	style = 1
+	
+	action = {
+		name = EVT_8353003_A
+		
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = set_domestic which = interventionism value = 0 }
+
+		command = { type = headofstate which = 240018 } # Fritz Kuhn
+		command = { type = headofgovernment which = 240145 } # Fritz Kuhn
+		command = { type = foreignminister which = 240044 } # Ezra Pound
+		command = { type = armamentminister which = 240068 } # William D. Pelley
+		command = { type = ministerofsecurity which = 240377 } # William D. Pelley
+		command = { type = ministerofintelligence which = 240101 } # Dr. Hiram W. Evans
+		command = { type = chiefofstaff which = 240106 } # Parker Sage
+		command = { type = chiefofarmy which = 240112 } # Kenneth Althaus
+		command = { type = chiefofnavy which = 240127 } # Dr. James A. Colescott
+		command = { type = chiefofair which = 240132 } # Nathan B. Forrest III
+	}
+
+}
+
+# Isolationist Dixiecrats
+event = { 
+	id = 8353004
+	country = USA
+
+	name = EVT_8353004_NAME
+	desc = EVT_8353004_DESC
+	picture = nwo\dixiecrats
+	style = 1
+	
+	action = {
+		name = EVT_8353004_A
+		
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = interventionism value = 0 }
+
+		command = { type = headofstate which = 240196 } # Douglas MacArthur
+		command = { type = headofgovernment which = 240029 } # Strom Thurmond
+		command = { type = foreignminister which = 240206 } # Strom Thurmond
+		command = { type = armamentminister which = 240070 } # Henry Ford
+		command = { type = ministerofsecurity which = 240164 } # Charles E. Hughes
+		command = { type = ministerofintelligence which = 240197 } # Charles Willoughby
+		command = { type = chiefofstaff which = 240190 } # Omar N. Bradley
+		command = { type = chiefofarmy which = 240141 } # Douglas MacArthur
+		command = { type = chiefofnavy which = 240126 } # Ernest J. King
+		command = { type = chiefofair which = 240129 } # Henry H. Arnold
+	}
+}
+
+# Dismantling USA
+
+event = { 
+	id = 8353010
+	country = USA
+	save_date = yes
+
+	name = EVT_8353010_NAME
+	desc = EVT_8353010_DESC
+	picture = nwo\usa_divided
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		flag = dissolution_of_usa
+		event = { id = 8352000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8353010_A
+		
+		command = { type = independence which = TEX value = 0 }
+		command = { type = independence which = CSA value = 0 }
+		command = { type = independence which = CAL value = 0 }
+		
+		# Texas
+		command = { type = secedearea which = TEX value = "Texas" when = 1 }
+		command = { type = secedearea which = TEX value = "New Mexico" when = 1 }
+		command = { type = secedearea which = TEX value = "Oklahoma" when = 1 }
+		command = { type = secedearea which = TEX value = "Kansas" when = 1 }
+		command = { type = secedearea which = TEX value = "Colorado" when = 1 }
+		
+		# Confederacy
+		command = { type = secederegion which = CSA value = "Southeast US" when = 1 }
+		command = { type = secedearea which = CSA value = "Louisiana" when = 1 }
+		command = { type = secedearea which = CSA value = "Arkansas" when = 1 }
+		command = { type = secedearea which = CSA value = "Missouri" when = 1 }
+		command = { type = secedearea which = CSA value = "Kentucky" when = 1 }
+		command = { type = secedearea which = CSA value = "Virginia" when = 1 }
+		command = { type = secedearea which = CSA value = "West Virginia" when = 1 }
+		command = { type = secedearea which = CSA value = "Maryland_Delaware" when = 1 }
+		command = { type = secedearea which = CSA value = "Pennsylvania" when = 1 }
+		command = { type = secedearea which = CSA value = "New Jersey" when = 1 }
+		command = { type = secedearea which = CSA value = "Iowa" when = 1 }
+		command = { type = secedearea which = CSA value = "Nebraska" when = 1 }
+		command = { type = secedearea which = CSA value = "Wyoming" when = 1 }
+		
+		# California
+		command = { type = secederegion which = CAL value = "Southwest US" when = 1 }
+		command = { type = secederegion which = CAL value = "Northwest US" when = 1 }
+		
+		# Fritz Kuhn forms the American government
+		command = { type = trigger which = 8353003 }
+	}
+	
+}
+
+
+# Annexing USA
+
+event = { 
+	id = 8353020
+	country = GER
+	save_date = yes
+
+	name = EVT_8353020_NAME
+	desc = EVT_8353020_DESC
+	picture = nwo\liberty_statue_in_fog
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		flag = annexation_of_usa
+		flag = german_victory_over_usa
+		event = { id = 8352000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8353020_A
+		
+		command = { type = inherit which = USA }
+		
+		# Grant independence to Texas
+		command = { type = event which = 8353022 where = GER when = 1 }
+	}
+	
+}
+
+
+event = { 
+	id = 8353021
+	country = JAP
+	save_date = yes
+
+	name = EVT_8353021_NAME
+	desc = EVT_8353021_DESC
+	picture = nwo\liberty_statue_in_fog
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		flag = annexation_of_usa
+		flag = japanese_victory_over_usa
+		event = { id = 8352000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = EVT_8353021_A
+		
+		command = { type = inherit which = USA }
+		
+		# Grant independence to Texas
+		command = { type = event which = 8353022 where = JAP when = 1 }
+	}
+	
+}
+
+event = { 
+	id = 8353022
+	tag = { GER JAP }
+
+	name = EVT_8353022_NAME
+	desc = EVT_8353022_DESC
+	picture = nwo\independence_of_texas
+	style = 1
+	
+	action = {
+		name = EVT_8353022_A
+
+		# Grant independence to Texas
+		command = { type = independence which = TEX value = 0 }
+		
+		command = { type = secedearea which = TEX value = "Texas" when = 1 }
+		command = { type = secedearea which = TEX value = "New Mexico" when = 1 }
+		command = { type = secedearea which = TEX value = "Oklahoma" when = 1 }
+		command = { type = secedearea which = TEX value = "Kansas" when = 1 }
+		command = { type = secedearea which = TEX value = "Colorado" when = 1 }
+	}
+	
+}
+
+### PHASE FIVE: SETTING UP SPHERES OF INFLUENCE
+
+event = { 
+	id = 8354000
+	country = JAP
+	save_date = yes
+	
+	name = EVT_8354000_NAME
+	desc = EVT_8354000_DESC
+	picture = nwo\japanese_final_victory
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		OR = {
+			event = { id = 8353000 days = 30 }
+			event = { id = 8353001 days = 30 }
+			event = { id = 8353010 days = 30 }
+			event = { id = 8353020 days = 30 }
+			event = { id = 8353021 days = 30 }
+		}
+		flag = japanese_victory_over_usa
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8354000_A
+		command = { trigger = { flag = dissolution_of_usa } type = make_puppet which = USA }
+		command = { type = alliance which = USA }
+		command = { type = make_puppet which = CSA }
+		command = { type = alliance which = CSA }
+		command = { type = make_puppet which = TEX }
+		command = { type = alliance which = TEX }
+		command = { type = make_puppet which = CAL }
+		command = { type = alliance which = CAL }
+	}
+	
+}
+
+event = { 
+	id = 8354001
+	country = GER
+	save_date = yes
+	
+	name = EVT_8354001_NAME
+	desc = EVT_8354001_DESC
+	picture = nwo\hitler_final_victory
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		OR = {
+			event = { id = 8353000 days = 30 }
+			event = { id = 8353001 days = 30 }
+			event = { id = 8353010 days = 30 }
+			event = { id = 8353020 days = 30 }
+			event = { id = 8353021 days = 30 }
+		}
+		flag = german_victory_over_usa
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8354001_A
+		command = { trigger = { flag = dissolution_of_usa } type = make_puppet which = USA }
+		command = { type = alliance which = USA }
+		command = { type = make_puppet which = CSA }
+		command = { type = alliance which = CSA }
+		command = { type = make_puppet which = TEX }
+		command = { type = alliance which = TEX }
+		command = { type = make_puppet which = CAL }
+		command = { type = alliance which = CAL }
+	}
+	
+}
+
+### THE END
+
+event = { 
+	id = 8355000
+	country = REB
+	
+	name = AI_EVENT
+	picture = nwo\empty
+	style = 1
+	
+	trigger = {
+		flag = the_lost_hope
+		OR = {
+			event = { id = 8354000 days = 7 }
+			event = { id = 8354001 days = 7 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = OK
+		command = { type = clrflag which = the_lost_hope }
+	}
+	
+}

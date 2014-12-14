@@ -1,0 +1,147 @@
+# Free City of Trieste forms
+
+event = { 
+	id = 8020300
+	country = ITA
+
+	name = EVT_8020300_NAME
+	desc = EVT_8020300_DESC
+	picture = nwo\free_city_of_trieste
+	style = 1	
+
+	trigger = {
+		flag = cold_war
+		control = { province = 403 data = U27 }
+		control = { province = 404 data = ITA }
+		NOT = { war = { country = U27 country = ITA } }
+		NOT = { government = fascist }
+	}
+
+	date = { day = 10 month = february year = 1946 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8020300_A
+		ai_chance = 80
+		command = { type = independence which = U38 value = 1 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = U27 value = 100 }
+		command = { type = relation which = SOV value = 25 }
+		command = { type = guarantee which = ITA where = U38 }
+		command = { type = guarantee which = U27 where = U38 }
+	}	
+
+	action = {
+		name = EVT_8020300_B
+		ai_chance = 20
+		command = { type = dissent value = 3 }
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = U27 value = -150 }
+		command = { type = relation which = SOV value = -50 }
+	}	
+}
+
+# Trieste ceases to exist
+
+event = { 
+	id = 8020301
+	country = U27
+
+	name = EVT_8020301_NAME
+	desc = EVT_8020301_DESC
+	picture = nwo\free_city_of_trieste
+	style = 1	
+
+	trigger = {
+		flag = cold_war
+		ai = U38
+		exists = U38
+		NOT = { war = { country = U27 country = ITA } }
+	}
+
+	date = { day = 5 month = october year = 1954 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8020301_A
+		ai_chance = 90
+		command = { type = trigger which = 8020302 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = ITA value = 100 }
+		command = { type = relation which = USA value = 25 }
+	}	
+
+	action = {
+		name = EVT_8020301_B
+		ai_chance = 10
+		command = { type = trigger which = 8020303 }
+		command = { type = dissent value = 3 }
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = ITA value = -150 }
+		command = { type = relation which = USA value = -50 }
+	}	
+}
+
+# Both possible outcomes
+
+event = { 
+	id = 8020302
+	country = ITA
+
+	name = EVT_8020302_NAME
+	desc = EVT_8020302_DESC
+	picture = nwo\free_city_of_trieste
+	style = 1	
+
+	action = {
+		name = EVT_8020302_A
+		command = { type = inherit which = U38 }
+		command = { type = dissent value = -2 }
+	}	
+
+}
+
+event = { 
+	id = 8020303
+	country = ITA
+
+	name = EVT_8020303_NAME
+	desc = EVT_8020303_DESC
+	picture = nwo\free_city_of_trieste
+	style = 1	
+
+	action = {
+		name = EVT_8020303_A
+		ai_chance = 95
+		command = { type = dissent value = 3 }
+	}	
+	
+	action = {
+		name = EVT_8020303_B
+		ai_chance = 5
+		command = { type = trigger which = 8020304 }
+		command = { type = dissent value = 5 }
+		command = { type = relation which = U27 value = 100 }
+		command = { type = relation which = SOV value = 25 }
+	}	
+
+}
+
+event = { 
+	id = 8020304
+	country = U27
+
+	name = EVT_8020304_NAME
+	desc = EVT_8020304_DESC
+	picture = nwo\free_city_of_trieste
+	style = 1	
+
+	action = {
+		name = EVT_8020304_A
+		ai_chance = 75
+		command = { type = inherit which = U38 }
+	}	
+
+}

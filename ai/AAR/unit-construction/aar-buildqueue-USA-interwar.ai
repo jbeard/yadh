@@ -1,0 +1,80 @@
+military = { 
+	relative_build_scheme 	= yes
+	max_batch_peace			= 720 #540 
+	max_batch_war			= 360 #320 
+	max_batch_home_front	= 180
+	extra_convoys_war		= 0.1000 
+	extra_convoys_peace		= 0.2000
+  
+  ### Army Divisions		
+  infantry =	10	
+  cavalry =	0	
+  motorized =	5	
+  mechanized =	0	
+  light_armor =	0	
+  armor =	0	
+  paratrooper =  0	
+  marine =	3	
+  bergsjaeger =	2	
+  garrison =	0	
+  hq =	5	
+  militia =	0  
+
+  # Percentage	25%
+  ### Airforce		
+  interceptor =	2	
+  multi_role =	2	
+  cas =	0	
+  strategic_bomber = 	5
+  tactical_bomber =  	3	
+  naval_bomber =	5	
+  transport_plane =  	5	
+  flying_bomb =	0	
+  flying_rocket =	0	
+  # Percentage	22%
+  ### Navy		
+  battleship =	10	
+  carrier =	7	
+  escort_carrier =	3	
+  destroyer = 	10	
+  light_cruiser =  	7	
+  heavy_cruiser =	5	
+  battlecruiser =	5	
+  submarine =	1	
+  nuclear_submarine =  	0	
+  transports =	5	
+  # Percentage	55%
+  		
+  		
+  #### Brigades, 100% = all divs		
+  artillery =	10	
+  sp_artillery =	0	
+  rocket_artillery =	0	
+  sp_rct_artillery =	0	
+  anti_tank =	0	
+  tank_destroyer = 	0	
+  light_armor_brigade =  	10	
+  heavy_armor =	10	
+  super_heavy_armor =	0	
+  armored_car =	25	
+  anti_air =	20	
+  police =	5	
+  engineer =	20	
+  # Percentage	100,00%
+  
+  # Naval types (for each):	
+  cag =	100
+  escort = 	100
+  naval_asw = 20.0000 
+  naval_anti_air_s = 20.0000 
+  naval_radar_s = 20.0000 
+  naval_fire_controll_s = 20.0000 
+  naval_improved_hull_s = 10.0000 
+  naval_torpedoes_s = 10.0000 
+  naval_anti_air_l =	0
+  naval_radar_l =	0
+  naval_fire_controll_l =	0
+  naval_improved_hull_l =	0
+  naval_torpedoes_l = 	0
+	
+}

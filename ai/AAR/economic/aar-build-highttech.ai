@@ -1,0 +1,11 @@
+# Naval Base construction AI File by Burning
+
+###################################
+# Construction and Tech Research
+###################################
+construction = {
+  radar_station = yes
+  max_radar = 2
+  rocket_test = yes
+  max_rocket = 3
+}

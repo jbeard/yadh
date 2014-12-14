@@ -1,0 +1,924 @@
+##### Ireland ##### id 34341 - 34369
+
+
+#############################################
+######  Anglo-Irish Coal-Cattle Treaty
+#############################################
+event = {
+         id = 34341
+         random = no
+         country = ire
+         trigger = {
+                   exists = ENG
+                   exists = IRE
+                   NOT = { 
+                            war = { country = ENG country = IRE }
+                   }
+
+         }
+ 
+         name = "Anglo-Irish Coal-Cattle Treaty"
+         desc = "In 1935 tensions began to ease off between Britain and Ireland. With the 20% tax duties on imports coal and cattle were becoming increasingly harder to buy because of the prices. There was such a surplus of cattle in Ireland that farmers had to begin to slaughter their cattle because they could not be sold to the British. Britain and Ireland then signed the Coal-Cattle pact which meant that buying these commodities would be cheaper and easier to get."
+         style = 2
+         picture = "IRE01"
+ 
+         date = { day = 3 month = january year = 1935 }
+ 
+           action_a = {
+                  name = "We need to do this."
+                  ai_chance = 90
+		  command = { type = trigger which = 34342 }
+           }
+           action_b = {
+                  name = "Waste of time..."
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+                  command = { type = relation which = eng value = -20 }
+                  command = { type = domestic which = free_market value = -1 }
+           }
+
+}
+#############################################
+######  Anglo-Irish Coal-Cattle Treaty
+#############################################
+event = {
+         id = 34342
+         random = no
+         country = eng
+ 
+         name = "Anglo-Irish Coal-Cattle Treaty"
+         desc = "In 1935 tensions began to ease off between Britain and Ireland. With the 20% tax duties on imports coal and cattle were becoming increasingly harder to buy because of the prices. There was such a surplus of cattle in Ireland that farmers had to begin to slaughter their cattle because they could not be sold to the British. Britain and Ireland then signed the Coal-Cattle pact which meant that buying these commodities would be cheaper and easier to get."
+         style = 2
+         picture = "IRE01"
+ 
+ 
+           action_a = {
+                  name = "We need to do this."
+                  ai_chance = 90
+                  command = { type = relation which = IRE value = 30 }
+                  command = { type = supplies value = 500  }
+                  command = { type = oilpool value = 500 }
+                  command = { type = metalpool value = 1500 }
+                  command = { type = energypool value = 2000 }
+                  command = { type = rarematerialspool value = 500 }
+                  command = { type = money value = 200 }
+                  command = { type = manpowerpool value = 10 }
+                  command = { type = dissent value = -2 }
+		  command = { type = trigger which = 34344 }
+           }
+           action_b = {
+                  name = "Waste of time..."
+                  ai_chance = 10
+                  command = { type = relation which = IRE value = -20 }
+                  command = { type = domestic which = free_market value = -1 }
+		  command = { type = trigger which = 34343 }
+           }
+
+}
+#############################################
+######  Anglo-Irish Coal-Cattle Treaty
+#############################################
+event = {
+         id = 34343
+         random = no
+         country = ire
+ 
+         name = "Anglo-Irish Coal-Cattle Treaty"
+         desc = "In 1935 tensions began to ease off between Britain and Ireland. With the 20% tax duties on imports coal and cattle were becoming increasingly harder to buy because of the prices. There was such a surplus of cattle in Ireland that farmers had to begin to slaughter their cattle because they could not be sold to the British. Britain and Ireland then signed the Coal-Cattle pact which meant that buying these commodities would be cheaper and easier to get."
+         style = 2
+         picture = "IRE01"
+ 
+ 
+
+           action_a = {
+                  name = "They refused..."
+                  command = { type = relation which = eng value = -20 }
+           }
+
+}
+#############################################
+######  Anglo-Irish Coal-Cattle Treaty
+#############################################
+event = {
+         id = 34344
+         random = no
+         country = ire
+ 
+         name = "Anglo-Irish Coal-Cattle Treaty"
+         desc = "In 1935 tensions began to ease off between Britain and Ireland. With the 20% tax duties on imports coal and cattle were becoming increasingly harder to buy because of the prices. There was such a surplus of cattle in Ireland that farmers had to begin to slaughter their cattle because they could not be sold to the British. Britain and Ireland then signed the Coal-Cattle pact which meant that buying these commodities would be cheaper and easier to get."
+         style = 2
+         picture = "IRE01"
+ 
+ 
+           action_a = {
+                  name = "Success!"
+                  command = { type = relation which = ENG value = 20 }
+                  command = { type = supplies value = 500  }
+                  command = { type = oilpool value = 500 }
+                  command = { type = metalpool value = 1500 }
+                  command = { type = energypool value = 2000 }
+                  command = { type = rarematerialspool value = 500 }
+                  command = { type = money value = 200 }
+                  command = { type = manpowerpool value = 10 }
+                  command = { type = dissent value = -2 }
+           }
+
+}
+#############################################
+######  Subject IRA
+#############################################
+event = {
+         id = 34348
+         random = no
+         country = ire
+         trigger = {
+                   exists = ENG
+
+         }
+ 
+         name = "Subject IRA"
+         desc = "After the reactivation of the diplomatic relations between London and Dublin, the British government demanded that the IRA was declared illegal and persecuted like terrorist group, but, the relations would be seen again damaged between both nations"
+         style = 2
+         picture = "IRE02"
+ 
+         date = { day = 20 month = june year = 1936 }
+ 
+           action_a = {
+                  name = "IRA is illegal"
+                  ai_chance = 90
+                  command = { type = relation which = eng value = 30 }
+                  command = { type = dissent value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+           }
+           action_b = {
+                  name = "Leave it peacefully"
+                  ai_chance = 10
+                  command = { type = relation which = eng value = -60 }
+                  command = { type = end_trades which = eng where = ire }
+                  command = { type = dissent value = 3 }
+                  command = { type = domestic which = democratic value = -1 }
+                  command = { type = add_division which = "1nd Irish IRA Div." value = militia when = 0 }
+           }
+
+}
+#############################################
+######  New Irish Constitution
+#############################################
+event = {
+         id = 34349
+         random = no
+         country = ire
+         save_date = yes
+         trigger = {
+                   exists = ire
+
+         }
+ 
+         name = "New Irish Constitution"
+         desc = "Under Eamon de Valera a new Constitution was created in 1937. This was voted upon by the people in a referendum. The Constitution was the first to be given to the Irish people completely by themselves without a British overview.The 1937 Constitution made Ireland a republic in all but name - the office of the Presidency was established and the founder of the Gaelic League, Douglas Hyde, became the first president in 1938."
+         style = 2
+         picture = "IRE03"
+ 
+         date = { day = 29 month = december year = 1937 }
+ 
+           action_a = {
+                  name = "Go on!"
+                  ai_chance = 100
+                  command = { type = flag_ext where = IRE which = "" }
+                  command = { type = name where = IRE which = "" }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = relation which = eng value = -25 }
+                  command = { type = headofstate which = 125014 }
+                  command = { type = dissent value = -3 }
+		  command = { type = trigger which = 34350 }
+           }
+           action_b = {
+                  name = "Leave it"
+                  ai_chance = 0
+                  command = { type = relation which = eng value = 60 }
+                  command = { type = domestic which = democratic value = -1 }
+           }
+
+}
+#############################################
+######  Ireland is British
+#############################################
+event = {
+         id = 34350
+         random = no
+         country = eng
+ 
+         name = "New Irish Constitution"
+         desc = "Under Eamon de Valera a new Constitution was created in 1937. This was voted upon by the people in a referendum. The Constitution was the first to be given to the Irish people completely by themselves without a British overview.The 1937 Constitution made Ireland a republic in all but name - the office of the Presidency was established and the founder of the Gaelic League, Douglas Hyde, became the first president in 1938."
+         style = 2
+         picture = "IRE03"
+ 
+ 
+           action_a = {
+                  name = "What are thinking those Irish."
+                  command = { type = relation which = ire value = -25 }
+                  command = { type = end_mastery which = IRE }
+		  command = { type = trigger which = 34372 }
+           }
+
+}
+#############################################
+######  Anglo-Irish Trade Agreement
+#############################################
+event = {
+         id = 34351
+         random = no
+         country = eng
+         trigger = {
+                   NOT = { 
+                            war = { country = eng country = ire }
+                            atwar = ire
+                   }
+
+
+         }
+ 
+         name = "Anglo-Irish Trade Agreement"
+         desc = "The Anglo-Irish Trade Agreement was signed on 25 April 1938 it aimed to resolve the Anglo-Irish Trade War which had been on-going from 1933.The treaty stated that the 20% tariffs that both the United Kingdom and Ireland placed on their respective imported goods were to be abolished.Ireland was also to pay a final one time £10 million sum to the United Kingdom for the 'land annuities' derived from financial loans originally granted to Irish tenant farmers by the British government under the Irish Land Acts"
+         style = 2
+         picture = "IRE04"
+ 
+         date = { day = 1 month = january year = 1938 }
+ 
+           action_a = {
+                  name = "Let us speak."
+                  ai_chance = 100
+                  command = { type = relation which = ire value = 5 }
+                  command = { type = trigger which = 34352 }
+           }
+           action_b = {
+                  name = "Waste of time..."
+                  ai_chance = 0
+                  command = { type = relation which = ire value = -10 }
+           }
+
+}
+#############################################
+######  Anglo-Irish Trade Agreement
+#############################################
+event = {
+         id = 34352
+         random = no
+         country = ire
+ 
+         name = "Anglo-Irish Trade Agreement"
+         desc = "The Anglo-Irish Trade Agreement was signed on 25 April 1938 it aimed to resolve the Anglo-Irish Trade War which had been on-going from 1933.The treaty stated that the 20% tariffs that both the United Kingdom and Ireland placed on their respective imported goods were to be abolished.Ireland was also to pay a final one time £10 million sum to the United Kingdom for the 'land annuities' derived from financial loans originally granted to Irish tenant farmers by the British government under the Irish Land Acts"
+         style = 2
+         picture = "IRE04"
+ 
+ 
+           action_a = {
+                  name = "Let us speak"
+                  ai_chance = 100
+                  command = { type = relation which = eng value = 5 }
+                  command = { type = trigger which = 34353 }
+           }
+           action_b = {
+                  name = "Waste of time..."
+                  ai_chance = 0
+                  command = { type = relation which = eng value = -10 }
+           }
+
+}
+#############################################
+######  Anglo-Irish Trade Agreement
+#############################################
+event = {
+         id = 34353
+         random = no
+         country = eng
+ 
+         name = "Anglo-Irish Trade Agreement"
+         desc = "The Anglo-Irish Trade Agreement was signed on 25 April 1938 it aimed to resolve the Anglo-Irish Trade War which had been on-going from 1933.The treaty stated that the 20% tariffs that both the United Kingdom and Ireland placed on their respective imported goods were to be abolished.Ireland was also to pay a final one time £10 million sum to the United Kingdom for the 'land annuities' derived from financial loans originally granted to Irish tenant farmers by the British government under the Irish Land Acts"
+         style = 2
+         picture = "IRE04"
+ 
+           action_a = {
+                  name = "Excellent"
+                  command = { type = relation which = ire value = 40 }
+                  command = { type = money value = 40 }
+                  command = { type = dissent value = -2 }
+		  command = { type = industrial_modifier which = total value = 5 }
+                  command = { type = trigger which = 34354 }
+           }
+
+}
+#############################################
+###### Anglo-Irish Trade Agreement
+#############################################
+event = {
+         id = 34354
+         random = no
+         country = ire
+ 
+         name = "Anglo-Irish Trade Agreement"
+         desc = "The Anglo-Irish Trade Agreement was signed on 25 April 1938 it aimed to resolve the Anglo-Irish Trade War which had been on-going from 1933.The treaty stated that the 20% tariffs that both the United Kingdom and Ireland placed on their respective imported goods were to be abolished.Ireland was also to pay a final one time £10 million sum to the United Kingdom for the 'land annuities' derived from financial loans originally granted to Irish tenant farmers by the British government under the Irish Land Acts"
+         style = 2
+         picture = "IRE04"
+ 
+ 
+           action_a = {
+                  name = "Excellent"
+                  command = { type = relation which = eng value = 40 }
+                  command = { type = money value = -40 }
+                  command = { type = dissent value = -3 }
+		  command = { type = industrial_modifier which = total value = 5 }
+           }
+
+}
+#############################################
+######  Emergency Powers Act 1939
+#############################################
+event = {
+         id = 34356
+         random = no
+         country = ire
+         trigger = {
+                   atwar = no
+                   war = { country = GER country = ENG }
+
+         }
+ 
+         name = "Emergency Powers Act 1939"
+         desc = "The Emergency Powers Act 1939 is an act of Irish parliament enacted on 3 September 1939 after an official state of emergency had been declared on 2 September 1939.The act gave the government the ability to maintain Irish neutrality during The Emergency by providing sweeping new powers to the government for the duration of the emergency, such as internment, censorship of the media and mail by postal censorship, and the government control of the economy."
+         style = 2
+         picture = "IRE05"
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 1
+         deathdate = { day = 31 month = december year = 1941 }
+ 
+           action_a = {
+                  name = "To approve the measures"
+                  ai_chance = 98
+                  command = { type = relation which = eng value = 50 }
+                  command = { type = domestic which = freedom value = -1 }
+                  command = { type = peacetime_ic_mod value = 3 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 2
+                  command = { }
+           }
+
+}
+#############################################
+######  Negotiations with Ireland
+#############################################
+event = {
+         id = 34357
+         random = no
+         country = eng
+         trigger = {
+                   NOT = { 
+                            control = { province = 55 data = fra }
+                   }
+
+         }
+ 
+         name = "Negotiations with Ireland"
+         desc = "The British government, after the fall of France, initiated contacts with Ireland to seek an alliance between the two nations to endure and fight against a possible invasion. The British government proposed to Irish reunification of the island but instead of entering the war with the Allies.The Dublin government rejected the proposal."
+         style = 2
+         picture = "IRE06"
+ 
+         date = { day = 1 month = september year = 1938 }
+         offset = 7
+         deathdate = { day = 31 month = december year = 1941 }
+ 
+           action_a = {
+                  name = "Send Proposal"
+                  ai_chance = 60
+                  command = { type = relation which = ire value = 5 }
+                  command = { type = trigger which = 34358 }
+           }
+           action_b = {
+                  name = "Waste of time..."
+                  ai_chance = 40
+                  command = { type = relation which = ire value = -5 }
+           }
+
+}
+#############################################
+######  Negotiations with Ireland
+#############################################
+event = {
+         id = 34358
+         random = no
+         country = ire
+         trigger = {
+                   exists = ENG
+
+         }
+ 
+         name = "Negotiations with Ireland"
+         desc = "The British government, after the fall of France, initiated contacts with Ireland to seek an alliance between the two nations to endure and fight against a possible invasion. The British government proposed to Irish reunification of the island but instead of entering the war with the Allies.The Dublin government rejected the proposal."
+         style = 2
+         picture = "IRE07"
+ 
+ 
+           action_a = {
+                  name = "Accept Proposal"
+                  ai_chance = 0
+                  command = { type = dissent value = 15 }
+                  command = { type = domestic which = interventionism value = 2 }
+                  command = { type = domestic which = political_left value = 2 }
+                  command = { type = relation which = eng value = 45 }
+                  command = { type = alliance which = eng }
+                  command = { type = trigger which = 34359 }
+           }
+           action_b = {
+                  name = "We are neutral"
+                  ai_chance = 100
+                  command = { type = relation which = eng value = -5 }
+                  command = { type = relation which = ger value = 15 }
+           }
+
+}
+#############################################
+######  Negotiations with Ireland
+#############################################
+event = {
+         id = 34359
+         random = no
+         country = eng
+         trigger = {
+                   exists = ENG
+
+         }
+ 
+         name = "Irish reunification"
+         desc = "The British government, after the fall of France, initiated contacts with Ireland to seek an alliance between the two nations to endure and fight against a possible invasion. The British government proposed to Irish reunification of the island but instead of entering the war with the Allies."
+         style = 2
+         picture = "IRE08"
+ 
+ 
+           action_a = {
+                  name = "OK"
+                  command = { type = removecore which = 35 }
+                  command = { type = removecore which = 36 }
+                  command = { type = dissent value = 5 }
+                  command = { type = relation which = ire value = 50 }
+                  command = { type = secedeprovince which = ire value = 35 }
+                  command = { type = secedeprovince which = ire value = 36 }
+           }
+
+}
+#############################################
+######  Eire Act 1938
+#############################################
+event = {
+         id = 34360
+         random = no
+         country = eng
+         trigger = {
+                   event = { id = 34354 days = 30 }
+
+         }
+ 
+         name = "Eire Act 1938"
+         desc = "By 1938 the Governments of Ireland and the United Kingdom had been involved in a long-running Anglo-Irish Trade War that was not in the interest of either country's economy. Negotiations to settle the matters in dispute took place in 1938. One of the items the Irish side pushed for was the return of the Treaty Ports. Ultimately, this was agreed to and the United Kingdom enacted the Eire Act 1938."
+         style = 2
+         picture = "IRE09"
+ 
+ 
+           action_a = {
+                  name = "We have no choice."
+                  command = { type = dissent value = 2 }
+                  command = { type = money value = 200 }
+                  command = { type = relation which = ire value = 10 }
+                  command = { type = trigger which = 34361 }
+           }
+
+}
+#############################################
+######  Agreement on return of Treaty Ports
+#############################################
+event = {
+         id = 34361
+         random = no
+         country = ire
+ 
+         name = "Agreement on return of Treaty Ports"
+         desc = "By 1938 the Governments of Ireland and the United Kingdom had been involved in a long-running Anglo-Irish Trade War that was not in the interest of either country's economy. Negotiations to settle the matters in dispute took place in 1938. One of the items the Irish side pushed for was the return of the Treaty Ports. Ultimately, this was agreed to and the United Kingdom enacted the Eire Act 1938."
+         style = 2
+         picture = "IRE10"
+ 
+ 
+           action_a = {
+                  name = "OK"
+                  command = { type = dissent value = -2 }
+                  command = { type = relation which = eng value = 10 }
+                  command = { type = money value = -200 }
+                  command = { type = construct which = naval_base where = 31 value = 2 }
+                  command = { type = construct which = naval_base where = 32 value = 1 }
+                  command = { type = construct which = coastal_fort where = 31 value = 2 }
+                  command = { type = construct which = coastal_fort where = 32 value = 2 }
+           }
+
+}
+
+#########################################################################
+# Operation Green
+#########################################################################
+event = { 
+	id = 34362
+	random = no
+	country = GER
+	trigger = {
+                exists = IRE
+                exists = ENG
+                war = { country = GER country = ENG }
+		        OR = {
+                        control = { province = 55 data = GER }
+			}
+		NOT = {
+			war = { country = GER country = IRE }
+			war = { country = GER country = SOV }
+			alliance = { country = ire country = eng }
+			exists = FRA
+                        }
+                }	
+        date = { day = 1 month = january year = 1933 }
+        offset = 15
+        deathdate = { day = 30 month = december year = 1953 }	
+	name = "Operation Green"
+	desc = "Operation Green was a full scale operations plan for a German invasion of Ireland in support of Operation Sea Lion.Despite its detailed nature, Green is thought to have been designed only as a credible threat, a feint, not an actual operation. Plan W, a planned occupation of all of the Irish Free State by British forces, was drafted by the British military in secret liaison with the Irish government to counteract any German invasion."
+        style = 2
+        picture = "diplomatic_campaign"
+	action_a = {
+		name = "Send Proposal"
+                ai_chance = 40
+		command = { type = trigger which = 34363 }
+                command = { type = money value = -50 }
+		command = { type = relation which = IRE value = 5 }
+        }
+        action_b = {
+		name = "Waste of time..."
+                ai_chance = 60
+		command = { type = relation which = IRE value = -5 }
+	}
+}
+
+#########################################################################
+# German makes an offer to us
+#########################################################################
+event = { 
+	id = 34363
+	random = no
+	country = IRE
+	name = "Operation Green"
+	desc = "Operation Green was a full scale operations plan for a German invasion of Ireland in support of Operation Sea Lion.Despite its detailed nature, Green is thought to have been designed only as a credible threat, a feint, not an actual operation. Plan W, a planned occupation of all of the Irish Free State by British forces, was drafted by the British military in secret liaison with the Irish government to counteract any German invasion."
+	style = 2
+        picture = "diplomatic_campaign"
+	action_a = {
+		name = "Only let us accept Northern Ireland"
+                ai_chance = 10
+		command = { type = relation which = GER value = 20 }
+		command = { type = trigger which = 34364 }
+		command = { type = trigger which = 34365 }
+        command = { type = add_division which = "1st Irish Guard Div." value = garrison when = 0 where = police }
+        }
+        action_b = {
+		name = "Let us join the Axis!"
+                ai_chance = 2
+		command = { type = relation which = GER value = 50 }
+		command = { type = trigger which = 34366 }
+		command = { type = trigger which = 34365 }
+       command = { type = add_division which = "1st Irish conscripts Div." value = infantry when = 0 where = artillery }
+        command = { type = add_division which = "2nd Irish conscripts Div." value = infantry when = 0 }
+        command = { type = add_division which = "3rd Irish conscripts Div." value = infantry when = 0 }
+        command = { type = alliance which = GER }
+        }
+	action_c = {
+		name = "Let us preserve, join England!!!"
+                ai_chance = 2
+		command = { type = relation which = GER value = -100 }
+		command = { type = trigger which = 34367 }
+		command = { type = trigger which = 34368 }
+		command = { type = sleepevent which = 34365 }
+                command = { type = add_division which = "1st Irish conscripts Div." value = infantry when = 0 where = artillery }
+                command = { type = add_division which = "2nd Irish conscripts Div." value = infantry when = 0 }
+                command = { type = add_division which = "3rd Irish conscripts Div." value = infantry when = 0 }
+                command = { type = alliance which = ENG }
+        }
+        action_d = {
+		name = "Let us remain neutral!"
+                ai_chance = 86
+		command = { type = relation which = GER value = -10 }
+		command = { type = trigger which = 34369 }
+		command = { type = sleepevent which = 34365 }	
+	}
+}
+
+#########################################################################
+# Ireland accept Northern Ireland
+#########################################################################
+event = { 
+	id = 34364
+	random = no
+	country = GER	
+	name = "Limited pact"
+	desc = "Our ambassador in Ireland reports to us that Ireland agrees to sign a limited pact with us, amongst other things it commits himself remaining neutral in exchange of what it will once have the control of Northern Ireland this one released from the English oppressor!"
+        style = 2
+        picture = "diplomatic_campaign"
+	action_a = {
+		name = "Well..."
+		command = { }
+	}
+}
+
+#########################################################################
+# Ireland join the Axis!
+#########################################################################
+event = { 
+	id = 34366
+	random = no
+	country = GER	
+	name = "Total pact"
+	desc = "Our ambassador in Ireland reports to us that Ireland joined large Reich!"
+        style = 2
+        picture = "Wehrmacht"
+	action_a = {
+		name = "Perfect!"
+		command = { }		
+	}
+}
+
+#########################################################################
+# Irish joins the Allies!
+#########################################################################
+event = { 
+	id = 34367
+	random = no
+	country = GER	
+	name = "Irish joins the Allies!"
+	desc = "Our secret services report to us that these cheating of Irish captured the embassy of Reich in Ireland and joined the British!"
+        style = 2
+        picture = "IRE05"
+	action_a = {
+		name = "These dogs deserve all death!"
+		command = { type = relation which = IRE value = -100 }		
+	}
+}
+
+#########################################################################
+# Ireland remains neutral
+#########################################################################
+event = { 
+	id = 34369
+	random = no
+	country = GER	
+	name = "Ireland remains neutral"
+	desc = "Our ambassador in Ireland reports to us that Ireland make a point of remaining neutral whatever is the cost..."
+        style = 2
+        picture = "diplomatic_campaign"
+	action_a = {
+		name = "Such an amount of worse for them!"
+		command = { type = relation which = IRE value = -10 }
+	}
+}
+
+#########################################################################
+# As promised by German, we receive our provinces so much coveted
+#########################################################################
+event = { 
+	id = 34365
+	random = no
+	country = IRE
+        trigger = {
+        OR = {
+               AND = {
+               control = { province = 35 data = IRE }
+               control = { province = 36 data = IRE }
+               }
+               AND = {
+               control = { province = 35 data = GER}
+               control = { province = 36 data = GER}
+               }
+               AND = {
+               control = { province = 35 data = IRE }
+               control = { province = 36 data = GER}
+               }
+               AND = {
+               control = { province = 35 data = IRE }
+               control = { province = 36 data = GER}
+               }
+        }
+}	
+	name = "As promised by German, we receive our provinces so much coveted"
+	desc = "Whereas the German projection in crushing England east, Northern Ireland, once 'released', is yielded to Irish"
+        style = 2
+        picture = "IRE08"
+	action_a = {
+		name = "Finally unified and free Ireland!!!"
+		command = { type = secedeprovince which = IRE value = 35 }
+		command = { type = secedeprovince which = IRE value = 36 }
+                command = { type = add_division which = "2nd Irish IRA Div." value = militia when = 0 }
+                command = { type = add_division which = "1st Irish IRA Div." value = militia when = 0 }		
+	}
+}
+
+#########################################################################
+# The Irishmen join us!
+#########################################################################
+event = { 
+	id = 34368
+	random = no
+	country = ENG	
+	name = "The Irishmen join us!"
+	desc = "Whereas all seems lost, an unexpected ally joined the fight at our sides!"
+        style = 2
+        picture = "IRE06"
+	action_a = {
+		name = "Live Ireland!"
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 34359 }		
+	}
+}
+
+
+#######################################################
+# Irish free state
+#######################################################
+event = {
+	id = 34370
+	random = no
+	country = ENG
+	trigger = {
+		atwar = no
+	}
+	date = { day = 30 month = january year = 1933 }
+	name = "Irish free state"
+	desc = "The Irish Free State was the state established in 1922 as a Dominion of the British Empire under the Anglo-Irish Treaty. On the day the Irish Free State was established, it comprised the entire island of Ireland, but as expected Northern Ireland almost immediately exercised its right under the treaty to remove itself from the new state. The Irish Free State effectively replaced both the self-proclaimed Irish Republic and the Provisional Government of Southern Ireland."
+	style = 2
+	picture = "IRE06"
+	action_a = {
+		name = "Ok."
+		command = { type = make_puppet which = IRE }
+		command = { type = sleepevent which = 2001093 }
+		command = { type = trigger which = 34371 } # IRE
+		}
+	}
+	
+event = {
+	id = 34371
+	random = no
+	country = IRE
+	name = "Irish free state"
+	desc = "The Irish Free State was the state established in 1922 as a Dominion of the British Empire under the Anglo-Irish Treaty. On the day the Irish Free State was established, it comprised the entire island of Ireland, but as expected Northern Ireland almost immediately exercised its right under the treaty to remove itself from the new state. The Irish Free State effectively replaced both the self-proclaimed Irish Republic and the Provisional Government of Southern Ireland."
+	style = 1
+	picture = "IRE06"
+	action_a = {
+		name = "Colonization, that is enough"
+		command = { type = dissent value = 1 }
+		command = { type = name where = IRE which = "IRE37" }
+		command = { type = relation which = ENG value = -200 }
+		command = { type = relation which = AST value = -75 }
+		command = { type = relation which = BEL value = -75 }
+		command = { type = relation which = CAN value = -75 }
+		command = { type = relation which = SAF value = -80 }
+		command = { type = relation which = U60 value = -75 }
+		command = { type = relation which = NZL value = -75 }
+		command = { type = relation which = FRA value = -25 }
+		}
+	}
+	
+event = {
+	id = 34372
+	random = no
+	country = IRE
+	name = "New Constitution"
+	desc = "Under Eamon de Valera a new Constitution was created in 1937. This was voted upon by the people in a referendum. The Constitution was the first to be given to the Irish people completely by themselves without a British overview.The 1937 Constitution made Ireland a republic in all but name - the office of the Presidency was established and the founder of the Gaelic League, Douglas Hyde, became the first president in 1938."
+	style = 2
+	picture = "IRE03"
+	action_a = {
+		name = "Live Ireland!"
+		command = { type = leave_alliance }
+		command = { type = relation which = ENG value = -20 }
+		}
+	}
+
+
+#######################################################
+# The Sugar Manufacture Act 1933
+#######################################################
+event = {
+	id = 34373
+	random = no
+	country = IRE
+	trigger = {
+
+         }
+ 
+	date = { day = 23 month = august year = 1933 }
+	name = "The Sugar Manufacture Act 1933"
+	desc = "The Sugar Manufacture Act, 1933 was passed to promote self-sufficiency in sugar manufacture, this act was brought on by a crisis in the industry and resulted in the nationalisation of sugar manufacture."
+	style = 2
+	picture = "IRE11"
+	action_a = {
+                  name = "To approve the measures"
+                  ai_chance = 95
+                  command = { type = industrial_modifier which = total value = 2 }
+                  command = { type = industrial_modifier which = supplies value = 5 }
+                  command = { type = dissent value = -1 }
+           }
+         action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 5
+                  command = { type = dissent value = 1 }
+           }
+
+}
+
+
+#######################################################
+# The Subject Blueshirts
+#######################################################
+event = {
+	id = 34374
+	random = no
+	country = IRE
+	trigger = {
+
+         }
+ 
+	date = { day = 8 month = december year = 1933 }
+	name = "The Subject Blueshirts"
+	desc = "The Blueshirts was an Irish extra parliamentary security organisation active in the 1930s. It consisted largely of former members of the Irish Republican Army who were pro Treaty during the Irish Civil War.De Valera banned the parade, remembering Mussolini's March on Rome, and fearing a coup d'etat."
+	style = 2
+	picture = "IRE12"
+	action_a = {
+		name = "Blueshirts is illegal"
+                ai_chance = 95
+		command = { type = manpowerpool value = -10 }
+		command = { type = dissent value = 2 }
+           }
+        action_b = {
+                name = "Leave it peacefully"
+                ai_chance = 5
+		command = { type = dissent value = -2 }
+                command = { type = domestic which = democratic value = -1 }
+                command = { type = add_division which = "1nd Irish National Guard Div." value = militia when = 0 }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 13301543
+         random = no
+         country = ire
+         trigger = {
+                   atwar = yes
+                   alliance = { country = ire country = eng }
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+ 
+                
+                picture = "IRE13"
+                
+           action_a = {
+                  name = "OK"
+                  command = {  }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 13301544
+         random = no
+         country = ire
+         trigger = {
+                   atwar = yes
+                   alliance = { country = ire country = eng }
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+          persistent = yes
+ 
+ 
+                
+                picture = "IRE13"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+           }
+
+}

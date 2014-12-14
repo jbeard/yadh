@@ -1,0 +1,262 @@
+CHC;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+51001;Head of State;Mao Zedong;1930;1977;1977;ST;Powerhungry Demagogue;High;M51001;x
+51002;Head of Government;Mao Zedong;1930;1977;1977;ST;Backroom Backstabber;High;M51001;x
+51003;Foreign Minister;Wang Jiaxiang;1930;1964;1964;ST;General Staffer;High;M51003;x
+51004;Minister of Armament;Lin Bojiu;1930;1964;1964;ST;Military Entrepreneur;High;M51004;x
+51005;Minister of Security;Xie Juezai;1930;1964;1964;ST;Man of the People;Medium;M51005;x
+51006;Head of Military Intelligence;Li Kenong;1930;1964;1964;ST;Logistics Specialist;Medium;M51006;x
+51007;Chief of Staff;Zhu De;1930;1964;1964;ST;School of Mass Combat;Medium;M51007;x
+51008;Chief of Army;Zhu De;1930;1964;1964;ST;Guns and Butter Doctrine;Low;M51007;x
+51009;Chief of Navy;Ziao Jingguang;1930;1964;1964;ST;Open Seas Doctrine;Medium;M51009;x
+51010;Chief of Air Force;Fang Zeyi;1936;1964;1964;ST;Army Aviation Doctrine;Medium;M51010;x
+51012;Head of State;Zhang Guotao;1936;1964;1964;SD;Ruthless Powermonger;High;M51012;x
+51013;Head of State;Lin Bojiu;1936;1964;1964;LWR;Die-hard Reformer;High;M51004;x
+51015;Head of Government;Zhang Guotao;1936;1964;1964;SD;Ambitious Union Boss;High;M51012;x
+51016;Head of Government;Lin Bojiu;1936;1964;1964;LWR;Flamboyant Tough Guy;High;M51004;x
+51018;Foreign Minister;Zhang Guotao;1936;1964;1964;SD;Ideological Crusader;High;M51012;x
+51019;Foreign Minister;Li Kenong;1944;1964;1964;ST;Great Compromiser;Medium;M51006;x
+51023;Minister of Armament;Cao Qiuru;1939;1964;1964;ST;Administrative Genius;High;M51023;x
+51024;Minister of Armament;Guo Yunshen;1941;1964;1964;ST;Air to Ground Proponent;High;M51024;x
+51025;Minister of Armament;Wang Fengbo;1943;1964;1964;ST;Laissez-faire Capitalist;High;M51025;x
+51028;Minister of Armament;He Yuandang;1937;1964;1964;LWR;Resource Industrialist;High;M51026;x
+51030;Minister of Security;Zhou Xing;1939;1964;1964;ST;Crime Fighter;Medium;M51030;x
+51031;Minister of Security;Mao Zedong;1941;1977;1977;ST;Back Stabber;Very high;M51001;x
+51032;Minister of Security;Lin Bojiu;1942;1964;1964;ST;Compassionate Gentleman;High;M51004;x
+51033;Minister of Security;Gao Xue;1944;1964;1964;ST;Compassionate Gentleman;High;M51033;x
+51037;Head of Military Intelligence;Zhou Enlai;1936;1964;1964;ST;Political Specialist;Medium;M51051;x
+51038;Head of Military Intelligence;Deng Xiaoping;1940;1964;1964;ST;Industrial Specialist;Medium;M51038;x
+51039;Head of Military Intelligence;Wang Jiaxiang;1942;1964;1964;ST;Dismal Enigma;High;M51003;x
+51040;Head of Military Intelligence;Xie Juezai;1945;1964;1964;ST;Political Specialist;Medium;M51005;x
+51044;Chief of Staff;Xu Xiangqian;1941;1964;1964;ST;School of Manoeuvre;Medium;M51044;x
+51045;Chief of Staff;Chen Yi;1944;1964;1964;ST;School of Psychology;Medium;M51045;x
+51049;Chief of Army;Gao Gang;1940;1964;1964;ST;Elastic Defence Doctrine;Low;M51049;x
+51050;Chief of Army;Chen Yi;1943;1964;1964;ST;Armoured Spearhead Doctrine;Medium;M51045;x
+51051;Head of Government;Zhou Enlai;1949;1964;1964;ST;Ambitious Union Boss;High;M51051;x
+51052;Foreign Minister;Zhou Enlai;1949;1964;1964;ST;Ideological Crusader;High;M51051;x
+51053;Minister of Armament;Peng Dehuai;1949;1964;1964;ST;Theoretical Scientist;High;M51053;x
+51054;Minister of Security;Ren Bishi;1949;1964;1964;ST;Efficient Sociopath;Medium;M51054;x
+51055;Head of Military Intelligence;Peng Zhen;1949;1964;1964;ST;Industrial Specialist;High;M51055;x
+51056;Foreign Minister;Chen Yi;1958;1981;1981;ST;General Staffer;High;M51045;x
+51057;Minister of Armament;Lin Biao;1959;1981;1981;ST;Military Entrepreneur;High;L76324;x
+51058;Minister of Security;Shi Liang;1950;1981;1981;ST;Prince of Terror;Medium;M51058;x
+51059;Minister of Security;Qian Ying;1959;1981;1981;ST;Silent Lawyer;Medium;M51059;x
+51060;Minister of Security;Zeng Shan;1960;1981;1981;ST;Back Stabber;Medium;M51060;x
+51061;Head of Military Intelligence;Bo Yibo;1953;1981;1981;ST;Technical Specialist;High;M51061;x
+51062;Head of Military Intelligence;Li Xiannian;1954;1981;1981;ST;Logistics Specialist;High;L76322;x
+51063;Head of State;Liu Shaoqi;1959;1981;1981;LE;Die-hard Reformer;Medium;CHC_LiuShaoqi;x
+51064;Head of State;Song Qingling;1948;1964;1964;SD;Popular Figurehead;Medium;CHC_SoongCh'ing-ling;x
+51065;Head of State;Dong Biwu;1968;1991;1991;ST;Insignificant Layman;Medium;CHC_DongBiwu;x
+51066;Head of State;Zhu De;1975;2001;2011;ST;Resigned Generalissimo;Medium;M51007;x
+51067;Head of State;Ye Jianying;1981;2011;2011;ST;Die-hard Reformer;Medium;CHC_YeJianying;x
+51068;Head of State;Li Xiannian;1983;2011;2011;LE;Resigned Generalissimo;Medium;CHC_LiXiannian;x
+51069;Head of State;Yang Shangkun;1988;2011;2011;LE;Resigned Generalissimo;Medium;CHC_YangShangkun;x
+51070;Head of State;Jiang Zemin;1993;2011;2011;LE;Autocratic Charmer;Medium;CHC_JiangZemin;x
+51071;Head of State;Hu Jintao;2003;2011;2011;LE;Barking Buffoon;Medium;CHC_HuJintao;x
+51072;Head of Government;Hua Guofeng;1976;2001;2011;ST;Ambitious Union Boss;Medium;CHC_HuaGuofeng;x
+51073;Head of Government;Zhao Ziyang;1980;2011;2011;LE;Naive Optimist;Medium;CHC_ZhaoZiyang;x
+51074;Head of Government;Li Peng;1987;2011;2011;LE;Political Protege;Medium;CHC_Li Peng;x
+51075;Head of Government;Zhu Rongji;1998;2011;2011;LE;Ambitious Union Boss;Medium;CHC_ZhuRongji;x
+51076;Head of Government;Wen Jiabao;2003;2011;2011;LE;Happy Amateur;Medium;CHC_WenJiabao;x
+51077;Foreign Minister;Ji Pengfei;1971;2001;2011;LE;Great Compromiser;Medium;CHC_JiPengfei;x
+51078;Foreign Minister;Qiao Guanhua;1974;2001;2011;LE;Biased Intellectual;Medium;CHC_QiaoGuanhua;x
+51079;Foreign Minister;Huang Hua;1941;1964;1964;LE;Iron fisted Brute;Medium;CHC_HuangHua;x
+51080;Foreign Minister;Wu Xueqian;1982;2011;2011;LE;Iron fisted Brute;Medium;CHC_WuXueqian;x
+51081;Foreign Minister;Qian Qichen;1988;2011;2011;LE;Great Compromiser;Medium;CHC_QianQichen;x
+51082;Foreign Minister;Tang Jiaxuan;1998;2011;2011;LE;Biased Intellectual;Medium;CHC_TangJiaxuan;x
+51083;Foreign Minister;Li Zhaoxing;2003;2011;2011;LE;Great Compromiser;Medium;CHC_LiZhaoxing;x
+51084;Foreign Minister;Yang Jiechi;2007;2011;2011;LE;Iron fisted Brute;Medium;CHC_YangJiechi;x
+51085;Minister of Armament;Ye Jianying;1975;2001;2011;ST;Military Entrepreneur;Medium;CHC_YeJianying;x
+51086;Minister of Armament;Xu Xiangqian;1978;2001;2011;ST;Military Entrepreneur;Medium;M51044;x
+51087;Minister of Armament;Geng Biao;1981;2011;2011;ST;Air Superiority Proponent;Medium;CHC_GengBiao;x
+51088;Minister of Armament;Zhang Aiping;1982;2011;2011;LE;Battle Fleet Proponent;Medium;CHC_ZhangAiping;x
+51089;Minister of Armament;Qin Jiwei;1988;2011;2011;ST;Military Entrepreneur;Medium;CHC_QinJiwei;x
+51090;Minister of Armament;Chi Haotian;1993;2011;2011;ST;Infantry Proponent;Medium;CHC_ChiHaotian;x
+51091;Minister of Armament;Cao Gangchuan;2003;2011;2011;LE;Resource Industrialist;Medium;CHC_CaoGangchuan;x
+51092;Minister of Armament;Liang Guanglie;2008;2011;2011;LE;Military Entrepreneur;Medium;CHC_LiangGuanglie;x
+51093;Chief of Staff;Nie Rongzhen;1950;1981;1981;ST;School of Fire Support;Medium;CHC_NieRongzhen;x
+51094;Chief of Staff;Su Yu;1954;1981;1981;ST;School of Manoeuvre;Medium;CHC_SuYu;x
+51095;Chief of Staff;Huang Kecheng;1958;1981;1981;LE;School of Manoeuvre;Medium;CHC_HuangKecheng;x
+51096;Chief of Staff;Luo Ruiqing;1959;1981;1981;ST;School of Psychology;Medium;CHC_LuoRuiqing;x
+51097;Chief of Staff;Yang Chengwu;1965;1991;1991;ST;School of Defence;Medium;CHC_YangChengwu;x
+51098;Chief of Staff;Huang Yongsheng;1968;1991;1991;ST;School of Mass Combat;Medium;CHC_HuangYongsheng;x
+51099;Chief of Staff;Deng Xiaoping;1971;2001;2011;LE;School of Psychology;Medium;CHC_DengXiaoping;x
+51100;Chief of Staff;Yang Dezhi;1980;2011;2011;LE;School of Fire Support;Medium;CHC_YangDezhi;x
+51101;Chief of Staff;Chi Haotian;1987;2011;2011;ST;School of Mass Combat;Medium;CHC_ChiHaotian;x
+51102;Chief of Staff;Zhang Wannian;1992;2011;2011;LE;School of Fire Support;Medium;CHC_Zhan Wannian;x
+51103;Chief of Staff;Fu Quanyou;1995;2011;2011;LE;School of Defence;Medium;CHC_FuQuanyou;x
+51104;Chief of Staff;Liang Guanglie;2002;2011;2011;LE;School of Manoeuvre;Medium;CHC_LiangGuanglie;x
+51105;Chief of Staff;Chen Bingde;2007;2011;2011;LE;School of Manoeuvre;Medium;CHC_ChenBingde;x
+51106;Head of Military Intelligence;Kang Sheng;1936;1964;1964;ST;Political Specialist;Medium;CHC_KangSheng;x
+51107;Minister of Security;Kang Sheng;1936;1964;1964;ST;Prince of Terror;Medium;CHC_KangSheng;x
+51108;Head of Military Intelligence;Chen Yun;1936;1964;1964;ST;Industrial Specialist;Medium;CHC_ChenYun;x
+51109;Head of Military Intelligence;Pan Hannian;1936;1964;1964;ST;Dismal Enigma;Medium;CHC_PanHannian;x
+51110;Head of Military Intelligence;Guang Huian;1936;1964;1964;ST;Logistics Specialist;Medium;CHC_GuangHuian;x
+51111;Head of Military Intelligence;Ling Yun;1983;2011;2011;LE;Dismal Enigma;Medium;CHC_LingYun;x
+51112;Head of Military Intelligence;Jia Chunwang;1985;2011;2011;LE;Dismal Enigma;Medium;CHC_JiaChunwang;x
+51113;Head of Military Intelligence;Xu Yongyue;1998;2011;2011;LE;Dismal Enigma;Medium;CHC_XuYongyue;x
+51114;Head of Military Intelligence;Geng Huichang;2007;2011;2011;LE;Industrial Specialist;Medium;CHC_GengHuichang;x
+51115;Chief of Army;Nie Rongzhen;1950;1981;1981;ST;Decisive Battle Doctrine;Medium;CHC_NieRongzhen;x
+51116;Chief of Army;Su Yu;1954;1981;1981;ST;Decisive Battle Doctrine;Medium;CHC_SuYu;x
+51117;Chief of Army;Huang Kecheng;1958;1981;1981;LE;Guns and Butter Doctrine;Medium;CHC_HuangKecheng;x
+51118;Chief of Army;Luo Ruiqing;1959;1981;1981;ST;Guns and Butter Doctrine;Medium;CHC_LuoRuiqing;x
+51119;Chief of Army;Yang Chengwu;1965;1991;1991;ST;Elastic Defence Doctrine;Medium;CHC_YangChengwu;x
+51120;Chief of Army;Huang Yongsheng;1968;1991;1991;ST;Elastic Defence Doctrine;Medium;CHC_HuangYongsheng;x
+51121;Chief of Army;Deng Xiaoping;1971;2001;2001;LE;Elastic Defence Doctrine;Medium;CHC_DengXiaoping;x
+51122;Chief of Army;Yang Dezhi;1980;2011;2011;LE;Elastic Defence Doctrine;Medium;CHC_YangDezhi;x
+51123;Chief of Army;Chi Haotian;1987;2011;2011;ST;Armoured Spearhead Doctrine;Medium;CHC_ChiHaotian;x
+51124;Chief of Army;Zhang Wannian;1992;2011;2011;LE;Armoured Spearhead Doctrine;Medium;CHC_Zhan Wannian;x
+51125;Chief of Army;Fu Quanyou;1995;2011;2011;LE;Guns and Butter Doctrine;Medium;CHC_FuQuanyou;x
+51126;Chief of Army;Liang Guanglie;2002;2011;2011;LE;Elastic Defence Doctrine;Medium;CHC_LiangGuanglie;x
+51127;Chief of Army;Chen Bingde;2007;2011;2011;LE;Armoured Spearhead Doctrine;Medium;CHC_ChenBingde;x
+51128;Minister of Security;Luo Ruiqing;1949;1964;1964;ST;Prince of Terror;Medium;CHC_LuoRuiqing;x
+51129;Minister of Security;Xie Fuzhi;1959;1981;1981;ST;Prince of Terror;Medium;CHC_XieFuzhi;x
+51130;Minister of Security;Li Zhen;1972;2001;2011;LE;Prince of Terror;Medium;CHC_LiZhen;x
+51131;Minister of Security;Hua Guofeng;1973;2001;2011;ST;Back Stabber;Medium;CHC_HuaGuofeng;x
+51132;Minister of Security;Zhao Cangbi;1977;2001;2011;LE;Silent Lawyer;Medium;CHC_ZhaoCangbi;x
+51133;Minister of Security;Liu Fuzhi;1983;2011;2011;LE;Efficient Sociopath;Medium;CHC_LiuFuzhi;x
+51134;Minister of Security;Ruan Chongwu;1985;2011;2011;LE;Efficient Sociopath;Medium;CHC_RuanChongwu;x
+51135;Minister of Security;Wang Fang;1987;2011;2011;LE;Crime Fighter;Medium;CHC_WangFang;x
+51136;Minister of Security;Tao Siju;1990;2011;2011;LE;Crooked Kleptocrat;Medium;CHC_TaoSiju;x
+51137;Minister of Security;Jia Chunwang;1998;2011;2011;LE;Compassionate Gentleman;Medium;CHC_JiaChunwang;x
+51138;Minister of Security;Zhou Yongkang;2002;2011;2011;LE;Efficient Sociopath;Medium;CHC_ZhouYongkang;x
+51139;Minister of Security;Meng Jianzhu;2007;2011;2011;LE;Man of the People;Medium;CHC_MengJianzhu;x
+51140;Minister of Security;Qian Ying;1954;1981;1981;LE;Man of the People;Medium;CHC_QianYing;x
+51141;Minister of Security;Cheng Zihua;1978;2001;2011;LE;Man of the People;Medium;CHC_ChengZihua;x
+51142;Minister of Security;Cui Naifu;1982;2011;2011;LE;Efficient Sociopath;Medium;CHC_CuiNaifu;x
+51143;Minister of Security;Doje Cering;1993;2011;2011;LE;Man of the People;Medium;CHC_DojeCering;x
+51144;Minister of Security;Li Xueju;2003;2011;2011;LE;Compassionate Gentleman;Medium;CHC_LiXueju;x
+51145;Minister of Security;Wei Jianxing;1987;2011;2011;LE;Man of the People;Medium;CHC_WeiJianxing;x
+51146;Minister of Security;Cao Qingze;1993;2011;2011;LE;Efficient Sociopath;Medium;CHC_CaoQingze;x
+51147;Minister of Security;He Yong;1998;2011;2011;LE;Efficient Sociopath;Medium;CHC_HeYong;x
+51148;Minister of Security;Li Zhilun;2003;2011;2011;LE;Back Stabber;Medium;CHC_LiZhilun;x
+51149;Minister of Security;Ma Wen;2007;2011;2011;LE;Compassionate Gentleman;Medium;CHC_MaWen;x
+51150;Chief of Air Force;Liu Yalou;1949;1964;1964;ST;Air Superiority Doctrine;Medium;CHC_LiuYalou;x
+51151;Chief of Air Force;Wu Faxian;1965;1991;1991;ST;Army Aviation Doctrine;Medium;CHC_WuFaxian;x
+51152;Chief of Air Force;Ma Ning;1973;2001;2011;ST;Naval Aviation Doctrine;Medium;CHC_MaNing;x
+51153;Chief of Air Force;Zhang Tingfa;1975;2001;2011;LE;Air Superiority Doctrine;Medium;CHC_ZhangTingfa;x
+51154;Chief of Air Force;Wang Hai;1985;2011;2011;LE;Air Superiority Doctrine;Medium;CHC_WangHai;x
+51155;Chief of Air Force;Cao Shuangming;1992;2011;2011;LE;Air Superiority Doctrine;Medium;CHC_CaoShuangming;x
+51156;Chief of Air Force;Yu Zhenwu;1994;2011;2011;LE;Air Superiority Doctrine;Medium;CHC_YuZhenwu;x
+51157;Chief of Air Force;Liu Shunyao;1996;2011;2011;LE;Army Aviation Doctrine;Medium;CHC_LiuShunyao;x
+51158;Chief of Air Force;Qiao Qingchen;2002;2011;2011;LE;Army Aviation Doctrine;Medium;CHC_QiaoQingchen;x
+51159;Chief of Air Force;Xu Qiliang;2007;2011;2011;LE;Army Aviation Doctrine;Medium;CHC_XuQiliang;x
+51160;Chief of Navy;Zhang Aiping;1949;1964;1964;LE;Open Seas Doctrine;Medium;CHC_ZhangAiping;x
+51161;Chief of Navy;Ye Fei;1980;2011;2011;LE;Indirect Approach Doctrine;Medium;CHC_YeFei;x
+51162;Chief of Navy;Liu Huaqing;1982;2011;2011;LE;Indirect Approach Doctrine;Medium;CHC_LiuHuaqing;x
+51163;Chief of Navy;Zhang Lianzhong;1988;2011;2011;LE;Open Seas Doctrine;Medium;CHC_ZhangLianzhong;x
+51164;Chief of Navy;Shi Yunsheng;1996;2011;2011;LE;Indirect Approach Doctrine;Medium;CHC_ShiYunsheng;x
+51165;Chief of Navy;Zhang Dingfa;2003;2011;2011;LE;Open Seas Doctrine;Medium;CHC_ZhangDingfa;x
+51166;Chief of Navy;Wu Shengli;2006;2011;2011;LE;Open Seas Doctrine;Medium;CHC_WuShengli;x
+51167;Chief of Staff;Liu Bocheng;1932;1964;1964;LE;School of Manoeuvre;Medium;CHC_Liu_Bocheng;x
+51168;Minister of Security;Luo Ronghuan;1934;1964;1964;LE;Man of the People;Medium;CHC_Luo_Ronghuan;x
+51169;Chief of Staff;Luo Ronghuan;1949;1964;1964;LE;School of Psychology;Medium;CHC_Luo_Ronghuan;x
+51170;Chief of Staff;Otto Braun;1932;1939;1939;LWR;School of Defence;Medium;L76300;x
+51171;Chief of Staff;Lin Biao;1932;1964;1964;ST;School of Mass Combat;Medium;CHC_LinBiao;x
+51172;Chief of Army;Lin Biao;1932;1964;1964;ST;Decisive Battle Doctrine;Medium;CHC_LinBiao;x
+51173;Minister of Security;Nie Rongzhen;1927;1964;1964;ST;Man of the People;Medium;CHC_NieRongzhen;x
+51174;Chief of Army;Otto Braun;1936;1939;1939;LWR;Decisive Battle Doctrine;Medium;L76300;x
+51175;Chief of Staff;Ye Jianying;1931;1964;1964;ST;School of Defence;Medium;CHC_YeJianying;x
+51176;Chief of Army;Ye Jianying;1931;1964;1964;ST;Decisive Battle Doctrine;Medium;CHC_YeJianying;x
+51177;Chief of Army;Mao Zedong;1936;1977;1977;ST;Guns and Butter Doctrine;Very high;M51001;x
+51178;Minister of Armament;Mao Zemin;1922;1940;1940;ST;Administrative Genius;Medium;CHC_MaoZemin;x
+51179;Chief of Staff;Peng Dehuai;1945;1964;1964;LE;School of Manoeuvre;Medium;CHC_PengDehuai;x
+51180;Chief of Army;Peng Dehuai;1937;1964;1964;LE;Decisive Battle Doctrine;Medium;CHC_PengDehuai;x
+51181;Chief of Army;Zhou Enlai;1936;1964;1964;ST;Guns and Butter Doctrine;Medium;M51051;x
+51182;Chief of Staff;Mao Zedong;1936;1977;1977;ST;School of Mass Combat;Very high;M51001;x
+51183;Chief of Army;Xiang Ying;1934;1940;1940;ST;Guns and Butter Doctrine;Medium;CHC_XIangYing;x
+51184;Minister of Security;Xiang Ying;1934;1940;1940;ST;Efficient Sociopath;Medium;CHC_XIangYing;x
+51185;Minister of Security;Jiang Qing;1950;1991;1991;ST;Prince of Terror;Medium;CHC_JiangQing;x
+51186;Head of Government;Zhang Wentian;1935;1964;1964;LWR;Political Protege;Medium;CHC_ZhangWentian;x
+51187;Foreign Minister;Zhang Wentian;1935;1964;1964;LWR;Biased Intellectual;Medium;CHC_ZhangWentian;x
+51188;Head of State;Zhang Wentian;1936;1964;1964;LWR;Insignificant Layman;Medium;CHC_ZhangWentian;x
+51189;Head of State;Li Jishen;1933;1964;1964;SD;Resigned Generalissimo;Medium;CHC_LiJishen;x
+51190;Head of State;He Xiangning;1960;1981;1981;SD;Insignificant Layman;Medium;CHC_HeXiangning;x
+51191;Minister of Security;He Xiangning;1937;1964;1964;SD;Man of the People;Medium;CHC_HeXiangning;x
+51192;Head of Military Intelligence;He Xiangning;1938;1964;1964;SD;Political Specialist;Medium;CHC_HeXiangning;x
+51193;Foreign Minister;He Xiangning;1949;1964;1964;SD;Biased Intellectual;Medium;CHC_HeXiangning;x
+51194;Head of Military Intelligence;Liao Chengzhi;1936;1964;1964;SD;Political Specialist;Medium;CHC_LiaoChengzhi;x
+51195;Minister of Armament;Liao Chengzhi;1937;1964;1964;SD;Military Entrepreneur;Medium;CHC_LiaoChengzhi;x
+51196;Foreign Minister;Liao Chengzhi;1978;2001;2001;SD;Great Compromiser;Medium;CHC_LiaoChengzhi;x
+51197;Minister of Security;Shao Lizi;1949;1964;1964;SD;Back Stabber;Medium;CHC_ShaoLizi;x
+51198;Minister of Armament;Shao Lizi;1949;1964;1964;SD;Resource Industrialist;Medium;CHC_ShaoLizi;x
+51199;Head of State;Zhu Yunshan;1979;2001;2001;SD;Insignificant Layman;Medium;CHC_ZhuYunshan;x
+51200;Minister of Security;Zhu Yunshan;1949;1964;1964;SD;Silent Lawyer;Medium;CHC_ZhuYunshan;x
+51201;Head of State;Wang Kunlun;1981;2011;2011;SD;Insignificant Layman;Medium;CHC_WangKunlun;x
+51202;Minister of Security;Wang Kunlun;1927;1964;1964;SD;Compassionate Gentleman;Medium;CHC_WangKunlun;x
+51203;Minister of Security;Tan Pingshan;1923;1964;1964;SD;Man of the People;Medium;CHC_TanPingshan;x
+51204;Head of State;Qu Wu;1985;2011;2011;SD;Die-hard Reformer;Medium;CHC_QuWu;x
+51205;Minister of Armament;Zhu Xuefan;1939;1964;1964;SD;Resource Industrialist;Medium;CHC_ZhuXuefan;x
+51206;Head of State;Zhu Xuefan;1988;2011;2011;SD;Insignificant Layman;Medium;CHC_ZhuXuefan;x
+51207;Head of State;Li Peiyao;1992;2011;2011;SD;Weary Stiffneck;Medium;CHC_LiPeiyao;x
+51208;Minister of Armament;Li Peiyao;1989;2011;2011;SD;Air Superiority Proponent;Medium;CHC_LiPeiyao;x
+51209;Head of State;He Luli;1996;2011;2011;SD;Insignificant Layman;Medium;CHC_HeLuli;x
+51210;Head of State;Zhou Tienong;2007;2011;2011;SD;Insignificant Layman;Medium;CHC_ZhouTienong;x
+51211;Chief of Staff;Chen Qihan;1932;1964;1964;ST;School of Defence;Medium;CHC_ChenQihan;x
+51212;Minister of Security;Dong Biwu;1935;1964;1964;ST;Crime Fighter;Medium;CHC_DongBiwu;x
+51213;Minister of Security;Li Weihan;1933;1964;1964;ST;Efficient Sociopath;Medium;CHC_LiWeihan;x
+51214;Minister of Security;Deng Fa;1931;1964;1964;ST;Prince of Terror;Medium;CHC_DengFa;x
+51215;Foreign Minister;Chen Jiakang;1935;1964;1964;ST;Biased Intellectual;Medium;CHC_ChenJiakang;x
+51216;Minister of Armament;Liu Ying;1930;1964;1964;ST;Military Entrepreneur;Medium;CHC_LiuYing;x
+51217;Foreign Minister;Gong Peng;1940;1964;1964;ST;Great Compromiser;Medium;CHC_GongPeng;x
+51218;Foreign Minister;Wang Bingnan;1936;1964;1964;ST;The Cloak n Dagger Schemer;Medium;CHC_WangBingnan;x
+51219;Foreign Minister;Xu Yixin;1931;1964;1964;ST;General Staffer;Medium;CHC_XuYixin;x
+51220;Chief of Army;Hua Guofeng;1976;2001;2001;ST;Guns and Butter Doctrine;Medium;CHC_HuaGuofeng;x
+51221;Chief of Army;Jiang Zemin;1990;2011;2011;LE;Guns and Butter Doctrine;Medium;CHC_JiangZemin;x
+51222;Chief of Army;Hu Jintao;2003;2011;2011;LE;Guns and Butter Doctrine;Medium;CHC_HuJintao;x
+51223;Head of Government;Meigong Bin;1947;1964;1964;SD;Political Protege;Medium;CHC_MeigongBin;x
+51224;Chief of Staff;Li Jishen;1933;1964;1964;SD;School of Defence;Medium;CHC_LiJishen;x
+51225;Chief of Army;Li Jishen;1933;1964;1964;SD;Guns and Butter Doctrine;Medium;CHC_LiJishen;x
+51226;Minister of Armament;Li Jishen;1937;1964;1964;SD;Military Entrepreneur;Medium;CHC_LiJishen;x
+51227;Head of Government;Li Jishen;1933;1964;1964;SD;Old General;Medium;CHC_LiJishen;x
+51228;Minister of Armament;Sun Yueqi;1949;1964;1964;SD;Resource Industrialist;Medium;CHC_SunYueqi;x
+51229;Head of Military Intelligence;Meigong Bin;1935;1964;1964;SD;Political Specialist;Medium;CHC_MeigongBin;x
+51230;Head of State;Hou Jingru;1992;2011;2011;SD;Resigned Generalissimo;Medium;CHC_HouJingru;x
+51231;Chief of Army;Liu Shaoqi;1959;1981;1981;LE;Guns and Butter Doctrine;Medium;CHC_LiuShaoqi;x
+51232;Chief of Army;Teng Yun;1949;1964;1964;SD;Decisive Battle Doctrine;Medium;CHC_TengYun;x
+51233;Chief of Staff;Teng Yun;1945;1964;1964;SD;School of Fire Support;Medium;CHC_TengYun;x
+51234;Chief of Army;Wei Lihuang;1939;1964;1964;SD;Guns and Butter Doctrine;Medium;CHC_WeiLihuang;x
+51235;Foreign Minister;Siyuan;1949;1964;1964;SD;Apologetic Clerk;Medium;CHC_Siyuan;x
+51236;Minister of Armament;Siyuan;1928;1964;1964;SD;Theoretical Scientist;Medium;CHC_Siyuan;x
+51237;Minister of Security;Siyuan;1928;1964;1964;SD;Silent Lawyer;Medium;CHC_Siyuan;x
+51238;Chief of Army;Fu Zuoyi;1946;1964;1964;SD;Guns and Butter Doctrine;Medium;CHC_FuZuoyi;x
+51239;Chief of Staff;Cheng Qian;1949;1964;1964;SD;School of Defence;Medium;CHC_ChengQian;x
+51240;Chief of Army;Cheng Qian;1949;1964;1964;SD;Guns and Butter Doctrine;Medium;CHC_ChengQian;x
+51241;Head of Government;Li Zhang Da;1948;1964;1964;SD;Old General;Medium;CHC_LiZhang Da;x
+51242;Head of Government;Gan Yongbo;1979;2001;2001;SD;Old General;Medium;CHC_GanYongbo;x
+51243;Minister of Armament;Gan Yongbo;1949;1964;1964;SD;Laissez-faire Capitalist;Medium;CHC_GanYongbo;x
+51244;Minister of Security;Gan Yongbo;1949;1964;1964;SD;Compassionate Gentleman;Medium;CHC_GanYongbo;x
+51245;Head of Government;Li Ganliu;1983;2011;2011;SD;Happy Amateur;Medium;CHC_LiGanliu;x
+51246;Foreign Minister;Li Ganliu;1983;2011;2011;SD;Biased Intellectual;Medium;CHC_LiGanliu;x
+51247;Head of Government;Peng Qingyuan;1988;2011;2011;SD;Corporate Suit;Medium;CHC_PengQingyuan;x
+51248;Head of Military Intelligence;Peng Qingyuan;1980;2011;2011;SD;Industrial Specialist;Medium;CHC_PengQingyuan;x
+51249;Foreign Minister;Peng Qingyuan;1980;2011;2011;SD;Biased Intellectual;Medium;CHC_PengQingyuan;x
+51250;Head of Government;Zhu Peikang;1992;2011;2011;SD;Silent Workhorse;Medium;CHC_ZhuPeikang;x
+51251;Head of Government;Liu Minfu;1997;2011;2011;SD;Silent Workhorse;Medium;CHC_LiuMinfu;x
+51300;Head of State;Mao Zedong;1943;1977;1977;ST;Powerhungry Demagogue;High;M51300;x
+51301;Head of Government;Mao Zedong;1943;1977;1977;ST;Backroom Backstabber;High;M51300;x
+51302;Head of State;Mao Zedong;1953;1977;1977;ST;Powerhungry Demagogue;High;M51302;x
+51303;Head of Government;Mao Zedong;1953;1977;1977;ST;Backroom Backstabber;High;M51302;x
+51304;Head of State;Mao Zedong;1963;1977;1977;ST;Powerhungry Demagogue;High;M51304;x
+51305;Head of Government;Mao Zedong;1963;1977;1977;ST;Backroom Backstabber;High;M51304;x
+51306;Head of State;Lin Biao;1955;1964;1964;ST;Resigned Generalissimo;Medium;CHC_LinBiao;x
+51307;Head of Government;Lin Biao;1955;1964;1964;ST;Old General;Medium;CHC_LinBiao;x
+51308;Foreign Minister;Chen Boda;1955;1964;1964;ST;Ideological Crusader;Medium;M51308;x
+51309;Minister of Armament;Qian Xuesen;1955;1964;1964;ST;Theoretical Scientist;Medium;M51309;x
+51310;Head of Military Intelligence;Qian Xuesen;1955;1964;1964;ST;Technical Specialist;Medium;M51309;x
+51311;Head of State;Hua Guofeng;1976;2009;2009;ST;Insignificant Layman;Medium;M51311;x
+51312;Head of Government;Hua Guofeng;1976;2009;2009;ST;Corporate Suit;Medium;M51311;x
+51313;Head of State;Deng Xiaoping;1978;1998;1998;LE;Die-Hard Reformer;Medium;PRC2;x
+51314;Head of Government;Zhao Ziyang;1980;2006;2006;LE;Happy Amateur;Medium;M51314;x
+51315;Head of Government;Li Peng;1987;2020;2020;LE;Naive Optimist;Medium;M51315;x
+51316;Head of State;Hu Yaobang;1985;2000;2013;LE;Powerhungry Demagogue;High;PRC1;x
+51317;Head of Government;Deng Xiaoping;1985;1998;1998;LE;Backroom Backstabber;High;PRC2;X
+51318;Foreign Minister;Wu Xueqian;1985;2000;2013;ST;General Staffer;High;PRC3;X
+51319;Minister of Armament;Wang Bingqian;1985;2000;2013;ST;Military Entrepreneur;High;PRC4;X
+51320;Minister of Security;Zhang Aiping;1985;2000;2013;ST;Man of the People;Medium;PRC5;X
+51321;Head of Military Intelligence;Jia Chunwang;1985;2000;2013;ST;Logistics Specialist;Medium;PRC6;X
+51322;Chief of Staff;Yang Dezhi;1985;2000;2013;ST;School of Mass Combat;Medium;PRC7;X
+51323;Chief of Army;Chi Haotian;1985;2000;2013;ST;Guns and Butter Doctrine;High;PRC8;X
+51324;Chief of Navy;Liu Huaqing;1985;2000;2013;ST;Open Seas Doctrine;Medium;PRC9;X
+51325;Chief of Air Force;Wang Hai;1985;2000;2013;ST;Army Aviation Doctrine;Medium;PRC10;X
+51326;Head of State;Zhang Chunqiao;1950;1982;2006;ST;Powerhungry Demagogue;Medium;M51326;x
+51327;Head of Government;Jiang Qing;1950;1982;1991;ST;Backroom Backstabber;Medium;CHC_JiangQing;x

@@ -1,0 +1,334 @@
+switch = no
+max_front_ratio = 1.2
+max_garrison_prop = 0.3
+min_garrison_prop = 0.2
+neutrality = 50 
+war = 15
+reinforcement = 0.3
+upgrading = 0.3
+exp_force_ratio = 0.8
+exp_force_ratios = { } 
+no_exp_forces_to = { }
+
+###################################
+# Diplomacy
+###################################
+combat = { 
+	DFR = 100
+	U24 = 100
+	}
+
+liberate = { U10 U11 U12 U13 U14 U15 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 MON CHC PRK }
+
+liberate_nation = { U10 U11 U12 U13 U14 U15 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 MON CHC PRK }
+
+claim_acceptance = -59
+
+demand_claims = { DFR U24 }
+
+resistance = {
+	USA = 8
+	ENG = 5
+	FRA = 5
+}
+
+befriend = { 
+	PRK = 50
+	CHC = 50
+	U72 = 50
+	U10 = 25
+	U11 = 25
+	U12 = 25
+	U13 = 25
+	U14 = 25
+	U15 = 25
+	U17 = 25
+	U18 = 25
+	U19 = 25
+	U20 = 25
+	U21 = 25
+	U22 = 25
+	U26 = 25
+	U27 = 25
+	U28 = 25
+	U29 = 25
+	U30 = 25
+	U31 = 25
+	U32 = 25
+	U33 = 25
+	U34 = 25	
+	U35 = 25
+	SOV = 200
+}
+protect = { }
+target = { }
+
+###################################
+# Construction and Tech Research
+###################################
+#Default values
+construction = { 
+	max_factor = 0.200 
+
+	AA_batteries = yes
+	max_AA_level = 9
+	AA_provs = {
+		142 # Dortmund
+		145 # Essen
+		131 # Cologne
+		127 # Saarbrucken
+		137 # Kassel
+		138 # Frankfurt
+		134 # Suttgart
+		179 # Munich
+		173 # Dresden
+		170 # Leipzig
+		163 # Berlin
+		152 # Kiel
+		153 # Rostock
+		146 # Hannover
+		147 # Wilhelmshafen
+		141 # Munster
+		126 # Aachen
+	} 
+
+	coastal_fort = atwar
+	max_coastal_level = 8
+	coastal_fort_provs = { 
+		152 # Kiel
+	} 
+
+	radar_station = not_atwar
+	max_radar = 9
+	radar_provs = { 
+		145 # Essen
+		137 # Kassel
+		147 # Wilhemshafen
+		163 # Berlin
+		134 # Stutgart
+	} 
+
+	air_base = yes
+	max_air_base = 9
+	air_base_provs = {
+		145 # Essen
+		146
+		170
+		153
+		134
+		131
+	} 
+
+	naval_base = yes 
+	max_naval_base = 7
+	naval_base_provs = { 152 148 } 
+
+	land_fort = yes
+	max_land_level = 7
+	fort_borders = { U24 DFR AUS HOL BEL LUX FRA } 
+
+	ic_at_war = yes 
+	force_ic_until = 1937
+	ic_end_year = 1970
+	IC_provs = {
+		127  # Saarburken
+		179 # Munchen
+		163 # Berlin
+		131  # Cologne
+		134 # Stuttgart
+		146  # Hannover
+		173 # Dresden
+		172
+		138
+		139
+		136
+		151
+		154
+		171
+	} 
+	
+	nuclear_reactor = yes
+	nuclear_reactor_prov = 156
+	max_nuclear = 4
+	
+	rocket_test = yes	
+	rocket_test_prov = 162
+	max_rocket = 3
+}
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 		= 720 
+	max_batch_war 			= 360 
+	max_batch_home_front = 270
+	extra_convoys_war = 0.0500 
+	extra_convoys_peace = 0.0500
+
+
+	#### Divisions etc...
+	infantry 		= 0
+	cavalry 		= 0
+	motorized 		= 27
+	mechanized 		= 9
+	light_armor 	= 0
+	armor 			= 10
+	paratrooper 	= 0
+	marine 			= 0
+	bergsjaeger 	= 3
+	garrison		= 0
+    hq 				= 1
+	militia 		= 0
+#				50 %
+	interceptor 	= 7
+	multi_role 		= 4
+	cas 			= 5
+	strategic_bomber = 6
+	tactical_bomber = 7
+	naval_bomber 	= 0
+	transport_plane = 1
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				30 %
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier	= 0
+	destroyer 		= 5
+	light_cruiser 	= 3
+	heavy_cruiser 	= 2
+	battlecruiser 	= 1
+	submarine 		= 3
+	nuclear_submarine = 0
+	transports 		= 6
+#				20 %
+
+	#### Brigades
+	artillery 			= 0
+	sp_artillery 		= 25
+	cavalry_brigade	= 0
+	sp_anti_air 	= 8
+	medium_armor 			= 20
+	tank_destroyer 		= 15
+	light_armor_brigade 	= 0
+	heavy_armor 		= 0
+	super_heavy_armor 	= 0
+	armored_car 		= 2
+	anti_air 		= 0
+	police 			= 0
+	engineer 		= 2
+	
+}
+
+technology = {  
+	armor 		= 3
+	infantry 	= 5
+	industry 	= 4
+	aircraft 	= 3
+	naval 		= 2
+	land_doctrines 	= 2
+	secret_weapons 	= 1
+	air_doctrines 	= 2
+	naval_doctrines = 1
+}  
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier = 0.5
+	home_peace_cap 		= 50
+	war_zone_odds 		= 2.5
+	key_point_prio_mult	= 1
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 10	# Beach level 2
+	capital			= 20	# Our capital
+	human_border	= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	reserves = 30
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = { 
+		U24 = 150
+		DFR = 150 
+		USA = 150 
+		ENG = 150 
+		FRA = 150 
+		U31 = 25 
+		SOV = -1
+		}
+	ignore = { }
+	province_priorities = { }
+	area_multiplier = { }
+}
+front = { 
+	recklessness 		= 1 # 0-3
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= even
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.3
+	withdraw_odds		= 0.6
+	
+} 
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 1.0	#higher = avoid long distance.
+	pocket		= 5.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+	naval_base 	= 0.1 
+	air_support 	= 3.0 
+	redirect 	= priority
+	ignore		= yes
+      
+	target = { 
+		# Targets for east-aligned countries
+		53 = 100 49 = 100 114 = 100 68 = 100 82 = 100 # France
+		422 = 100 # Italy
+		377 = 100 # Greece
+		789 = 100 # Egypt
+		12 = 100 26 = 100 36 = 100 # United Kingdom
+		1090 = 100 # Iran
+		1886 = 250 1889 = 250 1878 = 250 2089 = 250 2142 = 250 1812 = 250 # USA
+		1228 = 100 1221 = 100 # Korea
+		1338 = 100 1334 = 100 1241 = 100 1371 = 100 1362 = 100 # China
+		1552 = 200 1554 = 200 # Japan
+		1447 = 100 1518 = 100 1494 = 100 1532 = 100 # India
+		1697 = 100 1694 = 100 # Australia
+		1647 = 100 # Indonesia
+		1399 = 150 # Vietnam
+		2022 = 100 2040 = 100 1980 = 100 # South America
+		
+		# Specific targets
+		219 = 300
+		294 = 300
+		25 = 300
+	} 
+	
+	staging_province = {
+		# Staging provinces for east-aligned countries
+		270 264 1191 # USSR
+		49 # France
+	}
+} 

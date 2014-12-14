@@ -1,0 +1,225 @@
+event = {
+	id = 8014501
+	country = SUD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 775001 } # Sir George Stewart Symes
+		command = { type = headofgovernment which = 775100 } # Sir George Stewart Symes
+	}
+}
+
+event = {
+	id = 8014502
+	country = SUD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 775101 } # Sir Herbert J. Huddleston
+		command = { type = headofgovernment which = 775002 } # Sir Herbert J. Huddleston
+	}
+}
+
+event = {
+	id = 8014503
+	country = SUD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 775102 } # Sir Robert George Howe
+		command = { type = headofgovernment which = 775103 } # Sir Robert George Howe
+	}
+}
+
+event = {
+	id = 8014504
+	country = SUD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 775102 } # Sir Robert George Howe
+		command = { type = headofgovernment which = 775104 } # Abd-el-Rahman el-Mahdi
+	}
+}
+
+event = {
+	id = 8014505
+	country = SUD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 775105 } # Sir Alexander Knox Helm
+		command = { type = headofgovernment which = 775106 } # Ismail al-Azhari
+	}
+}
+
+event = {
+	id = 8014506
+	country = SUD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 775105 } # Sir Alexander Knox Helm
+		command = { type = headofgovernment which = 775107 } # Abdallah Khalil
+	}
+}
+
+event = {
+	id = 8014507
+	country = SUD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 775108 } # Ibrahim Abboud
+		command = { type = headofgovernment which = 775109 } # Ibrahim Abboud
+	}
+}
+
+# Unrest in South Sudan
+event = {
+	id = 8014508
+	country = SUD
+	persistent = yes
+
+	name = EVT_8014508_NAME
+	desc = EVT_8014508_DESC
+	picture = "nwo\unrest_in_sudan"
+	style = 1
+	
+	trigger = {
+		control = { province = 807 data = -1 } # Juba
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8014508_A
+		command = { type = dissent value = 4 }
+	}
+
+}

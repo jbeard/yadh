@@ -1,0 +1,267 @@
+### Warsaw rises!
+
+event = {
+	id = 8222000
+	country = GER
+
+	name = EVT_8222000_NAME #"The Warsaw Uprising"
+	desc = EVT_8222000_DESC #"The Warsaw Uprising was a struggle by the Polish resistance movement organization Home Army to liberate Warsaw from Nazi German occupation. The Uprising began as the Soviet Army approached Warsaw. The military objective was to drive the German occupiers from the city while political objectives were to liberate Warsaw before the arrival of the Soviet Army, to underscore Polish sovereignty and to undo the division of Central Europe into spheres of influence by the Allied powers."
+	picture = nwo\warsaw_uprising
+	style = 1
+
+	trigger = {
+		war = { country = SOV country = GER }
+		# We've lost the eastern bank of Vistula
+		NOT = {
+			control = { province = 228 data = -1 } # Siedlce
+			exists = POL
+		}
+		control = { province = 232 data = -1  } # Warsaw
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8222000_A #"Warsaw rises"
+		command = { type = independence which = POL value = 1 when = 1 }
+		command = { type = secedeprovince which = POL when = 232 } # Warsaw
+		command = { type = trigger which = 8222001 }
+	}
+}
+
+event = {
+	id = 8222001
+	country = POL
+
+	name = EVT_8222001_NAME #"The Warsaw Uprising"
+	desc = EVT_8222001_DESC #"The cause is almost hopeless but this uprising has been prepared and awaited for many months by Polish freedom fighters. There are over a million people still living in the city during the siege. They will try to create normay day-to-day life and hope for eventual victory."
+	picture = nwo\warsaw_uprising
+	style = 1
+
+	action = {
+		name = EVT_8222001_A #"The W-hour has come"
+		# Polish Home Army
+		command = { type = add_corps which = "Okreg Warszawski AK" value = land when = 60086 where = 232 }
+		command = { type = add_division which = "Kedyw AK" value = infantry when = 10 }
+		command = { type = add_division which = "1. Oddzial mieszany AK" value = militia when = 5 }
+		command = { type = add_division which = "2. Oddzial mieszany AK" value = militia when = 5 }
+		command = { type = supplies value = 200 where = 232 }
+		command = { type = oilpool value = 50 where = 232 }
+		# Government is set up here
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = freedom value = 7 }
+		command = { type = set_domestic which = free_market value = 6 }
+		command = { type = set_domestic which = professional_army value = 0 }
+		command = { type = set_domestic which = defense_lobby value = 8 }
+		command = { type = set_domestic which = interventionism value = 8 }
+		# Our government
+		command = { type = headofstate which = 60016 } #Wladyslaw Raczkiewicz
+		command = { type = headofgovernment which = 60025 } #Stanislaw Mikolajczyk
+		command = { type = foreignminister which = 60038 } # Tadeusz Romer
+		command = { type = armamentminister which = 60065 } # Józef Haller
+		command = { type = ministerofsecurity which = 60069 } # Eugeniusz Kwiatkowski
+		command = { type = ministerofintelligence which = 60084 } # Adam Tarnowski
+		command = { type = chiefofstaff which = 60098 } # Leopold Okulicki
+		command = { type = chiefofarmy which = 60102 } # Tadeusz Bór-Komorowski
+		command = { type = chiefofnavy which = 60106 } # Józef Unrug
+		command = { type = chiefofair which = 60110 } # Ludomi³ Rayski
+		# We are at war with Germany
+		command = { type = alliance which = ENG }
+		# We give military access for SU, in case they want to help us
+		command = { type = access which = SOV } 
+	}
+}
+
+event = { # Allied help for the Warsaw Uprising
+	id = 8222002
+	country = ENG
+
+	name = EVT_8222002_NAME #"Allied help for the Warsaw Uprising"
+	desc = EVT_8222002_DESC #"In spite of our discouragement the Polish allies decided to rise up in Warsaw. Our means of help are of little value if Soviets do not agree to cooperate but our devotion to liberation of European nations means that we should at least try. How hard?"
+	picture = nwo\warsaw_uprising
+	style = 1
+
+	trigger = {
+		war = { country = GER }
+		exists = POL
+		event = 8222000
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8222002_A #"We cannot help much"
+		ai_chance = 80
+		command = { type = supplies value = 200 where = 232 }
+		command = { type = oilpool value = 75 where = 232 }
+		command = { type = sleepevent which = 8222003 }
+	}
+	
+	action = {
+		name = EVT_8222002_B #"We will do everything we can"
+		ai_chance = 20
+		command = { type = money value = -200 } # A costly enterprise
+		command = { type = supplies value = -1500 } # High risk of transports being lost
+		command = { type = oilpool value = -500 } # High risk of transports being lost
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = { # Warsaw receives Allied help
+	id = 8222003
+	country = POL
+
+	name = EVT_8222003_NAME #"Warsaw receives Allied help"
+	desc = EVT_8222003_DESC #"Determination of the British government showed us that we are not alone even though it may still be not enough to oppose German forces. Today we receive paradrops from our Western allies to help in our cause."
+	picture = nwo\warsaw_uprising
+	style = 1
+
+	trigger = {
+		event = 8222002
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "Brygada spadachroniarska" value = land when = 60132 where = 232 }
+		command = { type = add_division which = "1. Brygada spadochroniarzy" value = paratrooper when = 2 }
+		command = { type = add_division which = "3. Oddzial mieszany AK" value = infantry when = 10 }
+		command = { type = relation which = ENG value = 150 }
+		command = { type = supplies value = 500 }
+		command = { type = oilpool value = 200 }
+	}
+}
+
+event = { # Soviets consider supporting Warsaw Uprising
+	id = 8222004
+	country = SOV
+
+	name = EVT_8222004_NAME #"Support for the Warsaw Uprising"
+	desc = EVT_8222004_DESC #"Polish Home Army revolted in Warsaw, just before our anticipated entry. It is something that doesn't fit in our post-war considerations. The Polish government-in-exile can easily increase their dubious legitimacy to reinstate a cabinet on its own, rather than accept our regime which we already created for these lands."
+	picture = nwo\warsaw_uprising
+	style = 1
+
+	trigger = {
+		exists = POL
+		event = 8222000
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8222004_A #"Let us regroup and wait"
+		ai_chance = 98
+		command = { type = sleepevent which = 8222005 }
+	}
+	
+	action = {
+		name = EVT_8222004_B #"Offer our full support"
+		ai_chance = 2
+		command = { type = secedeprovince which = POL value = 228 }
+		command = { type = secedeprovince which = POL value = 229 }
+		command = { type = money value = -400 } # A costly enterprise
+		command = { type = supplies value = -3000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = { # Warsaw Uprising receives Soviet help
+	id = 8222005
+	country = POL
+
+	name = EVT_8222005_NAME #"Warsaw receives Soviet backing"
+	desc = EVT_8222005_DESC #"Contrary to what our soldiers expected after earlier cooperation with the Soviets, we received truly heroic support. Today the Polish army fighting in the Soviet ranks successfully crossed the river with huge aerial and artilleric support from the eastern bank of Vistula River."
+	picture = nwo\warsaw_uprising
+	style = 1
+
+	trigger = {
+		event = 8222004
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8222005_A #"The victory is closer than ever"
+		command = { type = add_corps which = "1. Armia LWP" value = land when = 60005 where = 228 }
+		command = { type = add_division which = "1. Dywizja LWP" value = armor when = 3 }
+		command = { type = add_division which = "2. Dywizja LWP" value = infantry when = 10 }
+		command = { type = add_division which = "3. Dywizja LWP" value = infantry when = 10 }
+		command = { type = add_division which = "4. Dywizja LWP" value = infantry when = 10 }
+		command = { type = add_division which = "5. Dywizja LWP" value = infantry when = 10 }
+		command = { type = add_corps which = "2. Armia LWP" value = land when = 60134 where = 232 }
+		command = { type = add_division which = "6. Dywizja LWP" value = infantry when = 10 }
+		command = { type = add_division which =  "7. Dywizja LWP" value = infantry when = 10 }
+		command = { type = add_corps which = "3. Armia LWP" value = land when = 60114 where = 229 }
+		command = { type = add_division which = "8. Dywizja LWP" value = infantry when = 10 }
+		command = { type = add_division which = "9. Dywizja LWP" value = infantry when = 10 }
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = relation which = SOV value = 150 }
+		# Lean towards Soviet viewpoint
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = 4 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = { # The Germans successfully crush the Uprising
+	id = 8222006
+	country = GER
+
+	name = EVT_8222006_NAME #"The Warsaw Uprising failed"
+	desc = EVT_8222006_DESC #"After long and bitter fights, street after street and barricade after barricade, we prevailed. The Warsaw Uprising proved to be a beautiful but short dream. This doesn't mean however that the Soviet will not push even harder now."
+	picture = nwo\warsaw_uprising_defeated
+	style = 1
+
+	trigger = {
+		event = 8222000
+		NOT = { exists = POL }
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 5
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	action = {
+		name = EVT_8222006_A #"Victory"
+		command = { type = dissent value = -2 }
+	}
+}
+
+
+event = {
+	id = 8222007
+	country = POL
+
+	name = EVT_8222007_NAME #"Warsaw Uprising succeeds"
+	desc = EVT_8222007_DESC #"Thanks to our unparalleled bravery in action we managed to push Germans out of our lands. We can claim victory!"
+	picture = nwo\warsaw_uprising_victory
+	style = 1
+
+	trigger = {
+		event = 8222000
+		NOT = { exists = GER }
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+	}
+}

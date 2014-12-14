@@ -1,0 +1,265 @@
+#########################################################
+# DH-Mod Arms, Armistice and Revolutions - CCIP Edition #
+#########################################################
+# 1914 CCIP by Limith
+# Temporary Events
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# CCIP events are released under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# CCIP leader/ministers are courtesy of Kaiser Franz
+# CCIP event pictures are taken from Wikipedia and are all (supposedly) in public domain in China according to wiki.
+############################################
+
+############################################
+# Temporary Events to connect CCIP to 1936 #
+############################################
+
+# Formation of Jiangxi Soviet
+
+event = {
+	id = 133011701
+	random = no
+	country = CHI
+	
+	name = "Jiangxi Soviet"
+	desc = "This is a placeholder event."
+	
+	#picture = ""
+	style = 2
+	
+	date = { day = 1 month = 10 year = 1931 }
+	offset = 1
+	deathdate = { day = 2 month = 10 year = 1931 }
+	
+	action = {
+		name = "OK"
+		command = { type = independence which = CHC value = 1 }
+		command = { type = secedearea which = CHC value = "Jiangxi" when = 2 }
+		command = { type = secedearea which = CHC value = "Fujian" when = 2 }
+		command = { type = secedearea which = CHI value = "Shaanxi" when = 2 }
+	}
+}
+
+# Northern Expedition
+event = {
+	id = 133011704
+	random = no
+	country = CHI
+	
+	name = "Northern Expedition"
+	desc = "This is a placeholder event."
+	
+	#picture = ""
+	style = 2
+	
+	date = { day = 1 month = 3 year = 1926 }
+	offset = 1
+	deathdate = { day = 2 month = 3 year = 1926 }
+	
+	action = {
+		name = "OK"
+		command = { type = inherit which = UCH value = 1 }
+		command = { type = inherit which = U36 value = 1 }
+		command = { type = secedeprovince which = CHI value = 1356 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1333 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1261 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1303 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1339 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1334 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1336 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1340 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1341 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1319 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1322 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1324 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1325 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1326 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1316 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1317 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1344 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1342 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1337 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1338 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1345 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1346 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1347 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1348 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1357 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1358 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1359 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1360 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1354 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1353 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1318 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1355 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1309 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1311 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1312 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1310 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1304 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1302 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1296 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1297 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1298 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1305 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1306 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1313 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1307 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1308 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1349 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1335 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1314 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1315 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1267 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1320 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1299 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1343 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1300 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1301 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1350 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1351 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1352 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1321 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1323 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1259 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1260 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1255 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1241 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1247 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1246 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1251 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1242 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1254 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1332 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1252 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1253 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1248 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1249 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1250 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1327 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1243 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1244 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1245 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1329 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1330 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1206 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1236 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1263 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1256 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1238 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1240 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1239 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1258 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1257 when = 2 }
+		command = { type = flag_ext where = CHI which = "" }
+		command = { type = name where = CHI }
+		command = { type = make_puppet which = U67 }
+		command = { trigger = { not = { exists = CGX } } type = independence which = CGX }
+		command = { type = make_puppet which = CGX }
+		command = { type = event where = CHI which = 133011705 when = 1 }
+		command = { type = belligerence value = -30 }
+		#reset IC-sanitizer
+		command = { type = event where = CHI which = 133099241 when = 1 }
+		#economic adjustment
+		command = { type = research_mod value = -30 }
+		command = { type = wartime_ic_mod value = -30 }
+		command = { type = peacetime_ic_mod value = -50 }
+		#reset land forcelimit
+		command = { type = local_clrflag which = disarm_army_10 }
+		command = { type = local_clrflag which = disarm_army_25 }
+		command = { type = local_setflag which = disarm_army_50 }
+		command = { type = local_clrflag which = disarm_army_75 }
+	}
+}
+
+# Post Northern Expedition
+event = {
+	id = 133011705
+	random = no
+	country = CHI
+	
+	# Triggered
+	
+	name = "Northeast Flag Replacement"
+	desc = "This is a placeholder event."
+	
+	#picture = ""
+	style = 2
+	
+	action = {
+		command = { type = secedearea which = U67 value = "Heilongjiang" when = 2 }
+		command = { type = secedearea which = U67 value = "Jilin" when = 2 }
+		command = { type = secedeprovince which = U67 value = 1235 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1237 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1216 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1218 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1214 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1217 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1215 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1220 when = 2 }
+		command = { type = independence which = CSX value = 1 }
+		command = { type = make_puppet which = CSX }
+		command = { type = trigger which = 133011706 }
+		command = { type = secedearea which = CGX value = "Guangxi" when = 2 }
+		command = { type = secedeprovince which = CGX value = 1374 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1365 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1367 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1373 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1365 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1368 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1369 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1370 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1375 when = 2 }
+		command = { type = capital which = 1337 }
+	}
+}
+
+# Rise of Shanxi Clique
+event = {
+	id = 133011706
+	random = no
+	country = CHI
+	
+	# Triggered
+	
+	name = "Rise of Shanxi Clique"
+	desc = "This is a placeholder event."
+	
+	#picture = ""
+	style = 2
+	
+	action = {
+		command = { type = secedearea which = CSX value = "Shanxi" when = 2 }
+		command = { type = secedeprovince which = CSX value = 1238 when = 2 }
+		command = { type = secedeprovince which = CSX value = 1239 when = 2 }
+	}
+}
+
+# Long March
+
+event = {
+	id = 133011707
+	random = no
+	country = CHC
+	
+	name = "Long March"
+	desc = "This is a placeholder event."
+	
+	#picture = ""
+	style = 2
+	
+	date = { day = 1 month = 11 year = 1931 }
+	offset = 1
+	deathdate = { day = 2 month = 11 year = 1931 }
+	
+	action = {
+		name = "OK"
+		command = { type = secedearea which = CHC value = "Shaanxi" when = 2 }
+		command = { type = secedearea which = CHI value = "Jiangxi" when = 2 }
+		command = { type = secedearea which = CHI value = "Fujian" when = 2 }
+		
+	}
+}

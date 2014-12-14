@@ -1,0 +1,200 @@
+
+### 2006050  ITA  Africa Orientale Italiana
+### 2006051  U49  Rodolfo Graziani appointed Viceroy
+### 2006052  U49  Attempted assassination of Graziani
+### 2006053  U49  Prince Amedeo appointed Viceroy
+### 2006054  U49  Manpower from Italy
+
+###########################################################################
+# Africa Orientale Italiana
+###########################################################################
+event = {
+	id = 2006050
+	random = no
+	country = ITA
+
+	trigger = {
+		government = fascist
+		exists = U49
+
+		NOT = {
+			exists = ETH
+			}
+		}
+
+	name = "EVT_2006050_NAME"
+	desc = "EVT_2006050_DESC" #from http://en.wikipedia.org/wiki/Italian_East_Africa
+	style = 2
+	picture = "Mussolini"
+
+	date = { day = 1 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action_a = {
+		name = "ACTION_NAME_EXCELLENT" # Excellent! 
+		command = { type = dissent value = -5 } #great success!
+	        command = { type = sleepleader which = 25009 } #Amedeo di Savoia-Aosta
+	        command = { type = sleepleader which = 25400 } #Amedeo di Savoia-Aosta
+	        command = { type = sleepleader which = 25038 } #Bertoldi
+	        command = { type = sleepleader which = 25054 } #Carnimeo
+	        command = { type = sleepleader which = 25083 } #de Simone
+	        command = { type = sleepleader which = 25109 } #Frusci
+	        command = { type = sleepleader which = 25121 } #Gazzera
+	        command = { type = sleepleader which = 25142 } #Majnardi
+	        command = { type = sleepleader which = 25166 } #Nasi
+	        command = { type = sleepleader which = 25182 } #Pesenti
+	        command = { type = sleepleader which = 25215 } #Scala, Ettore
+	        command = { type = sleepleader which = 25233 } #Tessitore
+	        command = { type = sleepleader which = 25240 } #Trezzani
+	        command = { type = sleepleader which = 25253 } #Volpini
+	        command = { type = sleepleader which = 25423 } #Piacentini
+	        command = { type = sleepleader which = 25425 } #Pinna Parpaglia
+		command = { type = manpowerpool value = -90 }
+		command = { type = trigger which = 2006054 } #Manpower from Italy
+	}
+}
+
+###########################################################################
+# Rodolfo Graziani appointed Viceroy
+###########################################################################
+event = {
+	id = 2006051
+	random = no
+	country = U49
+
+	trigger = {
+		government = fascist
+		exists = ITA
+		ispuppet = yes
+		headofgovernment = 1060002 #Badoglio
+		}
+
+	name = "EVT_2006051_NAME"
+	desc = "EVT_2006051_DESC"
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 10 month = june year = 1936 }
+	offset = 10
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action_a = {
+		name = "ACTION_NAME_ACCEPT" # Accept
+		command = { type = headofgovernment which = 1060012 } #Graziani
+		command = { type = foreignminister which = 1060013 } #Graziani
+		command = { type = armamentminister which = 1060014 } #Graziani
+		command = { type = ministerofsecurity which = 1060015 } #Graziani
+		command = { type = ministerofintelligence which = 1060016 } #Graziani
+		command = { type = chiefofstaff which = 1060017 } #Graziani
+		command = { type = chiefofarmy which = 1060018 } #Graziani
+		command = { type = chiefofnavy which = 1060019 } #Graziani
+		command = { type = chiefofair which = 1060020 } #Graziani
+	        command = { type = sleepminister which = 1060002 } #Badoglio
+	        command = { type = sleepminister which = 1060003 } #Badoglio
+	        command = { type = sleepminister which = 1060004 } #Badoglio
+	        command = { type = sleepminister which = 1060005 } #Badoglio
+	        command = { type = sleepminister which = 1060006 } #Badoglio
+	        command = { type = sleepminister which = 1060007 } #Badoglio
+	        command = { type = sleepminister which = 1060008 } #Badoglio
+	        command = { type = sleepminister which = 1060009 } #Badoglio
+	        command = { type = sleepminister which = 1060010 } #Badoglio
+	}
+}
+
+###########################################################################
+# Attempted assassination of Graziani
+###########################################################################
+event = {
+	id = 2006052
+	random = no
+	country = U49
+
+	trigger = {
+		government = fascist
+		exists = ITA
+		ispuppet = yes
+		headofgovernment = 1060012 #Graziani
+		}
+
+	name = "EVT_2006052_NAME"
+	desc = "EVT_2006052_DESC" # from http://en.wikipedia.org/wiki/Yekatit_12 and http://en.wikipedia.org/wiki/Rodolfo_Graziani
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 18 month = february year = 1937 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action_a = {
+		name = "ACTION_NAME_CURSES" # Curses!
+		command = { type = dissent value = 5 }
+	}
+}
+
+###########################################################################
+# Prince Amedeo appointed Viceroy
+###########################################################################
+event = {
+	id = 2006053
+	random = no
+	country = U49
+
+	trigger = {
+		government = fascist
+		exists = ITA
+		ispuppet = yes
+		headofgovernment = 1060012 #Graziani
+		}
+
+	name = "EVT_2006053_NAME"
+	desc = "EVT_2006053_DESC" # from http://en.wikipedia.org/wiki/Prince_Amedeo,_Duke_of_Aosta
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 20 month = december year = 1937 }
+	offset = 10
+	deathdate = { day = 30 month = december year = 1938 }
+
+	action_a = {
+		name = "ACTION_NAME_ACCEPT" # Accept
+		command = { type = headofgovernment which = 1060022 } #Amedeo
+		command = { type = foreignminister which = 1060023 } #Amedeo
+		command = { type = armamentminister which = 1060024 } #Amedeo
+		command = { type = ministerofsecurity which = 1060025 } #Nasi
+		command = { type = ministerofintelligence which = 1060026 } #Nasi
+		command = { type = chiefofstaff which = 1060027 } #Trezzani
+		command = { type = chiefofarmy which = 1060028 } #Gazzera
+		command = { type = chiefofnavy which = 1060029 } #Balsamo
+		command = { type = chiefofair which = 1060030 } #Pinna
+	        command = { type = sleepminister which = 1060012 } #Graziani
+	        command = { type = sleepminister which = 1060013 } #Graziani
+	        command = { type = sleepminister which = 1060014 } #Graziani
+	        command = { type = sleepminister which = 1060015 } #Graziani
+	        command = { type = sleepminister which = 1060016 } #Graziani
+	        command = { type = sleepminister which = 1060017 } #Graziani
+	        command = { type = sleepminister which = 1060018 } #Graziani
+	        command = { type = sleepminister which = 1060019 } #Graziani
+	        command = { type = sleepminister which = 1060020 } #Graziani
+        	command = { type = sleepteam which = 1060004 } #Graziani
+	}
+}
+
+###########################################################################
+# Manpower from Italy
+###########################################################################
+event = {
+	id = 2006054
+	random = no
+	country = U49
+
+	name = "EVT_2006054_NAME"
+	desc = "EVT_2006054_DESC"
+	style = 2
+	picture = "Mussolini"
+
+	action_a = {
+		name = "ACTION_NAME_EXCELLENT" # Excellent!
+		command = { type = manpowerpool value = 110 }
+	}
+}

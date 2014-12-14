@@ -1,0 +1,150 @@
+# United PRK is released
+
+event = {
+	id = 8209000
+
+	name = EVT_8209000_NAME
+	desc = EVT_8209000_DESC
+	picture = "nwo\united_korea"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		government = communist
+		NOT = { exists = PRK }
+		region = { region = "Korea" country = -1 data = 1 value = 75 }
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8209000_A
+		ai_chance = 100
+
+		command = { type = independence which = PRK value = 1 }
+		command = { type = secederegion which = PRK value = "Korea" when = 2 }
+	}
+	
+	action = {
+		name = EVT_8209000_B # We will remain there
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = belligerence value = 30 }
+	}
+
+}
+
+# United KOR is released
+
+event = {
+	id = 8209001
+
+	name = EVT_8209001_NAME
+	desc = EVT_8209001_DESC
+	picture = "nwo\united_korea"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		NOT = { government = communist }
+		NOT = { exists = KOR }
+		region = { region = "Korea" country = -1 data = 1 value = 75 }
+	}
+
+	date = { day = 1 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8209001_A
+		ai_chance = 100
+		command = { type = independence which = KOR value = 1 }
+		command = { type = secederegion which = KOR value = "Korea" when = 2 }
+	}
+	
+	action = {
+		name = EVT_8209001_B # We will remain there
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = belligerence value = 30 }
+	}
+
+}
+
+### Divided Korea: PRK is released
+
+event = {
+	id = 8209002
+
+	name = EVT_8209002_NAME
+	desc = EVT_8209002_DESC
+	picture = "nwo\divided_korea"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		government = communist
+		NOT = { exists = PRK }
+		region = { region = "Korea" country = -1 data = 1 value = 25 }
+		NOT = { region = { region = "Korea" country = -1 data = 1 value = 75 } }
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8209002_A
+		ai_chance = 100
+		command = { type = independence which = PRK value = 1 }
+		command = { trigger = { exists = KOR } type = non_aggression which = PRK where = KOR }
+	}
+	
+	action = {
+		name = EVT_8209002_B # We will remain there
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = belligerence value = 30 }
+	}
+
+}
+
+### Divided Korea: KOR is released
+
+event = {
+	id = 8209003
+
+	name = EVT_8209003_NAME
+	desc = EVT_8209003_DESC
+	picture = "nwo\divided_korea"
+	style = 1
+
+	trigger = {
+		flag = cold_war_pacific
+		NOT = { government = communist }
+		NOT = { exists = KOR }
+		region = { region = "Korea" country = -1 data = 1 value = 25 }
+		NOT = { region = { region = "Korea" country = -1 data = 1 value = 75 } }
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8209003_A
+		ai_chance = 100
+		command = { type = independence which = KOR value = 1 }
+		command = { trigger = { exists = PRK } type = non_aggression which = PRK where = KOR }
+	}
+	
+	action = {
+		name = EVT_8209003_B # We will remain there
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = belligerence value = 30 }
+	}
+
+}

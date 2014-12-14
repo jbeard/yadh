@@ -1,0 +1,90 @@
+##### Nepal ##### id 326000 - 326499
+
+#############################################
+######  Protests policies
+#############################################
+event = {
+         id = 13301900
+         random = no
+         country = nep
+         trigger = {
+                   random = 7
+
+         }
+ 
+         name = "Protests policies"
+         desc = "The Rana regime soon had a large number of opponents within the country due to the tight control imposed. There were numerous opposition parties critical of the situation they were taking more and more strength. Finally the government decided to arrest the protesters and tried them for treason, executing and imprisoning its leaders."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1935 }
+         offset = 15
+         deathdate = { day = 31 month = december year = 1935 }
+ 
+                
+                picture = "NEP01"
+                
+           action_a = {
+                  name = "Arrest them all"
+                  ai_chance = 80
+                  command = { type = dissent value = 5 }
+                  command = { type = domestic which = democratic value = -2 }
+                  command = { type = domestic which = freedom value = -2 }
+                  command = { type = revolt which = 1457 }
+           }
+           action_b = {
+                  name = "Start reforms"
+                  ai_chance = 20
+                  command = { type = dissent value = -3 }
+                  command = { type = domestic which = democratic value = 2 }
+                  command = { type = domestic which = freedom value = 2 }
+           }
+
+}
+#############################################
+######  Join the Allies
+#############################################
+event = {
+         id = 13301901
+         random = no
+         country = nep
+         trigger = {
+		war = { country =eng  country = ger }
+		NOT = { war = { country = nep country = ENG }  }
+		NOT = { alliance = { country = nep country = eng }  }
+
+         }
+ 
+         name = "Join the Allies"
+         desc = "The countries that formed the British Commonwealth had been given powers to bring his own foreign policy. This enabled him to not be bound or obligated to participate in wars involving the United Kingdom. Although many of these countries, ensured the integrity of the UK and some of them had in its constitution the obligation to defend against aggression. Most of these countries joined the bloc ally."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1942 }
+ 
+                
+                picture = "commonwealth"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  ai_chance = 100
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = domestic which = interventionism value = 1 }
+                  command = { type = sleepevent which = 13301550 }
+                  command = { type = set_relation which = ENG value = 200 }
+                  command = { type = alliance which = ENG }
+                  command = { type = dissent value = -50 }
+           }
+           action_b = {
+                  name = "It is not our war"
+                  command = { type = dissent value = 25 }
+                  command = { type = domestic which = interventionism value = -2 }
+                  command = { type = domestic which = defense_lobby value = -2 }
+                  command = { type = relation which = eng value = -150 }
+                  command = { type = relation which = ger value = 50 }
+                  ai_chance = 0
+           }
+
+}

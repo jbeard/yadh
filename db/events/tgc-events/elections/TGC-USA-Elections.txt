@@ -1,0 +1,1741 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions - Elections
+#################################
+# by Nymet260
+# fixup by burning
+# Updated by Limith
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# Event List:
+#USA 133207000 1920 Elections
+#USA 133207100 1920 Minister Helper
+#USA 133207001 1924 Elections
+#USA 133207101 1924 Minister Helper
+#USA 133207002 1928 Elections
+#USA 133207003 1932 Elections
+#USA 133207004 New Head of Intelligence - Friedman
+#USA 133207005 Warren G. Harding died
+#USA 133207006 Oscar W. Underwood died
+#USA 133207007 1928 Elections (Communist government)
+#USA 133207008 1932 Elections (Communist government)
+#USA 133207009 1932 Elections (Huey Long HoS)
+#USA 133207010 James P. Cannon expelled
+#USA 133207011 Party Divide
+#USA 133207012 1928 Elections (Cannon not expelled)
+#USA 133207013 1932 Elections (If PCP is around)
+#USA 133207014 New Armaments Minister - Mortimer
+#USA 133207015 New Chief of Army - Peyton C. March
+#USA 133207016 Peyton C. March retired
+#USA 133207017 Pershing Retired
+#USA 133207018 John L. Hines Leaves Office
+#USA 133207019 Douglas MacArthur is the new Chief of Staff
+#USA 133207020 New Chief of Navy - Robert E. Coontz
+#USA 133207021 Robert Coontz left office
+#USA 133207022 Edward W. Eberle left office
+#USA 133207023 Charles F. Hughes Retires
+#USA 133207024 Appoint Charles Menoher
+#USA 133207025 Charles Menoher left office
+#USA 133207026 Mason Patrick Retires
+#USA 133207027 James Fechet leaves office
+#USA 133207028 - 133207032 Armed Forces Officer Reorganization
+#USA 133207029 - 133207033 Leading The Army?
+#USA 133207030 - 133207034 Leading the Navy?
+#USA 133207031 - 133207035 Leading the Airforce?
+#USA 133207036 William S. Benson Died
+########################################
+## US Elections
+########################################
+
+# 1920 Elections
+event = {
+	id = 133207000
+	random = no
+	country = USA
+
+	trigger = {
+		not = { ispuppet = yes }
+	}
+
+	name = EVT1914_133207000_NAME
+	desc = EVT1914_133207000_DESC
+
+	picture = "elc_USA_1920_dr"
+	style = 2
+
+	date = { day = 2 month = November year = 1920 }
+	offset = 1
+	deathdate = { day = 2 month = 1 year = 1921 }
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no # Give players choice
+				not = {
+					and = { 
+						dissent = 30 # Dissent is higher than 30
+						incabinet = 240325 # Woodrow Wilson is Head of State
+					}
+				}
+			}
+			or = {
+				government = democratic
+				and = { # Fascist government, population unhappy.
+					government = fascist
+					dissent = 40
+				}
+			}
+		}
+		ai_chance = 5
+		name = "James M. Cox (Dem)"
+		command = { type = dissent value = 5 }
+		command = { trigger = { and = { ai = yes dissent = 30 not = { incabinet = 240325 } } } type = dissent value = -20 } # This is if opposition party wins!
+		command = { trigger = { and = { government = fascist } } type = dissent value = -20 } # Since Fascism clearly didn't work
+		command = { trigger = { not = { minister = 240330 } } type = wakeminister which = 240330 }
+		command = { trigger = { not = { minister = 240385 } } type = wakeminister which = 240385 }
+		command = { trigger = { not = { minister = 240280 } } type = wakeminister which = 240280 }
+		command = { trigger = { not = { minister = 240350 } } type = wakeminister which = 240350 }
+		command = { trigger = { not = { minister = 240365 } } type = wakeminister which = 240365 }
+		command = { type = sleepminister which = 240311 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240312 } } type = wakeminister which = 240312 } # Ralph Van Deman
+		command = { trigger = { not = { domestic = { type = democratic value = 5 } } } type = set_domestic which = democratic value = 5 } # Make democratic
+		command = { type = domestic which = democratic value = 1 } # + 1 to democracy
+		command = { type = domestic which = interventionism value = 1 } # + 1 to interventionist
+		command = { type = domestic which = defense_lobby value = -1 } # - 1 to hawk lobby
+		command = { trigger = { not = { domestic = { type = free_market value = 6 } } } type = domestic which = free_market value = 2 } # + 2 to free market
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 240330 } #James M. Cox
+		command = { type = headofgovernment which = 240385 } #Franklin D. Roosevelt
+		command = { trigger = { ai = no } type = event which = 133207100 where = USA when = 7 }
+		command = { trigger = { ai = yes } type = foreignminister which = 240280 } #Robert Lansing
+		command = { trigger = { ai = yes } type = armamentminister which = 240350 } #Carter Glass
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 240365 } #William J. Flynn
+		command = { trigger = { ai = yes } type = ministerofintelligence which = 240312 } #Ralph Van Deman (Has duplicate different ideology)
+	}
+
+	action = {
+		trigger = {
+			not = {
+				or = {
+					government = fascist
+					and = { # Communist government, population unhappy.
+						government = communist
+						not = { dissent = 40 }
+					}
+				}
+			}
+		}
+		ai_chance = 95
+		name = "Warren G. Harding (Rep)"
+		command = { type = dissent value = -5 }
+		command = { trigger = { and = { ai = yes dissent = 30 incabinet = 240325 } } type = dissent value = -20 } # This is if opposition party wins!
+		command = { trigger = { and = { government = communist } } type = dissent value = -20 } # Since Communism clearly didn't work
+		command = { trigger = { not = { minister = 240332 } } type = wakeminister which = 240332 }
+		command = { trigger = { not = { minister = 240302 } } type = wakeminister which = 240302 }
+		command = { trigger = { not = { minister = 240284 } } type = wakeminister which = 240284 }
+		command = { trigger = { not = { minister = 240351 } } type = wakeminister which = 240351 }
+		command = { trigger = { not = { minister = 240365 } } type = wakeminister which = 240365 }
+		command = { type = sleepminister which = 240311 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240312 } } type = wakeminister which = 240312 } # Ralph Van Deman
+		command = { trigger = { not = { domestic = { type = democratic value = 5 } } } type = set_domestic which = democratic value = 5 } # Make democratic
+		command = { type = domestic which = democratic value = 1 } # + 1 to democracy
+		command = { type = domestic which = interventionism value = -2 } # - 2 to interventionist
+		command = { type = domestic which = defense_lobby value = -2 } # - 2 to hawk lobby
+		command = { trigger = { not = { domestic = { type = free_market value = 6 } } } type = domestic which = free_market value = 2 } # + 2 to free market
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 240332 } #Warren G. Harding
+		command = { type = headofgovernment which = 240302 } #Calvin Coolidge
+		command = { trigger = { ai = no } type = event which = 133207100 where = USA when = 7 }
+		command = { trigger = { ai = yes } type = foreignminister which = 240284 } #Charles Evans Hughes
+		command = { trigger = { ai = yes } type = armamentminister which = 240351 } #Andrew W. Mellon
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 240365 } #William J. Flynn
+		command = { trigger = { ai = yes } type = ministerofintelligence which = 240312 } #Ralph Van Deman (Has duplicate different ideology)
+	}
+}
+
+# 1920 Minister Helper
+event = {
+	id = 133207100
+	random = no
+	country = USA
+
+	#Triggered
+
+	name = EVT1914_1332071XX_NAME
+	desc = EVT1914_1332071XX_DESC
+
+	picture = "aar_whitehouse_20s"
+	style = 2
+
+	action = {
+		name = "Keep current cabinet"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+
+	action = {
+		ai_chance = 100
+		trigger = {
+			headofstate = 240330
+		}
+		name = "Accept new cabinet"
+		command = { type = foreignminister which = 240280 } #Robert Lansing
+		command = { type = armamentminister which = 240350 } #Carter Glass
+		command = { type = ministerofsecurity which = 240365 } #William J. Flynn
+		command = { type = ministerofintelligence which = 240312 } #Ralph Van Deman
+	}
+
+	action = {
+		ai_chance = 100
+		trigger = {
+			headofstate = 240332
+		}
+		name = "Accept new cabinet"
+		command = { type = foreignminister which = 240284 } #Charles Evans Hughes
+		command = { type = armamentminister which = 240351 } #Andrew W. Mellon
+		command = { type = ministerofsecurity which = 240365 } #William J. Flynn
+		command = { type = ministerofintelligence which = 240312 } #Ralph Van Deman
+	}
+
+}
+
+# Warren G. Harding died
+event = {
+	id = 133207005
+	random = no
+	country = USA
+	
+	trigger = {
+		government = democratic
+		headofstate = 240332
+	}
+	
+	name = "Warren G. Harding Died"
+	desc = "During a trip in Californa, Warren Harding suffered a heart attack and died. His vice president, Calvin Coolidge, took the oath of office and is now the new president of the United States."
+
+	picture = "aar_hardead"
+	style = 2
+
+	date = { day = 2 month = August year = 1923 }
+	offset = 1
+	deathdate = { day = 2 month = October year = 1923 }
+	
+	action = {
+		ai_chance = 100
+		name = "The Nation Will Mourn"
+		command = { trigger = { not = { minister = 240333 } } type = wakeminister which = 240333 }
+		command = { type = headofstate which = 240333 }#Calvin Coolidge
+		command = { type = sleepminister which = 240332 } #Warren G. Harding
+		command = { type = sleepminister which = 240301 } #Warren G. Harding
+	}
+}
+
+# 1924 Elections
+event = {
+	id = 133207001
+	random = no
+	country = USA
+	
+	trigger = {
+		not = { ispuppet = yes }
+	}
+
+	name = EVT1914_133207001_NAME
+	desc = EVT1914_133207001_DESC
+
+	picture = "elc_USA_1924_drpc"
+	style = 2
+
+	date = { day = 4 month = November year = 1924 }
+	offset = 1
+	deathdate = { day = 4 month = 1 year = 1925 }
+
+	action = {
+		trigger = {
+			headofstate = 240330
+			or = {
+				ai = no # Give players choice
+				not = {
+					dissent = 15 # Dissent is higher than 15, People will go for Conservative republicans.
+				}
+			}
+			government = democratic
+		}
+		ai_chance = 45
+		name = "James M. Cox (Dem)" # Incubent if won in 1920
+		command = { trigger = { not = { dissent = 15 } } type = dissent value = -5 }
+		command = { trigger = { dissent = 15 } type = dissent value = 5 }
+		command = { trigger = { not = { minister = 240330 } } type = wakeminister which = 240330 }
+		command = { trigger = { not = { minister = 240385 } } type = wakeminister which = 240385 }
+		command = { trigger = { not = { minister = 240280 } } type = wakeminister which = 240280 }
+		command = { trigger = { not = { minister = 240350 } } type = wakeminister which = 240350 }
+		command = { type = sleepminister which = 240369 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240005 } } type = wakeminister which = 240005 } # J. Edgar Hoover
+		command = { trigger = { not = { minister = 240095 } } type = wakeminister which = 240095 } # J. Edgar Hoover
+		command = { type = sleepminister which = 240311 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240312 } } type = wakeminister which = 240312 } # Ralph Van Deman
+		command = { trigger = { not = { domestic = { type = democratic value = 5 } } } type = set_domestic which = democratic value = 5 } # Make democratic
+		command = { type = domestic which = democratic value = 1 } # + 1 to democracy
+		command = { type = domestic which = defense_lobby value = -1 } # - 1 to hawk lobby
+		command = { trigger = { not = { domestic = { type = free_market value = 5 } } } type = domestic which = free_market value = 1 } # + 1 to free market
+		command = { type = domestic which = political_left value = -1 } # Age of conservatism
+		command = { type = headofstate which = 240330 } #James M. Cox
+		command = { type = headofgovernment which = 240385 } #Franklin D. Roosevelt
+		command = { trigger = { ai = no } type = event which = 133207101 where = USA when = 7 }
+		command = { trigger = { ai = yes } type = foreignminister which = 240280 } #Robert Lansing
+		command = { trigger = { ai = yes } type = armamentminister which = 240350 } #Carter Glass
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 240005 } #J. Edgar Hoover (Has duplicate different ideology)
+		command = { trigger = { ai = yes } type = ministerofintelligence which = 240312 } #Ralph Van Deman (Has duplicate different ideology)
+	}
+
+	action = {
+		trigger = {
+			headofstate = 240333
+			government = democratic
+			or = {
+				ai = no
+				not = {
+					dissent = 15 # People will go for Progressives.
+				}
+			}
+		}
+		ai_chance = 28 #Historic Vote Share
+		name = "John W. Davis (Dem)"
+		command = { type = dissent value = 5 }
+		command = { trigger = { not = { minister = 240334 } } type = wakeminister which = 240334 }
+		command = { trigger = { not = { minister = 240386 } } type = wakeminister which = 240386 }
+		command = { trigger = { not = { minister = 240280 } } type = wakeminister which = 240280 }
+		command = { trigger = { not = { minister = 240350 } } type = wakeminister which = 240350 }
+		command = { type = sleepminister which = 240305 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240069 } } type = wakeminister which = 240069 } # J. Edgar Hoover
+		command = { trigger = { not = { minister = 240095 } } type = wakeminister which = 240095 } # J. Edgar Hoover
+		command = { type = sleepminister which = 240311 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240312 } } type = wakeminister which = 240312 } # Ralph Van Deman
+		command = { trigger = { not = { domestic = { type = democratic value = 5 } } } type = set_domestic which = democratic value = 5 } # Make democratic
+		command = { type = domestic which = democratic value = 1 } # + 1 to democracy
+		command = { type = domestic which = interventionism value = -1 } # - 1 to interventionist
+		command = { type = domestic which = defense_lobby value = -1 } # - 1 to hawk lobby
+		command = { trigger = { not = { domestic = { type = free_market value = 5 } } } type = domestic which = free_market value = 1 } # + 1 to free market
+		command = { type = headofstate which = 240334 } #John W. Davis
+		command = { type = headofgovernment which = 240386 } #Charles W. Bryan
+		command = { trigger = { ai = no } type = event which = 133207101 where = USA when = 7 }
+		command = { trigger = { ai = yes } type = foreignminister which = 240280 } #Robert Lansing
+		command = { trigger = { ai = yes } type = armamentminister which = 240350 } #Carter Glass
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { trigger = { ai = yes } type = ministerofintelligence which = 240312 } #Ralph Van Deman
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				and = {
+					headofstate = 240333
+					not = { dissent = 15 } #People will go for Progressives
+				}
+				and = {
+					headofstate = 240330
+					random = 50 # Cut chance in half.
+					not = { dissent = 15 }
+				}
+				and = {
+					headofstate = 240330
+					dissent = 15
+				}
+			}
+			or = {
+				government = democratic
+				and = { #Communist government, populace unhappy.
+					government = communist
+					dissent = 40
+				}
+			}
+		}
+		ai_chance = 54 #Historic Vote Share
+		name = "Calvin Coolidge (Rep)"
+		command = { trigger = { headofstate = 240333 not = { dissent = 15 } } type = dissent value = -5 }
+		command = { trigger = { headofstate = 240333 dissent = 15 } type = dissent value = 5 }
+		command = { trigger = { headofstate = 240330 not = { dissent = 15 } } type = dissent value = 5 }
+		command = { trigger = { headofstate = 240330 dissent = 15 } type = dissent value = -5 }
+		command = { trigger = { not = { minister = 240333 } } type = wakeminister which = 240333 }
+		command = { trigger = { not = { minister = 240381 } } type = wakeminister which = 240381 }
+		command = { trigger = { not = { minister = 240284 } } type = wakeminister which = 240284 }
+		command = { trigger = { not = { minister = 240351 } } type = wakeminister which = 240351 }
+		command = { type = sleepminister which = 240305 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240069 } } type = wakeminister which = 240069 } # J. Edgar Hoover
+		command = { trigger = { not = { minister = 240095 } } type = wakeminister which = 240095 } # J. Edgar Hoover
+		command = { type = sleepminister which = 240311 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240312 } } type = wakeminister which = 240312 } # Ralph Van Deman
+		command = { trigger = { not = { domestic = { type = democratic value = 5 } } } type = set_domestic which = democratic value = 5 } # Make democratic
+		command = { type = domestic which = democratic value = 1 } # + 1 to democracy
+		command = { type = domestic which = interventionism value = -1 } # - 1 to interventionist
+		command = { type = domestic which = defense_lobby value = -1 } # - 1 to hawk lobby
+		command = { trigger = { not = { domestic = { type = free_market value = 5 } } } type = domestic which = free_market value = 1 } # + 1 to free market
+		command = { trigger = { domestic = { type = political_left value = 5 } } type = set_domestic which = political_left value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = headofstate which = 240333 } #Calvin Coolidge
+		command = { type = headofgovernment which = 240381 } #Charles G. Dawes
+		command = { trigger = { ai = no } type = event which = 133207101 where = USA when = 7 }
+		command = { trigger = { ai = yes } type = foreignminister which = 240284 } #Charles Evans Hughes
+		command = { trigger = { ai = yes } type = armamentminister which = 240351 } #Andrew W. Mellon
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { trigger = { ai = yes } type = ministerofintelligence which = 240311 } #Ralph Van Deman
+	}
+
+	action = {
+		trigger = {
+			headofstate = 240333
+			or = {
+				ai = no
+				not = {
+					dissent = 40 #Revolution!
+				}
+			}
+			government = democratic
+		}
+		ai_chance = 17 #Historic Vote Share
+		name = "Robert M. LaFollette (Progressive)"
+		command = { trigger = { not = { dissent = 15 } } type = dissent value = 10 } # An untested party!
+		command = { trigger = { dissent = 15 } type = dissent value = -10 } # An outsider party!
+		command = { trigger = { not = { minister = 240335 } } type = wakeminister which = 240335 }
+		command = { trigger = { not = { minister = 240413 } } type = wakeminister which = 240413 }
+		command = { trigger = { not = { minister = 240282 } } type = wakeminister which = 240282 }
+		command = { trigger = { not = { minister = 240350 } } type = wakeminister which = 240350 }
+		command = { type = sleepminister which = 240369 } # Resolve ideology issues
+		command = { trigger = { not = { minister = 240005 } } type = wakeminister which = 240005 } # J. Edgar Hoover
+		command = { trigger = { not = { minister = 240095 } } type = wakeminister which = 240095 } # J. Edgar Hoover
+		command = { trigger = { not = { minister = 240006 } } type = wakeminister which = 240006 }
+		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = set_domestic which = democratic value = 6 } # Make democratic
+		command = { type = domestic which = democratic value = 1 } # + 1 to democracy
+		command = { type = domestic which = interventionism value = -3 } # - 3 to interventionist
+		command = { type = domestic which = free_market value = -2 } # - 2 to free market
+		command = { trigger = { not = { domestic = { type = political_left value = 6 } } } type = set_domestic which = political_left value = 6 }
+		command = { type = domestic which = political_left value = 1 } # + 1 to political left
+		command = { type = headofstate which = 240335 } #Robert M. LaFollette
+		command = { type = headofgovernment which = 240413 } #Burton K. Wheeler
+		command = { trigger = { ai = no } type = event which = 133207101 where = USA when = 7 }
+		command = { trigger = { ai = yes } type = foreignminister which = 240282 } #Homer S. Cummings
+		command = { trigger = { ai = yes } type = armamentminister which = 240350 } #Carter Glass
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 240005 } #J. Edgar Hoover (Has duplicate different ideology)
+		command = { trigger = { ai = yes } type = ministerofintelligence which = 240006 } #William F. Friedman
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				and = {
+					government = communist
+					not = {
+						dissent = 40
+					}
+				}
+				and = {
+					government = democratic
+					dissent = 40
+				}
+			}
+		}
+		ai_chance = 0 # Progressives had more support.
+		name = "William Z. Foster (CPUSA)"
+		command = { trigger = { government = democratic not = { dissent = 40 } } type = dissent value = 35 }
+		command = { trigger = { government = democratic dissent = 40 } type = dissent value = -25 }
+		command = { trigger = { government = communist not = { dissent = 40 } } type = dissent value = -5 }
+		command = { trigger = { government = communist dissent = 40 } type = dissent value = 10 }
+		command = { trigger = { not = { minister = 240389 } } type = wakeminister which = 240389 }
+		command = { trigger = { not = { minister = 240390 } } type = wakeminister which = 240390 }
+		command = { trigger = { not = { minister = 240287 } } type = wakeminister which = 240287 }
+		command = { trigger = { not = { minister = 240391 } } type = wakeminister which = 240391 }
+		command = { trigger = { not = { minister = 240371 } } type = wakeminister which = 240371 }
+		command = { trigger = { not = { minister = 240103 } } type = wakeminister which = 240103 }
+		command = { trigger = { government = communist } type = set_domestic which = democratic value = 4 }
+		command = { trigger = { government = democratic not = { dissent = 40 } } type = set_domestic which = democratic value = 6 }
+		command = { trigger = { government = democratic dissent = 40 } type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = domestic which = free_market value = -4 } # - 4 to free market
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240390 } #Benjamin Gitlow
+		command = { trigger = { ai = no } type = event which = 133207101 where = USA when = 7 }
+		command = { trigger = { ai = yes } type = foreignminister which = 240287 } #James P. Cannon
+		command = { trigger = { ai = yes } type = armamentminister which = 240391 } #Abram Jakira
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { trigger = { ai = yes } type = ministerofintelligence which = 240103 } #Harry Haywood
+		command = { type = local_setflag which = USAC1} #TODO: Remove and modify election events to use headofstate triggers.
+		command = { type = local_setflag which = USMC1}
+	}
+
+}
+
+# 1924 Minister Helper
+event = {
+	id = 133207101
+	random = no
+	country = USA
+
+	#Triggered
+
+	name = EVT1914_1332071XX_NAME
+	desc = EVT1914_1332071XX_DESC
+
+	picture = "aar_whitehouse_20s"
+	style = 2
+
+	action = {
+		name = "Keep current cabinet"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+
+	action = {
+		ai_chance = 100
+		trigger = {
+			headofstate = 240330
+		}
+		name = "Accept new cabinet"
+		command = { type = foreignminister which = 240280 } #Robert Lansing
+		command = { type = armamentminister which = 240350 } #Carter Glass
+		command = { type = ministerofsecurity which = 240005 } #J. Edgar Hoover (Has duplicate different ideology)
+		command = { type = ministerofintelligence which = 240312 } #Ralph Van Deman (Has duplicate different ideology)
+	}
+
+	action = {
+		ai_chance = 100
+		trigger = {
+			headofstate = 240334
+		}
+		name = "Accept new cabinet"
+		command = { type = foreignminister which = 240280 } #Robert Lansing
+		command = { type = armamentminister which = 240350 } #Carter Glass
+		command = { type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 240312 } #Ralph Van Deman
+	}
+
+	action = {
+		ai_chance = 100
+		trigger = {
+			headofstate = 240333
+		}
+		name = "Accept new cabinet"
+		command = { type = foreignminister which = 240284 } #Charles Evans Hughes
+		command = { type = armamentminister which = 240351 } #Andrew W. Mellon
+		command = { type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 240311 } #Ralph Van Deman
+	}
+
+	action = {
+		ai_chance = 100
+		trigger = {
+			headofstate = 240335
+		}
+		name = "Accept new cabinet"
+		command = { type = foreignminister which = 240282 } #Homer S. Cummings
+		command = { type = armamentminister which = 240350 } #Carter Glass
+		command = { type = ministerofsecurity which = 240005 } #J. Edgar Hoover (Has duplicate different ideology)
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+	}
+
+	action = {
+		ai_chance = 100
+		trigger = {
+			headofstate = 240389
+		}
+		name = "Accept new cabinet"
+		command = { type = foreignminister which = 240287 } #James P. Cannon
+		command = { type = armamentminister which = 240391 } #Abram Jakira
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+	}
+}
+
+# 1928 Elections
+event = {
+	id = 133207002
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The 1928 election was another strong year for the Republicans. It was a landslide victory for the Republican nominee Herbert Hoover, who was helped by his own opponet. His opponet was Al Smith, a Catholic and anti-prohibitionist, suffered from prejudice from a majority of protestant voter base and many votes he should of claimed went to Hoover."
+	
+	date = { day = 6 month = November year = 1928 }
+	deathdate = { day = 6 month = November year = 1929 }
+	
+	action = {
+		ai_chance = 1
+		name = "Al Smith (Dem)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 240384 } #Al Smith
+		command = { type = headofgovernment which = 240387 } #Joseph Taylor Robinson
+		command = { type = foreignminister which = 240281 } #Oscar W. Underwood
+		command = { type = armamentminister which = 240345 } #Carter Glass
+		command = { type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 240311 } #Ralph Van Deman
+	}
+	action = {
+		ai_chance = 98
+		name = "Herbert Hoover (Rep)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 240382 } #Herbert Hoover
+		command = { type = headofgovernment which = 240383 } #Charles Curtis
+		command = { type = foreignminister which = 240037 } #Henry L. Stimson
+		command = { type = armamentminister which = 240351 } #Andrew W. Mellon
+		command = { type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 240311 } #Ralph Van Deman
+	}
+	
+	action = {
+		ai_chance = 1
+		name = "William Z. Foster (CPUSA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240390 } #Benjamin Gitlow
+		command = { type = foreignminister which = 240051 } #Eugene Dennis
+		command = { type = armamentminister which = 240391 } #Abram Jakira
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+		command = { type = local_setflag which = USAC2}
+		command = { type = local_setflag which = USMC1}
+	}			
+}
+
+# Oscar W. Underwood died
+event = {
+	id = 133207006
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		headofstate = 240389
+	}
+	
+	name = "Oscar W. Underwood Died"
+	desc = "Oscar W. Underwood died in office, Cordell Hull is appointed"
+	
+	offset = 2
+	date = { day = 25 month = January year = 1929 }
+	deathdate = { day = 25 month = January year = 1930 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Cordell Hull"
+		command = { type = foreignminister which = 240003 }#Cordell Hull
+		command = { type = sleepminister which = 240281 }
+	}				
+}	
+
+# New Head of Intelligence - Friedman
+event = {
+	id = 133207004
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		OR = {government = democratic
+			local_flag = RAPH 
+		}	
+	}
+	
+	name = "New Head of Intelligence"
+	desc = "Ralph retired, Friedman is in "
+	
+	offset = 2
+	date = { day = 1 month = September year = 1929 }
+	deathdate = { day = 1 month = September year = 1930 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint William F. Friedman"
+		command = { type = ministerofintelligence which = 240006 }#William F. Friedman
+		command = { type = sleepminister which = 240311 }#Ralphy + duplicated versions of him
+		command = { type = sleepminister which = 240312 }
+		command = { type = sleepminister which = 240318 }
+	}				
+}	
+
+# 1932 Elections
+event = {
+	id = 133207003
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The US election of 1932 was a massive one based around the Great depression. Hoovers popularity was driven deep underground for his inability to solve the crisis and with new comer FDR bringing new ideas to the table belived he can advert this crisis. FDR would go on to win by a major land slide victory."
+	
+	date = { day = 6 month = November year = 1932 }
+	deathdate = { day = 6 month = November year = 1933 }
+	
+	action_a = {
+		ai_chance = 98
+		name = "Franklin D. Roosevelt (Dem)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 240001 } #Franklin D. Roosevelt
+		command = { type = headofgovernment which = 240002} #John Nance Garner
+		command = { type = foreignminister which = 240003 } #Cordell Hull
+		command = { type = armamentminister which = 240378 } #William H. Woodin
+		command = { type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "Herbert Hoover (Rep)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 240382 } #Herbert Hoover
+		command = { type = headofgovernment which = 240383 } #Charles Curtis
+		command = { type = foreignminister which = 240037 } #Henry L. Stimson
+		command = { type = armamentminister which = 2403042 } #Ogden L. Mills
+		command = { type = ministerofsecurity which = 240369 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+	}
+	action_c = {
+		ai_chance = 1
+		name = "William Z. Foster (CPUSA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240392 } #James W. Ford
+		command = { type = foreignminister which = 240051 } #Eugene Dennis
+		command = { type = armamentminister which = 240072 } #Wyndham Mortimer
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+		command = { type = local_setflag which = USMC1}
+	}		
+}
+####################################
+##Alternative American Dictatotorial outcomes
+####################################
+
+# James P. Cannon expelled
+event = {
+	id = 133207010
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+	}
+	
+	name = "James P. Cannon Expelled"
+	desc = "During James Cannons trip to Russia he read an interesting critique of the International written by Trotsky. Since they he became a beliver but however at home the Party base were disgusted at him and his new ideas. They demand an explusion of James and his Trotskite ideals!"
+	
+	offset = 2
+	date = { day = 1 month = October year = 1928 }
+	deathdate = { day = 1 month = October year = 1929 }
+	
+	action_a = {
+		ai_chance = 90
+		name = "He is a Trotskist and a traitor!"
+		command = { type = foreignminister which = 240051 }#Eugene Dennis
+		command = { type = sleepminister which = 240287 }#James P. Cannon (Foreigen version not HoS)
+	}
+	action_b = {
+		ai_chance = 10
+		name = "We cant afford to expell him"
+		command = { type = 	domestic which = democratic value = -1}
+		command = { type = 	dissent value = 5} 
+		command = { type = trigger which = 133207011}
+	}
+}		
+
+# Party Divide
+event = {
+	id = 133207011
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	##Triggered by 133207010
+	
+	name = "Party Divide"
+	desc = "Several High officals within the communist party are worried about the choice of not expelling James P. Cannon and his far reaching Trotsky ideals. They are threatening to form splinter groups if their demands of removing James P Cannon and his Trotskite followers are not met."
+	
+	action_a = {
+		ai_chance = 25
+		name = "We now see the error of our ways"
+		command = { type = 	dissent value = 5}
+		command = { type = 	domestic which = democratic value = 1}
+		command = { type = foreignminister which = 240051 }#Eugene Dennis
+		command = { type = sleepminister which = 240287 }#James P. Cannon (Foreigen version not HoS)
+	}
+	action_b = {
+		ai_chance = 75
+		name = "Its nothing but empty threats!"
+		command = { type = 	dissent value = 5} 
+		command = { type = headofgovernment which = 240034 } #James P. Cannon
+		command = { type = foreignminister which = 240400 } #Martin Abern
+		command = { type = armamentminister which = 240396 } #Max Shachtman
+		command = { type = ministerofsecurity which = 240399 } #Albert Goldman
+		command = { type = ministerofintelligence which = 240401 } #Joseph Vanzler
+		command = { type = local_setflag which = USAC4}
+	}
+}
+
+# 1928 Elections (Cannon not expelled)	
+event = {
+	id = 133207012
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		local_flag = USAC4 ##Did not expell James Cannon
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "EVT_133207012_DESC"
+	
+	date = { day = 6 month = November year = 1928 }
+	deathdate = { day = 6 month = November year = 1929 }
+	
+	action_a = {
+		ai_chance = 25
+		name = "Huey Long (Union)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 240394 } #Huey Long
+		command = { type = headofgovernment which = 240031} #Gerald K. Smith
+		command = { type = foreignminister which = 240045 } #Charles Coughlin
+		command = { type = armamentminister which = 240070 } #Henry Ford
+		command = { type = ministerofsecurity which = 240404 } #Prescott Sheldon Bush
+		command = { type = ministerofintelligence which = 240311 } #Ralph Van Deman
+		command = { type = local_setflag which = USAC3}
+		command = { type = local_setflag which = RAPH}
+		command = { type = local_setflag which = HUEY}
+		
+	}
+	action_b = {
+		ai_chance = 5
+		name = "Norman Thomas (SPA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 240021 } #Norman Thomas
+		command = { type = headofgovernment which = 240395 } #Morris Hillquit
+		command = { type = foreignminister which = 240403 } #Jacob Panken
+		command = { type = armamentminister which = 240402 } #David Dubinsky
+		command = { type = ministerofsecurity which = 240090 } #Daniel Hoan
+		command = { type = ministerofintelligence which = 240311 } #Ralph Van Deman
+		command = { type = local_setflag which = RAPH}
+	}
+	action_c = {
+		ai_chance = 35
+		name = "William Z. Foster (CPUSA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240034 } #James P. Cannon
+		command = { type = foreignminister which = 240400 } #Martin Abern
+		command = { type = armamentminister which = 240396 } #Max Shachtman
+		command = { type = ministerofsecurity which = 240399 } #Albert Goldman
+		command = { type = ministerofintelligence which = 240401 } #Joseph Vanzler		
+		command = { type = local_setflag which = USAC5}
+	}
+	action_d = {
+		ai_chance = 35
+		name = "Earl Browder (PCP)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240020 } #Earl Browder
+		command = { type = headofgovernment which = 240390 } #Benjamin Gitlow
+		command = { type = foreignminister which = 240051 } #Eugene Dennis
+		command = { type = armamentminister which = 240391 } #Abram Jakira
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+		command = { type = local_setflag which = USAC5}
+	}		
+}
+
+# 1932 Elections (If PCP is around)
+event = {
+	id = 133207013
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		local_flag = USAC5 ## If PCP is around
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The 1932 election was with the depression is full swing. The communists failure to avert or lessen the pain of the depression along with the constant infighting caused many voters to shy away towards Long's Unionist party. The Socialist party of America managed to gain some of these deserter voters but will it be enough to win the election?"
+	
+	date = { day = 6 month = November year = 1932 }
+	deathdate = { day = 6 month = November year = 1933 }
+	
+	action_a = {
+		ai_chance = 50
+		name = "Huey Long (Union)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 240394 } #Huey Long
+		command = { type = headofgovernment which = 240031} #Gerald K. Smith
+		command = { type = foreignminister which = 240045 } #Charles Coughlin
+		command = { type = armamentminister which = 240070 } #Henry Ford
+		command = { type = ministerofsecurity which = 240404 } #Prescott Sheldon Bush
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+		command = { type = local_setflag which = HUEY}
+	}
+	action_b = {
+		ai_chance = 10
+		name = "Norman Thomas (SPA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 240021 } #Norman Thomas
+		command = { type = headofgovernment which = 240395 } #Morris Hillquit
+		command = { type = foreignminister which = 240403 } #Jacob Panken
+		command = { type = armamentminister which = 240402 } #David Dubinsky
+		command = { type = ministerofsecurity which = 240090 } #Daniel Hoan
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+	}
+	action_c = {
+		ai_chance = 20
+		name = "William Z. Foster (CPUSA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240034 } #James P. Cannon
+		command = { type = foreignminister which = 240400 } #Martin Abern
+		command = { type = armamentminister which = 240396 } #Max Shachtman
+		command = { type = ministerofsecurity which = 240399 } #Albert Goldman
+		command = { type = ministerofintelligence which = 240401 } #Joseph Vanzler	
+	}
+	action_d = {
+		ai_chance = 20
+		name = "Earl Browder (PCP)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240020 } #Earl Browder
+		command = { type = headofgovernment which = 240392 } #James W. Ford
+		command = { type = foreignminister which = 240051 } #Eugene Dennis
+		command = { type = armamentminister which = 240072 } #Wyndham Mortimer
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+	}			
+}	
+
+# 1928 Elections (Communist government)
+event = {
+	id = 133207007
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = USAC1} ##prevents a double election
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The 1928 Election was full of exciting choices and runners. The Communist Party of the USA managed to stablize after the Trotskist issue but however James Cannon went out to challenge the CPUSA by forming his own party, the Communist League of America. The fighting between the two gave hope and rise to Huey longs Unionist party and the Socialist Party of America at a chance to achieve victory."
+	
+	date = { day = 6 month = November year = 1928 }
+	deathdate = { day = 6 month = November year = 1929 }
+	
+	action_a = {
+		ai_chance = 25
+		name = "Huey Long (Union)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5}
+		command = { type = headofstate which = 240394 } #Huey Long
+		command = { type = headofgovernment which = 240031} #Gerald K. Smith
+		command = { type = foreignminister which = 240045 } #Charles Coughlin
+		command = { type = armamentminister which = 240070 } #Henry Ford
+		command = { type = ministerofsecurity which = 240404 } #Prescott Sheldon Bush
+		command = { type = ministerofintelligence which = 240311 } #Ralph Van Deman
+		command = { type = local_setflag which = RAPH}
+		command = { type = local_setflag which = HUEY}
+	}
+	action_b = {
+		ai_chance = 5
+		name = "Norman Thomas (SPA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 240021 } #Norman Thomas
+		command = { type = headofgovernment which = 240395 } #Morris Hillquit
+		command = { type = foreignminister which = 240403 } #Jacob Panken
+		command = { type = armamentminister which = 240402 } #David Dubinsky
+		command = { type = ministerofsecurity which = 240090 } #Daniel Hoan
+		command = { type = ministerofintelligence which = 240311 } #Ralph Van Deman
+		command = { type = local_setflag which = RAPH}
+	}
+	action_c = {
+		ai_chance = 40
+		name = "William Z. Foster (CPUSA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240390 } #Benjamin Gitlow
+		command = { type = foreignminister which = 240051 } #Eugene Dennis
+		command = { type = armamentminister which = 240391 } #Abram Jakira
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+	}
+	action_d = {
+		ai_chance = 30
+		name = "James P. Cannon (CLA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240336 } #James P. Cannon
+		command = { type = headofgovernment which = 240393 } #Martin Abern
+		command = { type = foreignminister which = 240400 } #Martin Abern
+		command = { type = armamentminister which = 240396 } #Max Shachtman
+		command = { type = ministerofsecurity which = 240399 } #Albert Goldman
+		command = { type = ministerofintelligence which = 240401 } #Joseph Vanzler	
+	}		
+}
+
+# 1932 Elections (Communist government)
+event = {
+	id = 133207008
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		NOT = {local_flag = USAC2} ##prevents a double election
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The 1932 election revoled around the Great Depression. Although some reforms were done not enough steps were taken to avert the crisis. With the Communist party's in deadlock fighting it gave rise to Long's and Thomases parties by acquiring abandoning voters."
+	
+	date = { day = 6 month = November year = 1932 }
+	deathdate = { day = 6 month = November year = 1933 }
+	
+	action_a = {
+		ai_chance = 45
+		name = "Huey Long (Union)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 240394 } #Huey Long
+		command = { type = headofgovernment which = 240031} #Gerald K. Smith
+		command = { type = foreignminister which = 240045 } #Charles Coughlin
+		command = { type = armamentminister which = 240070 } #Henry Ford
+		command = { type = ministerofsecurity which = 240404 } #Prescott Sheldon Bush
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+		command = { type = local_setflag which = HUEY}
+		
+	}
+	action_b = {
+		ai_chance = 10
+		name = "Norman Thomas (SPA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 240021 } #Norman Thomas
+		command = { type = headofgovernment which = 240395 } #Morris Hillquit
+		command = { type = foreignminister which = 240403 } #Jacob Panken
+		command = { type = armamentminister which = 240402 } #David Dubinsky
+		command = { type = ministerofsecurity which = 240090 } #Daniel Hoan
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+	}
+	action_c = {
+		ai_chance = 30
+		name = "William Z. Foster (CPUSA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240392 } #James W. Ford
+		command = { type = foreignminister which = 240051 } #Eugene Dennis
+		command = { type = armamentminister which = 240072 } #Wyndham Mortimer
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+	}
+	action_d = {
+		ai_chance = 15
+		name = "James P. Cannon (CLA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240336 } #James P. Cannon
+		command = { type = headofgovernment which = 240393 } #Martin Abern
+		command = { type = foreignminister which = 240400 } #Martin Abern
+		command = { type = armamentminister which = 240396 } #Max Shachtman
+		command = { type = ministerofsecurity which = 240399 } #Albert Goldman
+		command = { type = ministerofintelligence which = 240401 } #Joseph Vanzler	
+	}		
+}
+
+# 1932 Elections (Huey Long HoS)
+event = {
+	id = 133207009
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		local_flag = USAC3 ##Long wins 1928 commie election
+	}
+	
+	offset = 2	
+	name = "ELECTION_TITLE"
+	desc = "The 1932 election heavily revolved around the great depression. Long's plans of recovery from the depression appear to be working, to a small extent, however opposition critize his methodlogy. The Socialists party of America believed he is ruining the country and tearing it down to the path of totalism while the now recovered and reformed Communist party take the time to claim that only communist can bring the state out of the depression."
+	
+	date = { day = 6 month = November year = 1932 }
+	deathdate = { day = 6 month = November year = 1933 }
+	
+	action_a = {
+		ai_chance = 70
+		name = "Huey Long (Union)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 240394 } #Huey Long
+		command = { type = headofgovernment which = 240031} #Gerald K. Smith
+		command = { type = foreignminister which = 240045 } #Charles Coughlin
+		command = { type = armamentminister which = 240070 } #Henry Ford
+		command = { type = ministerofsecurity which = 240404 } #Prescott Sheldon Bush
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+		
+	}
+	action_b = {
+		ai_chance = 15
+		name = "Norman Thomas (SPA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 240021 } #Norman Thomas
+		command = { type = headofgovernment which = 240395 } #Morris Hillquit
+		command = { type = foreignminister which = 240403 } #Jacob Panken
+		command = { type = armamentminister which = 240402 } #David Dubinsky
+		command = { type = ministerofsecurity which = 240090 } #Daniel Hoan
+		command = { type = ministerofintelligence which = 240006 } #William F. Friedman
+	}
+	action_c = {
+		ai_chance = 15
+		name = "William Z. Foster (CPUSA)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 240389 } #William Z. Foster
+		command = { type = headofgovernment which = 240392 } #James W. Ford
+		command = { type = foreignminister which = 240051 } #Eugene Dennis
+		command = { type = armamentminister which = 240072 } #Wyndham Mortimer
+		command = { type = ministerofsecurity which = 240371 } #Robert Minor
+		command = { type = ministerofintelligence which = 240103 } #Harry Haywood
+		command = { type = local_setflag which = USMC1}
+	}		
+}
+
+# New Armaments Minister - Mortimer
+event = {
+	id = 133207014
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = communist
+		headofgovernment = 240389
+	}
+	
+	name = "New Armaments Minister"
+	desc = "Abram Jakira passed away, Wyndham Mortimer was appointed"
+	
+	offset = 2
+	date = { day = 1 month = October year = 1928 }
+	deathdate = { day = 1 month = October year = 1929 }
+	
+	action_a = {
+		ai_chance = 90
+		name = "Appoint Wyndham Mortimer"
+		command = { type = armamentminister which = 240072 } #Wyndham Mortimer
+		command = { type = sleepminister which = 240391 }#Abram
+	}
+}	
+
+####################################
+##Historical American Military head's Change events
+####################################
+
+# New Chief of Army - Peyton C. March
+event = {
+	id = 133207015
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "New Chief of Staff Appointed"
+	desc = "Peyton C. March is in, Wootherspoon retired back in 1914"
+	
+	offset = 2
+	date = { day = 20 month = May year = 1918 }
+	deathdate = { day = 20 month = May year = 1919 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Peyton C. March"
+		command = { type = chiefofstaff which = 240269 } 
+		command = { type = chiefofarmy which = 240250 }
+		command = { type = sleepminister which = 240266 }
+		command = { type = sleepminister which = 240247 }
+	}				
+}
+
+# Peyton C. March retired
+event = {
+	id = 133207016
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Peyton C. March Retired"
+	desc = "John J. Pershing is in, March Retired "
+	
+	offset = 2
+	date = { day = 1 month = July year = 1921 }
+	deathdate = { day = 1 month = July year = 1922 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint John J. Pershing"
+		command = { type = chiefofstaff which = 240270 } 
+		command = { type = chiefofarmy which = 240251 }
+		command = { type = sleepminister which = 240250 }
+		command = { type = sleepminister which = 240269 }
+	}				
+}	
+
+# Pershing Retired
+event = {
+	id = 133207017
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Pershing Retired"
+	desc = "John L. Hines is in, Pershing Retired"
+	
+	offset = 2
+	date = { day = 13 month = September year = 1924 }
+	deathdate = { day = 13 month = September year = 1925 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint John L. Hines"
+		command = { type = chiefofstaff which = 240271 } 
+		command = { type = chiefofarmy which = 240252 }
+		command = { type = sleepminister which = 240251 }
+		command = { type = sleepminister which = 240270 }
+	}				
+}
+
+# John L. Hines Leaves Office
+event = {
+	id = 133207018
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "John L. Hines Leaves Office"
+	desc = "Appoint Charles Pelot Summerall, Hines left"
+	
+	offset = 2
+	date = { day = 20 month = November year = 1926 }
+	deathdate = { day = 20 month = November year = 1927 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles Pelot Summerall"
+		command = { type = chiefofstaff which = 240406 } 
+		command = { type = chiefofarmy which = 240405 }
+	}				
+}
+
+# Douglas MacArthur is the new Chief of Staff
+event = {
+	id = 133207019
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Douglas MacArthur is the new Chief of Staff"
+	desc = "Appoint Douglas MacArthur, Charles Pelot Summerall left office"
+	
+	offset = 2
+	date = { day = 21 month = November year = 1930 }
+	deathdate = { day = 21 month = November year = 1931 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles Pelot Summerall"
+		command = { type = chiefofstaff which = 240140 } 
+		command = { type = chiefofarmy which = 240141 }
+	}				
+}
+
+# New Chief of Navy - Robert E. Coontz
+event = {
+	id = 133207020
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "New Chief of Navy"
+	desc = "Appoint Robert E. Coontz"
+	
+	offset = 2
+	date = { day = 1 month = November year = 1919 }
+	deathdate = { day = 1 month = November year = 1920 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Robert E. Coontz"
+		command = { type = chiefofnavy which = 240256 } 
+	}				
+}
+
+# Robert Coontz left office
+event = {
+	id = 133207021
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Robert Coontz left office"
+	desc = "Appoint Edward W. Eberle last guy left"
+	
+	offset = 2
+	date = { day = 21 month = July year = 1923 }
+	deathdate = { day = 21 month = July year = 1924 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Edward W. Eberle"
+		command = { type = chiefofnavy which = 240257 } 
+	}				
+}
+
+# Edward W. Eberle left office
+event = {
+	id = 133207022
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Edward W. Eberle left office"
+	desc = "Appoint Charles F. Hughes last guy left"
+	
+	offset = 2
+	date = { day = 14 month = November year = 1927 }
+	deathdate = { day = 14 month = November year = 1928 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles F. Hughes"
+		command = { type = chiefofnavy which = 240407 } # Charles F. Hughes
+	}				
+}
+
+# Charles F. Hughes Retires
+event = {
+	id = 133207023
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Charles F. Hughes Retires"
+	desc = "Appoint William V. Pratt, Hughes retired"
+	
+	offset = 2
+	date = { day = 17 month = September year = 1930 }
+	deathdate = { day = 17 month = September year = 1931 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint William V. Pratt"
+		command = { type = chiefofnavy which = 240408 } # William V. Pratt
+		command = { type = sleepminister which = 240407 } # Charles F. Hughes
+	}				
+}
+
+# Appoint Charles Menoher
+event = {
+	id = 133207024
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "New Chief of Air"
+	desc = "Appoint Charles Menoher"
+	
+	offset = 2
+	date = { day = 2 month = January year = 1919 }
+	deathdate = { day = 2 month = January year = 1920 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles Menoher"
+		command = { type = chiefofair which = 240239 } # Charles Menoher
+	}				
+}
+
+# Charles Menoher left office
+event = {
+	id = 133207025
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Charles Menoher left office"
+	desc = "Appoint Mason Patrick last guy left"
+	
+	offset = 2
+	date = { day = 5 month = October year = 1921 }
+	deathdate = { day = 5 month = October year = 1922 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Mason Patrick"
+		command = { type = chiefofair which = 240238 } # Mason Patrick
+	}				
+}
+
+# Mason Patrick Retires
+event = {
+	id = 133207026
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "Mason Patrick Retires"
+	desc = "Appoint James Fechet. Patrick retired"
+	
+	offset = 2
+	date = { day = 14 month = December year = 1927 }
+	deathdate = { day = 14 month = December year = 1928 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint James Fechet"
+		command = { type = chiefofair which = 240409 } # James Fechet
+		command = { type = sleepminister which = 240238 } # Mason Patrick
+	}				
+}
+
+# James Fechet leaves office
+event = {
+	id = 133207027
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "James Fechet leaves office"
+	desc = "Appoint Benjamin Foulois, Fechet left"
+	
+	offset = 2
+	date = { day = 20 month = December year = 1931 }
+	deathdate = { day = 20 month = December year = 1932 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Benjamin Foulois"
+		command = { type = chiefofair which = 240237 } # Benjamin Foulois
+	}				
+}
+####################################
+##Communist American Military head's Change events
+####################################	
+event = {
+	id = 133207028
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = USMC1
+	}
+	
+	date = { day = 1 month = January year = 1914 }
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "The Commune government demands a change in military leadership. They have chosen Hans Amlie to lead the effort."
+	
+	action_a = {
+		ai_chance = 100
+		name = "Hans Amlie Will Lead the Peoples Army!"
+		command = { type = chiefofstaff which = 240107 } # Hans Amlie
+		command = { type = trigger which = 133207029 }
+		command = { type = trigger which = 133207030 }
+		command = { type = trigger which = 133207031 }
+		command = { type = local_clrflag which = USMC1 }
+	}				
+}
+event = {
+	id = 133207029
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133207028
+	
+	name = "Leading The Army?" 
+	desc = "Should we go with Oliver Law, who promotes decivise battle, or Steve Nelson a strong proponet of defensive warfare?"
+	
+	action_a = {
+		ai_chance = 30
+		name = "Appoint Oliver Law"
+		command = { type = chiefofarmy which = 240113 } # Oliver Law
+	}
+	action_b = {
+		ai_chance = 70
+		name = "Appoint Steve Nelson"
+		command = { type = chiefofarmy which = 240114 } # Steve Nelson
+	}		
+}	
+event = {
+	id = 133207030
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133207028
+	
+	name = "Leading the Navy?"
+	desc = "John Abt is the only able bodied leader for the Navy"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint John Abt"
+		command = { type = chiefofnavy which = 240128 } # John Abt
+	}					
+}	
+event = {
+	id = 133207031
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133207028
+	
+	name = "Leading the Airforce?"
+	desc = "John Abt is the only able bodied leader for the Airforce"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint John Abt"
+		command = { type = chiefofair which = 240134 } # John Abt
+	}			
+}
+event = {
+	id = 133207032
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	trigger = {
+		local_flag = HUEY
+	}
+	
+	date = { day = 1 month = January year = 1914 }
+	deathdate = { day = 1 month = January year = 1933 }
+	
+	offset = 30	
+	name = "Armed Forces Officer Reorganization"
+	desc = "Huey Long as President wishes to remodel the armed forces"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Larry K. Arnold Will Reorganize Everything"
+		command = { type = chiefofstaff which = 240410 } # Larry K. Arnold
+		command = { type = trigger which = 133207033 }
+		command = { type = trigger which = 133207034 }
+		command = { type = trigger which = 133207035 }
+		command = { type = local_clrflag which = HUEY }
+	}				
+}
+event = {
+	id = 133207033
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133207032
+	
+	name = "Leading The Army?" 
+	desc = "George S. Patton is the only able leader for the army"
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint George S. Patton"
+		command = { type = chiefofarmy which = 240411 } # George S. Patton
+	}
+}	
+event = {
+	id = 133207034
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133207032
+	
+	name = "Leading the Navy?"
+	desc = "William Halsey promotes power projection while Benson is an advocate for decisive battle, who should we go with?"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint William Halsey"
+		command = { type = chiefofnavy which = 240412 } # William Halsey
+	}
+	action_b = {
+		ai_chance = 30
+		name = "Appoint William S. Benson"
+		command = { type = chiefofnavy which = 240255 } # William S. Benson
+	}			
+}	
+event = {
+	id = 133207035
+	random = no
+	country = USA
+	picture = "news_paper"
+	persistent = yes
+	
+	#Triggered by 133207032
+	
+	name = "Leading the Airforce?"
+	desc = "Although both advocate similar ideolgy Charles Lingbergh appears to have more charm"
+	
+	action_a = {
+		ai_chance = 70
+		name = "Appoint Charles Lindbergh"
+		command = { type = chiefofair which = 240131 } # Charles Lindbergh
+	}		
+	action_a = {
+		ai_chance = 30
+		name = "Appoint William Mitchell"
+		command = { type = chiefofair which = 240234 } # William Mitchell
+	}			
+}
+
+# William S. Benson Died
+event = {
+	id = 133207036
+	random = no
+	country = USA
+	picture = "news_paper"
+	
+	trigger = {
+		headofstate = 2403048
+	}
+	
+	name = "William S. Benson Died"
+	desc = "William S. Benson Died, Willam Halsley is in "
+	
+	offset = 2
+	date = { day = 7 month = May year = 1932 }
+	deathdate = { day = 7 month = May year = 1933 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "He will be missed"
+		command = { type = sleepminister which = 240255 } # William S. Benson
+	}				
+}		

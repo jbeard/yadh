@@ -1,0 +1,283 @@
+event = {
+	id = 8015601
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1935 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545012 } # Augustin Voloshyn
+		command = { type = headofgovernment which = 545015 } # Yaroslav Stetsko
+		command = { type = foreignminister which = 545022 } # Yulian Revay
+		command = { type = armamentminister which = 545034 } # Grigorij Petrovsky
+		command = { type = ministerofsecurity which = 545040 } # Nil Khasevich
+		command = { type = ministerofintelligence which = 545048 } # Olena Teliha
+		command = { type = chiefofstaff which = 545059 } # Leonid Skoropadsky
+		command = { type = chiefofarmy which = 545063 } # Roman Shukhevich
+		command = { type = chiefofnavy which = 545071 } # Vladimir Pilipenko
+		command = { type = chiefofair which = 545075 } # Avhustyn Shtefan
+	}
+}
+
+event = {
+	id = 8015602
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545200 } # Grigorij Petrovsky
+		command = { type = headofgovernment which = 545201 } # Stanislav Kosior
+	}
+}
+
+event = {
+	id = 8015603
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1938 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545202 } # Leonid Korniyets 
+		command = { type = headofgovernment which = 545203 } # Nikita Krushchev
+	}
+}
+
+event = {
+	id = 8015604
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545204 } # Mykhailo Hrechukha
+		command = { type = headofgovernment which = 545203 } # Nikita Krushchev
+	}
+}
+
+event = {
+	id = 8015605
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545204 } # Mykhailo Hrechukha
+		command = { type = headofgovernment which = 545002 } # Lazar Kaganovich
+	}
+}
+
+event = {
+	id = 8015606
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545204 } # Mykhailo Hrechukha
+		command = { type = headofgovernment which = 545205 } # Nikita Krushchev
+	}
+}
+
+event = {
+	id = 8015607
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545204 } # Mykhailo Hrechukha
+		command = { type = headofgovernment which = 545206 } # Leonid Melnikov
+	}
+}
+
+event = {
+	id = 8015608
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545204 } # Mykhailo Hrechukha
+		command = { type = headofgovernment which = 545207 } # Aleksey Kirichenko
+	}
+}
+
+event = {
+	id = 8015609
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545208 } # Demyan Korotchenko
+		command = { type = headofgovernment which = 545207 } # Aleksey Kirichenko
+	}
+}
+
+event = {
+	id = 8015610
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545208 } # Demyan Korotchenko
+		command = { type = headofgovernment which = 545209 } # Nikolay Podgorny
+	}
+}
+
+event = {
+	id = 8015611
+	country = UKR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 545208 } # Demyan Korotchenko
+		command = { type = headofgovernment which = 545210 } # Pyotr Shelest
+	}
+}
+

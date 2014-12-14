@@ -1,0 +1,834 @@
+event = {
+	id = 8009701
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 500100 } # Yusuf Izzuddin of Perak
+		command = { type = headofgovernment which = 500101 } # Sir Edward Gent
+	}
+}
+
+event = {
+	id = 8009702
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500100 } # Yusuf Izzuddin of Perak
+		command = { type = headofgovernment which = 500102 } # Sir Henry Gurney
+	}
+}
+
+event = {
+	id = 8009703
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500103 } # Badlishah of Kedah
+		command = { type = headofgovernment which = 500102 } # Sir Henry Gurney
+	}
+}
+
+# Assassination of High Commissioner Henry Gurney
+event = {
+	id = 8009704
+	country = MLY
+
+	name = EVT_8009704_NAME
+	desc = EVT_8009704_DESC
+	picture = "nwo\tomb_of_gurney"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8009704_A
+		ai_chance = 100
+		command = { type = headofstate which = 500103 } # Badlishah of Kedah
+		command = { type = headofgovernment which = 500002 } # Sir Gerald W.R. Templer
+		command = { type = sleepminister which = 500102 } # Sir Henry Gurney
+	}
+}
+
+event = {
+	id = 8009705
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500104 } # Ibrahim Muhammad of Kelantan
+		command = { type = headofgovernment which = 500105 } # Sir Donald MacGillivray
+	}
+}
+
+event = {
+	id = 8009706
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500106 } # Abdul Rahman of Negeri Sembilan
+		command = { type = headofgovernment which = 500107 } # Abdul Rahman
+	}
+}
+
+event = {
+	id = 8009707
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500108 } # Hisamuddin Alam of Selangor
+		command = { type = headofgovernment which = 500107 } # Abdul Rahman
+	}
+}
+
+event = {
+	id = 8009708
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500109 } # Tuanku Syed Putra of Perlis
+		command = { type = headofgovernment which = 500107 } # Abdul Rahman
+	}
+}
+
+event = {
+	id = 8009709
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500110 } # Ismail Nasiruddin of Terengganu
+	}
+}
+
+event = {
+	id = 8009710
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500111 } # Tuanku Abdul Halim of Kedah
+	}
+}
+
+event = {
+	id = 8009711
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 500112 } # Abdul Razak Hussein
+	}
+}
+
+event = {
+	id = 8009712
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500113 } # Yahya Petra of Kelantan
+	}
+}
+
+event = {
+	id = 8009713
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1976 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 500114 } # Hussein Onn
+	}
+}
+
+event = {
+	id = 8009714
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500115 } # Ahmad Shah of Pahang
+	}
+}
+
+event = {
+	id = 8009715
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1981 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 500116 } # Mahathir Mohamad
+	}
+}
+
+event = {
+	id = 8009716
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500117 } # Iskandar of Johor
+	}
+}
+
+event = {
+	id = 8009717
+	country = MLY
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 500118 } # Azlan Muhibbuddin of Perak
+	}
+}
+
+# Malayan Emergency
+event = {
+	id = 8009719
+	country = MLY
+
+	name = EVT_8009719_NAME
+	desc = EVT_8009719_DESC
+	picture = "nwo\malayan_emergency"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = fascist
+			government = democratic
+		}
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 1000
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action_a = {
+		name = EVT_8009719_A
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = dissent value = 10 }
+	}
+
+}
+
+### Federation of Malaysia
+
+# Singapore joins Malaysia
+
+event = {
+	id = 8009720
+	country = U75
+	
+	name = EVT_8009720_NAME
+	desc = EVT_8009720_DESC
+	picture = "nwo\federation_of_malaysia"
+	style = 1
+
+	trigger = {
+		exists = MLY
+	}
+
+	date = { day = 1 month = september year = 1963 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8009720_A
+		ai_chance = 90
+		command = { type = relation which = MLY value = 100 }
+	}
+	
+	action_b = {
+		name = EVT_8009720_B
+		ai_chance = 10
+		command = { type = dissent value = 3 }
+		command = { type = belligerence value = 20 }
+		command = { type = relation which = MLY value = -100 }
+		command = { type = sleepevent which = 8009721 }
+	}
+
+}
+
+event = {
+	id = 8009721
+	country = MLY
+
+	name = EVT_8009721_NAME
+	desc = EVT_8009721_DESC
+	picture = "nwo\federation_of_malaysia"
+	style = 1
+
+	trigger = {
+		event = 8009720
+	}
+
+	date = { day = 16 month = september year = 1963 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8009721_A
+		command = { type = inherit which = U75 }
+		command = { type = dissent value = -3 }
+	}
+
+}
+
+# Sarawak joins Malaysia
+
+event = {
+	id = 8009722
+	country = SAR
+
+	name = EVT_8009722_NAME
+	desc = EVT_8009722_DESC
+	picture = "nwo\federation_of_malaysia"
+	style = 1
+
+	trigger = {
+		exists = MLY
+	}
+
+	date = { day = 1 month = september year = 1963 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8009722_A
+		ai_chance = 95
+		command = { type = relation which = MLY value = 200 }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = EVT_8009722_B
+		ai_chance = 5
+		command = { type = relation which = MLY value = -200 }
+		command = { type = sleepevent which = 8009723 }
+	}
+
+}
+
+event = {
+	id = 8009723
+	country = MLY
+
+	name = EVT_8009723_NAME
+	desc = EVT_8009723_DESC
+	picture = "nwo\federation_of_malaysia"
+	style = 1
+
+	trigger = {
+		event = 8009722
+	}
+
+	date = { day = 1 month = september year = 1963 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8009723_A
+		command = { type = inherit which = SAR }
+		command = { type = name where = MLY which = "MLY63" }
+		command = { type = flag_ext where = MLY which = _1963 }
+		command = { type = dissent value = -3 }
+	}
+
+}
+
+# Konfrontasi
+
+event = {
+	id = 8009724
+	country = INO
+
+	name = EVT_8009724_NAME
+	desc = EVT_8009724_DESC
+	picture = nwo\konfrontasi
+	decision_picture = nwo\d_konfrontasi
+	style = 1
+
+	trigger = {
+		exists = SAR
+		ai = SAR
+	}
+	
+	decision = {
+		exists = SAR
+		ai = SAR
+	}
+
+	date = { day = 1 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1965 }
+
+	action = {
+		name = EVT_8009724_A
+		ai_chance = 80
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 15 }
+		command = { type = manpowerpool value = -20 }
+		command = { type = money value = -500 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = EVT_8009724_B
+		trigger = { ai = yes }
+		ai_chance = 20
+		command = { type = dissent value = -1 }
+	}
+
+}
+
+event = {
+	id = 8009725
+	country = MLY
+
+	name = EVT_8009725_NAME
+	desc = EVT_8009725_DESC
+	picture = nwo\konfrontasi
+	style = 1
+	
+	trigger = {
+		event = 8009724
+	}
+
+	date = { day = 1 month = january year = 1962 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1965 }
+
+	action = {
+		name = EVT_8009725_A
+		ai_chance = 80
+		command = { type = dissent value = -3 }
+		command = { type = manpowerpool value = -15 }
+		command = { type = money value = -200 }
+		command = { type = sleepevent which = 8009726 }
+	}
+	
+	action = {
+		name = EVT_8009725_B
+		ai_chance = 20
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8009727 }
+	}
+
+}
+
+# Strong Malaysian support for Sarawak
+event = {
+	id = 8009726
+	country = INO
+	one_action = yes
+
+	name = EVT_8009726_NAME
+	desc = EVT_8009726_DESC
+	picture = nwo\konfrontasi
+	style = 1
+
+	trigger = {
+		event = 8009725
+		exists = SAR
+	}
+
+	date = { day = 1 month = january year = 1962 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1965 }
+
+	action = {
+		name = EVT_8009726_A
+		ai_chance = 99
+		command = { type = dissent value = 10 }
+		command = { type = manpowerpool value = -10 }
+	}
+	
+	action = {
+		name = EVT_8009726_B
+		ai_chance = 1
+		command = { type = dissent value = -3 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = inherit which = SAR }
+	}
+
+}
+
+# Weak Malaysian support for Sarawak
+event = {
+	id = 8009727
+	country = INO
+	one_action = yes
+
+	name = EVT_8009727_NAME
+	desc = EVT_8009727_DESC
+	picture = nwo\konfrontasi
+	style = 1
+
+	trigger = {
+		event = 8009725
+		exists = SAR
+	}
+
+	date = { day = 1 month = january year = 1962 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1965 }
+
+	action = {
+		name = EVT_8009727_A
+		ai_chance = 90
+		command = { type = dissent value = 10 }
+		command = { type = manpowerpool value = -5 }
+	}
+	
+	action = {
+		name = EVT_8009727_B
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+		command = { type = manpowerpool value = -5 }
+		command = { type = inherit which = SAR }
+	}
+
+}
+
+### Other events
+event = {
+	id = 8009728
+	country = INO
+
+	name = EVT_8009728_NAME
+	desc = EVT_8009728_DESC
+	picture = nwo\may_13_incident
+	style = 1
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 13 month = may year = 1969 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1969 }
+
+	action = {
+		name = EVT_8009728_A
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+event = {
+	id = 8009729
+	country = INO
+
+	name = EVT_8009729_NAME
+	desc = EVT_8009729_DESC
+	picture = nwo\malaysian_economy
+	decision_picture = nwo\d_malaysian_economy
+	style = 1
+
+	decision = {
+		atwar = no
+	}
+	
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 13 month = may year = 1969 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1969 }
+
+	action = {
+		name = EVT_8009729_A
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = 2 }
+	}
+}

@@ -1,0 +1,264 @@
+# Jerusalem
+event = {
+	id = 8951172	
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1172 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1172 value = 1 } # Jerusalem
+	}
+}
+
+# Dhaka
+event = {
+	id = 8951445
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1445 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1445 value = 1 } # Dhaka
+	}
+}
+
+# Islamabad / Rawalpindi
+event = {
+	id = 8951534
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1534 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1534 value = 1 } # Islamabad
+
+	}
+}
+
+# Srinagar
+event = {
+	id = 8951540
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1540 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1540 value = 1 } # Srinagar
+	}
+}
+
+# Soerabaja
+event = {
+	id = 8951653	
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1653 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1653 value = 1 } # Soerabaja
+	}
+}
+
+# Jogjakarta
+event = {
+	id = 8951654	
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1654 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1654 value = 1 } # Jogjakarta
+	}
+}
+
+# Haemhung
+event = {
+	id = 8951227	
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1227 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1227 value = 1 } # Haemhung
+	}
+}
+
+# Busan
+event = {
+	id = 8951232	
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1232 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1232 value = 1 } # Busan
+	}
+}
+
+# Kuala Lumpur
+event = {
+	id = 8951438
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1438 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1438 value = 1 } # Kuala Lumpur
+	}
+}
+
+# Madras
+event = {
+	id = 8951500	
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1500 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1500 value = 1 } # Madras
+	}
+}
+
+# Madras
+event = {
+	id = 8951199	
+
+	name = EVT_VPCHANGE_NAME
+	desc = EVT_VPCHANGE_DESC
+	picture = "nwo\new_world_order"
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		control = { province = 1199 data = -1 }
+	}
+	
+    date = { day = 0 month = january year = 1945 }
+    offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = province_keypoints which = 1199 value = 1 } # Harbin
+	}
+}

@@ -1,0 +1,755 @@
+event = {
+	id = 8001101
+	country = AUS
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 8 }
+		# Renner government
+		command = { trigger = { NOT = { event = 8203005 } } type = headofstate which = 115014 } # Karl Renner
+		command = { trigger = { NOT = { event = 8203005 } } type = headofgovernment which = 115200 } # Karl Renner
+		# Renner stays with Soviets, alternative government
+		command = { trigger = { event = 8203005 } type = headofstate which = 115201 } # Heinrich Gleissner
+		command = { trigger = { event = 8203005 } type = headofgovernment which = 115107 } # Leopold Figl
+		# Rest of government
+		command = { type = foreignminister which = 115033 } # Leopold Figl
+		command = { type = armamentminister which = 115047 } # Karl Tuppy
+		command = { type = ministerofsecurity which = 115060 } # Franz Sebek
+		command = { type = ministerofintelligence which = 115069 } # Julius Raab
+		command = { type = chiefofstaff which = 115079 } # Eric von Klopfenburg
+		command = { type = chiefofarmy which = 115087 } # Heinrich Gleissner
+		command = { type = chiefofnavy which = 115092 } # Robert Winterstein
+		command = { type = chiefofair which = 115099 } # Egon Berger-Waldenegg
+	}
+}
+
+event = {
+	id = 8001102
+	country = AUS
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+		OR = {
+			event = 8203000
+			event = 8203010
+		} # Austria is properly set up first
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { trigger = { NOT = { event = 8203005 } } type = headofstate which = 115014 } # Karl Renner
+		command = { type = headofgovernment which = 115107 } # Leopold Figl
+		command = { type = foreignminister which = 115032 } # Karl Gruber
+		command = { type = armamentminister which = 115109 } # Ferdinand Graf
+		command = { type = ministerofsecurity which = 115110 } # Josef Geroe
+		command = { type = ministerofintelligence which = 115112 } # Oskar Helmer
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { trigger = { NOT = { event = 8203005 } } type = headofstate which = 115014 } # Karl Renner
+		command = { type = headofgovernment which = 115023 } # Adolf Schaerf
+		command = { type = foreignminister which = 115113 } # Adolf Schaerf
+		command = { type = armamentminister which = 115047 } # Karl Tuppy
+		command = { type = ministerofsecurity which = 115060 } # Franz Sebek
+		command = { type = ministerofintelligence which = 115070 } # Franz Sebek
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001103
+	country = AUS
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { trigger = { NOT = { event = 8203005 } } type = headofstate which = 115014 } # Karl Renner
+		command = { type = headofgovernment which = 115107 } # Leopold Figl
+		command = { type = foreignminister which = 115034 } # Adolf Sch?rf
+		command = { type = armamentminister which = 115046 } # Karl Renner
+		command = { type = ministerofsecurity which = 115111 } # Otto Tschabeck
+		command = { type = ministerofintelligence which = 115069 } # Julius Raab
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { trigger = { NOT = { event = 8203005 } } type = headofstate which = 115014 } # Karl Renner
+		command = { type = headofgovernment which = 115023 } # Adolf Schaerf
+		command = { type = foreignminister which = 115033 } # Leopold Figl
+		command = { type = armamentminister which = 115049 } # Ludwig Huelgerth
+		command = { type = ministerofsecurity which = 115060 } # Franz Sebek
+		command = { type = ministerofintelligence which = 115070 } # Franz Sebek
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 115106 } # Theodor K?rner
+	}
+}
+
+event = {
+	id = 8001104
+	country = AUS
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 115201 } # Heinrich Gleissner
+		command = { type = headofgovernment which = 115108 } # Julius Raab
+		command = { type = foreignminister which = 115032 } # Karl Gruber
+		command = { type = armamentminister which = 115109 } # Ferdinand Graf
+		command = { type = ministerofsecurity which = 115111 } # Otto Tschabeck
+		command = { type = ministerofintelligence which = 115112 } # Oskar Helmer
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 115201 } # Heinrich Gleissner
+		command = { type = headofgovernment which = 115023 } # Adolf Schaerf
+		command = { type = foreignminister which = 115113 } # Adolf Schaerf
+		command = { type = armamentminister which = 115047 } # Karl Tuppy
+		command = { type = ministerofsecurity which = 115060 } # Franz Sebek
+		command = { type = ministerofintelligence which = 115070 } # Franz Sebek
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8001105
+	country = AUS
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 115201 } # Heinrich Gleissner
+		command = { type = headofgovernment which = 115107 } # Leopold Figl
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 115201 } # Heinrich Gleissner
+		command = { type = headofgovernment which = 115023 } # Adolf Schaerf
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8001106
+	country = AUS
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 115204 } # Wolfgang Denk
+		command = { type = headofgovernment which = 115108 } # Julius Raab
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 115202 } # Adolf Sch?rf
+		command = { type = headofstate which = 115204 } # Wolfgang Denk
+		command = { type = headofgovernment which = 115203 } # Bruno Pittermann
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8001107
+	country = AUS
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 115204 } # Wolfgang Denk
+		command = { type = headofgovernment which = 115108 } # Julius Raab
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 115204 } # Wolfgang Denk
+		command = { type = headofgovernment which = 115203 } # Bruno Pittermann
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8001108
+	country = AUS
+
+	name = "EVT_ELECTIONS_NAME"
+	desc = "EVT_ELECTIONS_DESC"
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = "EVT_ELECTIONS_RIGHT"
+		ai_chance = 85
+		command = { type = dissent value = -9 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 115205 } # Julius Raab
+		command = { type = headofgovernment which = 115206 } # Alfons Gorbach
+	}
+	action = {
+		name = "EVT_ELECTIONS_LEFT"
+		ai_chance = 15
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 115202 } # Adolf Sch?rf
+		command = { type = headofgovernment which = 115203 } # Bruno Pittermann
+	}
+	action = {
+		name = "EVT_ELECTIONS_NOCHANGE"
+		ai_chance = 0
+		command = { type = dissent value = 9 }
+	}
+}
+
+event = {
+	id = 8001109
+	country = AUS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1973 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 115207 } # Franz Jonas
+	}
+}
+
+event = {
+	id = 8001110
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115209 } # Josef Klaus
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115208 } # Bruno Kreisky
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001111
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115208 } # Bruno Kreisky
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115209 } # Josef Klaus
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8001112
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1974 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115208 } # Bruno Kreisky
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115210 } # Hermann Withalm
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001113
+	country = AUS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1974 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 115211 } # Rudolf Kirchschläger
+	}
+}
+
+event = {
+	id = 8001114
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115208 } # Bruno Kreisky
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115212 } # Karl Schleinzer
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8001115
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115208 } # Bruno Kreisky
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115213 } # Josef Taus
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8001116
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115214 } # Fred Sinowatz
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115215 } # Alois Mock
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+
+event = {
+	id = 8001117
+	country = AUS
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 115216 } # Kurt Waldheim
+	}
+}
+
+event = {
+	id = 8001118
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115217 } # Franz Vranitzky
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115215 } # Alois Mock
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 8001119
+	country = AUS
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 115217 } # Franz Vranitzky
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 115218 } # Josef Riegler
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 12 }
+	}
+}
+

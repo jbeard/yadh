@@ -1,0 +1,56 @@
+GUY;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+670001;Head of State;Sir Gordon J. Lethem;1933;1964;1964;ML;Die-hard Reformer;High;M562001;X
+670002;Head of Government;Sir Francis Stanley Jackson;1933;1964;1964;ML;Happy Amateur;High;M562002;X
+670003;Foreign Minister;Sir Geoffrey Stanfford Northcote;1933;1964;1964;ML;Apologetic Clerk;High;M562003;X
+670004;Minister of Armament;Sir Ralph Alnwick Grey;1933;1964;1964;ML;Administrative Genius;Medium;M562004;X
+670005;Minister of Security;Charles Campbell Woolley;1933;1964;1964;ML;Compassionate Gentleman;Medium;M562005;X
+670006;Head of Military Intelligence;Edward F. Collingwood;1933;1964;1964;ML;Industrial Specialist;Medium;M562006;X
+670007;Chief of Staff;Charles Birchwood;1933;1964;1964;ML;School of Defence;Medium;M562007;X
+670008;Chief of Army;Frederic Augustis;1933;1964;1964;ML;Armoured Spearhead Doctrine;Medium;M562008;X
+670009;Chief of Navy;H.C. Bigelow;1933;1964;1964;ML;Indirect Approach Doctrine;Medium;M562009;X
+670010;Chief of Air Force;H.F. Burnette;1933;1964;1964;ML;Naval Aviation Doctrine;Medium;M562010;X
+670011;Head of State;Severo Mallet-Prevost;1933;1964;1964;PA;Benevolent Gentleman;High;M562011;X
+670012;Head of State;Dr. Cheddi Jagan;1933;1964;1964;LWR;Popular Figurehead;High;M562012;X
+670013;Head of Government;Frederick Derecourt;1933;1964;1964;PA;Corporate Suit;High;M562013;X
+670014;Head of Government;Forbes Burnham;1933;1964;1964;LWR;Political Protege;High;M562014;X
+670015;Foreign Minister;Charles Joseph Loghie;1933;1964;1964;PA;The Cloak N Dagger Schemer;High;M562015;X
+670016;Foreign Minister;Rasleigh Jackson;1933;1964;1964;LWR;Great Compromiser;High;M562016;X
+670017;Minister of Armament;Maurice Gordon;1933;1964;1964;PA;Resource Industrialist;Medium;M562017;X
+670018;Minister of Armament;Dr. Gobinda Ganga;1933;1964;1964;LWR;Theoretical Scientist;Medium;M562018;X
+670019;Minister of Security;James Christkirk;1933;1964;1964;PA;Crime Fighter;Medium;M562019;X
+670020;Minister of Security;Lien James;1940;1964;1964;ML;Prince of Terror;Medium;M562020;X
+670021;Minister of Security;Vibert Parvathan;1933;1964;1964;LWR;Silent Lawyer;Medium;M562021;X
+670022;Head of Military Intelligence;William J. Featherstone;1933;1964;1964;PA;Dismal Enigma;Medium;M562022;X
+670023;Head of Military Intelligence;C.L.R. James;1933;1964;1964;LWR;Political Specialist;Medium;M562023;X
+670024;Chief of Staff;C.F. Drew;1933;1964;1964;PA;School of Psychology;Medium;L1111;X
+670025;Chief of Staff;Kingsley Forrester;1933;1964;1964;LWR;School of Manoeuvre;Medium;M562025;X
+670026;Chief of Army;H.F.L. Hilton-Green;1933;1964;1964;PA;Decisive Battle Doctrine;Medium;L1164;X
+670027;Chief of Army;Christopher Lobban;1933;1964;1964;LWR;Guns and Butter Doctrine;Medium;M562027;X
+670028;Chief of Navy;Henry Winslow;1933;1964;1964;PA;Base Control Doctrine;Medium;M562028;X
+670029;Chief of Navy;Thomas McGarrity;1933;1964;1964;LWR;Power Projection Doctrine;Medium;M562029;X
+670030;Chief of Air Force;Mortimer Chesswood;1933;1964;1964;PA;Army Aviation Doctrine;Medium;M562030;X
+670031;Chief of Air Force;Kyle Lightfoot;1933;1964;1964;LWR;Air Superiority Doctrine;Medium;M562031;X
+670100;Head of State;Sir Geoffrey Stanfford Northcote;1936;1964;1964;ML;Benevolent Gentleman;Medium;M562003;X
+670101;Head of Government;Sir Geoffrey Stanfford Northcote;1936;1964;1964;ML;Old Admiral;Medium;M562003;X
+670102;Head of State;Sir Francis Stanley Jackson;1937;1964;1964;ML;Autocratic Charmer;Medium;M562002;X
+670103;Head of Government;Sir Gordon J. Lethem;1941;1964;1964;ML;Happy Amateur;Medium;M562001;X
+670104;Head of State;Charles Campbell Woolley;1947;1964;1964;ML;Benevolent Gentleman;Medium;M562005;X
+670105;Head of Government;Charles Campbell Woolley;1947;1964;1964;ML;Old Airmarshal;Medium;M562005;X
+670106;Head of State;Alfred William Lungley Savage;1953;1964;1964;ML;Resigned Generalissimo;Medium;M670106;X
+670107;Head of Government;Cheddi Jagan;1953;1964;1964;ML;Political Protege;Medium;M670107;X
+670108;Head of Government;Alfred William Lungley Savage;1953;1964;1964;ML;Old Airmarshal;Medium;M670106;X
+670109;Head of State;Patrick Muir Renison;1955;1964;1964;ML;Ruthless Powermonger;Medium;M670109;X
+670110;Head of Government;Patrick Muir Renison;1955;1964;1964;ML;Old General;Medium;M670109;X
+670111;Head of State;Ralph Francis Alnwick Grey;1958;1964;1964;ML;Benevolent Gentleman;Medium;M670111;X
+670112;Head of Government;Ralph Francis Alnwick Grey;1958;1964;1964;ML;Corporate Suit;Medium;M670111;X
+670113;Head of Government;Cheddi Jagan;1961;1998;1998;ML;Old Airmarshal;Medium;M670107;X
+670114;Head of State;Richard Edmonds Luyt;1964;1995;1995;SC;Powerhungry Demagogue;Medium;M670114;X
+670115;Head of Government;Forbes Burnham;1964;1986;1986;SC;Old General;Medium;M670115;X
+670116;Head of State;David Rose;1966;1970;2003;SC;Benevolent Gentleman;Medium;M670116;X
+670117;Head of State;Edward Luckhoo;1969;1999;1999;SC;Popular Figurehead;Medium;M670117;X
+670118;Head of State;Arthur Chung;1970;2009;2009;SC;Die-Hard Reformer;Medium;M670118;X
+670119;Head of State;Forbes Burnham;1980;1986;1986;SC;Ruthless Powermonger;Medium;M670115;X
+670120;Head of Government;Ptolemy Reid;1980;2004;2004;SC;Backroom Backstabber;Medium;M670120;X
+670121;Head of Government;Desmond Hoyte;1984;2003;2003;SC;Old Airmarshal;Medium;M670121;X
+670122;Head of State;Desmond Hoyte;1985;2003;2003;SC;Insignificant Layman;Medium;M670121;X
+670123;Head of Government;Hamilton Green;1985;2020;2020;SC;Political Protege;Medium;M670123;X

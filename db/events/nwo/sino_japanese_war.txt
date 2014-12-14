@@ -1,0 +1,256 @@
+event = {
+	id = 8230001
+	country = CHI
+
+	name = EVT_8230001_NAME
+	desc = EVT_8230001_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	trigger = {
+		war = { country = JAP }
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = EVT_8230001_A # They will hold the line
+		ai_chance = 80
+		command = { type = defensiveness which = infantry value = -1 }
+		command = { type = defensiveness which = militia value = -1 }
+		command = { type = trigger which = 8230010 } # CYN
+		command = { type = trigger which = 8230011 } # CXB
+		command = { type = trigger which = 8230012 } # CSX
+		command = { type = trigger which = 8230013 } # SIK
+		command = { type = dissent value = 3 }
+		command = { type = relation which = CYN value = -25 } # CYN
+		command = { type = relation which = CXB value = -25 } # CXB
+		command = { type = relation which = CSX value = -25 } # CSX
+		command = { type = relation which = SIK value = -25 } # SIK
+		command = { type = relation which = CHC value = 75 }
+		command = { type = relation which = CGX value = 75 }
+		command = { type = relation which = USA value = 25 }
+		command = { type = relation which = ENG value = 25 }
+	}
+	
+	action = {
+		name = EVT_8230001_B # Dismantle
+		ai_chance = 15
+		command = { type = trigger which = 8230020 } # CYN
+		command = { type = trigger which = 8230021 } # CXB
+		command = { type = trigger which = 8230022 } # CSX
+		command = { type = trigger which = 8230023 } # SIK
+		command = { type = dissent value = 5 }
+		command = { type = event which = 8230030 where = -1 when = 360 }
+		command = { type = relation which = CYN value = 25 } # CYN
+		command = { type = relation which = CXB value = 25 } # CXB
+		command = { type = relation which = CSX value = 25 } # CSX
+		command = { type = relation which = SIK value = 25 } # SIK
+		command = { type = relation which = CHC value = -75 }
+		command = { type = relation which = CGX value = -75 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = relation which = ENG value = -25 }
+		command = { type = local_setflag which = CHI_leadership_struggle }
+	}
+	
+	action = {
+		name = EVT_8230001_C # Integrate
+		ai_chance = 5
+		command = { type = add_division which = infantry when = 10 }
+		command = { type = add_division which = infantry when = 10 }
+		command = { type = add_division which = infantry when = 10 }
+		command = { type = add_division which = infantry when = 10 }
+		command = { type = add_division which = infantry when = 10 }
+		command = { type = add_division which = infantry when = 10 }
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CYN value = 150 } # CYN
+		command = { type = relation which = CXB value = 150 } # CXB
+		command = { type = relation which = CSX value = 150 } # CSX
+		command = { type = relation which = SIK value = -75 } # SIK
+		command = { type = relation which = CHC value = 25 }
+		command = { type = relation which = CGX value = 75 }
+		command = { type = supplies value = -5000 }
+		command = { type = money value = -100 }
+		command = { type = local_setflag which = CHI_leadership_struggle }
+	}
+}
+
+event = {
+	id = 8230011
+	country = CHI
+
+	name = EVT_8230011_NAME
+	desc = EVT_8230011_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230011_A
+		command = { type = add_corps value = land where = 1390 }
+		command = { type = add_division which = militia when = 5 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230012
+	country = CHI
+
+	name = EVT_8230012_NAME
+	desc = EVT_8230012_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230012_A
+		command = { type = add_corps value = land where = 1252 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230013
+	country = CHI
+
+	name = EVT_8230013_NAME
+	desc = EVT_8230013_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230013_A
+		command = { type = add_corps value = land where = 1283 }
+		command = { type = add_division which = militia when = 5 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230014
+	country = CHI
+
+	name = EVT_8230014_NAME
+	desc = EVT_8230014_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230014_A
+		command = { type = add_corps value = land where = 1281 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230021
+	country = CYN
+
+	name = EVT_8230021_NAME
+	desc = EVT_8230021_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230021_A
+		command = { type = add_corps value = land where = 1390 }
+		command = { type = add_division which = militia when = 5 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230022
+	country = CXB
+
+	name = EVT_8230022_NAME
+	desc = EVT_8230022_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230022_A
+		command = { type = add_corps value = land where = 1252 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230023
+	country = CSX
+
+	name = EVT_8230023_NAME
+	desc = EVT_8230023_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230023_A
+		command = { type = add_corps value = land where = 1283 }
+		command = { type = add_division which = militia when = 5 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230024
+	country = SIK
+
+	name = EVT_8230024_NAME
+	desc = EVT_8230024_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230024_A
+		command = { type = add_corps value = land where = 1281 }
+		command = { type = add_division which = militia when = 5 }
+	}
+}
+
+event = {
+	id = 8230030
+	country = CHI
+
+	name = EVT_8230030_NAME
+	desc = EVT_8230030_DESC
+	picture = "nwo\difangjun"
+	style = 1
+
+	action = {
+		name = EVT_8230030_A
+		command = { type = dissent value = -10 }
+	}
+}
+
+event = {
+	id = 8230031
+	country = CHI
+
+	name = EVT_8230031_NAME
+	desc = EVT_8230031_DESC
+	picture = "nwo\warlords"
+	style = 1
+	
+	trigger = {
+		local_flag = CHI_leadership_struggle
+		NOT = { 
+			flag = CHC_won_civil_war
+			flag = CHI_won_civil_war
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = EVT_8230031_A
+		command = { type = dissent value = 5 }
+	}
+}

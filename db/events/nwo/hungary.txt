@@ -1,0 +1,174 @@
+event = {
+	id = 8006901
+	country = HUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 105300 } # B?la Mikl?s de Daln?k
+		command = { type = headofgovernment which = 105031 } # Zolt?n Tildy
+		command = { type = foreignminister which = 105046 } # J?nos Gy?ngy?si
+		command = { type = armamentminister which = 105059 } # Miklos Olgyay
+		command = { type = ministerofsecurity which = 105073 } # J?zsef Sz?ll
+		command = { type = ministerofintelligence which = 105090 } # J?zsef Sz?ll
+		command = { type = chiefofstaff which = 105099 } # J?nos V?r?s
+		command = { type = chiefofarmy which = 105110 } # J?nos V?r?s
+		command = { type = chiefofnavy which = 105116 } # Francois Deak
+		command = { type = chiefofair which = 105125 } # B?la R?kosi
+	}
+}
+
+event = {
+	id = 8006902
+	country = HUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 105015 } # Zolt?n Tildy
+		command = { type = headofgovernment which = 105032 } # Ferenc Nagy
+	}
+}
+
+event = {
+	id = 8006903
+	country = HUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 105015 } # Zolt?n Tildy
+		command = { type = headofgovernment which = 105301 } # Lajos Dinnyes
+	}
+}
+
+event = {
+	id = 8006904
+	country = HUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 105015 } # Zolt?n Tildy
+		command = { type = headofgovernment which = 105302 } # Istvan Dobi
+	}
+}
+
+event = {
+	id = 8006905
+	country = HUN
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 105316 } # Matyas Szurös
+		command = { type = headofgovernment which = 105317 } # Miklós Németh
+	}
+}
+
+event = {
+	id = 8006906
+	country = HUN
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 105304 } # Arpad Göncz
+		command = { type = headofgovernment which = 105305 } # József Antall
+	}
+	
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 105316 } # Matyas Szurös
+		command = { type = headofgovernment which = 105303 } # Gyula Horn
+	}
+	
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}

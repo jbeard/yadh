@@ -1,0 +1,83 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Disarming of Nations
+# Event List:
+#ALL	13390210	Switch pacifist -> regular upon the release of hitler 
+
+event = { 
+	id = 13390210														 
+	random = no						
+	persistent = no
+	
+	# go to war
+	trigger = {
+		atwar = no
+		event = 13300213 #hitler released - not a beautiful trigger, but it makes sense 
+		or = {
+			country = U08
+			country = GER
+		}
+		NOT = { local_flag = AAR_Interwar_AI_1933_done }
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 7						
+	deathdate = { day = 30 month = 09 year = 1935 }
+	
+	name = "EVT_13390210_NAME"							
+	Desc = "EVT_13390210_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "Time to turn more ploughshares into swords."		
+		command = { type = ai which = "AAR\economic\aar-province-construction-regular.ai" }
+		command = { type = ai which = "AAR\unit-construction\aar-buildqueue-GER-interwar.ai" }
+		command = { type = local_clrflag which = AAR_behavior_pacifist }
+		command = { type = local_clrflag which = AAR_behavior_gearing } 
+		command = { type = local_setflag which = AAR_behavior_regular } 
+	}
+}
+
+event = { 
+	id = 13390211														 
+	random = no						
+	persistent = no
+	
+	# go to war
+	trigger = {
+		atwar = no
+		or = {
+			country = U08
+			country = GER
+		}
+		year = 1931
+		NOT = { local_flag = AAR_Interwar_AI_1933_done }
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 7						
+	deathdate = { day = 30 month = 09 year = 1935 }
+	
+	name = "EVT_13390211_NAME"							
+	Desc = "EVT_13390211_DESC"
+	Picture = "economic"
+	
+	action = { 	
+		name = "Time to turn more ploughshares into swords."		
+		command = { type = ai which = "AAR\economic\aar-build-highttech.ai" }
+		command = { type = local_clrflag which = AAR_behavior_pacifist } 
+		command = { type = local_clrflag which = AAR_behavior_regular }
+		command = { type = local_setflag which = AAR_behavior_gearing } 
+	}
+}

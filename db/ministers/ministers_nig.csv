@@ -1,0 +1,62 @@
+NIG;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+715001;Head of State;Sir Bernard H. Bourdillon;1933;1964;1964;ML;Powerhungry Demagogue;High;M552001;X
+715002;Head of Government;John E. Shuckburgh;1933;1964;1964;ML;Political Protege;High;M552002;X
+715003;Foreign Minister;Sir Allan C.M. Burns;1933;1964;1964;ML;Great Compromiser;High;M551002;X
+715004;Minister of Armament;Sir Arthur F. Richards;1933;1964;1964;ML;Resource Industrialist;Medium;M552004;X
+715005;Minister of Security;William Baker-Morris;1933;1964;1964;ML;Man of the People;Medium;M552005;X
+715006;Head of Military Intelligence;Richard McManus;1933;1964;1964;ML;Naval Intelligence Specialist;Medium;M552006;X
+715007;Chief of Staff;D.T. Banks-MacDonald;1933;1964;1964;ML;School of Fire Support;Medium;L1021;X
+715008;Chief of Army;William P.S. de L'Isle;1933;1964;1964;ML;Elastic Defence Doctrine;Medium;L1097;X
+715009;Chief of Navy;W.B. Manners;1933;1964;1964;ML;Power Projection Doctrine;Medium;L1369;X
+715010;Chief of Air Force;W.L. Brill;1933;1964;1964;ML;Army Aviation Doctrine;Medium;L1419;X
+715011;Head of State;Dr. Nnamdi Azikiwe;1933;1964;1964;SD;Benevolent Gentleman;High;M552011;X
+715012;Head of State;Thomas Ironside;1933;1964;1964;PA;Weary Stiffneck;High;M552012;X
+715013;Head of Government;Sir Abubabar Tafawa Balewa;1933;1964;1964;SD;Silent Workhorse;High;M552013;X
+715014;Head of Government;Leon Bouchard;1933;1964;1964;PA;Ambitious Union Boss;High;M552014;X
+715015;Foreign Minister;Stuart McMorris;1933;1964;1964;SD;Ideological Crusader;High;M552015;X
+715016;Foreign Minister;W.E.B. Dubois;1933;1964;1964;PA;Iron Fisted Brute;High;M552016;X
+715017;Minister of Armament;Yahu Awko-Iditti;1933;1964;1964;SD;Battle Fleet Proponent;Medium;M552017;X
+715018;Minister of Armament;Nigel Fergusson;1933;1964;1964;PA;Air Superiority Proponent;Medium;M552018;X
+715019;Minister of Security;Mohammad Okaziyabu;1933;1964;1964;SD;Compassionate Gentleman;Medium;M552019;X
+715020;Minister of Security;James Monford;1933;1964;1964;PA;Back Stabber;Medium;M552020;X
+715021;Head of Military Intelligence;Johnson Ayuiyi-Ironsi;1933;1964;1964;SD;Logistics Specialist;Medium;M552021;X
+715022;Head of Military Intelligence;Roderick Smith-Keyes;1933;1964;1964;PA;Dismal Enigma;Medium;M552022;X
+715023;Chief of Staff;Yakubu Gowon;1933;1964;1964;SD;School of Manoeuvre;Medium;M552023;X
+715024;Chief of Staff;Povah Dickinson;1933;1964;1964;PA;School of Mass Combat;Medium;L1104;X
+715025;Chief of Army;Johnson Ayuiyi-Ironsi;1933;1964;1964;SD;Static Defence Doctrine;Medium;M552021;X
+715026;Chief of Army;H.F.L. Hilton-Green;1933;1964;1964;PA;Decisive Battle Doctrine;Medium;L1164;X
+715027;Chief of Navy;Hamilton Alula;1933;1964;1964;SD;Decisive Naval Battle Doctrine;Medium;M552027;X
+715028;Chief of Navy;Ignacio Villanueva;1933;1964;1964;PA;Open Seas Doctrine;Medium;M552028;X
+715029;Chief of Air Force;Ifar Ilishuno;1933;1964;1964;SD;Air Superiority Doctrine;Medium;M552029;X
+715030;Chief of Air Force;Lowrie Regan;1933;1964;1964;PA;Naval Aviation Doctrine;Medium;L1472;X
+715100;Head of Government;Sir Bernard H. Bourdillon;1936;1964;1964;ML;Silent Workhorse;Medium;M552001;X
+715101;Head of State;John E. Shuckburgh;1940;1964;1964;ML;Pig-Headed Isolationist;Medium;M552002;X
+715102;Head of State;Sir Allan C.M. Burns;1942;1964;1964;ML;Powerhungry Demagogue;Medium;M551002;X
+715103;Head of Government;Sir Allan C.M. Burns;1942;1964;1964;ML;Smiling Oilman;Medium;M551002;X
+715104;Head of State;Sir Arthur F. Richards;1944;1964;1964;ML;Pig-Headed Isolationist;Medium;M552004;X
+715105;Head of Government;Sir Arthur F. Richards;1944;1964;1964;ML;Ambitious Union Boss;Medium;M552004;X
+715106;Head of State;Sir John Stuart Macpherson;1948;1964;1964;ML;Weary Stiffneck;Medium;M552007;X
+715107;Head of Government;Sir John Stuart Macpherson;1948;1964;1964;ML;Silent Workhorse;Medium;M552007;X
+715108;Head of State;Sir James Wilson Robertson;1955;1964;1964;ML;Insignificant Layman;Medium;M552009;X
+715109;Head of Government;Sir James Wilson Robertson;1955;1964;1964;ML;Corporate Suit;Medium;M552009;X
+715110;Head of State;Yakubu Gowon;1966;2020;2020;PA;Pig-Headed Isolationist;Medium;M715110;X
+715111;Head of Government;Joseph Edet Akinwale Wey;1966;1991;1991;PA;Ambitious Union Boss;Medium;M715111;X
+715112;Head of State;Murtala Mohammed;1975;1977;2015;PA;Pig-Headed Isolationist;Medium;M715112;X
+715113;Head of Government;Olusegun Obasanjo;1975;2020;2020;PA;Naive Optimist;Medium;M715113;X
+715114;Head of State;Olusegun Obasanjo;1976;2020;2020;PA;Insignificant Layman;Medium;M715113;X
+715115;Head of Government;Shehu Musa Yar'Adua;1976;1998;1998;PA;Naive Optimist;Medium;M715115;X
+715116;Head of State;Shehu Shagari;1979;2020;2020;SC;Die-Hard Reformer;Medium;M715116;X
+715117;Head of Government;Alex Ifeanyichukwu Ekwueme;1979;2020;2020;SC;Backroom Backstabber;Medium;M715117;X
+715118;Head of State;Ibrahim Babangida;1985;2020;2020;PA;Powerhungry Demagogue;Medium;NIG4;X
+715119;Head of Government;Ebitu Ukiwe;1985;2020;2020;PA;Flamboyant Tough Guy;Medium;M715119;X
+715120;Head of Government;Augustus Aikhomu;1986;2012;2012;PA;Old General;Medium;M715120;X
+715121;Head of State;Muhammadu Buhari;1984;2020;2020;FA;Resigned Generalissimo;High;NIG1;X
+715122;Head of Government;Tunde Idiagbon;1984;2000;2000;FA;Old General;High;NIG2;X
+715123;Foreign Minister;Bolaji Akinyemi;1984;1992;1992;ML;Biased Intellectual;High;NIG3;X
+715124;Minister of Armament;Domkat Bali;1984;1992;1992;ML;Military Entrepreneur;Medium;unknown;X
+715125;Minister of Security;Mohammed Lawal Rafindadi;1984;1992;1992;ML;Crime Fighter;Medium;unknown;X
+715126;Head of Military Intelligence;Mohammed Lawal Rafindadi;1984;1992;1992;ML;Political Specialist;Medium;unknown;X
+715127;Chief of Staff;Domkat Bali;1984;1992;1992;ML;School of Fire Support;Medium;unknown;X
+715128;Chief of Army;Ibrahim Babangida;1984;2020;2020;ML;Guns and Butter Doctrine;Medium;NIG4;X
+715129;Chief of Navy;Domkat Bali;1984;1992;1992;ML;Power Projection Doctrine;Medium;unknown;X
+715130;Chief of Air Force;Ibrahim Mahmud Alfa;1984;1992;1992;ML;Army Aviation Doctrine;Medium;NIG5;X

@@ -1,0 +1,33 @@
+event = {
+	id = 8018301
+	country = YUG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 100069 } # H.M. Petar II
+		command = { type = headofgovernment which = 100077 } # Draza Mihailovic
+		command = { type = foreignminister which = 100024 } # Ivan Subasic
+		command = { type = armamentminister which = 100033 } # Petar Ivelich
+		command = { type = ministerofsecurity which = 100041 } # Dragoljub Stefanic
+		command = { type = ministerofintelligence which = 100048 } # Mihail Milosajevic
+		command = { type = chiefofstaff which = 100053 } # Jovan Nikolic
+		command = { type = chiefofarmy which = 100059 } # Jovan Nikolic
+		command = { type = chiefofnavy which = 100061 } # Milutin Nedic
+		command = { type = chiefofair which = 100067 } # Petar Vukcevic
+	}
+}
+

@@ -1,0 +1,86 @@
+LBY;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+495001;Head of State;Guglielmo Nasi;1933;1964;1964;FA;Ruthless Powermonger;High;L6108;X
+495002;Head of Government;Italo Gariboldi;1933;1964;1964;FA;Old General;High;L6077;X
+495003;Foreign Minister;Ettore Bastico;1933;1964;1964;FA;General Staffer;High;L6021;X
+495004;Minister of Armament;Giacomo Acerbo;1933;1964;1964;FA;Military Entrepreneur;High;M3073;X
+495005;Minister of Security;Umberto Ricci;1933;1964;1964;FA;Silent Lawyer;High;M3015;X
+495006;Head of Military Intelligence;Giovanni Messe;1933;1964;1964;PA;Logistics Specialist;Medium;L6102;X
+495007;Chief of Staff;Giovanni Messe;1933;1964;1964;PA;School of Psychology;Medium;L6102;X
+495008;Chief of Army;Lorenzo Dalmazzo;1933;1964;1964;PA;Decisive Battle Doctrine;Medium;L6052;X
+495009;Chief of Navy;Stefano de Laurentiis;1933;1964;1964;PA;Base Control Doctrine;Medium;L6166;X
+495010;Chief of Air Force;Aroldo Soffritti;1933;1964;1964;PA;Air Superiority Doctrine;Medium;L6235;X
+495011;Head of State;H.M. Idris I al Sanussi;1939;1970;1984;ML;Popular Figurehead;High;M576011;X
+495012;Head of Government;Duncan C. Cumming;1939;1964;1964;ML;Corporate Suit;High;M576012;X
+495013;Foreign Minister;Leonard F. Mayhood;1939;1964;1964;ML;Apologetic Clerk;High;M576013;X
+495014;Foreign Minister;Eric Vully de Candole;1942;1964;1964;ML;Great Compromiser;High;M576014;X
+495015;Foreign Minister;Mahmud al-Muntasir;1946;1964;1964;ML;Ideological Crusader;High;M576015;X
+495016;Minister of Armament;James W.N. Haugh;1939;1964;1964;ML;Resource Industrialist;High;M576016;X
+495017;Minister of Armament;Umar Mansur Kikhia;1944;1964;1964;ML;Air Superiority Proponent;High;M576017;X
+495018;Minister of Security;Ahmad al-Halikwi;1939;1964;1964;ML;Crooked Kleptocrat;High;M576018;X
+495019;Minister of Security;Peter B.E. Acland;1943;1964;1964;ML;Efficient Sociopath;High;M576019;X
+495020;Minister of Security;Mustafa ben Halim;1946;1964;1964;ML;Compassionate Gentleman;High;M576020;X
+495021;Head of Military Intelligence;C.A. Morris;1939;1964;1964;ML;Dismal Enigma;Medium;M576021;X
+495022;Head of Military Intelligence;Abdul Kubar;1945;1964;1964;ML;Technical Specialist;Medium;M576022;X
+495023;Chief of Staff;George Dillon;1939;1964;1964;ML;School of Manoeuvre;Medium;L1339;X
+495024;Chief of Staff;Mahammad Sakizli;1945;1964;1964;ML;School of Fire Support;Medium;M576024;X
+495025;Chief of Army;G.B.T. Lord Thurlow;1939;1964;1964;ML;Guns and Butter Doctrine;Medium;M576025;X
+495026;Chief of Army;Mohammar Sidiq;1946;1964;1964;ML;Elastic Defence Doctrine;Medium;M576026;X
+495027;Chief of Navy;B.C.S. Martin;1939;1964;1964;ML;Indirect Approach Doctrine;Medium;L1370;X
+495028;Chief of Navy;H.R.H. Taher Khimlani;1945;1964;1964;ML;Open Seas Doctrine;Medium;M576028;X
+495029;Chief of Air Force;Richard Pierse;1939;1964;1964;ML;Army Aviation Doctrine;Medium;L1468;X
+495030;Chief of Air Force;Ali al-Umlan;1945;1964;1964;ML;Carpet Bombing Doctrine;Medium;M576030;X
+495031;Head of State;Ahmed Sharif es Senussi;1902;1916;1964;PA;Autocratic Charmer;Medium;6034;X
+495032;Head of Government;Ahmed Sharif es Senussi;1902;1916;1964;PA;Smiling Oilman;Medium;6034;X
+495033;Foreign Minister;Ahmed Sharif es Senussi;1902;1916;1964;PA;Ideological Crusader;Medium;6034;X
+495034;Minister of Armament;Ahmed Sharif es Senussi;1902;1916;1964;PA;Military Entrepreneur;Medium;6034;X
+495035;Minister of Security;Ahmed Sharif es Senussi;1902;1916;1964;PA;Man of the People;Medium;6034;X
+495036;Head of Military Intelligence;Omar Mukhtar;1911;1935;1964;PA;Logistics Specialist;Medium;6036;X
+495037;Chief of Staff;Ahmed Sharif es Senussi;1902;1916;1964;PA;School of Defence;Medium;6034;X
+495038;Chief of Army;Ahmed Sharif es Senussi;1902;1916;1964;PA;Static Defence Doctrine;Medium;6034;X
+495039;Head of State;Muhammad Idris al-Senussi;1917;1939;1964;PA;Autocratic Charmer;Medium;6035;X
+495040;Head of Government;Muhammad Idris al-Senussi;1917;1939;1964;PA;Old General;Medium;6035;X
+495041;Foreign Minister;Muhammad Idris al-Senussi;1917;1939;1964;PA;General Staffer;Medium;6035;X
+495042;Minister of Armament;Muhammad Idris al-Senussi;1917;1939;1964;PA;Infantry Proponent;Medium;6035;X
+495043;Minister of Security;Muhammad Idris al-Senussi;1917;1939;1964;PA;Prince of Terror;Medium;6035;X
+495044;Chief of Staff;Muhammad Idris al-Senussi;1917;1939;1964;PA;School of Psychology;Medium;6035;X
+495045;Chief of Army;Muhammad Idris al-Senussi;1917;1939;1964;PA;Static Defence Doctrine;Medium;6035;X
+495046;Chief of Staff;Jafar al-Askari;1914;1933;1964;PA;School of Manoeuvre;Medium;6037;X
+495047;Chief of Army;Jafar al-Askari;1914;1933;1964;PA;elastic defence doctrine;Medium;6037;X
+495100;Head of State;Italo Balbo;1936;1964;1964;FA;Autocratic Charmer;Medium;M495100;X
+495101;Head of Government;Italo Balbo;1936;1964;1964;FA;Happy Amateur;Medium;M495101;X
+495102;Head of State;Rodolfo Graziani;1940;1964;1964;FA;Stern Imperialist;Medium;M3139;X
+495103;Head of Government;Rodolfo Graziani;1940;1964;1964;FA;Smiling Oilman;Medium;M3139;X
+495104;Head of State;Ettore Bastico;1941;1964;1964;FA;Popular Figurehead;Medium;L6021;X
+495105;Head of Government;Ettore Bastico;1941;1964;1964;FA;Ambitious Union Boss;Medium;L6021;X
+495106;Head of State;Giovanni Messe;1943;1964;1964;FA;Pig-Headed Isolationist;Medium;M495106;X
+495107;Head of Government;Giovanni Messe;1943;1964;1964;FA;Corporate Suit;Medium;M495107;X
+495108;Head of State;Travers Robert Blackley;1944;1964;1964;ML;Resigned Generalissimo;Medium;M495108;X
+495109;Head of Government;Travers Robert Blackley;1944;1964;1964;ML;Political Protege;Medium;M495109;X
+495110;Head of State;Adrian Pelt;1949;1964;1964;ML;Stern Imperialist;Medium;M495110;X
+495111;Head of Government;Mahmud al-Muntasir;1951;1970;1981;ML;Flamboyant Tough Guy;Medium;M576015;X
+495112;Head of Government;Mustafa Ben Halim;1954;2020;2020;ML;Ambitious Union Boss;Medium;M495112;X
+495113;Head of Government;Abdul Majid Kubar;1957;1987;1987;ML;Backroom Backstabber;Medium;M495113;X
+495114;Head of Government;Muhammad Osman Said;1960;2008;2008;ML;Old Admiral;Medium;M495114;X
+495115;Head of Government;Mohieddin Fikini;1963;1995;1995;ML;Naive Optimist;Medium;M495115;X
+495116;Head of Government;Hussein Maziq;1965;2007;2007;ML;Flamboyant Tough Guy;Medium;M495116;X
+495117;Head of Government;Abdul Hamid al-Bakkoush;1967;2008;2008;ML;Old Admiral;Medium;M495117;X
+495118;Head of Government;Wanis al-Qaddafi;1968;1987;1987;ML;Flamboyant Tough Guy;Medium;M495118;X
+495119;Head of Government;Mahmud Sulayman al-Maghribi;1969;2010;2010;LWR;Old Airmarshal;Medium;M495119;X
+495120;Head of Government;Muammar al-Gaddafi;1970;2012;2020;LWR;Ambitious Union Boss;Medium;LBY1;X
+495121;Head of Government;Abdessalam Jalloud;1972;2020;2020;LWR;Political Protege;Medium;M495121;X
+495122;Head of Government;Abdul Ati al-Obeidi;1977;2020;2020;LWR;Flamboyant Tough Guy;Medium;M495122;X
+495123;Head of Government;Jadallah Azzuz at-Talhi;1979;2020;2020;LWR;Backroom Backstabber;Medium;M495123;X
+495124;Head of Government;Umar Mustafa al-Muntasir;1987;2002;2002;LWR;Corporate Suit;Medium;M495124;X
+495125;Head of Government;Abuzed Omar Dorda;1990;2002;2002;LWR;Old General;Medium;M495125;X
+495126;Head of State;Muammar al-Gaddafi;1969;2012;2020;LWR;Ruthless Powermonger;Very High;LBY1;X
+495127;Head of Government;Muhammad az-Zaruq Rajab;1984;1992;1992;LWR;Happy Amateur;High;LBY2;X
+495128;Foreign Minister;Ali Treki;1985;1992;1992;LWR;Apologetic Clerk;High;LBY3;X
+495129;Foreign Minister;Moussa Koussa;1985;1992;1992;LWR;The Cloak N Dagger Schemer;High;LBY4;X
+495130;Minister of Armament;Abu-Bakr Yunis Jabr;1985;1992;1992;LWR;Military Entrepreneur;High;LBY5;X
+495131;Minister of Security;Abdul Fatah Younis;1985;1992;1992;LWR;Crime Fighter;Medium;LBY6;X
+495132;Head of Military Intelligence;Abdullah Senussi;1985;1992;1992;LWR;Technical Specialist;Very High;LBY7;X
+495133;Head of Military Intelligence;Moussa Koussa;1985;1992;1992;LWR;Political Specialist;Very High;LBY4;X
+495134;Chief of Staff;Abu-Bakr Yunis Jabr;1985;1992;1992;LWR;School of Mass Combat;High;LBY5;X
+495135;Chief of Army;Abdul Fatah Younis;1985;1992;1992;LWR;Guns and Butter Doctrine;Medium;LBY6;X
+495136;Chief of Navy;Abu-Bakr Yunis Jabr;1985;1992;1992;LWR;Indirect Approach Doctrine;High;LBY5;X
+495137;Chief of Air Force;Ali Sharif al-Rifi;1985;1992;1992;LWR;Air Superiority Doctrine;High;LBY8;X

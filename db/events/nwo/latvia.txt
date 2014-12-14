@@ -1,0 +1,208 @@
+event = {
+	id = 8008501
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 135200 } # Janis Kalnberzins
+		command = { type = headofgovernment which = 135026 } # Vilis Lacis
+	}
+}
+
+event = {
+	id = 8008502
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 135015 } # Jazeps Rancans
+		command = { type = headofgovernment which = 135022 } # Pauls Kalni?s
+		command = { type = foreignminister which = 135033 } # Alfreds B?lmanis
+		command = { type = armamentminister which = 135047 } # Edgars Andersons
+		command = { type = ministerofsecurity which = 135059 } # Jazeps Rancans
+		command = { type = ministerofintelligence which = 135069 } # Reinhold K. Zari?s
+		command = { type = chiefofstaff which = 135076 } # Rudolfs Koci?s
+		command = { type = chiefofarmy which = 135084 } # Rudolfs Koci?s
+		command = { type = chiefofnavy which = 135090 } # Janis Andersons
+		command = { type = chiefofair which = 135097 } # Edgars Andersons
+	}
+}
+
+event = {
+	id = 8008503
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 135201 } # Arvids Pelse
+		command = { type = headofgovernment which = 135202 } # Janis Peive
+	}
+}
+
+event = {
+	id = 8008504
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 135201 } # Arvids Pelse
+		command = { type = headofgovernment which = 135203 } # Vitalijs Rubenis
+	}
+}
+
+event = {
+	id = 8008505
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 135204 } # Augusts Voss
+		command = { type = headofgovernment which = 135205 } # Peteris Strautmanis
+	}
+}
+
+event = {
+	id = 8008506
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 135206 } # Boris Pugo
+		command = { type = headofgovernment which = 135207 } # Janis Vagris
+	}
+}
+
+event = {
+	id = 8008507
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 135208 } # Janis Vagris
+		command = { type = headofgovernment which = 135209 } # Anatolijs Gorbunovs
+	}
+}
+
+event = {
+	id = 8008508
+	country = LAT
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 135210 } # Anatolijs Gorbunovs
+		command = { type = headofgovernment which = 135212 } # Ivars Godmanis
+	}
+}

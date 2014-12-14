@@ -1,0 +1,10 @@
+# Naval Base construction AI File by Burning
+
+###################################
+# Construction and Tech Research
+###################################
+reinforcement = 0.5
+upgrading = 0.1
+construction = {
+  max_factor = 0.10 #IC-share for province-improvement construction (globally)
+}

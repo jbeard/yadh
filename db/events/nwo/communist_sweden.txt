@@ -1,0 +1,33 @@
+event = {
+	id = 8022101
+	country = U21
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 920005 } # Sven Linderot
+		command = { type = headofgovernment which = 920017 } # Tage Erlander
+		command = { type = foreignminister which = 920007 } # Hugo Sell?n
+		command = { type = armamentminister which = 920008 } # Hilding Hagberg
+		command = { type = ministerofsecurity which = 920009 } # Karl Kilbom
+		command = { type = ministerofintelligence which = 920010 } # C.H. Hermansson
+		command = { type = chiefofstaff which = 920011 } # Gunnar Johansson
+		command = { type = chiefofarmy which = 920012 } # Axel Pettersson
+		command = { type = chiefofnavy which = 920013 } # Per M. Eriksson
+		command = { type = chiefofair which = 920014 } # Krister Reutersw?rd
+	}
+}
+

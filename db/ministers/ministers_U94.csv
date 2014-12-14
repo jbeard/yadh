@@ -1,0 +1,46 @@
+U94;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+900400;Head of State;Hamani Diori;1936;1964;1964;SC;Powerhungry Demagogue;Very High;niger1;x
+900401;Head of State;Boubou Hama;1936;1964;1964;PA;Benevolent Gentleman;Very High;niger2;x
+900402;Head of State;Djibo Bakary;1936;1964;1964;LWR;Die-hard Reformer;Very High;niger3;x
+900403;Head of State;Marcel de Coppet;1936;1964;1964;SL;Insignificant Layman;Very High;niger4;x
+900404;Head of State;Hasan Dyallo;1938;1964;1964;FA;Stern Imperialist;Very High;unknown;x
+900405;Head of Government;Hamani Diori;1936;1964;1964;SC;Silent Workhorse;Very High;niger1;x
+900406;Head of Government;Djibo Bakary;1936;1964;1964;LWR;Ambitious Union Boss;Very High;niger3;x
+900407;Head of Government;Marcel de Coppet;1936;1964;1964;SL;Silent Workhorse;Very High;niger4;x
+900408;Foreign Minister;Hamani Diori;1936;1964;1964;SC;Iron Fisted Brute;Very High;niger1;x
+900409;Foreign Minister;Marcel de Coppet;1936;1964;1964;SL;Great Compromiser;Very High;niger4;x
+900410;Foreign Minister;Adamou Mayaki;1936;1964;1964;SC;Biased Intellectual;Very High;unknown;x
+900411;Foreign Minister;Barma Mustafa ;1934;1964;1964;PA;The Cloak N Dagger Schemer;Very High;unknown;x
+900412;Minister of Armament;Adamou Mayaki;1939;1964;1964;SC;Resource Industrialist;Very High;unknown;x
+900413;Minister of Armament;Djibo Bakary;1936;1964;1964;LWR;Infantry Proponent;Very High;niger3;x
+900414;Minister of Armament;Umaru Agg-Ibrahim;1934;1964;1964;FA;Corrupt Kleptocrat;Very High;unknown;x
+900415;Minister of Security;Boubou Hama;1936;1964;1964;PA;Man of the People;Very High;niger2;x
+900416;Minister of Security;Marcel de Coppet;1938;1964;1964;SL;Silent Lawyer;Very High;niger4;x
+900417;Minister of Security;Umaru Agg-Ibrahim;1934;1964;1964;FA;Back Stabber;Very High;unknown;x
+900418;Head of Military Intelligence;Boubou Hama;1936;1964;1964;PA;Political Specialist;Very High;niger2;x
+900419;Head of Military Intelligence;Umaru Agg-Ibrahim;1934;1964;1964;FA;Logistics Specialist;Very High;unknown;x
+900420;Head of Military Intelligence;Djibo Bakary;1936;1964;1964;LWR;Political Specialist;Very High;niger3;x
+900421;Chief of Staff;Djibo Bakary;1936;1964;1964;LWR;School of Psychology;Very High;niger3;x
+900422;Chief of Staff;Dan Kolodo dan Malam;1934;1964;1964;PA;School of Psychology;Very High;unknown;x
+900423;Chief of Army;Barma Mustafa ;1934;1964;1964;PA;Guns and Butter Doctrine;Very High;unknown;x
+900424;Chief of Army;Hamani Diori;1936;1964;1964;SC;Elastic Defence Doctrine;Very High;niger1;x
+900425;Chief of Army;Marcel de Coppet;1936;1964;1964;SL;Elastic Defence Doctrine;Very High;niger4;x
+900426;Chief of Navy;Adamou Mayaki;1939;1964;1964;SC;Base Control Doctrine;Very High;unknown;x
+900427;Chief of Air Force;Adamou Mayaki;1939;1964;1964;SC;Vertical Envelopment Doctrine;Very High;unknown;x
+900428;Head of State;Joseph Court;1936;1964;1964;SC;Weary Stiffneck;Very High;M900428;x
+900429;Head of Government;Joseph Court;1936;1964;1964;SC;Flamboyant Tough Guy;Very High;M900428;x
+900430;Head of State;Jean-Baptiste Chazelas;1938;1964;1964;SC;Powerhungry Demagogue;Very High;M900430;x
+900431;Head of Government;Jean-Baptiste Chazelas;1938;1964;1964;SC;Political Protege;Very High;M900430;x
+900432;Head of State;Jean Rapenne;1939;1964;1964;SC;Autocratic Charmer;Very High;M900432;x
+900433;Head of Government;Jean Rapenne;1939;1964;1964;SC;Political Protege;Very High;M900432;x
+900434;Head of State;Maurice Falvy;1941;1964;1964;SC;Popular Figurehead;Very High;M900434;x
+900435;Head of Government;Maurice Falvy;1941;1964;1964;SC;Backroom Backstabber;Very High;M900434;x
+900436;Head of State;Jean Toby;1942;1964;1964;SC;Resigned Generalissimo;Very High;M900436;x
+900437;Head of Government;Jean Toby;1942;1964;1964;SC;Happy Amateur;Very High;M900436;x
+900438;Head of State;Fernand Casimir;1952;1964;1964;SC;Powerhungry Demagogue;Very High;M900438;x
+900439;Head of Government;Fernand Casimir;1952;1964;1964;SC;Corporate Suit;Very High;M900438;x
+900440;Head of State;Jean Ramadier;1955;1964;1964;SC;Stern Imperialist;Very High;M900440;x
+900441;Head of Government;Jean Ramadier;1955;1964;1964;SC;Flamboyant Tough Guy;Very High;M900440;x
+900442;Head of State;Paul Bordier;1957;1964;1964;SC;Die-Hard Reformer;Very High;M900442;x
+900443;Head of State;Louis Rollet;1958;1964;1964;SC;Die-Hard Reformer;Very High;M900443;x
+900444;Head of State;Jean Colombani;1959;1964;1964;SC;Ruthless Powermonger;Very High;M900444;x

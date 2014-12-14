@@ -1,0 +1,1494 @@
+
+#############################################
+######  Join the Allies
+#############################################
+event = {
+         id = 133015000
+         random = no
+         country = can
+         trigger = {
+		war = { country =eng  country = ger }
+		NOT = { war = { country = can country = ENG }  }
+		NOT = { alliance = { country = can country = eng }  }
+
+         }
+ 
+         name = "Join the Allies"
+         desc = "The countries that formed the British Commonwealth had been given powers to bring his own foreign policy. This enabled him to not be bound or obligated to participate in wars involving the United Kingdom. Although many of these countries, ensured the integrity of the UK and some of them had in its constitution the obligation to defend against aggression. Most of these countries joined the bloc ally"
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1947 }
+ 
+                
+                picture = "commonwealth"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  ai_chance = 100
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = domestic which = interventionism value = 1 }
+                  command = { type = sleepevent which = 133015500 }
+                  command = { type = set_relation which = ENG value = 200 }
+                  command = { type = alliance which = ENG }
+                  command = { type = dissent value = -50 }
+           }
+           action_b = {
+                  name = "It is not our war"
+                  command = { type = dissent value = 25 }
+                  command = { type = domestic which = interventionism value = -2 }
+                  command = { type = domestic which = defense_lobby value = -2 }
+                  command = { type = relation which = eng value = -150 }
+                  command = { type = relation which = ger value = 50 }
+                  ai_chance = 0
+           }
+
+}
+#############################################
+######  Bank of Canada Opened
+#############################################
+event = {
+         id = 133015010
+         random = no
+         country = can
+         trigger = {
+                   exists = USA
+
+         }
+ 
+         name = "Bank of Canada Opened"
+         desc = "On March 11, 1935, the central bank began operations, following the granting of Royal Assent to the Bank of Canada Act. Initially the bank was founded as a privately owned corporation in order to ensure it was free from political influence.In 1938, the bank became a Crown corporation, belonging to the monarch in right of Canada.The Minister of Finance holds the entire share capital issued by the bank. 'Ultimately, the Bank is owned by the Minister of Finance on behalf of Her Majesty in right of Canada'."
+         style = 2
+ 
+         date = { day = 11 month = march year = 1935 }
+ 
+                
+                picture = "CAN01"
+                
+           action_a = {
+                  name = "We recovered"
+                  command = { type = dissent value = -1 }
+                  command = { type = peacetime_ic_mod value = 1 }
+                  command = { type = money value = 250 }
+                  command = { type = domestic which = free_market value = -1 }
+           }
+
+}
+#############################################
+######  On-to-Ottawa Trek
+#############################################
+event = {
+         id = 133015020
+         random = no
+         country = can
+         trigger = {
+                   atwar = no
+
+         }
+ 
+         name = "On-to-Ottawa Trek"
+         desc = "Situation in Canada continued being critical. The number of unemployed ascended and it was influenced by the neighbouring country. The Canadian economy had fallen to half of its production and isolationism in which it was did not favour the things. For that reason, the unemployed organized a great manifestation, well-known as the On-to-Ottawa-Trek"
+         style = 2
+ 
+         date = { day = 1 month = july year = 1935 }
+ 
+                
+                picture = "CAN02"
+                
+           action_a = {
+                  name = "We are in democracy"
+                  command = { type = dissent value = 2 }
+                  command = { type = money value = -100 }
+                  command = { type = manpowerpool value = -10 }
+                  command = { type = domestic which = political_left value = 1 }
+           }
+
+}
+#############################################
+######  U.S.-Canadian Reciprocal Trade Agreement
+#############################################
+event = {
+         id = 133015030
+         random = no
+         country = can
+         trigger = {
+                   NOT = { 
+                            war = { country = usa country = can }
+                   }
+                   exists = usa
+
+         }
+ 
+         name = "U.S.-Canadian Reciprocal Trade Agreement"
+         desc = "Prime Minister W.L. Mackenzie King met with President Franklin D. Roosevelt in Washington and signed the Reciprocal Trade Agreement. Under the agreement, the U.S. government granted the Canadians lower rates or other concessions on two-thirds of Canadian exports by volume to the U.S. In return, the United States gained concessions on three-fourths of American dutiable exports to Canada. This agreement was designed to stimulate trade between the two countries and help both countries out of the Depression."
+         style = 2
+ 
+         date = { day = 15 month = november year = 1935 }
+
+ 
+                
+                picture = "CAN03"
+                
+           action_a = {
+                  name = "It is so necessary"
+                  command = { type = relation which = usa value = 30 }
+                  command = { type = supplies value = 1000   }
+                  command = { type = oilpool value = 1000  }
+                  command = { type = metalpool value = 2000 }
+                  command = { type = energypool value = 4000 }
+                  command = { type = rarematerialspool value = 800 }
+                  command = { type = money value = 100 }
+                  command = { type = construct which = ic where = -4 value = 1 }
+                  command = { type = construct which = ic where = -4 value = 1 }
+                  command = { type = trigger which = 133015040 }
+           }
+
+}
+#############################################
+######  U.S.-Canadian Reciprocal Trade Agreement
+#############################################
+event = {
+         id = 133015040
+         random = no
+         country = usa
+ 
+         name = "U.S.-Canadian Reciprocal Trade Agreement"
+         desc = "Prime Minister W.L. Mackenzie King met with President Franklin D. Roosevelt in Washington and signed the Reciprocal Trade Agreement. Under the agreement, the U.S. government granted the Canadians lower rates or other concessions on two-thirds of Canadian exports by volume to the U.S. In return, the United States gained concessions on three-fourths of American dutiable exports to Canada. This agreement was designed to stimulate trade between the two countries and help both countries out of the Depression."
+         style = 2
+         picture = "CAN03" 
+
+ 
+           action_a = {
+                  name = "It is so necessary"
+                  command = { type = relation which = can value = 30 }
+                  command = { type = supplies value = 1000   }
+                  command = { type = oilpool value = 1000   }
+                  command = { type = metalpool value = 2000 }
+                  command = { type = energypool value = 4000 }
+                  command = { type = rarematerialspool value = 800 }
+                  command = { type = money value = 100 }
+                  command = { type = construct which = ic where = -4 value = 1 }
+                  command = { type = construct which = ic where = -4 value = 2 }
+           }
+
+}
+#############################################
+######  Anglo-Canadian-US. Trade Agreement
+#############################################
+event = {
+         id = 133015050
+         random = no
+         country = eng
+         trigger = {
+                   NOT = { 
+                            war = { country = eng country = usa }
+                            war = { country = eng country = can }
+                            war = { country = usa country = can }
+                   }
+                   exists = usa
+                   exists = can
+
+         }
+ 
+         name = "Anglo-Canadian-US. Trade Agreement"
+         desc = "The British, Canadian, and American governments signed a major trade agreement, which the three countries had negotiated for a considerable period of time. Each state agreed to considerable trade concessions, a position which marked growing cooperation between the English-speaking countries"
+         style = 2
+         picture = "CAN04"
+ 
+         date = { day = 17 month = november year = 1937 }
+ 
+           action_a = {
+                  name = "Sign it"
+                  ai_chance = 90
+                  command = { type = relation which = usa value = 10 }
+                  command = { type = relation which = can value = 10 }
+                  command = { type = trigger which = 133015060 }
+           }
+           action_b = {
+                  name = "Reject it"
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+                  command = { type = relation which = usa value = -10 }
+                  command = { type = relation which = can value = -10 }
+           }
+
+}
+#############################################
+######  Anglo-Canadian-US. Trade Agreement
+#############################################
+event = {
+         id = 133015060
+         random = no
+         country = usa
+ 
+         name = "Anglo-Canadian-US. Trade Agreement"
+         desc = "The British, Canadian, and American governments signed a major trade agreement, which the three countries had negotiated for a considerable period of time. Each state agreed to considerable trade concessions, a position which marked growing cooperation between the English-speaking countries"
+         style = 2
+         picture = "CAN04"
+ 
+ 
+           action_a = {
+                  name = "Sign it"
+                  ai_chance = 90
+                  command = { type = relation which = can value = 10 }
+                  command = { type = relation which = eng value = 10 }
+                  command = { type = trigger which = 133015070 }
+           }
+           action_b = {
+                  name = "Reject it"
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+                  command = { type = relation which = can value = -10 }
+                  command = { type = relation which = eng value = -10 }
+           }
+
+}
+#############################################
+######  Anglo-Canadian-US. Trade Agreement
+#############################################
+event = {
+         id = 133015070
+         random = no
+         country = can
+ 
+         name = "Anglo-Canadian-US. Trade Agreement"
+         desc = "The British, Canadian, and American governments signed a major trade agreement, which the three countries had negotiated for a considerable period of time. Each state agreed to considerable trade concessions, a position which marked growing cooperation between the English-speaking countries"
+        style = 2
+        picture = "CAN04"
+ 
+ 
+           action_a = {
+                  name = "Sign it"
+                  ai_chance = 90
+                  command = { type = relation which = usa value = 10 }
+                  command = { type = relation which = eng value = 10 }
+                  command = { type = trigger which = 133015080 }
+           }
+           action_b = {
+                  name = "Reject it"
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+                  command = { type = relation which = usa value = -10 }
+                  command = { type = relation which = eng value = -10 }
+           }
+
+}
+#############################################
+######  Anglo-Canadian-US. Trade Agreement success
+#############################################
+event = {
+         id = 133015080
+         random = no
+         country = eng
+ 
+         name = "Anglo-Canadian-US. Trade Agreement success"
+         desc = "In the end, the three governments reached an agreement of great importance for them and will bring great economic benefit and further improve the existing good relations"
+         style = 2
+         picture = "CAN05"
+ 
+ 
+           action_a = {
+                  name = "Excellent"
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = usa value = 35 }
+                  command = { type = relation which = can value = 35 }
+                  command = { type = supplies value = 3000   }
+                  command = { type = oilpool value = 3000   }
+                  command = { type = metalpool value = 8000 }
+                  command = { type = energypool value = 10000 }
+                  command = { type = rarematerialspool value = 2500 }
+                  command = { type = money value = 120 }
+                  command = { type = trigger which = 133015090 }
+                  command = { type = trigger which = 133015100 }
+           }
+
+}
+#############################################
+######  Anglo-Canadian-US. Trade Agreement success
+#############################################
+event = {
+         id = 133015090
+         random = no
+         country = usa
+ 
+         name = "Anglo-Canadian-US. Trade Agreement success"
+         desc = "In the end, the three governments reached an agreement of great importance for them and will bring great economic benefit and further improve the existing good relations"
+         style = 2
+         picture = "CAN05"
+ 
+ 
+           action_a = {
+                  name = "Excellent"
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = eng value = 35 }
+                  command = { type = relation which = can value = 35 }
+                  command = { type = supplies value = 3000   }
+                  command = { type = oilpool value = 3000   }
+                  command = { type = metalpool value = 8000 }
+                  command = { type = energypool value = 10000 }
+                  command = { type = rarematerialspool value = 2500 }
+                  command = { type = money value = 120 }
+           }
+
+}
+#############################################
+######  Anglo-Canadian-US. Trade Agreement success
+#############################################
+event = {
+         id = 133015100
+         random = no
+         country = can
+ 
+         name = "Anglo-Canadian-US. Trade Agreement success"
+         desc = "In the end, the three governments reached an agreement of great importance for them and will bring great economic benefit and further improve the existing good relations"
+        style = 2
+         picture = "CAN05"
+ 
+ 
+           action_a = {
+                  name = "Excellent"
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = eng value = 35 }
+                  command = { type = relation which = usa value = 35 }
+                  command = { type = supplies value = 3000   }
+                  command = { type = oilpool value = 3000   }
+                  command = { type = metalpool value = 8000 }
+                  command = { type = energypool value = 10000 }
+                  command = { type = rarematerialspool value = 2500 }
+                  command = { type = money value = 120 }
+           }
+
+}
+#############################################
+######  The Kings visits Canada
+#############################################
+event = {
+         id = 133015110
+         random = no
+         country = eng
+         trigger = {
+                   NOT = { 
+                            war = { country = can country = eng }
+                   }
+
+         }
+ 
+         name = "The Kings visits Canada"
+         desc = "The 1939 royal tour of Canada was a cross-Canada royal tour by King George VI and Queen Elizabeth, lasting from May 17 to June 15, 1939, including a visit to the United States on June 7–10. It was the first visit of a reigning monarch to Canada, and also the first time a British monarch had set foot in the United States. The royal couple visited every Canadian province as well as the Dominion of Newfoundland. The tour was an enormous event, attracting huge crowds at each new city."
+         style = 2
+ 
+         date = { day = 17 month = may year = 1938 }
+ 
+                
+                picture = "CAN06"
+                
+           action_a = {
+                  name = "It is always good to improve relationships"
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = can value = 15 }
+                  command = { type = trigger which = 133015120 }
+           }
+
+}
+#############################################
+######  The Kings visits Canada
+#############################################
+event = {
+         id = 133015120
+         random = no
+         country = can
+ 
+         name = "The Kings visits Canada"
+         desc = "The 1939 royal tour of Canada was a cross-Canada royal tour by King George VI and Queen Elizabeth, lasting from May 17 to June 15, 1939, including a visit to the United States on June 7–10. It was the first visit of a reigning monarch to Canada, and also the first time a British monarch had set foot in the United States. The royal couple visited every Canadian province as well as the Dominion of Newfoundland. The tour was an enormous event, attracting huge crowds at each new city."
+         style = 2
+ 
+ 
+                
+                picture = "CAN06"
+                
+           action_a = {
+                  name = "It is always good to improve relationships"
+                  command = { type = dissent value = -1 }
+                  command = { type = relation which = eng value = 15 }
+           }
+
+}
+#############################################
+######  Naval Program
+#############################################
+event = {
+         id = 133015130
+         random = no
+         country = can
+         trigger = {
+                   random = 10
+                   war = { country = can  country = ger }
+
+         }
+ 
+         name = "Naval Program"
+         desc = "The Canadian government approved the construction of 110 ships for the war against Germany. Most of these vessels are designed for anti-submarine war as well as for convoy support."
+         style = 2
+ 
+         date = { day = 1 month = september year = 1938 }
+         offset = 8
+         deathdate = { day = 31 month = december year = 1943 }
+ 
+                
+                picture = "CAN07"
+                
+           action_a = {
+                  name = "Build them"
+                  ai_chance = 90
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = supplies value = -800  }
+                  command = { type = money value = -80 }
+                  command = { type = manpowerpool value = -1 }
+                  command = { type = build_time which = naval when = on_upgrade where = relative value = -20 }
+                  command = { type = build_cost which = naval when = on_upgrade where = relative value = -20 }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = destroyer   }
+                  command = { type = build_division which = light_cruiser   }
+                  command = { type = build_division which = light_cruiser   }
+                  command = { type = build_division which = light_cruiser   }
+                  command = { type = build_division which = light_cruiser   }
+                  command = { type = build_division which = light_cruiser   }
+                  command = { type = build_division which = submarine   }
+                  command = { type = build_division which = submarine   }
+                  command = { type = build_division which = submarine   }
+                  command = { type = build_division which = transport   }
+                  command = { type = build_division which = transport   }
+                  command = { type = build_time which = naval when = on_upgrade where = relative value = 20 }
+                  command = { type = build_cost which = naval when = on_upgrade where = relative value = 20 }
+
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 10
+                  command = { }
+           }
+
+}
+#############################################
+######  Reconstruction Party of Canada
+#############################################
+event = {
+         id = 133015140
+         random = no
+         country = can
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "Reconstruction Party of Canada"
+         desc = "The Reconstruction Party was a Canadian political party founded by Henry Herbert Stevens, a long-time Conservative Member of Parliament.Stevens argued for drastic economic reform and government intervention in the economy. He quit the Bennett government and formed the Reconstruction Party when it became evident that the Tories would not implement the proposals of the Price-Spreads Commission."
+         style = 2
+ 
+         date = { day = 26 month = october year = 1934 }
+ 
+                
+                picture = "CAN08"
+                
+           action_a = {
+                  name = "Ok"
+                  command = { type = dissent value = -1 }
+           }
+
+}
+#############################################
+######  David Dunlap Observatory
+#############################################
+event = {
+         id = 133015150
+         random = no
+         country = can
+         trigger = {
+
+         }
+ 
+         name = "David Dunlap Observatory"
+         desc = "The opening ceremony was on 31 May 1935 attended by notables such as Sir Frank Dyson, former Astronomer Royal, and former Prime Minister Mackenzie King, who praised the Observatory as 'a gift to science all over the world.'In May, 1939 the train carrying King George VI and Queen Elizabeth, the Queen Mother on their cross-Canada tour paused on the railway below the observatory, the largest telescope in the commonwealth."
+         style = 2
+ 
+         date = { day = 7 month = may year = 1935 }
+ 
+                
+                picture = "CAN09"
+                
+           action_a = {
+                  name = "Excellent"
+                  command = { type = money value = -15 }
+                  command = { type = research_mod value = 1 }
+           }
+
+}
+#############################################
+######  Timiskaming earthquake
+#############################################
+event = {
+         id = 133015160
+         random = no
+         country = can
+         trigger = {
+
+         }
+ 
+         name = "Timiskaming earthquake"
+         desc = "The 1935 Timiskaming Earthquake was a magnitude 6.2 earthquake that occurred on November 1, 1935 in the Abitibi-Témiscamingue region of Quebec. Although the most significant damage connected to the earthquake was to chimneys, both in the immediate area and as far south as North Bay and Mattawa, a railroad embankment near Parent, 300 km away, also collapsed as a result of the earthquake."
+         style = 2
+ 
+         date = { day = 1 month = november year = 1935 }
+ 
+                
+                picture = "AST13"
+                
+           action_a = {
+                  name = "Bad news"
+                  command = { type = construct which = infrastructure where = 2114 value = -10 }
+           }
+
+}
+#############################################
+######  Trans-Canada Air Lines
+#############################################
+event = {
+         id = 133015170
+         random = no
+         country = can
+         trigger = {
+
+         }
+ 
+         name = "Trans-Canada Air Lines"
+         desc = "TCA was created by the Crown corporation Canadian National Railways (CNR), and launched its first flight on September 1, 1937 on a flight between Vancouver and Seattle."
+         style = 2
+ 
+         date = { day = 10 month = april year = 1937 }
+ 
+                
+                picture = "CAN10"
+                
+           action_a = {
+                  name = "Create"
+                  ai_chance = 95
+                  command = { type = money value = -80 }
+                  command = { type = manpowerpool value = -1 }
+                  command = { type = dissent value = -2 }
+           }
+           action_b = {
+                  name = "It's not necessary"
+                  ai_chance = 5
+                  command = { }
+           }
+
+}
+#############################################
+######  Vaccination for tuberculosis
+#############################################
+event = {
+         id = 133015180
+         random = no
+         country = can
+         trigger = {
+                   random = 7
+
+         }
+ 
+         name = "Vaccination for tuberculosis"
+         desc = "Vaccination for tuberculosis (the leading cause of death in young people) is introduced."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 12
+         deathdate = { day = 31 month = december year = 1938 }
+ 
+                
+                picture = "CAN11"
+                
+           action_a = {
+                  name = "Aprove it"
+                  ai_chance = 97
+                  command = { type = money value = -30 }
+                  command = { type = relative_manpower value = 2 }
+           }
+           action_b = {
+                  name = "It's not necessary"
+                  ai_chance = 3
+                  command = { type = dissent value = 3 }
+           }
+
+}
+#############################################
+######  The War Measures Act
+#############################################
+event = {
+         id = 133015190
+         random = no
+         country = can
+         trigger = {
+                   alliance = { country = can country = eng }
+                   atwar = yes
+
+         }
+ 
+         name = "The War Measures Act"
+         desc = "Was a statute of the Parliament of Canada that provided for the declaration of war, invasion, or insurrection, and the types of emergency measures that could thereby be taken.The government soon interned fascists and Communists as well as opponents of conscription. The regulations were later used to intern Japanese Canadians on a large scale as well as some German and Italian Canadians who were viewed as enemy aliens."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1942 }
+ 
+                
+                picture = "CAN12"
+                
+           action_a = {
+                  name = "Ban and jail them all"
+                  ai_chance = 90
+                  command = { type = dissent value = -2 }
+                  command = { type = domestic which = freedom value = -1 }
+                  command = { type = relation which = sov value = -15 }
+                  command = { type = relation which = ita value = -15 }
+                  command = { type = relation which = ger value = -15 }
+                  command = { type = relation which = usa value = 15 }
+                  command = { type = relation which = eng value = 15 }
+           }
+           action_b = {
+                  name = "Do Nothing"
+                  ai_chance = 10
+                  command = { type = dissent value = 2 }
+                  command = { type = relation which = ita value = 10 }
+                  command = { type = relation which = ger value = 10 }
+                  command = { type = relation which = sov value = 10 }
+                  command = { type = relation which = usa value = -5 }
+                  command = { type = relation which = eng value = -5 }
+           }
+
+}
+#############################################
+######  Conscription
+#############################################
+event = {
+         id = 133015200
+         random = no
+         country = can
+         trigger = {
+                   alliance = { country = can country = eng }
+                   atwar = yes
+
+         }
+ 
+         name = "National Resources Mobilization Act"
+         desc = "The Act permitted conscripts to be used for home defence only and not to be deployed overseas. This was modified in August 1942 to permit the government to send conscripts overseas, after a plebiscite was held on the matter in April 1942. Such an order, authorizing the transfer of 16,000 conscriptees to England, was not made until November 1944.This precipitated the Conscription Crisis of 1944, and resulted in several Quebec Liberal MPs leaving the party in protest."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1941 }
+ 
+                
+                picture = "CAN13"
+                
+           action_a = {
+                  name = "Aprove it"
+                  ai_chance = 97
+                  command = { type = dissent value = 3 }
+                  command = { type = manpowerpool value = 70 }
+                  command = { type = relative_manpower value = 3 }
+           }
+           action_b = {
+                  name = "It's not necessary"
+                  ai_chance = 3
+                  command = { type = dissent value = 3 }
+           }
+
+}
+#############################################
+######  Unemployment benefits
+#############################################
+event = {
+         id = 133015210
+         random = no
+         country = can
+         trigger = {
+
+         }
+ 
+         name = "Unemployment benefits"
+         desc = "The Canadian government was faced with the need to introduce unemployment benefits to avoid a large number of people in poverty. This will substantially improve the quality of life of the unemployed and proved to be an improvement in the economy."
+         style = 2
+ 
+         date = { day = 7 month = august year = 1940 }
+ 
+                
+                picture = "Unemployment_rate"
+                
+           action_a = {
+                  name = "Aprove it"
+                  ai_chance = 95
+                  command = { type = money value = -60 }
+                  command = { type = dissent value = -3 }
+                  command = { type = industrial_modifier which = total value = 1 }
+           }
+           action_b = {
+                  name = "Now it's impossible"
+                  ai_chance = 5
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  Icefields Parkway
+#############################################
+event = {
+         id = 133015220
+         random = no
+         country = can
+         trigger = {
+                   random = 8
+
+         }
+ 
+         name = "Icefields Parkway"
+         desc = "The parkway, 230 km (143 mi) in length, was completed in 1940. It is named for features such as the Columbia Icefield, which is visible while traveling the parkway."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1940 }
+         offset = 8
+         deathdate = { day = 31 month = december year = 1940 }
+ 
+                
+                picture = "CAN14"
+                
+           action_a = {
+                  name = "Excellent"
+                  command = { type = dissent value = -1 }
+                  command = { type = money value = -10 }
+                  command = { type = construct which = infrastructure where = 2092 value = 10 }
+                  command = { type = construct which = infrastructure where = 2104 value = 10 }
+           }
+
+}
+#############################################
+######  Strike in Arvida
+#############################################
+event = {
+         id = 133015230
+         random = no
+         country = can
+         trigger = {
+
+         }
+ 
+         name = "Strike in Arvida"
+         desc = "Alcan workers in Arvida called a general strike in the region to protest the labor and economic situation in the country."
+         style = 2
+ 
+         date = { day = 24 month = july year = 1941 }
+ 
+                
+                picture = "strike"
+                
+           action_a = {
+                  name = "Bad news"
+                  command = { type = dissent value = 2 }
+           }
+
+}
+#############################################
+######  Control of Newfoundland
+#############################################
+event = {
+         id = 133015240
+         random = no
+         country = eng
+         trigger = {
+
+         }
+ 
+         name = "Control of Newfoundland"
+         desc = "According to the Statute of Westminster of 11 December 1931, the Dominion of Newfoundland was independent within the British Commonwealth,but on 16 February 1934 the Newfoundland Parliament passed an Address to the Crown relinquishing self-government.Responsible government in Newfoundland voluntarily ended and governance of the dominion reverted to direct control from London."
+         style = 2
+ 
+         date = { day = 16 month = february year = 1934 }
+ 
+                
+                picture = "CAN15"
+                
+           action_a = {
+                  name = "Perfect!"
+                  command = { type = make_puppet which = U60 }
+                  command = { type = relation which = U60 value = 200 }
+                  command = { type = trigger which = 133015250 }
+           }
+
+}
+#############################################
+######  Control of Newfoundland
+#############################################
+event = {
+         id = 133015250
+         random = no
+         country = U60
+ 
+         name = "Control of Newfoundland"
+         desc = "According to the Statute of Westminster of 11 December 1931, the Dominion of Newfoundland was independent within the British Commonwealth,but on 16 February 1934 the Newfoundland Parliament passed an Address to the Crown relinquishing self-government.Responsible government in Newfoundland voluntarily ended and governance of the dominion reverted to direct control from London."
+         style = 2
+ 
+ 
+                
+                picture = "CAN15"
+                
+           action_a = {
+                  name = "It is so necessary"
+                  command = { type = dissent value = -5 }
+                  command = { type = headofstate which = 1115012 }
+                  command = { type = headofgovernment which = 1115013 }
+                  command = { type = relation which = eng value = 200 }
+                  command = { type = alliance which = ENG }
+           }
+
+}
+#############################################
+######  Newfoundland referendums, 1948
+#############################################
+event = {
+	id = 133015260
+	random = no
+	country = u60
+	
+	
+	decision = { 
+		exists = U60
+		atwar = no
+	}
+	decision_trigger = {
+		money = 100
+		control = { province = 2136 data = U60 }
+		control = { province = 2137 data = U60 }
+		control = { province = 2138 data = U60 }
+	}
+	trigger = {
+		exists = U60 
+		control = { province = 2136 data = U60 }
+		control = { province = 2137 data = U60 }
+		control = { province = 2138 data = U60 }
+		atwar = no
+		random = 10
+	}
+	
+	name = "Newfoundland referendums, 1948"
+	desc = "The Newfoundland Referendums of 1948 were a series of two referendums to decide the political future of the Dominion of Newfoundland. Before the referendums,Newfoundland was in debt and went through several delegations to determine whether the country would join Canada,remain under British rule or regain independence."
+	style = 2
+	picture = "CAN16"
+	decision_picture = "decision_negotiaton"
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "Join Canada!!!"
+		ai_chance = 50
+		command = {type = trigger which = 133015270 }
+	}
+	action = {
+		name = "Independence!!!"
+		ai_chance = 40
+		command = { type = end_puppet }
+		command = { type = supplies value = 700 }
+		command = { type = oilpool value = 200 }
+		command = { type = construct which = ic where = -1 value = 1 }
+		command = { type = headofstate which = 1115001 }
+		command = { type = headofgovernment which = 1115002 }
+		command = { type = sleepminister which = 1115012 }
+		command = { type = sleepminister which = 1115013 }
+	}
+	action = {
+		name = "British rule..."
+		ai_chance = 10
+		command = {type = trigger which = 13301528 }
+	}
+}
+#############################################
+######  Control of Newfoundland
+#############################################
+event = {
+         id = 133015270
+         random = no
+         country = can
+ 
+         name = "Control of Newfoundland"
+         desc = "For Canadians today will be a day of welcome. For this is the day when a tenth province is added to the Dominion of Canada. There will be a greater meaning than ever to the Canadian motto, chosen by Sir Leonard Tilley from the words of Isaiah which describes the dominion that reaches 'from sea to sea'."
+         style = 2
+ 
+ 
+                
+                picture = "CAN17"
+                
+           action_a = {
+                  name = "Excellent"
+                  command = { type = supplies value = 700 }
+                  command = { type = oilpool value = 200 }
+                  command = { type = construct which = ic where = -1 value = 1 }
+                  command = { type = dissent value = -1 }
+                  command = { type = addclaim which = 2136 }
+                  command = { type = addclaim which = 2137 }
+                  command = { type = addclaim which = 2138 }
+                  command = { type = inherit which = U60 }
+                  command = { type = secedeprovince which = CAN value = 2136 when = 2 }
+                  command = { type = secedeprovince which = CAN value = 2137 when = 2 }
+                  command = { type = secedeprovince which = CAN value = 2138 when = 2 }
+                  command = { trigger = { ai = no } type = money value = -100 }
+           }
+
+}
+#############################################
+######  Control of Newfoundland
+#############################################
+event = {
+         id = 133015280
+         random = no
+         country = eng
+ 
+         name = "Control of Newfoundland"
+         desc = "For British Empire today will be a day of welcome. For this is the day when the Dominion of Newfoundland is added to the British Empire. There will be a greater meaning than ever to the British motto, chosen by Sir Leonard Tilley from the words of Isaiah which describes the dominion that reaches 'from sea to sea'."
+         style = 2
+ 
+ 
+                
+                picture = "CAN18"
+                
+           action_a = {
+                  name = "Excellent"
+                  command = { type = supplies value = 700 }
+                  command = { type = oilpool value = 200 }
+                  command = { type = construct which = ic where = -1 value = 1 }
+                  command = { type = dissent value = -1 }
+                  command = { type = addclaim which = 2136 }
+                  command = { type = addclaim which = 2137 }
+                  command = { type = addclaim which = 2138 }
+                  command = { type = inherit which = U60 }
+                  command = { type = secedeprovince which = ENG value = 2136 when = 2 }
+                  command = { type = secedeprovince which = ENG value = 2137 when = 2 }
+                  command = { type = secedeprovince which = ENG value = 2138 when = 2 }
+                  command = { trigger = { ai = no } type = money value = -100 }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 133015290
+         random = no
+         country = eng
+         trigger = {
+                   war = { country =eng  country = ger }
+                   alliance = { country = eng country = can }
+                   alliance = { country = eng country = saf }
+                   alliance = { country = eng country = ast }
+                   alliance = { country = eng country = nzl }
+                   random = 25
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+         date = { day = 1 month = december year = 1933 }
+         offset = 7
+         deathdate = { day = 31 month = december year = 1942 }
+ 
+                
+                picture = "CAN19"
+                
+           action_a = {
+                  name = "Aprove it"
+                  ai_chance = 95
+                  command = { type = manpowerpool value = -40 }
+                  command = { type = money value = -120 }
+                  command = { type = industrial_modifier which = total value = -7 }
+                  command = { type = local_setflag which = entreaereo }
+                  command = { type = trigger which = 133015300 }
+                  command = { type = trigger which = 133015310 }
+                  command = { type = trigger which = 133015320 }
+                  command = { type = trigger which = 133015330 }
+                  command = { type = trigger which = 133015430 }
+           }
+           action_b = {
+                  name = "Is not necessary"
+                  ai_chance = 5
+                  command = { }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 133015340
+         random = no
+         country = eng
+         trigger = {
+                   random = 7
+                   local_flag = entreaereo
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+         date = { day = 1 month = february year = 1940 }
+         offset = 7
+         deathdate = { day = 31 month = december year = 1940 }
+ 
+                
+                picture = "CAN19"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+                  command = { type = trigger which = 133015350 }
+                  command = { type = trigger which = 133015360 }
+                  command = { type = trigger which = 133015370 }
+                  command = { type = trigger which = 133015380 }
+                  command = { type = trigger which = 133015440 }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 133015390
+         random = no
+         country = eng
+         trigger = {
+                   random = 7
+                   local_flag = entreaereo
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+         date = { day = 1 month = february year = 1941 }
+         offset = 7
+         deathdate = { day = 31 month = december year = 1941 }
+ 
+                
+                picture = "CAN19"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+                  command = { type = trigger which = 133015350 }
+                  command = { type = trigger which = 133015360 }
+                  command = { type = trigger which = 133015370 }
+                  command = { type = trigger which = 133015380 }
+                  command = { type = trigger which = 133015440 }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 133015400
+         random = no
+         country = eng
+         trigger = {
+                   random = 7
+                   local_flag = entreaereo
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+         date = { day = 1 month = february year = 1942 }
+         offset = 7
+         deathdate = { day = 31 month = december year = 1942 }
+ 
+                
+                picture = "CAN19"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+                  command = { type = trigger which = 133015350 }
+                  command = { type = trigger which = 133015360 }
+                  command = { type = trigger which = 133015370 }
+                  command = { type = trigger which = 133015380 }
+                  command = { type = trigger which = 133015440 }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 133015410
+         random = no
+         country = eng
+         trigger = {
+                   random = 7
+                   local_flag = entreaereo
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+         date = { day = 1 month = february year = 1943 }
+         offset = 7
+         deathdate = { day = 31 month = december year = 1943 }
+ 
+                
+                picture = "CAN19"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+                  command = { type = trigger which = 133015350 }
+                  command = { type = trigger which = 133015360 }
+                  command = { type = trigger which = 133015370 }
+                  command = { type = trigger which = 133015380 }
+                  command = { type = trigger which = 133015440 }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 133015420
+         random = no
+         country = eng
+         trigger = {
+                   random = 7
+                   local_flag = entreaereo
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+         date = { day = 1 month = february year = 1944 }
+         offset = 7
+         deathdate = { day = 31 month = december year = 1944 }
+ 
+                
+                picture = "CAN19"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+                  command = { type = trigger which = 133015350 }
+                  command = { type = trigger which = 133015360 }
+                  command = { type = trigger which = 133015370 }
+                  command = { type = trigger which = 133015380 }
+                  command = { type = trigger which = 133015440 }
+                  command = { type = local_clrflag which = entreaereo }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 133015300
+         random = no
+         country = can
+         trigger = {
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+ 
+                
+                picture = "CAN20"
+                
+           action_a = {
+                  name = "OK"
+                  command = {  }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 13301535
+         random = no
+         country = can
+         trigger = {
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+          persistent = yes
+ 
+ 
+                
+                picture = "CAN20"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+           }
+
+}
+#############################################
+######  Alaska Highway
+#############################################
+event = {
+         id = 13301545
+         random = no
+         country = usa
+         trigger = {
+                   atwar = yes
+                   NOT = { 
+                            war = { country = can country = usa }
+                   }
+                   random = 12
+                   control = { province = 2142 data = USA }
+                   control = { province = 2147 data = USA }
+                   control = { province = 2141 data = USA }
+         }
+ 
+         name = "Alaska Highway"
+         desc = "After the outbreak of the war and the threat to the West Coast, the U.S. government approved a project to build a highway to supply Alaska with the U.S.. The government would finance all the work and after the war the trip would be under Canadian ownership of Canada."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 12
+         deathdate = { day = 31 month = december year = 1945 }
+ 
+                
+                picture = "CAN21"
+                
+           action_a = {
+                  name = "Begin construction"
+                  ai_chance = 95
+                  command = { type = money value = -150 }
+                  command = { type = supplies value = -400 }
+                  command = { type = manpowerpool value = -10 }
+                  command = { type = construct which = ic where = -4 value = -2 }
+                  command = { type = trigger which = 133015460 }
+           }
+           action_b = {
+                  name = "We do not need this road"
+                  ai_chance = 5
+                  command = { }
+           }
+
+}
+#############################################
+######  Alaska Highway
+#############################################
+event = {
+         id = 133015460
+         random = no
+         country = usa
+ 
+         name = "Alaska Highway"
+         desc = "After the outbreak of the war and the threat to the West Coast, the U.S. government approved a project to build a highway to supply Alaska with the U.S.. The government would finance all the work and after the war the trip would be under Canadian ownership of Canada."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 12
+         deathdate = { day = 31 month = december year = 1945 }
+ 
+                
+                picture = "CAN21"
+                
+           action_a = {
+                  name = "OK"
+                  command = { type = construct which = infrastructure where = 2142 value = 30 }
+                  command = { type = construct which = infrastructure where = 2147 value = 50 }
+                  command = { type = construct which = infrastructure where = 2141 value = 50 }
+                  command = { type = trigger which = 133015470 }
+           }
+
+}
+#############################################
+######  Alaska Highway
+#############################################
+event = {
+         id = 133015470
+         random = no
+         country = can
+ 
+         name = "Alaska Highway"
+         desc = "After the outbreak of the war and the threat to the West Coast, the U.S. government approved a project to build a highway to supply Alaska with the U.S.. The government would finance all the work and after the war the trip would be under Canadian ownership of Canada."
+         style = 2
+ 
+ 
+                
+                picture = "CAN21"
+                
+           action_a = {
+                  name = "OK"
+                  command = { type = construct which = infrastructure where = 2148 value = 30 }
+           }
+
+}
+#############################################
+######  Town class destroyers
+#############################################
+event = {
+         id = 133015480
+         random = no
+         country = can
+         trigger = {
+                   alliance = { country = can country = eng }
+                   event = 13301500
+
+         }
+ 
+         name = "Town class destroyers"
+         desc = "The Town class destroyers were warships transferred from the United States Navy to the Royal Navy and the Royal Canadian Navy in exchange for military bases in the Bahamas and elsewhere, as outlined in the Destroyers for Bases Agreement between Britain and United States, signed on 2 September 1940."
+         style = 2
+ 
+         date = { day = 1 month = october year = 1940 }
+         offset = 1
+         deathdate = { day = 31 month = december year = 1942 }
+ 
+                
+                picture = "CAN22"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  command = { type = add_division which = "HMCS Uganda" value = light_cruiser when = 4 }
+                  command = { type = add_division which = "HMCS Ontario" value = light_cruiser when = 4 }
+                  command = { type = add_division which = "3st Destroyer Flotilla" value = destroyer when = 4 }
+                  command = { type = add_division which = "4th Destroyer Flotilla" value = destroyer when = 4 }
+                  command = { type = add_division which = "5th Destroyer Flotilla" value = destroyer when = 4 }
+                  command = { type = add_division which = "6th Destroyer Flotilla" value = destroyer when = 4 }
+                  command = { type = add_division which = "7th Destroyer Flotilla" value = destroyer when = 4 }
+                  command = { type = add_division which = "8th Destroyer Flotilla" value = destroyer when = 4 }
+                  command = { type = manpowerpool value = -30 }
+           }
+
+}
+#############################################
+######  The mobilization schemes
+#############################################
+event = {
+         id = 133015490
+         random = no
+         country = can
+         trigger = {
+                   alliance = { country = can country = eng }
+                   event = 13301500
+
+         }
+ 
+         name = "The mobilization schemes"
+         desc = "At the outbreak of war, Canada's commitment to the war in Europe was limited by government to one division, and one division in reserve for home defence. Nevertheless, the eventual size of the Canadian armed forces greatly exceeded those envisioned in the pre-war period's so-called mobilization 'schemes'. Over the course of the war, the army enlisted 730,000 the air force 260,000 and the navy 115,000 personnel."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 30
+         deathdate = { day = 31 month = december year = 1944 }
+ 
+                
+                picture = "CAN13"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  command = { type = add_division which = "3rd Canadian Infantry Div." value = infantry when = 0 }
+                  command = { type = add_division which = "4th Canadian Armoured Div." value = armor when = 0 }
+                  command = { type = add_division which = "5th Canadian Armoured Div." value = armor when = 0 }
+                  command = { type = add_division which = "6th Canadian Infantry Div." value = infantry when = 0 }
+                  command = { type = add_division which = "7th Canadian Infantry Div." value = infantry when = 0 }
+                  command = { type = add_division which = "8th Canadian Infantry Div." value = infantry when = 0 }
+                  command = { type = manpowerpool value = -40 }
+           }
+
+}
+#############################################
+######  1931 Statute of Westminster
+#############################################
+event = {
+         id = 133015500
+         random = no
+         persistent = yes
+         tag = { AST CAN SAF NZL }
+         all = yes
+         trigger = {
+                   exists = eng
+                   alliance = { country = -1 country = eng }
+                   NOT = { war = { country = GER country = ENG }  }
+
+         }
+ 
+         name = "1931 Statute of Westminster."
+         desc = "The British Commonwealth of Nations was the result of the 1926 Balfour Declaration which stipulated that the relationship between Britain and her Dominions was equal in status.This stipulation was formalized officially in Section 4 of the Statute of Westminster in 1931.The statute applied to Canada without the need for ratification, but Australia, New Zealand, and Newfoundland had to ratify the statute for it to take effect."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 20
+         deathdate = { day = 31 month = december year = 1937 }
+ 
+                
+                picture = "CAN23"
+                
+           action_a = {
+                  name = "God Save the King."
+                  command = { type = leave_alliance }
+                  command = { type = trigger which = 133015510 }
+           }
+
+}
+#############################################
+######  1931 Statute of Westminster
+#############################################
+event = {
+         id = 133015510
+         random = no
+         persistent = yes
+         country = ENG
+ 
+         name = "1931 Statute of Westminster."
+         desc = "The British Commonwealth of Nations was the result of the 1926 Balfour Declaration which stipulated that the relationship between Britain and her Dominions was equal in status.This stipulation was formalized officially in Section 4 of the Statute of Westminster in 1931.The statute applied to Canada without the need for ratification, but Australia, New Zealand, and Newfoundland had to ratify the statute for it to take effect."
+         style = 2
+ 
+ 
+                
+                picture = "CAN23"
+                
+           action_a = {
+                  name = "God Save the King."
+                  command = { type = relation which = ast value = -2 }
+                  command = { type = relation which = can value = -2 }
+                  command = { type = relation which = saf value = -2 }
+                  command = { type = relation which = nzl value = -2 }
+           }
+
+}

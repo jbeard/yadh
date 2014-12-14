@@ -1,0 +1,299 @@
+### Dissolution of British India
+
+# Separation of Burma
+event = {
+	id = 8214001
+	country = U02
+	persistent = yes
+
+	name = EVT_8020210_NAME
+	desc = EVT_8020210_DESC
+	picture = "nwo\independence_of_burma"
+	style = 1
+
+	trigger = {
+		area = { area = "North Burma" country = -1 data = 1 value = 50 } # Burma is controlled
+		area = { area = "Burma" country = -1 data = 1 value = 50 } # Burma is controlled
+		atwar = no
+		flag = cold_war_pacific
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = EVT_8020210_A
+		ai_chance = 100
+		command = { type = independence which = BUR value = 1 }
+		command = { type = trigger which = 8214002 }
+	}
+	
+	action = {
+		name = EVT_8020210_B
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = belligerence value = 10 }
+	}
+}
+
+# Burma remains British puppet
+event = {
+	id = 8214002
+	country = ENG
+
+	name = EVT_8020211_NAME
+	desc = EVT_8020211_DESC
+	picture = "nwo\independence_of_burma"
+	style = 1
+
+	action = {
+		name = EVT_8020211_A
+		command = { type = make_puppet which = BUR }
+		command = { type = trigger which = 8214003 }
+	}
+}
+
+event = {
+	id = 8214003
+	country = BUR
+
+	name = EVT_MILACCESS_NAME
+	desc = EVT_MILACCESS_DESC
+	picture = "nwo\independence_of_burma"
+	style = 1
+
+	action = {
+		name = EVT_MILACCESS_A
+		command = { type = leave_alliance }
+		command = { type = access which = ENG }
+	}
+}
+
+# Burma ceases to be a British puppet
+event = {
+	id = 8214004
+	country = ENG
+	persistent = yes
+
+	name = EVT_8020212_NAME
+	desc = EVT_8020212_DESC
+	picture = "nwo\independence_of_burma"
+	style = 1
+
+	trigger = {
+		puppet = { country = BUR country = ENG }
+		not = { flag = event_8214004 }
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 720
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8020212_A
+		ai_chance = 98
+		command = { type = trigger which = 8214005 }
+	}
+	
+	action = {
+		name = EVT_8020212_B
+		ai_chance = 2
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 7 }
+	}
+
+	action = {
+		name = EVT_8020212_C
+		ai_chance = 0
+		command = { type = setflag which = event_8214004 }
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 15 }
+	}
+}
+
+# Burma ceases to be a British puppet
+event = {
+	id = 8214005
+	country = BUR
+
+	name = EVT_8020213_NAME
+	desc = EVT_8020213_DESC
+	picture = "nwo\independence_of_burma"
+	style = 1
+
+	action = {
+		name = EVT_8020213_A
+		command = { type = end_puppet }
+	}
+}
+
+### Partition of India
+
+event = {
+	id = 8214010
+	country = ENG
+	persistent = yes
+
+	name = EVT_8020214_NAME
+	desc = EVT_8020214_DESC
+	picture = "nwo\ali_jinnah_negotiating"
+	style = 1
+
+	trigger = {
+		NOT = { exists = IND }
+		exists = U02 # British Raj
+		flag = cold_war
+		flag = cold_war_pacific
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	# Decide on a partition
+	action = {
+		name = EVT_8020214_A
+		ai_chance = 90
+		command = { trigger = { NOT = { exists = BUR } } type = trigger which = 8214001 }
+		command = { type = trigger which = 8214011 }
+	}
+	
+	# Try to arrange a federated India
+	action = {
+		name = EVT_8020214_B
+		ai_chance = 5
+		command = { type = trigger which = 8214012 }
+	}
+
+	# Stay there for now
+	action = {
+		name = EVT_8020214_C
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+	}
+}
+
+# Partition of India: Release of states
+event = {
+	id = 8214011
+	country = U02
+
+	name = EVT_8020215_NAME
+	desc = EVT_8020215_DESC
+	picture = "nwo\independence_of_india"
+	style = 1
+	
+	action = {
+		name = EVT_8020215_A
+		command = { type = independence which = U80 value = 1 }
+		command = { type = independence which = PAK value = 1 }
+		
+		command = { type = secedeprovince which = PAK value = 1536 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1444 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1449 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1445 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1450 when = 1 }
+		command = { type = secedeprovince which = PAK value = 1439 when = 1 }
+		
+		command = { type = country which = IND }
+		# Remove all colonial forces
+		command = { type = strength which = all when = 0 where = 1 value = 0 }
+	}
+}
+
+# Partition of India: India stays federated
+event = {
+	id = 8214012
+	country = U02
+
+	name = EVT_8020220_NAME
+	desc = EVT_8020220_DESC
+	picture = "nwo\independence_of_india"
+	style = 1
+	
+	action = {
+		name = EVT_8020220_A
+		command = { type = country which = IND }
+		command = { type = dissent value = 40 }
+		command = { type = province_revoltrisk which = 1538 value = 30 }
+		command = { type = province_revoltrisk which = 1533 value = 30 }
+		command = { type = province_revoltrisk which = 1532 value = 30 }
+		command = { type = province_revoltrisk which = 1534 value = 30 }
+		command = { type = province_revoltrisk which = 1539 value = 30 }
+		command = { type = province_revoltrisk which = 1537 value = 30 }
+		command = { type = province_revoltrisk which = 1530 value = 30 }
+		command = { type = province_revoltrisk which = 1529 value = 30 }
+		command = { type = province_revoltrisk which = 1536 value = 30 }
+		command = { type = province_revoltrisk which = 1539 value = 30 }
+		command = { type = province_revoltrisk which = 1444 value = 30 }
+		command = { type = province_revoltrisk which = 1449 value = 30 }
+		command = { type = province_revoltrisk which = 1439 value = 30 }
+		command = { type = province_revoltrisk which = 1445 value = 30 }
+		command = { type = province_revoltrisk which = 1450 value = 30 }
+		command = { type = province_revoltrisk which = 1540 value = 30 }
+		command = { type = province_revoltrisk which = 1442 value = 30 }
+		# Burma
+		command = { type = province_revoltrisk which = 1411 value = 30 }
+		command = { type = province_revoltrisk which = 1406 value = 30 }
+		command = { type = province_revoltrisk which = 1407 value = 30 }
+		command = { type = province_revoltrisk which = 1408 value = 30 }
+		command = { type = province_revoltrisk which = 1409 value = 30 }
+		command = { type = province_revoltrisk which = 1420 value = 30 }
+		command = { type = province_revoltrisk which = 1419 value = 30 }
+		command = { type = province_revoltrisk which = 1415 value = 30 }
+		command = { type = province_revoltrisk which = 1410 value = 30 }
+		command = { type = province_revoltrisk which = 1417 value = 30 }
+		command = { type = province_revoltrisk which = 1416 value = 30 }
+		command = { type = province_revoltrisk which = 1412 value = 30 }
+		command = { type = province_revoltrisk which = 1413 value = 30 }
+		command = { type = province_revoltrisk which = 1418 value = 30 }
+		command = { type = province_revoltrisk which = 1443 value = 30 }
+		command = { type = province_revoltrisk which = 1421 value = 30 }
+		command = { type = province_revoltrisk which = 1458 value = 30 }
+		command = { type = province_revoltrisk which = 1455 value = 30 }
+		command = { type = province_revoltrisk which = 1414 value = 30 }
+		command = { type = province_revoltrisk which = 1440 value = 30 }
+		command = { type = province_revoltrisk which = 1441 value = 30 }		              
+	}
+}
+
+### UK does not release India free - dissent
+event = {
+	id = 8214020
+	country = U02
+	persistent = yes
+
+	name = EVT_8214020_NAME
+	desc = EVT_8214020_DESC
+	picture = "nwo\independence_of_india"
+	style = 1
+	
+	trigger = {
+		event = 8214001
+		event = 8214010
+		OR = {
+			NOT = { exists = IND }
+			NOT = { exists = BUR }
+		}
+		exists = U02
+	}
+	
+	date = { day = 0 month = january year = 1950 }
+	offset = 1000
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8214020_A
+		ai_chance = 80
+		command = { type = independence which = BUR value = 1 }
+		command = { type = trigger which = 8214011 }
+	}
+	
+	action = {
+		name = EVT_8214020_B
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 20 }
+	}
+}

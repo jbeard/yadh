@@ -1,0 +1,676 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# Middle East Events
+# YEM 13301610 Treaty of Taif
+# SAU 13301611 First Nejd-Hejaz War
+# YEM 13301612 Letter from United Kingdom
+# SAU 13301613 The First Nejd-Hejaz War (Aftermath)
+# SAU 13301614 Continuation of the first Nejd-Hejaz War.
+# SAU 13301615 Kuwait-Nejd Border War
+# SAU 13301616 Aftermath of the Kuwait-Nejd Border War
+# SAU 13301617 1922 Treaty of Uqair
+# SAU 13301618 The Conquest of Ha'il
+# SAU 13301619 Supplies from England
+# SAU 13301620 Second Nejd-Hejaz
+# SAU 13301621 Incorporation of Hejaz
+# SAU 13301622 The Declaration of the Kingdom of Saudi Arabia
+# SAU 13301623 The Saudi-Yemeni War
+# YEM 13301624 All is lost!
+
+# TODO: 1.03 Province changes:
+#PROV1010;1012
+#PROV1014;2791
+#PROV1016;2790
+#PROV1021;2792
+#PROV1030;2788
+#PROV1040;2787
+#PROV1045;2784
+#PROV1048;2786
+#PROV1049;2785
+#PROV1052;2783
+#PROV1083;2793 2794
+#PROV1084;2795
+#PROV1086;2796
+#PROV1089;2799 2800
+#PROV1092;2798
+#PROV1094;2797
+
+
+# Treaty of Taif
+event = {
+	id = 13301610	# Treaty of Taif
+	country = YEM
+	
+	# Triggered by Saudi-Yemen War
+	
+	name = "EVT_13301610_NAME"
+	desc = "EVT_13301610_DESC"
+	
+	action = {
+		name = "Ask to be saved."
+		ai_chance = 100
+		command = { type = event which = 13300920 where = ENG when = 2} #Ask to become puppet of UK in return for peace.
+		command = { trigger = { war = { country = YEM country = ENG } } type = peace which = ENG }
+		command = { trigger = { war = { country = YEM country = FRA } alliance = { country = FRA country = ENG } } type = peace which = FRA }
+	}
+	
+	action = {
+		name = "We shall fight on our own!"
+		command = { type = relation which = ENG value = -5 }
+		ai_chance = 0
+	}
+}
+
+# First Nejd-Hejaz War
+event = {
+	id = 13301611
+	country = SAU
+	save_date = yes
+	
+	date = { day = 1 month = 1 year = 1919 }
+	offset = 3
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	name = "EVT_13301611_NAME"
+	desc = "EVT_13301611_DESC"
+	style = 2
+	
+	trigger = {
+		atwar = no
+		not = {
+			or = {
+				ispuppet = U50
+				alliance = { country = U50 country = ENG }
+			}
+		}
+	}
+	
+	action = {
+		name = "We need Unification!"
+		ai_chance = 100
+		command = { type = war which = U50	}
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = add_division value = Infantry when = 1 }
+		command = { type = max_organization which = land value = 40 }
+		command = { type = morale which = land value = 40 }
+		command = { trigger = { ai = yes } type = morale which = land value = 40 }
+		command = { type = speed which = land value = 20 }
+		command = { type = counterattack value = 20 }
+		command = { type = assault value = 20 }
+		command = { type = ambush value = 20 }
+		command = { type = breakthrough value = 20 }
+		command = { type = encirclement value = 20 }
+		command = { type = hq_supply_eff value = 20 }
+		command = { type = sce_frequency value = 10 }
+		command = { type = attrition_mod value = 20 }
+		command = { type = trickleback_mod value = 20 }		
+		#command = { type = event which = 13301613 where = SAU when = 365 } #Aftermath
+	}
+	action = {
+		name = "Respect self-determination"
+		ai_chance = 0
+		command = { type = relation which = U50 value = 15 }
+	}
+}
+
+# Letter from the United Kingdom
+event = {
+	id = 13301612	
+	country = YEM
+	
+	#triggered by ENG 13300920
+	
+	name = "EVT_13301612_NAME"
+	desc = "EVT_13301612_DESC"
+	
+	action = {
+		trigger = { flag = UK_became_master_of_YEM }
+		name = "Peace!"
+		ai_chance = 100
+		command = { type = relation which = U08 value = 50 }
+		command = { type = peace which = SAU value = 0 }
+		
+	}
+	action = {
+		trigger = { flag = UK_refused_to_become_master_of_YEM }
+		name = "On a second thought, better not."
+		ai_chance = 0
+		command = { type = relation which = ENG value = -5 }
+	}
+}
+
+# The First Nejd-Hejaz War (Aftermath)
+event = {
+	id = 13301613
+	country = SAU
+	save_date = yes
+	
+	date = { day = 1 month = 1 year = 1919 }
+	offset = 10
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	trigger = {
+		event = { id = 13301611 days = 60 }
+		or = {
+			random = 15
+			and = {
+				not = { exists = U50 }
+				OR = {control = { province = 1048 data = SAU }
+					control = { province = 1049 data = SAU }
+				}
+			}
+		}
+	}
+	
+	name = "EVT_13301613_NAME"
+	desc = "EVT_13301611_DESC"
+	style = 2
+	
+	action = {
+		name = "They remain alive!"
+		trigger = { exists = U50 }
+		command = { type = dissent value = 2 }
+	}
+	
+	action = {
+		name = "We are victorious!"
+		trigger = { 			
+			not = { exists = U50 }
+			AND = { OR = { control = { province = 1048 data = SAU }
+							control = { province = 1049 data = SAU }
+			}
+		}	
+	}
+		command = { type = dissent value = -5 }
+		# Just to make sure we really get this
+		command = { type = secedeprovince which = SAU when = 2 value = 1048 }
+		command = { type = secedeprovince which = SAU when = 2 value = 1049 }
+		command = { type = sleepevent which = 13301620 }
+		command = { type = morale which = land value = -40 }
+		command = { trigger = { ai = yes } type = morale which = land value = -40 }
+		command = { type = speed which = land value = -20 }
+		command = { type = counterattack value = -20 }
+		command = { type = assault value = -20 }
+		command = { type = ambush value = -20 }
+		command = { type = breakthrough value = -20 }
+		command = { type = encirclement value = -20 }
+		command = { type = hq_supply_eff value = -20 }
+		command = { type = sce_frequency value = -10 }
+		command = { type = attrition_mod value = -20 }
+		command = { type = trickleback_mod value = -20 }
+		command = { trigger = { control = { province = 1050 data = SAU } } type = independence which = YEM value = 1 when = 1 }
+		command = { trigger = { control = { province = 1050 data = SAU } } type = secedeprovince which = YEM value = 1050 when = 1 }
+	}
+}
+
+# Continuation of Nejd-Hejaz War
+event = {
+	id = 13301614
+	country = SAU
+	persistent = yes
+	
+	date = { day = 1 month = 1 year = 1919 }
+	offset = 15
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	trigger = {
+		event = { id = 13301613 days = 120 }
+		or = {
+			random = 10
+			and = {
+				not = { exists = U50 }
+				control = { province = 1048 data = SAU }
+				control = { province = 1049 data = SAU }
+			}
+		}
+		not = { event = 13301620 }
+	}
+	
+	name = "EVT_13301614_NAME"
+	desc = "EVT_13301611_DESC"
+	style = 2
+	
+	action = {
+		name = "Continued war is madness!"
+		ai_chance = 30
+		command = { type = dissent value = 2 }
+		command = { type = peace which = U50 value = 0 }
+		command = { type = sleepevent which = 13301614 }
+	}
+	
+	action = {
+		trigger = {
+			not = { dissent = 25 }
+		}
+		name = "Let the fighting continue."
+		trigger = { not = { lost_national = { value = 20 } } exists = U50 }
+		ai_chance = 70
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		trigger = { 
+			not = { exists = U50 }
+			control = { province = 1048 data = SAU }
+			control = { province = 1049 data = SAU }
+		}
+		name = "We are victorious!"
+		command = { type = dissent value = -1 }
+		command = { type = sleepevent which = 13301614 }
+		command = { type = sleepevent which = 13301620 }
+	}
+}
+
+#Kuwait-Nejd Border War
+event = {
+	id = 13301615	
+	country = SAU
+	save_date = yes
+	
+	date = { day = 1 month = 7 year = 1921 }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	name = "EVT_13301615_NAME"
+	desc = "EVT_13301615_DESC"
+	style = 2
+	
+	trigger = {
+		exists = U91
+		atwar = no
+	}
+	
+	action = {
+		name = "Allahu Akbar!"
+		ai_chance = 100
+		command = { type = war which = U91	}
+		command = { type = trigger which = 13300922 } #England intervention event.
+		#command = { type = event which = 13301616 where = SAU when = 210} #Aftermath
+		
+	}
+	
+	action = {
+		name = "Let us not go to war with our friends."
+		ai_chance = 0
+		command = { type = relation which = U91 value = 15 }
+	}
+}
+
+# Aftermath of Kuwait-Nejd Border War
+event = {
+	id = 13301616	
+	country = SAU
+	
+	date = { day = 1 month = 7 year = 1921 }
+	offset = 10
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	name = "EVT_13301616_NAME"
+	desc = "EVT_13301616_DESC"
+	style = 2
+	
+	trigger = {
+		event = { id = 13301615 days = 15 }
+		random = 10
+		or = {
+			war = { country = ENG country = SAU }
+			war = { country = U91 country = SAU }
+		}
+	}
+	
+	action = {
+		trigger = {
+			war = { country = SAU country = ENG }
+			not = { control = { province = SAU data = 1041 } }
+			not = { lost_national = { value = 20 } }
+		}
+		name = "Damn! Stop this war."
+		ai_chance = 100
+		command = { type = peace which = U91 value = 0 }
+		command = { type = peace which = ENG value = 0 }
+		command = { type = event which = 13301617 where = SAU when = 400} #Aftermath
+	}
+	
+	action = {
+		trigger = {
+			war = { country = SAU country = ENG }
+			control = { province = SAU data = 1041 }
+			lost_national = { value = 20 }
+		}
+		name = "Retreat!"
+		ai_chance = 100
+		command = { trigger = { exists = U91 } type = peace which = U91 value = 0 }
+		command = { type = peace which = ENG value = 0 }
+		command = { type = event which = 13301617 where = SAU when = 400} #Aftermath
+		command = { trigger = { not = { exists = U91 } }	type = independence which = U91 value = 1 when = 1 }
+		command = { trigger = { exists = U91 } type =	secedeprovince which = U91 value = 1041 }
+	}
+	
+	action = {
+		trigger = {
+			war = { country = SAU country = ENG }
+			control = { province = SAU data = 1041 }
+			not = { lost_national = { value = 20 } }
+		}
+		name = "We have what we came for."
+		ai_chance = 100
+		command = { trigger = { exists = U91 } type = peace which = U91 value = 0 }
+		command = { type = peace which = ENG value = 0 }
+	}
+	
+	action = {
+		trigger = {
+			not = { war = { country = SAU country = ENG } }
+		}
+		name = "Victory!"
+		ai_chance = 100
+		command = { trigger = { exists = U91 } type = inherit which = U91 value = 0 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+# 1922 Treaty of Uqair
+event = {
+	id = 13301617	
+	country = SAU
+	
+	name = "EVT_13301617_NAME"
+	desc = "EVT_13301617_DESC"
+	style = 2
+	
+	action = {
+		name = "Accept the inevitable"
+		ai_chance = 100
+		command = { type = removeclaim which = 1004 }
+		command = { type = removeclaim which = 1005 }
+		command = { type = removeclaim which = 1006 }
+		command = { type = removeclaim which = 1007 }
+		command = { type = removeclaim which = 1008 }
+		command = { type = removeclaim which = 1009 }
+		command = { type = removeclaim which = 1010 }
+		command = { type = removeclaim which = 1011 }
+		command = { type = removeclaim which = 1013 }
+		command = { type = removeclaim which = 1014 }
+		command = { type = removeclaim which = 1015 }
+		command = { type = removeclaim which = 1016 }
+		command = { type = removeclaim which = 1017 }
+		command = { type = removeclaim which = 1018 }
+		command = { type = removeclaim which = 1019 }
+		command = { type = removeclaim which = 1020 }
+		command = { type = removeclaim which = 1021 }
+		command = { type = removeclaim which = 1022 }
+		command = { type = removeclaim which = 1023 }
+		command = { type = removeclaim which = 1024 }
+		command = { type = removecore which = 1024 }
+		command = { type = removeclaim which = 1025 }
+		command = { type = removeclaim which = 1026 }
+		command = { type = removeclaim which = 1027 }
+		command = { type = removeclaim which = 1028 }
+		command = { type = removeclaim which = 1029 }
+		command = { type = removeclaim which = 1030 }
+		command = { type = removeclaim which = 1031 }
+		command = { type = removeclaim which = 1032 }
+		command = { type = removeclaim which = 1033 }
+		command = { type = removeclaim which = 1034 }
+		command = { type = removeclaim which = 1035 }
+		command = { type = removeclaim which = 1036 }
+		command = { type = removeclaim which = 1037 }
+		command = { type = removecore which = 1038 }
+		command = { type = removecore which = 1039 }
+		command = { type = removeclaim which = 1041 }
+		command = { type = removecore which = 1043 }
+		command = { type = removeclaim which = 1089 }
+		command = { type = removeclaim which = 1172 }
+	}
+}
+
+# The Conquest of Ha'il
+event = {
+	id = 13301618	
+	country = SAU
+	
+	date = { day = 1 month = 10 year = 1921 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	name = "EVT_13301618_NAME"
+	desc = "EVT_13301618_DESC"
+	style = 2
+	
+	trigger = {
+		exists = U52
+		atwar = no
+		not = {
+			or = {
+				ispuppet = U52
+				alliance = { country = U52 country =	ENG }
+			}
+		}
+	}
+	
+	action = {
+		name = "Start the Unification!"
+		ai_chance = 100
+		command = { type = war which = U52	}
+		command = { type = event which = 13300921 where = ENG when = 30} #Aid from United Kingdom
+		
+	}
+	action = {
+		name = "But they are our allies!"
+		ai_chance = 0
+		command = { type = relation which = U52 value = 25 }
+	}
+}
+
+#Supplies from England
+event = {
+	id = 13301619
+	country = SAU
+	
+	# Triggered by ENG
+	
+	name = "EVT_13301619_NAME"
+	desc = "EVT_13301619_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "Nice!"
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = 1000 }
+	}
+}
+
+# Second Nejd-Hejaz War
+event = {
+	id = 13301620
+	country = SAU
+	
+	date = { day = 1 month = 1 year = 1924 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1936 }
+	
+	name = "EVT_13301620_NAME"
+	desc = "EVT_13301620_DESC"
+	style = 2	
+	
+	trigger = {
+		exists = U50
+		atwar = no
+		not = {
+			or = {
+				ispuppet = U50
+				alliance = { country = U50 country = ENG }
+			}
+			and = {
+				control = { province = 1048 data = SAU }
+				control = { province = 1049 data = SAU }
+			}
+		}
+		event = { id = 13301611 days = 360 }
+		or = {
+			not = { event = 13301613 }
+			event = { id = 13301613 days = 180 }
+		}
+	}
+	
+	action = {
+		name = "Start the Unification!"
+		ai_chance = 100
+		command = { type = 	war which = U50	}
+	}
+	
+	action = {
+		name = "Respect self-determination"
+		ai_chance = 0
+		command = { type = relation which = U50 value = 5 }
+	}
+}
+
+# Incorporation of Hejaz
+event = {
+	id = 13301621	
+	country = SAU
+	
+	date = { day = 1 month = 11 year = 1925 }
+	offset = 30
+	deathdate = { day = 1 month = 1 year = 1933 }
+	
+	name = "EVT_13301621_NAME"
+	desc = "EVT_13301621_DESC"
+	style = 2
+	
+	trigger = {
+		atwar = no
+		not = {
+			exists = U50
+		}
+		control = { province = 1048 data = SAU }
+		control = { province = 1049 data = SAU }
+	}
+	
+	action = {
+		name = "Great!"
+		command = { type = name where = SAU which = Kingdom_of_Nejd_and_Hejaz }
+		command = { type = local_setflag which = U50_Incorporated }
+	}
+}
+
+# The Declaration of the Kingdom of Saudi Arabia
+event = {
+	id = 13301622	
+	country = SAU
+	
+	date = { day = 22 month = 8 year = 1932 }
+	offset = 15
+	deathdate = { day = 1 month = 1 year = 1936 }
+	
+	name = "EVT_13301622_NAME"
+	desc = "EVT_13301622_DESC"
+	style = 2
+	
+	trigger = {
+		event = 13301621
+		not = { exists = U52 }
+		not = { exists = U50 }
+		control = { province = 1048 data = SAU }
+		control = { province = 1049 data = SAU }
+		control = { province = 1044 data = SAU }
+		control = { province = 1046 data = SAU }
+		atwar = no
+	}
+	
+	action = {
+		name = "Excellent!"
+		command = { type = name where = SAU which = ""	}
+		command = { type = flag_ext where = SAU which = "" }
+	}
+}
+
+# The Saudi-Yemeni War
+event = {
+	id = 13301623	
+	country = SAU
+	
+	date = { day = 19 month = 2 year = 1934 }
+	offset = 5
+	deathdate = { day = 1 month = 1 year = 1935 }
+	
+	name = "EVT_13301623_NAME"
+	desc = "EVT_13301623_DESC"
+	style = 2
+	
+	trigger = {
+		exists = YEM
+		atwar = no
+		not = { 
+			or = {
+				ispuppet = YEM
+				alliance = { country = YEM country = ENG }
+			}
+		}
+	}
+	
+	action = {
+		name = "Hegemonia is at hand!"
+		ai_chance = 100
+		command = { type = war which = YEM	}
+		command = { type = event which = 13301610 where = YEM when = 120 } #Aftermath
+	}		
+	action = {
+		name = "Respect self-determination"
+		ai_chance = 0
+		command = { type = relation which = YEM value = 5 }
+	}
+}
+
+# All is lost!
+# kick Yemen out of WW1, in case the major powers have already made peace, but we are still at war
+event = {
+	id = 13301624	
+	country = YEM
+	date = { day = 1 month = 1 year = 1916 }
+	offset = 3
+	deathdate = { day = 1 month = 11 year = 1933 }
+	
+	name = "EVT_13301624_NAME"
+	desc = "EVT_13301624_DESC"
+	style = 2
+	
+	trigger = {
+		or = {
+			war = { country = FRA }
+			war = { country = ENG }
+			war = { country = RUS }
+			war = { country = SOV }
+			participant = { value = 2 }
+		}
+		or = {
+			not = { and = { 
+				alliance = { country = OTT }
+				ispuppet = yes
+			} }
+			event = 2145511 # The Armistice of Moudros
+			event = 2145513 # The Treaty of Sèvres
+		}
+		not = { ic = 20 }
+	}
+	
+	action = {
+		name = "We surrender!"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SOV value = 1 }
+	}
+}

@@ -1,0 +1,675 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by limith :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions - CCIP Edition
+# Tibetan Events:
+# TIB 133027001 Seek British Assistance
+# ENG 133027002 Fund Tibetan Rebels?
+# TIB 133027003 Tibetan-Nepal War
+# TIB 133027004 Tibetan-Bhutan War
+# ENG 133027005 Tibet Seizes British Nepal!
+# ENG 133027006 Tibet Seizes British Bhutan!
+# TIB 133027007 Reclaiming Xikang
+# *** 133027008 Tibetan Uprising
+# TIB 133027009 Reclaiming Qinghai
+# CXB 133027010 Tibetan Uprising
+# CYN 133027011 Tibetan Uprising
+# CHI 133027012 Tibetan Uprising
+# UCH 133027013 Tibetan Uprising
+# TIB 133027014 Seek British Assistance
+# ENG 133027015 Tibet Seeks Intervention
+# TIB 133027016 British Intervention
+
+# Seek British Assistance
+event = {
+	id = 133027001
+	random = no
+	country = TIB
+	
+	decision = {
+		or = {
+			exists = UCH
+			exists = CXB
+			exists = CYN
+			exists = CHI
+		}
+	}
+	
+	decision_trigger = {
+		relation = { which = ENG value = 50 }
+	}
+	
+	trigger = {
+		or = {
+			exists = UCH
+			exists = CXB
+			exists = CYN
+			exists = CHI
+		}
+		relation = { which = ENG value = 50 }
+		random = 10
+	}
+	
+	name = "Seek British Assistance"
+	desc = "Since we have de facto independence from the Chinese central government in Beijing, we can ask for British assistance in maintaining our independence."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		name = "We shall see if the English agree."
+		command = { type = trigger which = 133027002 }
+	}
+	
+}
+
+# Fund Tibetan Rebels?
+event = {
+	id = 133027002
+	random = no
+	country = ENG
+	
+	# Triggered
+	
+	name = "Fund Tibetan Rebels?"
+	desc = "Historically, despite recognizing the Republic of China's soverignty over territory controlled by the late Qing Dynasty (mainly to force repayment of debt), we supported various rebel movements inside the country in order to weaken the nation and prevent it from being able to reassert its claims on UK territory."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		ai_chance = 90
+		name = "Agree to fund the Tibetans"
+		command = { type = setflag which = 133027007 }
+		command = { type = supplies value = -1000 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = "It is dishonorable to fund rebels elsewhere."
+		command = { type = setflag which = 133027003 }
+		command = { type = setflag which = 133027004 }
+	}
+	
+}
+
+# Tibetan-Nepal War
+event = {
+	id = 133027003
+	random = no
+	country = TIB
+	
+	decision = {
+		flag = 133027003
+		not = { control = { province = 1457 data = TIB } }
+	}
+	
+	decision_trigger = {
+		supplies = 250
+		exists = NEP
+		atwar = no
+	}
+	
+	trigger = {
+		flag = 133027003
+		supplies = 250
+		exists = NEP
+		random = 10
+		not = { control = { province = 1457 data = TIB } }
+		atwar = no
+	}
+	
+	name = "Tibetan-Nepal War"
+	desc = "In 1855, Tibet went to war with the southern country of Nepal over border disputes. Since we do not have the capacity to reclaim our northern provinces, shall we invade Nepal instead?"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		ai_chance = 80
+		name = "Sounds like a good idea."
+		command = { type = trigger which = 133027005 }
+		command = { type = addclaim which = 1457 }
+		command = { type = belligerence which = TIB value = 10 }
+	}
+	
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 20
+		name = "Let us not anger the British"
+		command = { type = relation which = ENG value = 10 }
+	}
+	
+}
+
+# Tibetan-Bhutan War
+event = {
+	id = 133027004
+	random = no
+	country = TIB
+	
+	decision = {
+		flag = 133027004
+		not = { control = { province = 1456 data = TIB } }
+	}
+	
+	decision_trigger = {
+		supplies = 250
+		exists = BHU
+		atwar = no
+	}
+	
+	trigger = {
+		flag = 133027004
+		supplies = 250
+		exists = BHU
+		random = 10
+		not = { control = { province = 1456 data = TIB } }
+		atwar = no
+	}
+	
+	name = "Tibetan-Nepal War"
+	desc = "Between 1651 and 1728, Tibet launched a series of military attacks on the southern country of Bhutan over border disputes. Since we do not have the capacity to reclaim our northern provinces, shall we invade Bhutan instead?"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		ai_chance = 80
+		name = "Sounds like a good idea."
+		command = { type = trigger which = 133027006 }
+		command = { type = addclaim which = 1456 }
+		command = { type = belligerence which = TIB value = 10 }
+	}
+	
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 20
+		name = "Let us not anger the British"
+		command = { type = relation which = ENG value = 10 }
+	}
+	
+}
+
+# Tibet Seizes British Nepal!
+event = {
+	id = 133027005
+	random = no
+	country = ENG
+	
+	# Triggered
+	
+	name = "Tibet Seizes British Nepal!"
+	desc = "Our protectorate Nepal has collapsed to a coup loyal to the Dalai Lama. Although we would normally respond with a military intervention, the Tibetans are on friendly terms with us and are heavily within our sphere of influence. Perhaps we should let this be, as the territory remains within our control?"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		ai_chance = 90
+		name = "Let it slide."
+		command = { type = secedeprovince which = TIB value = 1457 when = 2 }
+		command = { type = relation which = TIB value = -25 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = "Intervene Militarily!"
+		command = { type = supplies value = -250 }
+		command = { type = relation which = TIB value = -50 }
+	}
+	
+}
+
+# Tibet Seizes British Bhutan!
+event = {
+	id = 133027006
+	random = no
+	country = ENG
+	
+	# Triggered
+	
+	name = "Tibet Seizes British Bhutan!"
+	desc = "Our protectorate Bhutan has collapsed to a coup loyal to the Dalai Lama. Although we would normally respond with a military intervention, the Tibetans are on friendly terms with us and are heavily within our sphere of influence. Perhaps we should let this be, as the territory remains within our control?"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		ai_chance = 90
+		name = "Let it slide."
+		command = { type = secedeprovince which = TIB value = 1456 when = 2 }
+		command = { type = relation which = TIB value = -25 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = "Intervene Militarily!"
+		command = { type = supplies value = -250 }
+		command = { type = relation which = TIB value = -50 }
+	}
+	
+}
+
+# Reclaiming Xikang
+event = {
+	id = 133027007
+	random = no
+	country = TIB
+	save_date = yes
+	
+	decision = {
+		flag = 133027007
+		not = { control = { province = 1290 data = TIB } }
+		not = { control = { province = 1285 data = TIB } }
+	}
+	
+	decision_trigger = {
+		supplies = 250
+		or = {
+			exists = UCH
+			exists = CXB
+			exists = CYN
+			exists = CHI
+		}
+		atwar = no
+	}
+	
+	trigger = {
+		flag = 133027007
+		supplies = 250
+		random = 2
+		or = {
+			exists = UCH
+			exists = CXB
+			exists = CYN
+			exists = CHI
+		}
+		not = { control = { province = 1290 data = TIB } }
+		not = { control = { province = 1285 data = TIB } }
+		atwar = no
+	}
+	
+	name = "Reclaim Xikang"
+	desc = "Given the weakness of the Chinese central government we are nominally under and our support by the British, now would be a good time for us to reclaim what is rightfully ours!"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	date = { day = 5 month = january year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		ai_chance = 99
+		name = "Sounds like a good idea."
+		command = { type = secedeprovince which = TIB value = 1285 when = 2 }
+		command = { type = secedeprovince which = TIB value = 1290 when = 2 }
+		command = { type = belligerence which = TIB value = 10 }
+		command = { trigger = { exists = CYN } type = event which = 133027008 where = CYN when = 3 }
+		command = { trigger = { exists = CXB } type = event which = 133027008 where = CXB when = 3 }
+		command = { trigger = { exists = CHI } type = event which = 133027008 where = CHI when = 3 }
+		command = { trigger = { exists = UCH } type = event which = 133027008 where = UCH when = 3 }
+	}
+	
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 1
+		name = "We do not want war."
+		command = { type = sleepevent which = 133027009 }
+	}
+	
+}
+
+# Tibetan Uprising
+event = {
+	id = 133027008
+	random = no
+	persistent = yes
+	
+	# Triggered
+	
+	name = "Tibetan Uprising"
+	desc = "Tibetan warlords have seized control of Chinese provinces in Xikang and Qinghai and declared themselves independent of central government authority!"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		name = "Outrageous!"
+		command = { type = relation which = TIB value = -50 }
+	}
+	
+}
+
+# Reclaiming Qinghai
+event = {
+	id = 133027009
+	random = no
+	country = TIB
+	
+	decision = {
+		event = { id = 133027007 days = 4320 }
+		not = { control = { province = 1294 data = TIB } }
+		not = { control = { province = 1293 data = TIB } }
+		not = { control = { province = 1292 data = TIB } }
+		not = { control = { province = 1262 data = TIB } }
+		not = { control = { province = 1284 data = TIB } }
+		not = { control = { province = 1283 data = TIB } }
+	}
+	
+	decision_trigger = {
+		supplies = 250
+		or = {
+			exists = UCH
+			exists = CXB
+			exists = CYN
+			exists = CHI
+		}
+		atwar = no
+	}
+	
+	trigger = {
+		event = { id = 133027007 days = 3600 }
+		not = { control = { province = 1294 data = TIB } }
+		not = { control = { province = 1293 data = TIB } }
+		not = { control = { province = 1292 data = TIB } }
+		not = { control = { province = 1262 data = TIB } }
+		not = { control = { province = 1284 data = TIB } }
+		not = { control = { province = 1283 data = TIB } }
+		random = 10
+		or = {
+			exists = UCH
+			exists = CXB
+			exists = CYN
+			exists = CHI
+		}
+		supplies = 250
+		atwar = no
+	}
+	
+	name = "Reclaim Qinghai"
+	desc = "Given the weakness of the Chinese central government we are nominally under and our support by the British, now would be a good time for us to reclaim what is rightfully ours!"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		name = "Sounds like a good idea."
+		ai_chance = 95
+		command = { type = secedeprovince which = TIB value = 1285 when = 2 }
+		command = { type = secedeprovince which = TIB value = 1290 when = 2 }
+		command = { type = belligerence which = TIB value = 10 }
+		command = { type = trigger which = 133027010 }
+		command = { type = trigger which = 133027011 }
+		command = { type = trigger which = 133027012 }
+		command = { type = trigger which = 133027013 }
+	}
+	
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 5
+		name = "We do not want war."
+		command = { type = sleepevent which = 133027014 }
+		command = { type = sleepevent which = 133027015 }
+		command = { type = sleepevent which = 133027016 }
+		command = { type = sleepevent which = 133027010 }
+		command = { type = sleepevent which = 133027011 }
+		command = { type = sleepevent which = 133027012 }
+		command = { type = sleepevent which = 133027013 }
+	}
+	
+}
+
+# Tibetan Uprising
+event = {
+	id = 133027010
+	random = no
+	persistent = yes
+	country = CXB
+	
+	# Triggered
+	
+	name = "Tibetan Uprising"
+	desc = "In 1932, Tibetan forces increasingly led attacks outside of their province supposedly over jurisdiction of the Nyarong and Dhargyä Monasteries. When ceasefire overtures by local leaders failed despite the failure of numerous Tibetan incursions, the locals sought aid from the central government."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		name = "Teach the rebels a lesson!"
+		command = { type = relation which = TIB value = -50 }
+		command = { type = war which = TIB }
+		command = { type = belligerence value = -20 }
+	}
+	
+}
+
+# Tibetan Uprising
+event = {
+	id = 133027011
+	random = no
+	persistent = yes
+	country = CYN
+	
+	# Triggered
+	
+	name = "Tibetan Uprising"
+	desc = "In 1932, Tibetan forces increasingly led attacks outside of their province supposedly over jurisdiction of the Nyarong and Dhargyä Monasteries. When ceasefire overtures by local leaders failed despite the failure of numerous Tibetan incursions, the locals sought aid from the central government."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		name = "Teach the rebels a lesson!"
+		command = { type = relation which = TIB value = -50 }
+		command = { type = war which = TIB }
+		command = { type = belligerence value = -20 }
+	}
+	
+}
+
+# Tibetan Uprising
+event = {
+	id = 133027012
+	random = no
+	persistent = yes
+	country = CHI
+	
+	# Triggered
+	
+	name = "Tibetan Uprising"
+	desc = "In 1932, Tibetan forces increasingly led attacks outside of their province supposedly over jurisdiction of the Nyarong and Dhargyä Monasteries. When ceasefire overtures by local leaders failed despite the failure of numerous Tibetan incursions, the locals sought aid from the central government."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		name = "Teach the rebels a lesson!"
+		command = { type = relation which = TIB value = -50 }
+		command = { type = war which = TIB }
+		command = { type = belligerence value = -20 }
+	}
+	
+}
+
+# Tibetan Uprising
+event = {
+	id = 133027013
+	random = no
+	persistent = yes
+	country = UCH
+	
+	# Triggered
+	
+	name = "Tibetan Uprising"
+	desc = "In 1932, Tibetan forces increasingly led attacks outside of their province supposedly over jurisdiction of the Nyarong and Dhargyä Monasteries. When ceasefire overtures by local leaders failed despite the failure of numerous Tibetan incursions, the locals sought aid from the central government."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		name = "Teach the rebels a lesson!"
+		command = { type = relation which = TIB value = -50 }
+		command = { type = war which = TIB }
+		command = { type = belligerence value = -20 }
+	}
+	
+}
+
+# Seek British Assistance
+event = {
+	id = 133027014
+	random = no
+	country = TIB
+	
+	decision = {
+		atwar = yes
+		event = 133027009
+		lost_national = { value = 30 }
+	}
+	
+	decision_trigger = {
+		relation = { which = ENG value = 50 }
+	}
+	
+	trigger = {
+		atwar = yes
+		event = 133027009
+		lost_national = { value = 30 }
+		relation = { which = ENG value = 50 }
+		random = 40
+	}
+	
+	name = "Seek British Assistance"
+	desc = "It seems we have bitten off more than we can chew. The various Chinese factions seem to have unified in their opposition to our invasions for once, and we are in danger of being destroyed! Let us ask the British for an intervention."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		name = "We shall see if the English agree."
+		command = { type = trigger which = 133027015 }
+	}
+	
+}
+
+# Tibet Seeks Intervention
+event = {
+	id = 133027015
+	random = no
+	country = ENG
+	
+	# Triggered
+	
+	name = "Tibet Seeks Intervention"
+	desc = "It seems our protectorate Tibet has drawn the ire of the central government in China. While they are on the verge of being overrun, they did start the war through numerous provacations and we have no moral basis to militarily intervene. Shall we find some way to create a ceasefire so we do not lose our sphere of influence in the region?"
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		ai_chance = 90
+		name = "Press for a ceasefire"
+		command = { type = trigger which = 133027016 }
+		command = { type = relation which = UCH value = -50 }
+		command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = CYN value = -50 }
+		command = { type = relation which = CXB value = -50 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = "It is their fault for declaring war."
+		command = { type = relation which = UCH value = 20 }
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = CYN value = 20 }
+		command = { type = relation which = CXB value = 20 }
+	}
+	
+}
+
+# British Intervention
+event = {
+	id = 133027016
+	random = no
+	country = TIB
+	one_action = yes
+	
+	# Triggered
+	
+	name = "British Intervention"
+	desc = "The British have agreed to diplomatically intervene on our behalf. Let us see what the Chinese response is."
+	
+	picture = "ccip_tib"
+	style = 2
+	
+	action = {
+		ai_chance = 80
+		name = "Praise Budda! We have been spared!"
+		command = { type = peace which = UCH }
+		command = { type = peace which = CHI }
+		command = { type = peace which = CYN }
+		command = { type = peace which = CXB }
+		command = { type = relation which = UCH value = -50 }
+		command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = CYN value = -50 }
+		command = { type = relation which = CXB value = -50 }
+		command = { trigger = { exists = CXB } type = secedeprovince which = CXB value = 1285 when = 2 }
+		command = { trigger = { exists = CYN } type = secedeprovince which = CYN value = 1290 when = 2 }
+		command = { trigger = { not = { exists = CXB } exists = CHI } type = secedeprovince which = CHI value = 1285 when = 2 }
+		command = { trigger = { not = { exists = CXB } exists = CHI } type = secedeprovince which = CHI value = 1290 when = 2 }
+		command = { trigger = { not = { exists = CXB exists = CHI } exists = UCH } type = secedeprovince which = UCH value = 1285 when = 2 }
+		command = { trigger = { not = { exists = CXB exists = CHI } exists = UCH } type = secedeprovince which = UCH value = 1290 when = 2 }
+		command = { type = removeclaim which = 1293 }
+		command = { type = removeclaim which = 1292 }
+		command = { type = removeclaim which = 1284 }
+		command = { type = removeclaim which = 1283 }
+		command = { type = removeclaim which = 1262 }
+	}
+	
+	action = {
+		ai_chance = 20
+		name = "Negotiations have failed."
+		command = { type = relation which = UCH value = 20 }
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = CYN value = 20 }
+		command = { type = relation which = CXB value = 20 }
+	}
+	
+}

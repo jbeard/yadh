@@ -1,0 +1,755 @@
+### Argentina
+
+event = { # Accept refugees
+	id = 8231000
+	country = ARG
+
+	name = EVT_8231000_NAME
+	desc = EVT_8231000_DESC
+	picture = nwo\german_refugees
+	decision_picture = nwo\d_german_refugees
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision_trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231000_A
+		ai_chance = 98
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		name = EVT_8231000_B
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = sleepevent which = 8231010 }
+		command = { type = sleepevent which = 8231011 }
+		command = { type = sleepevent which = 8231012 }
+		command = { type = sleepevent which = 8231013 }
+		command = { type = sleepevent which = 8231014 }
+		command = { type = sleepevent which = 8231015 }
+		command = { type = sleepevent which = 8231016 }
+	}
+}
+
+event = { # Accept refugees
+	id = 8231001
+	country = SPA
+
+	name = EVT_8231001_NAME
+	desc = EVT_8231001_DESC
+	picture = nwo\german_refugees
+	decision_picture = nwo\d_german_refugees
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision_trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231001_A
+		ai_chance = 98
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		name = EVT_8231001_B
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = sleepevent which = 8231020 }
+		command = { type = sleepevent which = 8231021 }
+	}
+}
+
+event = { # Accept refugees
+	id = 8231002
+	country = IND
+
+	name = EVT_8231002_NAME
+	desc = EVT_8231002_DESC
+	picture = nwo\german_refugees
+	decision_picture = nwo\d_german_refugees
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision_trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231002_A
+		ai_chance = 98
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		name = EVT_8231002_B
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = sleepevent which = 8231030 }
+	}
+}
+
+event = { # Accept refugees
+	id = 8231003
+	country = EGY
+
+	name = EVT_8231003_NAME
+	desc = EVT_8231003_DESC
+	picture = nwo\german_refugees
+	decision_picture = nwo\d_german_refugees
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision_trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231003_A
+		ai_chance = 98
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		name = EVT_8231003_B
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = sleepevent which = 8231040 }
+		command = { type = sleepevent which = 8231041 }
+		command = { type = sleepevent which = 8231042 }
+		command = { type = sleepevent which = 8231043 }
+		command = { type = sleepevent which = 8231044 }
+	}
+}
+
+event = { # Accept refugees
+	id = 8231004
+	country = BRA
+
+	name = EVT_8231004_NAME
+	desc = EVT_8231004_DESC
+	picture = nwo\german_refugees
+	decision_picture = nwo\d_german_refugees
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+	
+	decision_trigger = {
+		flag = cold_war
+		NOT = { domestic = { type = political_left value = 5 } }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231004_A
+		ai_chance = 98
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+	
+	action = {
+		name = EVT_8231004_B
+		ai_chance = 2
+		trigger = { ai = yes }
+		command = { type = sleepevent which = 8231050 }
+	}
+}
+
+##############
+
+# Émile Dewoitine
+event = {
+	id = 8231010
+	country = ARG
+
+	name = EVT_8231010_NAME
+	desc = EVT_8231010_DESC
+	picture = nwo\emile_dewoitine
+	style = 1
+
+	trigger = {
+		event = 8231000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231010_A
+		command = { type = research_mod value = 3 }
+	}
+
+}
+
+# Cesare Pallavicino
+event = {
+	id = 8231011
+	country = ARG
+
+	name = EVT_8231011_NAME
+	desc = EVT_8231011_DESC
+	picture = nwo\cesare_pallavicino
+	style = 1
+
+	trigger = {
+		event = 8231000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231011_A
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+# Ronald Richter
+event = {
+	id = 8231012
+	country = ARG
+
+	name = EVT_8231012_NAME
+	desc = EVT_8231012_DESC
+	picture = nwo\ronald_richter
+	style = 1
+
+	trigger = {
+		event = 8231000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231012_A
+		command = { type = money value = -500 }
+	}
+
+}
+# Kurt Tank
+event = {
+	id = 8231013
+	country = ARG
+
+	name = EVT_8231013_NAME
+	desc = EVT_8231013_DESC
+	picture = nwo\kurt_tank
+	style = 1
+
+	trigger = {
+		event = 8231000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231013_A
+		command = { type = research_mod value = 3 }
+	}
+
+}
+
+# Hans-Ulrich Rudel
+event = {
+	id = 8231014
+	country = ARG
+
+	name = EVT_8231014_NAME
+	desc = EVT_8231014_DESC
+	picture = nwo\hans_ulrich_rudel
+	style = 1
+
+	trigger = {
+		event = 8231000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231014_A
+		command = { type = research_mod value = 2 }
+	}
+
+}
+
+# Reimar Horten
+event = {
+	id = 8231015
+	country = ARG
+
+	name = EVT_8231015_NAME
+	desc = EVT_8231015_DESC
+	picture = nwo\reimar_horten
+	style = 1
+
+	trigger = {
+		event = 8231000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231015_A
+		command = { type = research_mod value = 3 }
+	}
+
+}
+
+# Hans Guido Mutke
+event = {
+	id = 8231016
+	country = ARG
+
+	name = EVT_8231016_NAME
+	desc = EVT_8231016_DESC
+	picture = nwo\hans_guido_mutke
+	style = 1
+
+	trigger = {
+		event = 8231000
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231016_A
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+# Émile Dewoitine
+event = {
+	id = 8231020
+	country = SPA
+
+	name = EVT_8231020_NAME
+	desc = EVT_8231020_DESC
+	picture = nwo\emile_dewoitine
+	style = 1
+
+	trigger = {
+		event = 8231001
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231020_A
+		command = { type = research_mod value = 3 }
+	}
+
+}
+
+# Willy Messerschmitt
+event = {
+	id = 8231021
+	country = SPA
+
+	name = EVT_8231021_NAME
+	desc = EVT_8231021_DESC
+	picture = nwo\willy_messerschmitt
+	style = 1
+
+	trigger = {
+		event = 8231001
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231021_A
+		command = { type = research_mod value = 3 }
+	}
+
+}
+
+# Kurt Tank
+event = {
+	id = 8231030
+	country = IND
+
+	name = EVT_8231030_NAME
+	desc = EVT_8231030_DESC
+	picture = nwo\kurt_tank
+	style = 1
+
+	trigger = {
+		event = 8231002
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231030_A
+		command = { type = research_mod value = 5 }
+	}
+
+}
+
+# Wilhelm Voss
+event = {
+	id = 8231040
+	country = EGY
+
+	name = EVT_8231040_NAME
+	desc = EVT_8231040_DESC
+	picture = nwo\wilhelm_voss
+	style = 1
+
+	trigger = {
+		event = 8231003
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231040_A
+		command = { type = research_mod value = 2 }
+	}
+
+}
+
+# Rolf Engel
+event = {
+	id = 8231041
+	country = EGY
+
+	name = EVT_8231041_NAME
+	desc = EVT_8231041_DESC
+	picture = nwo\rolf_engel
+	style = 1
+
+	trigger = {
+		event = 8231003
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231041_A
+		command = { type = money value = -200 }
+	}
+
+}
+
+# Wilhelm Fahrmbacher
+event = {
+	id = 8231042
+	country = EGY
+
+	name = EVT_8231042_NAME
+	desc = EVT_8231042_DESC
+	picture = nwo\wilhelm_fahrmbacher
+	style = 1
+
+	trigger = {
+		event = 8231003
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231042_A
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+# Ferdinand Brandner
+event = {
+	id = 8231043
+	country = EGY
+
+	name = EVT_8231043_NAME
+	desc = EVT_8231043_DESC
+	picture = nwo\ferdinand_brandner
+	style = 1
+
+	trigger = {
+		event = 8231003
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231043_A
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+# Willy Messerschmitt
+event = {
+	id = 8231044
+	country = EGY
+
+	name = EVT_8231044_NAME
+	desc = EVT_8231044_DESC
+	picture = nwo\willy_messerschmitt
+	style = 1
+
+	trigger = {
+		event = 8231003
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231044_A
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+# Henrich Focke
+event = {
+	id = 8231050
+	country = BRA
+
+	name = EVT_8231050_NAME
+	desc = EVT_8231050_DESC
+	picture = nwo\heinrich_focke
+	style = 1
+
+	trigger = {
+		event = 8231004
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231050_A
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+### Actions to recruit German engineers
+
+event = {
+	id = 8231100
+	country = USA
+
+	name = EVT_8231100_NAME
+	desc = EVT_8231100_DESC
+	picture = nwo\operation_paperclip
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			event = 8211000
+			event = 8211001
+			event = 8211002
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231100_A
+		trigger = { event = 8211001 }
+		command = { type = research_mod value = 10 }
+	}
+	
+	action = {
+		name = EVT_8231100_B
+		trigger = { event = 8211002 }
+		command = { type = research_mod value = 5 }
+	}
+	
+	action = {
+		name = EVT_8231100_C
+		trigger = { event = 8211000 }
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+event = {
+	id = 8231101
+	country = SOV
+
+	name = EVT_8231101_NAME
+	desc = EVT_8231101_DESC
+	picture = nwo\operation_ossovioakhim
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			event = 8211000
+			event = 8211001
+			event = 8211002
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231101_A
+		trigger = { event = 8211000 }
+		command = { type = research_mod value = 10 }
+	}
+	
+	action = {
+		name = EVT_8231101_B
+		trigger = { event = 8211002 }
+		command = { type = research_mod value = 5 }
+	}
+	
+	action = {
+		name = EVT_8231101_C
+		trigger = { event = 8211001 }
+		command = { type = research_mod value = 1 }
+	}
+
+}
+
+event = {
+	id = 8231102
+	country = ENG
+
+	name = EVT_8231102_NAME
+	desc = EVT_8231102_DESC
+	picture = nwo\operation_backfire
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			event = 8211000
+			event = 8211001
+		}
+		alliance = { country = ENG country = USA }
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+	
+	action = {
+		name = EVT_8231102_A
+		trigger = { event = 8211001 }
+		command = { type = research_mod value = 5 }
+	}
+	
+	action = {
+		name = EVT_8231102_B
+		trigger = { event = 8211002 }
+		command = { type = research_mod value = 2 }
+	}
+
+}

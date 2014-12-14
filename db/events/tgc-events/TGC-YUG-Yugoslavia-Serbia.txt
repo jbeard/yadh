@@ -1,0 +1,940 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Yugoslavia and Serbia
+# Event List:
+#SER	13301300	The Formation of Yugoslavia
+#SER	13301301	The Outcome of the Great War (historical)
+#SER	13301310	The First Governmental Crisis
+#SER	13301311	The Realignment of Parties
+#SER	13301312	The Next Crisis
+#SER	13301313	Ljubomir Davidovic resigns!
+#SER	13301314	A Railway Strike!
+#SER	13301315	Peasants revolt
+#SER	13301316	The Carinthian Question
+#SER	13301317	Austria rejects our claim
+#SER	13301318	The Plebiscite on Women's Suffrage
+#SER	13301319	The death of Petar I
+#SER	13301320	The Vidovan Constitution
+#SER	13301324	The Little Entente
+#SER	13301325	Growing Italian expansionism
+#SER	13301326	Great Britain Guarantees our Independence
+#SER	13301327	The French Republic Guarantees our Independence
+#SER	13301329	Members of the Croatian Peasant Party Shot Dead!
+#SER	13301330	The 6th January Dictatorship
+#YUG	13301331	The Croatian Uprising
+#SER	13301332	The Plebiscite on Women's Suffrage
+#SER	13301333	Parliamentary elections of 1923
+#SER	13301334	Parliamentary elections of 1925
+#SER	13301335	Parliamentary elections of 1927
+#YUG	13301336	The Assassination of Alexander I of Yugoslavia
+#SER	1330133901	AI SWITCH
+
+# Formation of Yugoslavia
+event = {
+	id = 13301300
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	country = SER
+	
+	offset = 365
+	
+	trigger = {
+		not = { exists = YUG }
+		event = 2192507
+		event = 13301330 # added by Sargeras
+		owned = { province = 355 data = SER }
+		owned = { province = 352 data = SER }
+		owned = { province = 346 data = SER }
+	}
+	
+	name = "EVT_13301300_NAME"							
+	Desc = "EVT_13301300_DESC"
+	Picture = "assistance"
+	
+	action = { 	
+		name = "This will curb separatist tendencies."
+		ai_chance = 100
+		command = { type = dissent value = 50 }
+		command = { type = dissent value = -20 }
+		command = { type = flag_ext where = SER which = "" }
+		command = { type = country which = YUG }
+		command = { type = flag_ext where = YUG which = "" } #just to be sure.
+		command = { type = name where = YUG }
+		command = { type = leave_alliance }
+		command = { type = addcore which = 338 }
+		command = { type = addcore which = 352 }
+		command = { type = addcore which = 355 }
+		command = { type = addcore which = 349 }
+		command = { type = addcore which = 346 }
+		command = { type = addcore which = 345 }
+		command = { type = addcore which = 344 }
+		command = { type = addcore which = 353 }
+		command = { type = addcore which = 350 }
+		command = { type = addcore which = 354 }
+		command = { type = addcore which = 356 }
+		command = { type = addcore which = 343 }
+		command = { type = addcore which = 332 }
+		command = { type = addcore which = 330 }
+		command = { type = addcore which = 342 }
+		command = { type = addcore which = 329 }
+		command = { type = addcore which = 341 }
+		command = { type = addcore which = 336 }
+		command = { type = addcore which = 333 }
+		command = { type = addcore which = 328 }
+		command = { type = addcore which = 331 }
+		command = { type = addcore which = 334 }
+		command = { type = addcore which = 347 }
+		command = { type = addcore which = 357 }
+		command = { type = addcore which = 358 }
+		command = { type = addcore which = 351 }
+		command = { type = addcore which = 335 }
+		command = { type = addcore which = 340 }
+		command = { type = addcore which = 327 }
+		command = { type = addcore which = 337 }
+		command = { type = addcore which = 339 }
+	}
+
+	action = { 	
+		name = "We just need Lebensraum!" #behave like in the 1990s
+		ai_chance = 0
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -5 }
+		command = { type = addcore which = 338 }
+		command = { type = addcore which = 352 }
+		command = { type = addcore which = 355 }
+		command = { type = addcore which = 349 }
+		command = { type = addcore which = 346 }
+		command = { type = addcore which = 345 }
+		command = { type = addcore which = 344 }
+		command = { type = addcore which = 353 }
+		command = { type = addcore which = 350 }
+		command = { type = addcore which = 354 }
+		command = { type = addcore which = 356 }
+		command = { type = addcore which = 343 }
+		command = { type = addcore which = 332 }
+		command = { type = addcore which = 330 }
+		command = { type = addcore which = 342 }
+		command = { type = addcore which = 329 }
+		command = { type = addcore which = 341 }
+		command = { type = addcore which = 336 }
+		command = { type = addcore which = 333 }
+		command = { type = addcore which = 328 }
+		command = { type = addcore which = 331 }
+		command = { type = addcore which = 334 }
+		command = { type = addcore which = 347 }
+		command = { type = addcore which = 357 }
+		command = { type = addcore which = 358 }
+		command = { type = addcore which = 351 }
+		command = { type = addcore which = 335 }
+		command = { type = addcore which = 340 }
+		command = { type = addcore which = 327 }
+		command = { type = addcore which = 337 }
+		command = { type = addcore which = 339 }
+		command = { type = addcore which = 403 } #Italy
+		command = { type = addcore which = 406 }
+		command = { type = addcore which = 361 } #Albania
+		command = { type = addcore which = 359 }
+		command = { type = addcore which = 362 }
+		command = { type = addcore which = 360 }
+		command = { type = addcore which = 404 } #Trieste
+		command = { type = independence which = CRO }
+		command = { type = war which = CRO }
+		command = { type = independence which = BOS }
+		command = { type = war which = BOS }
+		command = { type = independence which = SLV }
+		command = { type = war which = SLV }
+		command = { type = dissent value = 40 }
+	}
+}
+
+# Outcome of the Great War
+event = {
+	id = 13301301
+	country = SER
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+	
+	trigger = {
+		atwar = no
+		event = 2084508 # Creation of the Kingdom
+		or = {
+			event = 2191512 #Reverse Versailes
+			event = 2002534 #Versailes
+		}
+	}
+	
+	name = "EVT_13301301_NAME"
+	desc = "EVT_13301301_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "We're free from Austrian domination!"
+		command = { type = leave_alliance }
+		command = { type = local_setflag which = winner }
+		command = { type = local_clrflag which = disarm_10 }
+		command = { type = local_clrflag which = disarm_25 }
+		command = { type = local_clrflag which = disarm_75 }
+		command = { type = local_setflag which = disarm_50 }
+		command = { trigger = { not = { army = 6 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { army = 6 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { army = 6 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { army = 6 } } type = add_division value = infantry when = 1 }
+		command = { type = dissent value = 3 } # in order to simulate issues between etnicities
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	}
+}
+
+# The First Governmental Crisis
+event = {
+	id = 13301310
+	country = SER
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 10
+	
+	trigger = {
+		incabinet = 415080
+		event = 2084508
+	}
+	
+	name = "EVT_13301310_NAME"
+	desc = "EVT_13301310_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Propose Protic"
+		ai_chance = 100
+		command = { type = headofgovernment which = 415081 } # Stojan Protic
+		command = { type = dissent value = 1 }
+	}
+	
+	action = {
+		name = "Don't upset the Popular Council"
+		ai_chance = 0
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = dissent value = 3 }
+	}
+	
+	action = {
+		name = "Democracy is for weak monarchs"
+		ai_chance = 0
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = headofgovernment which = 415081 }
+		command = { type = dissent value = 50 }
+	}
+}
+
+# The Realignment of Parties
+event = {
+	id = 13301311
+	country = SER
+	
+	date = { day = 0 month = august year = 1919 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 20
+	
+	trigger = {
+		government = democratic
+		incabinet = 415081
+	}
+	
+	name = "EVT_13301311_NAME"
+	desc = "EVT_13301311_DESC"
+	picture = "minister_resign"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 415088 } # Ljubomir Davidovic
+		command = { type = dissent value = 2 }
+	}
+}
+
+# The Next Crisis
+event = {
+	id = 13301312
+	country = SER
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 60
+	
+	trigger = {
+		government = democratic
+		incabinet = 415088
+		NOT = { ispuppet = SER }
+	}
+	
+	name = "EVT_13301312_NAME"
+	desc = "EVT_13301312_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "We need to rule by decree"
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+#Ljubomir Davidovic resigns!
+event = {
+	id = 13301313
+	country = SER
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 10
+	
+	trigger = {
+		event = 13301312
+	}
+	
+	name = "EVT_13301313_NAME"
+	desc = "EVT_13301313_DESC"
+	picture = "congress"
+	style = 2
+	
+	action = {
+		name = "We can't handle this anymore"
+		ai_chance = 99
+		command = { type = headofgovernment which = 415081 }
+		command = { type = dissent value = -1 }
+	}
+	
+	action = {
+		name = "We won't give up"
+		ai_chance = 1
+		command = { type = dissent value = 6 }
+		command = { type = province_revoltrisk which = 338 value = 20 }
+	}
+}
+
+# A Railway Strike!
+event = {
+	id = 13301314
+	country = SER
+	
+	date = { day = 0 month = april year = 1920 }
+	deathdate = { day = 6 month = january year = 1929 }
+	offset = 30
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = SER }
+	}
+	
+	name = "EVT_13301314_NAME"
+	desc = "EVT_13301314_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Damn, we need a strong government soon!"
+		command = { type = dissent value = 5 }
+		command = { type = headofgovernment which = 415087 } # Milenko Vesnic
+		command = { type = province_revoltrisk which = 327 value = 20 }
+		command = { type = province_revoltrisk which = 328 value = 20 }
+		command = { type = province_revoltrisk which = 329 value = 20 }
+		command = { type = province_revoltrisk which = 330 value = 20 }
+		command = { type = province_revoltrisk which = 331 value = 20 }
+		command = { type = province_revoltrisk which = 332 value = 20 }
+		command = { type = province_revoltrisk which = 333 value = 20 }
+		command = { type = province_revoltrisk which = 334 value = 20 }
+		command = { type = province_revoltrisk which = 335 value = 20 }
+		command = { type = province_revoltrisk which = 336 value = 23 }
+		command = { type = province_revoltrisk which = 337 value = 20 }
+		command = { type = province_revoltrisk which = 338 value = 25 }
+		command = { type = province_revoltrisk which = 339 value = 20 }
+		command = { type = province_revoltrisk which = 340 value = 20 }
+		command = { type = province_revoltrisk which = 341 value = 23 }
+		command = { type = province_revoltrisk which = 342 value = 20 }
+		command = { type = province_revoltrisk which = 343 value = 25 }
+		command = { type = province_revoltrisk which = 344 value = 25 }
+		command = { type = province_revoltrisk which = 345 value = 25 }
+		command = { type = province_revoltrisk which = 346 value = 25 }
+		command = { type = province_revoltrisk which = 347 value = 25 }
+		command = { type = province_revoltrisk which = 349 value = 25 }
+		command = { type = province_revoltrisk which = 350 value = 25 }
+		command = { type = province_revoltrisk which = 350 value = 25 }
+		command = { type = province_revoltrisk which = 351 value = 25 }
+		command = { type = province_revoltrisk which = 352 value = 25 }
+		command = { type = province_revoltrisk which = 353 value = 23 }
+		command = { type = province_revoltrisk which = 354 value = 23 }
+		command = { type = province_revoltrisk which = 355 value = 25 }
+		command = { type = province_revoltrisk which = 356 value = 20 }
+		command = { type = province_revoltrisk which = 357 value = 20 }
+		command = { type = province_revoltrisk which = 358 value = 20 }
+	}
+}
+
+# Peasants revolt
+event = {
+	id = 13301315
+	country = SER
+	
+	date = { day = 0 month = september year = 1920 }
+	deathdate = { day = 6 month = january year = 1929 }
+	offset = 20
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = SER }
+	}
+	
+	name = "EVT_13301315_NAME"
+	desc = "EVT_13301315_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Is there a way to stop all this?"
+		command = { type = revolt which = 347 }
+		command = { type = revolt which = 352 }
+		command = { type = province_revoltrisk which = 343 value = 30 }
+		command = { type = province_revoltrisk which = 344 value = 30 }
+		command = { type = province_revoltrisk which = 345 value = 30 }
+		command = { type = province_revoltrisk which = 346 value = 30 }
+		command = { type = province_revoltrisk which = 349 value = 30 }
+		command = { type = province_revoltrisk which = 350 value = 30 }
+		command = { type = province_revoltrisk which = 351 value = 30 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+# The Carinthian Question
+event = {
+	id = 13301316
+	country = SER
+	
+	date = { day = 1 month = january year = 1921 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30		
+	
+	trigger = {
+		event = 2024501 #AUS Treaty of Saint-Germain
+		event = 2084508 #Creation of Serbs' Kingdom
+		NOT = {
+			war = { country = SER country = AUS }
+			alliance = { country = SER country = AUS }
+			control = { province = 191 data = SER }
+			ispuppet = SER
+		}
+	}
+	
+	name = "EVT_13301316_NAME"
+	desc = "EVT_13301316_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "It's rightfully ours!"
+		ai_chance = 99
+		command = { type = relation which = AUS value = -10 }
+		command = { type = trigger which = 13300111 }
+	}
+	
+	action = {
+		name = "We don't need it"
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+	}
+}
+
+# Austria rejects our claim
+event = {
+	id = 13301317
+	country = SER
+	
+	# Triggered by AUS 13300110
+	
+	name = "Austria rejects our claim"
+	desc = "Carinthia decided to remain an Austrian region."
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Nobody will ever dare to insult our new Kingdom!"
+		ai_chance = 1
+		command = { type = war which = AUS }
+		command = { type = dissent value = 15 }
+		command = { type = set_relation which = ENG value = -200 }
+		command = { type = set_relation which = FRA value = -200 }
+		command = { type = set_relation which = ITA value = -100 }
+		command = { type = set_relation which = CZE value = -100 }
+		command = { type = set_relation which = ROM value = -100 }
+	}
+	
+	action = {
+		name = "A World War just ended, enough is enough"
+		ai_chance = 99
+		command = { type = dissent value = 1 }
+	}
+}
+
+# The Plebiscite on Women's Suffrage
+event = {
+	id = 13301318
+	country = SER
+	
+	trigger = {
+		incabinet = 415087
+	}
+	
+	date = { day = 1 month = january year = 1921 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 1
+	
+	name = "EVT_13301318_NAME"
+	desc = "EVT_13301318_DESC"
+	picture = "minister_died2"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofgovernment which = 415080 } # Nikola Pasic	
+		command = { type = sleepminister which = 415087 }
+	}
+}
+
+# Death of King Petar
+event = {
+	id = 13301319
+	country = SER
+	
+	date = { day = 16 month = august year = 1921 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 1
+	
+	trigger = {
+		minister = 415093
+		minister = 415094 # both Petar
+	}
+	
+	name = "EVT_13301319_NAME"
+	desc = "EVT_13301319_DESC"
+	picture = "minister_died2"
+	style = 2
+	
+	action = {
+		name = "May the King rest in peace"
+		command = { trigger = { government = democratic } type = headofstate which = 415125 } # new Aleksandar SC
+		command = { trigger = { government = fascist } type = headofstate which = 415092 } # regular Aleksandar PA
+		command = { type = sleepminister which = 415093 }
+		command = { type = sleepminister which = 415094 }
+	}
+}
+
+# The Vidovdan Constitution
+event = {
+	id = 13301320
+	country = SER
+	
+	date = { day = 1 month = april year = 1921 }
+	deathdate = { day = 1 month = january year = 1923 }
+	offset = 30
+	
+	trigger = {
+		OR = {
+			incabinet = 415093
+			incabinet = 415094
+		}
+		NOT = { ispuppet = SER }
+	}
+	
+	name = "EVT_13301320_NAME"
+	desc = "EVT_13301320_DESC"
+	picture = "congress"
+	style = 2
+	
+	action = {
+		name = "Excellent"
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+	
+	action = {
+		name = "To much free thinking could be dangerous"
+		ai_chance = 0
+		command = { type = dissent value = 4 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -1 }
+	}		
+}		
+
+# The Little Entente
+event = {
+	id = 13301324
+	country = SER
+	
+	# Triggered by CZE 13301617
+	
+	name = "EVT_13301324_NAME"
+	desc = "EVT_13301324_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		name = "Accept"
+		ai_chance = 100
+		command = { type = alliance which = CZE }
+		command = { type = relation which = CZE value = 100 }
+		command = { type = alliance which = ROM }
+		command = { type = relation which = ROM value = 100 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = "Decline"
+		ai_chance = 0
+		command = { type = relation which = CZE value = -30 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Growing Italian expansionism
+event = {
+	id = 13301325
+	country = SER
+	
+	# Triggered by ITA 13300649
+	
+	name = "EVT_13301325_NAME"
+	desc = "EVT_13301325_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Seek for the Allied Powers' support"
+		ai_chance = 100
+		command = { type = trigger which = 13300930 } # UK A call for help by Yugoslavia
+		command = { type = trigger which = 13301020 } # FRA A call for help by Yugoslavia
+	}
+	
+	action = {
+		name = "The Yugoslavian Army is strong enough"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Great Britain Guarantees our Independence
+event = {
+	id = 13301326
+	country = SER
+	
+	# Triggered by ENG 13300930
+	
+	name = "EVT_13301326_NAME"
+	desc = "EVT_13301326_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "A wonderful news"
+		command = { type = relation which = ENG value = 40 }
+	}
+}
+
+# The French Republic Guarantees our Independence
+event = {
+	id = 13301327
+	country = SER
+	
+	# Triggered by FRA 13301020
+	
+	name = "EVT_13301327_NAME"
+	desc = "EVT_13301327_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "A wonderful news"
+		command = { type = relation which = FRA value = 40 }
+	}
+}	
+
+# Members of the Croatian Peasant Party Shot Dead!
+event = {
+	id = 13301329
+	country = SER
+	
+	date = { day = 20 month = june year = 1928 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 1
+	
+	trigger = {
+		not = { government = communist }
+		atwar = no
+	}
+	
+	name = "EVT_13301329_NAME"
+	desc = "EVT_13301329_DESC"
+	picture = "minister_died2"
+	style = 2
+	
+	action = {
+		name = "What was that all about?"
+		command = { type = dissent value = 3 }
+		command = { type = province_revoltrisk which = 343 value = 50 }
+		command = { type = province_revoltrisk which = 344 value = 50 }
+		command = { type = province_revoltrisk which = 345 value = 50 }
+		command = { type = province_revoltrisk which = 346 value = 50 }
+		command = { type = province_revoltrisk which = 347 value = 50 }
+		command = { type = province_revoltrisk which = 349 value = 50 }
+		command = { type = province_revoltrisk which = 351 value = 50 }
+		command = { type = province_revoltrisk which = 352 value = 55 }
+	}
+}
+
+# The 6th January Dictatorship
+event = {
+	id = 13301330
+	country = SER
+	
+	date = { day = 6 month = january year = 1929 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 1
+	
+	trigger = {
+		minister = 415092
+		event = 13301329
+		NOT = { exists = YUG }
+	}
+	
+	name = "EVT_13301330_NAME"
+	desc = "EVT_13301330_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "For the sake of Yugoslavia, it must be done!"
+		command = { type = dissent value = -10 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = headofstate which = 100093 }
+		command = { type = headofgovernment which = 100086 } # Petar Zivkovic
+	}
+}
+
+# The Croatian Uprising
+event = {
+	id = 13301331
+	country = YUG
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 180
+	
+	trigger = {
+		event = 13301330
+		government = fascist
+		incabinet = 415092
+	}
+	
+	name = "EVT_13301331_NAME"
+	desc = "EVT_13301331_DESC"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "Damn!"
+		command = { type = dissent value = 3 }
+		command = { type = province_revoltrisk which = 343 value = 30 }
+		command = { type = province_revoltrisk which = 344 value = 20 }
+		command = { type = province_revoltrisk which = 345 value = 25 }
+		command = { type = province_revoltrisk which = 346 value = 25 }
+		command = { type = province_revoltrisk which = 347 value = 30 }
+		command = { type = province_revoltrisk which = 349 value = 30 }
+		command = { type = province_revoltrisk which = 351 value = 20 }
+		command = { type = province_revoltrisk which = 352 value = 25 }	
+	}
+}
+
+# TODO: Remove election years from the event name and descriptions!
+# The Plebiscite on Women's Suffrage
+event = {
+	id = 13301332
+	country = SER
+	save_date = yes
+	
+	date = { day = 28 month = november year = 1920 }
+	deathdate = { day = 1 month = january year = 1925 }
+	offset = 5
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = SER }
+	}
+	
+	name = "EVT_13301332_NAME"
+	desc = "EVT_13301332_DESC"
+	
+	action = {
+		name = "Democratic Party - Davidovic"
+		ai_chance = 100
+		command = { type = headofgovernment which = 415088 } # Davidovic
+		command = { trigger = { ai = yes } type = foreignminister which = 415079 } # Vesnic
+		command = { trigger = { ai = yes } type = armamentminister which = 415104 } # Stojanovic
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 415110 } # Davidovic
+	}
+	
+	action = {
+		name = "People's Radical Party - Pasic"
+		ai_chance = 0
+		command = { type = headofgovernment which = 415080 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+# The 1923 Parliamentary Elections
+event = {
+	id = 13301333
+	country = SER
+	save_date = yes
+	
+	date = { day = 18 month = march year = 1923 }
+	deathdate = { day = 1 month = january year = 1928 }
+	offset = 5
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = SER }
+		event = { id = 13301332 days = 1080 }
+	}
+	
+	name = "EVT_13301333_NAME"
+	desc = "EVT_13301333_DESC"
+	
+	action = {
+		name = "People's Radical Party - Pasic"
+		ai_chance = 100
+		command = { type = headofgovernment which = 415080 }
+		command = { trigger = { ai = yes } type = foreignminister which = 415069 } # Nincic
+		command = { trigger = { ai = yes } type = armamentminister which = 415100 } # Stojadinovic
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 415117 } # Vujicic
+		command = { type = domestic which = freedom value = -1 } # intimidations by military police
+	}
+	
+	action = {
+		name = "Democratic Party - Davidovic"
+		ai_chance = 0
+		command = { type = headofgovernment which = 415088 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+# The 1925 Parliamentary Elections
+event = {
+	id = 13301334
+	country = SER
+	save_date = yes
+	
+	date = { day = 8 month = february year = 1925 }
+	deathdate = { day = 1 month = january year = 1929 }
+	offset = 5
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = SER }
+		event = { id = 13301333 days = 720 }
+	}
+	
+	name = "EVT_13301334_NAME"
+	desc = "EVT_13301334_DESC"
+	
+	action = {
+		name = "People's Radical Party - Pasic"
+		ai_chance = 100
+		command = { type = headofgovernment which = 415080 }
+		command = { trigger = { ai = yes } type = foreignminister which = 415069 } # Nincic
+		command = { trigger = { ai = yes } type = armamentminister which = 415100 } # Stojadinovic
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 415120 } # Maksimovic
+	}
+	
+	action = {
+		name = "Democratic Party - Davidovic"
+		ai_chance = 0
+		command = { type = headofgovernment which = 415088 }
+		command = { type = dissent value = 2 }
+	}
+}	
+
+# The 1927 Parliamentary Elections
+event = {
+	id = 13301335
+	country = SER
+	save_date = yes
+	
+	date = { day = 11 month = september year = 1927 }
+	deathdate = { day = 1 month = january year = 1931 }
+	offset = 5
+	
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = SER }
+		event = { id = 13301334 days = 720 }
+	}
+	
+	name = "EVT_13301335_NAME"
+	desc = "EVT_13301335_DESC"
+	
+	action = {
+		name = "People's Radical Party - Pasic"
+		ai_chance = 100
+		command = { type = headofgovernment which = 415080 }
+		command = { trigger = { ai = yes } type = foreignminister which = 415069 } # Nincic
+		command = { trigger = { ai = yes } type = armamentminister which = 415100 } # Stojadinovic
+		command = { trigger = { ai = yes } type = ministerofsecurity which = 415117 } # Vujicic
+	}
+	
+	action = {
+		name = "Democratic Party - Davidovic"
+		ai_chance = 0
+		command = { type = headofgovernment which = 415088 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+# The Assassination of Alexander I of Yugoslavia
+event = {
+	id = 13301336
+	country = YUG
+	
+	date = { day = 9 month = october year = 1934 }
+	deathdate = { day = 1 month = january year = 1938 }
+	offset = 5
+	
+	trigger = {
+		incabinet = 415092
+	}
+	
+	name = "EVT_13301336_NAME"
+	desc = "EVT_13301336_DESC"
+	
+	action = {
+		name = "The King is dead!"
+		command = { type = headofstate which = 100001 }
+		command = { type = sleepminister which = 100093 }
+	}
+}

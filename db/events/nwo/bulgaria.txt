@@ -1,0 +1,158 @@
+event = {
+	id = 8002201
+	country = BUL
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 95011 } # Kiril de Preslav
+		command = { type = headofgovernment which = 95027 } # Nikola Petkov
+		command = { type = foreignminister which = 95039 } # Konstantin Muraviev
+		command = { type = armamentminister which = 95054 } # Ivan Gaidimitriv
+		command = { type = ministerofsecurity which = 95070 } # Nikola Mushanov
+		command = { type = ministerofintelligence which = 95080 } # Atanas Burov
+		command = { type = chiefofstaff which = 95090 } # Georgi Petzov
+		command = { type = chiefofarmy which = 95102 } # Raycho Slavkov
+		command = { type = chiefofnavy which = 95109 } # Racho Batanov
+		command = { type = chiefofair which = 95115 } # Georgi Drenikov
+	}
+}
+
+event = {
+	id = 8002202
+	country = BUL
+
+	name = EVT_8002202_NAME
+	desc = EVT_8002202_DESC
+	picture = "nwo\bulgarian_royal_palace"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+		OR = {
+			headofstate = 95011 # Kiril de Preslav
+			headofstate = 95015 # Kiril de Preslav
+			headofstate = 95017 # Kiril de Preslav
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1980 }
+
+	action = {
+		name = EVT_8002202_A
+		ai_chance = 100
+		command = { type = headofstate which = 95300 } # Simeon II
+	}
+}
+
+event = {
+	id = 8002203
+	country = BUL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 85
+		command = { type = dissent value = -12 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { trigger = { NOT = { event = 8002202 } } type = headofstate which = 95304 } # Petar Mladenov
+		command = { type = headofgovernment which = 95319 } # Andrey Lukanov
+	}
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 15
+		command = { type = dissent value = -4 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { NOT = { event = 8002202 } } type = headofstate which = 95302 } # Zhelyu Zhelev
+		command = { trigger = { NOT = { event = 8002202 } } type = headofgovernment which = 95303 } # Ahmed Dogan
+		command = { trigger = { event = 8002202 } type = headofgovernment which = 95306 } # Zhelyu Zhelev
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 18 }
+	}
+}
+
+event = {
+	id = 8002204
+	country = BUL
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = nwo\elections
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { trigger = { NOT = { event = 8002202 } } type = headofstate which = 95302 } # Zhelyu Zhelev
+		command = { type = headofgovernment which = 95307 } # Philip Dimitrov
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { trigger = { NOT = { event = 8002202 } } type = headofstate which = 95304 } # Petar Mladenov
+		command = { type = headofgovernment which = 95305 } # Alexander Lilov
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+

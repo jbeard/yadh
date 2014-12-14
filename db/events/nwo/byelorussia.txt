@@ -1,0 +1,551 @@
+event = {
+	id = 8001701
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470100 } # Vasil Zacharka
+		command = { type = headofgovernment which = 470101 } # Mikola Abramchyk
+	}
+}
+
+event = {
+	id = 8001702
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470102 } # Mikola Abramchyk
+		command = { type = headofgovernment which = 470103 } # Vasil Zacharka
+	}
+}
+
+event = {
+	id = 8001703
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470104 } # Nikolay F. Gikalo
+		command = { type = headofgovernment which = 470105 } # Nikolay F. Gikalo
+	}
+}
+
+event = {
+	id = 8001704
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1937 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470106 } # Aleksiy A. Volkov
+		command = { type = headofgovernment which = 470002 } # Aleksiy A. Volkov
+	}
+}
+
+event = {
+	id = 8001705
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470107 } # Panteleion Ponomarenko
+		command = { type = headofgovernment which = 470108 } # Panteleion Ponomarenko
+	}
+}
+
+event = {
+	id = 8001706
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470109 } # Nikolay I. Gusarov
+		command = { type = headofgovernment which = 470110 } # Nikolay I. Gusarov
+	}
+}
+
+event = {
+	id = 8001707
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470111 } # Nikolay S. Patolichev
+		command = { type = headofgovernment which = 470112 } # Nikolay S. Patolichev
+	}
+}
+
+event = {
+	id = 8001708
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470113 } # Ivan F. Klimov
+		command = { type = headofgovernment which = 470114 } # Ivan F. Klimov
+	}
+}
+
+event = {
+	id = 8001709
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470115 } # Nikolay S. Patolichev
+		command = { type = headofgovernment which = 470116 } # Nikolay S. Patolichev
+	}
+}
+
+event = {
+	id = 8001710
+	country = BLR
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 470117 } # Kirill T. Mazurov
+		command = { type = headofgovernment which = 470118 } # Kirill T. Mazurov
+	}
+}
+
+event = {
+	id = 8001711
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470102 } # Mikola Abramchyk
+		command = { type = headofgovernment which = 470101 } # Mikola Abramchyk
+	}
+}
+
+event = {
+	id = 8001712
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470119 } # Vikentsiy Zhuk-Hryshkyevich
+		command = { type = headofgovernment which = 470120 } # Vikentsiy Zhuk-Hryshkyevich
+	}
+}
+
+event = {
+	id = 8001713
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470121 } # Jazep Sazhych
+		command = { type = headofgovernment which = 470122 } # Jazep Sazhych
+	}
+}
+
+event = {
+	id = 8001714
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470123 } # Pyotr Masherov
+		command = { type = headofgovernment which = 470124 } # Tikhon Kiselyov
+	}
+}
+
+event = {
+	id = 8001715
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 470125 } # Aleksandr Aksyonov
+	}
+}
+
+event = {
+	id = 8001716
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470126 } # Tikhon Kiselyov
+	}
+}
+
+event = {
+	id = 8001717
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470127 } # Nikolay Slyunkov
+	}
+}
+
+event = {
+	id = 8001718
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 470128 } # Vladimir Brovikov
+	}
+}
+
+event = {
+	id = 8001719
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1986 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 470129 } # Mikhail Kovalyov
+	}
+}
+
+event = {
+	id = 8001720
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1987 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470130 } # Yefrem Sokolov
+	}
+}
+
+event = {
+	id = 8001721
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1990 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 470131 } # Anatoly Malofeyev
+		command = { type = headofgovernment which = 470132 } # Vyachaslau Kebich
+	}
+}
+
+event = {
+	id = 8001722
+	country = BLR
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	date = { day = 0 month = july year = 1990 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 470133 } # Stanislav Shushkevich
+		command = { type = headofgovernment which = 470132 } # Vyachaslau Kebich
+	}
+}
+

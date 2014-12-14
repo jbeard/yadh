@@ -1,0 +1,33 @@
+event = {
+	id = 8021601
+	country = U16
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 895002 } # Otto Bauer
+		command = { type = headofgovernment which = 895003 } # Josef Teufl
+		command = { type = foreignminister which = 895008 } # Willi Frank
+		command = { type = armamentminister which = 895013 } # Erwin Puschmann
+		command = { type = ministerofsecurity which = 895018 } # Willi Frank
+		command = { type = ministerofintelligence which = 895018 } # Richard Bernaschek
+		command = { type = chiefofstaff which = 895020 } # Ferdinand Strasser
+		command = { type = chiefofarmy which = 895021 } # Richard Bernaschek
+		command = { type = chiefofnavy which = 895023 } # Josef Teufl
+		command = { type = chiefofair which = 895024 } # Artur Breycha-Vauthier
+	}
+}
+

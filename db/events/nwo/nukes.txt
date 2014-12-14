@@ -1,0 +1,388 @@
+# Events enabling nukes
+
+event = {
+	id = 8233000
+	persistent = yes
+	tag = { AFG ALB ALG ALI ALS ANG ARA ARG ARM AST AUS AXI AZB BEL BEN BHU BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR DOM EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HAI HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NEP NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TIB TRA TRK TUN TUR UKR URU USA UZB VEN VIC VIE WLL YEM YUG U00 U01 U02 U03 U04 U05 U06 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U36 U38 U39 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U60 U61 U62 U63 U64 U65 U66 U67 U68 U69 U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 UAP UAU UBO UCH UCS UER UES UGS UIC UIR UPE UPR UPS URO USN UTC UTL UTO }
+
+	name = EVT_8233000_NAME
+	desc = EVT_8233000_DESC
+	picture = nwo\nukes_enabled
+	style = 1
+
+	trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		OR = {
+			war = { country = SOV country = USA }
+			lost_national = { value = 30 }
+			flag = nukes_for_everyone
+		}
+		atwar = yes
+		NOT = { local_flag = nukes_enabled }
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8233000_A
+		command = { type = enable_task which = nuke }
+		command = { type = local_setflag which = nukes_enabled }
+	}
+
+}
+
+event = {
+	id = 8233001
+	persistent = yes
+	tag = { AFG ALB ALG ALI ALS ANG ARA ARG ARM AST AUS AXI AZB BEL BEN BHU BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR DOM EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HAI HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NEP NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TIB TRA TRK TUN TUR UKR URU USA UZB VEN VIC VIE WLL YEM YUG U00 U01 U02 U03 U04 U05 U06 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U36 U38 U39 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U60 U61 U62 U63 U64 U65 U66 U67 U68 U69 U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 UAP UAU UBO UCH UCS UER UES UGS UIC UIR UPE UPR UPS URO USN UTC UTL UTO }
+
+	name = EVT_8233000_NAME
+	desc = EVT_8233000_DESC
+	picture = nwo\nukes_enabled
+	decision_picture = nwo\d_nukes_enabled
+	style = 1
+
+	decision = {
+		technology = 7170 # Nuclear Waste Bomb
+		atwar = yes
+		NOT = { local_flag = nukes_enabled }
+		ai = no
+	}
+	
+	trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		atwar = yes
+		NOT = { local_flag = nukes_enabled }
+		ai = no
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8233000_A
+		command = { type = enable_task which = nuke }
+		command = { type = local_setflag which = nukes_enabled }
+		command = { type = setflag which = nukes_for_everyone }
+		command = { type = dissent value = 25 }
+	}
+
+}
+
+event = {
+	id = 8233002
+	persistent = yes
+	tag = { AFG ALB ALG ALI ALS ANG ARA ARG ARM AST AUS AXI AZB BEL BEN BHU BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR DOM EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HAI HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NEP NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TIB TRA TRK TUN TUR UKR URU USA UZB VEN VIC VIE WLL YEM YUG U00 U01 U02 U03 U04 U05 U06 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U36 U38 U39 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U60 U61 U62 U63 U64 U65 U66 U67 U68 U69 U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 UAP UAU UBO UCH UCS UER UES UGS UIC UIR UPE UPR UPS URO USN UTC UTL UTO }
+
+	name = EVT_8233000_NAME
+	desc = EVT_8233000_DESC
+	picture = nwo\nukes_enabled
+	decision_picture = nwo\d_nukes_enabled
+	style = 1
+
+	decision = {
+		technology = 7170 # Nuclear Waste Bomb
+		atwar = yes
+		NOT = { local_flag = nukes_enabled }
+		NOT = { domestic = { type = democratic value = 2 } }
+		OR = {
+			war = { country = -1 country = USA }
+			war = { country = -1 country = ENG }
+			war = { country = -1 country = FRA }
+			war = { country = -1 country = GER }
+			war = { country = -1 country = SOV }
+			war = { country = -1 country = CHI }
+			war = { country = -1 country = CHC }
+			war = { country = -1 country = JAP }
+		}
+	}
+	
+	trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		atwar = yes
+		NOT = { local_flag = nukes_enabled }
+		NOT = { domestic = { type = democratic value = 2 } }
+		OR = {
+			war = { country = -1 country = USA }
+			war = { country = -1 country = ENG }
+			war = { country = -1 country = FRA }
+			war = { country = -1 country = GER }
+			war = { country = -1 country = SOV }
+			war = { country = -1 country = CHI }
+			war = { country = -1 country = CHC }
+			war = { country = -1 country = JAP }
+		}
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8233000_A
+		command = { type = enable_task which = nuke }
+		command = { type = local_setflag which = nukes_enabled }
+		command = { type = setflag which = nukes_for_everyone }
+	}
+
+}
+
+### USA nukes Japan by event
+
+# Hiroshima
+
+event = {
+	id = 8233100
+	country = USA
+
+	name = EVT_8233100_NAME
+	desc = EVT_8233100_DESC
+	picture = nwo\hiroshima_nuke
+	style = 1
+
+	trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1554 data = JAP }
+	}
+	
+	decision = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1554 data = JAP }
+	}
+	
+	decision_trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1554 data = JAP }
+	}
+
+	date = { day = 1 month = august year = 1945 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8233100_A
+		command = { type = trigger which = 8233101 }
+		command = { type = belligerence value = 25 }
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8233100_B
+		ai_chance = 10
+		trigger = { ai = yes }
+		command = { type = belligerence value = -10 }
+	}
+
+}
+
+event = {
+	id = 8233101
+	country = JAP
+
+	name = EVT_8233101_NAME
+	desc = EVT_8233101_DESC
+	picture = nwo\hiroshima_nuke
+	style = 1
+
+	action = {
+		name = EVT_8233100_A
+		command = { type = dissent value = 15 }
+	}
+
+}
+
+# Nagasaki
+
+event = {
+	id = 8233102
+	country = USA
+
+	name = EVT_8233102_NAME
+	desc = EVT_8233102_DESC
+	picture = nwo\nagasaki_nuke
+	style = 1
+
+	trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1560 data = JAP }
+		event = 8233101
+	}
+	
+	decision = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1560 data = JAP }
+		event = 8233101
+	}
+	
+	decision_trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1560 data = JAP }
+		event = 8233101
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8233102_A
+		command = { type = trigger which = 8233103 }
+		command = { type = belligerence value = 25 }
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8233102_B
+		ai_chance = 10
+		trigger = { ai = yes }
+		command = { type = belligerence value = -10 }
+	}
+
+}
+
+event = {
+	id = 8233103
+	country = JAP
+
+	name = EVT_8233103_NAME
+	desc = EVT_8233103_DESC
+	picture = nwo\nagasaki_nuke
+	style = 1
+
+	action = {
+		name = EVT_8233103_A
+		command = { type = dissent value = 25 }
+	}
+
+}
+
+# Kokura
+
+event = {
+	id = 8233104
+	country = USA
+
+	name = EVT_8233104_NAME
+	desc = EVT_8233104_DESC
+	picture = nwo\kokura_nuke
+	style = 1
+
+	trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1554 data = JAP }
+		event = 8233103
+	}
+	
+	decision = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1554 data = JAP }
+		event = 8233101
+	}
+	
+	decision_trigger = {
+		technology = 7170 # Nuclear Waste Bomb
+		NOT = { local_flag = nukes_enabled }
+		war = { country = USA country = JAP }
+		OR = {
+			control = { province = 1663 data = -1 }
+			control = { province = 1563 data = -1 }
+			control = { province = 1562 data = -1 }
+		}
+		control = { province = 1554 data = JAP }
+		event = 8233101
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8233104_A
+		command = { type = trigger which = 8233105 }
+		command = { type = belligerence value = 25 }
+		command = { type = dissent value = -5 }
+	}
+	
+	action = {
+		name = EVT_8233104_B
+		ai_chance = 10
+		trigger = { ai = yes }
+		command = { type = belligerence value = -10 }
+	}
+
+}
+
+event = {
+	id = 8233105
+	country = JAP
+
+	name = EVT_8233105_NAME
+	desc = EVT_8233105_DESC
+	picture = nwo\kokura_nuke
+	style = 1
+
+	action = {
+		name = EVT_8233105_A
+		command = { type = dissent value = 15 }
+	}
+
+}

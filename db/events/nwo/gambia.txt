@@ -1,0 +1,149 @@
+event = {
+	id = 8028601
+	country = U86
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800623 } # Arthur Frederick Richards
+		command = { type = headofgovernment which = 800624 } # Arthur Frederick Richards
+	}
+}
+
+event = {
+	id = 8028602
+	country = U86
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800602 } # Thomas Southorn
+		command = { type = headofgovernment which = 800625 } # Thomas Southorn
+	}
+}
+
+event = {
+	id = 8028603
+	country = U86
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800626 } # Hilary Blood
+		command = { type = headofgovernment which = 800627 } # Hilary Blood
+	}
+}
+
+event = {
+	id = 8028604
+	country = U86
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800628 } # Andrew Barkworth Wright
+		command = { type = headofgovernment which = 800629 } # Andrew Barkworth Wright
+	}
+}
+
+event = {
+	id = 8028605
+	country = U86
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800630 } # Percy Wyn-Harris
+		command = { type = headofgovernment which = 800631 } # Percy Wyn-Harris
+	}
+}
+
+event = {
+	id = 8028606
+	country = U86
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1961 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 800632 } # Edward Henry Windley
+		command = { type = headofgovernment which = 800633 } # Edward Henry Windley
+	}
+}
+
+event = {
+	id = 8028607
+	country = U86
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1962 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 800634 } # John Warburton Paul
+		command = { type = headofgovernment which = 800635 } # Dawda Jawara
+	}
+}
+

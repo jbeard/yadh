@@ -1,0 +1,106 @@
+GUA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+305001;Head of State;Jorge Ubico Castaneda;1933;1964;1964;PA;Pig-headed Isolationist;High;M46001;X
+305002;Head of Government;Jorge Ubico Castaneda;1933;1964;1964;PA;Silent Workhorse;High;M46001;X
+305003;Foreign Minister;Alfredo Skinner Klee;1933;1964;1964;PA;The Cloak N Dagger Schemer;Medium;M46003;X
+305004;Minister of Armament;Guillermo Flores Arendano;1933;1964;1964;PA;Infantry Proponent;Medium;M46004;X
+305005;Minister of Security;T. Castro Dominguez;1933;1964;1964;PA;Crooked Kleptocrat;Medium;M46005;X
+305006;Head of Military Intelligence;Eduardo Villagran Ariza;1933;1964;1964;PA;Logistics Specialist;Medium;M46006;X
+305007;Chief of Staff;Federico Ponce Vaides;1933;1964;1964;PA;School of Manoeuvre;Medium;M46007;X
+305008;Chief of Army;Jorge Ubico Castaneda;1933;1964;1964;PA;Static Defence Doctrine;High;M46001;X
+305009;Chief of Navy;Tomas Mendoza Urribe;1933;1964;1964;PA;Indirect Approach Doctrine;Medium;M46009;X
+305010;Chief of Air Force;R. Buenaventure Pineda;1933;1964;1964;PA;Army Aviation Doctrine;Medium;M46010;X
+305011;Head of State;Jacopo Arbenz Guzman;1944;1964;1964;LWR;Popular Figurehead;High;M46021;X
+305012;Head of State;Juan Arevalo Bermejo;1945;1964;1964;SD;Die-hard Reformer;High;M46022;X
+305013;Head of State;Jorge Torriello Garrido;1945;1964;1964;SL;Resigned Generalissimo;High;M46011;X
+305014;Head of State;R. Buenaventure Pineda;1945;1964;1964;SC;Resigned Generalissimo;High;M46010;X
+305015;Head of State;Federico Ponce Vaides;1944;1964;1964;PA;Barking Buffoon;High;M46007;X
+305016;Head of Government;Francisco Javier Arana;1944;1964;1964;LWR;Naive Optimist;High;M46027;X
+305017;Head of Government;Juan Arevalo Bermejo;1945;1964;1964;SD;Backroom Backstabber;High;M46022;X
+305018;Head of Government;Manuel Orellana;1945;1964;1964;SL;Smiling Oilman;High;M46012;X
+305019;Head of Government;Eduardo Villagran Ariza;1945;1964;1964;SC;Political Protege;High;M46006;X
+305020;Head of Government;Manuel Arroyo;1937;1964;1964;FA;Old Admiral;High;M46031;X
+305021;Head of Government;R. Buenaventure Pineda;1944;1964;1964;PA;old airmarshal;High;M46010;X
+305022;Head of Government;Eduardo Villagran Ariza;1944;1964;1964;PA;Happy Amateur;High;M46006;X
+305023;Foreign Minister;Carlos Argumedo Salazar;1944;1964;1964;LWR;The Cloak N Dagger Schemer;Medium;M46035;X
+305024;Foreign Minister;Jorge Torriello Garrido;1945;1964;1964;SD;General Staffer;Medium;M46011;X
+305025;Foreign Minister;Enrique Muñoz Meany;1946;1964;1964;SD;Biased Intellectual;Medium;M46037;X
+305026;Foreign Minister;Francisco Javier Arana;1945;1964;1964;SC;Iron Fisted Brute;Medium;M46027;X
+305027;Foreign Minister;Carlos Argumedo Salazar;1937;1964;1964;PA;Great Compromiser;Medium;M46035;X
+305028;Minister of Armament;Juan Arevalo Bermejo;1944;1964;1964;LWR;Resource Industrialist;Medium;M46022;X
+305029;Minister of Armament;Jacopo Arbenz Guzman;1945;1964;1964;SD;Infantry Proponent;Medium;M46021;X
+305030;Minister of Armament;Diego A. Castro Arigon;1946;1964;1964;SD;Administrative Genius;Medium;M46044;X
+305031;Minister of Armament;Julio Herrera;1945;1964;1964;SL;Resource Industrialist;Medium;M46045;X
+305032;Minister of Armament;José Matos;1945;1964;1964;SC;laissez-faire capitalist;Medium;M46014;X
+305033;Minister of Armament;T. Castro Dominguez;1937;1964;1964;PA;Corrupt Kleptocrat;Medium;M46005;X
+305034;Minister of Armament;Manuel Arroyo;1940;1964;1964;PA;Theoretical Scientist;Medium;M46031;X
+305035;Minister of Armament;Federico Ponce Vaides;1944;1964;1964;PA;Tank Proponent;Medium;M46007;X
+305036;Minister of Security;Manuel Orellana;1944;1964;1964;LWR;Crime Fighter;Medium;M46012;X
+305037;Minister of Security;Manuel Valladares;1945;1964;1964;SD;Silent Lawyer;Medium;M46015;X
+305038;Minister of Security;Tomas Mendoza Urribe;1945;1964;1964;SL;Silent Lawyer;Medium;M46009;X
+305039;Minister of Security;Carlos Castillo Armas;1945;1964;1964;SC;Silent Lawyer;Medium;M46053;X
+305040;Minister of Security;Alfredo Skinner Klee;1937;1964;1964;PA;Compassionate Gentleman;Medium;M46003;X
+305041;Minister of Security;Federico Ponce Vaides;1940;1964;1964;PA;Efficient Sociopath;Medium;M46007;X
+305042;Minister of Security;R. Buenaventure Pineda;1944;1964;1964;PA;Prince of Terror;Medium;M46010;X
+305043;Head of Military Intelligence;Adrian Recinos;1944;1964;1964;LWR;Technical Specialist;Medium;M46016;X
+305044;Head of Military Intelligence;Jacopo Arbenz Guzman;1947;1964;1964;SD;Political Specialist;Medium;M46021;X
+305045;Head of Military Intelligence;Tomas Mendoza Urribe;1945;1964;1964;SL;Naval Intelligence Specialist;Medium;M46009;X
+305046;Head of Military Intelligence;Felipé Uriarte Tómas;1945;1964;1964;SC;Logistics Specialist;Medium;M46060;X
+305047;Head of Military Intelligence;Guillermo Flores Arendano;1937;1964;1964;PA;Dismal Enigma;Medium;M46004;X
+305048;Head of Military Intelligence;Manuel Arroyo;1944;1964;1964;PA;Naval Intelligence Specialist;Medium;M46031;X
+305049;Chief of Staff;Carlos Diaz de Leon;1945;1964;1964;SD;School of Manoeuvre;Medium;M46063;X
+305050;Chief of Staff;Manuel Orellana;1944;1964;1964;LWR;School of Defence;Medium;M46012;X
+305051;Chief of Staff;Jorge Ubico Castaneda;1937;1964;1964;PA;School of Mass Combat;High;M46001;X
+305052;Chief of Army;Jacopo Arbenz Guzman;1944;1964;1964;LWR;Decisive Battle Doctrine;Medium;M46021;X
+305053;Chief of Army;Carlos Diaz de Leon;1945;1964;1964;SD;Armoured Spearhead Doctrine;Medium;M46063;X
+305054;Chief of Army;Manuel Orellana;1945;1964;1964;SL;Static Defence Doctrine;Medium;M46012;X
+305055;Chief of Army;R. Buenaventure Pineda;1945;1964;1964;SC;Guns and Butter Doctrine;Medium;M46010;X
+305056;Chief of Army;Federico Ponce Vaides;1937;1964;1964;PA;Decisive Battle Doctrine;Medium;M46007;X
+305057;Chief of Navy;Tomas Mendoza Urribe;1945;1964;1964;SD;Indirect Approach Doctrine;Medium;M46009;X
+305058;Chief of Navy;Jorge Torriello Garrido;1944;1964;1964;LWR;Power Projection Doctrine;High;M46011;X
+305059;Chief of Navy;José Ezuira Abel;1945;1964;1964;SC;Open Seas Doctrine;Medium;M46019;X
+305060;Chief of Air Force;Francisco Javier Arana;1944;1964;1964;LWR;Vertical Envelopment Doctrine;Very High;M46027;X
+305061;Chief of Air Force;W. Tesch Orlando;1945;1964;1964;SD;Air Superiority Doctrine;Medium;M46077;X
+305062;Chief of Air Force;Miguel Garcia Granados;1945;1964;1964;SC;Carpet Bombing Doctrine;Medium;M46079;X
+305063;Chief of Staff;M. Ydigaras Fuentes;1944;1964;1964;PA;School of Psychology;Medium;M46018;X
+305064;Head of Government;Federico Ponce Vaides;1944;1964;1964;PA;Old General;Very High;M46007;X
+305065;Head of State;Manuel Cabrera;1914;1933;1964;SL;Barking Buffoon;Medium;2650;X
+305066;Head of Government;Manuel Cabrera;1914;1933;1964;SL;Naive Optimist;Medium;2650;X
+305067;Minister of Armament;Lazaro Chacón;1914;1933;1964;SL;MILITARY ENTREPRENEUR;Medium;2651;X
+305068;Minister of Security;Miguel Larrave;1914;1933;1964;ML;CROOKED KLEPTOCRAT;Medium;unknown;X
+305069;Chief of Staff;José Letona;1914;1933;1964;ML;SCHOOL OF DEFENCE;Medium;unknown;X
+305070;Head of State;Carlos Herrera;1920;1933;1964;SL;Resigned Generalissimo;Medium;2652;X
+305071;Head of Government;Carlos Herrera;1920;1933;1964;SL;Ambitious Union Boss;Medium;2652;X
+305072;Head of State;José Orellana;1921;1933;1964;SL;Autocratic Charmer;Medium;6893;X
+305073;Head of Government;José Orellana;1921;1933;1964;SL;Backroom Backstabber;Medium;6893;X
+305074;Chief of Army;José Orellana;1914;1933;1964;ML;DECISIVE BATTLE DOCTRINE;Medium;6893;X
+305100;Head of State;Francisco Javier Arana;1944;1964;1964;SD;Popular Figurehead;Medium;M46027;X
+305101;Head of Government;Juan Arevalo Bermejo;1945;1964;1964;SD;Happy Amateur;Medium;M46022;X
+305102;Head of State;Adrián Recinos;1945;1964;1964;SC;Stern Imperialist;Medium;M305102;X
+305103;Head of Government;Adrián Recinos;1945;1964;1964;SC;Old Admiral;Medium;M305102;X
+305104;Head of Government;Jacopo Arbenz Guzman;1951;1972;1972;LWR;Naive Optimist;Medium;M305104;X
+305105;Head of State;M. Ydigoras Fuentes;1951;1983;1983;SC;Popular Figurehead;Medium;M305105;X
+305106;Head of Government;M. Ydigoras Fuentes;1951;1983;1983;SC;Ambitious Union Boss;Medium;M305105;X
+305107;Head of State;Carlos Castillo Armas;1954;1958;1981;PA;Ruthless Powermonger;Medium;M46053;X
+305108;Head of Government;Luis A. G. López;1954;1964;1964;PA;Silent Workhorse;Medium;M305108;X
+305109;Head of Government;Clemente Marroquín Rojas;1958;1979;1979;SC;Old General;Medium;M305109;X
+305110;Head of State;Enrique Peralta Azurdia;1963;1998;1998;SC;Resigned Generalissimo;Medium;M305110;X
+305111;Head of Government;Catalino Chávez Pérez;1963;1965;1971;SC;Naive Optimist;Medium;M305111;X
+305112;Head of State;Julio C. Méndez Montenegro;1966;1997;1997;SD;Ruthless Powermonger;Medium;M305112;X
+305113;Head of State;Carlos M. Arana Osorio;1970;2004;2004;PA;Weary Stiffneck;Medium;M305113;X
+305114;Head of Government;Eduardo R. Cáceres Lenhoff;1970;1981;1981;PA;Flamboyant Tough Guy;Medium;M305114;X
+305115;Head of State;Kjell E. Laugerud García;1974;2010;2010;PA;Autocratic Charmer;Medium;M305115;X
+305116;Head of Government;Mario A. Sandoval Alarcón;1974;2004;2004;PA;Old Admiral;Medium;M305116;X
+305117;Head of State;Fernando R. Lucas García;1978;2007;2007;PA;Stern Imperialist;Medium;M305117;X
+305118;Head of Government;Francisco Villagrán Kramer;1978;2012;2012;PA;Old General;Medium;M305118;X
+305119;Head of Government;Óscar Mendoza Azurdia;1980;2020;2020;PA;Corporate Suit;Medium;M305119;X
+305120;Head of State;Efraín Ríos Montt;1982;2020;2020;PA;Stern Imperialist;Medium;M305120;X
+305121;Head of Government;Efraín Ríos Montt;1982;2020;2020;PA;Old Airmarshal;Medium;M305120;X
+305122;Head of State;Óscar H. Mejía Victores;1983;2020;2020;PA;Autocratic Charmer;Medium;M305122;X
+305123;Head of Government;Óscar H. Mejía Victores;1983;2020;2020;PA;Old General;Medium;M305122;X
+305124;Head of State;Jorge Serrano Elías;1986;2020;2020;SD;Powerhungry Demagogue;Medium;M305124;X
+305125;Head of Government;Jorge Serrano Elías;1986;2020;2020;SD;Old Airmarshal;Medium;M305124;X
+305126;Head of State;Vinicio Cerezo;1986;2020;2020;SC;Popular Figurehead;Medium;M305126;X
+305127;Head of Government;Roberto Carpio Nicolle;1986;2020;2020;SC;Naive Optimist;Medium;M305127;X
+305128;Head of Government;Gustavo A. Espina Salguero;1991;2020;2020;SD;Political Protege;Medium;M305128;X
+305129;Head of State;Jorge Carpio;1991;1994;2012;SC;Autocratic Charmer;Medium;M305129;X
+305130;Head of Government;Luis A. Cabrera Hidalgo;1991;2000;2000;SC;Silent Workhorse;Medium;M305130;X

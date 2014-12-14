@@ -1,0 +1,72 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+#############################
+# Playlist 
+#############################
+
+event = {
+	id = 133000010
+	random = no
+	persistent = yes
+	
+	name = "Music"
+	desc = "Choose playlist"
+	picture = "music"
+	
+	action_a = {
+		name = "Germany"
+		command = { type = songs which = Ger.txt }
+	}
+	action_b = {
+		name = "Soviet Union"
+		command = { type = songs which = Sov.txt }
+	}
+	action_c = {
+		name = "Allied"
+		command = { type = songs which = Allied.txt }
+	}
+	action_d = {
+		name = "Japan"
+		command = { type = songs which = Japan.txt }
+	}
+}
+
+event = {
+	id = 133000011
+	random = no
+	persistent = yes
+	
+	name = "Music"
+	desc = "Choose playlist"
+	picture = "music"
+	
+	action = {
+		name = "Hitler Speeches"
+		command = { type = songs which = Hitler.txt }
+	}
+	action = {
+		name = "Call of Duty"
+		command = { type = songs which = callofduty.txt }
+	}
+	action = {
+		name = "Other Speeches"
+		command = { type = songs which = speech.txt }
+	}
+	
+	action = {
+		name = "Classical"
+		command = { type = songs which = Classical.txt }
+	}
+	
+	action = {
+		name = "World War I"
+		command = { type = songs which = WWI.txt }
+	}
+}

@@ -1,0 +1,175 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Poland 
+# Event List:
+
+# Peace of Riga
+event = { 
+	id = 13300511          
+	country = POL            
+	
+	date = { day = 0 month = 0 year = 1914 }
+	deathdate = { day = 0 month = 0 year = 1931 }            
+	offset = 7                 
+	
+	trigger = {          
+		flag = treaty_of_warsaw
+		war = { country = SOV }
+		and = { #war is going bad
+			lost_national = { country = POL value = 50 } 
+			lost_VP = { country = POL value = 50 } 
+		}
+	}
+	name = "EVT_13300511_NAME"							
+	Desc = "EVT_13300511_DESC"
+	Picture = "soviet_strategic_defeat" 
+	
+	action = { 	
+		name = "Let's offer peace."    
+		ai_chance = 100  
+		command = { type = trigger which = 13300313 }
+		command = { type = clrflag which = treaty_of_warsaw }
+		command = { type = local_clrflag which = treaty_of_warsaw }
+		command = { type = dissent value = -5 }
+	} 			
+	action = { 	
+		name = "Fight on!"    
+		ai_chance = 0   
+		command = { type =  dissent value = 10 }
+	}
+}
+
+# Peace of Riga signed
+event = { 
+	id = 13300512          
+	country = POL            
+	
+	#triggered by SOV event 13300313
+	
+	name = "EVT_13300512_NAME"							
+	Desc = "EVT_13300512_DESC"
+	Picture = "peace_manifestation" 
+	
+	action = { 	
+		name = "Finally, it's over!"
+		# Remove claims (not cores since they were never cores)
+		command = { type = removeclaim which = 590 }
+		command = { type = removeclaim which = 591 }
+		command = { type = removeclaim which = 592 } #included claim on Borisov
+		command = { type = removeclaim which = 593 }
+		command = { type = removeclaim which = 594 }
+		command = { type = removeclaim which = 595 } #included claim on Mozyr
+		command = { type = removeclaim which = 596 } #included claim on Slutsk
+		command = { type = removeclaim which = 597 } #included claim on Luban
+		command = { type = removeclaim which = 598 }
+		command = { type = removeclaim which = 599 } #included claim on Minsk
+		command = { type = removeclaim which = 609 }
+		command = { type = removeclaim which = 611 }
+		command = { type = removeclaim which = 612 }
+		command = { type = removeclaim which = 614 } #included claim on Proskurov
+		command = { type = removeclaim which = 616 } #included claim on Novograd-Volynsky
+		command = { type = removeclaim which = 618 } #included claim on Kamenets-Podolsky
+		command = { type = removeclaim which = 619 } 
+		command = { type = dissent value = -5 }
+		command = { type = relation which = SOV value = 150 }
+		
+	} 			
+}
+
+event = { 
+	id = 13300513         
+	country = POL            
+
+	trigger = {
+		event = 2193501 #Soviet Polish War
+		war = { country = SOV country = POL }
+		OR = {
+			lost_national = { country = SOV value = 10 } #war is going REALLY bad... peace out without letting poland prove its worthyness
+		}
+		NOT = { lost_national = { country = POL value = 20 } }
+		
+		NOT = { event = 2193502 }
+		OR = { year = 1922 }
+	}
+	
+	name = "EVT1914_2193502_NAME"							
+	desc = "EVT1914_2193502_DESC"
+	picture = "diplomatic_campaign" 
+	style = 2
+
+	date = { day = 0 month = 0 year = 1914 }
+	deathdate = { day = 0 month = 0 year = 1931 }            
+	offset = 5                 
+
+	action = {
+		name = "EVT1914_2193502_ACTIONA"    
+		ai_chance = 100  
+		command = { type = setflag which = POLSOV_good_peace }
+		command = { type = trigger which = 2193503 }
+		command = { type = sleepevent which = 2193502 }
+		command = { trigger = { area = { area = "Warsaw" country = SOV data = 1 value = 80} } type = secedearea which = POL value = "Warsaw" when = 2 } 
+		command = { trigger = { area = { area = "Polotsk" country = SOV data = 1 value = 80} } type = secedearea which = POL value = "Polotsk" when = 2 }
+		command = { trigger = { area = { area = "Krakow" country = SOV data = 1 value = 20} } type = secedearea which = POL value = "Krakow" when = 2 }
+		command = { trigger = { area = { area = "Poznan" country = SOV data = 1 value = 20} } type = secedearea which = POL value = "Poznan" when = 2 }
+		command = { trigger = { region = { region = "Belarus" country = POL data = 1 } } type = secederegion which = SOV value = "Belarus" when = 2 }
+		command = { trigger = { region = { region = "Western Russia" country = POL data = 1 } } type = secederegion which = SOV value = "Western Russia" when = 2 }
+		command = { trigger = { region = { region = "Russia" country = POL data = 1 } } type = secederegion which = SOV value = "Russia" when = 2 }
+		command = { trigger = { region = { region = "Southern Russia" country = POL data = 1 } } type = secederegion which = SOV value = "Southern Russia" when = 2 }
+		command = { trigger = { region = { region = "Ukraine" country = POL data = 1 } } type = secederegion which = SOV value = "Ukraine" when = 2 }
+	} 			
+	action = {
+		name = "EVT1914_2193502_ACTIONB"    
+		ai_chance = 0
+		command = { type = setflag which = POLSOV_harsh_peace }
+		command = { type = trigger which = 2193503 }
+		command = { type = sleepevent which = 2193502 }
+		command = { trigger = { area = { area = "Warsaw" country = SOV data = 1 value = 80} } type = secedearea which = POL value = "Warsaw" when = 2 } 
+		command = { trigger = { area = { area = "Polotsk" country = SOV data = 1 value = 80} } type = secedearea which = POL value = "Polotsk" when = 2 }
+		command = { trigger = { area = { area = "Krakow" country = SOV data = 1 value = 20} } type = secedearea which = POL value = "Krakow" when = 2 }
+		command = { trigger = { area = { area = "Poznan" country = SOV data = 1 value = 20} } type = secedearea which = POL value = "Poznan" when = 2 }
+	}
+	action = {
+		name = "EVT1914_2193502_ACTIONC"    
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 2193502 }
+		command = { trigger = { area = { area = "Warsaw" country = SOV data = 1 value = 80} } type = secedearea which = POL value = "Warsaw" when = 2 } 
+		command = { trigger = { area = { area = "Polotsk" country = SOV data = 1 value = 80} } type = secedearea which = POL value = "Polotsk" when = 2 }
+		command = { trigger = { area = { area = "Krakow" country = SOV data = 1 value = 20} } type = secedearea which = POL value = "Krakow" when = 2 }
+		command = { trigger = { area = { area = "Poznan" country = SOV data = 1 value = 20} } type = secedearea which = POL value = "Poznan" when = 2 }
+	}
+}
+
+#	Polish Guard's
+event = {
+	id = 14405900
+	country = POL
+
+	trigger = {
+	atwar = no
+	exists = POL
+	AND = { NOT = { event = 14405900 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1918 }
+	offset = 14
+	deathdate = { day = 0 month = january year = 1922 }
+
+	name = "Polish Guards"
+	desc = "After the formation of Poland, A small guard force had to be created, basicly an amature defence force"
+
+	action = {
+		name = "Okay"
+		command = { type = add_division value = militia when = 1 where = police }
+		command = { type = add_division value = militia when = 1 where = police }
+		command = { type = add_division value = militia when = 1 where = police }
+	}
+}

@@ -1,0 +1,78 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Disarming of Nations
+# Event List:
+#JAP	13391209	1930 AI switching to attack China 
+#JAP	13391210	Mukden Incident, switch to late interwar production 
+
+event = { # 1930 AI switching to attack China
+	id = 13391209														 
+	random = no
+	persistent = no
+	country = JAP					 
+	
+	trigger = {
+		ai = yes
+		NOT = { local_flag = AAR_JAP_AI_1930_done }
+		NOT = { or = { # Don't do this if we are already emperror of china
+			alliance = { country = JAP country = CHI } 
+			alliance = { country = JAP country = UCH }
+		} } 
+	}
+	
+	date = { day = 1 month = 10 year = 1929 }
+	offset = 1						
+	deathdate = { day = 30 month = 11 year = 1929 } 
+	
+	name = "AI_EVENT"						
+	Picture = "economic"
+	
+	action = { 	
+		name = "AI_EVENT" # 1930 AI switching to attack China.		
+		command = { type = local_setflag which = AAR_JAP_AI_1930_done }
+		command = { type = ai which = "aar/wars/JAP_1930_VS_CHINA.ai" }
+	}
+}
+
+event = { # Mukden Incident, switch to late interwar production
+	id = 13391210														 
+	random = no						
+	persistent = no
+	country = JAP
+	
+	# go to war
+	trigger = {
+		atwar = no
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		not = { local_flag = AAR_behavior_atwar } #wait for the AI to go back to peace
+		NOT = { local_flag = AAR_Interwar_AI_1936 } 
+		event = 13301211
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 7						
+	deathdate = { day = 30 month = 09 year = 1935 }
+	
+	name = "AI_EVENT"
+	Picture = "economic"
+	
+	action = { 	
+		name = "AI_EVENT" #Mukden Incident, switch to late interwar production."		
+		command = { type = ai which = "AAR\economic\aar-province-construction-gearing.ai" }
+		command = { type = ai which = "AAR\unit-construction\aar-buildqueue-JAP-interwar-late.ai" }
+		command = { type = local_clrflag which = AAR_behavior_pacifist }
+		command = { type = local_clrflag which = AAR_behavior_regular }
+		command = { type = local_setflag which = AAR_behavior_gearing }
+		command = { type = ai_prepare_war which = CHI }
+		command = { type = ai_prepare_war which = UCH }
+		command = { type = alliance which = MAN }
+	}
+}

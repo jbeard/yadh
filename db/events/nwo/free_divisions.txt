@@ -1,0 +1,1129 @@
+event = {
+	id = 8213003
+	country = ALG
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213006
+	country = ANG
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213015
+	country = BEN
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213023
+	country = BUR
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213025
+	country = CAM
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213031
+	country = CMB
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213033
+	country = CON
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213041
+	country = CYP
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213049
+	country = EGY
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213053
+	country = ETH
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213058
+	country = GAB
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213061
+	country = GLD
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213064
+	country = GUI
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213065
+	country = GUY
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213073
+	country = INO
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213079
+	country = JOR
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213084
+	country = LAO
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213086
+	country = LBY
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213087
+	country = LEB
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213091
+	country = MAD
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213092
+	country = MAL
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213097
+	country = MLY
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213099
+	country = MOR
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213100
+	country = MOZ
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213102
+	country = NAM
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213105
+	country = NIG
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213122
+	country = RHO
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213128
+	country = SAR
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213137
+	country = SIE
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213141
+	country = SOM
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213145
+	country = SUD
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213147
+	country = SYR
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213154
+	country = TUN
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213180
+	country = VIE
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213270
+	country = U70
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213275
+	country = U75
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213281
+	country = U81
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213282
+	country = U82
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213283
+	country = U83
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213284
+	country = U84
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213285
+	country = U85
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213286
+	country = U86
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213288
+	country = U88
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213289
+	country = U89
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213290
+	country = U90
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213291
+	country = U91
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213292
+	country = U92
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213293
+	country = U93
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213294
+	country = U94
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213295
+	country = U95
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213296
+	country = U96
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213297
+	country = U97
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213298
+	country = U98
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213299
+	country = U99
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+	}
+}
+
+event = {
+	id = 8213300
+	country = U72
+
+	name = EVT_FREEDIVISIONS_NAME
+	desc = EVT_FREEDIVISIONS_DESC
+	picture = "nwo\foundation_of_army"
+	style = 1
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_FREEDIVISIONS_A
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+		command = { type = add_division value = infantry when = 12 }
+	}
+}

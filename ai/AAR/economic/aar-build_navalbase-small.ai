@@ -1,0 +1,10 @@
+# Naval Base construction AI File by Burning
+
+###################################
+# Construction and Tech Research
+###################################
+construction = {
+  naval_base = not_atwar
+	max_naval_base = 3
+}
+  

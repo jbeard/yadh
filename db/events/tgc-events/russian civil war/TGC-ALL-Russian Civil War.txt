@@ -1,0 +1,410 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the Russian Civil War
+# Event List:                    
+#SOV	13310100	Disarming the Nation
+#	13310110	Drafting Forces for the Civil War
+#	13310111	The End of the Ceasefire
+#	13310112	USSR Russia Unit Max
+#	1445000001	USSR dow primorsk
+
+# Disarming the Nation
+event = { 
+	id = 13310100                      
+	country = SOV                            
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30            
+	deathdate = { day = 1 month = january year = 1925 }
+	persistent = yes
+	
+	
+	trigger = {          
+		event = 2104530
+		or = { #peace in the west.
+			event = 2007517
+			event = 2007503
+		}
+		army = 71
+		not = { event = 2193503 } #peace with poland
+		NOT = { flag = RCW_Finished } #Civil War Over?
+	}
+	name = "EVT_13310100_NAME"							
+	Desc = "EVT_13310100_DESC"
+	Picture = "surrender" 
+	
+	action = { 	
+		name = "Transfer the most loyal Imperial Army personel to the Red Army."    
+		ai_chance = 100  
+		command = { type = local_setflag which = loser }
+		#normalize the russian army size to a sane level.
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		command = { trigger = { army = 110 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		command = { trigger = { army = 100 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		command = { trigger = { army = 90 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		command = { trigger = { army = 80 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { trigger = { army = 70 } type = delete_unit which = -1 }
+		command = { type = ai which = "AAR/wars/nosurrender.ai" }
+		command = { type = local_setflag which = 3104503 }
+	}
+	action = { 	
+		name = "No!"
+		ai_chance = 0
+		command = { type = war which = U08 }
+		command = { trigger = { exists = U09 } type = war which = U09 }
+		command = { trigger = { exists = FIN } type = war which = FIN }
+		command = { trigger = { exists = OTT } type = war which = OTT }
+		command = { type = war which = ROM }
+		command = { trigger = { exists = CZE } type = war which = CZE }
+		command = { trigger = { exists = TUR } type = war which = TUR }
+        command = { type = sleepevent which = 13310100 }
+	}
+}
+
+# Drafting Forces for the Civil War
+event = { 
+	id = 13310110                      
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30            
+	deathdate = { day = 1 month = january year = 1922 }
+	persistent = no
+	
+	trigger = {          
+		or = {
+			country = UTC 
+			country = UPE 
+			country = UGS 
+			country = UER 
+			country = FIN
+			country = SOV
+			country = RUS
+			country = EST
+			country = LAT
+			country = LIT
+			country = POL
+			country = AZB
+			country = GEO
+			country = UKR
+		}
+		or = { 
+			not = { army = 50 }
+			war = { country = SOV }
+			country = SOV
+		}
+		or = {
+			and = {
+				not = { army = 10 }
+				not = { country = AZB }
+				not = { country = GEO } 
+			} 
+			and = {
+				not = { army = 7 }
+				or = { country = AZB country = GEO }
+			} 
+			and = { country = SOV not = { army = 59 } }
+		}
+		not = { local_flag = armistice }
+	}
+	name = "EVT_13310110_NAME"							
+	Desc = "EVT_13310110_DESC"
+	Picture = "surrender" 
+	
+	action = { 	
+		name = "Draft them."    
+		# prevent the industry from collapsing
+		command = { trigger = { not = { supplies = 100 } } type = supplies value = 1500 }
+		command = { trigger = { not = { energy = 50 } } type = energypool value = 500 }
+		command = { trigger = { not = { metal = 50 } } type = metalpool value = 500 }
+		command = { trigger = { not = { rare_materials = 50 } } type = rarematerialspool value = 500 }
+		command = { trigger = { not = { oil = 50 } } type = oilpool value = 500 }
+		command = { trigger = { not = { money = 20 } } type = money value = 200 }
+		# a few transports, so overseas units can be supplied a bit
+		command = { trigger = { not = { escortpool = 5 } } type = transport_pool value = 10	}
+		# two free units, regardless of how many provinces are controled, for those nations who do have a very tiny army
+		command = { trigger = { or = { not = { army = 8 } country = AZB country = GEO } } type = add_division value = infantry when = 1 }
+		command = { trigger = { or = { not = { army = 8 } country = AZB country = GEO } } type = add_division value = infantry when = 1 }
+		# gain 1 unit for each controlled province
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 572 data = -1 } } type = add_division value = infantry when = 1 }  
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 572 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 553 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 553 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 599 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 599 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 617 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 617 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 641 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 641 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 663 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 663 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 713 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 713 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 535 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 535 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1118 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1118 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1197 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1197 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1199 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1199 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1110 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1110 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1151 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1151 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1138 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1138 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1103 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1103 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1142 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1142 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1191 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1191 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 542 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 542 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 644 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 644 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 566 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 593 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 598 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 626 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 636 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 708 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 706 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 654 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 669 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1134 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1130 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1119 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1124 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1143 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1162 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1169 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1164 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1179 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1190 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 630 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 628 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 538 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 531 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 525 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 524 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 520 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 517 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 270 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 273 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 264 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 266 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 268 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 262 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 259 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 604 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 697 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 1197 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { trigger = { not = { or = { country = AZB country = GEO } } not = { or = { and = { army = 10 not = { country = SOV } } and = { country = SOV  army = 59 }  }  } control = { province = 504 data = -1 } } type = add_division value = infantry when = 1 }
+		command = { type = ai which = "AAR/wars/nosurrender.ai" }
+		command = { type = local_setflag which = 3104503 }
+	}
+}
+
+# The End of the Ceasefire
+event = { 
+	id = 13310111                      
+	persistent = yes         
+	
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1925 }
+	offset = 45                   
+	
+	trigger = {          
+ 		exists = SOV
+		atwar = no
+		not = { ispuppet = yes }
+		or = {
+			country = AZB
+			country = GEO
+ 			country = UER 
+			country = UGS 
+			country = UPE 
+			country = UTC
+			country = UKR 
+		}
+		not = { 
+			or = {
+				ispuppet = yes
+				participant = { value = 1 }
+				participant = { value = 2 } 
+			}
+		} 
+	}
+	name = "EVT_13310111_NAME"							
+	Desc = "EVT_13310111_DESC"
+	Picture = "assistance" 
+	
+	action = { 	
+		name = "Down with the central government!"    
+		command = { type =  belligerence value = -50 }
+		command = { type = local_setflag which = armistice }
+		command = { type =  war which = SOV }
+		command = { type =  belligerence value = -50 }
+	}			
+}
+
+event = { 
+	id = 13310112                      
+	country = SOV                            
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 30            
+	deathdate = { day = 1 month = january year = 1940 }
+	persistent = yes
+	
+	
+	trigger = {          
+		event = 2104530
+		or = { #peace in the west.
+			event = 2007517
+			event = 2007503
+		}
+		AI = yes
+		army = 251
+	}
+	name = "EVT_13310100_NAME"							
+	Desc = "EVT_13310100_DESC"
+	Picture = "surrender" 
+	
+	action = { 	
+		name = "Transfer the most loyal Imperial Army personel to the Red Army."    
+		ai_chance = 100  
+		#normalize the russian army size to a sane level.
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		command = { trigger = { army = 290 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		command = { trigger = { army = 280 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		command = { trigger = { army = 270 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		command = { trigger = { army = 260 } type = delete_unit which = -1 }
+		
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+		command = { trigger = { army = 250 } type = delete_unit which = -1 }
+	}
+}
+
+event = {
+	id = 1445000001
+	tag = { SOV }
+
+	trigger = {
+		exists = PRI
+		NOT = { war = { country = SOV  country = PRI }}
+}
+	date = { day = 0 month = june year = 1916 }
+	offset = 10
+	deathdate = { day = 0 month = june year = 1925 }
+
+	name = "War against Primorsk"
+	desc = "We must show the tratiors in Primorsk that the Soviet way is the right way"
+
+	action = { 
+		name = "War with Primorsk"
+		command = { type = war which = PRI }
+	}
+}

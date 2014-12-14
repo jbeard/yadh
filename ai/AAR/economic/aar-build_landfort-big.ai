@@ -1,0 +1,10 @@
+# Naval Base construction AI File by Burning
+
+###################################
+# Construction and Tech Research
+###################################
+construction = {
+  land_fort = yes
+	max_land_level = 10
+}
+  

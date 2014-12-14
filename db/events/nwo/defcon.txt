@@ -1,0 +1,284 @@
+# Disable nukes (AI)
+
+#event = {
+#	id = 8220000
+#	persistent = yes
+#
+#	name = AI_EVENT
+#	desc = AI_EVENT
+#	picture = nwo\empty
+#	style = 1
+#	
+#	trigger = {
+#		flag = cold_war
+#		NOT = { flag = ww3 }
+#		NOT = { war = { country = USA } }
+#		NOT = { war = { country = SOV } }
+#		AND = {
+#			OR = {
+#				country = IND
+#				country = PAK
+#			}
+#			NOT = { war = { country = IND country = PAK } }
+#		}
+#		AND = {
+#			OR = {
+#				country = CHI
+#				country = CHC
+#			}
+#			NOT = { war = { country = CHC country = CHI } }
+#		}
+#		AND = {
+#			atwar = yes
+#			NOT = { lost_national = { value = 30 } }
+#		}
+#		ai = yes
+#		NOT = { local_flag = nukes_disabled }
+#	}
+#	
+#	date = { day = 0 month = january year = 1942 }
+#	offset = 7
+#	deathdate = { day = 30 month = december year = 1999 }
+#
+#	action = {
+#		name = EVT_8220000_A
+#		ai_chance = 100
+#		command = { type = ai which = "nukes_disabled.ai" }
+#	}
+#
+#}
+#
+## Enable nukes (AI)
+#
+#event = {
+#	id = 8220001
+#	persistent = yes
+#
+#	name = AI_EVENT
+#	desc = AI_EVENT
+#	picture = nwo\empty
+#	style = 1
+#	
+#	trigger = {
+#		OR = {
+#			war = { country = USA }
+#			war = { country = SOV }
+#			AND = {
+#				OR = {
+#					country = IND
+#					country = PAK
+#				}
+#				war = { country = IND country = PAK }
+#			}
+#			AND = {
+#				OR = {
+#					country = CHI
+#					country = CHC
+#				}
+#				war = { country = CHC country = CHI }
+#			}
+#			AND = {
+#				atwar = yes
+#				lost_national = { value = 30 }
+#			}
+#		}
+#		local_flag = nukes_disabled
+#	}
+#	
+#	date = { day = 0 month = january year = 1942 }
+#	offset = 3
+#	deathdate = { day = 30 month = december year = 1999 }
+#
+#	action = {
+#		name = EVT_8220001_A
+#		ai_chance = 100
+#		command = { type = ai which = "nukes_enabled.ai" }
+#	}
+#
+#}
+#
+## Punish the player for nukes usage
+#
+#event = {
+#	id = 8220003
+#	persistent = yes
+#
+#	name = EVT_8220003_NAME
+#	desc = EVT_8220003_DESC
+#	picture = nwo\nuke_horror
+#	style = 1
+#	
+#	trigger = {
+#			OR = {
+#				war = { country = GER }
+#				war = { country = USA }
+#				war = { country = SOV }
+#				AND = {
+#					OR = {
+#						country = IND
+#						country = PAK
+#					}
+#					war = { country = IND country = PAK }
+#				}
+#				AND = {
+#					OR = {
+#						country = CHI
+#						country = CHC
+#					}
+#					war = { country = CHC country = CHI }
+#				}
+#				AND = {
+#					atwar = yes
+#					lost_national = { value = 30 }
+#				}
+#			}
+#			OR = {
+#				ai = yes
+#				AND = {
+#					ai = no
+#					local_flag = information_nukes_disallowed
+#				}
+#			}
+#		}
+#
+#	date = { day = 0 month = january year = 1942 }
+#	offset = 7
+#	deathdate = { day = 30 month = december year = 1999 }
+#
+#	action = {
+#		name = EVT_8220003_A
+#		command = { type = dissent value = 20 }
+#		command = { type = belligerence value = 100 }
+#	}
+#
+#}
+#
+## Information events
+#
+#event = {
+#	id = 8220004
+#	persistent = yes
+#
+#	name = EVT_8220004_NAME
+#	desc = EVT_8220004_DESC
+#	picture = nwo\enable_nukes
+#	style = 1
+#	
+#	trigger = {
+#			NOT = {
+#				war = { country = GER }
+#				war = { country = USA }
+#				war = { country = SOV }
+#				AND = {
+#					OR = {
+#						country = IND
+#						country = PAK
+#					}
+#					war = { country = IND country = PAK }
+#				}
+#				AND = {
+#					OR = {
+#						country = CHI
+#						country = CHC
+#					}
+#					war = { country = CHC country = CHI }
+#				}
+#				AND = {
+#					atwar = yes
+#					lost_national = { value = 30 }
+#				}
+#			}
+#			NOT = { local_flag = information_nukes_disallowed }
+#			ai = no
+#		}
+#
+#	date = { day = 0 month = january year = 1942 }
+#	offset = 30
+#	deathdate = { day = 30 month = december year = 1999 }
+#
+#	action = {
+#		name = EVT_8220004_A
+#		command = { type = local_setflag which = information_nukes_disallowed }
+#	}
+#
+#}
+#
+#event = {
+#	id = 8220005
+#	persistent = yes
+#
+#	name = EVT_8220005_NAME
+#	desc = EVT_8220005_DESC
+#	picture = nwo\enable_nukes
+#	style = 1
+#	
+#	trigger = {
+#			OR = {
+#				war = { country = GER }
+#				war = { country = USA }
+#				war = { country = SOV }
+#				AND = {
+#					OR = {
+#						country = IND
+#						country = PAK
+#					}
+#					war = { country = IND country = PAK }
+#				}
+#				AND = {
+#					OR = {
+#						country = CHI
+#						country = CHC
+#					}
+#					war = { country = CHC country = CHI }
+#				}
+#				AND = {
+#					atwar = yes
+#					lost_national = { value = 30 }
+#				}
+#			}
+#			local_flag = information_nukes_disallowed
+#			ai = no
+#		}
+#
+#	date = { day = 0 month = january year = 1942 }
+#	offset = 30
+#	deathdate = { day = 30 month = december year = 1999 }
+#
+#	action = {
+#		name = EVT_8220003_A
+#		command = { type = local_clrflag which = information_nukes_disallowed }
+#	}
+#
+#}
+
+#event = {
+#	id = 8220006
+#	country = SOV
+#
+#	name = AI_EVENT
+#	desc = AI_EVENT
+#	picture = nwo\empty
+#	style = 1
+#	
+#	action = {
+#		name = ok
+#		command = { type = ai which = "nukes_disabled.ai" }
+#	}
+#
+#}
+#
+#event = {
+#	id = 8220007
+#	country = SOV
+#
+#	name = AI_EVENT
+#	desc = AI_EVENT
+#	picture = nwo\empty
+#	style = 1
+#	
+#	action = {
+#		name = ok
+#		command = { type = ai which = "nukes_enabled.ai" }
+#	}
+#
+#}

@@ -1,0 +1,383 @@
+event = {
+	id = 8012601
+	country = SAF
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 425017 } # Gideon B. van Zyl
+	}
+}
+
+event = {
+	id = 8012602
+	country = SAF
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofgovernment which = 425018 } # D. F. Malan
+		command = { type = foreignminister which = 425028 } # D. F. Malan
+		command = { type = armamentminister which = 425080 } # F.C. Erasmus
+		command = { type = ministerofsecurity which = 425046 } # T.E. D?nges
+		command = { type = ministerofintelligence which = 425057 } # Nicolaas Havenga
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 425019 } # Jan C. Smuts
+		command = { type = foreignminister which = 425024 } # Jan C. Smuts
+		command = { type = armamentminister which = 425079 } # Jan C. Smuts
+		command = { type = ministerofsecurity which = 425081 } # H.G. Lawrence
+		command = { type = ministerofintelligence which = 425057 } # Nicolaas Havenga
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+# Death of Smuts
+event = {
+	id = 8012603
+	country = SAF
+
+	name = EVT_8012603_NAME
+	desc = EVT_8012603_DESC
+	picture = "nwo\death"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+		headofgovernment = 425019
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = sleepminister which = 425005 } # Jan C. Smuts
+		command = { type = sleepminister which = 425006 } # Jan C. Smuts
+		command = { type = sleepminister which = 425008 } # Jan C. Smuts
+		command = { type = sleepminister which = 425019 } # Jan C. Smuts
+		command = { type = sleepminister which = 425024 } # Jan C. Smuts
+		command = { type = sleepminister which = 425079 } # Jan C. Smuts
+		command = { type = sleepminister which = 425096 } # Jan C. Smuts
+		command = { type = sleepminister which = 425115 } # Jan C. Smuts
+		command = { type = headofgovernment which = 425018 } # D. F. Malan
+		command = { type = sleepteam which = 425008 }
+		command = { type = sleepleader which = 425027 }
+	}
+}
+
+event = {
+	id = 8012604
+	country = SAF
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 425077 } # E.G. Jansen
+	}
+}
+
+event = {
+	id = 8012605
+	country = SAF
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofgovernment which = 425018 } # D. F. Malan
+		command = { type = foreignminister which = 425021 } # Eric H. Louw
+		command = { type = armamentminister which = 425088 } # F.C. Erasmus
+		command = { type = ministerofsecurity which = 425046 } # T.E. D?nges
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 425200 } # Jacobus G. N. Strauss
+		command = { type = foreignminister which = 425087 } # Jacobus de Beer
+		command = { type = armamentminister which = 425036 } # Charles T. te Water
+		command = { type = ministerofsecurity which = 425045 } # C. F. Stallard
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 8012606
+	country = SAF
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1958 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -15 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofgovernment which = 425084 } # J. G. Strijdom
+		command = { type = foreignminister which = 425021 } # Eric H. Louw
+		command = { type = armamentminister which = 425089 } # Johannes J. Fouche
+		command = { type = ministerofsecurity which = 425090 } # Jozua F. Naude
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 425086 } # Baron de Villiers Graaf
+		command = { type = foreignminister which = 425087 } # Jacobus de Beer
+		command = { type = armamentminister which = 425036 } # Charles T. te Water
+		command = { type = ministerofsecurity which = 425045 } # C. F. Stallard
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 8012607
+	country = SAF
+
+	name = EVT_GOVGENERAL_NAME
+	desc = EVT_GOVGENERAL_DESC
+	picture = "nwo\governor_general"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1959 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 425082 } # C. R. Swart
+	}
+}
+
+event = {
+	id = 8012608
+	country = SAF
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -6 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofgovernment which = 425085 } # Hendrik F. Verwoerd
+		command = { type = foreignminister which = 425021 } # Eric H. Louw
+		command = { type = armamentminister which = 425089 } # Johannes J. Fouche
+		command = { type = ministerofsecurity which = 425091 } # Johannes de Klerk
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofgovernment which = 425086 } # Baron de Villiers Graaf
+		command = { type = foreignminister which = 425087 } # Jacobus de Beer
+		command = { type = armamentminister which = 425036 } # Charles T. te Water
+		command = { type = ministerofsecurity which = 425092 } # Jozua F. Naude
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 6 }
+	}
+}
+
+# Apartheid
+event = {
+	id = 8012609
+	country = SAF
+
+	name = EVT_8012609_NAME
+	desc = EVT_8012609_DESC
+	picture = "nwo\apartheid"
+	style = 1
+
+	trigger = {
+		OR = {
+			ideology = social_conservative
+			ideology = paternal_autocrat
+			ideology = fascist
+			ideology = nazi
+		}
+		headofgovernment = 425018 # D. F. Malan
+	}
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8012609_A #"Shameful laws"
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -4 }
+	}
+
+}
+
+# Republican Referendum of 1960
+event = {
+	id = 8012610
+	country = SAF
+
+	name = EVT_8012610_NAME
+	desc = EVT_8012610_DESC
+	picture = "nwo\south_african_referendum_1960"
+	style = 1
+	
+	trigger = {
+		headofgovernment = 425085 # Verwoerd
+	}
+
+	date = { day = 1 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8012610_A #"Become Republic of South Africa"
+		ai_chance = 75
+		command = { type = name where = SAF which = "SAF60" }
+		command = { type = relation which = ENG value = -10 }
+	}
+	
+	action = {
+		name = EVT_8012610_B #"Remain Union of South Africa"
+		ai_chance = 25
+		command = { type = relation which = ENG value = 50 }
+	}
+
+}

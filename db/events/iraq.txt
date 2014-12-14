@@ -1,0 +1,268 @@
+##### Irak ##### id 320500 - 320999
+
+#############################################
+######  Mosul-Haifa Oil Pipeline
+#############################################
+event = {
+         id = 133018000
+         random = no
+         country = eng
+         trigger = {
+                   NOT = { 
+                            war = { country = ENG country = IRQ }
+                   }
+
+         }
+ 
+         name = "Mosul-Haifa Oil Pipeline"
+         desc = "The British opened a major oil pipeline between the Mosul oilfields in Iraq and the Mediterranean port of Haifa in Palestine. This route provided the British better control over Iraqi oil by complementing oil shipments through the French port of Tripoli."
+         style = 2
+         picture = "IRQ01"
+ 
+         date = { day = 4 month = january year = 1935 }
+ 
+           action_a = {
+                  name = "Let us finance project"
+                  command = { type = money value = -200 }
+                  command = { type = relation which = IRQ value = 20 }
+                  command = { type = construct which = infrastructure where = 1011 value = 10 }
+                  command = { type = construct which = naval_base where = 1011 value = 1 }
+                  command = { type = trigger which = 13301801 }
+                  command = { type = trigger which = 13301802 }
+                  ai_chance = 80
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  command = { type = relation which = IRQ value = -20 }
+                  command = { type = dissent value = 2 }
+                  ai_chance = 20
+           }
+
+}
+#############################################
+######  Mosul-Haifa Oil Pipeline
+#############################################
+event = {
+         id = 13301801
+         random = no
+         country = irq
+ 
+         name = "Mosul-Haifa Oil Pipeline"
+         desc = "The British opened a major oil pipeline between the Mosul oilfields in Iraq and the Mediterranean port of Haifa in Palestine. This route provided the British better control over Iraqi oil by complementing oil shipments through the French port of Tripoli."
+         style = 2
+ 
+ 
+                
+                picture = "IRQ01"
+                
+           action_a = {
+                  name = "What a great new"
+                  command = { type = add_prov_resource which = 1029 value = 15 where = oil }
+                  command = { type = construct which = infrastructure where = 1029 value = 10 }
+                  command = { type = relation which = ENG value = 10 }
+           }
+
+}
+#############################################
+######  Opening of Mosul-Haifa Oil Pipeline
+#############################################
+event = {
+         id = 13301802
+         random = no
+         country = FRA
+ 
+         name = "Opening of Mosul-Haifa Oil Pipeline"
+         desc = "The British opened a major oil pipeline between the Mosul oilfields in Iraq and the Mediterranean port of Haifa in Palestine. This route provided the British better control over Iraqi oil by complementing oil shipments through the French port of Tripoli."
+         style = 2
+ 
+ 
+                
+                picture = "IRQ01"
+                
+           action_a = {
+                  name = "What a great new"
+                  command = { type = dissent value = -1 }
+                  command = { type = construct which = naval_base where = 750 value = 1 }
+                  command = { type = relation which = ENG value = 10 }
+           }
+
+}
+#############################################
+######  Treaty of Saadabad
+#############################################
+event = {
+         id = 13301803
+         random = no
+         country = per
+         trigger = {
+                   NOT = { 
+                            atwar = tur
+                            atwar = per
+                            atwar = irq
+                            atwar = afg
+                   }
+
+         }
+ 
+         name = "Treaty of Saadabad"
+         desc = "The Turkey, Iraq, Iran, and Afghanistan signed a non-aggression pact, which established an Islamic entente to counter international tensions. This Islamic front offered the participating states an effective deterrent to the imperialistic designs of the European powers in the Middle East. The agreement secured the Asiatic region of Turkey as the Balkan Pact protected European Turkey. Turkey was recognized as the crucial force for peace in Eastern Europe and its prestige bolstered this Asiatic pact."
+         style = 2
+ 
+         date = { day = 9 month = july year = 1937 }
+ 
+                
+                picture = "IRQ02"
+                
+           action_a = {
+                  name = "Together we will be stronger."
+                  ai_chance = 95
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = interventionism value = -1 }
+                  command = { type = non_aggression which = per where = tur }
+                  command = { type = non_aggression which = per where = irq }
+                  command = { type = non_aggression which = per where = afg }
+                  command = { type = relation which = tur value = 50 }
+                  command = { type = relation which = irq value = 50 }
+                  command = { type = relation which = afg value = 50 }
+                  command = { type = trigger which = 13301804 }
+
+
+           }
+           action_b = {
+                  name = "We are not brothers"
+                  ai_chance = 5
+                  command = { type = dissent value = 1 }
+                  command = { type = end_non_aggression which = per where = tur }
+                  command = { type = end_non_aggression which = per where = irq }
+                  command = { type = end_non_aggression which = per where = afg }
+                  command = { type = relation which = tur value = -10 }
+                  command = { type = relation which = irq value = -10 }
+                  command = { type = relation which = afg value = -10 }
+
+           }
+
+}
+#############################################
+######  Treaty of Saadabad
+#############################################
+event = {
+         id = 13301804
+         random = no
+         country = tur
+ 
+         name = "Treaty of Saadabad"
+         desc = "The Turkey, Iraq, Iran, and Afghanistan signed a non-aggression pact, which established an Islamic entente to counter international tensions. This Islamic front offered the participating states an effective deterrent to the imperialistic designs of the European powers in the Middle East. The agreement secured the Asiatic region of Turkey as the Balkan Pact protected European Turkey. Turkey was recognized as the crucial force for peace in Eastern Europe and its prestige bolstered this Asiatic pact."
+         style = 2
+ 
+ 
+                
+                picture = "IRQ02"
+                
+           action_a = {
+                  name = "Together we will be stronger."
+                  ai_chance = 95
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = interventionism value = -1 }
+                  command = { type = non_aggression which = tur where = per }
+                  command = { type = non_aggression which = tur where = irq }
+                  command = { type = non_aggression which = tur where = afg }
+                  command = { type = relation which = per value = 50 }
+                  command = { type = relation which = irq value = 50 }
+                  command = { type = relation which = afg value = 50 }
+                  command = { type = trigger which = 13301805 }
+           }
+           action_b = {
+                  name = "We are not brothers"
+                  ai_chance = 5
+                  command = { type = dissent value = 1 }
+                  command = { type = end_non_aggression which = tur where = per }
+                  command = { type = end_non_aggression which = tur where = irq }
+                  command = { type = end_non_aggression which = tur where = afg }
+                  command = { type = relation which = per value = -10 }
+                  command = { type = relation which = irq value = -10 }
+                  command = { type = relation which = afg value = -10 }
+           }
+
+}
+#############################################
+######  Treaty of Saadabad
+#############################################
+event = {
+         id = 13301805
+         random = no
+         country = irq
+ 
+         name = "Treaty of Saadabad"
+         desc = "The Turkey, Iraq, Iran, and Afghanistan signed a non-aggression pact, which established an Islamic entente to counter international tensions. This Islamic front offered the participating states an effective deterrent to the imperialistic designs of the European powers in the Middle East. The agreement secured the Asiatic region of Turkey as the Balkan Pact protected European Turkey. Turkey was recognized as the crucial force for peace in Eastern Europe and its prestige bolstered this Asiatic pact."
+         style = 2
+ 
+ 
+                
+                picture = "IRQ02"
+                
+           action_a = {
+                  name = "Together we will be stronger."
+                  ai_chance = 95
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = interventionism value = -1 }
+                  command = { type = non_aggression which = irq where = per }
+                  command = { type = non_aggression which = irq where = tur }
+                  command = { type = non_aggression which = irq where = afg }
+                  command = { type = relation which = per value = 50 }
+                  command = { type = relation which = tur value = 50 }
+                  command = { type = relation which = afg value = 50 }
+                  command = { type = trigger which = 13301806 }
+           }
+           action_b = {
+                  name = "We are not brothers"
+                  ai_chance = 5
+                  command = { type = dissent value = 1 }
+                  command = { type = end_non_aggression which = irq where = per }
+                  command = { type = end_non_aggression which = irq where = tur }
+                  command = { type = end_non_aggression which = irq where = afg }
+                  command = { type = relation which = per value = -10 }
+                  command = { type = relation which = tur value = -10 }
+                  command = { type = relation which = afg value = -10 }
+           }
+
+}
+#############################################
+######  Treaty of Saadabad
+#############################################
+event = {
+         id = 13301806
+         random = no
+         country = afg
+ 
+         name = "Treaty of Saadabad"
+         desc = "The Turkey, Iraq, Iran, and Afghanistan signed a non-aggression pact, which established an Islamic entente to counter international tensions. This Islamic front offered the participating states an effective deterrent to the imperialistic designs of the European powers in the Middle East. The agreement secured the Asiatic region of Turkey as the Balkan Pact protected European Turkey. Turkey was recognized as the crucial force for peace in Eastern Europe and its prestige bolstered this Asiatic pact."
+         style = 2
+
+         picture = "IRQ02"
+ 
+ 
+           action_a = {
+                  name = "Together we will be stronger."
+                  ai_chance = 95
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = interventionism value = -1 }
+                  command = { type = non_aggression which = afg where = per }
+                  command = { type = non_aggression which = afg where = tur }
+                  command = { type = non_aggression which = afg where = irq }
+                  command = { type = relation which = per value = 50 }
+                  command = { type = relation which = tur value = 50 }
+                  command = { type = relation which = irq value = 50 }
+           }
+           action_b = {
+                  name = "We are not brothers"
+                  ai_chance = 5
+                  command = { type = dissent value = 1 }
+                  command = { type = end_non_aggression which = afg where = per }
+                  command = { type = end_non_aggression which = afg where = tur }
+                  command = { type = end_non_aggression which = afg where = irq }
+                  command = { type = relation which = per value = -10 }
+                  command = { type = relation which = tur value = -10 }
+                  command = { type = relation which = irq value = -10 }
+           }
+
+}

@@ -1,0 +1,634 @@
+event = {
+	id = 8007301
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270100 } # Tjarda van Starkenborgh-Stachouwer
+		command = { type = headofgovernment which = 270002 } # Tjarda van Starkenborgh-Stachouwer
+	}
+}
+
+event = {
+	id = 8007302
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270101 } # Hubertus Van Mook
+		command = { type = headofgovernment which = 270102 } # Hubertus Van Mook
+	}
+}
+
+event = {
+	id = 8007303
+	country = INO
+
+	name = EVT_8007303_NAME
+	desc = EVT_8007303_DESC
+	picture = "nwo\independence_of_indonesia"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = EVT_8007303_A
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270103 } # Sutan Sjahrir
+		command = { type = foreignminister which = 270020 } # Sukarjo Wiryopranato
+		command = { type = armamentminister which = 270024 } # Haj Agus Salim
+		command = { type = ministerofsecurity which = 270029 } # Ngabehi van Jogakarta
+		command = { type = ministerofintelligence which = 270035 } # Dr. Cipto Mangunkusomo
+		command = { type = chiefofstaff which = 270041 } # Hamid II Pontiak
+		command = { type = chiefofarmy which = 270047 } # Uyrip Sumoharjo
+		command = { type = chiefofnavy which = 270051 } # Ahmad Alimin
+		command = { type = chiefofair which = 270054 } # R.M. Suryo
+	}
+}
+
+event = {
+	id = 8007304
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270016 } # Amir Sjarifuddin
+	}
+}
+
+event = {
+	id = 8007305
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270014 } # Muhammad Hatta
+	}
+}
+
+event = {
+	id = 8007306
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270056 } # Abdul Halim
+		command = { type = foreignminister which = 270061 } # Muhammad Hatta
+		command = { type = ministerofsecurity which = 270062 } # Abdul Halim
+		command = { type = chiefofstaff which = 270063 } # Wakil Pakmehasan
+	}
+}
+
+event = {
+	id = 8007307
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 180
+	deathdate = { day = 30 month = june year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270057 } # Mohammed Natsir
+	}
+}
+
+event = {
+	id = 8007308
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = july year = 1951 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270058 } # Sukoman Wirjosandjojo
+	}
+}
+
+event = {
+	id = 8007309
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270059 } # Siswanto Wilopo
+	}
+}
+
+event = {
+	id = 8007310
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270060 } # Ali Sastromidjojo
+	}
+}
+
+event = {
+	id = 8007311
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270104 } # Burhanuddin Harahap
+	}
+}
+
+event = {
+	id = 8007312
+	country = INO
+
+	name = EVT_ELECTIONS_NAME
+	desc = EVT_ELECTIONS_DESC
+	picture = "nwo\elections"
+	style = 1
+
+	trigger = {
+		government = democratic
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = EVT_ELECTIONS_RIGHT
+		ai_chance = 85
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270060 } # Ali Sastromidjojo
+	}
+	action = {
+		name = EVT_ELECTIONS_LEFT
+		ai_chance = 15
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270104 } # Burhanuddin Harahap
+	}
+	action = {
+		name = EVT_ELECTIONS_NOCHANGE
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 8007313
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270105 } # Raden Djuanda Kartawidjaja
+	}
+}
+
+# Guided Democracy
+event = {
+	id = 8007314
+	country = INO
+
+	name = EVT_8007314_NAME
+	desc = EVT_8007314_DESC
+	picture = "nwo\guided_democracy"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1966 }
+
+	action = {
+		name = EVT_8007314_A
+		ai_chance = 100
+		command = { type = dissent value = 15 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270106 } # Sukarno
+	}
+}
+
+event = {
+	id = 8007315
+	country = INO
+
+	name = EVT_8007315_NAME
+	desc = EVT_8007315_DESC
+	picture = nwo\suharto
+	style = 1
+
+	date = { day = 0 month = january year = 1967 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1972 }
+
+	action = {
+		name = EVT_8007315_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 270113 } # Suharto
+		command = { type = headofgovernment which = 270114 } # Suharto
+	}
+}
+
+event = {
+	id = 8007316
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1973 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 270109 } # Hamengkubuwono IX
+	}
+}
+
+event = {
+	id = 8007317
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1982 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 270110 } # Adam Malik
+	}
+}
+
+event = {
+	id = 8007318
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1983 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 270111 } # Umar Wirahadikusumah
+	}
+}
+
+event = {
+	id = 8007319
+	country = INO
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 270112 } # Sudharmono
+	}
+}
+
+# Introduction of the New Order
+
+event = {
+	id = 8007320
+	country = INO
+
+	name = EVT_8007320_NAME
+	desc = EVT_8007320_DESC
+	picture = nwo\indonesian_new_order
+	decision_picture = nwo\d_indonesian_new_order
+	style = 1
+
+	decision = {
+		atwar = no
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+	
+	trigger = {
+		atwar = no
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = EVT_8007320_A
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = freedom value = -2 }
+	}
+}
+
+### Annexation of East Timor
+
+event = {
+	id = 8007321
+	country = INO
+
+	name = EVT_8007321_NAME
+	desc = EVT_8007321_DESC
+	picture = nwo\east_timor
+	decision_picture = nwo\d_east_timor
+	style = 1
+
+	decision = {
+		control = { province = 1617 data = POR }
+		# TODO: Carnation Revolution in Portugal
+	}
+	
+	trigger = {
+		control = { province = 1617 data = POR }
+		# TODO: Carnation Revolution in Portugal
+	}
+
+	date = { day = 0 month = january year = 1975 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1975 }
+
+	action = {
+		name = EVT_8007321_A
+		ai_chance = 97
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = 10 }
+		command = { type = secedeprovince which = INO value = 1617 when = 2 }
+	}
+	
+	action = {
+		name = EVT_8007321_B
+		trigger = { ai = yes }
+		ai_chance = 3
+		command = { type = money value = 1 }
+	}
+}

@@ -1,0 +1,43 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for Disarming of Nations
+# Event List:
+#ALL	13391610	CZE has a new not so friendly neighbour 
+
+event = { 
+	id = 13392210														 
+	random = no						
+	persistent = no
+	country = CZE
+	
+	trigger = {
+		atwar = no
+		exists = GER #if Germany exists, we know that we are in trouble.... 
+		NOT = { local_flag = AAR_Interwar_AI_1936 }
+		NOT = { local_flag = AAR_Interwar_AI_1936_done }
+		ai = yes 
+	}
+	
+	date = { day = 1 month = 10 year = 1914 }
+	offset = 7						
+	deathdate = { day = 30 month = 09 year = 1935 }
+	
+	name = "AI_EVENT"
+	Picture = "economic"
+	
+	action = { 	
+		name = "AI_EVENT" # "Time to turn more ploughshares into swords."
+		command = { type = ai which = "AAR\economic\aar-province-construction-regular.ai" }		
+		command = { type = local_clrflag which = AAR_behavior_pacifist }
+		command = { type = local_clrflag which = AAR_behavior_regular }
+		command = { type = local_clrflag which = AAR_behavior_gearing }
+		command = { type = local_setflag which = AAR_behavior_regular }
+	} 
+}

@@ -1,0 +1,58 @@
+####################################
+#GREEK MOD EVENTS
+####################################
+# This file contains events for GRE
+# Event List:
+#GRE	14000800	The Government of Konstantinos Logothetopoulos
+#GRE	14000801	The Government of Ioannis Rallis
+
+event = {
+	id = 14000800	# The Government of Konstantinos Logothetopoulos
+	random = no
+	country = GRE
+
+	trigger = {
+		event = 14000024
+		}
+
+	date = { day = 2 month = December year = 1942 }
+
+	name = "The Government of Konstantinos Logothetopoulos." # needs text
+	desc = "The Government of Konstantinos Logothetopoulos took over after Georgios Tsolakoglou retires." 
+	style = 2
+	Picture = "gobierno"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 90273 }
+		command = { type = headofgovernment which = 90036 }
+		}
+	}
+
+
+event = {
+	id = 14000801	# The Government of Ioannis Rallis
+	random = no
+	country = GRE
+
+	trigger = {
+		event = 14000024
+		}
+
+	date = { day = 7 month = April year = 1943 }
+
+	name = "The Government of Ioannis Rallis." # needs text
+	desc = "The Government of Ioannis Rallis took over after Konstantinos Logothetopoulos retires." 
+	style = 2
+	Picture = "gobierno"
+
+	action_a = {
+		ai_chance = 100
+		name = ACTION_NAME_OK
+		command = { type = headofstate which = 90273 }
+		command = { type = headofgovernment which = 90037 }
+		}
+	}
+
+	

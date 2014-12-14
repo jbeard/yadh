@@ -1,0 +1,48 @@
+U82;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+800200;Head of State;Barthélemy Boganda;1944;1964;1964;SC;Autocratic Charmer;Very High;centralafrica1;x
+800201;Head of State;Sultan Sayo Bangassou ;1936;1964;1964;PA;Popular Figurehead;Very High;unknown;x
+800202;Head of State;Henri Camille Sautot               ;1934;1964;1964;ML;Weary Stiffneck;Very High;unknown;x
+800203;Head of Government;Barthélemy Boganda;1944;1964;1964;SC;Silent Workhorse;Very High;centralafrica1;x
+800204;Head of Government;Henri Camille Sautot               ;1934;1964;1964;ML;Happy Amateur;Very High;unknown;x
+800205;Foreign Minister;Abel Goumba;1945;1964;1964;ML;Great Compromiser;Very High;centralafrica5;x
+800206;Foreign Minister;Auguste Lamblin;1934;1964;1964;SL;Great Compromiser;Very High;unknown;x
+800207;Foreign Minister;Sultan Sayo Bangassou;1936;1964;1964;PA;Great Compromiser;Very High;unknown;x
+800208;Minister of Armament;Marcel Cureau;1934;1964;1964;SL;Military Entrepreneur;Very High;unknown;x
+800209;Minister of Armament;Abel Goumba;1945;1964;1964;ML;Administrative Genius;Very High;unknown;x
+800210;Minister of Security;Elisabeth Domitien;1945;1964;1964;SC;Compassionate Gentleman;Very High;centralafrica2;x
+800211;Minister of Security;Sultan Sayo Bangassou;1936;1964;1964;PA;Man of the People;Very High;unknown;x
+800212;Minister of Security;Auguste Lamblin;1934;1964;1964;SL;Crime Fighter;Very High;unknown;x
+800213;Head of Military Intelligence;Jean-Bédel Bokassa;1945;1964;1964;PA;Industrial Specialist;Very High;centralafrica4;x
+800214;Head of Military Intelligence;Jean Gaudin;1934;1964;1964;SL;Naval Intelligence Specialist;Very High;centralafrica3;x
+800215;Chief of Staff;Sultan Hetman Rafai;1934;1964;1964;PA;School of Psychology;Very High;unknown;x
+800216;Chief of Staff;Jean-Bédel Bokassa;1945;1964;1964;PA;School of Fire Support;Very High;centralafrica4;x
+800217;Chief of Staff;Marcel Cureau;1934;1964;1964;SL;School of Fire Support;Very High;unknown;x
+800218;Chief of Army;Jean-Bédel Bokassa;1945;1964;1964;PA;Elastic Defence Doctrine;Very High;centralafrica4;x
+800219;Chief of Army;Marcel Cureau;1934;1964;1964;SL;Guns and Butter Doctrine;Very High;unknown;x
+800220;Chief of Navy;Jean Gaudin;1934;1964;1964;SL;Base Control Doctrine;Very High;centralafrica3;x
+800221;Chief of Air Force;Jean Gaudin;1934;1964;1964;SL;Army Aviation Doctrine;Very High;centralafrica3;x
+800222;Chief of Air Force;Jean-Bédel Bokassa;1945;1964;1964;PA;Army Aviation Doctrine;Very High;unknown;x
+800223;Head of State;Richard Brunot;1936;1964;1964;SC;Powerhungry Demagogue;Very High;M800223;x
+800224;Head of Government;Richard Brunot;1936;1964;1964;SC;Silent Workhorse;Very High;M800223;x
+800225;Head of State;Max Masson de Saint-Félix;1937;1964;1964;SC;Insignificant Layman;Very High;M800225;x
+800226;Head of Government;Max Masson de Saint-Félix;1937;1964;1964;SC;Corporate Suit;Very High;M800225;x
+800227;Head of State;Pierre de Saint-Mart;1939;1964;1964;SC;Powerhungry Demagogue;Very High;M800227;x
+800228;Head of Government;Pierre de Saint-Mart;1939;1964;1964;SC;Backroom Backstabber;Very High;M800227;x
+800229;Head of State;Henri Sautot;1942;1964;1964;SC;Die-Hard Reformer;Very High;M800229;x
+800230;Head of Government;Henri Sautot;1942;1964;1964;SC;Backroom Backstabber;Very High;M800229;x
+800231;Head of State;Jean Chalvet;1946;1964;1964;SC;Resigned Generalissimo;Very High;M800231;x
+800232;Head of Government;Jean Chalvet;1946;1964;1964;SC;Old Admiral;Very High;M800231;x
+800233;Head of State;Jean Mauberna;1948;1964;1964;SC;Die-Hard Reformer;Very High;M800233;x
+800234;Head of Government;Jean Mauberna;1948;1964;1964;SC;Old Admiral;Very High;M800233;x
+800235;Head of State;Pierre Delteil;1949;1964;1964;SC;Benevolent Gentleman;Very High;M800235;x
+800236;Head of Government;Pierre Delteil;1949;1964;1964;SC;Naive Optimist;Very High;M800235;x
+800237;Head of State;Ignace Colombani;1950;1964;1964;SC;Powerhungry Demagogue;Very High;M800237;x
+800238;Head of Government;Ignace Colombani;1950;1964;1964;SC;Naive Optimist;Very High;M800237;x
+800239;Head of State;Aime Grimald;1952;1964;1964;SC;Benevolent Gentleman;Very High;M800239;x
+800240;Head of Government;Aime Grimald;1952;1964;1964;SC;Old General;Very High;M800239;x
+800241;Head of State;Louis Sanmarco;1954;1964;1964;SC;Ruthless Powermonger;Very High;M800241;x
+800242;Head of Government;Louis Sanmarco;1954;1964;1964;SC;Old General;Very High;M800241;x
+800243;Head of State;Paul Bordier;1958;1964;1964;SC;Ruthless Powermonger;Very High;M800243;x
+800244;Head of Government;Paul Bordier;1958;1964;1964;SC;Old General;Very High;M800243;x
+800245;Head of Government;David Dacko;1959;2004;2004;SD;Happy Amateur;Very High;M800245;x
+800246;Head of State;David Dacko;1960;2004;2004;SD;Weary Stiffneck;Very High;M800245;x

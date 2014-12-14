@@ -1,0 +1,237 @@
+event = {
+	id = 8008801
+	country = LIB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 380011 } # William S. Tubman
+		command = { type = headofgovernment which = 380100 } # Clarence L. Simpson
+		command = { type = foreignminister which = 380017 } # Gabriel L. Dennis
+		command = { type = armamentminister which = 380023 } # Momolo Duhuty
+		command = { type = ministerofsecurity which = 380031 } # Ralph W. Morrison
+		command = { type = ministerofintelligence which = 380037 } # Benjamin O'Davis
+		command = { type = chiefofstaff which = 380007 } # Benjamin O'Davis
+		command = { type = chiefofarmy which = 380008 } # Iver Virgin
+		command = { type = chiefofnavy which = 380009 } # Reginald Brandon
+		command = { type = chiefofair which = 380010 } # Won Loy Chan
+	}
+}
+
+event = {
+	id = 8008802
+	country = LIB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1970 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 380011 } # William S. Tubman
+		command = { type = headofgovernment which = 380101 } # William Tolbert
+	}
+}
+
+event = {
+	id = 8008803
+	country = LIB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1971 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1976 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 380102 } # William R. Tolbert, Jr.
+		command = { type = headofgovernment which = 380103 } # James Edward Greene
+	}
+}
+
+event = {
+	id = 8008804
+	country = LIB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1977 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 380104 } # Bennie Dee Warner
+	}
+}
+
+event = {
+	id = 8008805
+	country = LIB
+
+	name = EVT_8008805_NAME
+	desc = EVT_8008805_DESC
+	picture = nwo\samuel_doe
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1985 }
+
+	action = {
+		name = EVT_8008805_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 380108 } # Samuel Doe
+		command = { type = headofgovernment which = 380109 } # Samuel Doe
+	}
+}
+
+event = {
+	id = 8008806
+	country = LIB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1986 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1989 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 380105 } # Harry Moniba
+	}
+}
+
+event = {
+	id = 8008807
+	country = LIB
+
+	name = EVT_8008807_NAME
+	desc = EVT_8008807_DESC
+	picture = nwo\charles_taylor
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+		event = 8008808
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8008807_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 380106 } # Charles Taylor
+		command = { type = headofgovernment which = 380107 } # Charles Taylor
+	}
+}
+
+event = {
+	id = 8008808
+	country = LIB
+
+	name = EVT_8008808_NAME
+	desc = EVT_8008808_DESC
+	picture = nwo\charles_taylor
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+		random = 80
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8008808_A
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 380106 } # Charles Taylor
+		command = { type = headofgovernment which = 380107 } # Charles Taylor
+	}
+}

@@ -1,0 +1,103 @@
+DFR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+630001;Head of State;Theodor Heuss;1933;1963;1963;SC;Insignificant Layman;High;M38;X
+630002;Head of Government;Konrad Adenauer;1933;1968;1968;SC;Corporate Suit;High;M50;X
+630003;Foreign Minister;Konrad Adenauer;1933;1968;1968;SC;Great Compromiser;Very High;M50;X
+630004;Minister of Armament;Franz Etzel;1933;1960;1960;SC;Infantry Proponent;Medium;M506004;X
+630005;Minister of Security;Robert Lehr;1933;1960;1960;SC;Man of the People;Medium;M506005;X
+630006;Head of Military Intelligence;Theodor Blank;1933;1960;1960;SC;Political Specialist;Medium;M506006;X
+630007;Chief of Staff;Ottomar Hansen;1933;1960;1960;SC;School of Manoeuvre;Medium;L118;X
+630008;Chief of Army;Hans Speidel;1933;1960;1960;SC;Armoured Spearhead Doctrine;Medium;L506191;X
+630009;Chief of Navy;Herrmann Mootz;1933;1960;1960;SC;Indirect Approach Doctrine;Medium;L506297;X
+630010;Chief of Air Force;Alfred Bülowius;1933;1960;1960;SC;Air Superiority Doctrine;Medium;L431;X
+630011;Head of Government;Kurt Schumacher;1933;1960;1960;SD;Ambitious Union Boss;High;M506011;X
+630012;Head of Government;Franz Blücher;1933;1960;1960;ML;Political Protege;High;M506012;X
+630013;Foreign Minister;Heinrich von Brentano;1933;1960;1960;SC;Ideological Crusader;Very High;M506013;X
+630014;Foreign Minister;Erich Ollenhauer;1933;1960;1960;SD;Iron Fisted Brute;Very High;M506014;X
+630015;Foreign Minister;Thomas Dehler;1933;1960;1960;ML;Apologetic Clerk;Very High;M506015;X
+630016;Minister of Armament;Fritz Schäffer;1933;1960;1960;SC;laissez-faire capitalist;Very High;M103;X
+630017;Minister of Armament;Ludwig Erhard;1933;1960;1960;SC;Administrative Genius;Very High;M104;X
+630018;Minister of Armament;Heinrich Wilhelm Kopf;1933;1960;1960;SD;Resource Industrialist;Very High;M506018;X
+630019;Minister of Armament;Heinz Starke;1933;1960;1960;ML;Theoretical Scientist;Very High;M506019;X
+630020;Minister of Security;Karl Arnold;1933;1960;1960;SC;Crime Fighter;High;M129;X
+630021;Minister of Security;Gustav Heinemann;1933;1960;1960;SC;Silent Lawyer;High;M130;X
+630022;Minister of Security;Gerhard Schröder;1933;1960;1960;SC;Back Stabber;High;M506022;X
+630023;Minister of Security;Georg August Zinn;1933;1960;1960;SD;Prince of Terror;High;M506023;X
+630024;Minister of Security;Reinhold Maier;1933;1960;1960;ML;Compassionate Gentleman;High;M506024;X
+630025;Head of Military Intelligence;Hans Ehard;1933;1960;1960;SC;Logistics Specialist;High;M149;X
+630026;Head of Military Intelligence;Reinhard Gehlen;1933;1960;1960;ML;Dismal Enigma;High;M506026;X
+630027;Head of Military Intelligence;Franz Josef Strauss;1933;1960;1960;SC;Industrial Specialist;High;M506027;X
+630028;Head of Military Intelligence;Eugen Gerstenmaier;1933;1960;1960;SD;Technical Specialist;High;M506028;X
+630029;Head of Military Intelligence;Hanns Seidel;1933;1960;1960;ML;Naval Intelligence Specialist;High;M506029;X
+630030;Chief of Staff;Hans Speidel;1933;1960;1960;SD;School of Fire Support;Medium;L506191;X
+630031;Chief of Staff;Josef Kammhuber;1933;1960;1960;ML;School of Psychology;Medium;L448;X
+630032;Chief of Army;Ottomar Hansen;1933;1960;1960;SD;Decisive Battle Doctrine;Medium;L118;X
+630033;Chief of Army;Karl Heinrich Lübke;1933;1973;1973;ML;Guns and Butter Doctrine;Medium;M506033;X
+630034;Chief of Navy;Conrad Patzig;1933;1960;1960;SD;Decisive Naval Battle Doctrine;Medium;L506300;X
+630035;Chief of Navy;Erich Köhler;1933;1960;1960;ML;Base Control Doctrine;Medium;M506035;X
+630036;Chief of Air Force;Franz Josef Strauss;1933;1960;1960;SC;Vertical Envelopment Doctrine;Medium;M506027;X
+630037;Chief of Air Force;Josef Kammhuber;1933;1960;1960;SD;Army Aviation Doctrine;Medium;L448;X
+630038;Chief of Air Force;Hermann Ehlers;1933;1960;1960;ML;Naval Aviation Doctrine;Medium;M506038;X
+630039;Minister of Armament;Theodor Blank;1951;1960;1960;SC;Military Entrepreneur;Very High;M506039;X
+630040;Minister of Security;Robert Lehr;1950;1960;1960;SC;Man of the People;High;M506040;X
+630041;Head of State;Karl Heinrich Lübke;1959;1973;1973;SC;Weary Stiffneck;High;M506033;X
+630042;Head of Government;Ludwig Erhard;1963;1963;1963;SC;Flamboyant Tough Guy;High;M104;X
+630043;Head of Government;Erich Ollenhauer;1952;1960;1960;SD;Political Protege;High;M506014;X
+630044;Head of Government;Willy Brandt;1957;1993;1993;SD;Naive Optimist;High;M506044;X
+630045;Foreign Minister;Gerhard Schröder;1961;1961;1961;SC;Biased Intellectual;Very High;M506022;X
+630046;Foreign Minister;Willy Brandt;1957;1993;1993;SD;Great Compromiser;Very High;M506044;X
+630047;Minister of Armament;Franz Josef Strauss;1956;1960;1960;SC;Resource Industrialist;Very High;M506027;X
+630048;Minister of Armament;Kai Uwe von Hassell;1961;1961;1961;SC;Theoretical Scientist;Very High;M506048;X
+630049;Minister of Security;Hermann Höcherl;1961;1961;1961;SC;Crime Fighter;High;M506049;X
+630050;Minister of Security;Ewald Bucher;1957;1960;1960;SL;Efficient Sociopath;High;M506050;X
+630051;Head of State;Theodor Heuss;1933;1963;1963;SD;Insignificant Layman;High;M38;X
+630052;Head of State;Karl Heinrich Lübke;1959;1973;1973;SD;Weary Stiffneck;High;M506033;X
+630053;Chief of Air Force;Johannes Steinhoff;1955;1960;1960;SC;Carpet Bombing Doctrine;Very High;6099;X
+630054;Chief of Staff;Otto Skorzeny;1947;1960;1960;PA;School of Psychology;medium;L528;X
+630055;Head of Government;Alexander Andrae;1948;1960;1960;FA;Old AirMarshal;medium;6101;X
+630056;Head of State;Baldur Schirach;1945;1975;1975;FA;Autocratic Charmer;medium;6102;X
+630057;Chief of Air Force;Hans Ulrich Rudel;1950;1983;1983;FA;Air Superiority Doctrine;High;L464;X
+630058;Head of State;Karl Dönitz;1945;1981;1981;PA;Stern Imperialist;High;M32;X
+630059;Head of Government;Karl Dönitz;1945;1981;1981;PA;Old Admiral;High;M32;X
+630060;Chief of Navy;Karl Dönitz;1945;1981;1981;PA;Indirect Approach Doctrine;High;M32;X
+630061;Minister of Armament;Karl Dönitz;1944;1981;1981;PA;Submarine Proponent;High;M32;X
+630062;Chief of Air Force;Adolf Galland;1946;1960;1960;PA;Air Superiority Doctrine;High;L437;X
+630063;Chief of Air Force;Albert Kesselring;1945;1960;1960;PA;vertical Envelopment Doctrine;High;M207;X
+630064;Minister of Armament;Albert Speer;1945;1982;1982;PA;Genius organizer;High;2645;X
+630065;Minister of Security;Artur Axmann;1945;1997;1997;PA;Man of the People;High;6103;X
+630066;Head of Military Intelligence;Baldur Schirach;1945;1975;1975;FA;Logistics Specialist;High;6102;X
+630067;Minister of Security;Otto Ernst Remer;1947;1992;1992;FA;Prince of Terror;High;6017;X
+630068;Chief of Navy;Erich Topp;1958;1960;1960;ML;Indirect Approach Doctrine;High;603;X
+630069;Minister of Security;Adolf von Thadden;1950;1960;1960;NS;Back Stabber;High;6104;X
+630070;Minister of Armament;Walther Funk;1947;1960;1960;NS;Theoretical Scientist;High;;X
+630071;Chief of Staff;Hasso von Manteuffel;1947;1960;1960;PA;School of Manoeuvre;High;6105;X
+630072;Chief of Staff;Heinz Günther Guderian;1954;2005;2005;PA;School of Mass Combat;High;6106;X
+630073;Chief of Staff;Heinz Günther Guderian;1954;2005;2005;SC;School of Mass Combat;High;6106;X
+630074;Chief of Staff;Anton-Detlev von Plato;1954;1960;1960;PA;School of Fire Support;Medium;6107;X
+630075;Minister of Security;Hans Globke;1953;1960;1960;PA;Efficient Sociopath;High;6108;X
+630076;Minister of Security;Hans Globke;1953;1960;1960;SC;Efficient Sociopath;High;6108;X
+630077;Chief of Navy;August Thiele;1946;1960;1960;PA;Decisive Naval Battle Doctrine;High;L419;X
+630078;Chief of Navy;Friedrich Ruge;1946;1960;1960;SC;Indirect Approach Doctrine;High;M630078;X
+630079;Minister of Armament;Alfried Krupp;1947;1968;1968;FA;Theoretical Scientist;High;M630079;X
+630080;Foreign Minister;Konstantin von Neurath;1947;1956;1956;FA;Ideological Crusader;High;M630080;X
+630081;Foreign Minister;Franz von Papen;1947;1970;1970;FA;Great Compromiser;High;M630081;X
+630082;Minister of Armament;Hjalmar Schacht;1947;1971;1971;FA;Military Entrepreneur;High;M630082;X
+630083;Head of Government;Kurt Georg Kiesinger;1966;1989;1989;ML;Smiling Oilman;High;M630083;X
+630084;Head of State;Gustav Heinemann;1969;1977;1977;ML;Powerhungry Demagogue;High;M630084;X
+630085;Head of Government;Rainer Barzel;1972;2007;2007;ML;Political Protege;High;M630085;X
+630086;Head of State;Walter Scheel;1974;2020;2020;ML;Stern Imperialist;High;M630086;X
+630087;Head of Government;Helmut Schmidt;1974;2020;2020;ML;Political Protege;High;M630087;X
+630088;Head of State;Karl Carstens;1979;1993;1993;ML;Autocratic Charmer;High;M630088;X
+630089;Head of Government;Franz-Josef Strauß;1980;1989;1989;ML;Backroom Backstabber;High;M630089;X
+630090;Head of Government;Hans-Jochen Vogel;1983;2020;2020;SL;Political Protege;High;M630090;X
+630091;Head of Government;Johannes Rau;1987;2007;2007;SL;Backroom Backstabber;High;M630091;X
+630092;Head of Government;Oskar Lafontaine;1990;2007;2007;SL;Political Protege;High;M630092;X
+630093;Head of State;Richard von Weizsäcker;1936;2020;2020;SL;Insignificant Layman;High;FRG1;X
+630094;Head of Government;Helmut Kohl;1936;2020;2020;SL;Corporate Suit;High;FRG2;X
+630095;Foreign Minister;Hans-Dietrich Genscher;1936;2000;2013;ML;Great Compromiser;Very High;FRG3;X
+630096;Minister of Armament;Gehrard Stoltenberg;1936;2000;2013;ML;Infantry Proponent;Medium;FRG4;X
+630097;Minister of Security;Friedrich Zimmermann;1936;2000;2013;SD;Man of the People;Medium;FRG5;X
+630098;Head of Military Intelligence;Hans-Georg Wieck;1936;2000;2013;SD;Political Specialist;Medium;FRG6;X
+630099;Chief of Staff;Wolfgang Altenburg;1936;2000;2013;SL;School of Manoeuvre;Medium;FRG7;X
+630100;Chief of Army;Hans-Henning von Sandrart;1936;2000;2013;SL;Armoured Spearhead Doctrine;Medium;FRG8;X
+630101;Chief of Navy;Dieter Wellershoff;1936;2000;2013;SL;Indirect Approach Doctrine;Medium;FRG9;X
+630102;Chief of Air Force;Eberhard Eimler;1936;2000;2013;SL;Air Superiority Doctrine;Medium;FRG10;X

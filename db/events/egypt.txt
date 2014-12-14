@@ -1,0 +1,408 @@
+##### Egypto ##### id 313500 - 313999
+
+#############################################
+######  Nationalist Uprising in Egypt
+#############################################
+event = {
+         id = 13302100
+         random = no
+         country = egy
+         trigger = {
+                   puppet = { country = egy country = eng }
+
+         }
+ 
+         name = "Nationalist Uprising in Egypt"
+         desc = "In response to the Ethiopian Crisis, which consumed British attention, Nationalists in Egypt launched a violent uprising. The Nationalists organized a union of parties which was designed to extract major concessions from the British during this period of crisis."
+         style = 2
+ 
+         date = { day = 1 month = november year = 1935 }
+         offset = 1
+         deathdate = { day = 1 month = january year = 1936 }
+ 
+                
+                picture = "EGY01"
+                
+           action_a = {
+                  name = "The situation overflows to us"
+                  command = { type = dissent value = 2 }
+                  command = { type = revolt which = 796 }
+                  command = { type = relation which = eng value = -20 }
+           }
+
+}
+#############################################
+######  Restoration of Constitution of 1923
+#############################################
+event = {
+         id = 13302101
+         random = no
+         country = egy
+         trigger = {
+                   event = 13302100
+                   puppet = { country = egy country = eng }
+
+         }
+ 
+         name = "Restoration of Constitution of 1923"
+         desc = "In response to Nationalist demands in Egypt, the government restored the Constitution of 1923. It adopted the parliamentary representative system based on separation of and cooperation among authorities. The Parliament of Egypt was a bicameral system made up of the Senate and the Chamber of Deputies."
+         style = 2
+ 
+         date = { day = 1 month = december year = 1935 }
+         offset = 20
+         deathdate = { day = 31 month = january year = 1936 }
+ 
+                
+                picture = "EGY02"
+                
+           action_a = {
+                  name = "We do not have any option"
+                  command = { type = relation which = eng value = -30 }
+                  command = { type = dissent value = -3 }
+                  command = { type = domestic which = political_left value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+           }
+
+}
+#############################################
+######  National Elections in Egypt
+#############################################
+event = {
+         id = 13302102
+         random = no
+         country = egy
+         trigger = {
+
+         }
+ 
+         name = "National Elections in Egypt"
+         desc = "Elections day to choose to prime minister of Egypt. Still with the death of king Faud it surrounds, the population will have to choose the new government of the nation."
+         style = 2
+ 
+         date = { day = 2 month = may year = 1936 }
+ 
+                
+                picture = "EGY03"
+                
+           action_a = {
+                  name = "Mustafa el-Nahhas"
+                  ai_chance = 90
+                  command = { type = dissent value = -1 }
+                  command = { type = headofgovernment which = 340014 }
+           }
+           action_b = {
+                  name = "Follow as we were"
+                  ai_chance = 10
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  British Military Mission to Egypt
+#############################################
+event = {
+         id = 13302103
+         random = no
+         country = eng
+         trigger = {
+                   NOT = { 
+                            war = { country = eng country = egy }
+
+                   }
+                   exists = egy
+
+         }
+ 
+         name = "British Military Mission to Egypt"
+         desc = "The British sent a military mission to Egypt to advise the Egyptian government on the development of their army. The Egyptians introduced universal military training in 1938."
+         style = 2
+         picture = "EGY04"
+ 
+         date = { day = 13 month = january year = 1937 }
+ 
+           action_a = {
+                  name = "The military aid is necessary"
+                  command = { type = money value = -30 }
+                  command = { type = manpowerpool value = -20 }
+                  command = { type = relation which = egy value = 10 }
+                  command = { type = trigger which = 13302104 }
+           }
+
+}
+#############################################
+######  British Military Mission to Egypt
+#############################################
+event = {
+         id = 13302104
+         random = no
+         country = egy
+ 
+         name = "British Military Mission to Egypt"
+         desc = "The British sent a military mission to Egypt to advise the Egyptian government on the development of their army. The Egyptians introduced universal military training in 1938."
+         style = 2
+ 
+
+ 
+                
+                picture = "EGY04"
+                
+           action_a = {
+                  name = "The military aid is necessary"
+                  command = { type = add_division  value = infantry when = 1 }
+                  command = { type = add_division  value = militia when = 1 }
+                  command = { type = gain_tech which = 1080 }
+                  command = { type = gain_tech which = 1230 }
+                  command = { type = money value = 30 }
+                  command = { type = manpowerpool value = 20 }
+                  command = { type = relation which = eng value = 10 }
+                  command = { type = belligerence which = egy value = 2 }
+           }
+
+}
+#############################################
+######  Egyptian Armament Program
+#############################################
+event = {
+         id = 13302105
+         random = no
+         country = egy
+         trigger = {
+                   atwar = no
+
+         }
+ 
+         name = "Egyptian Armament Program"
+         desc = "In response to international tensions, the Egyptian government initiated a major armament program which included the expansion of the air force and navy and the construction of munitions plants."
+         style = 2
+ 
+         date = { day = 19 month = november year = 1938 }
+ 
+                
+                picture = "EGY05"
+                
+           action_a = {
+                  name = "Approve it"
+                  ai_chance = 90
+                  command = { type = dissent value = 1 }
+                  command = { type = domestic which = professional_army value = 1 }
+                  command = { type = supplies value = -1200 }
+                  command = { type = oilpool value = -1200 }
+                  command = { type = metalpool value = -3000 }
+                  command = { type = energypool value = -4000 }
+                  command = { type = rarematerialspool value = -750 }
+                  command = { type = money value = -70 }
+                  command = { type = manpowerpool value = 70 }
+                  command = { type = build_time which = land when = on_upgrade where = relative value = -20 }
+                  command = { type = build_cost which = land when = on_upgrade where = relative value = -20 }
+                  command = { type = build_time which = air when = on_upgrade where = relative value = -20 }
+                  command = { type = build_cost which = air when = on_upgrade where = relative value = -20 }
+                  command = { type = build_division which = infantry }
+                  command = { type = build_division which = infantry }
+                  command = { type = build_division which = infantry }
+                  command = { type = build_division which = militia }
+                  command = { type = build_division which = interceptor }
+                  command = { type = build_division which = interceptor }
+                  command = { type = build_division which = cas }
+                  command = { type = build_time which = land when = on_upgrade where = relative value = 20 }
+                  command = { type = build_cost which = land when = on_upgrade where = relative value = 20 }
+                  command = { type = build_time which = air when = on_upgrade where = relative value = 20 }
+                  command = { type = build_cost which = air when = on_upgrade where = relative value = 20 }
+                  command = { type = belligerence which = egy value = 7 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 10
+                  command = { type = dissent value = -2 }
+                  command = { type = relation which = ita value = 20 }
+                  command = { type = domestic which = professional_army value = -1 }
+           }
+
+}
+#############################################
+######  Region of Hejaz
+#############################################
+event = {
+         id = 13302106
+         random = no
+         country = egy
+         trigger = {
+                   NOT = { 
+                            war = { country = egy country = sau }
+                   }
+
+         }
+ 
+         name = "Region of Hejaz"
+         desc = "Hejaz is a region in northwest of Arabia. In the most part of their history, Hiyaz has been controlled for regional powers Egypt and Ottoman Empire. In 1924, Hejaz was occupied by Banu Saud clan regents of Nechd in Central Arabia. Hejazis were evacuated form power and Hejaz was annexed by Nechd to form the new state of Saudi Arabia in 1932. Egypt government didn't recognize that annexation and protested to Saudi Arabia for Hejaz."
+         style = 2
+ 
+         date = { day = 7 month = may year = 1936 }
+ 
+                
+                picture = "EGY06"
+                
+           action_a = {
+                  name = "Recognize Saudi annexation"
+                  ai_chance = 90
+                  command = { type = relation which = sau value = 50 }
+                  command = { type = dissent value = 2 }
+           }
+           action_b = {
+                  name = "Arabia occupied it illegally"
+                  ai_chance = 10
+                  command = { type = relation which = sau value = -70 }
+           }
+
+}
+#############################################
+######  King Farouk of Egypt Dismissal of Wafd Government
+#############################################
+event = {
+         id = 13302107
+         random = no
+         country = egy
+         trigger = {
+                   headofstate = 340011
+
+         }
+ 
+         name = "King Farouk of Egypt Dismissal of Wafd Government"
+         desc = "King Farouk of Egypt dismissed the Wafd government, under Nahas Pasha, after considerable political friction and appointed Mohammad Mahmud Pasha, leader of the Liberal Constitutional Party, as the new premier. The Wafd Party, which was based on Anglo-Egyptian antagonism, began to disintegrate after Britain agreed to withdraw from Egypt. Opposition to former Premier Nahas led to the withdrawal of a number of political leaders and the party fell into disorganization."
+         style = 2
+ 
+         date = { day = 30 month = december year = 1937 }
+ 
+                
+                picture = "EGY07"
+                
+           action_a = {
+                  name = "Leave it as it is"
+                  ai_chance = 5
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = freedom value = 1 }
+           }
+           action_b = {
+                  name = "Put Mohammad Mahmud Pasha"
+                  ai_chance = 95
+                  command = { type = headofgovernment which = 340017 }
+                  command = { type = domestic which = freedom value = -1 }
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  Relations with the USSR
+#############################################
+event = {
+         id = 13302108
+         random = no
+         country = egy
+         trigger = {
+                   war = { country = ger country = sov }
+                   war = { country = ger country = egy }
+                   NOT = { 
+                            war = { country = sov country = egy }
+                   }
+
+         }
+ 
+         name = "Relations with the USSR"
+         desc = "The Egyptian government decided to restore diplomatic relations between both countries to mend fences and establish agreements for the postwar."
+         style = 2
+ 
+         date = { day = 1 month = june year = 1943 }
+ 
+                
+                picture = "Stalin"
+                
+           action_a = {
+                  name = "Restore Relations"
+                  ai_chance = 90
+                  command = { type = relation which = sov value = 10 }
+                  command = { type = trigger which = 13302109 }
+           }
+           action_b = {
+                  name = "We want nothing from them"
+                  ai_chance = 10
+                  command = { type = relation which = sov value = -15 }
+           }
+
+}
+#############################################
+######  Relations with the USSR
+#############################################
+event = {
+         id = 13302109
+         random = no
+         country = sov
+         trigger = {
+                   war = { country = ger country = sov }
+                   war = { country = ger country = egy }
+                   NOT = { 
+                            war = { country = sov country = egy }
+                   }
+
+         }
+ 
+         name = "Relations with the USSR"
+         desc = "The Egyptian government decided to restore diplomatic relations between both countries to mend fences and establish agreements for the postwar."
+         style = 2
+ 
+ 
+                
+                picture = "EGY08"
+                
+           action_a = {
+                  name = "Restore Relations"
+                  command = { type = relation which = egy value = 10 }
+           }
+
+}
+#############################################
+######  Join the Allies
+#############################################
+event = {
+         id = 13302110
+         random = no
+         country = egy
+         trigger = {
+		war = { country =eng  country = ger }
+		NOT = { war = { country = egy country = ENG }  }
+		NOT = { alliance = { country = egy country = eng }  }
+
+         }
+ 
+         name = "Join the Allies"
+         desc = "The countries that formed the British Commonwealth had been given powers to bring his own foreign policy. This enabled him to not be bound or obligated to participate in wars involving the United Kingdom. Although many of these countries, ensured the integrity of the UK and some of them had in its constitution the obligation to defend against aggression. Most of these countries joined the bloc ally."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1947 }
+ 
+                
+                picture = "commonwealth"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  ai_chance = 100
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = domestic which = interventionism value = 1 }
+                  command = { type = sleepevent which = 13301550 }
+                  command = { type = set_relation which = ENG value = 200 }
+                  command = { type = alliance which = ENG }
+                  command = { type = dissent value = -50 }
+           }
+           action_b = {
+                  name = "It is not our war"
+                  command = { type = dissent value = 25 }
+                  command = { type = domestic which = interventionism value = -2 }
+                  command = { type = domestic which = defense_lobby value = -2 }
+                  command = { type = relation which = eng value = -150 }
+                  command = { type = relation which = ger value = 50 }
+                  ai_chance = 0
+           }
+
+}

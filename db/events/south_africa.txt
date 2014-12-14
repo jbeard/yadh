@@ -1,0 +1,356 @@
+
+#############################################
+######  Join the Allies
+#############################################
+event = {
+         id = 133017000
+         random = no
+         country = saf
+         trigger = {
+		war = { country =eng  country = ger }
+		NOT = { war = { country = saf country = ENG }  }
+		NOT = { alliance = { country = saf country = eng }  }
+
+         }
+ 
+         name = "Join the Allies"
+         desc = "The countries that formed the British Commonwealth had been given powers to bring his own foreign policy. This enabled him to not be bound or obligated to participate in wars involving the United Kingdom. Although many of these countries, ensured the integrity of the UK and some of them had in its constitution the obligation to defend against aggression. Most of these countries joined the bloc ally"
+         style = 2
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 3
+         deathdate = { day = 31 month = december year = 1947 }
+ 
+                
+                picture = "commonwealth"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  ai_chance = 100
+                  command = { type = domestic which = freedom value = 1 }
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = domestic which = defense_lobby value = 1 }
+                  command = { type = domestic which = interventionism value = 1 }
+                  command = { type = sleepevent which = 13301550 }
+                  command = { type = set_relation which = ENG value = 200 }
+                  command = { type = alliance which = ENG }
+                  command = { type = dissent value = -50 }
+           }
+           action_b = {
+                  name = "It is not our war"
+                  command = { type = dissent value = 25 }
+                  command = { type = domestic which = interventionism value = -2 }
+                  command = { type = domestic which = defense_lobby value = -2 }
+                  command = { type = relation which = eng value = -150 }
+                  command = { type = relation which = ger value = 50 }
+                  ai_chance = 0
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 13301533
+         random = no
+         country = saf
+         trigger = {
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+ 
+ 
+                
+                picture = "SAF01"
+                
+           action_a = {
+                  name = "OK"
+                  command = {  }
+           }
+
+}
+#############################################
+######  British Commonwealth Air Training Plan
+#############################################
+event = {
+         id = 13301538
+         random = no
+         country = saf
+         trigger = {
+
+         }
+ 
+         name = "British Commonwealth Air Training Plan"
+         desc = "The British Air Ministry set up the massive training program after participating countries signed an agreement in December 1939. The United Kingdom was an unsuitable location for air training, due to the possibility of enemy attack, the strain caused by wartime traffic at airfields and the unpredictable climate, so the plan called for the Dominions to train the majority of personnel."
+         style = 2
+          persistent = yes
+ 
+ 
+                
+                picture = "SAF01"
+                
+           action_a = {
+                  name = "OK"
+                 command = { type = build_time which = air when = on_upgrade where = relative value = -5 }
+           }
+
+}
+#############################################
+######  Foreign Political Activity in SA
+#############################################
+event = {
+         id = 13301701
+         random = no
+         country = saf
+         trigger = {
+                   NOT = { 
+                            government = fascist
+                   }
+
+         }
+ 
+         name = "Foreign Political Activity in SA"
+         desc = "The Union of South Africa government issued a decree prohibiting political activity by foreigners, including non-naturalized German residents, in Southwest Africa. The German government strongly protested this action unsuccessfully."
+         style = 2
+ 
+         date = { day = 9 month = july year = 1934 }
+ 
+                
+                picture = "SAF02"
+                
+           action_a = {
+                  name = "Prohibit it"
+                  ai_chance = 90
+                  command = { type = dissent value = -1 }
+                  command = { type = domestic which = political_left value = -1 }
+                  command = { type = relation which = ger value = -10 }
+           }
+           action_b = {
+                  name = "Allow it"
+                  ai_chance = 10
+                  command = { type = relation which = ger value = 30 }
+                  command = { type = dissent value = 2 }
+                  command = { type = domestic which = freedom value = 1 }
+           }
+
+}
+#############################################
+######  United Party
+#############################################
+event = {
+         id = 13301702
+         random = no
+         country = saf
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "United Party"
+         desc = "The United Party was South Africa's ruling political party between 1934 and 1948. It was formed by a merger of most of Prime Minister Barry Hertzog's National Party with the rival South African Party of Jan Smuts, plus the remnants of the Unionist Party.The party drew support from several different parts of South African society, including English-speakers, Afrikaners and 'Coloureds'."
+         style = 2
+ 
+         date = { day = 5 month = december year = 1934 }
+ 
+                
+                picture = "SAF03"
+                
+           action_a = {
+                  name = "It is necessary"
+                  ai_chance = 97
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = dissent value = -4 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 3
+                  command = { type = dissent value = 1 }
+           }
+
+}
+#############################################
+######  South African Airways
+#############################################
+event = {
+         id = 13301703
+         random = no
+         country = saf
+         trigger = {
+                   exists = saf
+
+         }
+ 
+         name = "South African Airways"
+         desc = "South African Airways was founded in 1934 after the acquisition of Union Airways by the South African government. The airline was initially overseen and controlled by South African Railways and Harbours Administration.Forty staff members, along with one de Havilland DH.60 Gypsy Moth, one de Havilland 80A Puss Moth, three Junkers F.13s and a leased Junkers F13 and Junkers A50 were among the acquired."
+         style = 2
+ 
+         date = { day = 1 month = february year = 1934 }
+ 
+                
+                picture = "SAF04"
+                
+           action_a = {
+                  name = "ok"
+                  command = { type = dissent value = -1 }
+                  command = { type = industrial_modifier which = supplies value = 2 }
+                  command = { type = tc_mod value = 10 }
+           }
+
+}
+#############################################
+######  The Jonker
+#############################################
+event = {
+         id = 13301704
+         random = no
+         country = saf
+         trigger = {
+                   exists = saf
+
+         }
+ 
+         name = "The Jonker"
+         desc = "The Jonker diamond was found at the Elandsfontein mine in South Africa by Johannes Jacobus Jonker on 17 January 1934. The diamond was 726 carats, which at the time was the fourth largest uncut gem ever found. The diamond was found 5 km away from the largest diamond ever found, the Cullinan Diamond."
+         style = 2
+ 
+         date = { day = 17 month = january year = 1934 }
+ 
+                
+                picture = "SAF05"
+                
+           action_a = {
+                  name = "ok"
+                  command = { type = dissent value = -1 }
+                  command = { type = add_prov_resource which = 873 value = 4 where = rare_materials }
+           }
+
+}
+#############################################
+######  Trackless trams in Cape Town
+#############################################
+event = {
+         id = 13301705
+         random = no
+         country = saf
+         trigger = {
+                   exists = saf
+
+         }
+ 
+         name = "Trackless trams in Cape Town"
+         desc = "The Cape Town trolleybus system was part of the public transport network in Cape Town, South Africa, for nearly 30 years in the mid-twentieth century. The trolleybuses on the system were always referred to by English-speaking locals as 'Trackless trams', and even the systems's stops were marked 'Trackless Tram Stop'."
+         style = 2
+ 
+         date = { day = 17 month = february year = 1936 }
+ 
+                
+                picture = "SAF06"
+                
+           action_a = {
+                  name = "ok"
+                  command = { type = dissent value = -1 }
+                  command = { type = tc_mod value = 10 }
+                  command = { type = construct which = infrastructure where = 880 value = 20 }
+           }
+
+}
+#############################################
+######  Representation of Natives Act, 1936
+#############################################
+event = {
+         id = 13301706
+         random = no
+         country = saf
+         trigger = {
+                   government = democratic
+
+         }
+ 
+         name = "Representation of Natives Act, 1936"
+         desc = "Representation of Natives Act, 1936 was legislation passed in South Africa which further reduced black rights at the time.  Blacks in the Cape were no longer eligible to vote for the common roll, but were placed instead on a separate roll – and halts the right to run for office. Africans throughout South Africa were then represented in government by four white senators."
+         style = 2
+ 
+         date = { day = 5 month = july year = 1936 }
+ 
+                
+                picture = "SAF07"
+                
+           action_a = {
+                  name = "It is necessary"
+                  ai_chance = 97
+                  command = { type = domestic which = democratic value = -1 }
+                  command = { type = dissent value = 4 }
+           }
+           action_b = {
+                  name = "It is not necessary"
+                  ai_chance = 3
+                  command = { type = domestic which = democratic value = 1 }
+                  command = { type = dissent value = -1 }
+           }
+
+}
+#############################################
+######  The Schlesinger African Air Race
+#############################################
+event = {
+         id = 13301707
+         random = no
+         country = saf
+         trigger = {
+                   exists = saf
+
+         }
+ 
+         name = "The Schlesinger African Air Race"
+         desc = "The Schlesinger Race from Portsmouth to Johannesburg took place in September 1936.The Royal Aero Club announced the race on behalf of Mr I.W. Schlesinger who wanted to promote the Johannesburg Empire Exhibition and so offered a total of £10,000 in prize money to be divided into two sections, a speed race and a handicap race. "
+         style = 2
+ 
+         date = { day = 1 month = september year = 1936 }
+ 
+                
+                picture = "SAF08"
+                
+           action_a = {
+                  name = "ok"
+                  command = { type = dissent value = -1 }
+                  command = { type = industrial_modifier which = supplies value = 1 }
+                  command = { type = tc_mod value = 5 }
+           }
+
+}
+#############################################
+######  The mobilization schemes
+#############################################
+event = {
+         id = 13301708
+         random = no
+         country = saf
+         trigger = {
+                   alliance = { country = saf country = eng }
+                   event = 133017000
+
+         }
+ 
+         name = "The mobilization schemes"
+         desc = "With the declaration of war in September 1939, the South African Army numbered only 3,353 regulars, with an additional 14,631 men of the Active Citizen Force (ACF) which gave peace time training to volunteers and in time of war would form the main body of the army.During the war over 334,000 men volunteered for full-time service in the South African Army."
+         style = 2
+ 
+         date = { day = 1 month = january year = 1938 }
+         offset = 30
+         deathdate = { day = 31 month = december year = 1944 }
+ 
+                
+                picture = "SAF09"
+                
+           action_a = {
+                  name = "Fight against dictatorship"
+                  command = { type = add_division which = "2rd SA Infantry Div." value = infantry when = 0 }
+                  command = { type = add_division which = "3rd SA Infantry Div." value = infantry when = 0 }
+                  command = { type = add_division which = "6rd SA Armoured Infantry Div." value = armor when = 0 }
+                  command = { type = manpowerpool value = -20 }
+           }
+
+}

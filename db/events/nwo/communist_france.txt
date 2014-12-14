@@ -1,0 +1,33 @@
+event = {
+	id = 8021101
+	country = U11
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 870009 } # Maurice Thorez
+		command = { type = headofgovernment which = 870014 } # Jacques Duclos
+		command = { type = foreignminister which = 870022 } # Marcel Cachin
+		command = { type = armamentminister which = 870039 } # Daniel Renoult
+		command = { type = ministerofsecurity which = 870054 } # Jean-Marie Clamamus
+		command = { type = ministerofintelligence which = 870065 } # Gustave Gu?henneux
+		command = { type = chiefofstaff which = 870066 } # Marcel Cachin
+		command = { type = chiefofarmy which = 870069 } # Pierre Fabien
+		command = { type = chiefofnavy which = 870073 } # Charles Tillon
+		command = { type = chiefofair which = 870075 } # Joseph Vuillemin
+	}
+}
+

@@ -1,0 +1,423 @@
+event = {
+	id = 8018001
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1936 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790300 } # Ren? Robin
+		command = { type = headofgovernment which = 790002 } # Ren? Robin
+	}
+}
+
+event = {
+	id = 8018002
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1937 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1938 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790301 } # Jules Br?vi?
+		command = { type = headofgovernment which = 790012 } # Jules Br?vi?
+	}
+}
+
+event = {
+	id = 8018003
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790302 } # Georges Catroux
+		command = { type = headofgovernment which = 790013 } # Georges Catroux
+	}
+}
+
+event = {
+	id = 8018004
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790303 } # Jean Decoux
+		command = { type = headofgovernment which = 790014 } # Jean Decoux
+	}
+}
+
+event = {
+	id = 8018005
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790304 } # Jean Marie Arsene Cedile
+		command = { type = headofgovernment which = 790305 } # Jean Marie Arsene Cedile
+	}
+}
+
+event = {
+	id = 8018006
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790306 } # Nguyen Van Thinh
+		command = { type = headofgovernment which = 790080 } # Nguyen Van Thinh
+	}
+}
+
+event = {
+	id = 8018007
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790307 } # Le Van Hoach
+		command = { type = headofgovernment which = 790081 } # Le Van Hoach
+	}
+}
+
+event = {
+	id = 8018008
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790308 } # Nguyen Van Xuan
+		command = { type = headofgovernment which = 790082 } # Nguyen Van Xuan
+	}
+}
+
+event = {
+	id = 8018009
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 790001 } # H.M. Bao Dai
+		command = { type = headofgovernment which = 790083 } # H.M. Bao Dai
+	}
+}
+
+event = {
+	id = 8018010
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790001 } # H.M. Bao Dai
+		command = { type = headofgovernment which = 790085 } # Tran Van Huu
+	}
+}
+
+event = {
+	id = 8018011
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790001 } # H.M. Bao Dai
+		command = { type = headofgovernment which = 790086 } # Nguyen Van Tam
+	}
+}
+
+event = {
+	id = 8018012
+	country = VIE
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 790001 } # H.M. Bao Dai
+		command = { type = headofgovernment which = 790309 } # Nguyen Phuc Buu Loc
+	}
+}
+
+# Republic of Vietnam
+event = {
+	id = 8018013
+	country = VIE
+
+	name = EVT_8018013_NAME
+	desc = EVT_8018013_DESC
+	picture = nwo\ngo_dinh_diem
+	style = 1
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_8018013_A
+		ai_chance = 95
+		command = { type = name where = VIE which = "VIE55" }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 790067 } # Ngo Dinh Diem
+		command = { type = headofgovernment which = 790017 } # Ngo Dinh Diem
+		command = { type = dissent value = -3 }
+		command = { type = relation which = USA value = 100 }
+	}
+	
+	action = {
+		name = EVT_8018013_B
+		ai_chance = 5
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+# Buddhist Rebellion
+event = {
+	id = 8018014
+	country = VIE
+
+	name = EVT_8018014_NAME
+	desc = EVT_8018014_DESC
+	picture = nwo\self_immolation
+	style = 1
+
+	date = { day = 1 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_8018014_A
+		command = { type = dissent value = 10 }
+	}
+
+}
+
+### Indochinese Union transforms into Nationalist Vietnam
+event = {
+	id = 8018015
+	country = U03
+
+	name = EVT_8018015_NAME
+	desc = EVT_8018015_DESC
+	picture = nwo\french_vietnam
+	style = 1
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = EVT_8018015_A
+		ai_chance = 100
+		command = { type = independence which = CMB value = 0 }
+		command = { type = independence which = LAO value = 0 }
+		command = { type = country which = VIE }
+	}
+	
+	action = {
+		name = EVT_8018015_B
+		ai_chance = 0
+		command = { type = dissent value = 25 }
+	}
+
+}

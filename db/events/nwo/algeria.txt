@@ -1,0 +1,438 @@
+event = {
+	id = 8000301
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1939 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 450001 } # Georges Le Beau
+		command = { type = headofgovernment which = 450002 } # Georges Le Beau
+	}
+}
+
+event = {
+	id = 8000302
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1940 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450011 } # Jean Abrial
+		command = { type = headofgovernment which = 450017 } # Jean Abrial
+	}
+}
+
+event = {
+	id = 8000303
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1942 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450012 } # Maxime Weygand
+		command = { type = headofgovernment which = 450018 } # Maxime Weygand
+	}
+}
+
+event = {
+	id = 8000304
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1943 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450013 } # Marcel Peyrouton
+		command = { type = headofgovernment which = 450019 } # Marcel Peyrouton
+	}
+}
+
+event = {
+	id = 8000305
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450015 } # Yves Chataigneau
+		command = { type = headofgovernment which = 450021 } # Yves Chataigneau
+	}
+}
+
+event = {
+	id = 8000306
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450101 } # Marcel-Edmond Naegelen
+		command = { type = headofgovernment which = 450102 } # Marcel-Edmond Naegelen
+	}
+}
+
+event = {
+	id = 8000307
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450103 } # Roger Leonard
+		command = { type = headofgovernment which = 450104 } # Roger Leonard
+	}
+}
+
+event = {
+	id = 8000308
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450105 } # Jacques-Emile Soustelle
+		command = { type = headofgovernment which = 450106 } # Jacques-Emile Soustelle
+	}
+}
+
+event = {
+	id = 8000309
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1957 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofstate which = 450107 } # Robert Lacoste
+		command = { type = headofgovernment which = 450108 } # Robert Lacoste
+	}
+}
+
+event = {
+	id = 8000310
+	country = ALG
+
+	name = "EVT_8000310_NAME"
+	desc = "EVT_8000310_DESC"
+	picture = "nwo\fehrat_abbas"
+	style = 1
+
+	date = { day = 0 month = january year = 1958 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1960 }
+
+	action = {
+		name = "EVT_8000310_A"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 450109 } # Abdur Rahman Fares
+		command = { type = headofgovernment which = 450022 } # Ferhat Abbas
+		command = { type = foreignminister which = 450025 } # Yussef ben-Khedda
+		command = { type = armamentminister which = 450027 } # Frantz Fanon
+		command = { type = ministerofsecurity which = 450048 } # Lakhdar Bentobal
+		command = { type = ministerofintelligence which = 450034 } # Saadi M'Barka
+		command = { type = chiefofstaff which = 450037 } # Houari Boumedienne
+		command = { type = chiefofarmy which = 450040 } # Houari Boumedienne
+		command = { type = chiefofnavy which = 450042 } # Kheireddine Dadci
+		command = { type = chiefofair which = 450045 } # Bachra Baya
+	}
+}
+
+event = {
+	id = 8000311
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1961 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1962 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 450109 } # Abdur Rahman Fares
+		command = { type = headofgovernment which = 450110 } # Benyoucef Ben Khedda
+	}
+}
+
+event = {
+	id = 8000312
+	country = ALG
+
+	name = "EVT_GOVTCHANGE_NAME"
+	desc = "EVT_GOVTCHANGE_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	date = { day = 0 month = january year = 1963 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 450111 } # Ahmed Ben Bella
+		command = { type = headofgovernment which = 450112 } # Ahmed Ben Bella
+		command = { type = ministerofsecurity which = 450031 } # Djamil Chirine
+	}
+}
+
+event = {
+	id = 8000313
+	country = ALG
+
+	name = EVT_8000313_NAME
+	desc = EVT_8000313_DESC
+	picture = nwo\boumediene_coup
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1965 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = EVT_8000313_A
+		ai_chance = 100
+		command = { type = dissent value = 10 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 450113 } # Houari Boumediene
+		command = { type = headofgovernment which = 450114 } # Houari Boumediene
+	}
+}
+
+event = {
+	id = 8000314
+	country = ALG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1983 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 450115 } # Chadli Bendjedid
+		command = { type = headofgovernment which = 450116 } # Mohamed Ben Ahmed Abdelghani
+	}
+}
+
+event = {
+	id = 8000315
+	country = ALG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1984 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1987 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 450117 } # Abdelhamid Brahimi
+	}
+}
+
+event = {
+	id = 8000316
+	country = ALG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1988 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1988 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 450118 } # Kasdi Merbah
+	}
+}
+
+event = {
+	id = 8000317
+	country = ALG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1989 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1990 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 450119 } # Mouloud Hamrouche
+	}
+}
+
+event = {
+	id = 8000318
+	country = ALG
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1991 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 450120 } # Sid Ahmed Ghozali
+	}
+}
+

@@ -1,0 +1,537 @@
+#############################################################################################
+#
+#	New World Order 2 by Bizon
+#	Novus Ordo Seclorum
+#	
+#############################################################################################
+
+### PHASE ONE: SOVIET UNION ASKS FOR SURRENDER
+
+event = {
+	id = 8380000
+	country = SOV
+	persistent = yes
+
+	name = EVT_8380000_NAME
+	desc = EVT_8380000_DESC
+	picture = nwo\american_troops_in_moscow
+	style = 1
+
+	trigger = {
+		war = { country = USA country = SOV }
+		NOT = { atwar = GER }
+		NOT = {
+			control = { province = 187 data = SOV } # Leningrad
+			control = { province = 163 data = SOV } # Stalingrad
+			control = { province = 175 data = SOV } # Moscow
+			control = { province = 1907 data = SOV } # Baku
+		}
+		OR = {
+			NOT = { control = { province = 1572 data = SOV } } # Sverdlovsk
+			NOT = { control = { province = 2191 data = SOV } } # Vladivostok 
+		}
+		lost_national = { country = SOV value = 55 }
+		lost_ic = { country = SOV value = 60 }
+		NOT = {	flag = novus_ordo_seclorum	}
+		NOT = {	event = 8381000	}
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8380000_A
+		ai_chance = 80
+		command = { type = setflag which = novus_ordo_seclorum }
+		command = { type = dissent value = 15 }
+		command = { type = sleepminister which = 30002 } #Stalin
+		command = { type = sleepminister which = 30011 } #Stalin
+		command = { type = sleepminister which = 30046 } #Stalin
+		command = { type = sleepminister which = 30076 } #Stalin
+		command = { type = sleepminister which = 30104 } #Stalin
+		command = { type = sleepminister which = 30305 } #Stalin
+		command = { type = sleepminister which = 30109 } #Stalin
+		command = { type = sleepminister which = 30012 } #Molotov
+		command = { type = sleepminister which = 30016 } #Molotov
+		command = { type = sleepminister which = 30021 } #Molotov
+		command = { type = set_domestic which = interventionism value = -3 }
+	}
+	action = {
+		name = EVT_8380000_B
+		ai_chance = 20
+		trigger = { NOT = { dissent = 40 } }
+		command = { type = dissent value = 3 }
+	}
+
+}
+
+### PHASE TWO: DECISION ABOUT OCCUPATION POLICY
+
+event = {
+	id = 8381000
+	country = USA
+	save_date = yes
+
+	name = EVT_8381000_NAME
+	desc = EVT_8381000_DESC
+	picture = nwo\russia_administrative_division
+	style = 1
+	
+	trigger = {
+		flag = novus_ordo_seclorum
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	# Liberate the nations of All the Russias
+	action = {
+		name = EVT_8381000_A
+		ai_chance = 70
+		command = { type = sleepevent which = 8383001 }
+		command = { type = sleepevent which = 8383002 }
+	}
+	
+	# Reinstitute a conservative Empire of Russia
+	action = {
+		name = EVT_8381000_B
+		ai_chance = 25
+		command = { type = sleepevent which = 8383000 }
+		command = { type = sleepevent which = 8383002 }
+	}
+	
+	# Let us have a raw material base of Siberia
+	action = {
+		name = EVT_8381000_C
+		ai_chance = 4
+		command = { type = sleepevent which = 8383000 }
+		command = { type = sleepevent which = 8383001 }
+	}
+	
+	# No deals with Bolsheviks!
+	action = {
+		name = EVT_8381000_D
+		ai_chance = 1
+		command = { type = dissent which = 20 }
+		command = { type = clrflag which = novus_ordo_seclorum }
+	}
+}
+
+### PHASE THREE: THE PEACE IS SIGNED AND USSR BECOMES RUSSIA
+event = {
+	id = 8382000
+	country = SOV
+	save_date = yes
+
+	name = EVT_8382000_NAME
+	desc = EVT_8382000_DESC
+	picture = nwo\defeated_zhukov
+	style = 1
+	
+	trigger = {
+		flag = novus_ordo_seclorum
+		event = { id = 8381000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8382000_A
+		command = { type = leave_alliance }			
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = USA value = 0 }
+		command = { type = peace which = ENG value = 0 }
+		# Sleep event making Tuvans join the USSR
+		command = { type = sleepevent which = 2088001 }
+		command = { type = country which = RUS }
+		
+		command = { type = event which = 8225001 where = SOV when = 1 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 2 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 3 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 4 } ## CEE influence -1
+		command = { type = event which = 8225001 where = SOV when = 5 } ## CEE influence -1
+	}
+}
+
+### PHASE FOUR: FUTURE OF OCCUPIED LANDS
+
+# Liberate nations of All The Russias
+event = {
+	id = 8383000
+	country = RUS
+	save_date = yes
+
+	name = EVT_8383000_NAME 
+	desc = EVT_8383000_DESC
+	picture = nwo\republics_of_ussr
+	style = 1
+	
+	trigger = {
+		flag = novus_ordo_seclorum
+		event = { id = 8382000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8383000_A
+		
+		# Set sliders up
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = set_domestic which = freedom value = 7 }
+		command = { type = set_domestic which = interventionism value = 0 }
+		
+		# Reinstate democratic government
+		command = { type = headofstate which = 515013 } # Alexander Kerensky
+		command = { type = headofgovernment which = 515068 } # Nikolay Avksentiev
+		command = { type = foreignminister which = 515003 } # Boris Nolde
+		command = { type = armamentminister which = 515029 } # Sergey Prokopovich
+		command = { type = ministerofsecurity which = 515031 } # Dmitry Shakhovskoy
+		command = { type = ministerofintelligence which = 515037 } # Vasily Shulgin
+		command = { type = chiefofstaff which = 515007 } # Nikolai Golovin
+		command = { type = chiefofarmy which = 515008 } # Nikolai Golovin
+		command = { type = chiefofnavy which = 515058 } # Garold Graf
+		command = { type = chiefofair which = 515067 } # Vyacheslav Baranov
+		
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+		command = { type = secederegion which = U30 value = "Romania" when = 1 }
+		
+		# Grant independence to constituent countries!
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+		command = { type = independence which = BLR value = 1 } 
+		command = { type = independence which = UKR value = 1 } 
+		command = { type = independence which = AZB value = 1 } 
+		command = { type = independence which = GEO value = 1 }
+		command = { type = independence which = ARM value = 1 } 
+		command = { type = independence which = KAZ value = 1 }
+		command = { type = independence which = TRK value = 1 }
+		command = { type = independence which = UZB value = 1 }
+		command = { type = independence which = KYG value = 1 }
+		command = { type = independence which = TAJ value = 1 }
+		command = { type = secedeprovince which = UKR value = 215 when = 1 } # Uzhorod
+		command = { type = secedearea which = GEO value = "Georgia" when = 1 }
+		command = { type = secedeprovince which = GEO value = 707 when = 1 } # Tskhinvali
+		command = { type = secedeprovince which = GEO value = 710 when = 1 } # Sukhumi
+		command = { type = secederegion which = KAZ value = "Kazakstan" when = 1 }
+	}
+}
+
+# Empire of Russia is reinstated
+event = {
+	id = 8383001
+	country = RUS
+	save_date = yes
+
+	name = EVT_8383001_NAME 
+	desc = EVT_8383001_DESC
+	picture = nwo\empire_of_russia
+	style = 1
+	
+	trigger = {
+		flag = novus_ordo_seclorum
+		event = { id = 8382000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8383001_A
+
+		# Set sliders up
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = interventionism value = 2 }
+		
+		# Conservative imperial government
+		command = { type = headofstate which = 515012 } # Vladimir III
+		command = { type = headofgovernment which = 515002 } # Georgy Zhilenkov
+		command = { type = foreignminister which = 515022 } # Grand Duke Andrey
+		command = { type = armamentminister which = 515023 } # Mikhail Meandrov
+		command = { type = ministerofsecurity which = 515033 } # Alexander von Lampe
+		command = { type = ministerofintelligence which = 515040 } # Konstantin Rodzaevsky
+		command = { type = chiefofstaff which = 515044 } # Mikhail Meandrov
+		command = { type = chiefofarmy which = 515057 } # Grand Duke Andrey
+		command = { type = chiefofnavy which = 515063 } # Sergey Evdokimov
+		command = { type = chiefofair which = 515066 } # Duke Andrey Alexandrovich
+		
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+		command = { type = secederegion which = U30 value = "Romania" when = 1 }
+		
+		# Grant autonomy to the Baltics
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+		command = { type = make_puppet which = LIT }
+		command = { type = make_puppet which = LAT }
+		command = { type = make_puppet which = EST }
+		command = { type = alliance which = LIT }
+		command = { type = alliance which = LAT }
+		command = { type = alliance which = EST }
+	}
+
+}
+
+# Russia will be divided
+event = {
+	id = 8383002
+	country = RUS
+	save_date = yes
+
+	name = EVT_8383002_NAME 
+	desc = EVT_8383002_DESC
+	picture = nwo\americans_in_vladivostok
+	style = 1
+	
+	trigger = {
+		flag = novus_ordo_seclorum
+		event = { id = 8382000 days = 7 }
+	}
+	
+	date = { day = 0 month = january year = 1936 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8383002_A
+		
+		command = { type = secederegion which = USA value = "Urals" when = 1 }
+		command = { type = secederegion which = USA value = "Northern Permafrost" when = 1 }
+		command = { type = secederegion which = USA value = "Tomsk" when = 1 }
+		command = { type = secederegion which = USA value = "Novosibirsk" when = 1 }
+		command = { type = secederegion which = USA value = "Krasnoyarsk" when = 1 }
+		command = { type = secederegion which = USA value = "Irkutsk" when = 1 }
+		
+		command = { trigger = { OR = { guarantee = { country = USA country = JAP } puppet = { country = JAP country = USA } alliance = { country = USA country = JAP } } } type = secedearea which = JAP value = "Primorski" when = 1 }
+		command = { trigger = { OR = { guarantee = { country = USA country = JAP } puppet = { country = JAP country = USA } alliance = { country = USA country = JAP } } } type = secedearea which = JAP value = "Sakhalin_Kuriles" when = 1 }
+		command = { type = secederegion which = USA value = "Far East Siberia" when = 1 }
+		
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+		command = { type = secederegion which = U30 value = "Romania" when = 1 }
+		
+		# Set sliders up
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = set_domestic which = freedom value = 6 }
+		command = { type = set_domestic which = interventionism value = 0 }
+		
+		# Reinstate democratic government
+		command = { type = headofstate which = 515013 } # Alexander Kerensky
+		command = { type = headofgovernment which = 515068 } # Nikolay Avksentiev
+		command = { type = foreignminister which = 515003 } # Boris Nolde
+		command = { type = armamentminister which = 515029 } # Sergey Prokopovich
+		command = { type = ministerofsecurity which = 515031 } # Dmitry Shakhovskoy
+		command = { type = ministerofintelligence which = 515037 } # Vasily Shulgin
+		command = { type = chiefofstaff which = 515007 } # Nikolai Golovin
+		command = { type = chiefofarmy which = 515008 } # Nikolai Golovin
+		command = { type = chiefofnavy which = 515058 } # Garold Graf
+		command = { type = chiefofair which = 515067 } # Vyacheslav Baranov
+		
+		# Grant independence to constituent countries
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+		command = { type = independence which = BLR value = 1 } 
+		command = { type = independence which = UKR value = 1 } 
+		command = { type = independence which = AZB value = 1 } 
+		command = { type = independence which = GEO value = 1 } 
+		command = { type = independence which = ARM value = 1 } 
+		command = { type = independence which = KAZ value = 1 }
+		command = { type = independence which = TRK value = 1 }
+		command = { type = independence which = UZB value = 1 }
+		command = { type = independence which = KYG value = 1 }
+		command = { type = independence which = TAJ value = 1 }
+		command = { type = secedeprovince which = UKR value = 215 when = 1 } # Uzhorod
+		command = { type = secedearea which = GEO value = "Georgia" when = 1 }
+		command = { type = secedeprovince which = GEO value = 707 when = 1 } # Tskhinvali
+		command = { type = secedeprovince which = GEO value = 710 when = 1 } # Sukhumi
+		command = { type = secederegion which = KAZ value = "Kazakstan" when = 1 }
+	}
+}
+
+### THE END
+
+event = { 
+	id = 8384000
+	country = REB
+	
+	name = AI_EVENT
+	
+	trigger = {
+		flag = novus_ordo_seclorum
+		OR = {
+			event = { id = 8383000 days = 7 }
+			event = { id = 8383001 days = 7 }
+			event = { id = 8383002 days = 7 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+    offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = OK
+		command = { type = clrflag which = novus_ordo_seclorum }
+	}
+}
+
+### Additional events:
+
+# Support of the National Alliance of Russian Solidarists
+
+event = {
+	id = 8389000
+	country = USA
+
+	name = EVT_8389000_NAME
+	desc = EVT_8389000_DESC
+	picture = nwo\national_alliance_of_russian_solidarists
+	decision_picture = nwo\d_national_alliance_of_russian_solidarists
+	style = 1
+
+	decision = {
+		war = { country = USA country = SOV }
+		flag = ww3
+		lost_national = { country = SOV value = 15 }
+		lost_ic = { country = SOV value = 15 }
+		NOT = {	flag = novus_ordo_seclorum	}
+	}
+	
+	trigger = {
+		war = { country = USA country = SOV }
+		flag = ww3
+		lost_national = { country = SOV value = 15 }
+		lost_ic = { country = SOV value = 15 }
+		NOT = {	flag = novus_ordo_seclorum	}
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8389000_A
+		ai_chance = 60
+		command = { type = money value = -500 }
+	}
+	action = {
+		name = EVT_8389000_B
+		ai_chance = 40
+		trigger = { ai = yes }
+		command = { type = money value = 1 }
+		command = { type = sleepevent which = 8389001 }
+	}
+
+}
+
+event = {
+	id = 8389001
+	country = SOV
+	one_action = yes
+
+	name = EVT_8389001_NAME
+	desc = EVT_8389001_DESC
+	picture = nwo\national_alliance_of_russian_solidarists
+	style = 1
+
+	trigger = {
+		war = { country = USA country = SOV }
+		flag = ww3
+		lost_national = { country = SOV value = 25 }
+		lost_ic = { country = SOV value = 25 }
+		NOT = {	flag = novus_ordo_seclorum	}
+		event = 8389000
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8389001_A # Failure!
+		ai_chance = 60
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = sleepminister which = 515300 }
+		command = { type = sleepminister which = 515301 }
+		command = { type = sleepminister which = 515302 }
+		command = { type = sleepminister which = 515303 }
+		command = { type = sleepminister which = 515304 }
+		command = { type = sleepminister which = 515305 }
+		command = { type = sleepevent which = 8389002 }
+	}
+	action = {
+		name = EVT_8389001_B # Success!
+		ai_chance = 40
+		command = { type = dissent value = 15 }
+	}
+
+}
+
+event = {
+	id = 8389002
+	country = USA
+
+	name = EVT_8389002_NAME
+	desc = EVT_8389002_DESC
+	picture = nwo\national_alliance_of_russian_solidarists
+	style = 1
+
+	trigger = {
+		exists = RUS
+		event = 8389001
+		event = 8384000
+	}
+		
+    date = { day = 0 month = january year = 1939 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = EVT_8389002_A # Shake their hands
+		ai_chance = 75
+		command = { type = relation which = RUS value = -50 }
+	}
+	action = {
+		name = EVT_8389002_B # Award them with governmental positions
+		ai_chance = 25
+		command = { type = trigger which = 8389003 }
+		command = { type = relation which = RUS value = 25 }
+	}
+
+}
+
+event = {
+	id = 8389003
+	country = RUS
+
+	name = EVT_8389003_NAME
+	desc = EVT_8389003_DESC
+	picture = nwo\national_alliance_of_russian_solidarists
+	style = 1
+
+	action = {
+		name = EVT_8389003_A
+		ai_chance = 75
+		command = { type = domestic which = political_left value = -1 }
+		command = { trigger = { NOT = { year = 1934 } } type = headofgovernment which = 515301 }
+		command = { trigger = { year = 1934 NOT = { year = 1954 } } type = headofgovernment which = 515303 }
+		command = { trigger = { year = 1954 } type = headofgovernment which = 515305 }
+	}
+
+}

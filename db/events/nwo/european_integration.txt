@@ -1,0 +1,1241 @@
+# Beginnings of European integration
+
+event = {
+	id = 8232000
+	country = FRA
+
+	name = EVT_8232000_NAME
+	desc = EVT_8232000_DESC
+	picture = nwo\schuman_declaration
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		government = democratic
+		OR = {
+			exists = DFR
+			exists = ITA
+			exists = BEL
+			exists = HOL
+			exists = LUX
+		}
+		atwar = no
+	}
+
+	date = { day = 9 month = may year = 1950 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action = {
+		name = EVT_8232000_A
+		ai_chance = 85
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	
+	action = {
+		name = EVT_8232000_B
+		ai_chance = 10
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = sleepevent which = 8232001 }
+		command = { type = sleepevent which = 8232002 }
+		command = { type = sleepevent which = 8232003 }
+		command = { type = sleepevent which = 8232004 }
+		command = { type = sleepevent which = 8232005 }
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+	}
+	
+	action = {
+		name = EVT_8232000_C
+		ai_chance = 5
+		command = { type = sleepevent which = 8232001 }
+		command = { type = sleepevent which = 8232002 }
+		command = { type = sleepevent which = 8232003 }
+		command = { type = sleepevent which = 8232004 }
+		command = { type = sleepevent which = 8232005 }
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+		command = { type = sleepevent which = 8232040 } # Formation of ECSC
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8232001
+	country = DFR
+
+	name = EVT_8232001_NAME
+	desc = EVT_8232001_DESC
+	picture = nwo\schuman_declaration
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232000
+		atwar = no
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8232001_A
+		ai_chance = 50
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+	}
+	
+	action = {
+		name = EVT_8232001_B
+		ai_chance = 45
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	
+	action = {
+		name = EVT_8232001_C
+		ai_chance = 5
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+		command = { type = sleepevent which = 8232041 } # Accession to ECSC
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8232002
+	country = ITA
+	
+	name = EVT_8232002_NAME
+	desc = EVT_8232002_DESC
+	picture = nwo\schuman_declaration
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232000
+		atwar = no
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8232002_A
+		ai_chance = 50
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+	}
+	
+	action = {
+		name = EVT_8232002_B
+		ai_chance = 45
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	
+	action = {
+		name = EVT_8232002_C
+		ai_chance = 5
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+		command = { type = sleepevent which = 8232042 } # Accession to ECSC
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8232003
+	country = BEL
+
+	name = EVT_8232003_NAME
+	desc = EVT_8232003_DESC
+	picture = nwo\schuman_declaration
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232000
+		atwar = no
+	}
+	
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8232003_A
+		ai_chance = 50
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+	}
+	
+	action = {
+		name = EVT_8232003_B
+		ai_chance = 45
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	
+	action = {
+		name = EVT_8232003_C
+		ai_chance = 5
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+		command = { type = sleepevent which = 8232043 } # Accession to ECSC
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8232004
+	country = HOL
+
+	name = EVT_8232004_NAME
+	desc = EVT_8232004_DESC
+	picture = nwo\schuman_declaration
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232000
+		atwar = no
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8232004_A
+		ai_chance = 50
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+	}
+	
+	action = {
+		name = EVT_8232004_B
+		ai_chance = 45
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	
+	action = {
+		name = EVT_8232004_C
+		ai_chance = 5
+		command = { type = sleepevent which = 8232010 } # European federation
+		command = { type = sleepevent which = 8232011 } # European federation
+		command = { type = sleepevent which = 8232044 } # Accession to ECSC
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 8232005
+	country = LUX
+
+	name = EVT_8232005_NAME
+	desc = EVT_8232005_DESC
+	picture = nwo\schuman_declaration
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232000
+		atwar = no
+	}
+
+	date = { day = 1 month = july year = 1950 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8232005_A
+		ai_chance = 50
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = sleepevent which = 8232021 } # Accession to European federation
+	}
+	
+	action = {
+		name = EVT_8232005_B
+		ai_chance = 45
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	
+	action = {
+		name = EVT_8232005_C
+		ai_chance = 5
+		command = { type = sleepevent which = 8232044 } # Accession to ECSC
+		command = { type = sleepevent which = 8232021 } # Accession to European federation
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+# Formation of European Federation
+
+event = {
+	id = 8232010
+	country = FRA
+
+	name = EVT_8232010_NAME
+	desc = EVT_8232010_DESC
+	picture = nwo\european_federation
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232001
+		event = 8232002
+		event = 8232003
+		event = 8232004
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1951 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action = {
+		name = EVT_8232010_A
+		command = { type = relation which = DFR value = 100 }
+		command = { type = relation which = ITA value = 100 }
+		command = { type = relation which = BEL value = 100 }
+		command = { type = relation which = DFR value = 100 }
+		command = { type = make_puppet which = DFR }
+		command = { type = make_puppet which = ITA }
+		command = { type = make_puppet which = BEL }
+		command = { type = make_puppet which = DFR }
+		command = { type = sleepevent which = 8232040 } # Formation of ECSC, the economic results will follow anyway
+		# Economic result of European integration
+		command = { type = trigger which = 8232051 }
+		command = { type = trigger which = 8232052 }
+		command = { type = trigger which = 8232053 }
+		command = { type = trigger which = 8232054 }
+		command = { type = trigger which = 8232055 }
+	}
+
+}
+
+event = {
+	id = 8232011
+	country = FRA
+
+	name = EVT_8232011_NAME
+	desc = EVT_8232011_DESC
+	picture = nwo\european_federation
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232005
+		atwar = no
+		ai = LUX
+	}
+
+	date = { day = 1 month = january year = 1951 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action = {
+		name = EVT_8232011_A
+		command = { type = relation which = LUX value = 100 }
+		command = { type = make_puppet which = LUX }
+		# Economic result of European integration
+		command = { type = trigger which = 8232056 }
+	}
+
+}
+
+# United States of Europe
+
+event = {
+	id = 8232020
+	country = FRA
+
+	name = EVT_8232020_NAME
+	desc = EVT_8232020_DESC
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		exists = DFR
+		exists = ITA
+		exists = BEL
+		exists = HOL
+		event = 8232010
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8232020_A
+		ai_chance = 80
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	
+	action = {
+		name = EVT_8232020_B
+		ai_chance = 15
+		command = { type = sleepevent which = 8232021 }
+		command = { type = sleepevent which = 8232022 }
+		command = { type = sleepevent which = 8232023 }
+		command = { type = sleepevent which = 8232024 }
+		command = { type = sleepevent which = 8232025 }
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+	}
+	
+	action = {
+		name = EVT_8232020_C
+		ai_chance = 5
+		command = { type = end_mastery which = DFR }
+		command = { type = end_mastery which = ITA }
+		command = { type = end_mastery which = BEL }
+		command = { type = end_mastery which = HOL }
+		command = { type = end_mastery which = LUX }
+		command = { type = relation which = DFR value = -100 }
+		command = { type = relation which = ITA value = -100 }
+		command = { type = relation which = BEL value = -100 }
+		command = { type = relation which = HOL value = -100 }
+		command = { type = relation which = LUX value = -100 }
+		command = { type = sleepevent which = 8232021 }
+		command = { type = sleepevent which = 8232022 }
+		command = { type = sleepevent which = 8232023 }
+		command = { type = sleepevent which = 8232024 }
+		command = { type = sleepevent which = 8232025 }
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 25 }
+	}
+}
+
+event = {
+	id = 8232021
+	country = DFR
+
+	name = EVT_8232021_NAME
+	desc = EVT_8232021_DESC
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232020
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8232021_A
+		ai_chance = 80
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+	}
+	
+	action = {
+		name = EVT_8232021_B
+		ai_chance = 15
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+	}
+	
+	action = {
+		name = EVT_8232021_C
+		ai_chance = 5
+		command = { type = end_puppet }
+		command = { type = sleepevent which = 8232022 }
+		command = { type = sleepevent which = 8232023 }
+		command = { type = sleepevent which = 8232024 }
+		command = { type = sleepevent which = 8232025 }
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 25 }
+	}
+}
+
+event = {
+	id = 8232022
+	country = ITA
+
+	name = EVT_8232022_NAME
+	desc = EVT_8232022_DESC
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232020
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8232022_A
+		ai_chance = 80
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+	}
+	
+	action = {
+		name = EVT_8232022_B
+		ai_chance = 15
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+	}
+	
+	action = {
+		name = EVT_8232022_C
+		ai_chance = 5
+		command = { type = end_puppet }
+		command = { type = sleepevent which = 8232021 }
+		command = { type = sleepevent which = 8232023 }
+		command = { type = sleepevent which = 8232024 }
+		command = { type = sleepevent which = 8232025 }
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 25 }
+	}
+}
+
+event = {
+	id = 8232023
+	country = BEL
+
+	name = EVT_8232023_NAME
+	desc = EVT_8232023_DESC
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232020
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8232023_A
+		ai_chance = 80
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = LUX value = 50 }
+	}
+	
+	action = {
+		name = EVT_8232023_B
+		ai_chance = 15
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+	}
+	
+	action = {
+		name = EVT_8232023_C
+		ai_chance = 5
+		command = { type = end_puppet }
+		command = { type = sleepevent which = 8232022 }
+		command = { type = sleepevent which = 8232021 }
+		command = { type = sleepevent which = 8232024 }
+		command = { type = sleepevent which = 8232025 }
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 25 }
+	}
+}
+
+event = {
+	id = 8232024
+	country = HOL
+
+	name = EVT_8232024_NAME
+	desc = EVT_8232024_DESC
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232020
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8232024_A
+		ai_chance = 80
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = LUX value = 50 }
+	}
+	
+	action = {
+		name = EVT_8232024_B
+		ai_chance = 15
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+	}
+	
+	action = {
+		name = EVT_8232024_C
+		ai_chance = 5
+		command = { type = end_puppet }
+		command = { type = sleepevent which = 8232022 }
+		command = { type = sleepevent which = 8232023 }
+		command = { type = sleepevent which = 8232021 }
+		command = { type = sleepevent which = 8232025 }
+		command = { type = sleepevent which = 8232030 }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = sleepevent which = 8232032 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 25 }
+	}
+}
+
+event = {
+	id = 8232025
+	country = LUX
+
+	name = EVT_8232025_NAME
+	desc = EVT_8232025_DESC
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		event = 8232020
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8232025_A
+		ai_chance = 80
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = BEL value = 50 }
+		command = { type = relation which = HOL value = 50 }
+		command = { type = relation which = DFR value = 50 }
+	}
+	
+	action = {
+		name = EVT_8232025_B
+		ai_chance = 15
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 8232031 }
+	}
+	
+	action = {
+		name = EVT_8232025_C
+		ai_chance = 5
+		command = { type = end_puppet }
+		command = { type = sleepevent which = 8232031 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+# Formation of USE
+
+event = {
+	id = 8232030
+	country = FRA
+
+	name = EVT_8232030_NAME
+	desc = EVT_8232030_DESC
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8232021
+		event = 8232022
+		event = 8232023
+		event = 8232024
+		event = 8232025
+	}
+
+	date = { day = 1 month = january year = 1955 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action = {
+		name = EVT_8232030_A
+		command = { type = inherit which = DFR }
+		command = { type = inherit which = ITA }
+		command = { type = inherit which = BEL }
+		command = { type = inherit which = HOL }
+		command = { trigger = { puppet = { country = FRA country = LUX } } type = inherit which = LUX }
+		command = { type = trigger which = 8232031 }
+	}
+}
+
+event = {
+	id = 8232031
+	country = FRA
+
+	name = EVT_8232031_NAME
+	desc = EVT_8232031_NAME
+	picture = nwo\united_states_of_europe
+	style = 1
+
+	action = {
+		name = EVT_8232031_A
+		command = { type = country which = UES }
+	}
+}
+
+# European Coal and Steel Community
+
+event = {
+	id = 8232040
+	country = FRA
+	
+	name = EVT_8232040_NAME
+	desc = EVT_8232040_DESC
+	picture = nwo\european_coal_and_steel_community
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		OR = {
+			exists = DFR
+			exists = ITA
+			exists = BEL
+			exists = HOL
+			exists = LUX
+		}
+	}
+
+	date = { day = 23 month = july year = 1952 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8232040_A
+		ai_chance = 95
+		command = { type = energypool value = 20000 }
+		command = { type = metalpool value = 10000 }
+	}
+	
+	action = {
+		name = EVT_8232040_B
+		ai_chance = 5
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = BEL value = -50 }
+		command = { type = relation which = HOL value = -50 }
+		command = { type = relation which = LUX value = -50 }
+		command = { type = sleepevent which = 8232050 } # Formation of EEC
+	}
+
+}
+
+event = {
+	id = 8232041
+	country = DFR
+
+	name = EVT_8232041_NAME
+	desc = EVT_8232041_DESC
+	picture = nwo\european_coal_and_steel_community
+	style = 1
+	
+	trigger = {
+		flag = cold_war
+		event = 8232040
+	}
+
+	date = { day = 23 month = july year = 1952 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8232041_A
+		ai_chance = 95
+		command = { type = energypool value = 20000 }
+		command = { type = metalpool value = 10000 }
+	}
+	
+	action = {
+		name = EVT_8232041_B
+		ai_chance = 5
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = BEL value = -50 }
+		command = { type = relation which = HOL value = -50 }
+		command = { type = relation which = DFR value = -50 }
+		command = { type = sleepevent which = 8232050 } # Formation of EEC
+	}
+
+}
+
+event = {
+	id = 8232042
+	country = ITA
+
+	name = EVT_8232042_NAME
+	desc = EVT_8232042_DESC
+	picture = nwo\european_coal_and_steel_community
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8232040
+	}
+
+	date = { day = 23 month = july year = 1952 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8232042_A
+		ai_chance = 95
+		command = { type = energypool value = 20000 }
+		command = { type = metalpool value = 10000 }
+	}
+	
+	action = {
+		name = EVT_8232042_B
+		ai_chance = 5
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = BEL value = -50 }
+		command = { type = relation which = HOL value = -50 }
+		command = { type = relation which = LUX value = -50 }
+		command = { type = sleepevent which = 8232050 } # Formation of EEC
+	}
+
+}
+
+event = {
+	id = 8232043
+	country = BEL
+
+	name = EVT_8232043_NAME
+	desc = EVT_8232043_DESC
+	picture = nwo\european_coal_and_steel_community
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8232040
+	}
+
+	date = { day = 23 month = july year = 1952 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8232043_A
+		ai_chance = 95
+		command = { type = energypool value = 20000 }
+		command = { type = metalpool value = 10000 }
+	}
+	
+	action = {
+		name = EVT_8232043_B
+		ai_chance = 5
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = HOL value = -50 }
+		command = { type = relation which = LUX value = -50 }
+		command = { type = sleepevent which = 8232050 } # Formation of EEC
+	}
+
+}
+
+event = {
+	id = 8232044
+	country = HOL
+
+	name = EVT_8232044_NAME
+	desc = EVT_8232044_DESC
+	picture = nwo\european_coal_and_steel_community
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8232040
+	}
+
+	date = { day = 23 month = july year = 1952 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8232044_A
+		ai_chance = 95
+		command = { type = energypool value = 20000 }
+		command = { type = metalpool value = 10000 }
+	}
+	
+	action = {
+		name = EVT_8232044_B
+		ai_chance = 5
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = BEL value = -50 }
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = LUX value = -50 }
+		command = { type = sleepevent which = 8232050 } # Formation of EEC
+	}
+
+}
+
+event = {
+	id = 8232045
+	country = LUX
+
+	name = EVT_8232045_NAME
+	desc = EVT_8232045_DESC
+	picture = nwo\european_coal_and_steel_community
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8232040
+	}
+
+	date = { day = 23 month = july year = 1952 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action = {
+		name = EVT_8232045_A
+		ai_chance = 95
+		command = { type = energypool value = 20000 }
+		command = { type = metalpool value = 10000 }
+	}
+	
+	action = {
+		name = EVT_8232045_B
+		ai_chance = 5
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = BEL value = -50 }
+		command = { type = relation which = HOL value = -50 }
+		command = { type = relation which = DFR value = -50 }
+	}
+
+}
+
+# European Economic Community
+
+event = {
+	id = 8232050
+	country = FRA
+	
+	name = EVT_8232050_NAME
+	desc = EVT_8232050_DESC
+	picture = nwo\european_economic_community
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		government = democratic
+		OR = {
+			exists = DFR
+			exists = ITA
+			exists = BEL
+			exists = HOL
+			exists = LUX
+		}
+	}
+
+	date = { day = 25 month = march year = 1957 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8232050_A
+		ai_chance = 95
+		command = { type = relation which = DFR value = 200 }
+		command = { type = relation which = ITA value = 200 }
+		command = { type = relation which = BEL value = 200 }
+		command = { type = relation which = HOL value = 200 }
+		command = { type = relation which = LUX value = 200 }
+	}
+	
+	action = {
+		name = EVT_8232050_B
+		ai_chance = 5
+		command = { type = relation which = DFR value = -50 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = BEL value = -50 }
+		command = { type = relation which = HOL value = -50 }
+		command = { type = relation which = LUX value = -50 }
+		# Economic result of European integration
+		command = { type = sleepevent which = 8232051 }
+		command = { type = sleepevent which = 8232052 }
+		command = { type = sleepevent which = 8232053 }
+		command = { type = sleepevent which = 8232054 }
+		command = { type = sleepevent which = 8232055 }
+		command = { type = sleepevent which = 8232056 }
+	}
+
+}
+
+event = {
+	id = 8232051
+	country = FRA
+
+	name = EVT_8232051_NAME
+	desc = EVT_8232051_DESC
+	picture = nwo\european_economic_community
+	style = 1
+
+	trigger = {
+		event = 8232050
+	}
+
+	date = { day = 25 month = march year = 1957 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8232051_A
+		command = { type = industrial_modifier which = total value = 7 }
+	}
+
+}
+
+event = {
+	id = 8232052
+	country = DFR
+
+	name = EVT_8232052_NAME
+	desc = EVT_8232052_DESC
+	picture = nwo\european_economic_community
+	style = 1
+
+	trigger = {
+		event = 8232050
+	}
+
+	date = { day = 25 month = march year = 1957 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8232052_A
+		command = { type = industrial_modifier which = total value = 7 }
+	}
+
+}
+
+event = {
+	id = 8232053
+	country = ITA
+
+	name = EVT_8232053_NAME
+	desc = EVT_8232053_DESC
+	picture = nwo\european_economic_community
+	style = 1
+
+	trigger = {
+		event = 8232050
+	}
+
+	date = { day = 25 month = march year = 1957 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8232053_A
+		command = { type = industrial_modifier which = total value = 7 }
+	}
+
+}
+
+event = {
+	id = 8232054
+	country = BEL
+
+	name = EVT_8232054_NAME
+	desc = EVT_8232054_DESC
+	picture = nwo\european_economic_community
+	style = 1
+
+	trigger = {
+		event = 8232050
+	}
+
+	date = { day = 25 month = march year = 1957 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8232054_A
+		command = { type = industrial_modifier which = total value = 7 }
+	}
+
+}
+
+event = {
+	id = 8232055
+	country = HOL
+
+	name = EVT_8232055_NAME
+	desc = EVT_8232055_DESC
+	picture = nwo\european_economic_community
+	style = 1
+
+	trigger = {
+		event = 8232050
+	}
+
+	date = { day = 25 month = march year = 1957 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8232055_A
+		command = { type = industrial_modifier which = total value = 7 }
+	}
+
+}
+
+event = {
+	id = 8232056
+	country = LUX
+
+	name = EVT_8232056_NAME
+	desc = EVT_8232056_DESC
+	picture = nwo\european_economic_community
+	style = 1
+
+	trigger = {
+		event = 8232050
+	}
+
+	date = { day = 25 month = march year = 1957 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1957 }
+
+	action = {
+		name = EVT_8232056_A
+		command = { type = industrial_modifier which = total value = 7 }
+	}
+
+}
+
+# [tbd] Common Agricultural Policy?

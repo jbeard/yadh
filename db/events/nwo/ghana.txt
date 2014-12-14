@@ -1,0 +1,421 @@
+event = {
+	id = 8006101
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 660001 } # Sir Arnold W. Hodson
+		command = { type = headofgovernment which = 660100 } # Sir Arnold W. Hodson
+	}
+}
+
+event = {
+	id = 8006102
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 660101 } # Sir Allan C.M. Burns
+		command = { type = headofgovernment which = 660002 } # Sir Allan C.M. Burns
+	}
+}
+
+event = {
+	id = 8006103
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1948 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 660102 } # Gerald Hallen Creasy
+		command = { type = headofgovernment which = 660103 } # Gerald Hallen Creasy
+	}
+}
+
+event = {
+	id = 8006104
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1949 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1956 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 660012 } # Sir Charles Arden-Clarke
+		command = { type = headofgovernment which = 660104 } # Sir Charles Arden-Clarke
+	}
+}
+
+event = {
+	id = 8006105
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1957 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1959 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 660105 } # William Lord Listowel
+		command = { type = headofgovernment which = 660015 } # Kwame Nkrumah
+		command = { type = foreignminister which = 660018 } # Harry Nkiwe
+		command = { type = armamentminister which = 660021 } # Isaac Julianson
+		command = { type = ministerofsecurity which = 660025 } # Junior W.K. Hartley
+		command = { type = ministerofintelligence which = 660028 } # T.R. Hatton
+		command = { type = chiefofstaff which = 660031 } # Abel Ocran
+		command = { type = chiefofarmy which = 660034 } # Ignatius Acheampong
+		command = { type = chiefofnavy which = 660037 } # Obigjo Amedume
+		command = { type = chiefofair which = 660040 } # Obigjo Amedume
+	}
+}
+
+event = {
+	id = 8006106
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1960 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1965 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 660013 } # Kwame Nkrumah
+		command = { type = headofgovernment which = 660015 } # Kwame Nkrumah
+		command = { type = foreignminister which = 660019 } # Mauricius Offroye
+		command = { type = armamentminister which = 660022 } # Duncan J. O'Leary
+		command = { type = ministerofsecurity which = 660026 } # Daniel Kwuma
+		command = { type = ministerofintelligence which = 660029 } # Modimba Awanka
+		command = { type = chiefofstaff which = 660032 } # Ignatius Acheampong
+		command = { type = chiefofarmy which = 660035 } # Abel Ocran
+		command = { type = chiefofnavy which = 660038 } # Moses Kwanikwa
+		command = { type = chiefofair which = 660041 } # Junior W.K. Hartley
+	}
+}
+
+event = {
+	id = 8006107
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1966 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1968 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 660106 } # Joseph Arthur Ankrah
+		command = { type = headofgovernment which = 660107 } # Joseph Arthur Ankrah
+	}
+}
+
+event = {
+	id = 8006108
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1969 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1969 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 660108 } # Akwasi Amankwa Afrifa
+		command = { type = headofgovernment which = 660109 } # Kofi Abrefa Busia
+	}
+}
+
+event = {
+	id = 8006109
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1970 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 660110 } # Edward Akufo-Addo
+	}
+}
+
+event = {
+	id = 8006110
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 660111 } # Ignatius Kutu Acheampong
+		command = { type = headofgovernment which = 660112 } # Ignatius Kutu Acheampong
+	}
+}
+
+event = {
+	id = 8006111
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1978 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1978 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 660113 } # Fred Akuffo
+		command = { type = headofgovernment which = 660114 } # Fred Akuffo
+	}
+}
+
+event = {
+	id = 8006112
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1979 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 660118 } # Jerry Rawlings
+		command = { type = headofgovernment which = 660115 } # Joseph W.S. deGraft-Johnson
+	}
+}
+
+event = {
+	id = 8006113
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1980 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1981 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 660116 } # Hilla Limann
+		command = { type = headofgovernment which = 660117 } # Hilla Limann
+	}
+}
+
+event = {
+	id = 8006114
+	country = GLD
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1982 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 660118 } # Jerry Rawlings
+		command = { type = headofgovernment which = 660119 } # Jerry Rawlings
+	}
+}
+

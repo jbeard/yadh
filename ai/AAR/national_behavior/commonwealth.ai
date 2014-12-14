@@ -1,0 +1,46 @@
+# Commonwealth ai by Limith
+###################################
+# Diplomacy
+###################################
+claim_acceptance = -70
+
+befriend = { 
+	ENG = 100
+	SAF = 100
+	AST = 100
+	CAN = 100
+	EGY = 80
+	YEM = 80
+}
+
+protect = {	
+    ENG = 100
+	SAF = 100
+	AST = 100
+	CAN = 100
+	EGY = 80
+	YEM = 80
+}
+
+target = { } 
+trade = {
+	favored = {
+		ENG = 100
+		SAF = 100
+		AST = 100
+		CAN = 100
+		EGY = 80
+		YEM = 80
+	}
+}
+tech_sharing = {
+	favored = {
+		ENG = 100
+		SAF = 100
+		AST = 100
+		CAN = 100
+		EGY = 80
+		YEM = 80
+	}
+}
+

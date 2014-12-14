@@ -1,0 +1,2418 @@
+##########Australia, A Nation Worth Fighting For 1914-1918 by OneAussieMan777#############
+
+event = {
+	id = 88880000
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 27 month = january year = 1914 }
+
+	name = "Lord Denman Resigns"
+	desc = "88880000_DESC"
+
+	action = {
+		name = "Wonderful."
+	}
+		}
+
+event = {
+	id = 88880001
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 16 month = March year = 1914 }
+
+	name = "Disaster at Exeter."
+	desc = "88880001_DESC"
+
+	action = {
+		name = "Damn it we need better safety protocols!"
+	command = { type = dissent value = 1 }
+	command = { type = tc_mod value = -1 }
+	}
+		}
+
+event = {
+	id = 88880002
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 16 month = july year = 1914 }
+
+	name = "The First Air Mail"
+	desc = "88880002_DESC"
+
+	action = {
+		name = "Finally! A safer and more secure way to send messages."
+	command = { type = dissent value = -2 }
+	command = { type = intelligence which = them value = -10 }
+	command = { type = gain_tech which = 4500 }
+	command = { type = gain_tech which = 4600 }
+	command = { type = construct which = air_base where = 1708 value = 3 }
+	command = { type = construct which = air_base where = 1705 value = 3 }
+	}
+		}
+
+event = {
+	id = 88880003
+	TAG =  { AST ENG }
+	style = 0
+
+	date = { day = 29 month = july year = 1914 }
+
+	name = "Australia's War Rally"
+	desc = "88880003_DESC"
+
+	action = {
+		name = "For King and country! FOR THE EMPIRE!"
+	command = { type = dissent value = -10 }
+	command = { type = relation which = ENG value = 25 }
+	command = { type = relation which = AST value = 25 }
+	command = { type = relation which = U08 value = -15 }
+	command = { type = relative_manpower value = 5 }
+	command = { type = domestic which = defense_lobby value = 2 }
+	command = { type = relative_manpower value = 2 }
+	command = { type = domestic which = interventionism value = 2 }
+	}
+		}
+
+event = {
+	id = 88880004
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 4 month = August year = 1914 }
+	deathdate = { day = 4 month = August year = 1918 }
+
+	name = "Dark Days In Europe"
+	desc = "88880004_DESC"
+
+	decision_trigger = { war = { country = ENG country = U08 } }
+
+	action = {
+		name = "Dark times have befallen our young nation."
+	command = { type = dissent value = 1 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = relation which = U08 value = -30 }
+	}
+		}
+
+event = {
+	id = 88880005
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 5 month = August year = 1914 }
+	deathdate = { day = 4 month = August year = 1918 }
+
+	name = "Fort Nepean Incident"
+	desc = "88880005_DESC"
+
+	decision_trigger = { war = { country = AST country = U08 } }
+
+	action = {
+		name = "We'll take that off your hands, thank you."
+	command = { type = add_division which = "Pfalz" value = transport when = 1 }
+	}
+		}
+
+event = {
+	id = 88880006
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 10 month = August year = 1914 }
+
+	name = "Australia Sends Men To England"
+	desc = "88880006_DESC"
+
+	decision_trigger = { war = { country = ENG country = U08 } }
+
+	action = {
+		name = "They can blow it out their arse."
+	command = { type = dissent value = -1 }
+	command = { type = relation which = ENG value = -20 }
+	}
+	action = {
+		name = "If his majesty wishes..."
+	command = { type = dissent value = 3 }
+	command = { type = manpowerpool value = -10 }
+	command = { type = relation which = ENG value = 20 }
+	}
+		}
+
+event = {
+	id = 88880007
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 11 month = August year = 1914 }
+
+	name = "Australia Hands Naval Command To Britain"
+	desc = "88880007_DESC"
+
+	decision_trigger = { war = { country = ENG country = U08 } }
+
+	action = {
+		name = "Bugger Mother England."
+	command = { type = dissent value = -1 }
+	command = { type = relation which = ENG value = -10 }
+	}
+	action = {
+		name = "As His Majesty wishes."
+	command = { type = dissent value = 3 }
+	command = { type = manpowerpool value = -15 }
+	command = { type = relation which = ENG value = 20 }
+	}
+		}
+
+event = {
+	id = 88880008
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 18 month = August year = 1914 }
+	deathdate = { day = 18 month = August year = 1918 }
+
+	name = "Sights Set On New Guinea"
+	desc = "88880008_DESC"
+
+	decision_trigger = { war = { country = ENG country = U08 } }
+
+	action = {
+		name = "For the first time we fight not as colonials but Australians."
+	command = { type = morale which = naval value = 5 }
+	command = { type = max_organization which = naval value = 5 }
+	command = { type = morale which = air value = 5 }
+	command = { type = max_organization which = air value = 5 }
+	command = { type = max_organization which = land value = 5 }
+	command = { type = morale which = land value = 5 }
+	command = { type = dissent value = -1 }
+	}
+		}
+
+event = {
+	id = 88880009
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 9 month = September year = 1914 }
+	deathdate = { day = 9 month = September year = 1918 }
+
+	name = "Nauru Captured"
+	desc = "88880009_DESC"
+
+	decision_trigger = { war = { country = ENG country = U08 } }
+
+	action = {
+		name = "This is the breakthrough that we needed."
+	command = { type = army_detection which = us value = 2 }
+	command = { type = intelligence which = us value = 2 }
+	}
+		}
+
+event = {
+	id = 88880010
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 10 month = September year = 1914 }
+	deathdate = { day = 10 month = September year = 1918 }
+
+	name = "A Hero Signs Up"
+	desc = "88880010_DESC"
+
+	action = {
+		name = "We could do with more like him in the Empire."
+	command = { type = attrition_mod value = 5 }
+	command = { type = trickleback_mod value = 5 }
+	command = { type = morale which = land value = 2 }
+	}
+		}
+
+event = {
+	id = 88880011
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 11 month = September year = 1914 }
+	deathdate = { day = 13 month = September year = 1917 }
+
+	name = "New Guinea Landings"
+	desc = "88880011_DESC"
+
+	decision_trigger = {
+				control = { province = 1234 } #Buna
+				control = { province = 1602 } #Lae
+				control = { province = 1605 } #Wewak
+	}
+	action = {
+		name = "One more step towards safety..."
+	command = { type = dissent value = -1 }
+	}
+		}
+
+event = {
+	id = 88880012
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 13 month = September year = 1914 }
+	deathdate = { day = 13 month = September year = 1917 }
+
+	name = "Capture Of Rabaul"
+	desc = "88880012_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = U08 }
+		AND = { control = { province = 1726 data = AST } } #Rabaul
+	
+	}	
+	action = {
+		name = "Getting closer."
+	command = { type = dissent value = -3 }
+	command = { type = intelligence which = us value = 2 }
+	}
+		}
+
+event = {
+	id = 88880013
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 14 month = September year = 1914 }
+	deathdate = { day = 14 month = September year = 1917 }
+
+	name = "AE 1 Lost At Sea"
+	desc = "88880013_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = U08 }
+	
+	}	
+	action = {
+		name = "Vengeance shall be ours..."
+	command = { type = dissent value = 1 }
+	command = { type = manpowerpool value = -2.5 }
+	}
+		}
+
+event = {
+	id = 88880014
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 17 month = September year = 1914 }
+	deathdate = { day = 17 month = September year = 1917 }
+
+	name = "German Capitulation"
+	desc = "88880014_DESC"
+
+	decision_trigger = {
+				control = { province = 1234 } #Buna
+				control = { province = 1602 } #Lae
+				control = { province = 1605 } #Wewak
+				control = { province = 1603 } #Mount Hagen
+				control = { province = 1610 } #Mendi
+	}
+
+	action = {
+		name = "Now we're safe it's time to take back Europe."
+	command = { type = dissent value = -1 }
+	command = { type = max_organization which = land value = 1 }
+	command = { type = morale which = land value = 1 }
+	command = { type = addcore which = 1603 }  #Mount Hagen
+	command = { type = addcore which = 1234 }  #Buna
+	command = { type = addcore which = 1602 }  #Lae
+	command = { type = addcore which = 1605 }  #Wewak
+	command = { type = addcore which = 1610 }  #Mendi
+	}
+		}
+
+event = {
+	id = 88880015
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 29 month = October year = 1914 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "War Precautions Act 1914"
+	desc = "88880015_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Nothing of ours will be used against us."
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = intelligence which = them value = -10 }
+	}
+		}
+
+event = {
+	id = 88880016
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 1 month = November year = 1914 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Australia Over The Equator"
+	desc = "88880016_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+
+	}	
+	action = {
+		name = "We should probably start heading that way..."
+	command = { type = relation which = ENG value = 25 }
+	command = { type = relation which = JAP value = 25 }
+	command = { type = relation which = NZL value = 25 }
+	}
+		}
+
+event = {
+	id = 88880017
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 9 month = November year = 1914 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "The RAN's First Victory"
+	desc = "88880017_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = U08 }
+
+	}	
+	action = {
+		name = "Know and fear the RAN!"
+	command = { type = max_organization which = naval value = 5 }
+	command = { type = morale which = naval value = 5 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	}
+		}
+
+event = {
+	id = 88880018
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 29 month = November year = 1914 }
+	deathdate = { day = 29 month = November year = 1917 }
+
+	name = "The Australian Flying Corps Is Born"
+	desc = "88880018_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = U08 }
+
+	}	
+	action = {
+		name = "May we rule the skies as we do the land."
+		command = { type = add_division which = "CFS-3" value = transport_plane when = 0 }
+		command = { type = add_division which = "CFS-4" value = interceptor when = 3 }
+	command = { type = construct which = air_base where = 1602 value = 2 }  #Port Moresby
+	command = { type = construct which = air_base where = 1607 value = 2 }  #Lae
+	}
+		}
+
+event = {
+	id = 88880019
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = December year = 1914 }
+
+	name = "Pride Of The Fleet"
+	desc = "88880019_DESC"
+	
+	action = {
+		name = "May the Empire forever rule the seas."
+	command = { type = max_organization which = naval value = 1 }
+	command = { type = morale which = naval value = 1 }
+	command = { type = dissent value = -2 }
+	command = { type = add_division which = "HMAS Derwent" value = battleship when = 4 }
+	}
+		}
+
+event = {
+	id = 88880020
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 1 month = January year = 1915 }
+	deathdate = { day = 1 month = January year = 1918 }
+
+	name = "Renegade Turks Attack"
+	desc = "88880020_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+
+	}	
+	action = {
+		name = "The bastards must PAY!"
+
+	command = { type = dissent value = 2.5 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = domestic which = interventionism value = 1 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = relative_manpower value = 5 }
+	command = { type = relation which = OTT value = -25 }
+	}
+		}
+
+event = {
+	id = 88880021
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 9 month = March year = 1915 }
+
+	name = "New Industries Built"
+	desc = "88880021_DESC"
+	
+	action = {
+		name = "Marvelous."
+
+	command = { type = dissent value = -2 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = construct which = ic where = 1703 value = 2 }
+	command = { type = construct which = infrastructure where = 1703 value = 20 } #NEWCASTLE#
+	}
+		}
+
+event = {
+	id = 88880022
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 25 month = April year = 1915 }
+	deathdate = { day = 25 month = April year = 1918 }
+
+	name = "Military Blunder"
+	desc = "88880022_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+
+	}	
+	action = {
+		name = "We showed them who's boss."
+	command = { type = relation which = OTT value = -10 }
+	command = { type = counterattack value = 5 }
+	command = { type = delay value = 5 }
+	command = { type = manpowerpool value = -1.5 }
+	}
+		}
+
+event = {
+	id = 88880023
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 29 month = April year = 1915 }
+	deathdate = { day = 29 month = April year = 1918 }
+
+	name = "The AE2 Is Lost"
+	desc = "88880023_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+
+	}	
+	action = {
+		name = "We need to stop this from happening again."
+	command = { type = relation which = OTT value = -10 }
+	command = { type = dissent value = 2 }
+	command = { type = manpowerpool value = -1.5 }
+	}
+		}
+
+event = {
+	id = 88880024
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 1 month = May year = 1915 }
+	deathdate = { day = 1 month = May year = 1918 }
+
+	name = "War Precautions Act Ammendment"
+	desc = "88880024_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We need to do this."
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = domestic which = interventionism value = 1 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = free_market value = -1 }
+	}
+		}
+
+event = {
+	id = 88880025
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 6 month = May year = 1915 }
+	deathdate = { day = 6 month = May year = 1917 }
+
+	name = "The Conservatorium Opens"
+	desc = "88880025_DESC"
+
+	decision_trigger = { money = 15 }
+		
+	action = {
+		name = "This ought to keep the people amused."
+	command = { type = dissent value = -2 }
+	command = { type = money value = -15 }
+	}
+		}
+
+event = {
+	id = 88880026
+	style = 0
+
+	date = { day = 19 month = May year = 1915 }
+	deathdate = { day = 19 month = May year = 1917 }
+
+	name = "A Legend Passes Away"
+	desc = "88880026_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+	}	
+	action = {
+		name = "Now what are we going to do!?"
+	command = { type = attrition_mod value = -5 }
+	command = { type = trickleback_mod value = -5 }
+	command = { type = morale which = land value = -2 }
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880027
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = May year = 1915 }
+	deathdate = { day = 19 month = May year = 1917 }
+
+	name = "Sir William Bridges Dies"
+	desc = "88880027_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+	}	
+	action = {
+		name = "Shit! Shit! SHIT!"
+	command = { type = max_organization which = land value = -2 }
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880028
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = May year = 1915 }
+	deathdate = { day = 19 month = May year = 1917 }
+
+	name = "Great Turkish Offensive"
+	desc = "88880028_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+	}	
+	action = {
+		name = "I think we've proven ourselves..."
+	command = { type = max_organization which = land value = 4 }
+	command = { type = dissent value = -1 }
+	command = { type = manpowerpool value = -5 }
+	command = { type = relation which = OTT value = -10 }
+	command = { type = relation which = ENG value = 10 }
+	command = { type = relation which = FRA value = 10 }
+	command = { type = relation which = U02 value = 10 }
+	command = { type = relation which = BEL value = 10 }
+	command = { type = relation which = ITA value = 10 }
+	}
+		}
+
+event = {
+	id = 88880029
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 1 month = July year = 1915 }
+	deathdate = { day = 19 month = May year = 1917 }
+
+	name = "Naval Broadcasting"
+	desc = "88880029_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+	}	
+	action = {
+		name = "It is for the best."
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = domestic which = freedom value = -1 }
+	}
+		}
+
+event = {
+	id = 88880030
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 14 month = July year = 1915 }
+	deathdate = { day = 19 month = May year = 1917 }
+
+	name = "The War Census Act"
+	desc = "88880030_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+	}	
+	action = {
+		name = "The people won't be happy..."
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 5 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = domestic which = political_left value = -1 }
+	command = { type = dissent value = 1.5 }
+	}
+		}
+
+event = {
+	id = 88880031
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 8 month = August year = 1915 }
+	deathdate = { day = 19 month = May year = 1917 }
+
+	name = "The Victoria Cross"
+	desc = "88880031_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+	}	
+	action = {
+		name = "Why would any silly bastard send us in there??"
+
+	command = { type = dissent value = 1.5 }
+	command = { type = manpowerpool value = -5 }
+	command = { type = morale which = land value = -2 }
+	command = { type = relation which = ENG value = -5 }
+	}
+		}
+
+event = {
+	id = 88880032
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 15 month = August year = 1915 }
+	deathdate = { day = 19 month = May year = 1917 }
+
+	name = "Australian Innovation"
+	desc = "88880032_DESC"
+
+	decision_trigger = { money = 1000
+	}	
+	action = {
+		name = "Leave it to private industry."
+
+	command = { type = industrial_modifier which = total value = 0.5 }
+	command = { type = industrial_modifier which = supplies value = 1.25 }
+	}
+	action = {
+		name = "Standardise this nationally."
+	command = { type = industrial_modifier which = total value = 2 }
+	command = { type = industrial_modifier which = supplies value = 10 }
+	command = { type = money value = -100 }
+	}
+		}
+
+event = {
+	id = 88880033
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 1 month = December year = 1915 }
+	deathdate = { day = 1 month = December year = 1917 }
+
+	name = "Dead Silence"
+	desc = "88880033_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+	}	
+	action = {
+		name = "Finally, the war is coming to an end for some of us."
+
+	command = { type = army_detection which = them value = -10 }
+	command = { type = intelligence which = them value = -10 }
+	command = { type = dissent value = -2.5 }
+	}
+		}
+
+event = {
+	id = 88880034
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 20 month = December year = 1915 }
+	deathdate = { day = 1 month = December year = 1917 }
+
+	name = "Farewell Johnny Turk"
+	desc = "88880034_DESC"
+
+	decision_trigger = {
+			war = { country = AST country = OTT }
+	}	
+	action = {
+		name = "I'm glad to leave this god forsaken land."
+
+	command = { type = trickleback_mod value = 2 }
+	command = { type = dissent value = -4 }
+	}
+		}
+
+event = {
+	id = 88880035
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 10 month = June year = 1915 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Periscope Rifle"
+	desc = "88880035_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Australian ingenuity shows itself..."
+	command = { type = task_efficiency which = attack value = 0.05 }
+	command = { type = task_efficiency which = support_attack value = 0.05 }
+	command = { type = task_efficiency which = support_defense value = 0.05 }
+	command = { type = supply_consumption which = land value = -0.5 }
+	}
+		}
+
+event = {
+	id = 88880036
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 20 month = January year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "A Trip Across The Pond"
+	desc = "88880036_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Hi-ho, hi-ho it's off to Britain we go."
+	command = { type = supplies value = -2 }
+	command = { type = money value = -1 }
+	command = { type = relation which = ENG value = 15 }
+	command = { type = relation which = CAN value = 20 }
+	}
+		}
+
+event = {
+	id = 88880037
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 14 month = February year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Sydney Rampage"
+	desc = "88880037_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "This is the thanks I get fighting for YOU!"
+
+	command = { type = morale which = land value = -2 }
+	command = { type = dissent value = 5 }
+	command = { type = max_organization which = land value = -2 }
+	}
+	action = {
+		name = "Have them all executed."
+	command = { type = dissent value = 25 }
+	command = { type = domestic which = freedom value = -2 }
+	command = { type = domestic which = defense_lobby value = 2 }
+	command = { type = domestic which = political_left value = -2 }
+	command = { type = domestic which = democratic value = -3 }
+	}
+		}
+
+event = {
+	id = 88880038
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 20 month = March year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "The Fight For Europe Begins"
+	desc = "88880038_DESC"
+
+	decision_trigger = {
+			war = { country = FRA }
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "French food, French wine, French women!"
+
+	command = { type = morale which = land value = 2 }
+	command = { type = relation which = FRA value = 25 }
+	}
+	action = {
+		name = "We've had enough..."
+	command = { type = dissent value = 75 }
+	command = { type = domestic which = freedom value = -2 }
+	command = { type = peace which = U08 value = 1 }
+	command = { type = embargo which = AST where = U08 value = 0 }
+	command = { type = relation which = U08 value = 150 }
+	command = { type = relation which = U09 value = 120 }
+	command = { type = relation which = BUL value = 100 }
+	command = { type = relation which = OTT value = 100 }
+	command = { type = relation which = ENG value = -100 }
+	command = { type = relation which = U02 value = -100 }
+	command = { type = relation which = FRA value = -100 }
+	command = { type = relation which = ITA value = -100 }
+	command = { type = relation which = JAP value = -100 }
+		command = { type = embargo which = SWE where = AST value = 0 }
+		command = { type = embargo which = NOR where = AST value = 0 }
+		command = { type = embargo which = SPA where = AST value = 0 }
+		command = { type = embargo which = POR where = AST value = 0 }
+		command = { type = embargo which = USA where = AST value = 1 }
+		command = { type = embargo which = JAP where = AST value = 1 }
+		command = { type = embargo which = CAN where = AST value = 1 }
+		command = { type = embargo which = MEX where = AST value = 0 }
+		command = { type = embargo which = BRA where = AST value = 1 }
+		command = { type = embargo which = ARG where = AST value = 1 }
+		command = { type = embargo which = CHL where = AST value = 1 }
+		command = { type = embargo which = ENG where = AST value = 1 }
+		command = { type = embargo which = FRA where = AST value = 1 }
+		command = { type = embargo which = NZL where = AST value = 1 }
+		command = { type = embargo which = U02 where = AST value = 1 }
+		command = { type = embargo which = ITA where = AST value = 1 }
+	command = { type = domestic which = political_left value = -2 }
+	command = { type = domestic which = democratic value = -3 }
+	}
+		}
+
+event = {
+	id = 88880039
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 27 month = March year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Sorry, We're Closed"
+	desc = "88880039_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Time to reign things in a bit fellas..."
+
+	command = { type = dissent value = 2 }
+	command = {type = wartime_ic_mod value = 3 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = domestic which = free_market value = -1 }
+	}
+	action = {
+		name = "Such a thing is un-Australian!"
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = defense_lobby value = -1 }
+	command = { type = industrial_modifier which = total value = -1 }
+	command = { type = industrial_modifier which = supplies value = -2 }
+	command = { type = domestic which = free_market value = 1 }
+	command = {type = wartime_ic_mod value = -2 }
+	}
+		}
+
+event = {
+	id = 88880040
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 7 month = April year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Allies Buy Australian Wheat"
+	desc = "88880040_DESC"
+
+	decision_trigger = { supplies = 1000 }
+	
+	action = {
+		name = "Only too happy to help out."
+
+	command = { type = supplies value = -1000 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = money value = 500 }
+	}
+	action = {
+		name = "My wheat!"
+	command = { type = dissent value = 2 }
+	command = { type = domestic which = free_market value = 1 }
+	}
+		}
+
+event = {
+	id = 88880041
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 10 month = June year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "We Close At 6"
+	desc = "88880041_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We need strong, dilligent men not drunkards."
+	command = {type = wartime_ic_mod value = 2 }
+	command = { type = dissent value = 2 }
+	command = { type = industrial_modifier which = total value = 1 }
+	command = { type = industrial_modifier which = supplies value = 2 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = domestic which = free_market value = -1 }
+	}
+	action = {
+		name = "I already said such a thing is un-Australian!"
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = defense_lobby value = -1 }
+	command = { type = industrial_modifier which = total value = -1 }
+	command = { type = industrial_modifier which = supplies value = -2 }
+	command = { type = domestic which = free_market value = 1 }
+	command = {type = wartime_ic_mod value = -2 }
+	}
+		}
+
+event = {
+	id = 88880042
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 28 month = June year = 1916 }
+	deathdate = { day = 29 month = October year = 1940 }
+
+	name = "Commonwealth Shipping Line"
+	desc = "88880042_DESC"
+
+	decision_trigger = { money = 1500 }
+
+	action = {
+		name = "We only need a third of that fleet Hughesy."
+
+	command = { type = money value = -500 }
+	command = { type = add_division which = "Steamer I" value = transport when = 1 }
+	command = { type = add_division which = "Steamer II" value = transport when = 1 }
+	command = { type = add_division which = "Steamer III" value = transport when = 1 }
+	command = { type = add_division which = "Steamer IV" value = transport when = 1 }
+	command = { type = add_division which = "Steamer V" value = transport when = 1 }
+	}
+	action = {
+		name = "10 will be sufficient."
+	command = { type = add_division which = "Steamer I" value = transport when = 1 }
+	command = { type = add_division which = "Steamer II" value = transport when = 1 }
+	command = { type = add_division which = "Steamer III" value = transport when = 1 }
+	command = { type = add_division which = "Steamer IV" value = transport when = 1 }
+	command = { type = add_division which = "Steamer V" value = transport when = 1 }
+	command = { type = add_division which = "Steamer VI" value = transport when = 1 }
+	command = { type = add_division which = "Steamer VII" value = transport when = 1 }
+	command = { type = add_division which = "Steamer VIII" value = transport when = 1 }
+	command = { type = add_division which = "Steamer IX" value = transport when = 1 }
+	command = { type = add_division which = "Steamer X" value = transport when = 1 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = money value = -1000 }
+	}
+	action = {
+		name = "We'll need the lot eventually."
+	command = { type = add_division which = "Steamer I" value = transport when = 1 }
+	command = { type = add_division which = "Steamer II" value = transport when = 1 }
+	command = { type = add_division which = "Steamer III" value = transport when = 1 }
+	command = { type = add_division which = "Steamer IV" value = transport when = 1 }
+	command = { type = add_division which = "Steamer V" value = transport when = 1 }
+	command = { type = add_division which = "Steamer VI" value = transport when = 1 }
+	command = { type = add_division which = "Steamer VII" value = transport when = 1 }
+	command = { type = add_division which = "Steamer VIII" value = transport when = 1 }
+	command = { type = add_division which = "Steamer IX" value = transport when = 1 }
+	command = { type = add_division which = "Steamer X" value = transport when = 1 }
+	command = { type = add_division which = "Steamer XI" value = transport when = 1 }
+	command = { type = add_division which = "Steamer XII" value = transport when = 1 }
+	command = { type = add_division which = "Steamer XIII" value = transport when = 1 }
+	command = { type = add_division which = "Steamer XIV" value = transport when = 1 }
+	command = { type = add_division which = "Steamer XV" value = transport when = 1 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = money value = -1500 }
+	}
+		}
+
+event = {
+	id = 88880043
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = July year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Assault On Fromelle"
+	desc = "88880043_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We're nearly there, we have to be..."
+
+	command = { type = dissent value = 5 }
+	command = { type = manpowerpool value = -15 }
+	}
+		}
+
+event = {
+	id = 88880044
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 8 month = August year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Hughes Voices Need For Conscription"
+	desc = "88880044_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name ="Let the Australian people decide."
+
+	command = { }
+	}
+		}
+
+event = {
+	id = 88880045
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 29 month = August year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "The C Word, Conscription"
+	desc = "88880045_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name ="Can good come from this?."
+
+	command = { }
+	}
+		}
+
+event = {
+	id = 88880046
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 11 month = September year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "The RSL SUpports Conscription"
+	desc = "88880046_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name ="Veterans' support is a good start."
+
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = dissent value = -2 }
+	}
+		}
+
+event = {
+	id = 88880047
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 14 month = September year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Labour Party Failure"
+	desc = "88880047_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "National service it is, to protect the Empire."
+
+	command = { type = dissent value = 5 }
+	command = { type = industrial_modifier which = total value = 1 }
+	command = { type = industrial_modifier which = supplies value = 1 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = morale which = land value = 2 }
+	command = { type = max_organization which = land value = 2 }
+	command = { type = domestic which = democratic value = -1 }
+	command = { type = relative_manpower value = 5 }
+	}
+	action = {
+		name = "No, no, NO! Not under my government."
+	command = { type = dissent value = -2 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = defense_lobby value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+event = {
+	id = 88880048
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 15 month = September year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "There's That C Word Again"
+	desc = "88880048_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "This is the last thing we need with a war raging."
+
+	command = { type = dissent value = 2 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+event = {
+	id = 88880049
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 2 month = October year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "The First Conscripts"
+	desc = "88880049_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "The people will be thankful later."
+
+	command = { }
+	}
+		}
+
+event = {
+	id = 88880050
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 27 month = October year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "In House Protests"
+	desc = "88880050_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Nothing good can come from this."
+
+	command = { type = dissent value = 2 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+event = {
+	id = 88880051
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 28 month = October year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Conscription Defeated"
+	desc = "88880051_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We've told those arseholes conscripts it is."
+
+	command = { type = dissent value = 4 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = morale which = land value = -2 }
+	command = { type = max_organization which = land value = 2 }
+	command = { type = domestic which = democratic value = -1 }
+	command = { type = relative_manpower value = 1 }
+	}
+	action = {
+		name = "The people can have their way."
+	command = { type = dissent value = -4 }
+	command = { type = morale which = land value = 1 }
+	command = { type = max_organization which = land value = -2 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = defense_lobby value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	command = { type = relative_manpower value = -2 }
+	}
+		}
+
+event = {
+	id = 88880052
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 2 month = November year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "STRIKE! STRIKE! STRIKE!"
+	desc = "88880052_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Not now. NOT NOW!"
+
+	command = { type = dissent value = 10 }
+	command = { type = industrial_modifier which = total value = -10 }
+	command = { type = industrial_modifier which = supplies value = -10 }
+	}
+		}
+
+event = {
+	id = 88880053
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 14 month = November year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "National Labour Party"
+	desc = "88880053_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Nothing much we can do about this."
+
+	command = { type = domestic which = democratic value = 1 }
+	command = { type = dissent value = -0.5 }
+	}
+		}
+
+event = {
+	id = 88880054
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 22 month = November year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Conscripts Released"
+	desc = "88880054_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "You'd think that, wouldn't you?."
+
+	command = { type = dissent value = 3 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = domestic which = defense_lobby value = 1 }
+	command = { type = morale which = land value = -1 }
+	command = { type = max_organization which = land value = 1 }
+	command = { type = domestic which = democratic value = -1 }
+	command = { type = add_division which = "Conscripts" value = infantry when = 2 }
+	command = { type = relative_manpower value = 7 }
+	}
+	action = {
+		name = "Let them go, but encourage them to stay."
+	command = { type = dissent value = -4 }
+	command = { type = morale which = land value = 1 }
+	command = { type = max_organization which = land value = -1 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = defense_lobby value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+event = {
+	id = 88880055
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 2 month = December year = 1916 }
+	deathdate = { day = 2 month = December year = 1917 }
+
+	name = "IWW Sedition"
+	desc = "88880055_DESC"
+	
+	action = {
+		name = "Better dead, than red. Crush their lies."
+
+	command = { type = domestic which = political_left value = -1 } 
+	}
+	action = {
+		name = "What harm could they do?"
+	command = { type = dissent value = 2 }
+	command = { type = domestic which = political_left value = 2 }
+	command = { type = domestic which = freedom value = 1 }
+	command = { type = domestic which = defense_lobby value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	command = { type = industrial_modifier which = supplies value = -2 }
+	}
+		}
+
+event = {
+	id = 88880056
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 4 month = December year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Pick Up Tools Again"
+	desc = "88880056_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Finally we're getting back on track."
+
+	command = { type = dissent value = -10 }
+	command = { type = industrial_modifier which = total value = 10 }
+	command = { type = industrial_modifier which = supplies value = 10 }
+	}
+		}
+
+event = {
+	id = 88880057
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 28 month = December year = 1916 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Clermont Floods"
+	desc = "88880057_DESC"
+
+	action = {
+		name = "An unavoidable tragedy."
+
+	command = { type = manpowerpool value = -0.25 }
+	command = { type = tc_mod value = -2 }
+	}
+		}
+
+event = {
+	id = 88880058
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 1 month = January year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Daylight Savings"
+	desc = "88880058_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Do you think men enjoy being shot at to?"
+
+	command = { type = dissent value = 1.5 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = industrial_modifier which = total value = 1.5 }
+	command = {type = wartime_ic_mod value = 2 }
+	}
+	action = {
+		name = "Let's keep wasting resources then."
+	command = { type = domestic which = free_market value = 1 }
+	command = {type = wartime_ic_mod value = -2 }
+	}
+		}
+
+event = {
+	id = 88880059
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 7 month = February year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "A New Party Is Born"
+	desc = "88880059_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "United we stand, divided we fall."
+
+	command = { }
+	}
+		}
+
+event = {
+	id = 88880060
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = March year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Australian Comedy"
+	desc = "88880060_DESC"
+
+	action = {
+		name = "Our AIF boys will love this to."
+
+	command = { type = dissent value = -1 }
+	command = { type = morale which = land value = 0.5 }
+	}
+		}
+
+event = {
+	id = 88880061
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 11 month = April year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Hindenburg Breached"
+	desc = "88880061_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "So much for six months..."
+
+	command = { type = dissent value = 2 }
+	command = { type = morale which = land value = -1 }
+	command = { type = manpowerpool value = -12 }
+	}
+		}
+
+event = {
+	id = 88880062
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 5 month = May year = 1917 }
+
+	name = "Polling Landslide"
+	desc = "88880062_DESC"
+
+	action = {
+		name = "Hurrah!"
+
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	command = { type = domestic which = political_left value = -1 }
+	}
+		}
+
+event = {
+	id = 88880063
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 6 month = May year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "New Archbishop"
+	desc = "88880063_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We can always arrest or kill him."
+	command = { type = dissent value = 15 }
+	command = { type = domestic which = freedom value = -2 }
+	command = { type = domestic which = defense_lobby value = 2 }
+	command = { type = domestic which = democratic value = -2 }
+	}
+	action = {
+		name = "Let them go, but encourage recruitment."
+	command = { type = dissent value = -1 }
+	command = { type = morale which = land value = 1 }
+	command = { type = domestic which = defense_lobby value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+event = {
+	id = 88880064
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 24 month = May year = 1917 }
+
+	name = "Les Darcy Dies"
+	desc = "88880064_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Such a waste..."
+
+	command = { type = dissent value = 2 }
+	}
+		}
+
+event = {
+	id = 88880065
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 7 month = June year = 1917 }
+
+	name = "Defending Belgium"
+	desc = "88880065_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "May their lives not be lost in vain."
+
+	command = { type = dissent value = 2 }
+	command = { type = manpowerpool value = -15 }
+	}
+		}
+
+event = {
+	id = 88880066
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 28 month = July year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "New Taxes"
+	desc = "88880066_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Tax'em, tax'em 'til we break their backsum."
+
+	command = { type = dissent value = 1 }
+	command = { type = domestic which = free_market value = -1 }
+	command = {type = wartime_ic_mod value = 5 }
+	}
+	action = {
+		name = "We send the wealthy broke?"
+	command = { type = dissent value = 10 }
+	command = { type = domestic which = free_market value = -2 }
+	command = {type = wartime_ic_mod value = -4 }
+	}
+		}
+
+event = {
+	id = 88880067
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 2 month = August year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "STRIKE! STRIKE! STRIKE!"
+	desc = "88880067_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Fair dinkum, are they trying to get us conquered?"
+	command = { type = dissent value = 20 }
+	command = { type = industrial_modifier which = total value = -14 }
+	command = { type = industrial_modifier which = supplies value = -25 }
+	}
+		}
+
+event = {
+	id = 88880068
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 17 month = August year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Fighting Together"
+	desc = "88880068_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Let's lick the bosch, together!"
+	command = { type = add_division which = "DMC I" value = cavalry when = 5 }
+	command = { type = add_division which = "DMC II" value = cavalry when = 5 }
+	command = { type = add_division which = "DMC III" value = cavalry when = 5 }
+	command = { type = relation which = U02 value = 20 }
+	command = { type = relation which = FRA value = 20 }
+	command = { type = relation which = NZL value = 20 }
+	command = { type = relation which = ENG value = 20 }
+	command = { type = relation which = ITA value = 20 }
+	}
+		}
+
+event = {
+	id = 88880069
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = August year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "A New Officer"
+	desc = "88880069_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Time to waltz Matilda boys."
+	command = { type = morale which = land value = 1 }
+	}
+		}
+
+event = {
+	id = 88880070
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 12 month = September year = 1917 }
+	deathdate = { day = 29 month = October year = 1917 }
+
+	name = "Bigger War Effort"
+	desc = "88880070_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "If we don't, we'll all be eating sauerkraut by morning."
+
+	command = { type = dissent value = 2 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = domestic which = freedom value = -1 }
+	command = {type = wartime_ic_mod value = 5 }
+	}
+	action = {
+		name = "We can't demoralise the population, give them something."
+	command = { type = domestic which = free_market value = -2 }
+	command = { type = domestic which = freedom value = 1 }
+	command = {type = wartime_ic_mod value = -1 }
+	}
+		}
+
+event = {
+	id = 88880071
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = September year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Women's Peace Army"
+	desc = "88880071_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We can't let the mobs rule the streets."
+	command = { type = dissent value = 2 }
+	}
+		}
+
+event = {
+	id = 88880072
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 20 month = September year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "3rd Battle of Ypres"
+	desc = "88880072_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "1 mile closer to victory, we hope..."
+	command = { type = dissent value = 2 }
+	command = { type = manpowerpool value = -20 }
+	command = { type = morale which = land value = -2 }
+	}
+		}
+
+event = {
+	id = 88880073
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 27 month = September year = 1917 }
+	deathdate = { day = 29 month = October year = 1919 }
+
+	name = "The Anti-Teuton Movement"
+	desc = "88880073_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Not a moment too soon either!"
+
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = freedom value = -1 }
+	command = { type = relation which = U08 value = -20 }
+	}
+	action = {
+		name = "Seems silly to me..."
+	command = { type = domestic which = freedom value = 1 }
+	}
+		}
+
+event = {
+	id = 88880074
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 17 month = October year = 1917 }
+	deathdate = { day = 29 month = October year = 1919 }
+
+	name = "Trans-Australian Railway Opens"
+	desc = "88880074_DESC"
+
+	decision_trigger = {
+			money = 750 }
+	
+	action = {
+		name = "Let's just build from Sydney to Brisbane."
+
+	command = { type = construct which = infrastructure where = 1703 value = 10 } #Newcastle
+	command = { type = construct which = infrastructure where = 1705 value = 10 } #Sydney
+	command = { type = construct which = infrastructure where = 1704 value = 10 } #Brisbane
+	command = { type = money value = -150 }
+	}
+	action = {
+		name = "We are at war, Perth to Sydney will do."
+	command = { type = construct which = infrastructure where = 1705 value = 10 } #Sydney
+	command = { type = construct which = infrastructure where = 1690 value = 10 } #Perth
+	command = { type = construct which = infrastructure where = 1689 value = 10 } #Northam
+	command = { type = construct which = infrastructure where = 1693 value = 10 } #Kalgoorlie
+	command = { type = construct which = infrastructure where = 1715 value = 10 } #Port Augusta
+	command = { type = construct which = infrastructure where = 1717 value = 10 } #Wagga Wagga
+	command = { type = construct which = infrastructure where = 1706 value = 10 } #Wollongong
+	command = { type = money value = -500 }
+	}
+	action = {
+		name = "Build the lot so we can move our troops."
+	command = { type = construct which = infrastructure where = 1705 value = 10 } #Sydney
+	command = { type = construct which = infrastructure where = 1690 value = 10 } #Perth
+	command = { type = construct which = infrastructure where = 1689 value = 10 } #Northam
+	command = { type = construct which = infrastructure where = 1693 value = 10 } #Kalgoorlie
+	command = { type = construct which = infrastructure where = 1715 value = 10 } #Port Augusta
+	command = { type = construct which = infrastructure where = 1717 value = 10 } #Wagga Wagga
+	command = { type = construct which = infrastructure where = 1706 value = 10 } #Wollongong
+	command = { type = construct which = infrastructure where = 1703 value = 10 } #Newcastle
+	command = { type = construct which = infrastructure where = 1704 value = 10 } #Brisbane
+	command = { type = money value = -750 }
+	}
+	action = {
+		name = "Connect all our capitals."
+	command = { type = construct which = infrastructure where = 1705 value = 10 } #Sydney
+	command = { type = construct which = infrastructure where = 1690 value = 10 } #Perth
+	command = { type = construct which = infrastructure where = 1689 value = 10 } #Northam
+	command = { type = construct which = infrastructure where = 1693 value = 10 } #Kalgoorlie
+	command = { type = construct which = infrastructure where = 1711 value = 10 } #Port Lincoln
+	command = { type = construct which = infrastructure where = 1715 value = 10 } #Port Augusta
+	command = { type = construct which = infrastructure where = 1717 value = 10 } #Wagga Wagga
+	command = { type = construct which = infrastructure where = 1706 value = 10 } #Wollongong
+	command = { type = construct which = infrastructure where = 1703 value = 10 } #Newcastle
+	command = { type = construct which = infrastructure where = 1704 value = 10 } #Brisbane
+	command = { type = construct which = infrastructure where = 1712 value = 10 } #Adelaide
+	command = { type = construct which = infrastructure where = 1713 value = 10 } #Robe
+	command = { type = construct which = infrastructure where = 1709 value = 10 } #Geelong
+	command = { type = construct which = infrastructure where = 1692 value = 10 } #Geraldton
+	command = { type = construct which = infrastructure where = 1708 value = 10 } #Melbourne
+	command = { type = construct which = infrastructure where = 1707 value = 10 } #Canberra
+	command = { type = construct which = infrastructure where = 1695 value = 10 } #Port Hedland
+	command = { type = construct which = infrastructure where = 1697 value = 10 } #Darwin
+	command = { type = construct which = infrastructure where = 1698 value = 10 } #Broome
+	command = { type = money value = -1000 }
+	}
+		}
+
+event = {
+	id = 88880075
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 24 month = October year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Picking Up Tools Again"
+	desc = "88880075_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "About bloody time! Now get back to work!"
+	command = { type = dissent value = -20 }
+	command = { type = industrial_modifier which = total value = 14 }
+	command = { type = industrial_modifier which = supplies value = 25 }
+	}
+		}
+
+event = {
+	id = 88880076
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 7 month = November year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Conscription Referendum"
+	desc = "88880076_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "That old chestnut again?"
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880077
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 10 month = November year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "The End Of Ypres"
+	desc = "88880077_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "I wonder how much it's costed Jerry?"
+	command = { type = dissent value = 5 }
+	command = { type = manpowerpool value = -40 }
+	command = { type = morale which = land value = -2 }
+	}
+		}
+
+event = {
+	id = 88880078
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 29 month = November year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Egged"
+	desc = "88880078_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Hahahahahaha! Serve's him right..."
+	command = { type = dissent value = -0.5 }
+	}
+		}
+
+event = {
+	id = 88880079
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 7 month = December year = 1917 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Modern Law Enforcement"
+	desc = "88880079_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "This could serve many purposes..."
+	command = { type = dissent value = -0.5 }
+	command = { type = morale which = police value = 5 }
+	command = { type = intelligence which = them value = -2 }
+	command = { type = intelligence which = us value = 2 }
+	command = { type = surprise which = land value = 2 }
+	command = { type = army_detection which = them value = -2 }
+	command = { type = army_detection which = us value = 2 }
+	}
+		}
+
+event = {
+	id = 88880080
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 20 month = December year = 1917 }
+	deathdate = { day = 29 month = October year = 1919 }
+
+	name = "Conscription Back On The Tables"
+	desc = "88880080_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We already have national service..."
+
+	command = { type = dissent value = -1 }
+	}
+	action = {
+		name = "More men, more guns, more MORE!"
+	command = { type = dissent value = 5 }
+	command = { type = relative_manpower value = 7 }
+	}
+		}
+
+event = {
+	id = 88880081
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 8 month = January year = 1918 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Billy Hughes Back In Office"
+	desc = "88880081_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Ah well, what can you do?"
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880082
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 17 month = January year = 1918 }
+
+	name = "Treasurers Conference"
+	desc = "88880082_DESC"
+	
+	action = {
+		name = "This could be a good thing"
+	command = { type = domestic which = free_market value = -1 }
+	command = {type = wartime_ic_mod value = 2 }
+	}
+		}
+
+event = {
+	id = 88880083
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 20 month = January year = 1918 }
+
+	name = "Mackay Floods"
+	desc = "88880083_DESC"
+	
+	action = {
+		name = "We will not let nature conquer us."
+	command = { type = tc_mod value = -4 }
+	command = { type = manpowerpool value = -0.05 }
+	}
+		}
+
+event = {
+	id = 88880084
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 2 month = February year = 1918 }
+
+	name = "Hurricane!"
+	desc = "88880084_DESC"
+	
+	action = {
+		name = "Let's pick up the pieces and rebuild."
+	command = { type = construct which = infrastructure where = 1708 value = -10 } #Melbourne
+	command = { type = dissent value = 1 }
+	}
+		}
+
+event = {
+	id = 88880085
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 7 month = February year = 1918 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Imperial Conference"
+	desc = "88880085_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Let's plan our enemy's demise."
+	command = { type = relation which = ENG value = 20 }
+	}
+		}
+
+event = {
+	id = 88880086
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 26 month = March year = 1918 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Australia Halts The Krauts"
+	desc = "88880086_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Fritz has no manners at all."
+	command = { }
+	}
+		}
+
+event = {
+	id = 88880087
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 25 month = April year = 1918 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Manfred Von Richtofen Shot Down"
+	desc = "88880087_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "We took their ace, and we took their position."
+	command = { type = morale which = land value = 2 }
+	}
+		}
+
+event = {
+	id = 88880088
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 5 month = May year = 1918 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Monash Takes Over"
+	desc = "88880088_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Here's To Victory."
+	command = { type = morale which = land value = 2 }
+	}
+		}
+
+event = {
+	id = 88880089
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 12 month = June year = 1918 }
+	deathdate = { day = 29 month = October year = 1919 }
+
+	name = "Wool For Britain"
+	desc = "88880089_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "No way in hell! Our troops'll freeze!"
+	command = { type = relation which = ENG value = -20 }
+	command = { type = dissent value = -2 }
+	command = { type = money value = -2 }
+	}
+	action = {
+		name = "Well, it will ease the war debt."
+	command = { type = dissent value = 5 }
+	command = { type = relation which = ENG value = 20 }
+	command = { type = industrial_modifier which = supplies value = -5 }
+	command = { type = money value = 125 }
+	}
+		}
+
+event = {
+	id = 88880090
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 8 month = August year = 1918 }
+	deathdate = { day = 8 month = August year = 1920 }
+
+	name = "Winning The Western Front"
+	desc = "88880090_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "The world is ours for the saving." #Reparations await us! # Let's take 50 000 of their men.
+	command = { }
+	}
+		}
+
+event = {
+	id = 88880091
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 15 month = September year = 1918 }
+	deathdate = { day = 2 month = August year = 1920 }
+
+	name = "Bringing Our Boys Home"
+	desc = "88880091_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Four years, four long years away from home." # The 4 bloodiest years of the past 200
+	command = { type = morale which = land value = 1 }
+	command = { type = trickleback_mod value = 1 }
+	command = { type = dissent value = 5 }
+	}
+		}
+
+event = {
+	id = 88880092
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 22 month = September year = 1918 }
+
+	name = "Message From Across The Pond"
+	desc = "88880092_DESC"
+
+	
+	action = {
+		name = "What will they think of next?"
+	command = { }
+	}
+		}
+
+event = {
+	id = 88880093
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 4 month = October year = 1918 }
+
+	name = "Commonwealth Electoral Act"
+	desc = "88880093_DESC"
+
+	
+	action = {
+		name = "In the interest of fairness."
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = democratic value = 1 }
+	}
+		}
+
+#  event = {
+#	id = 88880094
+#	TAG =  { AST }
+#	style = 0
+#
+#	date = { day = 11 month = November year = 1918 }
+#	deathdate = { day = 2 month = August year = 1920 }
+#
+#	name = "Peace At Last"
+#	desc = "88880094_DESC"
+#
+#	decision_trigger = {
+#			peace = { country = ENG }
+#
+#	}	
+#	action = {
+#		name = "The 4 bloodiest years in man's history." # The 4 bloodiest years of the past 200
+#	command = { type = peace which = U08 value = 0 }
+#	command = { type = dissent value = -10 }
+#	}
+#		}
+#
+event = {
+	id = 88880096
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 12 month = April year = 1915 }
+	deathdate = { day = 12 month = April year = 1915 }
+
+	name = "Youngest Soldier Dies"
+	desc = "88880096_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Ours will be met with a vangeance 10 fold."
+	command = { type = morale which = land value = 10 }
+	command = { type = dissent value = 7 }
+	}
+		}
+
+event = {
+	id = 88880095
+	TAG =  { AST }
+	style = 0
+
+	date = { day = 19 month = November year = 1918 }
+	deathdate = { day = 19 month = November year = 1920 }
+
+	name = "Influenza Attacks"
+	desc = "88880095_DESC"
+
+	decision_trigger = {
+			war = { country = AST }
+
+	}	
+	action = {
+		name = "Four years for THIS?"
+	command = { type = morale which = land value = -5 }
+	command = { type = dissent value = 3 }
+	}
+		}
+

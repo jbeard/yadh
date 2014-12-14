@@ -1,0 +1,107 @@
+event = {
+	id = 8001601
+	country = BHU
+
+	name = "EVT_8001601_NAME"
+	desc = "EVT_8001601_DESC"
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = domestic which = freedom value = 2 }
+		
+		command = { type = sleepminister which = 330001 } # Jigme Wangchuk
+		command = { type = sleepminister which = 330024 } # Jigme Wangchuk
+		command = { type = sleepminister which = 330047 } # Jigme Wangchuk
+		
+		command = { type = headofstate which = 330054 } # Jigme Dorji Wangchuk
+		command = { type = headofgovernment which = 330055 } # Jigme Palden Dorji
+		command = { type = foreignminister which = 330016 } # Arthur John Hopkinson
+		command = { type = armamentminister which = 330028 } # Sonam Pradukha
+		command = { type = ministerofsecurity which = 330035 } # William Stevenson Meyer
+		command = { type = ministerofintelligence which = 330039 } # Henry Weedon-Gould
+		command = { type = chiefofstaff which = 330046 } # Sonam Pradukha
+		command = { type = chiefofarmy which = 330049 } # Sonam Pradukha
+		command = { type = chiefofnavy which = 330051 } # Ahmad Akhaz
+		command = { type = chiefofair which = 330053 } # Namgyal Bahadur
+	}
+}
+
+event = {
+	id = 8001602
+	country = BHU
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = nwo\govt_change
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1964 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1971 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 330100 } # Jigme Dorji Wangchuk
+	}
+}
+
+event = {
+	id = 8001603
+	country = BHU
+
+	name = EVT_DEATH_NAME
+	desc = EVT_DEATH_DESC
+	picture = nwo\death
+	style = 1
+
+	trigger = {
+		OR = {
+			government = democratic
+			government = fascist
+		}
+	}
+
+	date = { day = 0 month = january year = 1972 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = EVT_DEATH
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = sleepminister which = 330054 } # Jigme Dorji Wangchuk
+		command = { type = sleepminister which = 330100 } # Jigme Dorji Wangchuk
+		command = { type = headofstate which = 330101 } # Jigme Singye Wangchuk
+		command = { type = headofgovernment which = 330102 } # Jigme Singye Wangchuk
+	}
+}
+
+
+

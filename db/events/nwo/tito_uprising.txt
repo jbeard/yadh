@@ -1,0 +1,158 @@
+event = { # The launch of Tito large scale uprising
+	id = 8223000
+	country = GER
+
+	name = EVT_8223000_NAME #"The Tito Uprising"
+	desc = EVT_8223000_DESC #"Titoist partisans have long been not only a nuisance for German occupational forces but owing to mountaineous character of these lands a close match. Communist partisans of Josip Broz, called Tito, clearly gained the upper hand, even creating short-lived so called Republic of Uzice. Now the Soviets are nearing and partisans will cooperate to break completely free!"
+	picture = nwo\tito_uprising
+	style = 1
+
+	trigger = {
+		war = { country = SOV country = GER }
+		NOT = {	exists = U27 }
+		OR = {
+			control = { province = 336 data = SOV } # Petrovgrad
+			control = { province = 339 data = SOV } # Bor
+			control = { province = 330 data = SOV } # Nis
+			control = { province = 331 data = SOV } # Pirot
+		}
+		# At least one of the Yugoslav core provinces is still controlled
+		OR = {
+			control = { province = 327 data = -1 } # Krusevac
+			control = { province = 329 data = -1 } # Pristina
+			control = { province = 335 data = -1 } # Prijepolje
+			control = { province = 342 data = -1 } # Uzice
+		}
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 15
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8223000_A #"Yugoslavia rises"
+		command = { type = independence which = U27 value = 1 when = 1 }
+		command = { type = trigger which = 8223001 }
+	}
+}
+
+event = { # The launch of Tito Uprising
+	id = 8223001
+	country = U27
+
+	name = EVT_8223001_NAME #"The Tito Uprising"
+	desc = EVT_8223001_DESC #"After months of preparation and battles in the woods and the mountains we are ready to fight with Germans on equal footing and reclaim our towns. Let's hope that Soviet backing comes in due time and their advance will not stall."
+	picture = nwo\tito_uprising
+	style = 1
+
+	action = {
+		name = EVT_8223001_A #"Advance!"
+		command = { type = add_corps which = "Yugoslav Titoist Army" value = land where = 327 }
+		command = { type = add_division which = "Yugoslav Headquarters" value = hq when = 3 }
+		command = { type = add_division which = "Infantry Division" value = infantry when = 10 }
+		command = { type = add_division which = "Infantry Division" value = infantry when = 10 }
+		command = { type = add_division which = "Infantry Division" value = infantry when = 10 }
+		command = { type = add_division which = "Infantry Division" value = infantry when = 10 }
+		command = { type = add_division which = "Infantry Division" value = infantry when = 10 }
+		
+		command = { type = add_corps which = "Yugoslav Titoist Army" value = land where = 329 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		
+		command = { type = add_corps which = "Yugoslav Titoist Army" value = land where = 335 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+
+		command = { type = add_corps which = "Yugoslav Titoist Army" value = land where = 342 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		
+		command = { type = add_corps which = "Yugoslav Titoist Army" value = land where = 327 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		command = { type = add_division which = "Infantry Division" value = militia when = 5 }
+		
+		command = { type = supplies value = 2000 }
+		command = { type = oilpool value = 200 }
+		
+		command = { type = capital which = 335 }
+		command = { type = capital which = 342 }
+		command = { type = capital which = 327 }
+		command = { type = capital which = 329 }
+		
+		# Government is set up here
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = free_market value = 4 }
+		command = { type = set_domestic which = professional_army value = 3 }
+		command = { type = set_domestic which = defense_lobby value = 5 }
+		command = { type = set_domestic which = interventionism value = 5 }
+		# Our government
+		command = { type = headofstate which = 950100 } # Ivan Ribar
+		command = { type = headofgovernment which = 950003 } # Josip Broz Tito
+		command = { type = foreignminister which = 950101 } # Ivan Subasic
+		command = { type = armamentminister which = 950005 } # Milentije Popovic
+		command = { type = ministerofsecurity which = 950014 } # Koca Popovic
+		command = { type = ministerofintelligence which = 950006 } # Aleksandar Rankovic
+		command = { type = chiefofstaff which = 950009 } # Koca Popovic
+		command = { type = chiefofarmy which = 950010 } # Josip Broz Tito
+		command = { type = chiefofnavy which = 950011 } # Josip Broz Tito
+		command = { type = chiefofair which = 950008 } # Ivan Ribar
+		# We give military access and ally with SU
+		command = { type = access which = SOV } 
+		command = { type = alliance which = SOV }
+	}
+}
+
+event = { # The Germans successfully crush the Uprising
+	id = 8223002
+	country = GER
+
+	name = EVT_8223002_NAME #"The Tito Uprising failed"
+	desc = EVT_8223002_DESC #"In spite of preparations and advantageous terrain for their partisan operations the Titoist uprising ended in defeat showing that the were not prepared well enough for our retaliation."
+	picture = nwo\tito_uprising
+	style = 1
+
+	trigger = {
+		event = 8223000
+		NOT = { exists = U27 }
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 5
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	action = {
+		name = EVT_8223002_A #"Victory"
+		command = { type = dissent value = -2 }
+	}
+}
+
+event = { # Tito Uprising succeeds
+	id = 8223003
+	country = U27
+
+	name = EVT_8223003_NAME #"Tito Uprising succeeds"
+	desc = EVT_8223003_DESC #"Thanks to our unparalleled bravery in action we managed to push Germans out of our lands. We can claim victory!"
+	picture = nwo\tito_uprising
+	style = 1
+	
+	trigger = {
+		event = 8223000
+		NOT = { exists = GER }
+	}
+
+    date = { day = 0 month = january year = 1943 }
+    offset = 7
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = EVT_8223003_A
+		command = { type = dissent value = -10 }
+		command = { type = setflag which = tito_uprising_successful }
+	}
+}

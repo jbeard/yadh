@@ -1,0 +1,456 @@
+### Indonesia
+
+event = {
+	id = 8299001
+	country = INO
+	persistent = yes
+
+	name = EVT_8007303_NAME
+	desc = EVT_8007303_DESC
+	picture = "nwo\independence_of_indonesia"
+	style = 1
+
+	trigger = {
+		event = 8007303
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270103 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1946 }
+
+	action = {
+		name = OK
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270103 } # Sutan Sjahrir
+		command = { type = foreignminister which = 270020 } # Sukarjo Wiryopranato
+		command = { type = armamentminister which = 270024 } # Haj Agus Salim
+		command = { type = ministerofsecurity which = 270029 } # Ngabehi van Jogakarta
+		command = { type = ministerofintelligence which = 270035 } # Dr. Cipto Mangunkusomo
+		command = { type = chiefofstaff which = 270041 } # Hamid II Pontiak
+		command = { type = chiefofarmy which = 270047 } # Uyrip Sumoharjo
+		command = { type = chiefofnavy which = 270051 } # Ahmad Alimin
+		command = { type = chiefofair which = 270054 } # R.M. Suryo
+	}
+}
+
+
+event = {
+	id = 8299002
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007304
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270016 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1947 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1947 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270016 } # Amir Sjarifuddin
+	}
+}
+
+event = {
+	id = 8299003
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007305
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270014 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1948 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270014 } # Muhammad Hatta
+	}
+}
+
+event = {
+	id = 8299004
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007306
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270056 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1950 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270056 } # Abdul Halim
+		command = { type = foreignminister which = 270061 } # Muhammad Hatta
+		command = { type = ministerofsecurity which = 270062 } # Abdul Halim
+		command = { type = chiefofstaff which = 270063 } # Wakil Pakmehasan
+	}
+}
+
+event = {
+	id = 8299005
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007307
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270057 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1951 }
+	offset = 7
+	deathdate = { day = 30 month = june year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270057 } # Mohammed Natsir
+	}
+}
+
+event = {
+	id = 8299006
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007314
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270058 }
+		}
+	}
+
+	date = { day = 0 month = july year = 1951 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1951 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270058 } # Sukoman Wirjosandjojo
+	}
+}
+
+event = {
+	id = 8299007
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007308
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270059 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1952 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270059 } # Siswanto Wilopo
+	}
+}
+
+event = {
+	id = 8299008
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007309
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270060 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1953 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270060 } # Ali Sastromidjojo
+	}
+}
+
+event = {
+	id = 8299009
+	country = INO
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		event = 8007310
+		OR = {
+			NOT = { headofstate = 270001 }
+			NOT = { headofgovernment = 270104 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1955 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 270001 } # Sukarno
+		command = { type = headofgovernment which = 270104 } # Burhanuddin Harahap
+	}
+}
+
+### Sinkiang
+
+event = {
+	id = 8299010
+	country = SIK
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+	
+	trigger = {
+		event = 8013804
+		OR = {
+			NOT = { headofstate = 420100 }
+			NOT = { headofgovernment = 420101 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1945 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		command = { type = headofstate which = 420100 } # Ali Khan T?re
+		command = { type = headofgovernment which = 420101 } # Ehmetjan Qasim
+	}
+}
+
+# India
+
+event = {
+	id = 8299011
+	country = IND
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+	
+	trigger = {
+		NOT = { headofstate = 250001 }
+	}
+	
+	date = { day = 0 month = january year = 1959 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = OK
+		command = { type = headofstate which = 250001 }
+	}
+}
+
+# China
+
+event = {
+	id = 8299012
+	country = CHC
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+	
+	trigger = {
+		OR = {
+			NOT = { headofstate = 51304 }
+			NOT = { headofgovernment = 51305 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1964 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1964 }
+
+	action = {
+		name = OK
+		command = { type = headofstate which = 51304 }
+		command = { type = headofgovernment which = 51305 }
+	}
+}
+
+event = {
+	id = 8299013
+	country = CHC
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+	
+	trigger = {
+		OR = {
+			NOT = { headofstate = 51311 }
+			NOT = { headofgovernment = 51312 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1977 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1977 }
+
+	action = {
+		name = OK
+		command = { type = headofstate which = 51311 }
+		command = { type = headofgovernment which = 51312 }
+	}
+}
+
+event = {
+	id = 8299014
+	country = CHC
+	persistent = yes
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+	
+	trigger = {
+		domestic = { type = democratic value = 3 }
+		domestic = { type = political_left value = 8 }
+		OR = {
+			NOT = { headofstate = 51313 }
+			NOT = { headofgovernment = 51312 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1979 }
+	offset = 7
+	deathdate = { day = 30 month = december year = 1979 }
+
+	action = {
+		name = OK
+		command = { type = headofstate which = 51313 }
+		command = { type = headofgovernment which = 51312 }
+	}
+}
+
+
+### Walkaround to prevent surrender events from firing if Germany turned communist/democratic in 1933
+
+event = {
+	id = 8299030
+	country = REB
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+	
+	trigger = {
+		NOT = { exists = GER }
+	}
+	
+	date = { day = 0 month = january year = 1938 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1938 }
+
+	action = {
+		name = OK
+		command = { type = sleepevent which = 8310000 }
+		command = { type = sleepevent which = 8310001 }
+		command = { type = sleepevent which = 8360000 }
+		command = { type = sleepevent which = 8360001 }
+	}
+}

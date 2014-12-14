@@ -1,0 +1,168 @@
+event = {
+	id = 8022901
+	country = U29
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1944 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 960003 } # Kiril de Preslav
+		command = { type = headofgovernment which = 960006 } # Kimon Georgiev
+		command = { type = foreignminister which = 960009 } # Georgi Kulichev
+		command = { type = armamentminister which = 960016 } # Ivan Stefanov
+		command = { type = ministerofsecurity which = 960020 } # Anton Yugov
+		command = { type = ministerofintelligence which = 960023 } # Mincho Neychev
+		command = { type = chiefofstaff which = 960024 } # Damian Velchev
+		command = { type = chiefofarmy which = 960027 } # Mihail Minchov
+		command = { type = chiefofnavy which = 960029 } # Racho Batanov
+		command = { type = chiefofair which = 960032 } # Vasil Vylkov
+	}
+}
+
+# Killing Kiril de Preslav
+event = {
+	id = 8022902
+	country = U29
+
+	name = EVT_8022902_NAME
+	desc = EVT_8022902_DESC
+	picture = "nwo\kiril_preslav"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1945 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = EVT_8022902_A
+		ai_chance = 100
+		command = { type = headofstate which = 960100 } # Simeon II
+		command = { type = sleepminister which = 960003 } # Kiril
+	}
+}
+
+event = {
+	id = 8022903
+	country = U29
+
+	name = EVT_8022903_NAME
+	desc = EVT_8022903_DESC
+	picture = "nwo\simeon_ii"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = EVT_8022903_A
+		ai_chance = 100
+		command = { type = headofstate which = 960005 } # Vasil Kolarov
+		command = { type = sleepminister which = 960100 } # Simeon II
+	}
+}
+
+event = {
+	id = 8022904
+	country = U29
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1946 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1949 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofgovernment which = 960007 } # Georgi Dimitrov
+		command = { type = foreignminister which = 960012 } # Kimon Georgiev
+		command = { type = armamentminister which = 960017 } # Petko Kounin
+		command = { type = ministerofsecurity which = 960020 } # Anton Yugov
+		command = { type = ministerofintelligence which = 960023 } # Mincho Neychev
+		command = { type = chiefofstaff which = 960026 } # Assen Grekov
+		command = { type = chiefofarmy which = 960028 } # Ivan Kinov
+		command = { type = chiefofnavy which = 960031 } # Stefan Tzanev
+		command = { type = chiefofair which = 960033 } # Zakhari Zakhariev
+	}
+}
+
+event = {
+	id = 8022905
+	country = U29
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1950 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1955 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = headofstate which = 960101 } # Georgi Damyanov
+		command = { type = headofgovernment which = 960045 } # Vulko Chervenkov
+	}
+}
+
+event = {
+	id = 8022906
+	country = U29
+
+	name = EVT_GOVTCHANGE_NAME
+	desc = EVT_GOVTCHANGE_DESC
+	picture = "nwo\govt_change"
+	style = 1
+
+	trigger = {
+		government = communist
+	}
+
+	date = { day = 0 month = january year = 1956 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action = {
+		name = OK
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 960102 } # Todor Zhivkov
+		command = { type = headofgovernment which = 960103 } # Anton Yugov
+	}
+}
+

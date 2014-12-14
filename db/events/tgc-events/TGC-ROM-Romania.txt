@@ -1,0 +1,260 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+# by Sargeras :-O
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+#Event list for Romania
+#ROM 	13301800	The Outcome of the Great War (historical)
+#ROM	13301810	War with Hungary
+#ROM	13301811	Proclamation of Union
+#ROM	13301812	Romanian Constitution of 1923
+#ROM	13301820	The Little Entente
+#ROM	13301821	Formation of the Iron Guard
+#ROM	13301822	Legionary terror
+#ROM	13301823	Outlaw the Iron Guard?
+
+# Outcome of the Great War
+event = {
+	id = 13301800
+	country = ROM
+
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+
+	trigger = {
+		atwar = no
+		owned = { province = 300 data = -1 } # Cernauti
+		owned = { province = 303 data = -1 } # Balti
+		owned = { province = 310 data = -1 } # Costanza
+		NOT = { exists = U09 }
+	}
+
+	name = "The Outcome of the Great War (historical)"
+	desc = "After having joined the Entente in the Great War and defeated the Central Powers, Romania annexed part of Bessarabia and the province of Suceava. Now the dream of a Greater Romania can become reality."
+	picture = "assistance"
+
+	action = {
+		name = "Let's go towards a Greater Romania!"
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = winner }
+		# LoN
+		command = { trigger = { not = { flag = lon } } type = setflag which = lon }
+	}
+}
+
+# War with Hungary
+event = {
+	id = 13301810
+	country = ROM
+	
+	#triggered by HUN 13301712
+	
+	name = "EVT_13301810_NAME"
+	desc = "EVT_13301810_DESC"
+	
+	action = {
+		name = "Let's bring them down"
+		ai_chance = 100
+		command = { type = war which = HUN }
+		command = { trigger = { ai = yes } type = ai which = "AAR\wars\nosurrender.ai" } # peace with Hungary not accepted
+		command = { type = trigger which = 13301714 }
+	}
+	
+	action = {
+		name = "We have had enough"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+# Proclamation of Union
+event = {
+	id = 13301811
+	country = ROM
+
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+
+	trigger = {
+		event = 13301800
+		NOT = { owned = { province = 289 data = -1 } } # Alba Iulia
+	}
+
+	name = "Proclamation of Union"
+	desc = "With the Proclamation of Union, the Deputies of the Romanians in Alba Iulia, at that time owned by Hungary, voted for the annexation to the Kingdom of Romania."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		command = { type = relation which = HUN value = -100 }
+		command = { type = dissent value = -1 }
+	}
+}
+
+# Romanian Constitution of 1923
+event = {
+	id = 13301812
+	country = ROM
+
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1933 }
+	offset = 30
+
+	trigger = {
+		event = 13301800
+		year = 1923
+		NOT = { ispuppet = ROM }
+	}
+
+	name = "Romanian Constitution of 1923"
+	desc = "Recognized by the Romanian Constitution of 1923 and supported by various laws, national minorities were represented in Parliament, and several of them created national parties."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = dissent value = -3 }
+	}
+}	
+
+# The Little Entente
+event = {
+	id = 13301820
+	country = ROM
+	
+	# Triggered by CZE 13302217
+	
+	name = "The Little Entente"
+	desc = "EVT_13301820_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = { 
+		name = "Accept"
+		ai_chance = 100
+		command = { type = alliance which = CZE }
+		command = { type = relation which = CZE value = 100 }
+		command = { trigger = { alliance = { country = CZE country = SER } } type = alliance which = SER }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	
+	action = {
+		name = "Decline"
+		ai_chance = 0
+		command = { type = relation which = CZE value = -30 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Formation of the Iron Guard
+event = {
+	id = 13301821
+	country = ROM
+
+	date = { day = 1 month = january year = 1927 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 30
+
+	trigger = {
+		event = 13301800
+		NOT = { 
+			or = {
+				government = fascist
+				government = communist
+			}
+		}
+	}
+
+	name = "Formation of the Iron Guard"
+	desc = "In 1927, Corneliu Zelea Codreanu left the number two position in the National-Christian Defense League. It was then he founded the Legion of the Archangel Michael (the Iron Guard). The Legion also differed from other fascist movements in that it had its mass base among the peasantry and students, rather than among military veterans. However, the legionnaires shared the fascist penchant for violence, up to and including political assassinations."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		name = "They can represent a problem"
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+# Legionary terror
+event = {
+	id = 13301822
+	country = ROM
+	persistent = yes
+
+	date = { day = 1 month = january year = 1928 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 60
+
+	trigger = {
+		event = 13301821
+		government = democratic
+	}
+
+	name = "Legionary terror"
+	desc = "Recently we had a really terrifying episode of violence caused by the Legionaries."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		name = "They can really be dangerous"
+		command = { type = dissent value = 2 }
+	}
+}
+
+# Outlaw the Iron Guard?
+event = {
+	id = 13301823
+	country = ROM
+
+	date = { day = 1 month = january year = 1933 }
+	deathdate = { day = 1 month = january year = 1936 }
+	offset = 30	
+
+	trigger = {
+		event = 13321821
+		event = 13321822
+		NOT = { 
+			or = {
+				ideology = fascist
+				ideology = nazi
+			}
+		}
+	}
+
+	name = "Outlaw the Iron Guard?"
+	desc = "In the 1930s, the Iron Guard became a heavy burden on Romanian government's back, now it's time to choose what to do with them."
+	picture = "news_paper"
+	style = 2
+
+	action = {
+		name = "Ban the group"
+		ai_chance = 98
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = event which = 13301824 when = 20 }
+		command = { type = sleepevent which = 13301822 }
+	}
+
+	action = {
+		name = "They are needed for Romania's sake"
+		ai_chance = 2
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 13301824 }
+	}
+}	
+	
+		

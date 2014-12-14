@@ -1,0 +1,553 @@
+##############################################################################
+# DH-Mod Arms, Armistice and Revolutions
+#################################
+# by Burning :-)
+############################################
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
+############################################
+# This file contains events for the great depression (all nations)
+# Event List:
+# 13300010	The Great Depression
+# 13300011	Unemployment
+# 13300012	Economic Recovery
+# 13300013	Hyperinflation
+# 13300015	Political Clashes
+# 13300016	Political Dissidents
+# 13300017	Workers on Strike!
+# 13300022  ???
+# 13300023  ???
+
+# The Great Depression
+event = {
+	id = 13300010
+	persistent = no
+	
+	trigger = {
+		flag = great_depression
+		not = { local_flag = depression }
+		not = { local_flag = depression_over }
+		not = { OR = { ideology = leninist ideology =	stalinist } }
+		policy = { type = free_market value = 3 }
+	}
+	
+	date = { day = 1 month = january year = 1928 }
+	offset = 30
+	deathdate = { day = 1 month = january year = 1939 }
+	
+	name = "EVT_13300010_NAME"							
+	desc = "EVT_13300010_DESC"
+	picture = "aar_depression"
+	style = 2
+	
+	action = { 	
+		name = "A black day!"
+		command = { type = resource which = energy value = -20000 }
+		command = { type = resource which = metal value = -20000 }
+		command = { type = resource which = oil value = -20000 }
+		command = { type = resource which = rare_materials value = -20000 }
+		command = { type = resource which = supplies value = -30000 }
+		command = { trigger = { IC = 10 not = { IC = 30 } } type = free_money value = -3 }
+		command = { trigger = { IC = 10 not = { IC = 30 } } type = local_setflag which = gd_cashred_3 }
+		command = { trigger = { IC = 30 not = { IC = 50 } } type = free_money value = -9 }
+		command = { trigger = { IC = 30 not = { IC = 50 } } type = local_setflag which = gd_cashred_9 }
+		command = { trigger = { IC = 50 not = { IC = 70 } } type = free_money value = -15 }
+		command = { trigger = { IC = 50 not = { IC = 70 } } type = local_setflag which = gd_cashred_15 }
+		command = { trigger = { IC = 70 not = { IC = 80 } } type = free_money value = -21 }
+		command = { trigger = { IC = 70 not = { IC = 80 } } type = local_setflag which = gd_cashred_21 }
+		command = { trigger = { IC = 80 not = { IC = 100 } } type = free_money value = -24 }
+		command = { trigger = { IC = 80 not = { IC = 100 } } type = local_setflag which = gd_cashred_24 }
+		command = { trigger = { IC = 100 not = { IC = 120 } } type = free_money value = -30 }
+		command = { trigger = { IC = 100 not = { IC = 120 } } type = local_setflag which = gd_cashred_30 }
+		command = { trigger = { IC = 120 not = { IC = 150 } } type = free_money value = -36 }
+		command = { trigger = { IC = 120 not = { IC = 150 } } type = local_setflag which = gd_cashred_36 }
+		command = { trigger = { IC = 150 not = { IC = 175 } } type = free_money value = -45 }
+		command = { trigger = { IC = 150 not = { IC = 175 } } type = local_setflag which = gd_cashred_45 }
+		command = { trigger = { IC = 175 not = { IC = 200 } } type = free_money value = -53 }
+		command = { trigger = { IC = 175 not = { IC = 200 } } type = local_setflag which = gd_cashred_53 }
+		command = { trigger = { IC = 200 not = { IC = 250 } } type = free_money value = -60 }
+		command = { trigger = { IC = 200 not = { IC = 250 } } type = local_setflag which = gd_cashred_60 }
+		command = { trigger = { IC = 250 not = { IC = 300 } } type = free_money value = -75 }
+		command = { trigger = { IC = 250 not = { IC = 300 } } type = local_setflag which = gd_cashred_75 }
+		command = { trigger = { IC = 300 not = { IC = 350 } } type = free_money value = -90 }
+		command = { trigger = { IC = 300 not = { IC = 350 } } type = local_setflag which = gd_cashred_90 }
+		command = { trigger = { IC = 350 not = { IC = 400 } } type = free_money value = -105 }
+		command = { trigger = { IC = 350 not = { IC = 400 } } type = local_setflag which = gd_cashred_105 }
+		command = { trigger = { IC = 400 } type = free_money value = -120 }
+		command = { trigger = { IC = 400 } type = local_setflag which = gd_cashred_120 }
+		command = { type = dissent value = 19 }
+		command = { type = local_setflag which = depression }
+		command = { type = ai which = "AAR\economic\aar-build_industry-disable.ai" }
+		}
+	}	
+
+# Unemployment
+event = {
+	id = 13300011
+	persistent = no
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 180
+	deathdate = { day = 1 month = january year = 1939 }
+	
+	trigger = {
+		local_flag = depression
+	}
+	
+	name = "EVT_13300011_NAME"				
+	Desc = "EVT_13300011_DESC"
+	picture = "aar_depression"
+	style = 2
+	
+	action = { 	
+		name = "Hm..."
+		ai_chance = 50
+		command = { type =	dissent value = 4 }
+		command = { type =	domestic which = free_market value = 1 }
+		}
+	
+	action = { 	
+		name = "Increase Subsidies!"
+		ai_chance = 50
+		command = { type = money value = -1000 }
+		}			
+	}
+
+#Economic Recovery
+event = {
+	id = 13300012
+	invention = yes
+	
+	date = { day = 0 month = 0 year = 1931 }
+	offset = 830 #trigger within 2-4 years, after the the great depression is over.
+	deathdate = { day = 1 month = january year = 1942 }
+
+	trigger = {
+		local_flag = depression
+		not = { local_flag = depression_over }
+		NOT = { AND = {
+			country = USA
+			atwar = no
+		}
+		}
+		or = {
+			ideology = leninist # who needs money anyway?
+			ideology =	stalinist # who needs money anyway?
+			not = { policy = { type = free_market value = 3 } }
+			and = {
+				local_flag = abandoned_gold_standard
+				not = { dissent = 10 }
+			}
+			year = 1936
+			local_flag = fascist_recovery # if we were fascist, recovered, but are now no longer fascist.
+			atwar = yes #going to war always was the easy solution to "handle" crisis
+		}
+	}
+	
+	name = "EVT_13300012_NAME"							
+	Desc = "EVT_13300012_DESC"
+	picture = "aar_recovery"
+	style = 2
+	
+	action = { 	
+		name = "This is a strong political gesture!"
+		command = { type = local_clrflag which = depression }
+		command = { type = local_setflag which = depression_over }
+		command = { trigger = { local_flag = fascist_recovery } type = building_prod_mod which = IC value = -50 } #negate fascist bonuses
+		command = { trigger = { local_flag = gd_cashred_3 } type = free_money value = 3 }
+		command = { trigger = { local_flag = gd_cashred_9 } type = free_money value = 9 }
+		command = { trigger = { local_flag = gd_cashred_15 } type = free_money value = 15 }
+		command = { trigger = { local_flag = gd_cashred_21 } type = free_money value = 21 }
+		command = { trigger = { local_flag = gd_cashred_24 } type = free_money value = 24 }
+		command = { trigger = { local_flag = gd_cashred_30 } type = free_money value = 30 }
+		command = { trigger = { local_flag = gd_cashred_36 } type = free_money value = 36 }
+		command = { trigger = { local_flag = gd_cashred_45 } type = free_money value = 45 }
+		command = { trigger = { local_flag = gd_cashred_53 } type = free_money value = 53 }
+		command = { trigger = { local_flag = gd_cashred_60 } type = free_money value = 60 }
+		command = { trigger = { local_flag = gd_cashred_75 } type = free_money value = 75 }
+		command = { trigger = { local_flag = gd_cashred_90 } type = free_money value = 90 }
+		command = { trigger = { local_flag = gd_cashred_105 } type = free_money value = 105 }
+		command = { trigger = { local_flag = gd_cashred_120 } type = free_money value = 120 }
+		command = { type = local_clrflag which = gd_cashred_3 }
+		command = { type = local_clrflag which = gd_cashred_9 }
+		command = { type = local_clrflag which = gd_cashred_15 }
+		command = { type = local_clrflag which = gd_cashred_21 }
+		command = { type = local_clrflag which = gd_cashred_24 }
+		command = { type = local_clrflag which = gd_cashred_30 }
+		command = { type = local_clrflag which = gd_cashred_36 }
+		command = { type = local_clrflag which = gd_cashred_45 }
+		command = { type = local_clrflag which = gd_cashred_53 }
+		command = { type = local_clrflag which = gd_cashred_60 }
+		command = { type = local_clrflag which = gd_cashred_75 }
+		command = { type = local_clrflag which = gd_cashred_90 }
+		command = { type = local_clrflag which = gd_cashred_105 }
+		command = { type = local_clrflag which = gd_cashred_120 }
+		command = { type =	domestic which = free_market value = 2 }
+		command = { type = ai which = "AAR\economic\aar-build_industry.ai" }
+		} 			
+	}
+
+#Hyperinflation
+event = {
+	id = 13300013
+	persistent = no
+	
+	trigger = {
+		local_flag = loser
+		local_flag = reparations
+		not = { local_flag = hyperinflation }
+		or = {
+			and = {
+				ai = yes
+				not = { money = 3000 } #AI stockpiles more money than the human
+			}
+			and = {
+				ai = no
+				not = { money = 1000 }
+			}
+		}
+	}
+	
+	name = "EVT_13300013_NAME"							
+	Desc = "EVT_13300013_DESC"
+	picture = "aar_hyperinflation"
+	style = 2
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 180
+	deathdate = { day = 1 month = january year = 1939 }
+	
+	action = {
+		name = "Oh no!"
+		ai_chance = 70
+		command = { type = resource which = energy value = -2000 }
+		command = { type = resource which = metal value = -2000 }
+		command = { type = resource which = oil value = -2000 }
+		command = { type = resource which = rare_materials value = -2000 }
+		command = { type = local_setflag which = hyperinflation }
+		command = { type = money value = -2000 }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = "We need to support our people!"
+		ai_chance = 30
+		command = { type = resource which = energy value = -4000 }
+		command = { type = resource which = metal value = -4000 }
+		command = { type = resource which = oil value = -4000 }
+		command = { type = resource which = rare_materials value = -4000 }
+		command = { type = local_setflag which = hyperinflation }
+		command = { type = money value = -2000 }
+		} 			
+	}
+
+#Political Clashes
+event = {
+	id = 13300015
+	persistent = no
+	
+	trigger = {
+		flag = great_depression
+		local_flag = loser
+		dissent = 5
+	}
+	
+	name = "EVT_13300015_NAME"						
+	desc = "EVT_13300015_DESC"
+	picture = "aar_dunrest"
+	style = 2
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 90
+	deathdate = { day = 1 month = january year = 1939 }
+	
+	action = { 	
+		name = "Crack down on all those... 'Radicals'...!"
+		ai_chance = 43
+		command = { type =	dissent value = 4 }
+	}
+	
+	action = { 	
+		name = "We need more effective censorship!"
+		ai_chance = 42
+		command = { type =	dissent value = 2 }
+		command = { type =	domestic which = freedom value = -1 }
+	}
+	
+	action = { 	
+		name = "There is nothing we can do..."
+		ai_chance = 15
+		command = { type =	dissent value = 1 }
+		command = { type =	domestic which = freedom value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+		}
+	
+	}
+
+#Political Dissidents
+event = {
+	id = 13300016
+	persistent = no
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1939 }
+	offset = 365
+	
+	trigger = {
+		flag = great_depression
+		local_flag = winner
+	}
+	
+	name = "EVT_13300016_NAME"							
+	desc = "EVT_13300016_DESC"
+	picture = "aar_dunrest"
+	style = 2
+	
+	action = { 	
+		name = "We need more effective censorship!"
+		ai_chance = 15
+		#censor radical speech
+		command = { type =	domestic which = freedom value = -1 }
+		command = { type =	dissent value = 2 }
+	}
+	action = { 	
+		name = "They are not a threat, they just speak out loud."
+		ai_chance = 75
+		#they are not a threat
+		trigger = { not = { ideology = nazi } not = { ideology = fascist } }
+		command = { type =	dissent value = 1 }
+		command = { type =	domestic which = democratic value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+	} 	
+	action = { 	
+		name = "Traitors are to be arrested!"
+		ai_chance = 10
+		command = { type =	domestic which = democratic value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type =	dissent value = 4 }
+		} 	 			
+	}
+
+# Workers on Strike!
+event = {
+	id = 13300017
+	persistent = no
+	
+	
+	trigger = {
+		government = democratic
+		local_flag = depression
+	}
+	
+	name = "EVT_13300017_NAME"							
+	desc = "EVT_13300017_DESC"
+	picture = "aar_dworkerstrike"
+	style = 2
+	
+	date = { day = 1 month = january year = 1914 }
+	offset = 180
+	deathdate = { day = 1 month = january year = 1939 }
+	
+	action = { 	
+		name = "They have a point!"
+		ai_chance = 25
+		command = { type = dissent value = -1 }
+		command = { type = money value = -300 }
+	}
+	
+	action = { 	
+		name = "Give in to some of their demands."
+		ai_chance = 40
+		command = { type =	dissent value = 1 }
+		command = { type = money value = -100 }
+	}
+	
+	action = { 	
+		name = "Traitors are to be arrested!"
+		ai_chance = 35
+		command = { type =	dissent value = 2 }
+		command = { type = domestic which = free_market value = 1 }
+		} 			
+	}
+
+event = {
+	id = 13300022
+	random = no
+	persistent = no
+	
+	#this event should be triggered by other events only.
+	
+	name = "EVT_13300022_NAME"							
+	Desc = "EVT_13300022_DESC"
+	Picture = "economic"
+	
+	
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100
+		trigger = {
+			not = { IC = 10 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 1 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100
+		trigger = {
+			IC = 10
+			not = { IC = 20 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 3 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100
+		trigger = {
+			IC = 20
+			not = { IC = 50 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 6 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100
+		trigger = {
+			IC = 50
+			not = { IC = 100 }
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 15 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "Damn!"
+		ai_chance = 100
+		trigger = {
+			IC = 100
+		}
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = manpowerpool value = 30 } # some of the people had no option but to join the army
+	}
+	action = { 	
+		name = "We will stop this madness."
+		ai_chance = 0
+		trigger = {
+			ai = no
+		}
+		command = { type = money value = -5000 }
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = free_market value = -1 }
+		}
+	}
+
+event = {
+	id = 13300023
+	persistent = no
+	date = { day = 1 month = january year = 1914 }
+	deathdate = { day = 1 month = january year = 1939 }
+	offset = 365
+	
+	trigger = {
+		local_flag = depression
+		not = { local_flag = abandoned_gold_standard }
+		not = { local_flag = fascist_recovery }
+		or = {
+			ideology = fascist
+			ideology =	nazi
+			not = { policy = { type = free_market value = 3 } }
+			event = { id = 13300711 days = 365	}
+		}
+	}
+	name = "EVT_13300023_NAME"							
+	Desc = "EVT_13300023_DESC"
+	Picture = "major_worker_strike"
+	
+	action = { 	
+		name = "Arbeit baut auf!"
+		ai_chance = 100
+		trigger = {
+			OR = {
+				ideology = fascist
+				ideology = nazi
+				local_flag = loser
+				country = GER
+				country = ITA
+				country = JAP
+			}
+		}
+		command = { type = building_prod_mod which = IC value = 50 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = resource which = money value = 10000 }
+		command = { type = money value = 10000 }
+		command = { type = local_setflag which = fascist_recovery }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = ai which = "AAR\economic\aar-build_industry.ai" }
+	}
+	action = { 	
+		name = "We have to suspend gold convertability."
+		ai_chance = 40
+		trigger = {
+			or = {
+				not = { OR = {
+					ideology = fascist
+					ideology = nazi
+					local_flag = loser
+					country = GER
+					country = ITA
+					country = JAP
+					policy = { type = free_market value = 9 }
+				} }
+				event = { id = 13300711 days = 2000 }
+			}
+		}
+		command = { type = dissent value = 10 }
+		command = { type = resource which = money value = -5000 }
+		command = { type = money value = -5000 }
+		command = { type = local_setflag which = abandoned_gold_standard }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action = { 	
+		name = "We can do nothing but watch."
+		ai_chance = 60
+		trigger = {
+			not = { OR = {
+				ideology = fascist
+				ideology = nazi
+				not = { policy = { type = free_market value = 3 } }
+			} }
+			not = { event = { id = 13300711 days = 2000 } }
+		}
+		command = { type =	dissent value = 5 }
+		command = { type = domestic which = free_market value = 1 }
+		} 			
+	}
+

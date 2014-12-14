@@ -1,0 +1,345 @@
+### Abadan Crisis
+
+# Nationalization of AIOC
+event = {
+	id = 8501001
+	country = PER
+
+	name = EVT_8501001_NAME
+	desc = EVT_8501001_DESC
+	picture = "nwo\mohammed_mossadegh"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+	}
+
+	date = { day = 0 month = march year = 1951 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1952 }
+
+	action = {
+		name = EVT_8501001_A # Nationalize the fields
+		ai_chance = 80
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = add_prov_resource which = 1089 value = 50 where = oil }
+		command = { type = add_prov_resource which = 1090 value = 20 where = oil }
+		command = { type = add_prov_resource which = 1091 value = 5 where = oil }
+		command = { type = relation which = ENG value = -100 }
+	}
+	
+	action = {
+		name = EVT_8501001_B # Remain on good terms
+		ai_chance = 20
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 8501002 }
+	}
+}
+
+# Abadan Crisis
+event = {
+	id = 8501002
+	country = ENG
+
+	name = EVT_8501002_NAME
+	desc = EVT_8501002_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	trigger = {
+		event = 8501001
+	}
+
+	date = { day = 0 month = august year = 1951 }
+	offset = 30
+	deathdate = { day = 30 month = january year = 1953 }
+
+	action = {
+		name = EVT_8501002_A # Impose sanctions
+		ai_chance = 80
+		command = { type = belligerence value = 10 }
+		command = { type = relation which = PER value = -100 }
+	}
+	
+	action = {
+		name = EVT_8501002_B # Renegotiate the deal
+		ai_chance = 20
+		command = { type = dissent value = 10 }
+		command = { type = relation which = PER value = 100 }
+		command = { type = sleepevent which = 8501003 }
+	}
+}
+
+# Economic sanctions
+event = {
+	id = 8501003
+	country = PER
+	one_action = yes
+
+	name = EVT_8501003_NAME
+	desc = EVT_8501003_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	trigger = {
+		event = 8501002
+	}
+
+	date = { day = 0 month = november year = 1951 }
+	offset = 30
+	deathdate = { day = 30 month = february year = 1953 }
+
+	action = {
+		name = EVT_8501003_A # Sanctions are successful
+		ai_chance = 80
+		command = { type = industrial_modifier which = total value = -10 }
+		command = { type = dissent value = 15 }
+	}
+	
+	action = {
+		name = EVT_8501003_B # Sanctions are a failure
+		ai_chance = 20
+		command = { type = dissent value = 10 } # There's some turmoil, anyway
+		command = { type = sleepevent which = 8501004 }
+		command = { type = sleepevent which = 8501020 } # Operation Ajax
+	}
+}
+
+# Economic sanctions are successful, we ask Soviets, otherwise its going to end up in Operation Ajax
+event = {
+	id = 8501004
+	country = PER
+
+	name = EVT_8501004_NAME
+	desc = EVT_8501004_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	trigger = {
+		event = 8501003
+	}
+
+	date = { day = 0 month = march year = 1952 }
+	offset = 30
+	deathdate = { day = 30 month = march year = 1953 }
+
+	action = {
+		name = EVT_8501004_A # Try to persevere
+		ai_chance = 70
+		command = { type = dissent value = 15 }
+	}
+	
+	action = {
+		name = EVT_8501004_B # Ask Soviets for help
+		ai_chance = 30
+		command = { type = trigger which = 8501005 }
+	}
+}
+
+# Soviet are asked for help
+event = {
+	id = 8501005
+	country = SOV
+
+	name = EVT_8501005_NAME
+	desc = EVT_8501005_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	action = {
+		name = EVT_8501005_A # Help out
+		ai_chance = 75
+		command = { type = relation which = PER value = 50 }
+		command = { type = trigger which = 8501006 } # American ultimatum
+	}
+	
+	action = {
+		name = EVT_8501005_B # Refrain
+		ai_chance = 25
+		command = { type = relation which = PER value = -50 }
+	}
+}
+
+# American ultimatum
+event = {
+	id = 8501006
+	country = USA
+
+	name = EVT_8501006_NAME
+	desc = EVT_8501006_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	action = {
+		name = EVT_8501006_A # Send it
+		ai_chance = 60
+		command = { type = relation which = PER value = -50 }
+		command = { type = trigger which = 8501007 } # Soviet reaction
+	}
+	
+	action = {
+		name = EVT_8501006_B # Refrain
+		ai_chance = 40
+		command = { type = trigger which = 8501010 } # Soviets are able to send Iranians help
+		command = { type = relation which = ENG value = -150 }
+	}
+}
+
+# Soviet reaction to ultimatum
+event = {
+	id = 8501007
+	country = SOV
+
+	name = EVT_8501007_NAME
+	desc = EVT_8501007_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	action = {
+		name = EVT_8501007_A # Withdraw
+		ai_chance = 75
+		command = { type = relation which = PER value = -50 }
+	}
+	
+	action = {
+		name = EVT_8501007_B # Risk war
+		ai_chance = 25
+		command = { type = trigger which = 8501010 } # Soviets are able to send Iranians help
+		command = { type = trigger which = 8501008 }
+	}
+}
+
+# Americans carry out ultimatum
+event = {
+	id = 8501008
+	country = USA
+
+	name = EVT_8501008_NAME
+	desc = EVT_8501008_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	action = {
+		name = EVT_8501008_A # WW3
+		ai_chance = 60
+		command = { type = war which = SOV }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		name = EVT_8501008_B # Back down
+		ai_chance = 40
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+# Soviet help
+event = {
+	id = 8501010
+	country = PER
+
+	name = EVT_8501010_NAME
+	desc = EVT_8501010_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	action = {
+		name = EVT_8501010_A
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = dissent value = -20 }
+	}
+}
+
+### Blockade is successful, Soviets didn't help, it comes to Operation Ajax
+
+event = {
+	id = 8501020
+	country = PER
+
+	name = EVT_8501020_NAME
+	desc = EVT_8501020_DESC
+	picture = "nwo\operation_ajax"
+	style = 1
+
+	trigger = {
+		event = 8501004 # We got hit by sanctions
+		NOT = { event = 8501010 } # Soviets didn't help
+	}
+
+	date = { day = 0 month = june year = 1953 }
+	offset = 90
+	deathdate = { day = 30 month = december year = 1953 }
+
+	action = {
+		name = EVT_8501020_A # Operation Ajax succeeds
+		ai_chance = 95
+		command = { type = dissent value = 10 }
+		command = { type = add_prov_resource which = 1089 value = -50 where = oil }
+		command = { type = add_prov_resource which = 1090 value = -20 where = oil }
+		command = { type = add_prov_resource which = 1091 value = -5 where = oil }
+		### End of blockade
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = sleepevent which = 8501022 }
+		command = { type = trigger which = 8011407 }
+	}
+	
+	action = {
+		name = EVT_8501020_B # Operation Ajax fails
+		ai_chance = 5
+		command = { type = dissent value = -10 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = sleepevent which = 8011407 }
+		command = { type = sleepevent which = 8501021 }
+	}
+}
+
+### Outcome for the British
+# Positive
+event = {
+	id = 8501021
+	country = ENG
+
+	name = EVT_8501021_NAME
+	desc = EVT_8501021_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8501002
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 180
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = EVT_8501021_A
+		command = { type = dissent value = -3 }
+	}
+}
+# Negative
+event = {
+	id = 8501022
+	country = ENG
+
+	name = EVT_8501022_NAME
+	desc = EVT_8501022_DESC
+	picture = "nwo\abadan_crisis"
+	style = 1
+
+	trigger = {
+		flag = cold_war
+		event = 8501002
+	}
+
+	date = { day = 0 month = january year = 1954 }
+	offset = 360
+	deathdate = { day = 30 month = december year = 1954 }
+
+	action = {
+		name = EVT_8501022_A
+		command = { type = dissent value = 8 }
+	}
+}

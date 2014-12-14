@@ -1,0 +1,79 @@
+ALG;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+450001;Head of State;Georges Le Beau;1933;1964;1964;SL;Benevolent Gentleman;High;M530001;X
+450002;Head of Government;Georges Le Beau;1933;1964;1964;SL;Flamboyant Tough Guy;High;M530001;X
+450003;Foreign Minister;Jules de Koenigswarter;1933;1964;1964;SL;Ideological Crusader;High;M530003;X
+450004;Minister of Armament;Antoine Masurel;1933;1964;1964;SL;Tank Proponent;Medium;M530004;X
+450005;Minister of Security;Marcel Peyrouton;1933;1964;1964;SL;Back Stabber;Medium;M530005;X
+450006;Head of Military Intelligence;Jean Revault d'Allonnes;1933;1964;1964;SL;Industrial Specialist;Medium;M530006;X
+450007;Chief of Staff;Alfred Heurtaux;1933;1964;1964;SL;School of Fire Support;Medium;M530007;X
+450008;Chief of Army;Pierre de Chevigné;1933;1964;1964;SL;Decisive Battle Doctrine;Medium;M530008;X
+450009;Chief of Navy;Henri Manhés;1933;1964;1964;SL;Indirect Approach Doctrine;Medium;M530009;X
+450010;Chief of Air Force;Francois Sommer;1933;1964;1964;SL;Air Superiority Doctrine;Medium;M530010;X
+450011;Head of State;Jean Abrial;1940;1964;1964;SL;Stern Imperialist;High;L24146;X
+450012;Head of State;Maxime Weygand;1941;1964;1964;SL;Resigned Generalissimo;High;L24145;X
+450013;Head of State;Marcel Peyrouton;1943;1964;1964;SL;Barking Buffoon;High;M530005;X
+450014;Head of State;Georges Catroux;1943;1964;1964;SL;Pig-headed Isolationist;High;L24029;X
+450015;Head of State;Yves Chataigneau;1944;1964;1964;SL;Die-hard Reformer;High;M528020;X
+450016;Head of State;Ferhat Abbas;1933;1964;1964;LWR;Autocratic Charmer;High;M530016;X
+450017;Head of Government;Jean Abrial;1940;1964;1964;SL;Old Admiral;High;L24146;X
+450018;Head of Government;Maxime Weygand;1941;1964;1964;SL;Happy Amateur;High;L24145;X
+450019;Head of Government;Marcel Peyrouton;1943;1964;1964;SL;Corporate Suit;High;M530005;X
+450020;Head of Government;Georges Catroux;1943;1964;1964;SL;Old General;High;L24029;X
+450021;Head of Government;Yves Chataigneau;1944;1964;1964;SL;Corporate Suit;High;M528020;X
+450022;Head of Government;Ferhat Abbas;1933;1964;1964;LWR;Smiling Oilman;High;M530016;X
+450023;Foreign Minister;Pierre-Henri Teitgen;1942;1964;1964;SL;The Cloak N Dagger Schemer;High;M530023;X
+450024;Foreign Minister;Saadi M'Barka;1933;1964;1964;LWR;Biased Intellectual;High;M530024;X
+450025;Foreign Minister;Yussef ben-Khedda;1941;1964;1964;LWR;Great Compromiser;High;M530025;X
+450026;Minister of Armament;Eugene Dechelette;1941;1964;1964;SL;Air Superiority Proponent;Medium;M530026;X
+450027;Minister of Armament;Frantz Fanon;1933;1964;1964;LWR;Military Entrepreneur;Medium;M530027;X
+450028;Minister of Armament;Ahmed ben-Bella;1945;1964;1964;LWR;Administrative Genius;Medium;M530028;X
+450029;Minister of Security;Andre Jean Godin;1942;1964;1964;SL;Compassionate Gentleman;Medium;M530029;X
+450030;Minister of Security;Yussef ben-Khedda;1933;1964;1964;LWR;Back Stabber;Medium;M530025;X
+450031;Minister of Security;Djamil Chirine;1941;1964;1964;LWR;Man of the People;Medium;M530031;X
+450032;Head of Military Intelligence;Pierre Julitte;1941;1964;1964;SL;Logistics Specialist;Medium;M530032;X
+450033;Head of Military Intelligence;Djamil Chirine;1933;1964;1964;LWR;Industrial Specialist;Medium;M530031;X
+450034;Head of Military Intelligence;Saadi M'Barka;1941;1964;1964;LWR;Naval Intelligence Specialist;Medium;M530024;X
+450035;Chief of Staff;Jacques Bourdis;1944;1964;1964;SL;School of Manoeuvre;Medium;M530035;X
+450036;Chief of Staff;Mustapha al-Ghani;1933;1964;1964;LWR;School of Psychology;Medium;M530036;X
+450037;Chief of Staff;Houari Boumedienne;1944;1964;1964;LWR;School of Mass Combat;Medium;M530037;X
+450038;Chief of Army;Paul Oddo;1943;1964;1964;SL;Armoured Spearhead Doctrine;Medium;M530038;X
+450039;Chief of Army;Mustapha al-Ghani;1933;1964;1964;LWR;Elastic Defence Doctrine;Medium;M530036;X
+450040;Chief of Army;Houari Boumedienne;1944;1964;1964;LWR;Guns and Butter Doctrine;Medium;M530037;X
+450041;Chief of Navy;Pierre de Chevigné;1943;1964;1964;SL;Base Control Doctrine;Medium;M530008;X
+450042;Chief of Navy;Kheireddine Dadci;1933;1964;1964;LWR;Open Seas Doctrine;Medium;M530042;X
+450043;Chief of Air Force;Alfred Heurtaux;1939;1964;1964;SL;Army Aviation Doctrine;Medium;M530007;X
+450044;Chief of Air Force;Frantz Fanon;1933;1964;1964;LWR;Air Superiority Doctrine;Medium;M530027;X
+450045;Chief of Air Force;Bachra Baya;1944;1964;1964;LWR;Vertical Envelopment Doctrine;Medium;M530045;X
+450046;Chief of Staff;Saadi Yacef;1954;1964;1964;LWR;School of Defence;Medium;5988;X
+450047;Minister of Security;Lakhdar Bentobal;1957;1964;1964;SD;Man of the People;High;5989;X
+450048;Minister of Security;Lakhdar Bentobal;1957;1964;1964;LWR;Man of the People;High;5989;X
+450049;Chief of Staff;Lakhdar Bentobal;1949;1964;1964;SD;School of Defence;High;5989;X
+450050;Chief of Staff;Lakhdar Bentobal;1949;1964;1964;LWR;School of Defence;High;5989;X
+450101;Head of State;Marcel-Edmond Naegelen;1948;1964;1964;SC;Weary Stiffneck;Medium;M450101;X
+450102;Head of Government;Marcel-Edmond Naegelen;1948;1964;1964;SC;Political Protege;Medium;M450101;X
+450103;Head of State;Roger Leonard;1951;1964;1964;SC;Resigned Generalissimo;Medium;M450103;X
+450104;Head of Government;Roger Leonard;1951;1964;1964;SC;Naive Optimist;Medium;M450103;X
+450105;Head of State;Jacques-Emile Soustelle;1955;1964;1964;SC;Die-Hard Reformer;Medium;M450105;X
+450106;Head of Government;Jacques-Emile Soustelle;1955;1964;1964;SC;Old Airmarshal;Medium;M450105;X
+450107;Head of State;Robert Lacoste;1956;1964;1964;SC;Benevolent Gentleman;Medium;M450107;X
+450108;Head of Government;Robert Lacoste;1956;1964;1964;SC;Old General;Medium;M450107;X
+450109;Head of State;Abdur Rahman Fares;1958;1992;1992;ML;Powerhungry Demagogue;Medium;M450109;X
+450110;Head of Government;Benyoucef Ben Khedda;1961;2004;2004;ML;Corporate Suit;Medium;M450110;X
+450111;Head of State;Ahmed Ben Bella;1963;2013;2013;SD;Autocratic Charmer;Medium;M450111;X
+450112;Head of Government;Ahmed Ben Bella;1963;2013;2013;SD;Flamboyant Tough Guy;Medium;M450111;X
+450113;Head of State;Houari Boumediene;1965;1979;1979;LWR;Insignificant Layman;Medium;M450113;X
+450114;Head of Government;Houari Boumediene;1965;1979;1979;LWR;Naive Optimist;Medium;M450113;X
+450115;Head of State;Chadli Bendjedid;1979;2013;2013;SL;Benevolent Gentleman;Medium;M450115;X
+450116;Head of Government;Mohamed Ben Ahmed Abdelghani;1979;1997;1997;SL;Happy Amateur;Medium;M450116;X
+450117;Head of Government;Abdelhamid Brahimi;1984;2020;2020;SL;Old Airmarshal;Medium;M450117;X
+450118;Head of Government;Kasdi Merbah;1988;1994;2019;SL;Old Admiral;Medium;M450118;X
+450119;Head of Government;Mouloud Hamrouche;1989;2020;2020;SL;Smiling Oilman;Medium;M450119;X
+450120;Head of Government;Sid Ahmed Ghozali;1991;2020;2020;SL;Backroom Backstabber;Medium;M450120;X
+450121;Foreign Minister;Ahmed Taleb Ibrahimi;1980;2013;2013;LWR;Great Compromiser;High;ALG3;X
+450122;Minister of Armament;Chadli Bendjedid;1980;2013;2013;LWR;Infantry Proponent;Very High;ALG1;X
+450123;Minister of Security;Chadli Bendjedid;1980;2013;2013;LWR;Man of the People;Very High;ALG1;X
+450124;Head of Military Intelligence;Chadli Bendjedid;1980;2013;2013;LWR;Dismal Enigma;Very High;ALG1;X
+450125;Chief of Staff;Abdellah Belhouchet;1980;2013;2013;LWR;School of Fire Support;High;ALG4;X
+450126;Chief of Army;Abdellah Belhouchet;1980;2013;2013;LWR;Decisive Battle Doctrine;High;ALG4;X
+450127;Chief of Navy;Abdellah Belhouchet;1980;2013;2013;LWR;Indirect Approach Doctrine;High;ALG4;X
+450128;Chief of Air Force;Abdellah Belhouchet;1980;2013;2013;LWR;Air Superiority Doctrine;High;ALG4;X

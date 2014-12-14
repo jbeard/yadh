@@ -1,0 +1,53 @@
+U88;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
+800800;Head of State;Horace Valentin Crocicchia;1939;1964;1964;ML;Insignificant Layman;Very High;unknown;x
+800801;Head of Government;Horace Valentin Crocicchia;1939;1964;1964;ML;Silent Workhorse;Very High;unknown;x
+800802;Foreign Minister;Jean-Baptiste Boivin;1939;1964;1964;SC;Biased Intellectual;Very High;unknown;x
+800803;Minister of Armament;Louis-Gustave Binger;1936;1964;1964;SC;Infantry Proponent;Very High;ivoire1;x
+800804;Minister of Security;Louis Wach ;1940;1964;1964;PA;Man of the People;Very High;unknown;x
+800805;Head of Military Intelligence;Bernard Binlin Dadié;1947;1964;1964;SL;Political Specialist;Very High;ivoire2;x
+800806;Chief of Staff;Louis-Gustave Binger;1936;1964;1964;SL;School of Defence;Very High;ivoire1;x
+800807;Chief of Army;Louis-Gustave Binger;1936;1964;1964;SL;Elastic Defence Doctrine;Very High;ivoire1;x
+800808;Chief of Navy;Pierre Messmer;1936;1964;1964;SC;Base Control Doctrine;Very High;ivoire3;x
+800809;Chief of Air Force;Albert Achard;1936;1964;1964;SL;Air Superiority Doctrine;Very High;unknown;x
+800810;Head of State;Félix Houphouët-Boigny;1944;1964;1964;SD;Benevolent Gentleman;Very High;ivoire4;x
+800811;Head of Government;Marcel Auguste Denise;1945;1964;1964;LWR;Happy Amateur;Very High;ivoire5;x
+800812;Foreign Minister;Ernest Boka;1944;1964;1964;SD;Biased Intellectual;Very High;ivoire6;x
+800813;Minister of Armament;Marcel Auguste Denise;1945;1964;1964;LWR;Administrative Genius;Very High;ivoire5;x
+800814;Minister of Security;Ernest Boka;1944;1964;1964;SD;Silent Lawyer;Very High;ivoire6;x
+800815;Head of Military Intelligence;Philippe Yacé;1945;1964;1964;LWR;Political Specialist;Very High;ivoire7;x
+800816;Chief of Staff;Philippe Yacé;1945;1964;1964;LWR;School of Psychology;Very High;ivoire7;x
+800817;Chief of Staff;Pierre Messmer;1944;1964;1964;SC;School of Defence;Very High;ivoire3;x
+800818;Chief of Army;Pierre Messmer;1944;1964;1964;SC;Decisive Battle Doctrine;Very High;ivoire3;x
+800819;Minister of Security;Francois M'bassidjé;1940;1964;1964;SD;Man of the People;Very High;unknown;x
+800820;Minister of Security;Philippe Yacé;1945;1964;1964;LWR;Silent Lawyer;Very High;ivoire7;x
+800821;Head of State;Essey Bonzu I;1943;1964;1964;PA;Popular Figurehead;Very High;unknown;x
+800822;Head of Government;Boa Kwassi;1934;1964;1964;PA;Silent Workhorse;Very High;unknown;x
+800823;Head of Military Intelligence;Louis Wach ;1940;1964;1964;PA;Dismal Enigma;Very High;unknown;x
+800824;Head of State;Julien Georges Lamy;1936;1964;1964;SC;Weary Stiffneck;Very High;M800824;x
+800825;Head of Government;Julien Georges Lamy;1936;1964;1964;SC;Old Admiral;Very High;M800824;x
+800826;Head of State;Gaston Mondon;1937;1964;1964;SC;Insignificant Layman;Very High;M800826;x
+800827;Head of Government;Gaston Mondon;1937;1964;1964;SC;Silent Workhorse;Very High;M800826;x
+800828;Head of State;Louis Bressolles;1938;1964;1964;SC;Insignificant Layman;Very High;M800828;x
+800829;Head of Government;Louis Bressolles;1938;1964;1964;SC;Happy Amateur;Very High;M800828;x
+800830;Head of State;Hubert-Jules Deschamps;1941;1964;1964;SC;Die-Hard Reformer;Very High;M800830;x
+800831;Head of Government;Hubert-Jules Deschamps;1941;1964;1964;SC;Ambitious Union Boss;Very High;M800830;x
+800832;Head of State;Georges-Pierre Rey;1943;1964;1964;SC;Pig-Headed Isolationist;Very High;M800832;x
+800833;Head of Government;Georges-Pierre Rey;1943;1964;1964;SC;Naive Optimist;Very High;M800832;x
+800834;Head of State;André Latrille;1944;1964;1964;SC;Weary Stiffneck;Very High;M800834;x
+800835;Head of Government;André Latrille;1944;1964;1964;SC;Ambitious Union Boss;Very High;M800834;x
+800836;Head of State;Henry de Mauduit;1945;1964;1964;SC;Weary Stiffneck;Very High;M800836;x
+800837;Head of Government;Henry de Mauduit;1945;1964;1964;SC;Silent Workhorse;Very High;M800836;x
+800838;Head of State;Oswald Durand;1947;1964;1964;SC;Powerhungry Demagogue;Very High;M800838;x
+800839;Head of Government;Oswald Durand;1947;1964;1964;SC;Naive Optimist;Very High;M800838;x
+800840;Head of State;Georges Orselli;1948;1964;1964;SC;Die-Hard Reformer;Very High;M800840;x
+800841;Head of Government;Georges Orselli;1948;1964;1964;SC;Old Airmarshal;Very High;M800840;x
+800842;Head of State;Laurent Péchoux;1949;1964;1964;SC;Resigned Generalissimo;Very High;M800842;x
+800843;Head of Government;Laurent Péchoux;1949;1964;1964;SC;Flamboyant Tough Guy;Very High;M800842;x
+800844;Head of State;Camille-Victor Bailly;1952;1964;1964;SC;Insignificant Layman;Very High;M800844;x
+800845;Head of Government;Camille-Victor Bailly;1952;1964;1964;SC;Old General;Very High;M800844;x
+800846;Head of State;Pierre Messmer;1954;1964;1964;SC;Autocratic Charmer;Very High;ivoire3;x
+800847;Head of Government;Pierre Messmer;1954;1964;1964;SC;Political Protege;Very High;ivoire3;x
+800848;Head of State;Pierre Lami;1956;1964;1964;SC;Weary Stiffneck;Very High;M800848;x
+800849;Head of Government;Pierre Lami;1956;1964;1964;SC;Old General;Very High;M800848;x
+800850;Head of State;Ernest de Nattes;1957;1965;1971;SC;Insignificant Layman;Very High;M800850;x
+800851;Head of Government;Félix Houphouët-Boigny;1959;1994;1994;SD;Happy Amateur;Very High;ivoire4;x
