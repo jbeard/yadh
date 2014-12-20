@@ -52835,10 +52835,10 @@ event = {
 	action = {
 		trigger = { ideology = paternal_autocrat }
 
-		name = "Adopt Imperial Flag"
+		name = "Adopt Imperial German Flag"
 
 		command = { type = flag_ext where = U08 which = "_aut" }
-		command = { type = name where = U08 which = "Imperial Germany"}
+		command = { type = name where = U08 which = "German Empire"}
 		command = { type = local_setflag which = U08_AUT }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -53147,10 +53147,10 @@ event = {
 	action = {
 		trigger = { ideology = paternal_autocrat }
 
-		name = "Adopt Imperial Flag"
+		name = "Adopt Imperial German Flag"
 
 		command = { type = flag_ext where = GER which = "_aut" }
-		command = { type = name where = GER which = "Imperial Germany"}
+		command = { type = name where = GER which = "German Empire"}
 		command = { type = local_setflag which = GER_AUT }
 
 		command = { type = local_clrflag which = GER_NAZ }
