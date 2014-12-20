@@ -29,9 +29,6 @@ event = "db\events\TGC-AST_1933.txt"
 event = "db\events\TGC-AST_1946.txt"
 event = "db\events\TGC-AST_1950.txt"
 
-#Custom events
-event = "db\events\flagchange.txt"
-
 # AI Events
 event = "db\events\AI\AI_ministers.txt"
 event = "db\events\AI\AI_sliders.txt"
