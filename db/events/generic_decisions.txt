@@ -52795,10 +52795,10 @@ event = {
 	action = {
 		trigger = { ideology = nazi }
 
-		name = "Adopt a Nazi Flag"
+		name = "Adopt Third Reich Flag"
 
 		command = { type = flag_ext where = U08 which = "_naz" }
-		command = { type = name where = U08 which = ""}
+		command = { type = name where = U08 which = "Third Reich"}
 		command = { type = local_setflag which = U08_NAZ }
 
 		command = { type = local_clrflag which = U08_FAS }
@@ -52815,10 +52815,10 @@ event = {
 	action = {
 		trigger = { ideology = fascist }
 
-		name = "Adopt a Fascist Flag"
+		name = "Adopt German State Flag"
 
 		command = { type = flag_ext where = U08 which = "_fas" }
-		command = { type = name where = U08 which = ""}
+		command = { type = name where = U08 which = "German State"}
 		command = { type = local_setflag which = U08_FAS }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52835,10 +52835,10 @@ event = {
 	action = {
 		trigger = { ideology = paternal_autocrat }
 
-		name = "Adopt a Monarchist Flag"
+		name = "Adopt Imperial Flag"
 
 		command = { type = flag_ext where = U08 which = "_aut" }
-		command = { type = name where = U08 which = ""}
+		command = { type = name where = U08 which = "Imperial Germany"}
 		command = { type = local_setflag which = U08_AUT }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52857,8 +52857,8 @@ event = {
 
 		name = "Adopt a Conservative Flag"
 
-		command = { type = flag_ext where = U08 which = "_aut" }
-		command = { type = name where = U08 which = ""}
+		command = { type = flag_ext where = U08 which = "_sco" }
+		command = { type = name where = U08 which = "Germany"}
 		command = { type = local_setflag which = U08_SCO }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52875,10 +52875,10 @@ event = {
 	action = {
 		trigger = { ideology = market_liberal }
 
-		name = "Adopt a Market Liberal Flag"
+		name = "Adopt German Republic Flag"
 
-		command = { type = flag_ext where = U08 which = "_sdm" }
-		command = { type = name where = U08 which = ""}
+		command = { type = flag_ext where = U08 which = "_mli" }
+		command = { type = name where = U08 which = "German Republic"}
 		command = { type = local_setflag which = U08_MLI }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52895,10 +52895,10 @@ event = {
 	action = {
 		trigger = { ideology = social_liberal }
 
-		name = "Adopt a Social Liberal Flag"
+		name = "Adopt Weimar Republic Flag"
 
-		command = { type = flag_ext where = U08 which = "_sdm" }
-		command = { type = name where = U08 which = ""}
+		command = { type = flag_ext where = U08 which = "_sli" }
+		command = { type = name where = U08 which = "Weimar Republic"}
 		command = { type = local_setflag which = U08_SLI }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52915,10 +52915,10 @@ event = {
 	action = {
 		trigger = { ideology = social_democrat }
 
-		name = "Adopt a Social Democratic Flag"
+		name = "Adopt Federal German Republic Flag"
 
-		command = { type = flag_ext where = U08 which = "_mli" }
-		command = { type = name where = U08 which = ""}
+		command = { type = flag_ext where = U08 which = "_sdm" }
+		command = { type = name where = U08 which = "Federal German Republic"}
 		command = { type = local_setflag which = U08_SDM }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52935,10 +52935,10 @@ event = {
 	action = {
 		trigger = { ideology = left_wing_radical }
 
-		name = "Adopt a Left-Wing Flag"
+		name = "Adopt People's German Republic Flag"
 
 		command = { type = flag_ext where = U08 which = "_lwr" }
-		command = { type = name where = U08 which = ""}
+		command = { type = name where = U08 which = "People's German Republic"}
 		command = { type = local_setflag which = U08_LWR }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52955,10 +52955,10 @@ event = {
 	action = {
 		trigger = { ideology = leninist }
 
-		name = "Adopt a Leninist Flag"
+		name = "Adopt German Democratic Republic Flag"
 
 		command = { type = flag_ext where = U08 which = "_len" }
-		command = { type = name where = U08 which = ""}
+		command = { type = name where = U08 which = "German Democratic Republic"}
 		command = { type = local_setflag which = U08_LEN }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -52975,10 +52975,10 @@ event = {
 	action = {
 		trigger = { ideology = stalinist }
 
-		name = "Adopt a Stalinist Flag"
+		name = "Adopt German Soviet Republic Flag"
 
 		command = { type = flag_ext where = U08 which = "_sta" }
-		command = { type = name where = U08 which = ""}
+		command = { type = name where = U08 which = "German Soviet Republic"}
 		command = { type = local_setflag which = U08_STA }
 
 		command = { type = local_clrflag which = U08_NAZ }
@@ -53127,10 +53127,10 @@ event = {
 	action = {
 		trigger = { ideology = fascist }
 
-		name = "Adopt a Fascist Flag"
+		name = "Adopt Third Reich Flag"
 
 		command = { type = flag_ext where = GER which = "_fas" }
-		command = { type = name where = GER which = ""}
+		command = { type = name where = GER which = "Third Reich"}
 		command = { type = local_setflag which = GER_FAS }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53147,10 +53147,10 @@ event = {
 	action = {
 		trigger = { ideology = paternal_autocrat }
 
-		name = "Adopt a Monarchist Flag"
+		name = "Adopt Imperial Flag"
 
 		command = { type = flag_ext where = GER which = "_aut" }
-		command = { type = name where = GER which = ""}
+		command = { type = name where = GER which = "Imperial Germany"}
 		command = { type = local_setflag which = GER_AUT }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53170,26 +53170,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = GER which = "_sco" }
-		command = { type = name where = GER which = ""}
-		command = { type = local_setflag which = GER_SCO }
-
-		command = { type = local_clrflag which = GER_NAZ }
-		command = { type = local_clrflag which = GER_FAS }
-		command = { type = local_clrflag which = GER_AUT }
-		command = { type = local_clrflag which = GER_MLI }
-		command = { type = local_clrflag which = GER_SLI }
-		command = { type = local_clrflag which = GER_SDM }
-		command = { type = local_clrflag which = GER_LWR }
-		command = { type = local_clrflag which = GER_LEN }
-		command = { type = local_clrflag which = GER_STA }
-			}
-	
-	action = {
-		trigger = { ideology = social_conservative }
-
-		name = "999000l"
-
-		command = { type = country which = DFR }
+		command = { type = name where = GER which = "Germany"}
 		command = { type = local_setflag which = GER_SCO }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53202,33 +53183,14 @@ event = {
 		command = { type = local_clrflag which = GER_LEN }
 		command = { type = local_clrflag which = GER_STA }
 	}
-
+	
 	action = {
 		trigger = { ideology = market_liberal }
 
-		name = "Adopt a Market Liberal Flag"
+		name = "Adopt German Republic Flag"
 
 		command = { type = flag_ext where = GER which = "_mli" }
-		command = { type = name where = GER which = ""}
-		command = { type = local_setflag which = GER_MLI }
-
-		command = { type = local_clrflag which = GER_NAZ }
-		command = { type = local_clrflag which = GER_FAS }
-		command = { type = local_clrflag which = GER_AUT }
-		command = { type = local_clrflag which = GER_SOC }
-		command = { type = local_clrflag which = GER_SLI }
-		command = { type = local_clrflag which = GER_SDM }
-		command = { type = local_clrflag which = GER_LWR }
-		command = { type = local_clrflag which = GER_LEN }
-		command = { type = local_clrflag which = GER_STA }
-			}
-	
-	action = {
-		trigger = { ideology = market_liberal }
-
-		name = "999000l"
-
-		command = { type = country which = DFR }
+		command = { type = name where = GER which = "German Republic"}
 		command = { type = local_setflag which = GER_MLI }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53241,33 +53203,14 @@ event = {
 		command = { type = local_clrflag which = GER_LEN }
 		command = { type = local_clrflag which = GER_STA }
 	}
-
-	action = {
-		trigger = { ideology = social_liberal }
-
-		name = "Adopt a Social Liberal Flag"
-
-		command = { type = flag_ext where = GER which = "_sli" }
-		command = { type = name where = GER which = ""}
-		command = { type = local_setflag which = GER_SLI }
-
-		command = { type = local_clrflag which = GER_NAZ }
-		command = { type = local_clrflag which = GER_FAS }
-		command = { type = local_clrflag which = GER_AUT }
-		command = { type = local_clrflag which = GER_SOC }
-		command = { type = local_clrflag which = GER_MLI }
-		command = { type = local_clrflag which = GER_SDM }
-		command = { type = local_clrflag which = GER_LWR }
-		command = { type = local_clrflag which = GER_LEN }
-		command = { type = local_clrflag which = GER_STA }
-			}
 	
 	action = {
 		trigger = { ideology = social_liberal }
 
-		name = "999000l"
+		name = "Adopt Weimar Republic Flag"
 
-		command = { type = country which = DFR }
+		command = { type = flag_ext where = GER which = "_sli" }
+		command = { type = name where = GER which = "Weimar Republic"}
 		command = { type = local_setflag which = GER_SLI }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53280,33 +53223,14 @@ event = {
 		command = { type = local_clrflag which = GER_LEN }
 		command = { type = local_clrflag which = GER_STA }
 	}
-
-	action = {
-		trigger = { ideology = social_democrat }
-
-		name = "Adopt a Social Democratic Flag"
-
-		command = { type = flag_ext where = GER which = "_sli" }
-		command = { type = name where = GER which = ""}
-		command = { type = local_setflag which = GER_SDM }
-
-		command = { type = local_clrflag which = GER_NAZ }
-		command = { type = local_clrflag which = GER_FAS }
-		command = { type = local_clrflag which = GER_AUT }
-		command = { type = local_clrflag which = GER_SOC }
-		command = { type = local_clrflag which = GER_MLI }
-		command = { type = local_clrflag which = GER_SLI }
-		command = { type = local_clrflag which = GER_LWR }
-		command = { type = local_clrflag which = GER_LEN }
-		command = { type = local_clrflag which = GER_STA }
-			}
 	
 	action = {
 		trigger = { ideology = social_democrat }
 
-		name = "999000l"
+		name = "Adopt Federal German Republic Flag"
 
-	command = { type = country which = DFR }
+		command = { type = flag_ext where = GER which = "_sdm" }
+		command = { type = name where = GER which = "Federal German Republic"}
 		command = { type = local_setflag which = GER_SDM }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53319,14 +53243,14 @@ event = {
 		command = { type = local_clrflag which = GER_LEN }
 		command = { type = local_clrflag which = GER_STA }
 	}
-
+	
 	action = {
 		trigger = { ideology = left_wing_radical }
 
-		name = "Adopt a Left-Wing Flag"
+		name = "Adopt People's German Republic Flag"
 
-		command = { type = flag_ext where = GER which = "_sli" }
-		command = { type = name where = GER which = ""}
+		command = { type = flag_ext where = GER which = "_lwr" }
+		command = { type = name where = GER which = "People's German Republic"}
 		command = { type = local_setflag which = GER_LWR }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53343,29 +53267,10 @@ event = {
 	action = {
 		trigger = { ideology = leninist }
 
-		name = "Adopt a Leninist Flag"
+		name = "Adopt German Democratic Republic Flag"
 
-		command = { type = flag_ext where = GER which = "_sli" }
-		command = { type = name where = GER which = ""}
-		command = { type = local_setflag which = GER_LEN }
-
-		command = { type = local_clrflag which = GER_NAZ }
-		command = { type = local_clrflag which = GER_FAS }
-		command = { type = local_clrflag which = GER_AUT }
-		command = { type = local_clrflag which = GER_SOC }
-		command = { type = local_clrflag which = GER_MLI }
-		command = { type = local_clrflag which = GER_SLI }
-		command = { type = local_clrflag which = GER_SDM }
-		command = { type = local_clrflag which = GER_LWR }
-		command = { type = local_clrflag which = GER_STA }
-			}
-	
-	action = {
-		trigger = { ideology = leninist }
-
-		name = "999000m"
-
-		command = { type = country which = DDR }
+		command = { type = flag_ext where = GER which = "_len" }
+		command = { type = name where = GER which = "German Democratic Republic"}
 		command = { type = local_setflag which = GER_LEN }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53378,14 +53283,14 @@ event = {
 		command = { type = local_clrflag which = GER_LWR }
 		command = { type = local_clrflag which = GER_STA }
 	}
-
+	
 	action = {
 		trigger = { ideology = stalinist }
 
-		name = "Adopt a Stalinist Flag"
+		name = "Adopt German Soviet Republic Flag"
 
-		command = { type = flag_ext where = GER which = "_sli" }
-		command = { type = name where = GER which = ""}
+		command = { type = flag_ext where = GER which = "_sta" }
+		command = { type = name where = GER which = "German Soviet Republic"}
 		command = { type = local_setflag which = GER_STA }
 
 		command = { type = local_clrflag which = GER_NAZ }
@@ -53397,27 +53302,7 @@ event = {
 		command = { type = local_clrflag which = GER_SDM }
 		command = { type = local_clrflag which = GER_LWR }
 		command = { type = local_clrflag which = GER_LEN }
-			}
-	
-	action = {
-		trigger = { ideology = stalinist }
-
-		name = "999000m"
-
-		command = { type = country which = DDR }
-		command = { type = local_setflag which = GER_STA }
-
-		command = { type = local_clrflag which = GER_NAZ }
-		command = { type = local_clrflag which = GER_FAS }
-		command = { type = local_clrflag which = GER_AUT }
-		command = { type = local_clrflag which = GER_SOC }
-		command = { type = local_clrflag which = GER_MLI }
-		command = { type = local_clrflag which = GER_SLI }
-		command = { type = local_clrflag which = GER_SDM }
-		command = { type = local_clrflag which = GER_LWR }
-		command = { type = local_clrflag which = GER_LEN }
-			}
-	
+	}
 }
 
 event = {
