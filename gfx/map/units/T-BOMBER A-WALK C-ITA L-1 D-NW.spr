@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-BOMBER A-WALK C-ITA L-1 D-NW.bmp"
+	Origin = { x = 61 y = 66 }
+	Frames = 19
+	Speed = 5
+	Palette = "T-BOMBER C-ITA L-1.bmp"
+}

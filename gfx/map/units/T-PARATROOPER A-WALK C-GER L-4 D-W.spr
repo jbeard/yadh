@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-PARATROOPER A-WALK C-GER L-4 D-W.bmp"
+	Origin = { x = 115 y = 102 }
+	Frames = 15
+	Speed = 8
+	Palette = "PZ-GREN-INF"
+}

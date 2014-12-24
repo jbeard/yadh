@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-MECHANIZED C-SPA L-6 A-STAND.bmp"
+	Origin = { x = 50 y = 30 }
+	Frames = 5
+	Speed = 9
+	Palette = "inger.bmp"
+}

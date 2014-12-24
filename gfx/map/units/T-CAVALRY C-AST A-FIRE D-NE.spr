@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-CAVALRY C-AST A-FIRE D-NE.bmp"
+	Origin = { x = 59 y = 56 }
+	Frames = 15
+	Speed = 8
+	Palette = "t-cavalry c-ENG.bmp"
+}

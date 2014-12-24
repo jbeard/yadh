@@ -3,5 +3,5 @@ Sprite = {
 	Origin = { x = 66 y = 66 }
 	Frames = 16
 	Speed = 5
-	Palette = "T-FIGHTER C-ENG L-1.bmp"
+	Palette = "T-FIGHTER C-ROM L-1.bmp"
 }

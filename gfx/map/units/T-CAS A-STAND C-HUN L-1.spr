@@ -3,5 +3,5 @@ Sprite = {
 	Origin = { x = 64 y = 62 }
 	Frames = 16
 	Speed = 5
-	Palette = "T-BOMBER C-HUN L-1"
+	Palette = "T-BOMBER C-HUN L-1.bmp"
 }

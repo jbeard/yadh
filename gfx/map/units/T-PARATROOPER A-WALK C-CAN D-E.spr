@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-PARATROOPER A-WALK C-CAN D-E.bmp"
+	Origin = { x = 45 y = 55 }
+	Frames = 12
+	Speed = 8
+	Palette = "kanda.bmp"
+}

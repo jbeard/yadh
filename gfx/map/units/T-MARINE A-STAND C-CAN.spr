@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-MARINE A-STAND C-CAN.bmp"
+	Origin = { x = 45 y = 55 }
+	Frames = 15
+	Speed = 8
+	Palette = "kanda.bmp"
+}

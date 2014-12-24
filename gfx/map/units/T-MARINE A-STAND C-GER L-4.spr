@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-MARINE A-STAND C-GER L-4.bmp"
+	Origin = { x = 72 y = 83 }
+	Frames = 15
+	Speed = 10
+	Palette = "PZ-GREN-INF"
+}

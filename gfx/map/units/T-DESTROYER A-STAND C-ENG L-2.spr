@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-DESTROYER A-STAND C-ENG L-2.bmp"
+	Origin = { x = 104 y = 85 }
+	Frames = 1
+	Speed = 0
+	Palette = "T-DESTROYER C-USA L-1.bmp"
+}

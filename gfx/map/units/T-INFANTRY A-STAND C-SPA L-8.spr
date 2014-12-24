@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-INFANTRY A-STAND C-SPA L-8.bmp"
+	Origin = { x = 75 y = 80 }
+	Frames = 15
+	Speed = 10
+	Palette = "PZ-GREN-INF"
+}
