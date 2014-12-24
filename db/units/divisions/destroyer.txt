@@ -1,269 +1,244 @@
-# MODEL_25_
-
+naval_unit_type = 1
 allowed_brigades = naval_asw
 allowed_brigades = naval_anti_air_s
 allowed_brigades = naval_radar_s
 allowed_brigades = naval_fire_controll_s
-allowed_brigades = naval_improved_hull_s
-allowed_brigades = naval_torpedoes_s
+# allowed_brigades = naval_improved_hull_s
+# allowed_brigades = naval_torpedoes_s
+allowed_brigades = naval_mines
+allowed_brigades = b_u3
 
-# 0 - Torpedo gunboat / MTB / PT (1885)
+# 0 - Great War
 model = {
-	cost						= 0.4
-	buildtime 					= 270
-	defaultorganisation 		= 20
+	cost						= 3
+	buildtime 					= 100
+	defaultorganisation 				= 30
 	morale						= 30
-	manpower					= 0.2
-	maxspeed					= 22
-	surfacedetectioncapability	= 1
-	airdetectioncapability		= 1
-	subdetectioncapability		= 1
-	visibility					= 20
-	seadefence					= 39
-	airdefence					= 29
-	seaattack					= 1
-	convoyattack				= 1
-	subattack					= 1
-	airattack					= 1
-	shorebombardment			= 0
-	transportcapability			= 0
-	range						= 1500
-	supplyconsumption			= 0.25
-	fuelconsumption				= 0.25
-	distance					= 0.05
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 200 }
-}
-
-# 1 - Fleet Destroyer (1902)
-model = {
-	cost						= 0.5
-	buildtime 					= 390
-	defaultorganisation 		= 20
-	morale						= 30
-	manpower					= 0.375
+	manpower					= 0.6
 	maxspeed					= 24
-	surfacedetectioncapability	= 3
-	airdetectioncapability		= 2
-	subdetectioncapability		= 4
+	surfacedetectioncapability			= 3
+	airdetectioncapability				= 1
+	subdetectioncapability				= 4
 	visibility					= 50
-	seadefence					= 39
-	airdefence					= 28
+	seadefence					= 1
+	airdefence					= 2
 	seaattack					= 3
-	convoyattack				= 3
-	subattack					= 3
-	airattack					= 1
-	shorebombardment			= 0
-	transportcapability			= 0
-	range						= 2000
-	supplyconsumption			= 0.25
-	fuelconsumption				= 0.25
+	convoyattack					= 4
+	subattack					= 1
+	airattack					= 0
+	shorebombardment				= 0
+	transportcapability				= 0
+	
+	range						= 1500
+	supplyconsumption				= 0.35
+	fuelconsumption					= 0.25
 	distance					= 0.14
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 375 }
 }
-
-# 2 - Turbine Destroyer (1909)
+# 1 - Early
 model = {
-	cost						= 0.6
-	buildtime 					= 420
-	defaultorganisation 		= 20
+	cost						= 4
+	buildtime 					= 125
+	defaultorganisation 				= 30
 	morale						= 30
-	manpower					= 0.5
+	manpower					= 0.6
 	maxspeed					= 28
-	surfacedetectioncapability	= 3
-	airdetectioncapability		= 3
-	subdetectioncapability		= 5
+	surfacedetectioncapability			= 3
+	airdetectioncapability				= 1
+	subdetectioncapability				= 5
 	visibility					= 50
-	seadefence					= 38
-	airdefence					= 27
-	seaattack					= 4
-	convoyattack				= 4
-	subattack					= 4
-	airattack					= 1
-	shorebombardment			= 0
-	transportcapability			= 0
-	range						= 2500
-	supplyconsumption			= 0.25
-	fuelconsumption				= 0.25
+	seadefence					= 1
+	airdefence					= 3
+	seaattack					= 3
+	convoyattack					= 4
+	subattack					= 3
+	airattack					= 0
+	shorebombardment				= 0
+	transportcapability				= 0
+	
+	range						= 2000
+	supplyconsumption				= 0.35
+	fuelconsumption					= 0.25
 	distance					= 0.16
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 500 }
 }
-
-# 3 - Great War Destroyer (1916)
+# 2 - Basic
 model = {
-	cost						= 0.7
-	buildtime 					= 450
-	defaultorganisation 		= 20
+	cost						= 5
+	buildtime 					= 140
+	defaultorganisation 				= 30
 	morale						= 30
-	manpower					= 0.5
+	manpower					= 0.6
 	maxspeed					= 28
-	surfacedetectioncapability	= 3
-	airdetectioncapability		= 3
-	subdetectioncapability		= 5
+	surfacedetectioncapability			= 3
+	airdetectioncapability				= 2
+	subdetectioncapability				= 7
 	visibility					= 50
-	seadefence					= 38
-	airdefence					= 27
-	seaattack					= 4
-	convoyattack				= 4
+	seadefence					= 2
+	airdefence					= 3
+	seaattack					= 3
+	convoyattack					= 4
 	subattack					= 5
-	airattack					= 1
-	shorebombardment			= 0
-	transportcapability			= 0
-	range						= 5000
-	supplyconsumption			= 0.25
-	fuelconsumption				= 0.25
-	distance					= 0.16
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 500 }
-}
-
-# 4 - Large Destroyer (1923)
-model = {
-	cost						= 0.9
-	buildtime 					= 480
-	defaultorganisation 		= 20
-	morale						= 30
-	manpower					= 0.65
-	maxspeed					= 28
-	surfacedetectioncapability	= 3
-	airdetectioncapability		= 4
-	subdetectioncapability		= 7
-	visibility					= 50
-	seadefence					= 37
-	airdefence					= 27
-	seaattack					= 5
-	convoyattack				= 5
-	subattack					= 7
-	airattack					= 2
-	shorebombardment			= 1
-	transportcapability			= 0
-	range						= 7500
-	supplyconsumption			= 0.27
-	fuelconsumption				= 0.25
+	airattack					= 0
+	shorebombardment				= 1
+	transportcapability				= 0
+	
+	range						= 2500
+	supplyconsumption				= 0.37
+	fuelconsumption					= 0.25
 	distance					= 0.17
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 650 }
 }
-
-# 5 - Improved Destroyer (1933)
+# 3 - Improved
 model = {
-	cost						= 1.1
-	buildtime 					= 510
-	defaultorganisation 		= 20
+	cost						= 5.5
+	buildtime 					= 175
+	defaultorganisation 				= 30
+	morale						= 30
+	manpower					= 0.7
+	maxspeed					= 30
+	surfacedetectioncapability			= 4
+	airdetectioncapability				= 3
+	subdetectioncapability				= 9
+	visibility					= 50
+	seadefence					= 2
+	airdefence					= 4
+	seaattack					= 3
+	convoyattack					= 4
+	subattack					= 6
+	airattack					= 1
+	shorebombardment				= 1
+	transportcapability				= 0
+	
+	range						= 3000
+	supplyconsumption				= 0.37
+	fuelconsumption					= 0.25
+	distance					= 0.18
+}
+# 4 - Advanced
+model = {
+	cost						= 7.5
+	buildtime 					= 200
+	defaultorganisation 				= 30
+	morale						= 30
+	manpower					= 0.7
+	maxspeed					= 33
+	surfacedetectioncapability			= 4
+	airdetectioncapability				= 4
+	subdetectioncapability				= 11
+	visibility					= 50
+	seadefence					= 3
+	airdefence					= 5
+	seaattack					= 4
+	convoyattack					= 5
+	subattack					= 7
+	airattack					= 3
+	shorebombardment				= 2
+	transportcapability				= 0
+	
+	range						= 3500
+	supplyconsumption				= 0.4
+	fuelconsumption					= 0.3
+	distance					= 0.19
+}
+# 5 - Semi-Modern
+model = {
+	cost						= 7.5
+	buildtime 					= 220
+	defaultorganisation 				= 30
 	morale						= 30
 	manpower					= 0.8
-	maxspeed					= 30
-	surfacedetectioncapability	= 3
-	airdetectioncapability		= 5
-	subdetectioncapability		= 9
-	visibility					= 50
-	seadefence					= 36
-	airdefence					= 26
-	seaattack					= 6
-	convoyattack				= 6
-	subattack					= 9
-	airattack					= 3
-	shorebombardment			= 1
-	transportcapability			= 0
-	range						= 7500
-	supplyconsumption			= 0.27
-	fuelconsumption				= 0.25
-	distance					= 0.18
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 800 }
-}
-
-# 6 - Semi-Modern Destroyer (1937)
-model = {
-	cost						= 1.2
-	buildtime 					= 540
-	defaultorganisation 		= 20
-	morale						= 30
-	manpower					= 1.25
-	maxspeed					= 33
-	surfacedetectioncapability	= 3
-	airdetectioncapability		= 6
-	subdetectioncapability		= 10
-	visibility					= 50
-	seadefence					= 35
-	airdefence					= 25
-	seaattack					= 7
-	convoyattack				= 7
-	subattack					= 12
-	airattack					= 4
-	shorebombardment			= 2
-	transportcapability			= 0
-	range						= 8000
-	supplyconsumption			= 0.3
-	fuelconsumption				= 0.3
-	distance					= 0.19
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 1250 }
-}
-
-# 7 - Modern Destroyer (1941)
-model = {
-	cost						= 1.3
-	buildtime 					= 570
-	defaultorganisation 		= 20
-	morale						= 30
-	manpower					= 1.5
 	maxspeed					= 34
-	surfacedetectioncapability	= 3
-	airdetectioncapability		= 6
-	subdetectioncapability		= 12
+	surfacedetectioncapability			= 4
+	airdetectioncapability				= 4
+	subdetectioncapability				= 11
 	visibility					= 50
-	seadefence					= 34
-	airdefence					= 24
-	seaattack					= 8
-	convoyattack				= 8
-	subattack					= 14
-	airattack					= 6
-	shorebombardment			= 2
-	transportcapability			= 0
-	range						= 8000
-	supplyconsumption			= 0.3
-	fuelconsumption				= 0.3
+	seadefence					= 3
+	airdefence					= 6
+	seaattack					= 5
+	convoyattack					= 5
+	subattack					= 7
+	airattack					= 4
+	shorebombardment				= 3
+	transportcapability				= 0
+	
+	range						= 4000
+	supplyconsumption				= 0.4
+	fuelconsumption					= 0.3
 	distance					= 0.2
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 1500 }
 }
-
-# 8 - Advanced Destroyer (1945)
+# 6 - Modern
 model = {
-	cost						= 1.4
-	buildtime 					= 570
-	defaultorganisation 		= 20
+	cost						= 8
+	buildtime 					= 240
+	defaultorganisation 				= 30
 	morale						= 30
-	manpower					= 1.6
+	manpower					= 0.9
 	maxspeed					= 35
-	surfacedetectioncapability	= 4
-	airdetectioncapability		= 7
-	subdetectioncapability		= 14 #16
+	surfacedetectioncapability			= 5
+	airdetectioncapability				= 4
+	subdetectioncapability				= 13
 	visibility					= 50
-	seadefence					= 33
-	airdefence					= 23
-	seaattack					= 9
-	convoyattack				= 9
-	subattack					= 16
-	airattack					= 7
-	shorebombardment			= 2
-	transportcapability			= 0
-	range						= 8500
-	supplyconsumption			= 0.3
-	fuelconsumption				= 0.3
+	seadefence					= 3
+	airdefence					= 7
+	seaattack					= 5
+	convoyattack					= 5
+	subattack					= 9
+	airattack					= 4
+	shorebombardment				= 3
+	transportcapability				= 0
+	
+	range						= 4300
+	supplyconsumption				= 0.4
+	fuelconsumption					= 0.3
 	distance					= 0.2
-	reinforce_time				= 0.4
-	reinforce_cost				= 0.6	
-	equipment = { destroyer = 5 manpower = 1600 }
+}
+# 6 - Modern
+model = {
+	cost						= 8
+	buildtime 					= 240
+	defaultorganisation 				= 30
+	morale						= 30
+	manpower					= 0.9
+	maxspeed					= 36
+	surfacedetectioncapability			= 5
+	airdetectioncapability				= 4
+	subdetectioncapability				= 13
+	visibility					= 50
+	seadefence					= 4
+	airdefence					= 8
+	seaattack					= 5
+	convoyattack					= 5
+	subattack					= 9
+	airattack					= 6
+	shorebombardment				= 3
+	transportcapability				= 0
+	
+	range						= 4500
+	supplyconsumption				= 0.4
+	fuelconsumption					= 0.3
+	distance					= 0.2
+}
+# 8 - Seemonster
+model = {
+	cost						= 7.5
+	buildtime 					= 200
+	defaultorganisation 				= 45
+	morale						= 35
+	manpower					= 0.5
+	maxspeed					= 25
+	surfacedetectioncapability			= 4
+	airdetectioncapability				= 1
+	subdetectioncapability				= 11
+	visibility					= 20
+	seadefence					= 5
+	airdefence					= 5
+	seaattack					= 6
+	convoyattack					= 10
+	subattack					= 9
+	airattack					= 1
+	shorebombardment				= 2
+	transportcapability				= 0
+	
+	range						= 8000
+	supplyconsumption				= 0.1
+	fuelconsumption					= 0
+	distance					= 0.10
 }
