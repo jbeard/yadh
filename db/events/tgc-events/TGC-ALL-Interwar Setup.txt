@@ -195,6 +195,7 @@ event = {
 		trigger = { 
 			not = { country = SOV }
 			not = { country = GER }
+			not = { country = U08 }
 		}
 		ai_chance = 100
 		command = { type = local_setflag which = ic_sanitizer_stage1 }
