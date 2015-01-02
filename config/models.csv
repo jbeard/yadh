@@ -756,7 +756,7 @@ BRIG_MODEL_GER_6_5;;;;;;;;;;;X
 BRIG_MODEL_GER_6_6;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;;Kanonenjagdpanzer;;;X
 BRIG_MODEL_GER_7_0;LK I;LK I;LK I;LK I;LK I;LK I;;LK I;;;X
 BRIG_MODEL_GER_7_1;LK II;LK II;LK II;LK II;LK II;LK II;;LK II;;;X
-BRIG_MODEL_GER_7_2;Oberschlesien;Oberschlesien;Oberschlesien;Oberschlesien;Oberschlesien;Oberschlesien;;Oberschlesien;;;X
+BRIG_MODEL_GER_7_2;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;;Sturmpanzerwagen Oberschlesien;;;X
 BRIG_MODEL_GER_7_3;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;;Leichttraktor VK-35;;;X
 BRIG_MODEL_GER_7_4;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;;PzKpfw. I Ausf. B;;;X
 BRIG_MODEL_GER_7_5;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;;PzKpfw. II Ausf. A;;;X
@@ -779,16 +779,6 @@ BRIG_MODEL_GER_10_5;SdKfz. 231;SdKfz. 231;SdKfz. 231;SdKfz. 231;SdKfz. 231;SdKfz
 BRIG_MODEL_GER_10_6;;;;;;;;;;;X
 BRIG_MODEL_GER_10_7;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;;Spähpanzer M41;;;X
 BRIG_MODEL_GER_11_0;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;;7.7 cm 1914;;;X
-BRIG_MODEL_GER_35_0;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;;28 cm Haubitze L/12;;;X
-#BRIG_MODEL_GER_35_0;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;;42 cm Gamma Mörser;;;X
-BRIG_MODEL_GER_35_1;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;;21 cm Mörser 16;;;X
-#BRIG_MODEL_GER_35_1;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;;Dicke Bertha;;;X
-#BRIG_MODEL_GER_35_2;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;;Paris-Geschütz;;;X
-BRIG_MODEL_GER_35_2;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;;15 cm Kanone 16;;;X
-BRIG_MODEL_GER_35_3;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;;21 cm Mörser 18;;;X
-#BRIG_MODEL_GER_35_3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;;24 cm Kanone 3;;;X
-#BRIG_MODEL_GER_35_3;'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);;'Karl-Gerät' (040/041);;;X
-BRIG_MODEL_GER_35_4;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;;Schwerer Gustav;;;X
 # Germany air brigades;;;;;;;;;;;X
 BRIG_MODEL_GER_14_0;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
 BRIG_MODEL_GER_14_1;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
@@ -806,9 +796,50 @@ BRIG_MODEL_GER_15_3;Messerschmitt Me 609;Messerschmitt Me 609;Messerschmitt Me 6
 BRIG_MODEL_GER_15_4;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;;Messerschmitt Me-262;;;X
 BRIG_MODEL_GER_15_5;Gotha Go-229;Gotha Go-229;Gotha Go-229;Gotha Go-229;Gotha Go-229;Gotha Go-229;;Gotha Go-229;;;X
 BRIG_MODEL_GER_15_6;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;;Horton Ho.XIIIb;;;X
+# Germany land brigades;;;;;;;;;;;X
+BRIG_MODEL_GER_29_0;A7V-U;A7V-U;A7V-U;A7V-U;A7V-U;A7V-U;;A7V-U;;;X
+BRIG_MODEL_GER_29_1;Großtraktor;Großtraktor;Großtraktor;Großtraktor;Großtraktor;Großtraktor;;Großtraktor;;;X
+BRIG_MODEL_GER_29_2;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;;;X
+BRIG_MODEL_GER_29_3;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;;PzKpfw. III Ausf. A;;;X
+BRIG_MODEL_GER_29_4;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;;PzKpfw. III Ausf. E;;;X
+BRIG_MODEL_GER_29_5;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;;PzKpfw. IV Ausf. F;;;X
+BRIG_MODEL_GER_29_6;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;;PzKpfw. V Panther Ausf. A;;;X
+BRIG_MODEL_GER_29_7;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
+BRIG_MODEL_GER_29_8;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
+BRIG_MODEL_GER_29_9;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;;PzKpfw. Tiger II;;;X
+BRIG_MODEL_GER_29_10;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;;E-75 Panther III;;;X
+BRIG_MODEL_GER_29_11;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+BRIG_MODEL_GER_29_12;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
+BRIG_MODEL_GER_29_13;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;;PzKpfw. Leopard II;;;X
+BRIG_MODEL_GER_29_14;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;;PzKpfw. Lion I;;;X
+BRIG_MODEL_GER_29_15;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;;PzKpfw. Lion II;;;X
+# Germany air brigades;;;;;;;;;;;X
+BRIG_MODEL_GER_30_0;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;;Rumpler 4B;;;X
+BRIG_MODEL_GER_30_1;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;;Albatross W.IV;;;X
+BRIG_MODEL_GER_30_2;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;;Hansa-Brandenburg W.20;;;X
+BRIG_MODEL_GER_30_3;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;;Dornier Do.16 J-Wal;;;X
+BRIG_MODEL_GER_30_4;Heinkel He 8;Heinkel He 8;Heinkel He 8;Heinkel He 8;Heinkel He 8;Heinkel He 8;;Heinkel He 8;;;X
 BRIG_MODEL_GER_30_5;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;;Heinkel He 60;;;X
 BRIG_MODEL_GER_30_6;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;;Arado Ar 196;;;X
 BRIG_MODEL_GER_30_7;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;;Heinkel He 115;;;X
+BRIG_MODEL_GER_31_0;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
+BRIG_MODEL_GER_31_1;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
+BRIG_MODEL_GER_31_2;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;;Ju 87B Stuka/Fi 167/Ar 197;;;X
+BRIG_MODEL_GER_31_3;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;;Ju 87C Stuka/Fi 167/Bf 109T;;;X
+BRIG_MODEL_GER_31_4;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;;Ju 87D Stuka/Fi 167/Bf 109T;;;X
+BRIG_MODEL_GER_31_5;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;;Ju 87D Stuka/Fi 167/Me 155;;;X
+BRIG_MODEL_GER_31_6;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;;Me.155 / Ju.87C Stuka;;;X
+BRIG_MODEL_GER_31_7;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;;Fw.190T / Ju.87C Stuka;;;X
+BRIG_MODEL_GER_31_8;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;;He.162 / Hs.132;;;X
+#BRIG_MODEL_GER_35_0;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;;28 cm Haubitze L/12;;;X
+#BRIG_MODEL_GER_35_1;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;;21 cm Mörser 16;;;X
+#BRIG_MODEL_GER_35_2;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;;15 cm Kanone 16;;;X
+#BRIG_MODEL_GER_35_3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;;24 cm Kanone 3;;;X
+BRIG_MODEL_GER_35_0;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;;42 cm Gamma Mörser;;;X
+BRIG_MODEL_GER_35_1;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;;Dicke Bertha;;;X
+BRIG_MODEL_GER_35_2;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;;Paris-Geschütz;;;X
+BRIG_MODEL_GER_35_3;'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);;'Karl-Gerät' (040/041);;;X
+BRIG_MODEL_GER_35_4;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;;Schwerer Gustav;;;X
 # Germany;;;;;;;;;;;X
 # Germany land units;;;;;;;;;;;X
 MODEL_GER_1_11;Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);;Cavalry '38 (Kfz.70 Krupp-Prötze);;;X
@@ -913,7 +944,11 @@ MODEL_GER_21_4;Bayern-class;Classe Bayern;Classe Bayern;Clase Bayern;Bayern-Klas
 MODEL_GER_21_5;L 20a-class;Classe L 20a;Classe L 20a;Clase L 20a;L 20a-Klasse;L 20a-klasa;;L 20a-Klasse;;;X
 MODEL_GER_21_6;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;;Wurtemburg-class;;;X
 MODEL_GER_21_7;Bismarck-class;Classe Bismarck;Classe Bismarck;Clase Bismarck;Bismarck-Klasse;Bismarck-klasa;;Bismarck-Klasse;;;X
-MODEL_GER_21_11;H39-class;Classe H39;Classe H39;Clase H39;H39-Klasse;H39-klasa;;H39-Klasse;;;X
+MODEL_GER_21_8;H39-class;Classe H39;Classe H39;Clase H39;H39-Klasse;H39-klasa;;H39-Klasse;;;X
+MODEL_GER_21_9;H42-class;Classe H42;Classe H42;Clase H42;H42-Klasse;H42-klasa;;H42-Klasse;;;X
+MODEL_GER_21_10;H45-class;Classe H45;Classe H45;Clase H45;H45-Klasse;H45-klasa;;H45-Klasse;;;X
+MODEL_GER_21_11;H43-class;Classe H44;Classe H44;Clase H44;H44-Klasse;H44-klasa;;H44-Klasse;;;X
+MODEL_GER_21_12;H44-class;Classe H44;Classe H44;Clase H44;H44-Klasse;H44-klasa;;H44-Klasse;;;X
 MODEL_GER_22_0;Gazelle-class;Classe Gazelle;Classe Gazelle;Clase Gazelle;Gazelle-Klasse;Gazelle-klasa;;Gazelle-Klasse;;;X
 MODEL_GER_22_1;Königsberg-class;Classe Königsberg;Classe Königsberg;Clase Königsberg;Königsberg-Klasse;Königsberg-klasa;;Königsberg-Klasse;;;X
 MODEL_GER_22_2;Karlsruhe-class;Classe Karlsruhe;Classe Karlsruhe;Clase Karlsruhe;Karlsruhe-Klasse;Karlsruhe-klasa;;Karlsruhe-Klasse;;;X
@@ -941,7 +976,8 @@ MODEL_GER_25_0;S7-class;Classe S7;Classe S7;Clase S7;S7-Klasse;S7-klasa;;S7-Klas
 MODEL_GER_25_1;S114-class;Classe S114;Classe S114;Clase S114;S114-Klasse;S114-klasa;;S114-Klasse;;;X
 MODEL_GER_25_2;V1-class;Classe V1;Classe V1;Clase V1;V1-Klasse;V1-klasa;;V1-Klasse;;;X
 MODEL_GER_25_3;S113-class;S113-class;S113-class;S113-class;S113-class;S113-class;;S113-class;;;X
-MODEL_GER_25_5;Type 1934-class;Classe Type 1934;Classe Type 1934;Clase Tipo 1934;Type 1934-Klasse;Type 1934-klasa;;Type 1934-Klasse;;;X
+MODEL_GER_25_4;Type 1934-class;Classe Type 1934;Classe Type 1934;Clase Tipo 1934;Type 1934-Klasse;Type 1934-klasa;;Type 1934-Klasse;;;X
+MODEL_GER_25_5;Type 1934A-class;Classe Type 1934A;Classe Type 1934A;Clase Tipo 1934A;Type 1934A-Klasse;Type 1934A-klasa;;Type 1934A-Klasse;;;X
 MODEL_GER_25_6;Type 1936A-class;Classe Type 1936A;Classe Type 1936A;Clase Tipo 1936A;Type 1936A-Klasse;Type 1936A-klasa;;Type 1936A-Klasse;;;X
 MODEL_GER_25_7;Type 1942-class;Type 1942-class;Type 1942-class;Type 1942-class;Type 1942-class;Type 1942-class;;Type 1942-class;;;X
 MODEL_GER_25_8;Type 1945-class;Type 1945-class;Type 1945-class;Type 1945-class;Type 1945-class;Type 1945-class;;Type 1945-class;;;X
@@ -8739,7 +8775,7 @@ BRIG_MODEL_U08_6_5;;;;;;;;;;;X
 BRIG_MODEL_U08_6_6;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;;Kanonenjagdpanzer;;;X
 BRIG_MODEL_U08_7_0;LK I;LK I;LK I;LK I;LK I;LK I;;LK I;;;X
 BRIG_MODEL_U08_7_1;LK II;LK II;LK II;LK II;LK II;LK II;;LK II;;;X
-BRIG_MODEL_U08_7_2;Oberschlesien;Oberschlesien;Oberschlesien;Oberschlesien;Oberschlesien;Oberschlesien;;Oberschlesien;;;X
+BRIG_MODEL_U08_7_2;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;Sturmpanzerwagen Oberschlesien;;Sturmpanzerwagen Oberschlesien;;;X
 BRIG_MODEL_U08_7_3;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;Leichttraktor VK-35;;Leichttraktor VK-35;;;X
 BRIG_MODEL_U08_7_4;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;PzKpfw. I Ausf. B;;PzKpfw. I Ausf. B;;;X
 BRIG_MODEL_U08_7_5;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;;PzKpfw. II Ausf. A;;;X
@@ -8762,15 +8798,6 @@ BRIG_MODEL_U08_10_5;SdKfz. 231;SdKfz. 231;SdKfz. 231;SdKfz. 231;SdKfz. 231;SdKfz
 BRIG_MODEL_U08_10_6;;;;;;;;;;;X
 BRIG_MODEL_U08_10_7;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;Spähpanzer M41;;Spähpanzer M41;;;X
 BRIG_MODEL_U08_11_0;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;7.7 cm 1914;;7.7 cm 1914;;;X
-BRIG_MODEL_U08_35_0;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;;28 cm Haubitze L/12;;;X
-#BRIG_MODEL_U08_35_0;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;;42 cm Gamma Mörser;;;X
-BRIG_MODEL_U08_35_1;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;;21 cm Mörser 16;;;X
-#BRIG_MODEL_U08_35_1;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;;Dicke Bertha;;;X
-BRIG_MODEL_U08_35_2;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;;Paris-Geschütz;;;X
-BRIG_MODEL_U08_35_3;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;21 cm Mörser 18;;21 cm Mörser 18;;;X
-#BRIG_MODEL_U08_35_3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;;24 cm Kanone 3;;;X
-#BRIG_MODEL_U08_35_3;'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);;'Karl-Gerät' (040/041);;;X
-BRIG_MODEL_U08_35_4;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;;Schwerer Gustav;;;X
 # Germany air brigades;;;;;;;;;;;X
 BRIG_MODEL_U08_14_0;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
 BRIG_MODEL_U08_14_1;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
@@ -8788,12 +8815,63 @@ BRIG_MODEL_U08_15_3;Messerschmitt Me 609;Messerschmitt Me 609;Messerschmitt Me 6
 BRIG_MODEL_U08_15_4;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;Messerschmitt Me-262;;Messerschmitt Me-262;;;X
 BRIG_MODEL_U08_15_5;Gotha Go-229;Gotha Go-229;Gotha Go-229;Gotha Go-229;Gotha Go-229;Gotha Go-229;;Gotha Go-229;;;X
 BRIG_MODEL_U08_15_6;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;Horton Ho.XIIIb;;Horton Ho.XIIIb;;;X
-BRIG_MODEL_U08_26_0;Hinkel 60;Hinkel 60;Hinkel 60;Hinkel 60;Hinkel 60;Hinkel 60;;Hinkel 60;;;X
+#BRIG_MODEL_U08_26_0;Hinkel 60;Hinkel 60;Hinkel 60;Hinkel 60;Hinkel 60;Hinkel 60;;Hinkel 60;;;X
 BRIG_MODEL_U08_26_5;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;;Heinkel He 60;;;X
 BRIG_MODEL_U08_26_6;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;;Arado Ar 196;;;X
 BRIG_MODEL_U08_26_7;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;;Heinkel He 115;;;X
+# Germany land brigades;;;;;;;;;;;X
+BRIG_MODEL_U08_29_0;A7V-U;A7V-U;A7V-U;A7V-U;A7V-U;A7V-U;;A7V-U;;;X
+BRIG_MODEL_U08_29_1;Großtraktor;Großtraktor;Großtraktor;Großtraktor;Großtraktor;Großtraktor;;Großtraktor;;;X
+BRIG_MODEL_U08_29_2;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;Neubaufahrzeug;;;X
+BRIG_MODEL_U08_29_3;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;PzKpfw. III Ausf. A;;PzKpfw. III Ausf. A;;;X
+BRIG_MODEL_U08_29_4;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;PzKpfw. III Ausf. E;;PzKpfw. III Ausf. E;;;X
+BRIG_MODEL_U08_29_5;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;;PzKpfw. IV Ausf. F;;;X
+BRIG_MODEL_U08_29_6;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;;PzKpfw. V Panther Ausf. A;;;X
+BRIG_MODEL_U08_29_7;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
+BRIG_MODEL_U08_29_8;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
+BRIG_MODEL_U08_29_9;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;;PzKpfw. Tiger II;;;X
+BRIG_MODEL_U08_29_10;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;;E-75 Panther III;;;X
+BRIG_MODEL_U08_29_11;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+BRIG_MODEL_U08_29_12;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
+BRIG_MODEL_U08_29_13;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;;PzKpfw. Leopard II;;;X
+BRIG_MODEL_U08_29_14;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;;PzKpfw. Lion I;;;X
+BRIG_MODEL_U08_29_15;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;;PzKpfw. Lion II;;;X
+BRIG_MODEL_U08_30_0;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;;Rumpler 4B;;;X
+BRIG_MODEL_U08_30_1;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;;Albatross W.IV;;;X
+BRIG_MODEL_U08_30_2;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;;Hansa-Brandenburg W.20;;;X
+BRIG_MODEL_U08_30_3;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;Dornier Do.16 J-Wal;;Dornier Do.16 J-Wal;;;X
+BRIG_MODEL_U08_30_4;Heinkel He 8;Heinkel He 8;Heinkel He 8;Heinkel He 8;Heinkel He 8;Heinkel He 8;;Heinkel He 8;;;X
+BRIG_MODEL_U08_30_5;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;Heinkel He 60;;Heinkel He 60;;;X
+BRIG_MODEL_U08_30_6;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;;Arado Ar 196;;;X
+BRIG_MODEL_U08_30_7;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;;Heinkel He 115;;;X
+BRIG_MODEL_U08_31_0;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
+BRIG_MODEL_U08_31_1;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;He.51 / Hs.123;;He.51 / Hs.123;;;X
+BRIG_MODEL_U08_31_2;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;Ju 87B Stuka/Fi 167/Ar 197;;Ju 87B Stuka/Fi 167/Ar 197;;;X
+BRIG_MODEL_U08_31_3;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;Ju 87C Stuka/Fi 167/Bf 109T;;Ju 87C Stuka/Fi 167/Bf 109T;;;X
+BRIG_MODEL_U08_31_4;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;Ju 87D Stuka/Fi 167/Bf 109T;;Ju 87D Stuka/Fi 167/Bf 109T;;;X
+BRIG_MODEL_U08_31_5;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;Ju 87D Stuka/Fi 167/Me 155;;Ju 87D Stuka/Fi 167/Me 155;;;X
+BRIG_MODEL_U08_31_6;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;Me.155 / Ju.87C Stuka;;Me.155 / Ju.87C Stuka;;;X
+BRIG_MODEL_U08_31_7;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;Fw.190T / Ju.87C Stuka;;Fw.190T / Ju.87C Stuka;;;X
+BRIG_MODEL_U08_31_8;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;He.162 / Hs.132;;He.162 / Hs.132;;;X
+#BRIG_MODEL_U08_35_0;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;28 cm Haubitze L/12;;28 cm Haubitze L/12;;;X
+#BRIG_MODEL_U08_35_1;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;21 cm Mörser 16;;21 cm Mörser 16;;;X
+#BRIG_MODEL_U08_35_2;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;15 cm Kanone 16;;15 cm Kanone 16;;;X
+#BRIG_MODEL_U08_35_3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;24 cm Kanone 3;;24 cm Kanone 3;;;X
+BRIG_MODEL_U08_35_0;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;42 cm Gamma Mörser;;42 cm Gamma Mörser;;;X
+BRIG_MODEL_U08_35_1;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;Dicke Bertha;;Dicke Bertha;;;X
+BRIG_MODEL_U08_35_2;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;Paris-Geschütz;;Paris-Geschütz;;;X
+BRIG_MODEL_U08_35_3;'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);'Karl-Gerät' (040/041);;'Karl-Gerät' (040/041);;;X
+BRIG_MODEL_U08_35_4;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;Schwerer Gustav;;Schwerer Gustav;;;X
 # Germany;;;;;;;;;;;X
 # Germany land units;;;;;;;;;;;X
+MODEL_U08_1_11;Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);Cavalry '38 (Kfz.70 Krupp-Prötze);;Cavalry '38 (Kfz.70 Krupp-Prötze);;;X
+MODEL_U08_1_12;Cavalry '42 (SdKfz. 233 8x8);Cavalry '42 (SdKfz. 233 8x8);Cavalry '42 (SdKfz. 233 8x8);Cavalry '42 (SdKfz. 233 8x8);Cavalry '42 (SdKfz. 233 8x8);Cavalry '42 (SdKfz. 233 8x8);;Cavalry '42 (SdKfz. 233 8x8);;;X
+MODEL_U08_2_0;Infantry '35 (Opel-Blitz Typ 3,6-36S);Infantry '35 (Opel-Blitz Typ 3,6-36S);Infantry '35 (Opel-Blitz Typ 3,6-36S);Infantry '35 (Opel-Blitz Typ 3,6-36S);Infantry '35 (Opel-Blitz Typ 3,6-36S);Infantry '35 (Opel-Blitz Typ 3,6-36S);;Infantry '35 (Opel-Blitz Typ 3,6-36S);;;X
+MODEL_U08_2_1;Infantry '39 (Mercedes-Benz L3000S);Infantry '39 (Mercedes-Benz L3000S);Infantry '39 (Mercedes-Benz L3000S);Infantry '39 (Mercedes-Benz L3000S);Infantry '39 (Mercedes-Benz L3000S);Infantry '39 (Mercedes-Benz L3000S);;Infantry '39 (Mercedes-Benz L3000S);;;X
+MODEL_U08_2_2;Infantry '42 (Büssing-NAG 500A);Infantry '42 (Büssing-NAG 500A);Infantry '42 (Büssing-NAG 500A);Infantry '42 (Büssing-NAG 500A);Infantry '42 (Büssing-NAG 500A);Infantry '42 (Büssing-NAG 500A);;Infantry '42 (Büssing-NAG 500A);;;X
+MODEL_U08_2_3;Infantry '45 (Opel-Blitz Typ 3,6-42S);Infantry '45 (Opel-Blitz Typ 3,6-42S);Infantry '45 (Opel-Blitz Typ 3,6-42S);Infantry '45 (Opel-Blitz Typ 3,6-42S);Infantry '45 (Opel-Blitz Typ 3,6-42S);Infantry '45 (Opel-Blitz Typ 3,6-42S);;Infantry '45 (Opel-Blitz Typ 3,6-42S);;;X
+MODEL_U08_3_0;Infantry '42 (SdKfz. 251/1 Ausf C);Infantry '42 (SdKfz. 251/1 Ausf C);Infantry '42 (SdKfz. 251/1 Ausf C);Infantry '42 (SdKfz. 251/1 Ausf C);Infantry '42 (SdKfz. 251/1 Ausf C);Infantry '42 (SdKfz. 251/1 Ausf C);;Infantry '42 (SdKfz. 251/1 Ausf C);;;X
+MODEL_U08_3_1;Infantry '45 (SdKfz. 251/1 Ausf D);Infantry '45 (SdKfz. 251/1 Ausf D);Infantry '45 (SdKfz. 251/1 Ausf D);Infantry '45 (SdKfz. 251/1 Ausf D);Infantry '45 (SdKfz. 251/1 Ausf D);Infantry '45 (SdKfz. 251/1 Ausf D);;Infantry '45 (SdKfz. 251/1 Ausf D);;;X
 MODEL_U08_4_0;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;PzKpfw. II Ausf. A;;PzKpfw. I;;;X
 MODEL_U08_4_1;PzKpfw. II Ausf. D;PzKpfw. II Ausf. D;PzKpfw. II Ausf. D;PzKpfw. II Ausf. D;PzKpfw. II Ausf. D;PzKpfw. II Ausf. D;;PzKpfw. II Ausf. D;;;X
 MODEL_U08_4_2;PzKpfw. 38t;PzKpfw. 38t;PzKpfw. 38t;PzKpfw. 38t;PzKpfw. 38t;PzKpfw. 38t;;PzKpfw. 38t;;;X
@@ -8805,10 +8883,13 @@ MODEL_U08_5_4;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. P
 MODEL_U08_5_5;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 MODEL_U08_5_6;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
 MODEL_U08_5_7;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
+MODEL_U08_10_3;Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);;Hq '39 (Pkw Kfz 2);;;X
+MODEL_U08_10_4;Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);;Hq '44 (SdKfz. 251/6 Ausf.C);;;X
 # Germany air units;;;;;;;;;;;X
 MODEL_U08_12_0;DFW C.V;DFW C.V;DFW C.V;DFW C.V;DFW C.V;DFW C.V;;DFW C.V;;;X
 MODEL_U08_12_1;Halberstadt CL.II;Halberstadt CL.II;Halberstadt CL.II;Halberstadt CL.II;Halberstadt CL.II;Halberstadt CL.II;;Halberstadt CL.II;;;X
 MODEL_U08_12_2;Fokker Dr.I;Fokker Dr.I;Fokker Dr.I;Fokker Dr.I;Fokker Dr.I;Fokker Dr.I;;Fokker Dr.I;;;X
+MODEL_U08_12_3;Arado Ar 65;Arado Ar 65;Arado Ar 65;Arado Ar 65;Arado Ar 65;Arado Ar 65;;Arado Ar 65;;;X
 MODEL_U08_12_3;Dornier Do 10;Dornier Do 10;Dornier Do 10;Dornier Do 10;Dornier Do 10;Dornier Do 10;;Dornier Do 10;;;X
 MODEL_U08_12_4;Arado Ar 68;Arado Ar 68;Arado Ar 68;Arado Ar 68;Arado Ar 68;Arado Ar 68;;Arado Ar 68;;;X
 MODEL_U08_12_5;Messerschmitt Bf 109E Emil;Messerschmitt Bf 109E Emil;Messerschmitt Bf 109E Emil;Messerschmitt Bf 109E Emil;Messerschmitt Bf 109E Emil;Messerschmitt Bf 109E Emil;;Messerschmitt Bf 109E Emil;;;X
@@ -8817,22 +8898,26 @@ MODEL_U08_12_7;Focke-Wulf Fw 190D;Focke-Wulf Fw 190D;Focke-Wulf Fw 190D;Focke-Wu
 MODEL_U08_12_8;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;;Messerschmitt Me 262 Schwalbe;;;X
 MODEL_U08_12_9;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;;Messerschmitt P.1101;;;X
 MODEL_U08_12_10;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;;Horten Ho 229;;;X
+MODEL_U08_12_16;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;;DeutschJäger Taifun J.MM;;;X
 MODEL_U08_13_0;Rumpler Taube;Rumpler Taube;Rumpler Taube;Rumpler Taube;Rumpler Taube;Rumpler Taube;;Rumpler Taube;;;X
 MODEL_U08_13_1;Aviatik B.I;Aviatik B.I;Aviatik B.I;Aviatik B.I;Aviatik B.I;Aviatik B.I;;Aviatik B.I;;;X
 MODEL_U08_13_2;Fokker E.I;Fokker E.I;Fokker E.I;Fokker E.I;Fokker E.I;Fokker E.I;;Fokker E.I;;;X
 MODEL_U08_13_3;Albatros D.III;Albatros D.III;Albatros D.III;Albatros D.III;Albatros D.III;Albatros D.III;;Albatros D.III;;;X
 MODEL_U08_13_4;Albatros D.V;Albatros D.V;Albatros D.V;Albatros D.V;Albatros D.V;Albatros D.V;;Albatros D.V;;;X
 MODEL_U08_13_5;Fokker D.VII;Fokker D.VII;Fokker D.VII;Fokker D.VII;Fokker D.VII;Fokker D.VII;;Fokker D.VII;;;X
-MODEL_U08_13_6;Heinkel HD 37;Heinkel HD 37;Heinkel HD 37;Heinkel HD 37;Heinkel HD 37;Heinkel HD 37;;Heinkel HD 37;;;X
+MODEL_U08_13_6;Fokker D.XIII;Fokker D.XIII;Fokker D.XIII;Fokker D.XIII;Fokker D.XIII;Fokker D.XIII;;Fokker D.XIII;;;X
 MODEL_U08_13_7;Heinkel He 51;Heinkel He 51;Heinkel He 51;Heinkel He 51;Heinkel He 51;Heinkel He 51;;Heinkel He 51;;;X
 MODEL_U08_13_8;Messerschmitt Bf 109D;Messerschmitt Bf 109D;Messerschmitt Bf 109D;Messerschmitt Bf 109D;Messerschmitt Bf 109D;Messerschmitt Bf 109D;;Messerschmitt Bf 109D;;;X
 MODEL_U08_13_9;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;;Messerschmitt Bf 109F Franz;;;X
 MODEL_U08_13_10;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;;Messerschmitt Bf 109G Gustav;;;X
 MODEL_U08_13_11;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;;Heinkel He 162 Salamander;;;X
-MODEL_U08_13_12;Focke-Wulf Ta 183;Focke-Wulf Ta 183;Focke-Wulf Ta 183;Focke-Wulf Ta 183;Focke-Wulf Ta 183;Focke-Wulf Ta 183;;Focke-Wulf Ta 183;;;X
+MODEL_U08_13_12;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;;Focke-Wulf Ta.183 Huckebein;;;X
 MODEL_U08_13_13;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;;Lippisch P.13a;;;X
+MODEL_U08_13_14;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;;Messerschmitt 1110;;;X
+MODEL_U08_13_16;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;;Messerschmitt 4000;;;X
 MODEL_U08_14_0;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;;Zeppelin-Staaken V.G.O.I;;;X
 MODEL_U08_14_1;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;;Zeppelin-Staaken R.VI;;;X
+MODEL_U08_14_2;Dornier Do P;Dornier Do P;Dornier Do P;Dornier Do P;Dornier Do P;Dornier Do P;;Dornier Do P;;;X
 MODEL_U08_14_3;Junkers Ju 89;Junkers Ju 89;Junkers Ju 89;Junkers Ju 89;Junkers Ju 89;Junkers Ju 89;;Junkers Ju 89;;;X
 MODEL_U08_14_4;Junkers Ju 290;Junkers Ju 290;Junkers Ju 290;Junkers Ju 290;Junkers Ju 290;Junkers Ju 290;;Junkers Ju 290;;;X
 MODEL_U08_14_5;Junkers Ju 488;Junkers Ju 488;Junkers Ju 488;Junkers Ju 488;Junkers Ju 488;Junkers Ju 488;;Junkers Ju 488;;;X
@@ -8873,58 +8958,94 @@ MODEL_U08_19_0;V1;V1;V1;V1;V1;V1;;V1;;;X
 MODEL_U08_20_0;V2;V2;V2;V2;V2;V2;;V2;;;X
 MODEL_U08_20_1;V2A9;V2A9;V2A9;V2A9;V2A9;V2A9;;V2A9;;;X
 MODEL_U08_20_2;A-12;A-12;A-12;A-12;A-12;A-12;;A-12;;;X
-MODEL_U08_32_0;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;;Messerschmitt Me 163 Komet;;;X
-MODEL_U08_32_1;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;;Messerschmitt Me 263;;;X
-# Germany naval units;;;;;;;;;;;X
+# Germany naval units (inventions, mainly for post war units);;;;;;;;;;;X
 MODEL_U08_21_0;Siegfried-class;;Classe Siegfried;Classe Siegfried;Clase Siegfried;Siegfried-Klasse;Siegfried-klasa;;Siegfried-Klasse;;;X
 MODEL_U08_21_1;Kaiser-class;Classe Kaiser;Classe Kaiser;Clase Kaiser;Kaiser-Klasse;Kaiser-klasa;;Kaiser-Klasse;;;X
 MODEL_U08_21_2;Nassau-class;Classe Nassau;Classe Nassau;Clase Nassau;Nassau-Klasse;Nassau-klasa;;Nassau-Klasse;;;X
 MODEL_U08_21_3;König-class;König-class;König-class;König-class;König-class;König-class;;König-class;;;X
 MODEL_U08_21_4;Bayern-class;Classe Bayern;Classe Bayern;Clase Bayern;Bayern-Klasse;Bayern-klasa;;Bayern-Klasse;;;X
 MODEL_U08_21_5;L 20a-class;Classe L 20a;Classe L 20a;Clase L 20a;L 20a-Klasse;L 20a-klasa;;L 20a-Klasse;;;X
+MODEL_U08_21_6;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;Wurtemburg-class;;Wurtemburg-class;;;X
 MODEL_U08_21_7;Bismarck-class;Classe Bismarck;Classe Bismarck;Clase Bismarck;Bismarck-Klasse;Bismarck-klasa;;Bismarck-Klasse;;;X
-MODEL_U08_21_8;H-class;Classe H;Classe H;Clase H;H-Klasse;H-klasa;;H-Klasse;;;X
+MODEL_U08_21_8;H39-class;Classe H39;Classe H39;Clase H39;H39-Klasse;H39-klasa;;H39-Klasse;;;X
+MODEL_U08_21_9;H42-class;Classe H42;Classe H42;Clase H42;H42-Klasse;H42-klasa;;H42-Klasse;;;X
+MODEL_U08_21_10;H45-class;Classe H45;Classe H45;Clase H45;H45-Klasse;H45-klasa;;H45-Klasse;;;X
+MODEL_U08_21_11;H43-class;Classe H44;Classe H44;Clase H44;H44-Klasse;H44-klasa;;H44-Klasse;;;X
+MODEL_U08_21_12;H44-class;Classe H44;Classe H44;Clase H44;H44-Klasse;H44-klasa;;H44-Klasse;;;X
 MODEL_U08_22_0;Gazelle-class;Classe Gazelle;Classe Gazelle;Clase Gazelle;Gazelle-Klasse;Gazelle-klasa;;Gazelle-Klasse;;;X
 MODEL_U08_22_1;Königsberg-class;Classe Königsberg;Classe Königsberg;Clase Königsberg;Königsberg-Klasse;Königsberg-klasa;;Königsberg-Klasse;;;X
 MODEL_U08_22_2;Karlsruhe-class;Classe Karlsruhe;Classe Karlsruhe;Clase Karlsruhe;Karlsruhe-Klasse;Karlsruhe-klasa;;Karlsruhe-Klasse;;;X
 MODEL_U08_22_3;K-class;Classe K;Classe K;Clase K;K-Klasse;K-klasa;;K-Klasse;;;X
 MODEL_U08_22_4;Leipzig-class;Classe Leipzig;Classe Leipzig;Clase Leipzig;Leipzig-Klasse;Leipzig-klasa;;Leipzig-Klasse;;;X
 MODEL_U08_22_5;M-class;Classe M;Classe M;Clase M;M-Klasse;M-klasa;;M-Klasse;;;X
+MODEL_U08_22_6;Stettin-class;Stettin-class;Stettin-class;Stettin-class;Stettin-class;Stettin-class;;Stettin-class;;;X
+MODEL_U08_22_7;Spähkreuzer SP15-class;Spähkreuzer SP15-class;Spähkreuzer SP15-class;Spähkreuzer SP15-class;Spähkreuzer SP15-class;Spähkreuzer SP15-class;;Spähkreuzer SP15-class;;;X
+MODEL_U08_22_8;Passau-class;Passau-class;Passau-class;Passau-class;Passau-class;Passau-class;;Passau-class;;;X
 MODEL_U08_23_0;König Wilhelm-class;König Wilhelm-class;König Wilhelm-class;König Wilhelm-class;König Wilhelm-class;König Wilhelm-class;;König Wilhelm-class;;;X
 MODEL_U08_23_1;Fürst Bismarck-class;Classe Fürst Bismarck;Classe Fürst Bismarck;Clase Fürst Bismarck;Fürst Bismarck-Klasse;Fürst Bismarck-klasa;;Fürst Bismarck-Klasse;;;X
 MODEL_U08_23_2;Blücher-class;Classe Blücher;Classe Blücher;Clase Blücher;Blücher-Klasse;Blücher-klasa;;Blücher-Klasse;;;X
+MODEL_U08_23_3;Prinz Adalbert-class;Classe Prinz Adalbert;Classe Prinz Adalbert;Clase Prinz Adalbert;Prinz Adalbert-Klasse;Prinz Adalbert-klasa;;Prinz Adalbert-Klasse;;;X
 MODEL_U08_23_4;Deutschland-class;Classe Deutschland;Classe Deutschland;Clase Deutschland;Deutschland-Klasse;Deutschland-klasa;;Deutschland-Klasse;;;X
 MODEL_U08_23_5;Hipper-class;Classe Hipper;Classe Hipper;Clase Hipper;Hipper-Klasse;Hipper-klasa;;Hipper-Klasse;;;X
 MODEL_U08_23_6;P-class;Classe P;Classe P;Clase P;P-Klasse;P-klasa;;P-Klasse;;;X
+MODEL_U08_23_7;Admiral Brommy-class;Admiral Brommy class;Admiral Brommy class;Admiral Brommy class;Admiral Brommy class;Admiral Brommy class;;Admiral Brommy class;;;X
+MODEL_U08_23_8;V-class;V-class;V-class;V-class;V-class;V-class;;V-class;;;X
 MODEL_U08_24_0;Moltke-class;Classe Moltke;Classe Moltke;Clase Moltke;Moltke-Klasse;Moltke-klasa;;Moltke-Klasse;;;X
 MODEL_U08_24_1;Derflinger-class;Classe Derflinger;Classe Derflinger;Clase Derflinger;Derflinger-Klasse;Derflinger-klasa;;Derflinger-Klasse;;;X
 MODEL_U08_24_2;Ersatz Yorck-class;Classe Ersatz Yorck;Classe Ersatz Yorck;Clase Ersatz Yorck;Ersatz Yorck-Klasse;Ersatz Yorck-klasa;;Ersatz Yorck-Klasse;;;X
 MODEL_U08_24_3;Scharnhorst-class;Classe Scharnhorst;Classe Scharnhorst;Clase Scharnhorst;Scharnhorst-Klasse;Scharnhorst-klasa;;Scharnhorst-Klasse;;;X
 MODEL_U08_24_4;O-class;Classe O;Classe O;Clase O;O-Klasse;O-klasa;;O-Klasse;;;X
+MODEL_U08_24_5;Q-class;Q-class;Q-class;Q-class;Q-class;Q-class;;Q-class;;;X
 MODEL_U08_25_0;S7-class;Classe S7;Classe S7;Clase S7;S7-Klasse;S7-klasa;;S7-Klasse;;;X
 MODEL_U08_25_1;S114-class;Classe S114;Classe S114;Clase S114;S114-Klasse;S114-klasa;;S114-Klasse;;;X
 MODEL_U08_25_2;V1-class;Classe V1;Classe V1;Clase V1;V1-Klasse;V1-klasa;;V1-Klasse;;;X
 MODEL_U08_25_3;S113-class;S113-class;S113-class;S113-class;S113-class;S113-class;;S113-class;;;X
-MODEL_U08_25_5;Type 1934-class;Classe Type 1934;Classe Type 1934;Clase Tipo 1934;Type 1934-Klasse;Type 1934-klasa;;Type 1934-Klasse;;;X
+MODEL_U08_25_4;Type 1934-class;Classe Type 1934;Classe Type 1934;Clase Tipo 1934;Type 1934-Klasse;Type 1934-klasa;;Type 1934-Klasse;;;X
+MODEL_U08_25_5;Type 1934A-class;Classe Type 1934A;Classe Type 1934A;Clase Tipo 1934A;Type 1934A-Klasse;Type 1934A-klasa;;Type 1934A-Klasse;;;X
 MODEL_U08_25_6;Type 1936A-class;Classe Type 1936A;Classe Type 1936A;Clase Tipo 1936A;Type 1936A-Klasse;Type 1936A-klasa;;Type 1936A-Klasse;;;X
 MODEL_U08_25_7;Type 1942-class;Classe Type 1942;Classe Type 1942;Clase Type 1942;Type 1942-Klasse;Type 1942-klasa;;Type 1942-Klasse;;;X
-MODEL_U08_25_9;Hamburg-class;Classe Hamburg;Classe Hamburg;Clase Hamburg;Hamburg-Klasse;Hamburg-klasa;;Hamburg-Klasse;;;X
+MODEL_U08_25_8;Type 1945-class;Type 1945-class;Type 1945-class;Type 1945-class;Type 1945-class;Type 1945-class;;Type 1945-class;;;X
+MODEL_U08_25_9;Bayreuth-class;Classe Bayreuth;Classe Bayreuth;Clase Bayreuth;Bayreuth-Klasse;Bayreuth-klasa;;Bayreuth-Klasse;;;X
+MODEL_U08_26_1;Hindenburg-class;Hindenburg-class;Hindenburg-class;Hindenburg-class;Hindenburg-class;Hindenburg-class;;Hindenburg-class;;;X
 MODEL_U08_26_2;Graf Zeppelin-class;Classe Graf Zeppelin;Classe Graf Zeppelin;Clase Graf Zeppelin;Graf Zeppelin-Klasse;Graf Zeppelin-klasa;;Graf Zeppelin-Klasse;;;X
 MODEL_U08_26_3;Baron von Richtofen-class;Baron von Richtofen-class;Baron von Richtofen-class;Baron von Richtofen-class;Baron von Richtofen-class;Baron von Richtofen-class;;Baron von Richtofen-class;;;X
+MODEL_U08_26_4;Vaterland-class;Vaterland-class;Vaterland-class;Vaterland-class;Vaterland-class;Vaterland-class;;Vaterland-class;;;X
 MODEL_U08_27_1;Ausonia-class;Ausonia-class;Ausonia-class;Ausonia-class;Ausonia-class;Ausonia-class;;Ausonia-class;;;X
-MODEL_U08_27_2;Meerwein class;Meerwein class;Meerwein class;Meerwein class;Meerwein class;Meerwein class;;Meerwein class;;;X
-MODEL_U08_27_4;Moser class;Moser class;Moser class;Moser class;Moser class;Moser class;;Moser class;;;X
+MODEL_U08_27_2;Meerwein-class;Meerwein-class;Meerwein-class;Meerwein-class;Meerwein-class;Meerwein-class;;Meerwein-class;;;X
+MODEL_U08_27_3;Moser-class;Moser-class;Moser-class;Moser-class;Moser-class;Moser-class;;Moser-class;;;X
+MODEL_U08_27_4;Seydlitz-class;Seydlitz-class;Seydlitz-class;Seydlitz-class;Seydlitz-class;Seydlitz-class;;Seydlitz-class;;;X
+MODEL_U08_27_5;Goering-class;Goering-class;Goering-class;Goering-class;Goering-class;Goering-class;;Goering-class;;;X
+MODEL_U08_27_6;Rheinland-class;Rheinland-class;Rheinland-class;Rheinland-class;Rheinland-class;Rheinland-class;;Rheinland-class;;;X
 MODEL_U08_27_7;Rheinland class;Rheinland class;Rheinland class;Rheinland class;Rheinland class;Rheinland class;;Rheinland class;;;X
 MODEL_U08_28_0;Type U-1-class;Type U-1-class;Type U-1-class;Type U-1-class;Type U-1-class;Type U-1-class;;Type U-1-class;;;X
 MODEL_U08_28_1;Type U-27-class;Classe Type U-27;Classe Type U-27;Clase Tipo U-27;Type U-27-Klasse;Type U-27-klasa;;Type U-27-Klasse;;;X
 MODEL_U08_28_2;Type U-43-class;Classe Type U-43;Classe Type U-43;Clase Tipo U-43;Type U-43-Klasse;Type U-43-klasa;;Type U-43-Klasse;;;X
+MODEL_U08_28_3;Type I-class;Classe Type I;Classe Type I;Clase Tipo I;Type I-Klasse;Type I-klasa;;Type I-Klasse;;;X
 MODEL_U08_28_4;Type II-class;Classe Type II;Classe Type II;Clase Tipo II;Type II-Klasse;Type II-klasa;;Type II-Klasse;;;X
 MODEL_U08_28_5;Type VII-class;Classe Type VII;Classe Type VII;Clase Tipo VII;Type VII-Klasse;Type VII-klasa;;Type VII-Klasse;;;X
 MODEL_U08_28_6;Type IX-class;Classe Type IX;Classe Type IX;Clase Tipo IX;Type IX-Klasse;Type IX-klasa;;Type IX-Klasse;;;X
 MODEL_U08_28_7;Type XXI-class;Classe Type XXI;Classe Type XXI;Clase Tipo XXI;Type XXI-Klasse;Type XXI-klasa;;Type XXI-Klasse;;;X
 MODEL_U08_28_8;Type 201-class;Classe Type 201;Classe Type 201;Clase Tipo 201;Type 201-Klasse;Type 201-klasa;;Type 201-Klasse;;;X
-MODEL_U08_28_9;Type 205-class;Classe Type 205;Classe Type 205;Clase Tipo 205;Type 205-Klasse;Type 205-klasa;;Type 205-Klasse;;;X
+#MODEL_U08_28_9;Type 205-class;Classe Type 205;Classe Type 205;Clase Tipo 205;Type 205-Klasse;Type 205-klasa;;Type 205-Klasse;;;X
+MODEL_U08_28_9;Type CCI-class;Type CCI-class;Type CCI-class;Type CCI-class;Type CCI-class;Type CCI-class;;Type CCI-class;;;X
+MODEL_U08_28_10;Type CCV-class;Classe Type CCV;Classe Type CCV;Clase Tipo CCV;Type CCV-Klasse;Type CCV-klasa;;Type CCV-Klasse;;;X
+MODEL_U08_28_11;Type CCVI-class;Type CCVI-class;Type CCVI-class;Type CCVI-class;Type CCVI-class;Type CCVI-class;;Type CCVI-class;;;X
+MODEL_U08_28_12;Type CCIX-class;Type CCIX-class;Type CCIX-class;Type CCIX-class;Type CCIX-class;Type CCIX-class;;Type CCIX-class;;;X
+MODEL_U08_29_0;Type XIb-class;Type XIb-class;Type XIb-class;Type XIb-class;Type XIb-class;Type XIb-class;;Type XIb-class;;;X
 MODEL_U08_30_0;Gluckauf-class;Gluckauf-class;Gluckauf-class;Gluckauf-class;Gluckauf-class;Gluckauf-class;;Gluckauf-class;;;X
+MODEL_U08_30_1;Neidenfels-class;Neidenfels-class;Neidenfels-class;Neidenfels-class;Neidenfels-class;Neidenfels-class;;Neidenfels-class;;;X
+MODEL_U08_30_2;Cap Arcona-class;Cap Arcona-class;Cap Arcona-class;Cap Arcona-class;Cap Arcona-class;Cap Arcona-class;;Cap Arcona-class;;;X
+MODEL_U08_30_3;Hecht-class;Hecht-class;Hecht-class;Hecht-class;Hecht-class;Hecht-class;;Hecht-class;;;X
+MODEL_U08_30_4;Kiel-class;Kiel-class;Kiel-class;Kiel-class;Kiel-class;Kiel-class;;Kiel-class;;;X
+MODEL_U08_30_5;Keiler-class;Keiler-class;Keiler-class;Keiler-class;Keiler-class;Keiler-class;;Keiler-class;;;X
+MODEL_U08_31_0;Seydlitz-class;Seydlitz-class;Seydlitz-class;Seydlitz-class;Seydlitz-class;Seydlitz-class;;Seydlitz-class;;;X
+MODEL_U08_31_1;Goering-class;Goering-class;Goering-class;Goering-class;Goering-class;Goering-class;;Goering-class;;;X
+MODEL_U08_31_2;Rheinland-class;Rheinland-class;Rheinland-class;Rheinland-class;Rheinland-class;Rheinland-class;;Rheinland-class;;;X
+MODEL_U08_32_0;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;Messerschmitt Me 163 Komet;;Messerschmitt Me 163 Komet;;;X
+MODEL_U08_32_1;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;Messerschmitt Me 263;;Messerschmitt Me 263;;;X
+MODEL_U08_41_0;Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);;Air Assault Division '56 (Focke-Achgelis Fa 223);;;X
+MODEL_U08_43_2;Type XXXb-class;Type XXXb-class;Type XXXb-class;Type XXXb-class;Type XXXb-class;Type XXXb-class;;Type XXXb-class;;;X
+MODEL_U08_44_1;Type XXXIb-class;Type XXXIb-class;Type XXXIb-class;Type XXXIb-class;Type XXXIb-class;Type XXXIb-class;;Type XXXIb-class;;;X
 #;;;;;;;;;;;X
 #Austria-Hungary (U09);;;;;;;;;;;X
 #land brigades;;;;;;;;;;;X
