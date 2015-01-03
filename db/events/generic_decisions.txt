@@ -4904,8 +4904,8 @@ event = {
 
 		name = "Adopt a Nazi Flag"
 
-		command = { type = flag_ext where = USA which = "_fas" }
-		command = { type = name where = USA which = ""}
+		command = { type = flag_ext where = USA which = "_naz" }
+		command = { type = name where = USA which = "Federated America"}
 		command = { type = local_setflag which = USA_NAZ }
 
 		command = { type = local_clrflag which = USA_FAS }
@@ -4925,7 +4925,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = USA which = "_fas" }
-		command = { type = name where = USA which = ""}
+		command = { type = name where = USA which = "USA"}
 		command = { type = local_setflag which = USA_FAS }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -4945,7 +4945,7 @@ event = {
 		name = "Adopt a Monarchist Flag"
 
 		command = { type = flag_ext where = USA which = "_aut" }
-		command = { type = name where = USA which = ""}
+		command = { type = name where = USA which = "Imperial America"}
 		command = { type = local_setflag which = USA_AUT }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -4965,7 +4965,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = USA which = "_sco" }
-		command = { type = name where = USA which = ""}
+		command = { type = name where = USA which = "USA"}
 		command = { type = local_setflag which = USA_SCO }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -4984,8 +4984,8 @@ event = {
 
 		name = "Adopt a Market Liberal Flag"
 
-		command = { type = flag_ext where = USA which = "_sco" }
-		command = { type = name where = USA which = ""}
+		command = { type = flag_ext where = USA which = "_mli" }
+		command = { type = name where = USA which = "USA"}
 		command = { type = local_setflag which = USA_MLI }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -5004,8 +5004,8 @@ event = {
 
 		name = "Adopt a Social Liberal Flag"
 
-		command = { type = flag_ext where = USA which = "_sdm" }
-		command = { type = name where = USA which = ""}
+		command = { type = flag_ext where = USA which = "_sli" }
+		command = { type = name where = USA which = "USA"}
 		command = { type = local_setflag which = USA_SLI }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -5025,7 +5025,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = USA which = "_sdm" }
-		command = { type = name where = USA which = ""}
+		command = { type = name where = USA which = "USA"}
 		command = { type = local_setflag which = USA_SDM }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -5045,7 +5045,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = USA which = "_lwr" }
-		command = { type = name where = USA which = ""}
+		command = { type = name where = USA which = "People's America"}
 		command = { type = local_setflag which = USA_LWR }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -5065,7 +5065,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = USA which = "_len" }
-		command = { type = name where = USA which = ""}
+		command = { type = name where = USA which = "Socialist America"}
 		command = { type = local_setflag which = USA_LEN }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -5084,8 +5084,8 @@ event = {
 
 		name = "Adopt a Stalinist Flag"
 
-		command = { type = flag_ext where = USA which = "_len" }
-		command = { type = name where = USA which = ""}
+		command = { type = flag_ext where = USA which = "_sta" }
+		command = { type = name where = USA which = "Soviet America"}
 		command = { type = local_setflag which = USA_STA }
 
 		command = { type = local_clrflag which = USA_NAZ }
@@ -44289,7 +44289,7 @@ event = {
 
 		name = "Adopt a Monarchist Flag"
 
-		command = { type = flag_ext where = JAP which = "_sdm" }
+		command = { type = flag_ext where = JAP which = "_aut" }
 		command = { type = name where = JAP which = "Japan"}
 		command = { type = local_setflag which = JAP_AUT }
 
@@ -44310,7 +44310,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = JAP which = "_sco" }
-		command = { type = name where = JAP which = ""}
+		command = { type = name where = JAP which = "Japan"}
 		command = { type = local_setflag which = JAP_SCO }
 
 		command = { type = local_clrflag which = JAP_NAZ }
@@ -44330,7 +44330,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = JAP which = "_mli" }
-		command = { type = name where = JAP which = ""}
+		command = { type = name where = JAP which = "Japan"}
 		command = { type = local_setflag which = JAP_MLI }
 
 		command = { type = local_clrflag which = JAP_NAZ }
@@ -44350,7 +44350,7 @@ event = {
 		name = "Adopt a Social Liberal Flag"
 
 		command = { type = flag_ext where = JAP which = "_sli" }
-		command = { type = name where = JAP which = ""}
+		command = { type = name where = JAP which = "Japan"}
 		command = { type = local_setflag which = JAP_SLI }
 
 		command = { type = local_clrflag which = JAP_NAZ }
@@ -44370,7 +44370,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = JAP which = "_sdm" }
-		command = { type = name where = JAP which = ""}
+		command = { type = name where = JAP which = "Japan"}
 		command = { type = local_setflag which = JAP_SDM }
 
 		command = { type = local_clrflag which = JAP_NAZ }
@@ -44390,7 +44390,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = JAP which = "_lwr" }
-		command = { type = name where = JAP which = ""}
+		command = { type = name where = JAP which = "People's Japan"}
 		command = { type = local_setflag which = JAP_LWR }
 
 		command = { type = local_clrflag which = JAP_NAZ }
@@ -44410,7 +44410,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = JAP which = "_len" }
-		command = { type = name where = JAP which = ""}
+		command = { type = name where = JAP which = "Communist Japan"}
 		command = { type = local_setflag which = JAP_LEN }
 
 		command = { type = local_clrflag which = JAP_NAZ }
@@ -44430,7 +44430,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = JAP which = "_sta" }
-		command = { type = name where = JAP which = ""}
+		command = { type = name where = JAP which = "Soviet Japan"}
 		command = { type = local_setflag which = JAP_STA }
 
 		command = { type = local_clrflag which = JAP_NAZ }
@@ -53107,10 +53107,10 @@ event = {
 	action = {
 		trigger = { ideology = nazi }
 
-		name = "Adopt a Nazi Flag"
+		name = "Adopt a Third Reich Flag"
 
 		command = { type = flag_ext where = GER which = "_naz" }
-		command = { type = name where = GER which = ""}
+		command = { type = name where = GER which = "Third Reich"}
 		command = { type = local_setflag which = GER_NAZ }
 
 		command = { type = local_clrflag which = GER_FAS }
@@ -53127,10 +53127,10 @@ event = {
 	action = {
 		trigger = { ideology = fascist }
 
-		name = "Adopt Third Reich Flag"
+		name = "Adopt Fascist Flag"
 
 		command = { type = flag_ext where = GER which = "_fas" }
-		command = { type = name where = GER which = "Third Reich"}
+		command = { type = name where = GER which = "Germany"}
 		command = { type = local_setflag which = GER_FAS }
 
 		command = { type = local_clrflag which = GER_NAZ }
