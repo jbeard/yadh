@@ -50302,7 +50302,7 @@ event = {
 		name = "Adopt a Nazi Flag"
 
 		command = { type = flag_ext where = CHI which = "_naz" }
-		command = { type = name where = CHI which = ""}
+		command = { type = name where = CHI which = "Nationalist China"}
 		command = { type = local_setflag which = CHI_NAZ }
 
 		command = { type = local_clrflag which = CHI_FAS }
@@ -50322,7 +50322,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = CHI which = "_fas" }
-		command = { type = name where = CHI which = ""}
+		command = { type = name where = CHI which = "Fascist China"}
 		command = { type = local_setflag which = CHI_FAS }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50342,7 +50342,7 @@ event = {
 		name = "Adopt a Monarchist Flag"
 
 		command = { type = flag_ext where = CHI which = "_aut" }
-		command = { type = name where = CHI which = "Empire of China"}
+		command = { type = name where = CHI which = "Imperial China"}
 		command = { type = local_setflag which = CHI_AUT }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50362,7 +50362,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = CHI which = "_sco" }
-		command = { type = name where = CHI which = "KMT China"}
+		command = { type = name where = CHI which = "Kuomintang China"}
 		command = { type = local_setflag which = CHI_SCO }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50382,7 +50382,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = CHI which = "_mli" }
-		command = { type = name where = CHI which = "KMT China"}
+		command = { type = name where = CHI which = "Kuomintang China"}
 		command = { type = local_setflag which = CHI_MLI }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50402,7 +50402,7 @@ event = {
 		name = "Adopt a Social Liberal Flag"
 
 		command = { type = flag_ext where = CHI which = "_sli" }
-		command = { type = name where = CHI which = ""}
+		command = { type = name where = CHI which = "China"}
 		command = { type = local_setflag which = CHI_SLI }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50422,7 +50422,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = CHI which = "_sdm" }
-		command = { type = name where = CHI which = ""}
+		command = { type = name where = CHI which = "China"}
 		command = { type = local_setflag which = CHI_SDM }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50442,7 +50442,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = CHI which = "_sta" }
-		command = { type = name where = CHI which = ""}
+		command = { type = name where = CHI which = "Populist China"}
 		command = { type = local_setflag which = CHI_LWR }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50462,7 +50462,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = CHI which = "_len" }
-		command = { type = name where = CHI which = ""}
+		command = { type = name where = CHI which = "Maoist China"}
 		command = { type = local_setflag which = CHI_LEN }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -50482,7 +50482,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = CHI which = "_sta" }
-		command = { type = name where = CHI which = ""}
+		command = { type = name where = CHI which = "Soviet China"}
 		command = { type = local_setflag which = CHI_STA }
 
 		command = { type = local_clrflag which = CHI_NAZ }
@@ -53734,7 +53734,7 @@ event = {
 		name = "Adopt a Nazi Flag"
 
 		command = { type = flag_ext where = UCH which = "_naz" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = UCH which = "Nationalist China"}
 		command = { type = local_setflag which = UCH_NAZ }
 
 		command = { type = local_clrflag which = UCH_FAS }
@@ -53754,7 +53754,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = UCH which = "_fas" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = CHI which = "Kuomintang China"}
 		command = { type = local_setflag which = UCH_FAS }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53774,7 +53774,7 @@ event = {
 		name = "Adopt a Monarchist Flag"
 
 		command = { type = flag_ext where = UCH which = "_aut" }
-		command = { type = name where = UCH which = "Empire of China"}
+		command = { type = name where = UCH which = "Imperial China"}
 		command = { type = local_setflag which = UCH_AUT }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53794,7 +53794,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = UCH which = "_sco" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = CHI which = "Kuomintang China"}
 		command = { type = local_setflag which = UCH_SCO }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53814,7 +53814,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = UCH which = "_mli" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = UCH which = "China"}
 		command = { type = local_setflag which = UCH_MLI }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53834,7 +53834,7 @@ event = {
 		name = "Adopt a Social Liberal Flag"
 
 		command = { type = flag_ext where = UCH which = "_sli" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = UCH which = "China"}
 		command = { type = local_setflag which = UCH_SLI }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53854,7 +53854,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = UCH which = "_sdm" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = UCH which = "China"}
 		command = { type = local_setflag which = UCH_SDM }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53874,7 +53874,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = UCH which = "_lwr" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = UCH which = "China"}
 		command = { type = local_setflag which = UCH_LWR }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53894,7 +53894,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = UCH which = "_len" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = UCH which = "Maoist China"}
 		command = { type = local_setflag which = UCH_LEN }
 
 		command = { type = local_clrflag which = UCH_NAZ }
@@ -53914,7 +53914,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = UCH which = "_sta" }
-		command = { type = name where = UCH which = ""}
+		command = { type = name where = UCH which = "Soviet China"}
 		command = { type = local_setflag which = UCH_STA }
 
 		command = { type = local_clrflag which = UCH_NAZ }
