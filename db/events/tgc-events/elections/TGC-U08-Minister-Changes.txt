@@ -112,12 +112,12 @@ event = {
 
 	date = { day = 13 month = 2 year = 1932 }
 	offset = 1
-	deathdate = { day = 13 month = 3 year = 1932 }
+	deathdate = { day = 13 month = 3 year = 1944 }
 
 	trigger = {
 		atwar = no
 	}
-	name = "1932 Presidential Elections"
+	name = "Presidential Elections"
 	Desc = "EVT_13300232_DESC"
 	style = 2
 	picture = "Reichstag"
