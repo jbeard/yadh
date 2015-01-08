@@ -114,6 +114,7 @@ event = {
 		command = { type = addclaim which = 1001 } #Tananarive
 		command = { type = addclaim which = 1002 } #Tamatave
 		command = { type = addclaim which = 1003 } #Fort Dauphin
+		command = { type = local_setflag which = winner }
 	}
 	action_b = {
 		ai_chance = 7
@@ -148,12 +149,14 @@ event = {
 		command = { type = addclaim which = 1001 } #Tananarive
 		command = { type = addclaim which = 1002 } #Tamatave
 		command = { type = addclaim which = 1003 } #Fort Dauphin	  
+		command = { type = local_setflag which = winner }
 	}
 	action_c = {
 		ai_chance = 3
 		name = "EVT1914_2191512_ACTIONC" # Impose soft conditions
 		command = { type = trigger which = 2002532 }
 		command = { type = dissent value = -20 }
+		command = { type = local_setflag which = winner }
 	}
 }
 event = {
