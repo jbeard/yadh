@@ -3,7 +3,7 @@
 #################################
 # by Burning :-)
 ############################################
-# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team 
+# Arms, Armistice and Revolutions by Christian M. Fuchs (Burning) and the AAR-Development Team
 # is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 # Permissions beyond the scope of this license may be available upon request at http://aarmod.cfuchs.net.
 ############################################
@@ -46,28 +46,28 @@
 # Forming of the League of Nations
 # TODO: Add Alternate History Path for Germany Victory
 # TODO: Make this trigger after EVERY great war event.
-event = { 
+event = {
 	id = 1330001800
 	persistent = yes
 	tag = { ENG FRA BRA BOL AST U02 NZL CAN SAF CHL CHI COL CZE CUB DEN SAL GRE GUA ITA HAI HON JAP LIB NIC HOL NOR PAN PAR PER POL PRU POR ROM SIA SPA SWE URU VEN YUG SCH }
-	
+
 	trigger = {
 		 atwar = no
-		 AND = { NOT = { OR = { event = 13319800  
+		 AND = { NOT = { OR = { event = 13319800
 					  local_flag = league_of_nations }
 			}
-		}	
+		}
 	}
-		
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 4 month = october year = 1919 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -85,8 +85,8 @@ event = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 }
-	
-	action ={ 
+
+	action ={
 		name ="This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -99,16 +99,16 @@ event = {
 }
 
 #	Benefits of the League
-event = { 
+event = {
 	id = 1330001802
 	persistent = yes
 	save_date = yes
-		
-	name = "Benefits of the League"							
+
+	name = "Benefits of the League"
 	desc = "Being part of the League of Nations came with certain benefits, such as feeling secure in the knowledge that league members would save you in a time of need."
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-			
+
 	action = {
 		name = "This is great for us."
 		command = { trigger = { local_flag = league_of_nations } type = dissent value = -1 }
@@ -116,31 +116,31 @@ event = {
 		command = { trigger = { local_flag = league_of_nations } type = event which = 1330001802 where = -1 when = 360 }
 	}
 }
-	
-	
+
+
 #	New league members 1920
-event = { 
+event = {
 	id = 1330001801
 	persistent = yes
 	tag = { AUS BUL COS FIN LUX ALB }
-	
+
 	trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1920 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -156,10 +156,10 @@ event = {
 		command = { trigger = { local_flag = disarm_army_50 } type = demobilize which = land when = 0 where = 0 value = 50 }
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
-		
+
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -170,30 +170,30 @@ event = {
 		command = { type = 	relation which = USA value = -50 }
 	}
 }
-	
+
 #	New league members 1921
-event = { 
+event = {
 	id = 1330001803
 	persistent = yes
 	tag = { EST LAT LIT }
-	
+
 	trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1921 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -210,8 +210,8 @@ event = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -222,30 +222,30 @@ event = {
 		command = { type = 	relation which = USA value = -50 }
 		}
 	}
-	
+
 #	New league members 1922
-event = { 
+event = {
 	id = 1330001804
 	persistent = yes
 	tag = { HUN }
-	
+
 	trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1922 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -262,8 +262,8 @@ event = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -274,30 +274,30 @@ event = {
 		command = { type = 	relation which = USA value = -50 }
 		}
 	}
-	
+
 #	New league members 1923
-event = { 
+event = {
 	id = 1330001805
 	persistent = yes
 	tag = { ETH IRE }
-	
+
 trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1923 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -314,8 +314,8 @@ trigger = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -326,30 +326,30 @@ trigger = {
 		command = { type = 	relation which = USA value = -50 }
 		}
 	}
-	
+
 	#	New league members 1924
-event = { 
+event = {
 	id = 1330001806
 	persistent = yes
 	tag = { DOM }
-	
+
 trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1924 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -366,8 +366,8 @@ trigger = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -378,30 +378,30 @@ trigger = {
 		command = { type = 	relation which = USA value = -50 }
 		}
 	}
-	
+
 #	New league members 1926
-event = { 
+event = {
 	id = 1330001807
 	persistent = yes
 	tag = { GER }
-	
+
 trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1924 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -418,8 +418,8 @@ trigger = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -430,30 +430,30 @@ trigger = {
 		command = { type = 	relation which = USA value = -50 }
 		}
 	}
-	
+
 #	New league members 1931
-event = { 
+event = {
 	id = 1330001808
 	persistent = yes
 	tag = { MEX }
-	
+
 	trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1931 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -470,8 +470,8 @@ event = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -482,30 +482,30 @@ event = {
 		command = { type = 	relation which = USA value = -50 }
 		}
 	}
-	
+
 #	New league members 1932
-event = { 
+event = {
 	id = 1330001809
 	persistent = yes
 	tag = { TUR IRQ ARG }
-	
+
 	trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1932 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -522,8 +522,8 @@ event = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -536,28 +536,28 @@ event = {
 	}
 
 	#	New league members 1934
-event = { 
+event = {
 	id = 1330001810
 	persistent = yes
 	tag = { SOV ECU AFG }
-	
+
 	trigger = {
-		 NOT = { OR ={ event = 13319800  
+		 NOT = { OR ={ event = 13319800
 					  local_flag = league_of_nations }
 		AND = { NOT = { atwar = yes }
 					}
 				}
 			}
-	
-	name = "EVT_13300018_NAME"							
+
+	name = "EVT_13300018_NAME"
 	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1934 }
 	deathdate = { day = 1 month = january year = 1945 }
 	offset = 10
-	
+
 	action = {
 		name = "The league will keep the world at peace"
 		ai_chance = 100
@@ -574,61 +574,8 @@ event = {
 		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
 		command = { type = event which = 1330001802 where = -1 when = 0 }
 	}
-	
-	action ={ 
-		name = "This is a total waste of time and resources"
-		ai_chance = 0
-		command = { type = dissent value = 10 }
-		command = { type = 	relation which = ENG value = -50 }
-		command = { type = 	relation which = FRA value = -50 }
-		command = { type = 	relation which = ITA value = -50 }
-		command = { type = 	relation which = JAP value = -50 }
-		command = { type = 	relation which = USA value = -50 }
-		}
-	}
-	
-	#	New league members 1937
-event = { 
-	id = 1330001811
-	persistent = yes
-	tag = { EGY }
-	
-	trigger = {
-		 NOT = { OR ={ event = 13319800  
-					  local_flag = league_of_nations }
-		AND = { NOT = { atwar = yes }
-					}
-				}
-			}
-		
-	
-	name = "EVT_13300018_NAME"							
-	desc = "EVT_13300018_DESC"
-	picture = "aar_lon"	 
-	style = 2
-	
-	date = { day = 1 month = january year = 1937 }
-	deathdate = { day = 1 month = january year = 1945 }
-	offset = 10
-	
-	action = {
-		name = "The league will keep the world at peace"
-		ai_chance = 100
-		command = { type = local_setflag which = league_of_nations }
-		command = { type = dissent value = -10 }
-		command = { type = 	relation which = ENG value = 50 }
-		command = { type = 	relation which = FRA value = 50 }
-		command = { type = 	relation which = ITA value = 50 }
-		command = { type = 	relation which = JAP value = 50 }
-		command = { type = 	relation which = USA value = 50 }
-		command = { trigger = { local_flag = disarm_army_10 } type = demobilize which = land when = 0 where = 0 value = 10 }
-		command = { trigger = { local_flag = disarm_army_25 } type = demobilize which = land when = 0 where = 0 value = 25 }
-		command = { trigger = { local_flag = disarm_army_50 } type = demobilize which = land when = 0 where = 0 value = 50 }
-		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
-		command = { type = event which = 1330001802 where = -1 when = 0 }
-	}
-	
-	action ={ 
+
+	action ={
 		name = "This is a total waste of time and resources"
 		ai_chance = 0
 		command = { type = dissent value = 10 }
@@ -640,21 +587,74 @@ event = {
 		}
 	}
 
-	
+	#	New league members 1937
+event = {
+	id = 1330001811
+	persistent = yes
+	tag = { EGY }
+
+	trigger = {
+		 NOT = { OR ={ event = 13319800
+					  local_flag = league_of_nations }
+		AND = { NOT = { atwar = yes }
+					}
+				}
+			}
+
+
+	name = "EVT_13300018_NAME"
+	desc = "EVT_13300018_DESC"
+	picture = "aar_lon"
+	style = 2
+
+	date = { day = 1 month = january year = 1937 }
+	deathdate = { day = 1 month = january year = 1945 }
+	offset = 10
+
+	action = {
+		name = "The league will keep the world at peace"
+		ai_chance = 100
+		command = { type = local_setflag which = league_of_nations }
+		command = { type = dissent value = -10 }
+		command = { type = 	relation which = ENG value = 50 }
+		command = { type = 	relation which = FRA value = 50 }
+		command = { type = 	relation which = ITA value = 50 }
+		command = { type = 	relation which = JAP value = 50 }
+		command = { type = 	relation which = USA value = 50 }
+		command = { trigger = { local_flag = disarm_army_10 } type = demobilize which = land when = 0 where = 0 value = 10 }
+		command = { trigger = { local_flag = disarm_army_25 } type = demobilize which = land when = 0 where = 0 value = 25 }
+		command = { trigger = { local_flag = disarm_army_50 } type = demobilize which = land when = 0 where = 0 value = 50 }
+		command = { trigger = { local_flag = disarm_army_75 } type = demobilize which = land when = 0 where = 0 value = 75 }
+		command = { type = event which = 1330001802 where = -1 when = 0 }
+	}
+
+	action ={
+		name = "This is a total waste of time and resources"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = 	relation which = ENG value = -50 }
+		command = { type = 	relation which = FRA value = -50 }
+		command = { type = 	relation which = ITA value = -50 }
+		command = { type = 	relation which = JAP value = -50 }
+		command = { type = 	relation which = USA value = -50 }
+		}
+	}
+
+
 	#	Argentina Withdrawals 1927
-event = { 
+event = {
 	id = 1330001819
 	tag = { ARG }
-	
+
 	trigger = { local_flag = league_of_nations }
-	
-	name = "Argentina Withdrawals"							
+
+	name = "Argentina Withdrawals"
 	desc = "Argentina left in 1921 on rejection of an Argentine resolution that all sovereign states be admitted to the League."
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 26 month = February year = 1921 }
-		
+
 		action = {
 		name = "We see no point in this broken body any league_of_nationsger"
 		ai_chance = 75
@@ -664,7 +664,7 @@ event = {
 		command = { type = 	relation which = FRA value = -50 }
 		command = { type = 	relation which = ITA value = -50 }
 		command = { type = 	relation which = JAP value = -50 }
-		command = { type = 	relation which = USA value = -50 }		
+		command = { type = 	relation which = USA value = -50 }
 		}
 			action = {
 		name = "We need to give it a try for peace sake."
@@ -675,24 +675,24 @@ event = {
 		command = { type = 	relation which = FRA value = 50 }
 		command = { type = 	relation which = ITA value = 50 }
 		command = { type = 	relation which = JAP value = 50 }
-		command = { type = 	relation which = USA value = 50 }		
+		command = { type = 	relation which = USA value = 50 }
 		}
 	}
-	
+
 	#	League Withdrawals 1927
-event = { 
+event = {
 	id = 1330001820
 	tag = { BRA COS }
-	
+
 	trigger = { local_flag = league_of_nations }
-	
-	name = "Brazil and Costa Rica Withdrawals"							
+
+	name = "Brazil and Costa Rica Withdrawals"
 	desc = "In the early 1920's Costa Rica and Brazil withdrew from the League of Nations,Costa Rica because the League did not want to help with regional disputes and Brazil because Germany was granted a permanent seat and they were not."
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 7 month = june year = 1927 }
-		
+
 		action = {
 		name = "We see no point in this broken body any league_of_nationsger"
 		ai_chance = 75
@@ -702,7 +702,7 @@ event = {
 		command = { type = 	relation which = FRA value = -50 }
 		command = { type = 	relation which = ITA value = -50 }
 		command = { type = 	relation which = JAP value = -50 }
-		command = { type = 	relation which = USA value = -50 }		
+		command = { type = 	relation which = USA value = -50 }
 		}
 			action = {
 		name = "We need to give it a try for peace sake."
@@ -713,26 +713,28 @@ event = {
 		command = { type = 	relation which = FRA value = 50 }
 		command = { type = 	relation which = ITA value = 50 }
 		command = { type = 	relation which = JAP value = 50 }
-		command = { type = 	relation which = USA value = 50 }		
+		command = { type = 	relation which = USA value = 50 }
 		}
 	}
-	
-		#	Japan Withdrawals 1933
-event = { 
+
+		#	Japan & Germany Withdrawals 1933
+event = {
 	id = 1330001821
 	tag = { JAP GER }
-	
+
 	trigger = { local_flag = league_of_nations }
-	
-	name = "Japan Withdrawals"							
+
+	name = "Lytton Report Dissatisfaction"
 	desc = "In response to the adoption of the Lytton Report, the Japanese government gave the League of Nations a formal notice of withdrawal. Germany also left this year."
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 25 month = march year = 1933 }
-		
+	deathdate = { day = 1 month = january year = 1946 }
+	offset = 7
+
 	action = {
-		name = "We see no point in this broken body any league_of_nationsger"
+		name = "We see no point in this broken body any longer"
 		ai_chance = 75
 		command = { type = dissent value = -2 }
 		command = { type = belligerence value = 15 }
@@ -740,10 +742,10 @@ event = {
 		command = { type = 	relation which = FRA value = -50 }
 		command = { type = 	relation which = ITA value = -50 }
 		command = { type = 	relation which = JAP value = -50 }
-		command = { type = 	relation which = USA value = -50 }		
+		command = { type = 	relation which = USA value = -50 }
 		}
 			action = {
-		name = "We need to give it a try for peace sake."
+		name = "We need to give it a try for peace's sake."
 		ai_chance = 25
 		command = { type = dissent value = 2 }
 		command = { type = belligerence value = -5 }
@@ -751,24 +753,24 @@ event = {
 		command = { type = 	relation which = FRA value = 50 }
 		command = { type = 	relation which = ITA value = 50 }
 		command = { type = 	relation which = JAP value = 50 }
-		command = { type = 	relation which = USA value = 50 }		
+		command = { type = 	relation which = USA value = 50 }
 		}
 	}
-	
+
 	#  Withdrawals 1937
-event = { 
+event = {
 	id = 1330001822
 	tag = { SAL CHL GUA HON ITA NIC PAR PER VEN AUS }
-	
+
 	trigger = { local_flag = league_of_nations }
-	
-	name = " Withdrawals 1937"							
+
+	name = " Withdrawals 1937"
 	desc = "MAny nations left the League of Nations in the mid to late 30's for different reasons, many due to the lack of effective League support."
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 0 month = January year = 1937 }
-		
+
 		action = {
 		name = "We see no point in this broken body any league_of_nationsger"
 		ai_chance = 75
@@ -778,7 +780,7 @@ event = {
 		command = { type = 	relation which = FRA value = -50 }
 		command = { type = 	relation which = ITA value = -50 }
 		command = { type = 	relation which = JAP value = -50 }
-		command = { type = 	relation which = USA value = -50 }		
+		command = { type = 	relation which = USA value = -50 }
 		}
 			action = {
 		name = "We need to give it a try for peace sake."
@@ -789,24 +791,24 @@ event = {
 		command = { type = 	relation which = FRA value = 50 }
 		command = { type = 	relation which = ITA value = 50 }
 		command = { type = 	relation which = JAP value = 50 }
-		command = { type = 	relation which = USA value = 50 }		
+		command = { type = 	relation which = USA value = 50 }
 		}
 	}
-	
+
 	#  Withdrawals 1939
-event = { 
+event = {
 	id = 1330001823
 	tag = { SIA ROM SOV }
-	
+
 	trigger = { local_flag = league_of_nations }
-	
-	name = "Withdrawals 1939"							
+
+	name = "Withdrawals 1939"
 	desc = "Just before or during the start of WW2 nations seeing that the League was dead left, either by choice or be being conquered. In the Soviet case they were expelled for invading Finland, though this was seen as an outrage since there was not a majority vote to remove them."
-	picture = "aar_lon"	 
+	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 0 month = January year = 1939 }
-		
+
 		action = {
 		name = "We do not want to be involved in another major war"
 		ai_chance = 75
@@ -816,7 +818,7 @@ event = {
 		command = { type = 	relation which = FRA value = -50 }
 		command = { type = 	relation which = ITA value = -50 }
 		command = { type = 	relation which = JAP value = -50 }
-		command = { type = 	relation which = USA value = -50 }		
+		command = { type = 	relation which = USA value = -50 }
 		}
 			action = {
 		name = "We can't leave now, it is just getting good."
@@ -827,47 +829,47 @@ event = {
 		command = { type = 	relation which = FRA value = 50 }
 		command = { type = 	relation which = ITA value = 50 }
 		command = { type = 	relation which = JAP value = 50 }
-		command = { type = 	relation which = USA value = 50 }		
+		command = { type = 	relation which = USA value = 50 }
 		}
 	}
-	
 
-	
+
+
 # League of Nations -> United Nations
 event = {
 	id = 13300021
 	persistent = yes
-	
-	trigger = { 
+
+	trigger = {
 		local_flag = league_of_nations
 		flag = united_nations
 	}
-	
-	name = "EVT_13300021_NAME"							
+
+	name = "EVT_13300021_NAME"
 	desc = "EVT_13300021_DESC"
 	picture = "aar_lon"
 	style = 2
-	
+
 	date = { day = 1 month = january year = 1914 }
 	deathdate = { day = 1 month = january year = 1946 }
 	offset = 7
-	
+
 	action = {
-		name = "Good bye League of Nations! Hello United Nations!"		
+		name = "Good bye League of Nations! Hello United Nations!"
 		command = { type = local_clrflag which = league_of_nations_member }
 		command = { type = local_setflag which = united_nations_member }
 		command = { type = sleepevent which = 1330008002 }
 	}
-	
+
 }
 
 # End of the Triple Entente
 # TODO: PICTURE MISSING!
-event = { 
-	id = 13300050											
+event = {
+	id = 13300050
 	random = no
 	persistent = yes
-	
+
 	trigger = {
 		atwar = no #ww1 is over
 		or = { # WWI Over.
@@ -910,16 +912,16 @@ event = {
 		}
 		not = { local_flag = 13300050 }
 	}
-	
+
 	date = { day = 1 month = january year = 1918 }
 	offset = 180
 	deathdate = { day = 1 month = january year = 1933 }
-	
+
 	name = "EVT_13300050_NAME"
 	desc = "EVT_13300050_DESC"
 	style = 2
-	
-	action = { 	
+
+	action = {
 		name = "Glad we could lend a hand."
 		command = { type = leave_alliance }
 		command = { type = relation which = ENG value = -1 }
