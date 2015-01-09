@@ -13,6 +13,38 @@
 # GER	13300220	The Third Reich (fix for Anschluss)
 
 
+# Hitler assumes reins of power
+event = {
+	id = 13300302
+	random = no
+	country = GER
+
+	date = { day = 1 month = january year = 1920 }
+	deathdate = { day = 1 month = january year = 1944 }
+	offset = 1
+
+	trigger = {
+		headofstate = 1 # Hitler
+	}
+
+	name = "Seize the reins of power!"
+	desc = "As the titular head of state, Hitler implores the people to make him the head of government."
+	style = 2
+	picture = "hindenburg_death"
+	action = {
+		name = "Ok"
+		command = { type = sleepminister which = 268 } # Hindenburg
+		command = { type = wakeminister which = 1 } # Hitler
+		command = { type = wakeminister which = 2 } # Hess
+		command = { type = headofstate which = 1 } # Hitler
+		command = { type = headofgovernment which = 22 } # Hitler
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = songs which = Spirit_of_33.txt }
+	}
+}
+
 event = { 
 	id = 13300217									 
 	country = GER										 
