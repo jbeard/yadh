@@ -1,0 +1,1 @@
+find $1 -name "*$2*" | awk '{print("mv \""$0"\" \""$0"\"")}' | sed "s/$3/$4/2" | /bin/sh
