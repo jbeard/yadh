@@ -43513,7 +43513,7 @@ event = {
 		name = "Adopt a Nazi Flag"
 
 		command = { type = flag_ext where = SPR which = "_naz" }
-		command = { type = name where = SPR which = "Falangist Spain"}
+		command = { type = name where = SPR which = "Falangist Republican Spain"}
 		command = { type = local_setflag which = SPR_NAZ }
 
 		command = { type = local_clrflag which = SPR_FAS }
@@ -43533,7 +43533,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = SPR which = "_fas" }
-		command = { type = name where = SPR which = "Nationalist Spain"}
+		command = { type = name where = SPR which = "Nationalist Republican Spain"}
 		command = { type = local_setflag which = SPR_FAS }
 
 		command = { type = local_clrflag which = SPR_NAZ }
@@ -43553,7 +43553,7 @@ event = {
 		name = "Adopt a Monarchist Flag"
 
 		command = { type = flag_ext where = SPR which = "_aut" }
-		command = { type = name where = SPR which = "Kingdom of Spain"}
+		command = { type = name where = SPR which = "Spanish Constitutional Monarchy"}
 		command = { type = local_setflag which = SPR_AUT }
 
 		command = { type = local_clrflag which = SPR_NAZ }
@@ -43573,7 +43573,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = SPR which = "_sco" }
-		command = { type = name where = SPR which = "Spain"}
+		command = { type = name where = SPR which = "Republican Spain"}
 		command = { type = local_setflag which = SPR_SCO }
 
 		command = { type = local_clrflag which = SPR_NAZ }
@@ -43593,7 +43593,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = SPR which = "_mli" }
-		command = { type = name where = SPR which = "Spain"}
+		command = { type = name where = SPR which = "Republican Spain"}
 		command = { type = local_setflag which = SPR_MLI }
 
 		command = { type = local_clrflag which = SPR_NAZ }
@@ -43653,7 +43653,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = SPR which = "_lwr" }
-		command = { type = name where = SPR which = "Spanish Anarchist Communes"}
+		command = { type = name where = SPR which = "Iberian Anarchist Federation"}
 		command = { type = local_setflag which = SPR_LWR }
 
 		command = { type = local_clrflag which = SPR_NAZ }
@@ -43673,7 +43673,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = SPR which = "_len" }
-		command = { type = name where = SPR which = "Socialist Spanish Republic"}
+		command = { type = name where = SPR which = "Spanish Democratic Republic"}
 		command = { type = local_setflag which = SPR_LEN }
 
 		command = { type = local_clrflag which = SPR_NAZ }
@@ -43693,7 +43693,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = SPR which = "_sta" }
-		command = { type = name where = SPR which = "Soviet Spain"}
+		command = { type = name where = SPR which = "Soviet Spanish Union"}
 		command = { type = local_setflag which = SPR_STA }
 
 		command = { type = local_clrflag which = SPR_NAZ }
@@ -51239,7 +51239,7 @@ event = {
 		name = "Adopt a Nazi Flag"
 
 		command = { type = flag_ext where = SPA which = "_naz" }
-		command = { type = name where = SPA which = "Flagelage Movement"}
+		command = { type = name where = SPA which = "Falangist Spain"}
 		command = { type = local_setflag which = SPA_NAZ }
 
 		command = { type = local_clrflag which = SPA_FAS }
@@ -51259,7 +51259,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = SPA which = "_fas" }
-		command = { type = name where = SPA which = "Nat. Spain"}
+		command = { type = name where = SPA which = "Nationalist Spain"}
 		command = { type = local_setflag which = SPA_FAS }
 
 		command = { type = local_clrflag which = SPA_NAZ }
@@ -51279,7 +51279,7 @@ event = {
 		name = "Adopt a Monarchist Flag"
 
 		command = { type = flag_ext where = SPA which = "_aut" }
-		command = { type = name where = SPA which = "Spain"}
+		command = { type = name where = SPA which = "Spanish Monarchy"}
 		command = { type = local_setflag which = SPA_AUT }
 
 		command = { type = local_clrflag which = SPA_NAZ }
@@ -51319,7 +51319,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = SPA which = "_mli" }
-		command = { type = name where = SPA which = "Rep. Spain"}
+		command = { type = name where = SPA which = "Spain"}
 		command = { type = local_setflag which = SPA_MLI }
 
 		command = { type = local_clrflag which = SPA_NAZ }
@@ -51339,7 +51339,7 @@ event = {
 		name = "Adopt a Social Liberal Flag"
 
 		command = { type = flag_ext where = SPA which = "_sli" }
-		command = { type = name where = SPA which = "Rep. Spain"}
+		command = { type = name where = SPA which = "Spain"}
 		command = { type = local_setflag which = SPA_SLI }
 
 		command = { type = local_clrflag which = SPA_NAZ }
@@ -51359,7 +51359,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = SPA which = "_sdm" }
-		command = { type = name where = SPA which = "Rep. Spain"}
+		command = { type = name where = SPA which = "Spain"}
 		command = { type = local_setflag which = SPA_SDM }
 
 		command = { type = local_clrflag which = SPA_NAZ }
@@ -51379,7 +51379,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = SPA which = "_lwr" }
-		command = { type = name where = SPA which = "Anarchist Com."}
+		command = { type = name where = SPA which = "Spanish Anarcho-Syndalist Confederation"}
 		command = { type = local_setflag which = SPA_LWR }
 
 		command = { type = local_clrflag which = SPA_NAZ }
@@ -51399,7 +51399,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = SPA which = "_len" }
-		command = { type = name where = SPA which = "Rep. Spain"}
+		command = { type = name where = SPA which = "Socalist Spanish Republic"}
 		command = { type = local_setflag which = SPA_LEN }
 
 		command = { type = local_clrflag which = SPA_NAZ }
@@ -51419,7 +51419,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = SPA which = "_sta" }
-		command = { type = name where = SPA which = "Rep. Spain"}
+		command = { type = name where = SPA which = "Soviet Spain"}
 		command = { type = local_setflag which = SPA_STA }
 
 		command = { type = local_clrflag which = SPA_NAZ }
