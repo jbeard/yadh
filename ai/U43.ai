@@ -335,11 +335,11 @@ switch = no # [yes/no]
    armor       = 3 
    infantry     = 3 
    industry     = 1 
-   aircraft     = 0 
+   aircraft     = 0.5
    naval       = 0 
    land_doctrines   = 1 
    secret_weapons   = 0 
-   air_doctrines   = 0 
+   air_doctrines   = 0.5
    naval_doctrines = 0 
  } 
   

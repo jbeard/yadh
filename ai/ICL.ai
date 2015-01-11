@@ -168,12 +168,12 @@ spyprefs =
             armor = 1.0000 
             infantry = 6.0000 
             industry = 3.0000 
-            aircraft = 0.0000 
-            naval = 0.0000 
+            aircraft = 0.5000 
+            naval = 1.0000 
             land_doctrines = 8.0000 
             secret_weapons = 0.0000 
-            air_doctrines = 0.0000 
-            naval_doctrines = 0.0000 
+            air_doctrines = 0.5000 
+            naval_doctrines = 1.0000 
             } 
 
 ###################################

@@ -324,12 +324,12 @@ technology = {
 	armor 		= 1
 	infantry 	= 6
 	industry 	= 3
-	aircraft 	= 0
-	naval 		= 0
+	aircraft 	= 1
+	naval 		= 0.5
 	land_doctrines 	= 8
 	secret_weapons 	= 0
-	air_doctrines 	= 0
-	naval_doctrines = 0
+	air_doctrines 	= 1
+	naval_doctrines = 0.5
 }
 
 

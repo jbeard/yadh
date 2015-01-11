@@ -315,15 +315,15 @@ technology = {
 		2800	# Great War Static Anti-Air Artillery
 		}
  
-	armor 		= 1
-	infantry 	= 2
-	industry 	= 2
-	aircraft 	= 0
-	naval 		= 0
+	armor 		= 2
+	infantry 	= 3
+	industry 	= 3
+	aircraft 	= 1
+	naval 		= 1
 	land_doctrines 	= 3
 	secret_weapons 	= 0
-	air_doctrines 	= 0
-	naval_doctrines = 0
+	air_doctrines 	= 1
+	naval_doctrines = 1
 }  
 
 ###################################

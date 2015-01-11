@@ -199,15 +199,15 @@ military = {
 technology = { 
 	endgoal 	= { } 
 		
-	armor 			= 0
+	armor 			= 0.5
 	infantry 		= 5
 	industry 		= 4
-	aircraft 		= 0
-	naval 			= 0
+	aircraft 		= 0.5
+	naval 			= 0.5
 	land_doctrines 	= 4
 	secret_weapons 	= 0
-	air_doctrines 	= 0
-	naval_doctrines = 0
+	air_doctrines 	= 0.5
+	naval_doctrines = 0.5
 }  
 
 ###################################
