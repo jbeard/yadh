@@ -1,7 +1,7 @@
 Sprite = {
 	Bitmap = "T-BOMBER A-WALK C-ITA L-1 D-SE.bmp"
-	Origin = { x = 65 y = 74 }
-	Frames = 19
+	Origin = { x = 40 y = 40 }
+	Frames = 16
 	Speed = 5
-	Palette = "T-BOMBER C-ITA L-1.bmp"
+	Palette = "T-BOMBER C-ITA L-1.BMP"
 }

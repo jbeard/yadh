@@ -3,5 +3,5 @@ Sprite = {
 	Origin = { x = 27 y = 36 }
 	Frames = 16
 	Speed = 5
-	Palette = "T-CAS C-GER.BMP"
+	Palette = "T-CAS C-GER L-1.BMP"
 }
