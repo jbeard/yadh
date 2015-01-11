@@ -4781,8 +4781,9 @@ event = {
 	random = no
 	country = GER
 	trigger = {
-			NOT = { war = { country = GER country = CZE } }
-			}
+		exists = CZE
+		NOT = { war = { country = GER country = CZE } }
+	}
 	date = { day = 09 month = september year = 1936 }
 
 	name = "Anti-Soviet Propaganda Aimed at Czechoslovakia"
