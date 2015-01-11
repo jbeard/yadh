@@ -1692,7 +1692,8 @@ MODEL_SOV_13_14;Sukhoi Su-9;Sukhoi Su-9;Sukhoi Su-9;Sukhoi Su-9;Sukhoi Su-9;Sukh
 MODEL_SOV_13_15;Mikoyan-Gurevich MiG-21PF;Mikoyan-Gurevich MiG-21PF;Mikoyan-Gurevich MiG-21PF;Mikoyan-Gurevich MiG-21PF;Mikoyan-Gurevich MiG-21PF;Mikoyan-Gurevich MiG-21PF;;Су-9;;;X
 MODEL_SOV_13_16;Mikoyan-Gurevich MiG-25;Mikoyan-Gurevich MiG-25;Mikoyan-Gurevich MiG-25;Mikoyan-Gurevich MiG-25;Mikoyan-Gurevich MiG-25;Mikoyan-Gurevich MiG-25;;Су-11;;;X
 MODEL_SOV_13_17;Mikoyan-Gurevich MiG-31;Mikoyan-Gurevich MiG-31;Mikoyan-Gurevich MiG-31;Mikoyan-Gurevich MiG-31;Mikoyan-Gurevich MiG-31;Mikoyan-Gurevich MiG-31;;Mikoyan-Gurevich MiG-31;;;X
-MODEL_SOV_14_0;Sikorsky Ilya Muromets;Sikorsky Ilya Muromets;Sikorsky Ilya Muromets;Sikorsky Ilya Muromets;Sikorsky Ilya Muromets;Sikorsky Ilya Muromets;;С-22 'Илья Муромец';;;X
+MODEL_SOV_14_0;Sikorsky S-26 Ilya Muromets;Sikorsky S-26 Ilya Muromets;Sikorsky S-26 Ilya Muromets;Sikorsky S-26 Ilya Muromets;Sikorsky S-26 Ilya Muromets;Sikorsky S-26 Ilya Muromets;;С-22 'Илья Муромец';;;X
+MODEL_SOV_14_1;Sikorsky S-27 Ilya Muromets;Sikorsky S-27 Ilya Muromets;Sikorsky S-27 Ilya Muromets;Sikorsky S-27 Ilya Muromets;Sikorsky S-27 Ilya Muromets;Sikorsky S-27 Ilya Muromets;;С-22 'Илья Муромец';;;X
 MODEL_SOV_14_2;Tupolev TB-3;Tupolev TB-3;Tupolev TB-3;Tupolev TB-3;Tupolev TB-3;Tupolev TB-3;;ТБ-3;;;X
 MODEL_SOV_14_3;Tupolev TB-6;Tupolev TB-6;Tupolev TB-6;Tupolev TB-6;Tupolev TB-6;Tupolev TB-6;;ТБ-6;;;X
 MODEL_SOV_14_4;Petlyakov Pe-8;Petlyakov Pe-8;Petlyakov Pe-8;Petlyakov Pe-8;Petlyakov Pe-8;Petlyakov Pe-8;;Пe-8;;;X
@@ -1704,6 +1705,9 @@ MODEL_SOV_14_9;Tupolev Tu-95KM;Tupolev Tu-95KM;Tupolev Tu-95KM;Tupolev Tu-95KM;T
 MODEL_SOV_14_10;Tupolev Tu-96;Tupolev Tu-96;Tupolev Tu-96;Tupolev Tu-96;Tupolev Tu-96;Tupolev Tu-96;;Tupolev Tu-96;;;X
 MODEL_SOV_14_11;Tupolev Tu-160;Tupolev Tu-160;Tupolev Tu-160;Tupolev Tu-160;Tupolev Tu-160;Tupolev Tu-160;;Tupolev Tu-160;;;X
 MODEL_SOV_14_12;Sukhoi PAK-DA;Sukhoi PAK-DA;Sukhoi PAK-DA;Sukhoi PAK-DA;Sukhoi PAK-DA;Sukhoi PAK-DA;;Sukhoi PAK-DA;;;X
+MODEL_SOV_15_0;Sikorsky S-23 Ilya Muromets;Sikorsky S-23 Ilya Muromets;Sikorsky S-23 Ilya Muromets;Sikorsky S-23 Ilya Muromets;Sikorsky S-23 Ilya Muromets;Sikorsky S-23 Ilya Muromets;;С-22 'Илья Муромец';;;X
+MODEL_SOV_15_1;Sikorsky S-24 Ilya Muromets;Sikorsky S-24 Ilya Muromets;Sikorsky S-24 Ilya Muromets;Sikorsky S-24 Ilya Muromets;Sikorsky S-24 Ilya Muromets;Sikorsky S-24 Ilya Muromets;;С-22 'Илья Муромец';;;X
+MODEL_SOV_15_2;Sikorsky S-25 Ilya Muromets;Sikorsky S-25 Ilya Muromets;Sikorsky S-25 Ilya Muromets;Sikorsky S-25 Ilya Muromets;Sikorsky S-25 Ilya Muromets;Sikorsky S-25 Ilya Muromets;;С-22 'Илья Муромец';;;X
 MODEL_SOV_15_3;Kolpakov-Moroshnichenko 2B-L1;Kolpakov-Moroshnichenko 2B-L1;Kolpakov-Moroshnichenko 2B-L1;Kolpakov-Moroshnichenko 2B-L1;Kolpakov-Moroshnichenko 2B-L1;Kolpakov-Moroshnichenko 2B-L1;;Kolpakov-Moroshnichenko 2B-L1;;;X
 MODEL_SOV_15_4;Tupolev TB-1;Tupolev TB-1;Tupolev TB-1;Tupolev TB-1;Tupolev TB-1;Tupolev TB-1;;ТБ-1;;;X
 MODEL_SOV_15_5;Tupolev SB Katyusha;Tupolev SB Katyusha;Tupolev SB Katyusha;Tupolev SB Katyusha;Tupolev SB Katyusha;Tupolev SB Katyusha;;СБ-2;;;X
