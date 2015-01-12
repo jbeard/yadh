@@ -1,0 +1,19 @@
+
+basic			: (nothing)
+
+NAZI			: _naz
+FASCIST			: _fas
+PATERNAL AUTOCRAT	: _aut
+
+SOCIAL CONSERVATIVE	: _sco
+MARKET LIBERAL		: _mli
+SOCIAL LIBERAL		: _sli
+SOCIAL DEMOCRAT		: _sdm
+
+
+LEFT-WING RADICAL	: _lwr
+LENINIST		: _len
+STALINIST		: _sta
+
+
+
