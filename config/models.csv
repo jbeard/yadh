@@ -874,9 +874,16 @@ MODEL_GER_12_5;Messerschmitt Bf 109E Emil;Messerschmitt Bf 109E Emil;Messerschmi
 MODEL_GER_12_6;Focke-Wulf Fw 190A;Focke-Wulf Fw 190A;Focke-Wulf Fw 190A;Focke-Wulf Fw 190A;Focke-Wulf Fw 190A;Focke-Wulf Fw 190A;;Focke-Wulf Fw 190A;;;X
 MODEL_GER_12_7;Focke-Wulf Fw 190D;Focke-Wulf Fw 190D;Focke-Wulf Fw 190D;Focke-Wulf Fw 190D;Focke-Wulf Fw 190D;Focke-Wulf Fw 190D;;Focke-Wulf Fw 190D;;;X
 MODEL_GER_12_8;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;Messerschmitt Me 262 Schwalbe;;Messerschmitt Me 262 Schwalbe;;;X
-MODEL_GER_12_9;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;Messerschmitt P.1101;;Messerschmitt P.1101;;;X
-MODEL_GER_12_10;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;;Horten Ho 229;;;X
-MODEL_GER_12_16;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;DeutschJäger Taifun J.MM;;DeutschJäger Taifun J.MM;;;X
+MODEL_GER_12_9;Heinkel He 178;Heinkel He 178;Heinkel He 178;Heinkel He 178;Heinkel He 178;Heinkel He 178;;Heinkel He 178;;;X
+MODEL_GER_12_10;Focke-Wulf Ta.183A Huckebein;Focke-Wulf Ta.183A Huckebein;Focke-Wulf Ta.183A Huckebein;Focke-Wulf Ta.183A Huckebein;Focke-Wulf Ta.183A Huckebein;Focke-Wulf Ta.183A Huckebein;;Focke-Wulf Ta.183A Huckebein;;;X
+MODEL_GER_12_11;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;Horten Ho 229;;Horten Ho 229;;;X
+MODEL_GER_12_12;FMA IAe 33 Pulqui I;FMA IAe 33 Pulqui I;FMA IAe 33 Pulqui I;FMA IAe 33 Pulqui I;FMA IAe 33 Pulqui I;FMA IAe 33 Pulqui I;;FMA IAe 33 Pulqui I;;;X
+MODEL_GER_12_13;Messerschmitt P.1111;Messerschmitt P.1111;Messerschmitt P.1111;Messerschmitt P.1111;Messerschmitt P.1111;Messerschmitt P.1111;;Messerschmitt P.1111;;;X
+MODEL_GER_12_14;Gotha Go 60;Gotha Go 60;Gotha Go 60;Gotha Go 60;Gotha Go 60;Gotha Go 60;;Gotha Go 60;;;X
+MODEL_GER_12_15;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;;Heinkel He P.1079;;;X
+MODEL_GER_12_16;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;Heinkel He P.1079;;Heinkel He P.1079;;;X
+MODEL_GER_12_17;Horten Ho 229G;Horten Ho 229G;Horten Ho 229G;Horten Ho 229G;Horten Ho 229G;Horten Ho 229G;;Horten Ho 229G;;;X
+MODEL_GER_12_18;Focke-Wulf Fw 500;Focke-Wulf Fw 500;Focke-Wulf Fw 500;Focke-Wulf Fw 500;Focke-Wulf Fw 500;Focke-Wulf Fw 500;;Focke-Wulf Fw 500;;;X
 MODEL_GER_13_0;Rumpler Taube;Rumpler Taube;Rumpler Taube;Rumpler Taube;Rumpler Taube;Rumpler Taube;;Rumpler Taube;;;X
 MODEL_GER_13_1;Aviatik B.I;Aviatik B.I;Aviatik B.I;Aviatik B.I;Aviatik B.I;Aviatik B.I;;Aviatik B.I;;;X
 MODEL_GER_13_2;Fokker E.I;Fokker E.I;Fokker E.I;Fokker E.I;Fokker E.I;Fokker E.I;;Fokker E.I;;;X
@@ -889,10 +896,12 @@ MODEL_GER_13_8;Messerschmitt Bf 109D;Messerschmitt Bf 109D;Messerschmitt Bf 109D
 MODEL_GER_13_9;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;Messerschmitt Bf 109F Franz;;Messerschmitt Bf 109F Franz;;;X
 MODEL_GER_13_10;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;Messerschmitt Bf 109G Gustav;;Messerschmitt Bf 109G Gustav;;;X
 MODEL_GER_13_11;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;Heinkel He 162 Salamander;;Heinkel He 162 Salamander;;;X
-MODEL_GER_13_12;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;Focke-Wulf Ta.183 Huckebein;;Focke-Wulf Ta.183 Huckebein;;;X
-MODEL_GER_13_13;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;;Lippisch P.13a;;;X
-MODEL_GER_13_14;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;Messerschmitt 1110;;Messerschmitt 1110;;;X
-MODEL_GER_13_16;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;Messerschmitt 4000;;Messerschmitt 4000;;;X
+MODEL_GER_13_12;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;Lippisch P.13a;;Lippisch P.13a;;;X
+MODEL_GER_13_13;Focke-Wulf Ta.183D Krähe;Focke-Wulf Ta.183D Krähe;Focke-Wulf Ta.183D Krähe;Focke-Wulf Ta.183D Krähe;Focke-Wulf Ta.183D Krähe;Focke-Wulf Ta.183D Krähe;;Focke-Wulf Ta.183D Krähe;;;X
+MODEL_GER_13_14;Focke-Wulf Ta.283 Super Lorin;Focke-Wulf Ta.283 Super Lorin;Focke-Wulf Ta.283 Super Lorin;Focke-Wulf Ta.283 Super Lorin;Focke-Wulf Ta.283 Super Lorin;Focke-Wulf Ta.283 Super Lorin;;Focke-Wulf Ta.283 Super Lorin;;;X
+MODEL_GER_13_15;FMA IAe 33 Pulqui II;FMA IAe 33 Pulqui II;FMA IAe 33 Pulqui II;FMA IAe 33 Pulqui II;FMA IAe 33 Pulqui II;FMA IAe 33 Pulqui II;;FMA IAe 33 Pulqui II;;;X
+MODEL_GER_13_16;Messerschmitt 1111;Messerschmitt 1111;Messerschmitt 1111;Messerschmitt 1111;Messerschmitt 1111;Messerschmitt 1111;;Messerschmitt 1111;;;X
+MODEL_GER_13_17;Gotha Go 60;Gotha Go 60;Gotha Go 60;Gotha Go 60;Gotha Go 60;Gotha Go 60;;Gotha Go 60;;;X
 MODEL_GER_14_0;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;Zeppelin-Staaken V.G.O.I;;Zeppelin-Staaken V.G.O.I;;;X
 MODEL_GER_14_1;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;Zeppelin-Staaken R.VI;;Zeppelin-Staaken R.VI;;;X
 MODEL_GER_14_2;Dornier Do P;Dornier Do P;Dornier Do P;Dornier Do P;Dornier Do P;Dornier Do P;;Dornier Do P;;;X
@@ -914,11 +923,12 @@ MODEL_GER_15_9;Arado Ar 234 Blitz;Arado Ar 234 Blitz;Arado Ar 234 Blitz;Arado Ar
 MODEL_GER_15_10;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;;Junkers Ju 287;;;X
 MODEL_GER_15_11;Heinkel He 343;Heinkel He 343;Heinkel He 343;Heinkel He 343;Heinkel He 343;Heinkel He 343;;Heinkel He 343;;;X
 MODEL_GER_16_0;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;;Hansa-Brandenburg W.20;;;X
-MODEL_GER_16_1;Dornier Do J Wal;Dornier Do J Wal;Dornier Do J Wal;Dornier Do J Wal;Dornier Do J Wal;Dornier Do J Wal;;Dornier Do J Wal;;;X
-MODEL_GER_16_2;Dornier Do 217;Dornier Do 217;Dornier Do 217;Dornier Do 217;Dornier Do 217;Dornier Do 217;;Dornier Do 217;;;X
-MODEL_GER_16_3;Focke-Wulf Fw 200 Condor;Focke-Wulf Fw 200 Condor;Focke-Wulf Fw 200 Condor;Focke-Wulf Fw 200 Condor;Focke-Wulf Fw 200 Condor;Focke-Wulf Fw 200 Condor;;Focke-Wulf Fw 200 Condor;;;X
-MODEL_GER_16_4;Junkers Ju 390;Junkers Ju 390;Junkers Ju 390;Junkers Ju 390;Junkers Ju 390;Junkers Ju 390;;Junkers Ju 390;;;X
-MODEL_GER_16_5;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;;Junkers Ju 287;;;X
+MODEL_GER_16_1;Blohm & Voss BV-138C;Blohm & Voss BV-138C;Blohm & Voss BV-138C;Blohm & Voss BV-138C;Blohm & Voss BV-138C;Blohm & Voss BV-138C;;Blohm & Voss BV-138C;;;X
+MODEL_GER_16_2;Dornier Do 24;Dornier Do 24;Dornier Do 24;Dornier Do 24;Dornier Do 24;Dornier Do 24;;Dornier Do 24;;;X
+MODEL_GER_16_3;Dornier Do 217;Dornier Do 217;Dornier Do 217;Dornier Do 217;Dornier Do 217;Dornier Do 217;;Dornier Do 217;;;X
+MODEL_GER_16_4;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;Arado Ar 196;;Arado Ar 196;;;X
+MODEL_GER_16_5;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;Heinkel He 115;;Heinkel He 115;;;X
+MODEL_GER_16_6;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;Junkers Ju 287;;Junkers Ju 287;;;X
 MODEL_GER_17_0;Henschel Hs 123;Henschel Hs 123;Henschel Hs 123;Henschel Hs 123;Henschel Hs 123;Henschel Hs 123;;Henschel Hs 123;;;X
 MODEL_GER_17_1;Junkers Ju 87B Stuka;Junkers Ju 87B Stuka;Junkers Ju 87B Stuka;Junkers Ju 87B Stuka;Junkers Ju 87B Stuka;Junkers Ju 87B Stuka;;Junkers Ju 87B Stuka;;;X
 MODEL_GER_17_2;Junkers Ju 87G Stuka;Junkers Ju 87G Stuka;Junkers Ju 87G Stuka;Junkers Ju 87G Stuka;Junkers Ju 87G Stuka;Junkers Ju 87G Stuka;;Junkers Ju 87G Stuka;;;X
