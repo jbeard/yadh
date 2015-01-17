@@ -3,5 +3,5 @@ Sprite = {
 	Origin = { x = 70 y = 60 }
 	Frames = 19
 	Speed = 5
-	Palette = "T-INFANTRY C-GER L-1"
+	Palette = "T-INFANTRY C-GER L-1.bmp"
 }
