@@ -861,8 +861,15 @@ MODEL_GER_5_4;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. P
 MODEL_GER_5_5;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 MODEL_GER_5_6;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
 MODEL_GER_5_7;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
-MODEL_GER_10_3;Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);;Hq '39 (Pkw Kfz 2);;;X
-MODEL_GER_10_4;Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);;Hq '44 (SdKfz. 251/6 Ausf.C);;;X
+#MODEL_GER_10_0;HQ 1870
+MODEL_GER_10_1;HQ '14 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);;HQ 1914 (Opel Blitz);;;X
+MODEL_GER_10_2;HQ '28 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);;HQ 1928 (PkwKfz. 2/1);;;X
+MODEL_GER_10_3;HQ '39 (SdKfz. 222/2);HQ 1939 (SdKfz. 222/2);HQ 1939 (SdKfz. 222/2);HQ 1939 (SdKfz. 222/2);HQ 1939 (SdKfz. 222/2);HQ 1939 (SdKfz. 222/2);;HQ 1939 (SdKfz. 222/2);;;X
+MODEL_GER_10_4;HQ '43 (SdKfz. 231/6);HQ 1943 (SdKfz. 231/6);HQ 1943 (SdKfz. 231/6);HQ 1943 (SdKfz. 231/6);HQ 1943 (SdKfz. 231/6);HQ 1943 (SdKfz. 231/6);;HQ 1943 (SdKfz. 231/6);;;X
+MODEL_GER_10_5;HQ '46 (SdKfz. 234/1);HQ 1946 (SdKfz. 234/1);HQ 1946 (SdKfz. 234/1);HQ 1946 (SdKfz. 234/1);HQ 1946 (SdKfz. 234/1);HQ 1946 (SdKfz. 234/1);;HQ 1946 (SdKfz. 234/1);;;X
+#MODEL_GER_10_6;HQ 1956
+#MODEL_GER_10_7;HQ 1967
+#MODEL_GER_10_8;HQ 1975
 MODEL_GER_41_0;Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);Air Assault Division '56 (Focke-Achgelis Fa 223);;Air Assault Division '56 (Focke-Achgelis Fa 223);;;X
 # Germany air units;;;;;;;;;;;X
 MODEL_GER_12_0;DFW C.V;DFW C.V;DFW C.V;DFW C.V;DFW C.V;DFW C.V;;DFW C.V;;;X
