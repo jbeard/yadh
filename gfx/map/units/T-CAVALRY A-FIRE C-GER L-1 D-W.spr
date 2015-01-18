@@ -1,5 +1,5 @@
 Sprite = {
-	Bitmap = "T-CAVALRY A-FIRE C-GER D-W.bmp"
+	Bitmap = "T-CAVALRY A-FIRE C-GER L-1 D-W.bmp"
 	Origin = { x = 55 y = 60 }
 	Frames = 11
 	Speed = 5
