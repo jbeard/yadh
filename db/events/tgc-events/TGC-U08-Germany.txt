@@ -656,7 +656,7 @@ event = {
 	trigger = {
 		local_flag=winner
 		atwar = no
-   }
+	}
 
 	name = "Greater Germany"
 	Desc = "Following the footsteps of the Franco-Prussian War and the Treat of Frankfurt, the new Treaty of Versailles has cemented German victory once again. Secure in her borders and flush with war trophies and reparations, Germany may choose to flex its newfound strength and declare a new post-Imperial German state."
@@ -694,4 +694,87 @@ event = {
 		command = { type =   belligerence value = -1 }
 	}
 }
+
+#########################################################################
+# Hitler assumes reins of power
+#########################################################################
+event = {
+	id = 13300302
+	random = no
+	country = GER
+
+	date = { day = 1 month = january year = 1920 }
+	deathdate = { day = 1 month = january year = 1944 }
+	offset = 1
+
+	trigger = {
+		headofstate = 1 # Hitler
+	}
+
+	name = "Seize the reins of power!"
+	desc = "As the titular head of state, Hitler implores the people to make him the head of government."
+	style = 2
+	picture = "hindenburg_death"
+	action = {
+		name = "Ok"
+		command = { type = sleepminister which = 268 } # Hindenburg
+		command = { type = wakeminister which = 1 } # Hitler
+		command = { type = wakeminister which = 2 } # Hess
+		command = { type = headofstate which = 1 } # Hitler
+		command = { type = headofgovernment which = 22 } # Hitler
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = songs which = Spirit_of_33.txt }
+	}
+}
+
+#########################################################################
+#  Anschluss of Austria
+#########################################################################
+event = {
+	id = 13300303
+	random = no
+	country = U09
+
+	trigger = {
+		OR = { random = 4 AND = { random = 55 year = 1938 } year = 1939 }
+		OR = {
+			AND = {
+				NOT = { guarantee = { country = ITA country = U09 } }
+				minister = 1
+			}
+			alliance = { country = GER country = ITA }
+		}
+	}
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	style = 2
+	picture = "anschluss"
+
+	date = { day = 1 month = january year = 1937 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofstate which = 115013 }
+		command = { type = headofgovernment which = 115020 }
+		command = { type = foreignminister which = 115030 }
+		command = { type = armamentminister which = 115041 }
+		command = { type = ministerofsecurity which = 115055 }
+		command = { type = ministerofintelligence which = 115066 }
+		command = { type = chiefofstaff which = 115075 }
+		command = { type = chiefofarmy which = 115085 }
+		command = { type = chiefofnavy which = 115091 }
+		command = { type = chiefofair which = 115010 }
+		command = { type = dissent value = -1 }
+		command = { type = ai which = "switch/aus_Anschluss.ai" }
+		command = { type = trigger which = 2003009 }
+	}
+}
+
 

@@ -499,8 +499,8 @@ event = {
 		command = { type = dissent value = -1 }
 		command = { type = ai which = "switch/aus_Anschluss.ai" }
 		command = { type = trigger which = 2003009 }
-		}
 	}
+}
 	
 event = {
 	id = 2003009
@@ -536,14 +536,22 @@ event = {
 			owned = { province = 195 data = GER } 	
 			AND = {
 				control = { province = 195 data = GER } 
-				war = { country = GER country = AUS }
+				OR = {
+					war = { country = GER country = AUS }
+					war = { country = GER country = U09 }
+				}
 			}
 			AND = {
 				OR = {
 					alliance = { country = GER country = AUS }
+					alliance = { country = GER country = U09 }
 					relation = { which = AUS value = 200 }
+					relation = { which = U09 value = 200 }
 				}
-				event = 2003008 
+				OR = {
+					event = 2003008 
+					local_flag = winner
+				}
 			}
 		}
 	}
@@ -553,11 +561,17 @@ event = {
 			owned = { province = 195 data = GER } 	
 			AND = {
 				control = { province = 195 data = GER } 
-				war = { country = GER country = AUS }
+				OR = {
+					war = { country = GER country = AUS }
+					war = { country = GER country = U09 }
+				}
 			}
 			AND = {
 				flag = Anschluss
-				alliance = { country = GER country = AUS }
+				OR = {
+					alliance = { country = GER country = AUS }
+					alliance = { country = GER country = U09 }
+				}
 			}
 		}
 	}
@@ -577,7 +591,9 @@ event = {
 		name = 2001a
 		trigger = { 
 			NOT = { war = { country = GER country = AUS } } 
+			NOT = { war = { country = GER country = U09 } } 
 			NOT = { alliance = { country = GER country = AUS } } 		
+			NOT = { alliance = { country = GER country = U09 } } 		
 		}
 		command = { type = manpowerpool value = 300 }
 		command = { type = dissent value = -10 }
@@ -708,9 +724,76 @@ event = {
 		command = { type = setflag which = Munich }
 	    command = { trigger = { ai = yes } type = ai which = "switch/low_construction_factor.ai" }
 	}
+	action = { 
+		name = 2001b	
+		trigger = { alliance = { country = GER country = U09 } }
+		command = { type = inherit which = U09 value = 1 }
+		command = { type = manpowerpool value = 300 }
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		#command = { type =	addcore which = 402 }
+
+		command = { type = wakeleader which = 36 } #Böhme
+		command = { type = wakeleader which = 44 } #de Angelis
+		command = { type = wakeleader which = 54 } #Eibl
+		command = { type = wakeleader which = 66 } #Fox
+		command = { type = wakeleader which = 67 } #Franek
+		command = { type = wakeleader which = 223 } #Reinhardt
+		command = { type = wakeleader which = 226 } #Ringel
+		command = { type = wakeleader which = 352 } #von Wiktori
+		command = { type = wakeleader which = 473 } #Udet
+		command = { type = wakeleader which = 479 } #Waber
+		command = { type = wakeleader which = 526 } #Skorzeny
+		command = { type = wakeleader which = 542 } #Barger
+		command = { type = wakeleader which = 543 } #Beyer  E
+		command = { type = wakeleader which = 544 } #Bornemann
+		command = { type = wakeleader which = 546 } #Eglseer
+		command = { type = wakeleader which = 547 } #Eppich
+		command = { type = wakeleader which = 549 } #Feurstein
+		command = { type = wakeleader which = 550 } #Glaise-Horstenau
+		command = { type = wakeleader which = 551 } #Grassy
+		command = { type = wakeleader which = 553 } #Hammer
+		command = { type = wakeleader which = 558 } #Kubena
+		command = { type = wakeleader which = 559 } #Longin
+		command = { type = wakeleader which = 560 } #Löhr
+		command = { type = wakeleader which = 561 } #Materna
+		command = { type = wakeleader which = 562 } #Martinek
+		command = { type = wakeleader which = 563 } #Mickl
+		command = { type = wakeleader which = 567 } #Schöbel
+		command = { type = wakeleader which = 571 } #Vodepp
+		command = { type = wakeleader which = 572 } #von Eimannsberger
+		command = { type = wakeleader which = 573 } #von Hubicki
+		command = { type = wakeleader which = 574 } #Zaiser
+		command = { type = wakeleader which = 578 } #Aldrian
+		command = { type = wakeleader which = 595 } #Felzmann
+		command = { type = wakeleader which = 686 } #Eberle
+		command = { type = wakeleader which = 712 } #Gerstmann
+		command = { type = wakeleader which = 746 } #Hinghofer
+		command = { type = wakeleader which = 749 } #Hofmann
+		command = { type = wakeleader which = 816 } #von Haydringen
+		command = { type = wakeleader which = 821 } #von Jesser
+		command = { type = wakeleader which = 909 } #Fröhlich
+		command = { type = wakeleader which = 983 } #Adolf-Auffenberg-Komarow
+		command = { type = wakeleader which = 992 } #Scholz von Rerancze
+
+		command = { type = relation which = ENG value = -15 }
+		command = { type = relation which = FRA value = -15 }
+		command = { type = relation which = ITA value = -10 }
+		command = { type = relation which = CZE value = -10 }
+		command = { type = relation which = HUN value = -5 }
+
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = trigger which = 2001025 } # UK Gears up for war
+		command = { type = trigger which = 2002001 } # France Gears up for war
+		command = { type = clrflag which = Anschluss }
+		command = { type = setflag which = Munich }
+	    command = { trigger = { ai = yes } type = ai which = "switch/low_construction_factor.ai" }
+	}
 	action = {
 		name = 2001c	
 		trigger = { war = { country = GER country = AUS } }
+		trigger = { war = { country = GER country = U09 } }
 		command = { type = domestic which = defense_lobby value = 1 }
 
 		command = { type = relation which = ENG value = -25 }
