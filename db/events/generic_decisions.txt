@@ -34573,10 +34573,10 @@ event = {
 	action = {
 		trigger = { ideology = nazi }
 
-		name = "Adopt a Nazi Flag"
+		name = "Adopt a Fascist Flag"
 
-		command = { type = flag_ext where = TRA which = "_naz" }
-		command = { type = name where = TRA which = ""}
+		command = { type = flag_ext where = TRA which = "_fas" }
+		command = { type = name where = TRA which = "Transural Reich"}
 		command = { type = local_setflag which = TRA_NAZ }
 
 		command = { type = local_clrflag which = TRA_FAS }
@@ -34596,7 +34596,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = TRA which = "_fas" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Federal Transural"}
 		command = { type = local_setflag which = TRA_FAS }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34616,7 +34616,7 @@ event = {
 		name = "Adopt a Monarchist Flag"
 
 		command = { type = flag_ext where = TRA which = "_aut" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Imperial Transural"}
 		command = { type = local_setflag which = TRA_AUT }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34636,7 +34636,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = TRA which = "_sco" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Transural Republic"}
 		command = { type = local_setflag which = TRA_SCO }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34656,7 +34656,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = TRA which = "_mli" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Transural Republic"}
 		command = { type = local_setflag which = TRA_MLI }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34676,7 +34676,7 @@ event = {
 		name = "Adopt a Social Liberal Flag"
 
 		command = { type = flag_ext where = TRA which = "_sli" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Transural Republic"}
 		command = { type = local_setflag which = TRA_SLI }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34696,7 +34696,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = TRA which = "_sdm" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Transural Republic"}
 		command = { type = local_setflag which = TRA_SDM }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34716,7 +34716,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = TRA which = "_lwr" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "People's Transural Republic"}
 		command = { type = local_setflag which = TRA_LWR }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34736,7 +34736,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = TRA which = "_len" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Transural Socialist Republic"}
 		command = { type = local_setflag which = TRA_LEN }
 
 		command = { type = local_clrflag which = TRA_NAZ }
@@ -34756,7 +34756,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = TRA which = "_sta" }
-		command = { type = name where = TRA which = ""}
+		command = { type = name where = TRA which = "Soviet Transural"}
 		command = { type = local_setflag which = TRA_STA }
 
 		command = { type = local_clrflag which = TRA_NAZ }
