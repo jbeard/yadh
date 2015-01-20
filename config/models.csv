@@ -744,14 +744,19 @@ BRIG_MODEL_GER_5_5;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKp
 BRIG_MODEL_GER_5_6;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;;PzKpfw. V Panther Ausf. A;;;X
 BRIG_MODEL_GER_5_7;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
 BRIG_MODEL_GER_5_8;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
-BRIG_MODEL_GER_5_9;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
-BRIG_MODEL_GER_5_10;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+BRIG_MODEL_GER_5_9;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;;E-50 Panther III;;;X
+BRIG_MODEL_GER_5_10;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 BRIG_MODEL_GER_5_11;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
+BRIG_MODEL_GER_5_12;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;;PzKpfw. Leopard 1A1/A2;;;X
+BRIG_MODEL_GER_5_13;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;;PzKpfw. Leopard 1A3/A4;;;X
+BRIG_MODEL_GER_5_14;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;;PzKpfw. Leopard 1A5/A6;;;X
+BRIG_MODEL_GER_5_15;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;;PzKpfw. Leopard 2A4;;;X
+BRIG_MODEL_GER_5_16;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;;PzKpfw. Leopard 2A7;;;X
 BRIG_MODEL_GER_6_0;PzJg.I;PzJg.I;PzJg.I;PzJg.I;PzJg.I;PzJg.I;;PzJg.I;;;X
 BRIG_MODEL_GER_6_1;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;;SdKfz. 139 Marder III;;;X
 BRIG_MODEL_GER_6_2;Jagdpanther;Jagdpanther;Jagdpanther;Jagdpanther;Jagdpanther;Jagdpanther;;Jagdpanther;;;X
 BRIG_MODEL_GER_6_3;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;;SdKfz. 186 Jagdtiger;;;X
-BRIG_MODEL_GER_6_4;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;;Jagdpanzer E-75;;;X
+BRIG_MODEL_GER_6_4;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;;Jagdpanzer E-100;;;X
 BRIG_MODEL_GER_6_5;;;;;;;;;;;X
 BRIG_MODEL_GER_6_6;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;;Kanonenjagdpanzer;;;X
 BRIG_MODEL_GER_7_0;LK I;LK I;LK I;LK I;LK I;LK I;;LK I;;;X
@@ -807,12 +812,12 @@ BRIG_MODEL_GER_29_6;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. 
 BRIG_MODEL_GER_29_7;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
 BRIG_MODEL_GER_29_8;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
 BRIG_MODEL_GER_29_9;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;;PzKpfw. Tiger II;;;X
-BRIG_MODEL_GER_29_10;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;;E-75 Panther III;;;X
-BRIG_MODEL_GER_29_11;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+BRIG_MODEL_GER_29_10;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;;E-50 Panther III;;;X
+BRIG_MODEL_GER_29_11;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 BRIG_MODEL_GER_29_12;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
-BRIG_MODEL_GER_29_13;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;;PzKpfw. Leopard II;;;X
-BRIG_MODEL_GER_29_14;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;;PzKpfw. Lion I;;;X
-BRIG_MODEL_GER_29_15;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;;PzKpfw. Lion II;;;X
+BRIG_MODEL_GER_29_13;PzKpfw. Leopard 1A5;PzKpfw. Leopard 1A5;PzKpfw. Leopard 1A5;PzKpfw. Leopard 1A5;PzKpfw. Leopard 1A5;PzKpfw. Leopard 1A5;;PzKpfw. Leopard 1A5;;;X
+BRIG_MODEL_GER_29_14;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;;PzKpfw. Leopard 2A4;;;X
+BRIG_MODEL_GER_29_15;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;;PzKpfw. Leopard 2A7;;;X
 # Germany air brigades;;;;;;;;;;;X
 BRIG_MODEL_GER_30_0;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;;Rumpler 4B;;;X
 BRIG_MODEL_GER_30_1;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;;Albatross W.IV;;;X
@@ -859,9 +864,14 @@ MODEL_GER_5_1;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. I
 MODEL_GER_5_2;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;;PzKpfw. V Panther Ausf. A;;;X
 MODEL_GER_5_3;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
 MODEL_GER_5_4;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
-MODEL_GER_5_5;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
-MODEL_GER_5_6;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+MODEL_GER_5_5;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;;E-50 Panther III;;;X
+MODEL_GER_5_6;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 MODEL_GER_5_7;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
+MODEL_GER_5_8;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;;PzKpfw. Leopard 1A1/A2;;;X
+MODEL_GER_5_9;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;;PzKpfw. Leopard 1A3/A4;;;X
+MODEL_GER_5_10;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;;PzKpfw. Leopard 1A5/A6;;;X
+MODEL_GER_5_11;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;;PzKpfw. Leopard 2A4;;;X
+MODEL_GER_5_12;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;;PzKpfw. Leopard 2A7;;;X
 #MODEL_GER_10_0;HQ 1870
 MODEL_GER_10_1;HQ '14 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);HQ 1914 (Opel Blitz);;HQ 1914 (Opel Blitz);;;X
 MODEL_GER_10_2;HQ '28 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);HQ 1928 (PkwKfz. 2/1);;HQ 1928 (PkwKfz. 2/1);;;X
@@ -8786,14 +8796,19 @@ BRIG_MODEL_U08_5_5;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKp
 BRIG_MODEL_U08_5_6;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;;PzKpfw. V Panther Ausf. A;;;X
 BRIG_MODEL_U08_5_7;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
 BRIG_MODEL_U08_5_8;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
-BRIG_MODEL_U08_5_9;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
-BRIG_MODEL_U08_5_10;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+BRIG_MODEL_U08_5_9;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;;E-50 Panther III;;;X
+BRIG_MODEL_U08_5_10;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 BRIG_MODEL_U08_5_11;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
+BRIG_MODEL_U08_5_12;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;;PzKpfw. Leopard 1A1/A2;;;X
+BRIG_MODEL_U08_5_13;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;;PzKpfw. Leopard 1A3/A4;;;X
+BRIG_MODEL_U08_5_14;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;;PzKpfw. Leopard 1A5/A6;;;X
+BRIG_MODEL_U08_5_15;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;;PzKpfw. Leopard 2A4;;;X
+BRIG_MODEL_U08_5_16;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;;PzKpfw. Leopard 2A7;;;X
 BRIG_MODEL_U08_6_0;PzJg.I;PzJg.I;PzJg.I;PzJg.I;PzJg.I;PzJg.I;;PzJg.I;;;X
 BRIG_MODEL_U08_6_1;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;SdKfz. 139 Marder III;;SdKfz. 139 Marder III;;;X
 BRIG_MODEL_U08_6_2;Jagdpanther;Jagdpanther;Jagdpanther;Jagdpanther;Jagdpanther;Jagdpanther;;Jagdpanther;;;X
 BRIG_MODEL_U08_6_3;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;SdKfz. 186 Jagdtiger;;SdKfz. 186 Jagdtiger;;;X
-BRIG_MODEL_U08_6_4;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;Jagdpanzer E-75;;Jagdpanzer E-75;;;X
+BRIG_MODEL_U08_6_4;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;Jagdpanzer E-100;;Jagdpanzer E-100;;;X
 BRIG_MODEL_U08_6_5;;;;;;;;;;;X
 BRIG_MODEL_U08_6_6;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;Kanonenjagdpanzer;;Kanonenjagdpanzer;;;X
 BRIG_MODEL_U08_7_0;LK I;LK I;LK I;LK I;LK I;LK I;;LK I;;;X
@@ -8853,12 +8868,12 @@ BRIG_MODEL_U08_29_6;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. 
 BRIG_MODEL_U08_29_7;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
 BRIG_MODEL_U08_29_8;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
 BRIG_MODEL_U08_29_9;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;PzKpfw. Tiger II;;PzKpfw. Tiger II;;;X
-BRIG_MODEL_U08_29_10;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;E-75 Panther III;;E-75 Panther III;;;X
-BRIG_MODEL_U08_29_11;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+BRIG_MODEL_U08_29_10;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;;E-50 Panther III;;;X
+BRIG_MODEL_U08_29_11;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 BRIG_MODEL_U08_29_12;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
-BRIG_MODEL_U08_29_13;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;PzKpfw. Leopard II;;PzKpfw. Leopard II;;;X
-BRIG_MODEL_U08_29_14;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;PzKpfw. Lion I;;PzKpfw. Lion I;;;X
-BRIG_MODEL_U08_29_15;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;PzKpfw. Lion II;;PzKpfw. Lion II;;;X
+BRIG_MODEL_U08_29_13;PzKpfw. Leopard 1A6;PzKpfw. Leopard 1A6;PzKpfw. Leopard 1A6;PzKpfw. Leopard 1A6;PzKpfw. Leopard 1A6;PzKpfw. Leopard 1A6;;PzKpfw. Leopard 1A6;;;X
+BRIG_MODEL_U08_29_14;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;;PzKpfw. Leopard 2A4;;;X
+BRIG_MODEL_U08_29_15;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;;PzKpfw. Leopard 2A7;;;X
 BRIG_MODEL_U08_30_0;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;Rumpler 4B;;Rumpler 4B;;;X
 BRIG_MODEL_U08_30_1;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;Albatross W.IV;;Albatross W.IV;;;X
 BRIG_MODEL_U08_30_2;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;Hansa-Brandenburg W.20;;Hansa-Brandenburg W.20;;;X
@@ -8903,9 +8918,14 @@ MODEL_U08_5_1;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. IV Ausf. F;PzKpfw. I
 MODEL_U08_5_2;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;PzKpfw. V Panther Ausf. A;;PzKpfw. V Panther Ausf. A;;;X
 MODEL_U08_5_3;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;PzKpfw. V Panther Ausf. D;;PzKpfw. V Panther Ausf. D;;;X
 MODEL_U08_5_4;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;PzKpfw. Panther II;;PzKpfw. Panther II;;;X
-MODEL_U08_5_5;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
-MODEL_U08_5_6;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;E-90 Tiger III;;E-90 Tiger III;;;X
+MODEL_U08_5_5;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;E-50 Panther III;;E-50 Panther III;;;X
+MODEL_U08_5_6;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;E-75 Tiger III;;E-75 Tiger III;;;X
 MODEL_U08_5_7;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;PzKpfw. Leopard I;;PzKpfw. Leopard I;;;X
+MODEL_U08_5_8;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;PzKpfw. Leopard 1A1/A2;;PzKpfw. Leopard 1A1/A2;;;X
+MODEL_U08_5_9;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;PzKpfw. Leopard 1A3/A4;;PzKpfw. Leopard 1A3/A4;;;X
+MODEL_U08_5_10;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;PzKpfw. Leopard 1A5/A6;;PzKpfw. Leopard 1A5/A6;;;X
+MODEL_U08_5_11;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;PzKpfw. Leopard 2A4;;PzKpfw. Leopard 2A4;;;X
+MODEL_U08_5_12;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;PzKpfw. Leopard 2A7;;PzKpfw. Leopard 2A7;;;X
 MODEL_U08_10_3;Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);Hq '39 (Pkw Kfz 2);;Hq '39 (Pkw Kfz 2);;;X
 MODEL_U08_10_4;Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);Hq '44 (SdKfz. 251/6 Ausf.C);;Hq '44 (SdKfz. 251/6 Ausf.C);;;X
 # Germany air units;;;;;;;;;;;X
