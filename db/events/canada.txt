@@ -618,7 +618,7 @@ event = {
                 picture = "CAN11"
                 
            action_a = {
-                  name = "Aprove it"
+                  name = "Approve it"
                   ai_chance = 97
                   command = { type = money value = -30 }
                   command = { type = relative_manpower value = 2 }
@@ -702,7 +702,7 @@ event = {
                 picture = "CAN13"
                 
            action_a = {
-                  name = "Aprove it"
+                  name = "Approve it"
                   ai_chance = 97
                   command = { type = dissent value = 3 }
                   command = { type = manpowerpool value = 70 }
@@ -736,7 +736,7 @@ event = {
                 picture = "Unemployment_rate"
                 
            action_a = {
-                  name = "Aprove it"
+                  name = "Approve it"
                   ai_chance = 95
                   command = { type = money value = -60 }
                   command = { type = dissent value = -3 }
@@ -1017,7 +1017,7 @@ event = {
                 picture = "CAN19"
                 
            action_a = {
-                  name = "Aprove it"
+                  name = "Approve it"
                   ai_chance = 95
                   command = { type = manpowerpool value = -40 }
                   command = { type = money value = -120 }
