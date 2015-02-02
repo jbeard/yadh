@@ -1,7 +1,0 @@
-Sprite = {
-	Bitmap = "T-BOMBER A-FIRE C-USA L-4 D-SE.bmp"
-	Origin = { x = 62 y = 75 }
-	Frames = 19
-	Speed = 5	
-	Palette = "T-BOMBER C-USA L-4.bmp"
-}
