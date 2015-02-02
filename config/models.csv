@@ -2059,8 +2059,12 @@ MODEL_USA_12_9;Republic F-84 Thunderjet;Republic F-84 Thunderjet;Republic F-84 T
 MODEL_USA_12_10;Republic F-84F Thunderstreak;Republic F-84F Thunderstreak;Republic F-84F Thunderstreak;Republic F-84F Thunderstreak;Republic F-84F Thunderstreak;Republic F-84F Thunderstreak;;Republic F-84F Thunderstreak;;;X
 MODEL_USA_12_11;McDonnell F-101 Voodoo;McDonnell F-101 Voodoo;McDonnell F-101 Voodoo;McDonnell F-101 Voodoo;McDonnell F-101 Voodoo;McDonnell F-101 Voodoo;;McDonnell F-101 Voodoo;;;X
 MODEL_USA_12_12;Republic F-105 Thunderchief;Republic F-105 Thunderchief;Republic F-105 Thunderchief;Republic F-105 Thunderchief;Republic F-105 Thunderchief;Republic F-105 Thunderchief;;Republic F-105 Thunderchief;;;X
-MODEL_USA_12_13;McDonnell-Douglas F-4 Phantom II;McDonnell-Douglas F-4 Phantom II;McDonnell-Douglas F-4 Phantom II;McDonnell-Douglas F-4 Phantom II;McDonnell-Douglas F-4 Phantom II;McDonnell-Douglas F-4 Phantom II;;McDonnell-Douglas F-4 Phantom II;;;X
-MODEL_USA_12_16;F-18 Hornet;F-18 Hornet;F-18 Hornet;F-18 Hornet;F-18 Hornet;F-18 Hornet;;F-18 Hornet;;;X
+MODEL_USA_12_13;McDonnell-Douglas F-4B Phantom II;McDonnell-Douglas F-4B Phantom II;McDonnell-Douglas F-4B Phantom II;McDonnell-Douglas F-4B Phantom II;McDonnell-Douglas F-4B Phantom II;McDonnell-Douglas F-4B Phantom II;;McDonnell-Douglas F-4B Phantom II;;;X
+MODEL_USA_12_14;McDonnell-Douglas F-15 Eagle;McDonnell-Douglas F-15 Eagle;McDonnell-Douglas F-15 Eagle;McDonnell-Douglas F-15 Eagle;McDonnell-Douglas F-15 Eagle;McDonnell-Douglas F-15 Eagle;;McDonnell-Douglas F-15 Eagle;;;X
+MODEL_USA_12_15;General Dynamics F-16B/D Fighting Falcon;General Dynamics F-16B/D Fighting Falcon;General Dynamics F-16B/D Fighting Falcon;General Dynamics F-16B/D Fighting Falcon;General Dynamics F-16B/D Fighting Falcon;General Dynamics F-16B/D Fighting Falcon;;General Dynamics F-16B/D Fighting Falcon;;;X
+MODEL_USA_12_16;McDonnell-Douglas F/A-18 Hornet;McDonnell-Douglas F/A-18 Hornet;McDonnell-Douglas F/A-18 Hornet;McDonnell-Douglas F/A-18 Hornet;McDonnell-Douglas F/A-18 Hornet;McDonnell-Douglas F/A-18 Hornet;;McDonnell-Douglas F/A-18 Hornet;;;X
+MODEL_USA_12_17;Lockheed-Martin F-22 Raptor;Lockheed-Martin F-22 Raptor;Lockheed-Martin F-22 Raptor;Lockheed-Martin F-22 Raptor;Lockheed-Martin F-22 Raptor;Lockheed-Martin F-22 Raptor;;Lockheed-Martin F-22 Raptor;;;X
+MODEL_USA_12_18;Lockheed-Martin F-35 Lightning II;Lockheed-Martin F-35 Lightning II;Lockheed-Martin F-35 Lightning II;Lockheed-Martin F-35 Lightning II;Lockheed-Martin F-35 Lightning II;Lockheed-Martin F-35 Lightning II;;Lockheed-Martin F-35 Lightning II;;;X
 MODEL_USA_13_0;Wright Model B;Wright Model B;Wright Model B;Wright Model B;Wright Model B;Wright Model B;;Wright Model B;;;X
 MODEL_USA_13_1;Curtiss Model R;Curtiss Model R;Curtiss Model R;Curtiss Model R;Curtiss Model R;Curtiss Model R;;Curtiss Model R;;;X
 MODEL_USA_13_2;Curtiss JN-4 "Jenny";Curtiss JN-4 "Jenny";Curtiss JN-4 "Jenny";Curtiss JN-4 "Jenny";Curtiss JN-4 "Jenny";Curtiss JN-4 "Jenny";;Curtiss JN-4 "Jenny";;;X
@@ -2073,11 +2077,12 @@ MODEL_USA_13_8;Curtiss P-36 Hawk;Curtiss P-36 Hawk;Curtiss P-36 Hawk;Curtiss P-3
 MODEL_USA_13_9;Curtiss P-40E Warhawk;Curtiss P-40E Warhawk;Curtiss P-40E Warhawk;Curtiss P-40E Warhawk;Curtiss P-40E Warhawk;Curtiss P-40E Warhawk;;Curtiss P-40E Warhawk;;;X
 MODEL_USA_13_10;North American P-51B Mustang;North American P-51B Mustang;North American P-51B Mustang;North American P-51B Mustang;North American P-51B Mustang;North American P-51B Mustang;;North American P-51B Mustang;;;X
 MODEL_USA_13_11;Lockheed P-80 Shooting Star;Lockheed P-80 Shooting Star;Lockheed P-80 Shooting Star;Lockheed P-80 Shooting Star;Lockheed P-80 Shooting Star;Lockheed P-80 Shooting Star;;Lockheed P-80 Shooting Star;;;X
-MODEL_USA_13_12;North American F-86F Sabre;North American F-86F Sabre;North American F-86F Sabre;North American F-86F Sabre;North American F-86F Sabre;North American F-86F Sabre;;North American F-86F Sabre;;;X
+MODEL_USA_13_12;North American F-86 Sabre;North American F-86 Sabre;North American F-86 Sabre;North American F-86 Sabre;North American F-86 Sabre;North American F-86 Sabre;;North American F-86 Sabre;;;X
 MODEL_USA_13_13;North American F-86D Sabre Dog;North American F-86D Sabre Dog;North American F-86D Sabre Dog;North American F-86D Sabre Dog;North American F-86D Sabre Dog;North American F-86D Sabre Dog;;North American F-86D Sabre Dog;;;X
 MODEL_USA_13_14;North American F-100 Super Sabre;North American F-100 Super Sabre;North American F-100 Super Sabre;North American F-100 Super Sabre;North American F-100 Super Sabre;North American F-100 Super Sabre;;North American F-100 Super Sabre;;;X
-MODEL_USA_13_15;Lockheed F-104 Starfighter;Lockheed F-104 Starfighter;Lockheed F-104 Starfighter;Lockheed F-104 Starfighter;Lockheed F-104 Starfighter;Lockheed F-104 Starfighter;;Lockheed F-104 Starfighter;;;X
-MODEL_USA_13_16;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;;Convair F-106 Delta Dart;;;X
+MODEL_USA_13_15;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;Convair F-106 Delta Dart;;Convair F-106 Delta Dart;;;X
+MODEL_USA_13_16;McDonnell-Douglas F-4C Spectre;McDonnell-Douglas F-4C Spectre;McDonnell-Douglas F-4C Spectre;McDonnell-Douglas F-4C Spectre;McDonnell-Douglas F-4C Spectre;McDonnell-Douglas F-4C Spectre;;McDonnell-Douglas F-4C Spectre;;;X
+MODEL_USA_13_17;General Dynamics F-16A/C Fighting Falcon;General Dynamics F-16A/C Fighting Falcon;General Dynamics F-16A/C Fighting Falcon;General Dynamics F-16A/C Fighting Falcon;General Dynamics F-16A/C Fighting Falcon;General Dynamics F-16A/C Fighting Falcon;;General Dynamics F-16A/C Fighting Falcon;;;X
 MODEL_USA_14_1;Wittemann-Lewis NBL-1 'Barling Bomber';Wittemann-Lewis NBL-1 'Barling Bomber';Wittemann-Lewis NBL-1 'Barling Bomber';Wittemann-Lewis NBL-1 'Barling Bomber';Wittemann-Lewis NBL-1 'Barling Bomber';Wittemann-Lewis NBL-1 'Barling Bomber';;Wittemann-Lewis NBL-1 'Barling Bomber';;;X
 MODEL_USA_14_2;Curtiss B-2 Condor;Curtiss B-2 Condor;Curtiss B-2 Condor;Curtiss B-2 Condor;Curtiss B-2 Condor;Curtiss B-2 Condor;;Curtiss B-2 Condor;;;X
 MODEL_USA_14_3;Boeing B-17C Flying Fortress;Boeing B-17C Flying Fortress;Boeing B-17C Flying Fortress;Boeing B-17C Flying Fortress;Boeing B-17C Flying Fortress;Boeing B-17C Flying Fortress;;Boeing B-17C Flying Fortress;;;X
@@ -2087,49 +2092,59 @@ MODEL_USA_14_6;Boeing B-29 Superfortress;Boeing B-29 Superfortress;Boeing B-29 S
 MODEL_USA_14_7;Convair B-36 Peacemaker;Convair B-36 Peacemaker;Convair B-36 Peacemaker;Convair B-36 Peacemaker;Convair B-36 Peacemaker;Convair B-36 Peacemaker;;Convair B-36 Peacemaker;;;X
 MODEL_USA_14_8;Boeing B-47 Stratojet;Boeing B-47 Stratojet;Boeing B-47 Stratojet;Boeing B-47 Stratojet;Boeing B-47 Stratojet;Boeing B-47 Stratojet;;Boeing B-47 Stratojet;;;X
 MODEL_USA_14_9;Boeing B-52 Stratofortress;Boeing B-52 Stratofortress;Boeing B-52 Stratofortress;Boeing B-52 Stratofortress;Boeing B-52 Stratofortress;Boeing B-52 Stratofortress;;Boeing B-52 Stratofortress;;;X
+MODEL_USA_14_10;Boeing B-52G Stratofortress;Boeing B-52G Stratofortress;Boeing B-52G Stratofortress;Boeing B-52G Stratofortress;Boeing B-52G Stratofortress;Boeing B-52G Stratofortress;;Boeing B-52G Stratofortress;;;X
+MODEL_USA_14_11;Boeing B-52H Stratofortress;Boeing B-52H Stratofortress;Boeing B-52H Stratofortress;Boeing B-52H Stratofortress;Boeing B-52H Stratofortress;Boeing B-52H Stratofortress;;Boeing B-52H Stratofortress;;;X
+MODEL_USA_14_12;Northrop-Grumman B-2 Spirit;Northrop-Grumman B-2 Spirit;Northrop-Grumman B-2 Spirit;Northrop-Grumman B-2 Spirit;Northrop-Grumman B-2 Spirit;Northrop-Grumman B-2 Spirit;;Northrop-Grumman B-2 Spirit;;;X
 MODEL_USA_15_0;Curtiss Model D;Curtiss Model D;Curtiss Model D;Curtiss Model D;Curtiss Model D;Curtiss Model D;;Curtiss Model D;;;X
 #MODEL_USA_15_1;Curtiss C-1 Canada;Curtiss C-1 Canada;Curtiss C-1 Canada;Curtiss C-1 Canada;Curtiss C-1 Canada;Curtiss C-1 Canada;;Curtiss C-1 Canada;;;X
 MODEL_USA_15_1;Caudron G.4;Caudron G.4;Caudron G.4;Caudron G.4;Caudron G.4;Caudron G.4;;Caudron G.4;;;X
 MODEL_USA_15_2;Handley Page HP.12 'Langley';Handley Page HP.12 'Langley';Handley Page HP.12 'Langley';Handley Page HP.12 'Langley';Handley Page HP.12 'Langley';Handley Page HP.12 'Langley';;Handley Page HP.12 'Langley';;;X
 MODEL_USA_15_3;Martin MB-1;Martin MB-1;Martin MB-1;Martin MB-1;Martin MB-1;Martin MB-1;;Martin MB-1;;;X
 MODEL_USA_15_4;Keystone B-3;Keystone B-3;Keystone B-3;Keystone B-3;Keystone B-3;Keystone B-3;;Keystone B-3;;;X
-MODEL_USA_15_5;Douglas B-18 Bolo;Douglas B-18 Bolo;Douglas B-18 Bolo;Douglas B-18 Bolo;Douglas B-18 Bolo;Douglas B-18 Bolo;;Douglas B-18 Bolo;;;X
-#MODEL_USA_15_5;Martin B-10;Martin B-10;Martin B-10;Martin B-10;Martin B-10;Martin B-10;;Martin B-10;;;X
-MODEL_USA_15_6;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;;Douglas A-20 Havoc;;;X
-MODEL_USA_15_7;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;;North American B-25 Mitchell;;;X
-MODEL_USA_15_8;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;;Martin B-26 Marauder;;;X
+MODEL_USA_15_5;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;Douglas A-20 Havoc;;Douglas A-20 Havoc;;;X
+MODEL_USA_15_6;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;North American B-25 Mitchell;;North American B-25 Mitchell;;;X
+MODEL_USA_15_7;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;Martin B-26 Marauder;;Martin B-26 Marauder;;;X
+MODEL_USA_15_8;North American B-25H Mitchell III;North American B-25H Mitchell III;North American B-25H Mitchell III;North American B-25H Mitchell III;North American B-25H Mitchell III;North American B-25H Mitchell III;;North American B-25H Mitchell III;;;X
 MODEL_USA_15_9;Douglas A-26 Invader;Douglas A-26 Invader;Douglas A-26 Invader;Douglas A-26 Invader;Douglas A-26 Invader;Douglas A-26 Invader;;Douglas A-26 Invader;;;X
 MODEL_USA_15_10;North American B-45 Tornado;North American B-45 Tornado;North American B-45 Tornado;North American B-45 Tornado;North American B-45 Tornado;North American B-45 Tornado;;North American B-45 Tornado;;;X
 MODEL_USA_15_11;Martin B-57 Canberra;Martin B-57 Canberra;Martin B-57 Canberra;Martin B-57 Canberra;Martin B-57 Canberra;Martin B-57 Canberra;;Martin B-57 Canberra;;;X
 MODEL_USA_15_12;Douglas B-66 Destroyer;Douglas B-66 Destroyer;Douglas B-66 Destroyer;Douglas B-66 Destroyer;Douglas B-66 Destroyer;Douglas B-66 Destroyer;;Douglas B-66 Destroyer;;;X
+MODEL_USA_15_13;McDonnell-Douglas F-15E Strike Eagle;McDonnell-Douglas F-15E Strike Eagle;McDonnell-Douglas F-15E Strike Eagle;McDonnell-Douglas F-15E Strike Eagle;McDonnell-Douglas F-15E Strike Eagle;McDonnell-Douglas F-15E Strike Eagle;;McDonnell-Douglas F-15E Strike Eagle;;;X
 MODEL_USA_16_0;Curtiss NC;Curtiss NC;Curtiss NC;Curtiss NC;Curtiss NC;Curtiss NC;;Curtiss NC;;;X
 MODEL_USA_16_1;Consolidated P2Y;Consolidated P2Y;Consolidated P2Y;Consolidated P2Y;Consolidated P2Y;Consolidated P2Y;;Consolidated P2Y;;;X
 MODEL_USA_16_2;Consolidated PBY Catalina;Consolidated PBY Catalina;Consolidated PBY Catalina;Consolidated PBY Catalina;Consolidated PBY Catalina;Consolidated PBY Catalina;;Consolidated PBY Catalina;;;X
-MODEL_USA_16_3;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;;Martin PBM Mariner;;;X
-MODEL_USA_16_4;Consolidated PB4Y-2 Privateer;Consolidated PB4Y-2 Privateer;Consolidated PB4Y-2 Privateer;Consolidated PB4Y-2 Privateer;Consolidated PB4Y-2 Privateer;Consolidated PB4Y-2 Privateer;;Consolidated PB4Y-2 Privateer;;;X
-MODEL_USA_16_5;Lockheed P-2 Neptune;Lockheed P-2 Neptune;Lockheed P-2 Neptune;Lockheed P-2 Neptune;Lockheed P-2 Neptune;Lockheed P-2 Neptune;;Lockheed P-2 Neptune;;;X
-MODEL_USA_16_6;Martin P5M Marlin;Martin P5M Marlin;Martin P5M Marlin;Martin P5M Marlin;Martin P5M Marlin;Martin P5M Marlin;;Martin P5M Marlin;;;X
-MODEL_USA_16_7;Martin P6M SeaMaster;Martin P6M SeaMaster;Martin P6M SeaMaster;Martin P6M SeaMaster;Martin P6M SeaMaster;Martin P6M SeaMaster;;Martin P6M SeaMaster;;;X
-MODEL_USA_16_8;Lockheed P-3 Orion;Lockheed P-3 Orion;Lockheed P-3 Orion;Lockheed P-3 Orion;Lockheed P-3 Orion;Lockheed P-3 Orion;;Lockheed P-3 Orion;;;X
+MODEL_USA_16_3;Consolidated PB2Y Coronado;Consolidated PB2Y Coronado;Consolidated PB2Y Coronado;Consolidated PB2Y Coronado;Consolidated PB2Y Coronado;Consolidated PB2Y Coronado;;Consolidated PB2Y Coronado;;;X
+MODEL_USA_16_4;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;Martin PBM Mariner;;Martin PBM Mariner;;;X
+MODEL_USA_16_5;Grumman F9F Panther;Grumman F9F Panther;Grumman F9F Panther;Grumman F9F Panther;Grumman F9F Panther;Grumman F9F Panther;;Grumman F9F Panther;;;X
+MODEL_USA_16_6;Lockheed P2V-2 Neptune;Lockheed P2V-2 Neptune;Lockheed P2V-2 Neptune;Lockheed P2V-2 Neptune;Lockheed P2V-2 Neptune;Lockheed P2V-2 Neptune;;Lockheed P2V-2 Neptune;;;X
+MODEL_USA_16_7;Lockheed P2V-3W Neptune;Lockheed P2V-3W Neptune;Lockheed P2V-3W Neptune;Lockheed P2V-3W Neptune;Lockheed P2V-3W Neptune;Lockheed P2V-3W Neptune;;Lockheed P2V-3W Neptune;;;X
+MODEL_USA_16_8;Lockheed P2V-5F Neptune;Lockheed P2V-5F Neptune;Lockheed P2V-5F Neptune;Lockheed P2V-5F Neptune;Lockheed P2V-5F Neptune;Lockheed P2V-5F Neptune;;Lockheed P2V-5F Neptune;;;X
+MODEL_USA_16_9;Lockheed P3 Orion;Lockheed P3 Orion;Lockheed P3 Orion;Lockheed P3 Orion;Lockheed P3 Orion;Lockheed P3 Orion;;Lockheed P3 Orion;;;X
+MODEL_USA_16_10;Boeing P8 Poseidon;Boeing P8 Poseidon;Boeing P8 Poseidon;Boeing P8 Poseidon;Boeing P8 Poseidon;Boeing P8 Poseidon;;Boeing P8 Poseidon;;;X
 MODEL_USA_17_0;Curtiss A-12 Shrike;Curtiss A-12 Shrike;Curtiss A-12 Shrike;Curtiss A-12 Shrike;Curtiss A-12 Shrike;Curtiss A-12 Shrike;;Curtiss A-12 Shrike;;;X
-MODEL_USA_17_1;Northrop A-17;Northrop A-17;Northrop A-17;Northrop A-17;Northrop A-17;Northrop A-17;;Northrop A-17;;;X
-MODEL_USA_17_2;Vultee A-31 Vengeance;Vultee A-31 Vengeance;Vultee A-31 Vengeance;Vultee A-31 Vengeance;Vultee A-31 Vengeance;Vultee A-31 Vengeance;;Vultee A-31 Vengeance;;;X
-MODEL_USA_17_3;North American A-36 Apache;North American A-36 Apache;North American A-36 Apache;North American A-36 Apache;North American A-36 Apache;North American A-36 Apache;;North American A-36 Apache;;;X
-MODEL_USA_17_4;Beechcraft A-38 Grizzly;Beechcraft A-38 Grizzly;Beechcraft A-38 Grizzly;Beechcraft A-38 Grizzly;Beechcraft A-38 Grizzly;Beechcraft A-38 Grizzly;;Beechcraft A-38 Grizzly;;;X
+MODEL_USA_17_1;Grumman F4F Wildcat;Grumman F4F Wildcat;Grumman F4F Wildcat;Grumman F4F Wildcat;Grumman F4F Wildcat;Grumman F4F Wildcat;;Grumman F4F Wildcat;;;X
+MODEL_USA_17_2;Grumman F6F Hellcat;Grumman F6F Hellcat;Grumman F6F Hellcat;Grumman F6F Hellcat;Grumman F6F Hellcat;Grumman F6F Hellcat;;Grumman F6F Hellcat;;;X
+MODEL_USA_17_3;Lockheed P-38 Lightning;Lockheed P-38 Lightning;Lockheed P-38 Lightning;Lockheed P-38 Lightning;Lockheed P-38 Lightning;Lockheed P-38 Lightning;;Lockheed P-38 Lightning;;;X
+MODEL_USA_17_4;Vought F4U Corsair;Vought F4U Corsair;Vought F4U Corsair;Vought F4U Corsair;Vought F4U Corsair;Vought F4U Corsair;;Vought F4U Corsair;;;X
 MODEL_USA_17_5;Douglas A-1 Skyraider;Douglas A-1 Skyraider;Douglas A-1 Skyraider;Douglas A-1 Skyraider;Douglas A-1 Skyraider;Douglas A-1 Skyraider;;Douglas A-1 Skyraider;;;X
-MODEL_USA_17_6;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;;Douglas A-4 Skyhawk;;;X
+MODEL_USA_17_6;Douglas A-3 Skywarrior;Douglas A-3 Skywarrior;Douglas A-3 Skywarrior;Douglas A-3 Skywarrior;Douglas A-3 Skywarrior;Douglas A-3 Skywarrior;;Douglas A-3 Skywarrior;;;X
+MODEL_USA_17_7;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;Douglas A-4 Skyhawk;;Douglas A-4 Skyhawk;;;X
+MODEL_USA_17_8;Douglas A-6 Intruder;Douglas A-6 Intruder;Douglas A-6 Intruder;Douglas A-6 Intruder;Douglas A-6 Intruder;Douglas A-6 Intruder;;Douglas A-6 Intruder;;;X
 MODEL_USA_18_0;Ford Trimotor;Ford Trimotor;Ford Trimotor;Ford Trimotor;Ford Trimotor;Ford Trimotor;;Ford Trimotor;;;X
 MODEL_USA_18_1;Douglas C-33;Douglas C-33;Douglas C-33;Douglas C-33;Douglas C-33;Douglas C-33;;Douglas C-33;;;X
 MODEL_USA_18_2;Curtiss-Wright C-46 Commando;Curtiss-Wright C-46 Commando;Curtiss-Wright C-46 Commando;Curtiss-Wright C-46 Commando;Curtiss-Wright C-46 Commando;Curtiss-Wright C-46 Commando;;Curtiss-Wright C-46 Commando;;;X
 MODEL_USA_18_3;Douglas C-47 Skytrain;Douglas C-47 Skytrain;Douglas C-47 Skytrain;Douglas C-47 Skytrain;Douglas C-47 Skytrain;Douglas C-47 Skytrain;;Douglas C-47 Skytrain;;;X
 MODEL_USA_18_4;Douglas C-54 Skymaster;Douglas C-54 Skymaster;Douglas C-54 Skymaster;Douglas C-54 Skymaster;Douglas C-54 Skymaster;Douglas C-54 Skymaster;;Douglas C-54 Skymaster;;;X
-MODEL_USA_18_5;Fairchild C-123 Provider;Fairchild C-123 Provider;Fairchild C-123 Provider;Fairchild C-123 Provider;Fairchild C-123 Provider;Fairchild C-123 Provider;;Fairchild C-123 Provider;;;X
+MODEL_USA_18_5;Boeing C-97 Stratofreighter;Boeing C-97 Stratofreighter;Boeing C-97 Stratofreighter;Boeing C-97 Stratofreighter;Boeing C-97 Stratofreighter;Boeing C-97 Stratofreighter;;Boeing C-97 Stratofreighter;;;X
+MODEL_USA_18_6;Douglas C-124 Globemaster II;Douglas C-124 Globemaster II;Douglas C-124 Globemaster II;Douglas C-124 Globemaster II;Douglas C-124 Globemaster II;Douglas C-124 Globemaster II;;Douglas C-124 Globemaster II;;;X
 MODEL_USA_19_0;Republic-Ford JB-2;Republic-Ford JB-2;Republic-Ford JB-2;Republic-Ford JB-2;Republic-Ford JB-2;Republic-Ford JB-2;;Republic-Ford JB-2;;;X
 MODEL_USA_20_0;PGM-11 Redstone;PGM-11 Redstone;PGM-11 Redstone;PGM-11 Redstone;PGM-11 Redstone;PGM-11 Redstone;;PGM-11 Redstone;;;X
 MODEL_USA_20_1;PGM-17 Thor;PGM-17 Thor;PGM-17 Thor;PGM-17 Thor;PGM-17 Thor;PGM-17 Thor;;PGM-17 Thor;;;X
 MODEL_USA_20_2;SM-65 Atlas-D;SM-65 Atlas-D;SM-65 Atlas-D;SM-65 Atlas-D;SM-65 Atlas-D;SM-65 Atlas-D;;SM-65 Atlas-D;;;X
-MODEL_USA_32_0;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;;Northrop P-79 Flying Ram;;;X
-MODEL_USA_32_1;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;;Republic F-91 Thunderceptor;;;X
+MODEL_USA_32_0;Bell X-2 Starduster;Bell X-2 Starduster;Bell X-2 Starduster;Bell X-2 Starduster;Bell X-2 Starduster;Bell X-2 Starduster;;Bell X-2 Starduster;;;X
+MODEL_USA_32_1;North American X-15;North American X-15;North American X-15;North American X-15;North American X-15;North American X-15;;North American X-15;;;X
+#MODEL_USA_32_0;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;Northrop P-79 Flying Ram;;Northrop P-79 Flying Ram;;;X
+#MODEL_USA_32_1;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;Republic F-91 Thunderceptor;;Republic F-91 Thunderceptor;;;X
 # naval units (Few invented ones);;;;;;;;;;;X
 MODEL_USA_21_0;Puritan-class;Classe Puritan;Classe Puritan;Clase Puritan;Puritan-Klasse;Puritan-klasa;;Puritan-Klasse;;;X
 MODEL_USA_21_1;Illinois-class;Classe Illinois;Classe Illinois;Clase Illinois;Illinois-Klasse;Illinois-klasa;;Illinois-Klasse;;;X
