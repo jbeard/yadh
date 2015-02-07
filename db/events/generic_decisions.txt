@@ -49053,7 +49053,7 @@ event = {
 		name = "Adopt a Nazi Flag"
 
 		command = { type = flag_ext where = YUG which = "_fas" }
-		command = { type = name where = YUG which = "Great Yugosalwia"}
+		command = { type = name where = YUG which = "Great Yugoslavia"}
 		command = { type = local_setflag which = YUG_NAZ }
 
 		command = { type = local_clrflag which = YUG_FAS }
@@ -49073,7 +49073,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = YUG which = "_fas" }
-		command = { type = name where = YUG which = "Great Yugosalwia"}
+		command = { type = name where = YUG which = "Great Yugoslavia"}
 		command = { type = local_setflag which = YUG_FAS }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -49113,7 +49113,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = YUG which = "_aut" }
-		command = { type = name where = YUG which = "Yugosalwia"}
+		command = { type = name where = YUG which = "Yugoslavia"}
 		command = { type = local_setflag which = YUG_SCO }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -49133,7 +49133,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = YUG which = "_aut" }
-		command = { type = name where = YUG which = "Yugosalwia"}
+		command = { type = name where = YUG which = "Yugoslavia"}
 		command = { type = local_setflag which = YUG_MLI }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -49153,7 +49153,7 @@ event = {
 		name = "Adopt a Social Liberal Flag"
 
 		command = { type = flag_ext where = YUG which = "_sdm" }
-		command = { type = name where = YUG which = "Yugosalwia"}
+		command = { type = name where = YUG which = "Yugoslavia"}
 		command = { type = local_setflag which = YUG_SLI }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -49173,7 +49173,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = YUG which = "_sdm" }
-		command = { type = name where = YUG which = "Yugosalwia"}
+		command = { type = name where = YUG which = "Yugoslavia"}
 		command = { type = local_setflag which = YUG_SDM }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -49193,7 +49193,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = YUG which = "_len" }
-		command = { type = name where = YUG which = "Yugosalwia"}
+		command = { type = name where = YUG which = "Yugoslavia"}
 		command = { type = local_setflag which = YUG_LWR }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -49213,7 +49213,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = YUG which = "_len" }
-		command = { type = name where = YUG which = "Yugosalwia"}
+		command = { type = name where = YUG which = "Yugoslavia"}
 		command = { type = local_setflag which = YUG_LEN }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -49233,7 +49233,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = YUG which = "_len" }
-		command = { type = name where = YUG which = "Yugosalwia"}
+		command = { type = name where = YUG which = "Yugoslavia"}
 		command = { type = local_setflag which = YUG_STA }
 
 		command = { type = local_clrflag which = YUG_NAZ }
@@ -68086,7 +68086,7 @@ event = {
 		name = "Adopt a Nazi Flag"
 
 		command = { type = flag_ext where = u27 which = "_fas" }
-		command = { type = name where = u27 which = "Great Yugosalwia"}
+		command = { type = name where = u27 which = "Great Yugoslavia"}
 		command = { type = local_setflag which = u27_NAZ }
 
 		command = { type = local_clrflag which = u27_FAS }
@@ -68106,7 +68106,7 @@ event = {
 		name = "Adopt a Fascist Flag"
 
 		command = { type = flag_ext where = u27 which = "_fas" }
-		command = { type = name where = u27 which = "Great Yugosalwia"}
+		command = { type = name where = u27 which = "Great Yugoslavia"}
 		command = { type = local_setflag which = u27_FAS }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68126,7 +68126,7 @@ event = {
 		name = "Adopt a Monarchist Flag"
 
 		command = { type = flag_ext where = u27 which = "_aut" }
-		command = { type = name where = u27 which = ""}
+		command = { type = name where = u27 which = "Kingdom of Yugoslavia"}
 		command = { type = local_setflag which = u27_AUT }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68146,7 +68146,7 @@ event = {
 		name = "Adopt a Conservative Flag"
 
 		command = { type = flag_ext where = u27 which = "_aut" }
-		command = { type = name where = u27 which = "Yugosalwia"}
+		command = { type = name where = u27 which = "Yugoslavia"}
 		command = { type = local_setflag which = u27_SCO }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68166,7 +68166,7 @@ event = {
 		name = "Adopt a Market Liberal Flag"
 
 		command = { type = flag_ext where = u27 which = "_aut" }
-		command = { type = name where = u27 which = "Yugosalwia"}
+		command = { type = name where = u27 which = "Yugoslavia"}
 		command = { type = local_setflag which = u27_MLI }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68186,7 +68186,7 @@ event = {
 		name = "Adopt a Social Liberal Flag"
 
 		command = { type = flag_ext where = u27 which = "_sdm" }
-		command = { type = name where = u27 which = "Yugosalwia"}
+		command = { type = name where = u27 which = "Yugoslavia"}
 		command = { type = local_setflag which = u27_SLI }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68206,7 +68206,7 @@ event = {
 		name = "Adopt a Social Democratic Flag"
 
 		command = { type = flag_ext where = u27 which = "_sdm" }
-		command = { type = name where = u27 which = "Yugosalwia"}
+		command = { type = name where = u27 which = "Yugoslavia"}
 		command = { type = local_setflag which = u27_SDM }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68226,7 +68226,7 @@ event = {
 		name = "Adopt a Left-Wing Flag"
 
 		command = { type = flag_ext where = u27 which = "_len" }
-		command = { type = name where = u27 which = "Yugosalwia"}
+		command = { type = name where = u27 which = "People's Yugoslavia"}
 		command = { type = local_setflag which = u27_LWR }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68246,7 +68246,7 @@ event = {
 		name = "Adopt a Leninist Flag"
 
 		command = { type = flag_ext where = u27 which = "_len" }
-		command = { type = name where = u27 which = "Yugosalwia"}
+		command = { type = name where = u27 which = "Social Democraft Yugoslavia"}
 		command = { type = local_setflag which = u27_LEN }
 
 		command = { type = local_clrflag which = u27_NAZ }
@@ -68266,7 +68266,7 @@ event = {
 		name = "Adopt a Stalinist Flag"
 
 		command = { type = flag_ext where = u27 which = "_len" }
-		command = { type = name where = u27 which = "Yugosalwia"}
+		command = { type = name where = u27 which = "Soviet Yugoslavia"}
 		command = { type = local_setflag which = u27_STA }
 
 		command = { type = local_clrflag which = u27_NAZ }
