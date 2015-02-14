@@ -1,7 +1,7 @@
 Sprite = {
 	Bitmap = "T-CAS A-WALK C-ENG L-2 D-N.bmp"
-	Origin = { x = 60 y = 66 }
+	Origin = { x = 95 y = 80 }
 	Frames = 16
 	Speed = 5
-	Palette = "T-CAS C-ENG L-2"
+	Palette = "T-CAS C-ENG L-2.bmp"
 }
