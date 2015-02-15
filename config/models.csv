@@ -204,18 +204,20 @@ MODEL_ENG_12_1;RAF S.E.5a;RAF S.E.5a;RAF S.E.5a;RAF S.E.5a;RAF S.E.5a;RAF S.E.5a
 MODEL_ENG_12_2;Bristol F.2 Fighter;Bristol F.2 Fighter;Bristol F.2 Fighter;Bristol F.2 Fighter;Bristol F.2 Fighter;Bristol F.2 Fighter;;Bristol F.2 Fighter;;;X
 MODEL_ENG_12_3;Armstrong Whitworth Sisskin;Armstrong Whitworth Sisskin;Armstrong Whitworth Sisskin;Armstrong Whitworth Sisskin;Armstrong Whitworth Sisskin;Armstrong Whitworth Sisskin;;Armstrong Whitworth Sisskin;;;X
 MODEL_ENG_12_4;Gloster Gladiator;Gloster Gladiator;Gloster Gladiator;Gloster Gladiator;Gloster Gladiator;Gloster Gladiator;;Gloster Gladiator;;;X
-MODEL_ENG_12_5;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;;Supermarine Spitfire Mk I;;;X
-MODEL_ENG_12_6;Hawker Typhoon Mk.IB;Hawker Typhoon;Hawker Typhoon;Hawker Typhoon;Hawker Typhoon;Hawker Typhoon;;Hawker Typhoon;;;X
-MODEL_ENG_12_7;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;;Hawker Tempest Mk.V;;;X
-MODEL_ENG_12_8;Hawker Tempest F.Mk.VI;Hawker Tempest F.Mk.VI;Hawker Tempest F.Mk.VI;Hawker Tempest F.Mk.VI;Hawker Tempest F.Mk.VI;Hawker Tempest F.Mk.VI;;Hawker Tempest F.Mk.VI;;;X
-MODEL_ENG_12_9;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;;De Havilland Vampire FB.5;;;X
-MODEL_ENG_12_10;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;;De Havilland Venom FB.1;;;X
-MODEL_ENG_12_11;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;;Hawker Hunter F.4;;;X
-MODEL_ENG_12_12;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;;English Electric Lightning F.6;;;X
-MODEL_ENG_12_13;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;;McDonnell-Douglas Phantom FG.1;;;X
-MODEL_ENG_12_14;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;;McDonnell-Douglas Phantom FGR.2;;;X
-MODEL_ENG_12_15;Panavia Tornado GR1;Panavia Tornado IDS;Panavia Tornado IDS;Panavia Tornado IDS;Panavia Tornado IDS;Panavia Tornado IDS;;Panavia Tornado IDS;;;X
-MODEL_ENG_12_16;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;;Eurofighter Typhoon F.2;;;X
+MODEL_ENG_12_5;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;;Hawker Hurricane Mk I;;;X
+MODEL_ENG_12_6;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;;Hawker Hurricane Mk IIA;;;X
+MODEL_ENG_12_7;Hawker Typhoon Mk.IB;Hawker Typhoon;Hawker Typhoon;Hawker Typhoon;Hawker Typhoon;Hawker Typhoon;;Hawker Typhoon;;;X
+MODEL_ENG_12_8;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;Hawker Tempest Mk.V;;Hawker Tempest Mk.V;;;X
+MODEL_ENG_12_9;Gloster Meteor NF.11;Gloster Meteor NF.11;Gloster Meteor NF.11;Gloster Meteor NF.11;Gloster Meteor NF.11;Gloster Meteor NF.11;;Gloster Meteor NF.11;;;X
+MODEL_ENG_12_10;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;De Havilland Vampire FB.5;;De Havilland Vampire FB.5;;;X
+MODEL_ENG_12_11;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;De Havilland Venom FB.1;;De Havilland Venom FB.1;;;X
+MODEL_ENG_12_12;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;Hawker Hunter F.4;;Hawker Hunter F.4;;;X
+MODEL_ENG_12_13;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;English Electric Lightning F.6;;English Electric Lightning F.6;;;X
+MODEL_ENG_12_14;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;McDonnell-Douglas Phantom FG.1;;McDonnell-Douglas Phantom FG.1;;;X
+MODEL_ENG_12_15;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;McDonnell-Douglas Phantom FGR.2;;McDonnell-Douglas Phantom FGR.2;;;X
+MODEL_ENG_12_16;Panavia Tornado GR1;Panavia Tornado IDS;Panavia Tornado IDS;Panavia Tornado IDS;Panavia Tornado IDS;Panavia Tornado IDS;;Panavia Tornado IDS;;;X
+MODEL_ENG_12_17;Eurofighter Typhoon F.1;Eurofighter Typhoon F.1;Eurofighter Typhoon F.1;Eurofighter Typhoon F.1;Eurofighter Typhoon F.1;Eurofighter Typhoon F.1;;Eurofighter Typhoon F.1;;;X
+MODEL_ENG_12_18;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;Eurofighter Typhoon F.2;;Eurofighter Typhoon F.2;;;X
 MODEL_ENG_13_0;RAF B.E.2a;RAF B.E.2a;RAF B.E.2a;RAF B.E.2a;RAF B.E.2a;RAF B.E.2a;;RAF B.E.2a;;;X
 MODEL_ENG_13_1;Bristol Scout A;Bristol Scout A;Bristol Scout A;Bristol Scout A;Bristol Scout A;Bristol Scout A;;Bristol Scout A;;;X
 MODEL_ENG_13_2;Airco D.H.2;Airco D.H.2;Airco D.H.2;Airco D.H.2;Airco D.H.2;Airco D.H.2;;Airco D.H.2;;;X
@@ -224,15 +226,15 @@ MODEL_ENG_13_4;Sopwith F.1 Camel;Sopwith F.1 Camel;Sopwith F.1 Camel;Sopwith F.1
 MODEL_ENG_13_5;Sopwith Snipe;Sopwith Snipe;Sopwith Snipe;Sopwith Snipe;Sopwith Snipe;Sopwith Snipe;;Sopwith Snipe;;;X
 MODEL_ENG_13_6;Gloster Grebe;Gloster Grebe;Gloster Grebe;Gloster Grebe;Gloster Grebe;Gloster Grebe;;Gloster Grebe;;;X
 MODEL_ENG_13_7;Bristol Bulldog;Bristol Bulldog;Bristol Bulldog;Bristol Bulldog;Bristol Bulldog;Bristol Bulldog;;Bristol Bulldog;;;X
-MODEL_ENG_13_8;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;Hawker Hurricane Mk I;;Hawker Hurricane Mk I;;;X
-MODEL_ENG_13_9;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;Hawker Hurricane Mk IIA;;Hawker Hurricane Mk IIA;;;X
+MODEL_ENG_13_8;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;Supermarine Spitfire Mk I;;Supermarine Spitfire Mk I;;;X
+MODEL_ENG_13_9;Supermarine Spitfire Mk IX;Supermarine Spitfire Mk IX;Supermarine Spitfire Mk IX;Supermarine Spitfire Mk IX;Supermarine Spitfire Mk IX;Supermarine Spitfire Mk IX;;Supermarine Spitfire Mk IX;;;X
 MODEL_ENG_13_10;Supermarine Spitfire Mk XIV;Supermarine Spitfire Mk XIV;Supermarine Spitfire Mk XIV;Supermarine Spitfire Mk XIV;Supermarine Spitfire Mk XIV;Supermarine Spitfire Mk XIV;;Supermarine Spitfire Mk XIV;;;X
 MODEL_ENG_13_11;Gloster Meteor F.1;Gloster Meteor F.1;Gloster Meteor F.1;Gloster Meteor F.1;Gloster Meteor F.1;Gloster Meteor F.1;;Gloster Meteor F.1;;;X
 MODEL_ENG_13_12;Gloster Meteor F.4;Gloster Meteor F.4;Gloster Meteor F.4;Gloster Meteor F.4;Gloster Meteor F.4;Gloster Meteor F.4;;Gloster Meteor F.4;;;X
 MODEL_ENG_13_13;De Havilland Vampire F.3;De Havilland Vampire F.3;De Havilland Vampire F.3;De Havilland Vampire F.3;De Havilland Vampire F.3;De Havilland Vampire F.3;;De Havilland Vampire F.3;;;X
-MODEL_ENG_13_14;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;;Hawker Hunter F.6;;;X
-MODEL_ENG_13_15;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;;English Electric Lightning F.3;;;X
-MODEL_ENG_13_16;Hawker P.1121;Hawker P.1121;Hawker P.1121;Hawker P.1121;Hawker P.1121;Hawker P.1121;;Hawker P.1121;;;X
+MODEL_ENG_13_14;Gloster Javelin F.7;Gloster Javelin F.7;Gloster Javelin F.7;Gloster Javelin F.7;Gloster Javelin F.7;Gloster Javelin F.7;;Gloster Javelin F.7;;;X
+MODEL_ENG_13_15;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;Hawker Hunter F.6;;Hawker Hunter F.6;;;X
+MODEL_ENG_13_16;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;English Electric Lightning F.3;;English Electric Lightning F.3;;;X
 MODEL_ENG_13_17;Panavia Tornado ADV F.2;Panavia Tornado ADV F.2;Panavia Tornado ADV F.2;Panavia Tornado ADV F.2;Panavia Tornado ADV F.2;Panavia Tornado ADV F.2;;Panavia Tornado ADV F.2;;;X
 MODEL_ENG_14_0;Kennedy Giant;Kennedy Giant;Kennedy Giant;Kennedy Giant;Kennedy Giant;Kennedy Giant;;Kennedy Giant;;;X
 MODEL_ENG_14_1;Handley Page V/1500;Handley Page V/1500;Handley Page V/1500;Handley Page V/1500;Handley Page V/1500;Handley Page V/1500;;Handley Page V/1500;;;X
@@ -243,33 +245,35 @@ MODEL_ENG_14_5;Avro Lancaster B.I;Avro Lancaster;Avro Lancaster;Avro Lancaster;A
 MODEL_ENG_14_6;Avro Lincoln;Avro Lincoln;Avro Lincoln;Avro Lincoln;Avro Lincoln;Avro Lincoln;;Avro Lincoln;;;X
 MODEL_ENG_14_7;Vickers Valiant;Vickers Valiant;Vickers Valiant;Vickers Valiant;Vickers Valiant;Vickers Valiant;;Vickers Valiant;;;X
 MODEL_ENG_14_8;Avro Vulcan B.1;Avro Vulcan;Avro Vulcan;Avro Vulcan;Avro Vulcan;Avro Vulcan;;Avro Vulcan;;;X
-MODEL_ENG_14_9;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;;Handley Page Victor B.1;;;X
-MODEL_ENG_14_10;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;;Handley Page Victor B.2;;;X
+MODEL_ENG_14_9;Avro Vulcan B.2;Avro Vulcan;Avro Vulcan;Avro Vulcan;Avro Vulcan;Avro Vulcan;;Avro Vulcan;;;X
+MODEL_ENG_14_10;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;Handley Page Victor B.1;;Handley Page Victor B.1;;;X
+MODEL_ENG_14_11;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;Handley Page Victor B.2;;Handley Page Victor B.2;;;X
 MODEL_ENG_14_12;BAE Taranis;BAE Taranis;BAE Taranis;BAE Taranis;BAE Taranis;BAE Taranis;;BAE Taranis;;;X
 MODEL_ENG_15_0;Avro 529;Avro 529;Avro 529;Avro 529;Avro 529;Avro 529;;Avro 529;;;X
 MODEL_ENG_15_1;Handley Page O/100;Handley Page O/100;Handley Page O/100;Handley Page O/100;Handley Page O/100;Handley Page O/100;;Handley Page O/100;;;X
 MODEL_ENG_15_2;Handley Page O/400;Handley Page O/400;Handley Page O/400;Handley Page O/400;Handley Page O/400;Handley Page O/400;;Handley Page O/400;;;X
 MODEL_ENG_15_3;Vickers Vimy;Vickers Vimy;Vickers Vimy;Vickers Vimy;Vickers Vimy;Vickers Vimy;;Vickers Vimy;;;X
 MODEL_ENG_15_4;Boulton Paul Sidestrand;Boulton Paul Sidestrand;Boulton Paul Sidestrand;Boulton Paul Sidestrand;Boulton Paul Sidestrand;Boulton Paul Sidestrand;;Boulton Paul Sidestrand;;;X
-MODEL_ENG_15_5;Handley Page Heyford;Handley Page Heyford;Handley Page Heyford;Handley Page Heyford;Handley Page Heyford;Handley Page Heyford;;Handley Page Heyford;;;X
+MODEL_ENG_15_5;Bristol Blenheim Mk I;Bristol Blenheim Mk I;Bristol Blenheim Mk I;Bristol Blenheim Mk I;Bristol Blenheim Mk I;Bristol Blenheim Mk I;;Bristol Blenheim Mk I;;;X
 MODEL_ENG_15_6;Handley Page Hampden;Handley Page Hampden;Handley Page Hampden;Handley Page Hampden;Handley Page Hampden;Handley Page Hampden;;Handley Page Hampden;;;X
-MODEL_ENG_15_7;Vickers Wellington;Vickers Wellington;Vickers Wellington;Vickers Wellington;Vickers Wellington;Vickers Wellington;;Vickers Wellington;;;X
+MODEL_ENG_15_7;Avro Manchester;Avro Manchester;Avro Manchester;Avro Manchester;Avro Manchester;Avro Manchester;;Avro Manchester;;;X
 MODEL_ENG_15_8;De Havilland Mosquito B.Mk.IV;De Havilland Mosquito B.Mk.IV;De Havilland Mosquito B.Mk.IV;De Havilland Mosquito B.Mk.IV;De Havilland Mosquito B.Mk.IV;De Havilland Mosquito B.Mk.IV;;De Havilland Mosquito B.Mk.IV;;;X
 MODEL_ENG_15_9;De Havilland Mosquito B.Mk.XX;De Havilland Mosquito B.Mk.XX;De Havilland Mosquito B.Mk.XX;De Havilland Mosquito B.Mk.XX;De Havilland Mosquito B.Mk.XX;De Havilland Mosquito B.Mk.XX;;De Havilland Mosquito B.Mk.XX;;;X
 MODEL_ENG_15_10;English Electric Canberra B Mk.2;English Electric Canberra B Mk.2;English Electric Canberra B Mk.2;English Electric Canberra B Mk.2;English Electric Canberra B Mk.2;English Electric Canberra B Mk.2;;English Electric Canberra B Mk.2;;;X
 MODEL_ENG_15_11;English Electric Canberra B.Mk.6;English Electric Canberra B.Mk.6;English Electric Canberra B.Mk.6;English Electric Canberra B.Mk.6;English Electric Canberra B.Mk.6;English Electric Canberra B.Mk.6;;English Electric Canberra B.Mk.6;;;X
-MODEL_ENG_15_12;BAC TSR-2;BAC TSR-2;BAC TSR-2;BAC TSR-2;BAC TSR-2;BAC TSR-2;;BAC TSR-2;;;X
+MODEL_ENG_15_12;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;;SEPECAT Jaguar GR.1;;;X
+MODEL_ENG_15_13;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;;SEPECAT Jaguar GR.3;;;X
 MODEL_ENG_16_0;Felixstowe F.5;Felixstowe F.5;Felixstowe F.5;Felixstowe F.5;Felixstowe F.5;Felixstowe F.5;;Felixstowe F.5;;;X
 MODEL_ENG_16_1;Supermarine Southampton;Supermarine Southampton;Supermarine Southampton;Supermarine Southampton;Supermarine Southampton;Supermarine Southampton;;Supermarine Southampton;;;X
-MODEL_ENG_16_2;Short Sunderland;Short Sunderland;Short Sunderland;Short Sunderland;Short Sunderland;Short Sunderland;;Short Sunderland;;;X
+MODEL_ENG_16_2;Fairey Flycatcher;Fairey Flycatcher;Fairey Flycatcher;Fairey Flycatcher;Fairey Flycatcher;Fairey Flycatcher;;Fairey Flycatcher;;;X
 MODEL_ENG_16_3;Bristol Beaufort;Bristol Beaufort;Bristol Beaufort;Bristol Beaufort;Bristol Beaufort;Bristol Beaufort;;Bristol Beaufort;;;X
-MODEL_ENG_16_4;Vickers Warwick GR.Mk.II;Vickers Warwick GR.Mk.II;Vickers Warwick GR.Mk.II;Vickers Warwick GR.Mk.II;Vickers Warwick GR.Mk.II;Vickers Warwick GR.Mk.II;;Vickers Warwick GR.Mk.II;;;X
-MODEL_ENG_16_5;Vickers Warwick GR.Mk.V;Vickers Warwick GR.Mk.V;Vickers Warwick GR.Mk.V;Vickers Warwick GR.Mk.V;Vickers Warwick GR.Mk.V;Vickers Warwick GR.Mk.V;;Vickers Warwick GR.Mk.V;;;X
-MODEL_ENG_16_6;Avro Shackleton MR.Mk.1;Avro Shackleton MR.Mk.1;Avro Shackleton MR.Mk.1;Avro Shackleton MR.Mk.1;Avro Shackleton MR.Mk.1;Avro Shackleton MR.Mk.1;;Avro Shackleton MR.Mk.1;;;X
-MODEL_ENG_16_7;Avro Shackleton MR.Mk.3;Avro Shackleton MR.Mk.3;Avro Shackleton MR.Mk.3;Avro Shackleton MR.Mk.3;Avro Shackleton MR.Mk.3;Avro Shackleton MR.Mk.3;;Avro Shackleton MR.Mk.3;;;X
-MODEL_ENG_16_8;Hawker Siddeley Nimrod MR1;Hawker Siddeley Nimrod MR1;Hawker Siddeley Nimrod MR1;Hawker Siddeley Nimrod MR1;Hawker Siddeley Nimrod MR1;Hawker Siddeley Nimrod MR1;;Hawker Siddeley Nimrod MR1;;;X
-MODEL_ENG_16_9;Hawker Siddeley Nimrod R1;Hawker Siddeley Nimrod R1;Hawker Siddeley Nimrod R1;Hawker Siddeley Nimrod R1;Hawker Siddeley Nimrod R1;Hawker Siddeley Nimrod R1;;Hawker Siddeley Nimrod R1;;;X
-MODEL_ENG_16_10;Hawker Siddeley Nimrod MR2;Hawker Siddeley Nimrod MR2;Hawker Siddeley Nimrod MR2;Hawker Siddeley Nimrod MR2;Hawker Siddeley Nimrod MR2;Hawker Siddeley Nimrod MR2;;Hawker Siddeley Nimrod MR2;;;X
+MODEL_ENG_16_4;Supermarine Attacker;Supermarine Attacker;Supermarine Attacker;Supermarine Attacker;Supermarine Attacker;Supermarine Attacker;;Supermarine Attacker;;;X
+MODEL_ENG_16_5;Hawker Sea Hawk;Hawker Sea Hawk;Hawker Sea Hawk;Hawker Sea Hawk;Hawker Sea Hawk;Hawker Sea Hawk;;Hawker Sea Hawk;;;X
+MODEL_ENG_16_6;De Havilland Sea Venom;De Havilland Sea Venom;De Havilland Sea Venom;De Havilland Sea Venom;De Havilland Sea Venom;De Havilland Sea Venom;;De Havilland Sea Venom;;;X
+MODEL_ENG_16_7;De Havilland Sea Vixen;De Havilland Sea Vixen;De Havilland Sea Vixen;De Havilland Sea Vixen;De Havilland Sea Vixen;De Havilland Sea Vixen;;De Havilland Sea Vixen;;;X
+MODEL_ENG_16_8;Blackburn Buccaneer S.1;Blackburn Buccaneer S.1;Blackburn Buccaneer S.1;Blackburn Buccaneer S.1;Blackburn Buccaneer S.1;Blackburn Buccaneer S.1;;Blackburn Buccaneer S.1;;;X
+MODEL_ENG_16_9;Hawker Siddeley Sea Harrier FRS.1;Hawker Siddeley Sea Harrier FRS.1;Hawker Siddeley Sea Harrier FRS.1;Hawker Siddeley Sea Harrier FRS.1;Hawker Siddeley Sea Harrier FRS.1;Hawker Siddeley Sea Harrier FRS.1;;Hawker Siddeley Sea Harrier FRS.1;;;X
+MODEL_ENG_16_10;Hawker Siddeley Sea Harrier F(A).2;Hawker Siddeley Sea Harrier F(A).2;Hawker Siddeley Sea Harrier F(A).2;Hawker Siddeley Sea Harrier F(A).2;Hawker Siddeley Sea Harrier F(A).2;Hawker Siddeley Sea Harrier F(A).2;;Hawker Siddeley Sea Harrier F(A).2;;;X
 MODEL_ENG_17_0;Hawker Hart;Hawker Hart;Hawker Hart;Hawker Hart;Hawker Hart;Hawker Hart;;Hawker Hart;;;X
 MODEL_ENG_17_1;Fairey Battle;Fairey Battle;Fairey Battle;Fairey Battle;Fairey Battle;Fairey Battle;;Fairey Battle;;;X
 MODEL_ENG_17_2;Hawker Hurricane Mk IV;Hawker Hurricane Mk IV;Hawker Hurricane Mk IV;Hawker Hurricane Mk IV;Hawker Hurricane Mk IV;Hawker Hurricane Mk IV;;Hawker Hurricane Mk IV;;;X
@@ -277,18 +281,18 @@ MODEL_ENG_17_3;Bristol Beaufighter Mk IC;Bristol Beaufighter Mk IC;Bristol Beauf
 MODEL_ENG_17_4;Bristol Beaufighter Mk VI;Bristol Beaufighter Mk VI;Bristol Beaufighter Mk VI;Bristol Beaufighter Mk VI;Bristol Beaufighter Mk VI;Bristol Beaufighter Mk VI;;Bristol Beaufighter Mk VI;;;X
 MODEL_ENG_17_5;Gloster Reaper FGA.Mk.22;Gloster Reaper FGA.Mk.22;Gloster Reaper FGA.Mk.22;Gloster Reaper FGA.Mk.22;Gloster Reaper FGA.Mk.22;Gloster Reaper FGA.Mk.22;;Gloster Reaper FGA.Mk.22;;;X
 MODEL_ENG_17_6;Blackburn Buccaneer S.2B;Blackburn Buccaneer S.2B;Blackburn Buccaneer S.2B;Blackburn Buccaneer S.2B;Blackburn Buccaneer S.2B;Blackburn Buccaneer S.2B;;Blackburn Buccaneer S.2B;;;X
-MODEL_ENG_17_7;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;SEPECAT Jaguar GR.1;;SEPECAT Jaguar GR.1;;;X
-MODEL_ENG_17_8;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;SEPECAT Jaguar GR.3;;SEPECAT Jaguar GR.3;;;X
+MODEL_ENG_17_7;Hawker Siddeley Harrier GR.3;Hawker Siddeley Harrier GR.3;Hawker Siddeley Harrier GR.3;Hawker Siddeley Harrier GR.3;Hawker Siddeley Harrier GR.3;Hawker Siddeley Harrier GR.3;;Hawker Siddeley Harrier GR.3;;;X
+MODEL_ENG_17_8;Hawker Siddeley Harrier II GR.8;Hawker Siddeley Harrier II GR.8;Hawker Siddeley Harrier II GR.8;Hawker Siddeley Harrier II GR.8;Hawker Siddeley Harrier II GR.8;Hawker Siddeley Harrier II GR.8;;Hawker Siddeley Harrier II GR.8;;;X
 MODEL_ENG_18_0;Handley Page H.P.45;Handley Page H.P.45;Handley Page H.P.45;Handley Page H.P.45;Handley Page H.P.45;Handley Page H.P.45;;Handley Page H.P.45;;;X
 MODEL_ENG_18_1;Bristol Bombay;Bristol Bombay;Bristol Bombay;Bristol Bombay;Bristol Bombay;Bristol Bombay;;Bristol Bombay;;;X
 MODEL_ENG_18_2;Armstrong-Whitworth Albemarle;Armstrong-Whitworth Albemarle;Armstrong-Whitworth Albemarle;Armstrong-Whitworth Albemarle;Armstrong-Whitworth Albemarle;Armstrong-Whitworth Albemarle;;Armstrong-Whitworth Albemarle;;;X
 MODEL_ENG_18_3;Douglas Dakota;Douglas Dakota;Douglas Dakota;Douglas Dakota;Douglas Dakota;Douglas Dakota;;Douglas Dakota;;;X
 MODEL_ENG_18_4;Avro Lancastrian;Avro Lancastrian;Avro Lancastrian;Avro Lancastrian;Avro Lancastrian;Avro Lancastrian;;Avro Lancastrian;;;X
-MODEL_ENG_18_5;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;;Blackburn Beverley;;;X
-MODEL_ENG_18_6;Armstrong Whitworth AW.660 Argosy;Armstrong Whitworth AW.660 Argosy;Armstrong Whitworth AW.660 Argosy;Armstrong Whitworth AW.660 Argosy;Armstrong Whitworth AW.660 Argosy;Armstrong Whitworth AW.660 Argosy;;Armstrong Whitworth AW.660 Argosy;;;X
-MODEL_ENG_18_7;Hawker Siddeley Andover;Hawker Siddeley Andover;Hawker Siddeley Andover;Hawker Siddeley Andover;Hawker Siddeley Andover;Hawker Siddeley Andover;;Hawker Siddeley Andover;;;X
-MODEL_ENG_18_8;Lockheed TriStar C1;Lockheed TriStar C1;Lockheed TriStar C1;Lockheed TriStar C1;Lockheed TriStar C1;Lockheed TriStar C1;;Lockheed TriStar C1;;;X
-MODEL_ENG_18_9;Boeing Globemaster;Boeing Globemaster;Boeing Globemaster;Boeing Globemaster;Boeing Globemaster;Boeing Globemaster;;Boeing Globemaster;;;X
+MODEL_ENG_18_5;Avro York;Avro York;Avro York;Avro York;Avro York;Avro York;;Avro York;;;X
+MODEL_ENG_18_6;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;Blackburn Beverley;;Blackburn Beverley;;;X
+MODEL_ENG_18_7;Bristol Superfreighter;Bristol Superfreighter;Bristol Superfreighter;Bristol Superfreighter;Bristol Superfreighter;Bristol Superfreighter;;Bristol Superfreighter;;;X
+MODEL_ENG_18_8;Fairchild C-123;Fairchild C-123;Fairchild C-123;Fairchild C-123;Fairchild C-123;Fairchild C-123;;Fairchild C-123;;;X
+MODEL_ENG_18_9;Boeing C-17 Globemaster III;Boeing C-17 Globemaster III;Boeing C-17 Globemaster III;Boeing C-17 Globemaster III;Boeing C-17 Globemaster III;Boeing C-17 Globemaster III;;Boeing C-17 Globemaster III;;;X
 MODEL_ENG_20_1;Thor;Thor;Thor;Thor;Thor;Thor;;Thor;;;X
 MODEL_ENG_20_2;Blue Streak;Blue Streak;Blue Streak;Blue Streak;Blue Streak;Blue Streak;;Blue Streak;;;X
 MODEL_ENG_32_0;Hawker P.1052;Hawker P.1052;Hawker P.1052;Hawker P.1052;Hawker P.1052;Hawker P.1052;;Hawker P.1052;;;X
